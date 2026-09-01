@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "T3-S1A route-specific gate report v2",
+  "type": "object",
+  "required": [
+    "schema",
+    "task_id",
+    "gate_id",
+    "status",
+    "outcome",
+    "blockers",
+    "blocks_submission",
+    "candidate_generation",
+    "server_submission",
+    "routes",
+    "criteria"
+  ],
+  "properties": {
+    "schema": {"const": "gate_report.v2"},
+    "task_id": {"const": "T3-S1A-STATE-JOIN"},
+    "gate_id": {"const": "route_specific_prior_gate_v2"},
+    "status": {"enum": ["PASS", "HOLD", "BLOCKED"]},
+    "outcome": {"enum": ["PRIOR_GATE_PASS", "PARTIAL_ROUTE_PASS", "HOLD_AS_COMPONENT", "BLOCKED"]},
+    "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "blocks_submission": {"const": false},
+    "candidate_generation": {"const": false},
+    "server_submission": {"const": false},
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "result"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "result": {"enum": ["PASS", "FAIL", "NOT_APPLICABLE", "BLOCKED"]},
+          "evidence": {"type": ["string", "array", "null"]}
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "route_id",
+          "status",
+          "candidate_generation",
+          "blocks_submission",
+          "blockers",
+          "evidence_paths",
+          "evidence_hashes",
+          "prior_path",
+          "prior_sha256",
+          "evidence_path",
+          "evidence_sha256",
+          "artifact_manifest_path",
+          "artifact_manifest_sha256",
+          "source_hashes",
+          "source_artifacts",
+          "state_join_gate",
+          "selected_gene_stability",
+          "evidence_family_stability",
+          "method_status"
+        ],
+        "properties": {
+          "route_id": {"type": "string", "minLength": 1},
+          "status": {"enum": ["PASS", "HOLD", "BLOCKED"]},
+          "candidate_generation": {"type": "boolean"},
+          "blocks_submission": {"const": false},
+          "blockers": {"type": "array", "items": {"type": "string"}},
+          "evidence_paths": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "evidence_hashes": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}},
+          "prior_path": {"type": "string", "minLength": 1},
+          "prior_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+          "evidence_path": {"type": "string", "minLength": 1},
+          "evidence_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+          "artifact_manifest_path": {"type": "string", "minLength": 1},
+          "artifact_manifest_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+          "source_hashes": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}},
+          "source_artifacts": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "object",
+              "required": ["path", "sha256"],
+              "properties": {
+                "path": {"type": "string", "minLength": 1},
+                "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+              }
+            }
+          },
+          "state_join_gate": {"type": "object", "required": ["status"]},
+          "selected_gene_stability": {"type": "object", "required": ["status"]},
+          "evidence_family_stability": {"type": "object", "required": ["status"]},
+          "method_status": {
+            "type": "object",
+            "required": ["CellOracle", "scTenifoldNet/scTenifoldKnk"],
+            "properties": {
+              "CellOracle": {"$ref": "#/$defs/methodSummary"},
+              "scTenifoldNet/scTenifoldKnk": {"$ref": "#/$defs/methodSummary"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "methodSummary": {
+      "type": "object",
+      "required": ["status", "targets"],
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "targets": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "object",
+            "required": ["status", "outputs"],
+            "properties": {
+              "status": {"type": "string", "minLength": 1},
+              "reason": {"type": "string"},
+              "outputs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["path", "sha256"],
+                  "properties": {
+                    "path": {"type": "string", "minLength": 1},
+                    "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "ve.t3.s1.input-lock.v1",
+  "task": "T3-S1-PRIOR",
+  "files": {
+    "artifacts/atomic_batch2/B2-T3-A1/kill_test/identity_score.json": "134195c2d68ba4931876779d0d1c6c29bd5c4a5d532527a9dd836111c3b61fcb",
+    "artifacts/atomic_batch2/B2-T3-A1/kill_test/pipeline_score.json": "8d3e0a1eb99aeb9aa3d14da5573df8f9757f197f1a6d0724140515a92212470d"
+  },
+  "purpose": "lock the validation-only known-KO evidence consumed by T3-S1"
+}

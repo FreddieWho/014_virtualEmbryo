@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch1 Final Candidate Set Manifest",
+  "type": "object",
+  "required": [
+    "atom_id", "final_lanes", "boards", "expected_final_artifacts",
+    "exploration_attempt_budget", "exploration_attempts", "candidates",
+    "submission_mode", "all_scores_required"
+  ],
+  "properties": {
+    "atom_id": {"type": "string"},
+    "final_lanes": {"type": "array"},
+    "boards": {"type": "array"},
+    "expected_final_artifacts": {"type": "integer"},
+    "exploration_attempt_budget": {"const": 4},
+    "exploration_attempts": {"type": "array", "maxItems": 4},
+    "candidates": {"type": "array", "uniqueItems": true},
+    "submission_mode": {"const": "manual_user_upload"},
+    "all_scores_required": {"const": true},
+    "score_status": {"enum": ["ready_for_manual_upload", "score_pending", "complete"]}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "atom_id": {"const": "B1-A1"},
+        "final_lanes": {"const": ["L1_FORMAL_LOG_RMS", "L2_ALL_STAGE_LOG_RMS_OLS"]},
+        "boards": {"const": ["T2_embryo_val_interp", "T2_heart_val_interp", "T2_heart_val_extrap"]},
+        "expected_final_artifacts": {"const": 6},
+        "candidates": {"minItems": 6, "maxItems": 6}
+      }
+    },
+    {
+      "properties": {
+        "atom_id": {"const": "B1-A2"},
+        "final_lanes": {"const": ["L1_CELL_LEVEL_SPEARMAN", "L2_STATE_PSEUDOBULK_SPEARMAN"]},
+        "boards": {"const": ["T3_gata4"]},
+        "expected_final_artifacts": {"const": 2},
+        "candidates": {"minItems": 2, "maxItems": 2}
+      }
+    },
+    {
+      "properties": {
+        "atom_id": {"const": "B1-A3"},
+        "final_lanes": {"const": ["L1_SHARED_UNRESOLVED", "L2_E95_EXPRESSION_PROBE"]},
+        "boards": {"const": ["T1_val"]},
+        "expected_final_artifacts": {"const": 2},
+        "candidates": {"minItems": 2, "maxItems": 2}
+      }
+    },
+    {
+      "properties": {
+        "atom_id": {"const": "B1-A4"},
+        "final_lanes": {"const": ["L1_LATENT_KNN10", "L2_STATE_HASH10"]},
+        "boards": {"const": ["T2_embryo_val_interp", "T2_heart_val_interp", "T2_heart_val_extrap"]},
+        "expected_final_artifacts": {"const": 6},
+        "candidates": {"minItems": 6, "maxItems": 6}
+      }
+    }
+  ],
+  "additionalProperties": true
+}

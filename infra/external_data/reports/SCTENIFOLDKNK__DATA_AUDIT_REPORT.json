@@ -1,0 +1,16 @@
+{
+  "atom": "B2-T3-A1",
+  "files": [
+    {
+      "bytes": 645830779,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/SCTENIFOLDKNK/scTenifoldKnk-d635a5855295b4ee75909438b09b2ea27ce3437c.tar.gz",
+      "sha256": "46136cf6ed0984c3f4c1d1801ce7bfae1e1bc589472a8a8f51cc843e70aa41b6"
+    }
+  ],
+  "forbidden_records_remaining": 0,
+  "model_input": false,
+  "role": "pinned source code; no pretrained model",
+  "source_id": "SCTENIFOLDKNK",
+  "status": "PASS",
+  "task": "T3"
+}

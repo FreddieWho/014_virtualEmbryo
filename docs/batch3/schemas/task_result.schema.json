@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Result",
+  "type": "object",
+  "required": [
+    "task_id",
+    "status",
+    "artifact_root",
+    "gates",
+    "server_submission"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_MANUAL_SUBMISSION",
+        "HOLD_AS_COMPONENT",
+        "REJECT",
+        "BLOCKED_VALIDATION",
+        "BLOCKED_COMPLIANCE",
+        "BLOCKED_TOOLCHAIN"
+      ]
+    },
+    "artifact_root": {
+      "type": "string"
+    },
+    "gates": {
+      "type": "array"
+    },
+    "server_submission": {
+      "const": false
+    },
+    "next_task_ready": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

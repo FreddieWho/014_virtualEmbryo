@@ -1,0 +1,73 @@
+snapshot_date: 2026-08-14
+principle: "pseudo-holdouts are for model selection; fidelity must be reported explicitly"
+
+splits:
+  T2_heart_interp_proxy:
+    task: T2_heart
+    fidelity: MEDIUM_HIGH
+    train_stages: [E8.25, E9.5]
+    target_stage: E8.75
+    tests:
+      - expression_change
+      - cell_state_distribution
+      - tissue_shape_growth_scale
+      - local_spatial_organization
+    limitation: "official interpolation target is E8.5; temporal spacing differs"
+
+  T2_heart_extrap_proxy:
+    task: T2_heart
+    fidelity: MEDIUM
+    train_stages: [E8.25, E8.75]
+    target_stage: E9.5
+    tests:
+      - short_horizon_extrapolation
+      - composition_growth
+      - expression_change
+      - geometry_growth
+    limitation: "does not validate long-range E10.5/E12.5 extrapolation"
+
+  T2_embryo_interp_proxy:
+    task: T2_embryo
+    fidelity: MEDIUM
+    train_stages: [E6.75, E8.0]
+    target_stage: E7.25
+    tests:
+      - whole_embryo_interpolation
+      - composition
+      - geometry
+      - neighborhood
+    limitation: "official targets E7.5/E7.75 occupy a later gastrulation window"
+
+  T2_replicate_holdout:
+    task: T2
+    fidelity: HIGH_FOR_VARIANCE_NOT_TIME
+    conditional_on: "independent biological replicates exist"
+    procedure: "leave one embryo out at same stage"
+    tests:
+      - biological_variability
+      - split_half_ceiling
+      - overfit_detection
+    limitation: "not evidence for temporal generalization"
+
+  T1_sanity_holdout:
+    task: T1
+    fidelity: LOW
+    train_stages: [E8.5]
+    optional_background: [E7.75]
+    target_stage: E9.5
+    tests:
+      - pipeline_debug
+      - population_generation
+      - covariance_preservation
+    limitation: "one-step sanity only; E7.75 is whole embryo, not matched heart stage; cannot validate E10.5/E12.5"
+
+  T3_replicate_holdout:
+    task: T3
+    fidelity: LOW_MEDIUM
+    conditional_on: "Mab21l2 KO has independent biological replicates"
+    procedure: "leave one Mab21l2 KO embryo out, train/calibrate on remaining KO + matched WT"
+    tests:
+      - amplitude_stability
+      - noise_stability
+      - composition_stability
+    limitation: "cannot validate cross-gene perturbation generalization"

@@ -1,0 +1,16 @@
+{
+  "atom": "B2-T3-A1",
+  "files": [
+    {
+      "bytes": 298479,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/REACTOME/ReactomePathways.gmt.zip",
+      "sha256": "8c1dbc8578431da5d2d5118262718c60b553a9be3398e93658daa069e4a9afd4"
+    }
+  ],
+  "forbidden_records_remaining": 0,
+  "model_input": true,
+  "role": "pathway membership only",
+  "source_id": "REACTOME",
+  "status": "PASS",
+  "task": "T3"
+}

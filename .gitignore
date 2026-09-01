@@ -1,0 +1,22 @@
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.codegraph/
+.venvs/
+.venvs*/
+.benchmarks/
+
+# large binary/data - excluded from GitHub (keep locally, reconstruct via data/MANIFEST.tsv or infra index)
+data/
+artifacts/
+outputs/
+deliveries/
+infra/external_data/quarantine/
+infra/external_data/sanitized/
+infra/external_data/manifests/
+
+# h5ad / hdf5 / archives exceed GitHub 100MB limit
+*.h5ad
+*.h5
+*.zip
+*.gz

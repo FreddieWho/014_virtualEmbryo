@@ -1,0 +1,33 @@
+default: DENY
+scope: task_specific
+reuse_existing_sanitized_artifacts: true
+require_sha256: true
+require_license_record: true
+require_stage_genotype_filter_before_any_embedding_or_summary: true
+unknown_pretraining_corpus: DENY
+
+knowledge_sources:
+  CollecTRI:
+    task: T3
+    role: signed_TF_target_candidate
+    status: REQUIRE_AUDIT_OR_EXISTING_LOCK
+  OmniPath:
+    task: T3
+    role: signed_directed_signaling_path
+    status: REQUIRE_AUDIT_OR_EXISTING_LOCK
+  CellOracle:
+    task: T3
+    role: tool_on_sanitized_WT_context
+    status: TOOL_NOT_DATA_SOURCE
+  scTenifoldKnk:
+    task: T3
+    role: tool_on_sanitized_WT_context
+    status: TOOL_NOT_DATA_SOURCE
+  CINEMA_OT:
+    task: T3
+    role: observed_training_KO_response_shape_only
+    status: OFFICIAL_TRAINING_DATA_ONLY
+
+external_expression_sources:
+  status: REUSE_EXISTING_BATCH2_ALLOWLIST_ONLY
+  note: Do not infer permission from this template. P0 must locate and validate the existing task-scoped audit.

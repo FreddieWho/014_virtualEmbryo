@@ -1,0 +1,117 @@
+snapshot_date: 2026-08-14
+source_of_truth: "official starter kit overrides this file when released"
+
+T1:
+  modality: scRNA
+  scope: heart
+  genes:
+    expected_n_vars: 32285
+    order: released_order
+  X:
+    ndim: 2
+    finite: true
+    nonnegative: true
+    normalization: log1p_normalized
+  spatial_3D:
+    required: false
+  celltype_submission:
+    used_for_scoring: false
+  official_split:
+    train: [E8.5, E9.5]
+    validation: [E10.5]
+    test: [E12.5]
+    background: [E7.75]
+  metric_weights:
+    de_gene_recovery: 0.25
+    change_direction: 0.25
+    cell_state_distribution: 0.30
+    gene_gene_covariation: 0.20
+
+T2_heart:
+  modality: MERFISH_3D
+  genes:
+    expected_n_vars: 500
+    order: released_order
+  X:
+    ndim: 2
+    finite: true
+    nonnegative: true
+    normalization: log_normalized
+  spatial_3D:
+    required: true
+    min_columns: 3
+    finite: true
+    frame: local_unregistered
+  celltype_submission:
+    used_for_scoring: false
+  official_split:
+    train: [E8.25, E8.75, E9.5]
+    validation: [E8.5, E10.5]
+    test: [E12.5]
+  metric_weights:
+    expression_change: 0.25
+    cell_state_distribution: 0.25
+    tissue_shape_growth_scale: 0.25
+    local_spatial_organization: 0.25
+
+T2_embryo:
+  modality: MERFISH_3D
+  genes:
+    expected_n_vars: 500
+    order: released_order
+  X:
+    ndim: 2
+    finite: true
+    nonnegative: true
+    normalization: log_normalized
+  spatial_3D:
+    required: true
+    min_columns: 3
+    finite: true
+    frame: local_unregistered
+  celltype_submission:
+    used_for_scoring: false
+  official_split:
+    train: [E6.75, E7.25, E8.0]
+    validation: [E7.5]
+    test: [E7.75]
+  metric_weights:
+    expression_change: 0.25
+    cell_state_distribution: 0.25
+    tissue_shape_growth_scale: 0.25
+    local_spatial_organization: 0.25
+
+T3:
+  modality: MERFISH_3D
+  genes:
+    expected_n_vars: 500
+    order: released_order
+  X:
+    ndim: 2
+    finite: true
+    nonnegative: true
+    normalization: log_normalized
+  spatial_3D:
+    required: true
+    min_columns: 3
+    finite: true
+  celltype_submission:
+    used_for_scoring: false
+  official_split:
+    train: ["Mab21l2_KO@E9.5"]
+    validation: ["Gata4_KO@E8.75"]
+    test: ["beta-catenin_KO@E8.75"]
+    reference: ["WT@E8.75", "WT@E9.5"]
+  metric_weights:
+    response_gene_recovery: 0.30
+    response_direction: 0.25
+    response_magnitude: 0.25
+    cell_state_distribution: 0.20
+  shape_in_ranking: false
+
+unknown_until_starter_kit_sync:
+  - exact_minimum_cell_count
+  - exact_uns_metadata
+  - exact_target_identifiers
+  - exact_cli_flags
+  - baseline_clip_and_sampling_details

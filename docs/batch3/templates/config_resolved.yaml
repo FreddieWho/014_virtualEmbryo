@@ -1,0 +1,10 @@
+task_id: null
+seed: null
+repo_commit: null
+scorer_lock: null
+parent_refs: []
+board_refs: []
+lane_configs: {}
+tool_versions: {}
+input_hashes: {}
+deviations: []

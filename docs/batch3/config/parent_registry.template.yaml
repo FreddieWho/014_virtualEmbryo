@@ -1,0 +1,30 @@
+# P0 must verify every path and fill SHA256. These are expectations from the Batch 1 review, not locks.
+parents:
+  T1:
+    expected_candidate_id: v0004_strict_pseudobulk_shift
+    expected_path: candidate/T1_val/v0004_strict_pseudobulk_shift
+    sha256: null
+    scorer_snapshot: null
+    verified: false
+
+  T2:
+    expected_policy: board_specific
+    boards:
+      embryo_interpolation:
+        expected_parent: B1-A1_L1_scale_winner
+        sha256: null
+      heart_interpolation:
+        expected_parent: B1-A1_L1_scale_winner
+        sha256: null
+      heart_extrapolation:
+        expected_parent: pre_B1_baseline_parent
+        sha256: null
+    scorer_snapshot: null
+    verified: false
+
+  T3:
+    expected_candidate_id: wt_identity
+    expected_path: baseline-001/T3_gata4/v0001
+    sha256: null
+    scorer_snapshot: null
+    verified: false

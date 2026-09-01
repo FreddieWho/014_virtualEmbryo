@@ -1,0 +1,72 @@
+batch_id: VE-B1-20260827
+policy:
+  one_atom_per_run: true
+  auto_submit: false
+  max_full_generations_per_atom: 6
+  max_final_scores_per_atom: 6
+  max_exploration_attempts_per_atom: 4
+  max_final_generations_per_lane: 1
+  max_final_scores_per_lane_board: 1
+  hyperparameter_sweeps: 0
+  seeds_per_atom: 1
+  broad_refactor: false
+  new_external_data: false
+atoms:
+  - id: B1-A1
+    prompt: prompts/B1_A1_T2_G1_SCALE.md
+    task: T2
+    atom: G1_tissue_scale
+    primary_metric: TSR
+    protected_metrics: [DES, DCS, MMD, CSS, SDD, ODS, NFS]
+    dependencies: [existing_valid_T2_submissions, official_T2_board_index, fixed_public_score_inputs]
+    boards: [T2_embryo_val_interp, T2_heart_val_interp, T2_heart_val_extrap]
+    final_lanes: [L1_FORMAL_LOG_RMS, L2_ALL_STAGE_LOG_RMS_OLS]
+    output: six_submit_ready_T2_scale_candidates
+    score_handoff: manual_user_upload
+  - id: B1-A2
+    prompt: prompts/B1_A2_T3_C1_SIGNED_RESPONSE.md
+    task: T3
+    atom: C1_response_program_E1_E2_with_K2_anchor
+    primary_metrics: [DES, DCS]
+    observed_not_optimized: [PSS]
+    protected_metrics: [MMD, CSS]
+    dependencies: [existing_valid_T3_submission, matched_WT, existing_allowed_gene_prior_or_WT_fallback]
+    final_lanes: [L1_CELL_LEVEL_SPEARMAN, L2_STATE_PSEUDOBULK_SPEARMAN]
+    output: two_submit_ready_T3_signed_residual_candidates
+    final_artifact_count: 2
+    final_score_count: 2
+    score_handoff: manual_user_upload
+  - id: B1-A3
+    prompt: prompts/B1_A3_T1_P2_C7_MASS_RESIDUAL.md
+    task: T1
+    atom: P2_state_mass_plus_C7_mean_residual_consistency
+    primary_metrics: [MMD, CSS]
+    secondary_metrics: [DES, DCS]
+    dependencies: [existing_valid_T1_submission, source_only_frozen_state_partition]
+    final_lanes: [L1_SHARED_UNRESOLVED, L2_E95_EXPRESSION_PROBE]
+    final_artifact_count: 2
+    final_score_count: 2
+    output: two_submit_ready_T1_mass_residual_candidates
+    score_handoff: manual_user_upload
+  - id: B1-A4
+    prompt: prompts/B1_A4_T2_J1_POST_PAIRING.md
+    task: T2
+    atom: J1_expression_coordinate_joint_neighborhood
+    primary_metric: NFS
+    protected_metrics: [DES, DCS, MMD, CSS, SDD, ODS, TSR]
+    dependencies: [existing_valid_T2_submission, observed_T2_expression_and_coordinates]
+    final_lanes: [L1_LATENT_KNN10, L2_STATE_HASH10]
+    boards: [T2_embryo_val_interp, T2_heart_val_interp, T2_heart_val_extrap]
+    final_artifact_count: 6
+    final_score_count: 6
+    output: six_submit_ready_T2_pairing_candidates
+    score_handoff: manual_user_upload
+  - id: B1-C1
+    prompt: prompts/B1_C1_T2_COMPOSE_SCALE_PAIRING.md
+    task: T2
+    atom: combination_G1_plus_J1
+    primary_metrics: [TSR, NFS]
+    protected_metrics: [DES, DCS, MMD, CSS, SDD, ODS]
+    dependencies: [B1-A1, B1-A4]
+    output: submit_ready_T2_combined_candidate
+    activation: conditional_only_if_A4_was_generated_from_pre_A1_root

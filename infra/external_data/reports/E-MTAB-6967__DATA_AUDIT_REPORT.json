@@ -1,0 +1,41 @@
+{
+  "accession": "E-MTAB-6967",
+  "atom": "B2-T3-A1",
+  "counts_by_reason": {
+    "ambiguous_stage": 9325,
+    "doublet": 12183,
+    "kept": 108857,
+    "stripped": 8966
+  },
+  "forbidden_records_remaining": 0,
+  "genotype_rule": "source metadata states wild type genotype; no mutant/chimera records admitted",
+  "kept_cells": 108857,
+  "license": "EBI Terms if no record-specific license",
+  "model_input": true,
+  "public_url": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-6967",
+  "quality_rule": "stripped and doublet records removed before any matrix statistic",
+  "raw_archive_sha256": "ef7674e9801dce2907cf7319e5e217d22c59599cc437bcb1ed6227104655a2b0",
+  "removed_cells": 30474,
+  "sanitized": {
+    "filter": "one-pass compiled metadata column mask",
+    "raw_nnz": 483512215,
+    "raw_shape": [
+      29452,
+      139331
+    ],
+    "sanitized_nnz": 372748833,
+    "sanitized_sha256": "550c140e17e5c2fee3ea5b95f6580dba4690ada8946da6a44d310bc74df5336f",
+    "sanitized_shape": [
+      29452,
+      108857
+    ],
+    "source_sha256": "b8f27d1e55bf88e0c47f33308489840216a732d4387ca1c7718ce40b5d4d740b"
+  },
+  "sanitized_genes_sha256": "bb7fef37df6aee4aa197ad2251a1d57446c836cbab8c14f00e83d87c95464d44",
+  "sanitized_meta_sha256": "6c71a2e0f7f59635be91044aa4b9a116392d58743e946fb64d92e9ce2e5f757a",
+  "source_id": "E-MTAB-6967",
+  "source_sdrf_sha256": "f7d5d26a9986c108477f3c6fc6e1827717743d46051989fcf9983a2570dd36da",
+  "stage_rule": "exact E6.5-E8.5 labels; non-exact/mixed stage quarantined",
+  "status": "PASS",
+  "task": "T3"
+}

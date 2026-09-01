@@ -1,0 +1,62 @@
+{
+  "schema": "ve.t3.s1d-exact-activity-contract.v1",
+  "atom": "T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v2",
+  "task": "T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE",
+  "retrieved_at": "2026-09-01",
+  "panel_path": "data/gene_panel/T3__gata4.genes.txt",
+  "panel_sha256": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa",
+  "random_seed": null,
+  "signed_gene_set": null,
+  "effect_gate": "DESCRIPTIVE_ONLY; no PASS threshold is declared because no E8.75 state-specific signed family is prevalidated",
+  "value_scale_rules": {
+    "GPL1261": "linear processed expression; log2(mean perturbation / mean control)",
+    "GPL6246": "official RMA log2 processed expression; mean perturbation - mean control"
+  },
+  "probe_aggregation": "within_sample_median_across_probes",
+  "studies": [
+    {
+      "accession": "GSE5298",
+      "target_gene": "Gata4",
+      "matrix_file": "GSE5298/GSE5298_series_matrix.txt.gz",
+      "matrix_sha256": "69bbfef008ec013e067352f60ce96d5ebbcec58f784f3e56d57050b3437dbf8b",
+      "platform_file": "platforms/GPL1261.annot.gz",
+      "platform_sha256": "394c103cf4ca99500d06369e4fb2b9b9bffc2c10fd3cbeb0b0d64c51c3fc95f8",
+      "platform": "GPL1261",
+      "effect_scale": "linear_expression_log2_ratio",
+      "control_accessions": ["GSM120064", "GSM120065", "GSM120066", "GSM120067"],
+      "perturbation_accessions": ["GSM120068", "GSM120069", "GSM120070", "GSM120071"],
+      "excluded_accessions": []
+    },
+    {
+      "accession": "GSE9652",
+      "target_gene": "Gata4",
+      "matrix_file": "GSE9652/GSE9652_series_matrix.txt.gz",
+      "matrix_sha256": "d21d9e1f1b7834266d6d2f0d37439a9da9ea18645239af2283b36d66f193f34b",
+      "platform_file": "platforms/GPL1261.annot.gz",
+      "platform_sha256": "394c103cf4ca99500d06369e4fb2b9b9bffc2c10fd3cbeb0b0d64c51c3fc95f8",
+      "platform": "GPL1261",
+      "effect_scale": "linear_expression_log2_ratio",
+      "control_accessions": ["GSM243911", "GSM243912", "GSM243913"],
+      "perturbation_accessions": ["GSM243917", "GSM243918", "GSM243919", "GSM243920", "GSM243921"],
+      "excluded_accessions": ["GSM243914", "GSM243915", "GSM243916"]
+    },
+    {
+      "accession": "GSE78125",
+      "target_gene": "Ctnnb1",
+      "matrix_file": "GSE78125/GSE78125_series_matrix.txt.gz",
+      "matrix_sha256": "16058df7f658f60c4ad33e27bfeebeb5eed0cfcd04c627705dfcadc7484c8ac4",
+      "platform_file": "platforms/GPL6246.annot.gz",
+      "platform_sha256": "e402315b8693822706d3340e188a00c1017ef3114a65c6193dbcd0a2a64aca81",
+      "platform": "GPL6246",
+      "effect_scale": "RMA_log2_difference",
+      "control_accessions": ["GSM2067665", "GSM2067666", "GSM2067667", "GSM2067668"],
+      "perturbation_accessions": ["GSM2067661", "GSM2067662", "GSM2067663", "GSM2067664"],
+      "excluded_accessions": [
+        "GSM2067653", "GSM2067654", "GSM2067655", "GSM2067656",
+        "GSM2067657", "GSM2067658", "GSM2067659", "GSM2067660",
+        "GSM2067669", "GSM2067670", "GSM2067671", "GSM2067672",
+        "GSM2067673", "GSM2067674", "GSM2067675", "GSM2067676"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "atom": "B2-T3-A1",
+  "files": [
+    {
+      "bytes": 764086680,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/CELLORACLE/CellOracle-7948870a3b70f7d228e54734e1fa9ed3291fc23b.tar.gz",
+      "sha256": "a8ea621741ea820ffe8df407bfb312f99d6c4f72d5a8be2649880315a2fc9865"
+    }
+  ],
+  "forbidden_records_remaining": 0,
+  "model_input": false,
+  "role": "pinned source code; no pretrained model",
+  "source_id": "CELLORACLE",
+  "status": "PASS",
+  "task": "T3"
+}

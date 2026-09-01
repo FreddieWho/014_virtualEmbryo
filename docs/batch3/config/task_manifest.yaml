@@ -1,0 +1,107 @@
+pack_id: VE-TOOLS-20260830
+version: 1.0.0
+artifact_root: artifacts/tool_integration
+default_seed: 20260830
+
+tasks:
+  P0-LOCK:
+    status: READY
+    prompt: prompts/P0_LOCK_SCORER_ANCHORS_TOOLCHAIN.md
+    dependencies: []
+    candidate_generation: false
+    primary_outputs:
+      - locks/SCORER_LOCK.json
+      - locks/PARENT_REGISTRY.yaml
+      - locks/TOOLCHAIN_LOCK.json
+      - locks/BOARD_REGISTRY.yaml
+      - RESULT.md
+    stop_condition: locks_written_and_validation_status_declared
+
+  T3-S1-PRIOR:
+    status: READY_AFTER_P0
+    prompt: prompts/T3_S1_PRIOR_COMMITTEE.md
+    dependencies: [P0-LOCK]
+    candidate_generation: false
+    primary_atoms: [E1, E2, K1, K2]
+    targets: [Gata4_Gata6_condition, beta_catenin_condition]
+    lanes: [L1_STRICT_AGREEMENT, L2_CONDITION_AWARE]
+    primary_outputs:
+      - intermediates/prior.json
+      - intermediates/evidence.tsv
+      - intermediates/state_gate.tsv
+      - metrics/gate_report.json
+      - RESULT.md
+    stop_condition: prior_and_gate_written
+
+  T3-S1A-STATE-JOIN:
+    status: ACTIVE_AFTER_T3_S1
+    prompt: prompts/T3_S1A_STATE_JOIN.md
+    dependencies: [P0-LOCK, T3-S1-PRIOR]
+    required_gate: route_specific_prior_gate_v2
+    candidate_generation: false
+    primary_atoms: [E1, E2, K1, K2]
+    routes:
+      - GATA4_GATA6_VALIDATION_E875::L1_STRICT_AGREEMENT
+      - GATA4_GATA6_VALIDATION_E875::L2_CONDITION_AWARE
+      - BETA_CATENIN_HIDDEN_E875::L1_STRICT_AGREEMENT
+      - BETA_CATENIN_HIDDEN_E875::L2_CONDITION_AWARE
+    stop_condition: state_joined_prior_and_route_gate_written
+
+  T3-S1B-GENERATE:
+    status: CONDITIONAL
+    prompt: prompts/T3_S1B_PRIOR_TO_CANDIDATE.md
+    dependencies: [P0-LOCK, T3-S1-PRIOR]
+    required_gate: PRIOR_GATE_PASS
+    candidate_generation: true
+    primary_atoms: [E1, E2, E3, K1, K2, P3, P4]
+    lanes: [L1_STRICT_SPARSE, L2_CONDITION_AWARE_SHRUNK]
+    stop_condition: all_lanes_generated_scored_and_result_written
+
+  T1-PRE-HARMONIZE:
+    status: READY_AFTER_P0
+    prompt: prompts/T1_PRE_STATE_HARMONISATION.md
+    dependencies: [P0-LOCK]
+    candidate_generation: false
+    primary_atoms: [P1, P2]
+    primary_outputs:
+      - intermediates/state_vocabulary.tsv
+      - intermediates/state_crosswalk.tsv
+      - metrics/state_stability.json
+      - RESULT.md
+    stop_condition: vocabulary_and_validation_gate_written
+
+  T1-S2-MOSCOT-DECODER:
+    status: READY_AFTER_T1_PRE
+    prompt: prompts/T1_S2_MOSCOT_DECODER.md
+    dependencies: [P0-LOCK, T1-PRE-HARMONIZE]
+    required_gate: STATE_GATE_PASS_AND_FULL_PANEL_SCORER_PASS
+    candidate_generation: true
+    primary_atoms: [E1, E2, P2, P3, P4]
+    lanes: [L1_EMPIRICAL_RESIDUAL, L2_MODULE_SCDESIGN3]
+    stop_condition: all_lanes_generated_scored_and_result_written
+
+  T2-S3-SHAPE-FIELD:
+    status: READY_AFTER_P0
+    prompt: prompts/T2_S3_SHAPE_FIELD.md
+    dependencies: [P0-LOCK]
+    candidate_generation: true
+    primary_atoms: [G2, G3]
+    protected_atoms: [G1, J1, E1, E2, P3, P4]
+    lanes: [L1_PYCPD, L2_SPATEO]
+    stop_condition: board_lanes_generated_and_geometry_report_written
+
+  T2-J1-PROXY:
+    status: CONDITIONAL
+    prompt: prompts/T2_J1_PROXY_GATE.md
+    dependencies: [P0-LOCK]
+    candidate_generation: false
+    primary_atoms: [J1]
+    stop_condition: proxy_gate_written_no_candidate_generated
+
+  HX-DYNAMICS-KILLTEST:
+    status: FROZEN
+    prompt: prompts/HX_MIOFLOW_SDIFFEQ_KILLTEST.md
+    dependencies: [P0-LOCK]
+    candidate_generation: conditional
+    primary_atoms: [P2, P3]
+    stop_condition: one_tool_one_board_one_metric_test_complete

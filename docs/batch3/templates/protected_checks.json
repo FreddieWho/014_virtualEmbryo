@@ -1,0 +1,12 @@
+{
+  "task_id": null,
+  "parent_hash_verified": false,
+  "contract_pass": false,
+  "gene_order_equal": null,
+  "obs_schema_equal": null,
+  "var_schema_equal": null,
+  "expression_hash_equal_when_protected": null,
+  "coordinate_scale_locked_when_protected": null,
+  "task_specific": {},
+  "pass": false
+}

@@ -1,0 +1,88 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: External dataset sanitized manifest
+type: object
+required:
+- source_id
+- task
+- status
+- license
+- raw_files
+- filters
+- sanitized_files
+- forbidden_records_remaining
+properties:
+  source_id:
+    type: string
+  task:
+    enum:
+    - T1
+    - T2
+    - T3
+  board:
+    type:
+    - string
+    - 'null'
+  status:
+    enum:
+    - PASS
+    - BLOCKED
+    - REJECTED
+  license:
+    type: string
+    minLength: 1
+  accessed_at:
+    type: string
+  raw_files:
+    type: array
+    items:
+      type: object
+      required:
+      - path
+      - sha256
+      properties:
+        path:
+          type: string
+        sha256:
+          type: string
+  filters:
+    type: array
+    items:
+      type: object
+      required:
+      - field
+      - rule
+      properties:
+        field:
+          type: string
+        rule:
+          type: string
+        removed_count:
+          type: integer
+          minimum: 0
+  sanitized_files:
+    type: array
+    items:
+      type: object
+      required:
+      - path
+      - sha256
+      properties:
+        path:
+          type: string
+        sha256:
+          type: string
+        n_obs:
+          type: integer
+          minimum: 0
+        n_vars:
+          type: integer
+          minimum: 0
+  forbidden_records_remaining:
+    type: integer
+    const: 0
+  training_permitted:
+    type: boolean
+  notes:
+    type: array
+    items:
+      type: string

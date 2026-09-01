@@ -1,0 +1,32 @@
+core_environment:
+  name: ve-core
+  purpose: scorer_contract_candidate_builder
+  packages: [python, anndata, scanpy, numpy, scipy, pandas, h5py]
+  resolved_versions: null
+
+tool_environments:
+  t1_ot:
+    name: ve-t1-ot
+    preferred: [moscot, POT]
+    fallback: [Waddington-OT]
+    optional_subenvironment: R-scDesign3
+    writes: [coupling.npz, state_transition.tsv, state_mass.tsv, decoder_parameters]
+
+  t2_geometry:
+    name: ve-t2-geometry
+    preferred: [pycpd, Spateo, POT, GeomLoss]
+    fallback: []
+    writes: [landmarks.npy, displacement.npy, field_meta.json]
+
+  t3_prior:
+    name: ve-t3-prior
+    preferred: [decoupler_CollecTRI, OmniPath, CellOracle, Pertpy_CINEMA_OT]
+    optional_subenvironment: R-scTenifoldKnk
+    fallback: [audited_directed_graph]
+    writes: [source_votes.tsv, evidence.tsv, prior.json, state_gate.tsv]
+
+rules:
+  - external_tool_env_must_not_write_final_h5ad
+  - resolved_versions_must_be_frozen_after_P0
+  - every_intermediate_requires_input_hash_and_tool_version
+  - no_unregistered_fallback

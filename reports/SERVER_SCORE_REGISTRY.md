@@ -1,0 +1,268 @@
+# Server leaderboard score registry
+
+本文件只登记比赛服务器返回的分数。`local pseudo-score`、公开 target 上的
+scorer smoke 和格式检查不得填入这里，也不得当作官方榜单分数。
+
+提交文件的唯一索引是 [`submissions/INDEX.tsv`](../submissions/INDEX.tsv)；本文件
+只负责分数、submission ID 和服务器证据，不重复维护文件清单。
+
+## Scoring protocol
+
+每次 scored submission 后，下一步模型迭代前必须补登记：
+
+- 日期、submission ID、board/phase；
+- 提交文件路径和 SHA-256；
+- Total、T1、T2、T3 及各 task 子项分数；
+- 相对上一次提交的差值；
+- 成绩按用户或服务器回填登记；不额外要求截图、链接或 JSON。
+
+如果新提交没有回填服务器分数，下一轮比较只能标记为 `score_pending`，不能宣称
+模型进步。
+
+## Registered submissions
+
+### Baseline-001
+
+| Field | Value |
+|---|---|
+| Record date | 2026-08-21 |
+| Submission label | baseline (first scored submission) |
+| Source | User-provided server result |
+| Submission ID | pending |
+| Board/phase | pending |
+| Submission file / SHA-256 | pending |
+
+| Score | Value |
+|---|---:|
+| **Total** | **145.7** |
+| T1 | 47.0 |
+| T2 | 53.4 |
+| T3 | 45.3 |
+| T1 · single-cell temporal | 47.0 |
+| T2 · heart interpolation | 53.0 |
+| T2 · heart extrapolation | 50.5 |
+| T2 · embryo interpolation | 56.7 |
+| T3 · Gata4 KO | 45.3 |
+
+Consistency checks from the supplied values:
+
+- `Total = T1 + T2 + T3 = 47.0 + 53.4 + 45.3 = 145.7`;
+- `T2 = mean(53.0, 50.5, 56.7) = 53.4` after rounding to one decimal.
+
+This is the baseline reference for future comparisons. No improvement claim is made
+until a later server score is registered against this row.
+
+### Submission-002
+
+| Field | Value |
+|---|---|
+| Record date | 2026-08-22 |
+| Submission label | T2 heart interpolation `v0002_expression_midpoint_norm` |
+| Source | User-provided server result |
+| Submission ID | pending |
+| Board/phase | T2:heart:val_interp; aggregate table updated |
+| Submission file | `submissions/scored/submission-002/T2_heart_val_interp/submission.h5ad` |
+| SHA-256 | `402b0a893672e9ce267af0a39bcdf8e00975cdf3dc7dca00fab80858ae2d08b4` |
+
+| Score | Value | Delta vs Baseline-001 |
+|---|---:|---:|
+| **Total** | **145.9** | **+0.2** |
+| T1 | 47.0 | 0.0 |
+| T2 | 53.6 | +0.2 |
+| T3 | 45.3 | 0.0 |
+| T1 · single-cell temporal | 47.0 | 0.0 |
+| T2 · heart interpolation | 53.6 | **+0.6** |
+| T2 · heart extrapolation | 50.5 | 0.0 |
+| T2 · embryo interpolation | 56.7 | 0.0 |
+| T3 · Gata4 KO | 45.3 | 0.0 |
+
+Consistency checks:
+
+- `Total = 47.0 + 53.6 + 45.3 = 145.9`;
+- `T2 = mean(53.6, 50.5, 56.7) = 53.6` after rounding to one decimal.
+
+At the time of entry, this was the current best registered result. The candidate remains
+the immutable parent for the B1-A1 heart interpolation comparison; its supplied score is
+retained as the comparison baseline.
+
+### Submission-003
+
+| Field | Value |
+|---|---|
+| Record date | 2026-08-23 |
+| Submission label | T1 validation `v0002_shrunk_pseudobulk_shift` |
+| Source | User-provided server result |
+| Submission ID | pending |
+| Board/phase | T1:val |
+| Submission file | `submissions/scored/submission-003/T1_val/submission.h5ad` |
+| SHA-256 | `bef1d4654ee1723b7e27716b676dda97f229a5560f2295e144d78bd1334acb3d` |
+
+| Score | Value | Delta vs Submission-002 |
+|---|---:|---:|
+| **Total** | not supplied | — |
+| T1 | 45.9 | **-1.1** |
+| T2 | not supplied (unchanged candidate set) | — |
+| T3 | not supplied (unchanged candidate set) | — |
+| T1 · single-cell temporal | 45.9 | **-1.1** |
+
+Consistency checks:
+
+- Only the T1 board score (45.9) was supplied with this result; T2/T3 were not
+  re-submitted and their last registered values remain 53.6 / 45.3. If those stand,
+  the implied aggregate would be `45.9 + 53.6 + 45.3 = 144.8` (-1.1 vs 145.9), to be
+  confirmed against the server page on next upload.
+- Delta is measured against the T1 current best (baseline-001 `copy_last`, 47.0).
+
+Assessment: the T1 v0002 candidate (shrunk per-type shift + global fallback +
+linear composition extrapolation) scored **below** the `copy_last` floor it was
+meant to beat. It is rejected as an improvement; later T1 rows supersede it as
+the current-best comparison. The scored artifact is kept immutable as the audit
+snapshot; the supplied score is retained; submission ID is not used for the comparison.
+
+### Submission-004 — T3 Gata4 comparison round
+
+| Field | Value |
+|---|---|
+| Record date | 2026-08-24 |
+| Submission label | T3 Gata4 `v0002_shift_transfer_norm` and `v0003_shift_transfer_shrunk` |
+| Source | User-provided server result |
+| Submission ID | pending |
+| Board/phase | T3:gata4 |
+| Submission files / SHA-256 | `v0002`: `submissions/candidates/T3_gata4/v0002_shift_transfer_norm/submission.h5ad` / `adfc109ef565e4813aed1f4dd60d0bdc62ef96ad4f1ac96dcfcf9dbf92a2ef5c`; `v0003`: `submissions/candidates/T3_gata4/v0003_shift_transfer_shrunk/submission.h5ad` / `7f0ecf27f6b453122842dc77c25d860b36f6166428f43a28f62651f52f05d50f` |
+
+| Candidate | T3 · Gata4 KO | Delta vs T3 baseline `v0001` (45.3) | Decision |
+|---|---:|---:|---|
+| `v0002_shift_transfer_norm` | 45.2 | **-0.1** | rejected |
+| `v0003_shift_transfer_shrunk` | 43.8 | **-1.5** | rejected |
+
+| Score field | Value |
+|---|---:|
+| Total | not supplied (T3-only result) |
+| T1 | not supplied; retained latest best 47.0 |
+| T2 | not supplied; retained latest best 53.6 |
+| T3 | retained latest best 45.3 (`wt_identity`) |
+
+Consistency and decision: both candidates passed the local contract but scored below
+the immutable T3 baseline, so neither is a leaderboard improvement. The retained
+aggregate remains `47.0 + 53.6 + 45.3 = 145.9`. The supplied scores are retained;
+the two scored artifacts stay immutable as audit snapshots.
+
+### B1-A1 — T2 G1 dual-lane scoring round
+| Record date | 2026-08-27 |
+|---|---|
+| Submission label | B1-A1: L1/L2 source-only uniform G1 scale |
+| Board/phase | T2:embryo:val_interp; T2:heart:val_interp; T2:heart:val_extrap |
+| Source | User-provided server results in score-return message |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs parent | Per-board decision |
+|---|---|---|---:|---:|---|
+| `B1-A1-L1-T2_embryo_val_interp` | `t2_emb_int_b1_a1_l1` | `submissions/candidates/T2_embryo_val_interp/v0002_g1_formal_log_rms/submission.h5ad` / `392c470e4af35797ad27c100e773c1a7695c989baed95c911fceb0b5d7965fd4` | **60.1** | **+3.4** vs 56.7 | retain; board winner |
+| `B1-A1-L2-T2_embryo_val_interp` | `t2_emb_int_b1_a1_l2` | `submissions/candidates/T2_embryo_val_interp/v0003_g1_all_stage_log_rms_ols/submission.h5ad` / `f06540293b9bb479e7090926825ec722420d266257455a85ca8f470ee565f668` | **59.9** | **+3.2** vs 56.7 | scored backup |
+| `B1-A1-L1-T2_heart_val_interp` | `t2_hrt_int_b1_a1_l1` | `submissions/candidates/T2_heart_val_interp/v0003_g1_formal_log_rms/submission.h5ad` / `f8a4da854bf9e01e25503b59fddb70bae242c0382b38cc0f3984bf80cd751424` | **56.3** | **+2.7** vs 53.6 | retain; board winner |
+| `B1-A1-L2-T2_heart_val_interp` | `t2_hrt_int_b1_a1_l2` | `submissions/candidates/T2_heart_val_interp/v0004_g1_all_stage_log_rms_ols/submission.h5ad` / `6239e6fa24fefb6a3f6ee76564a58f5e08a4463c24fc46747d9e59ee561d9538` | **55.3** | **+1.7** vs 53.6 | scored backup |
+| `B1-A1-L1-T2_heart_val_extrap` | `t2_hrt_ext_b1_ba_l1` | `submissions/candidates/T2_heart_val_extrap/v0002_g1_formal_log_rms/submission.h5ad` / `8c76db9cdd5453422d4c392108fd459c4ca44b9c391dd9af4605017988164834` | **50.2** | **-0.3** vs 50.5 | retain; board winner but below parent |
+| `B1-A1-L2-T2_heart_val_extrap` | `t2_hrt_ext_b1_ba_l2` | `submissions/candidates/T2_heart_val_extrap/v0003_g1_all_stage_log_rms_ols/submission.h5ad` / `a85b8207e50002068a3bdfd4d9dd6677fffd4f1177262e83a1fb0f271fb86a26` | **49.8** | **-0.7** vs 50.5 | scored backup; below parent |
+
+Consistency and decision:
+- L1 wins L2 on all three boards by 0.2, 1.0 and 0.4 points respectively.
+- The leaderboard row at 13:13 labels the Model as an embryo-interpolation string, but its Board is T2 heart extrapolation and its 50.2 score is mapped to the canonical heart-extrapolation L1 artifact; the Model text is not used.
+- Using L1 on all three boards, the derived T2 mean is `(60.1 + 56.3 + 50.2) / 3 = 55.5`; the derived aggregate is `47.0 + 55.5 + 45.3 = 147.8`.
+- Using L2 on all three boards, the derived T2 mean is `55.0` and the derived aggregate is `147.3`.
+- The server supplied board scores, not an aggregate Total; 147.8/147.3 are protocol-derived values and must be labeled as such.
+- Decision: L1 wins within the B1-A1 lanes, but the current global board selection uses the higher baseline 50.5 for heart extrapolation; keep all six immutable artifacts and retain L2 as the scored second candidate/audit backup. No causal or universal extrapolation claim.
+- User-provided values are registered as supplied server results.
+
+### B1-A2 — T3 Gata4 signed-response scoring round
+
+| Record date | 2026-08-28 |
+|---|---|
+| Submission label | B1-A2: L1/L2 WT-only signed-response candidates |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs T3 baseline 45.3 | Decision |
+|---|---|---|---:|---:|---|
+| `B1-A2-L1-T3_gata4` | `t3_v0004` | `submissions/candidates/T3_gata4/v0004_b1_a2_cell_spearman/submission.h5ad` / `c6a09de79c8f29fb6096fabd36e2270e828a4c7d86da3966075babea3a0c5c8f` | **44.7** | **-0.6** | rejected; hold for failure diagnosis |
+| `B1-A2-L2-T3_gata4` | `t3_v0005` | `submissions/candidates/T3_gata4/v0005_b1_a2_state_pb_spearman/submission.h5ad` / `a702805d24786308a90dfbe7c4db0a37fad626be2fef45e16a1cf76a9899b84d` | **44.0** | **-1.3** | rejected; hold for failure diagnosis |
+
+Consistency and decision:
+- The server returned T3 board scores only; no new Total/T1/T2 values were supplied, so the retained aggregate is unchanged.
+- Both candidates passed local contract/invariant checks but scored below immutable `wt_identity` baseline `45.3`; v0004 remains the less-bad experimental lane, not a new best.
+- User-provided values are registered as supplied. No additional screenshot, link, or JSON evidence is required.
+
+### T1 historical validation rows — corrected from leaderboard
+| Record date | 2026-08-24 |
+|---|---|
+| Submission label | Two unlabeled T1 validation submissions |
+| Board/phase | T1:val |
+| Source | User-provided leaderboard table |
+| Mapping rule | Model field ignored; the 12:30 and 12:43 rows are mapped in chronological order to local candidates v0003 and v0004 respectively, consistent with candidate/version order |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs baseline 47.0 | Decision |
+|---|---|---|---:|---:|---|
+| `candidate/T1_val/v0003_no_comp_extrap` | not supplied | `submissions/candidates/T1_val/v0003_no_comp_extrap/submission.h5ad` / `a0d1ef28c30569a016fb5009a0da4fa68b8461c071b1a46a35416df2e8df0cda` | **46.2** | **-0.8** | rejected |
+| `candidate/T1_val/v0004_strict_pseudobulk_shift` | not supplied | `submissions/candidates/T1_val/v0004_strict_pseudobulk_shift/submission.h5ad` / `1bc069d9aecd4b9b15f3ff91c328ef27a9773bfd0d3c890f36f5f1b6fb4f49bd` | **48.5** | **+1.5** | T1 best; retain immutable |
+
+Consistency and decision:
+- These two rows are now the missing T1 leaderboard entries; the Model text was not used to identify artifacts.
+- The local v0003/v0004 files contain public pseudo-holdout metric vectors, not the leaderboard's one-dimensional score; those local values are not comparable to 46.2/48.5.
+- The 48.5 row is higher than B1-A3 v0006=47.7, so the global T1 best is v0004, not B1-A3 v0006.
+- No new Total/T2/T3 values were supplied. With the retained T1/T2/T3 selections, the derived aggregate is `48.5 + 55.5 + 45.3 = 149.3`; the server did not directly return Total.
+
+
+- Decision: keep both immutable artifacts for diagnosis; do not enter B1-A3 or start another T3 route until the failure review is explicitly released.
+
+### B1-A3 — T1 mass-residual dual-lane scoring round
+| Record date | 2026-08-28 |
+|---|---|
+| Submission label | B1-A3: L1/L2 source-only mass residual |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs T1 baseline 47.0 | Decision |
+|---|---|---|---:|---:|---|
+| `B1-A3-L1_SHARED_UNRESOLVED-T1_val` | `t1_v0005` | `submissions/candidates/T1_val/v0005_b1_a3_shared_unresolved/submission.h5ad` / `88c3cb51245e19a100de0b0ad33766a6ee704c42f308b81141aeeeaed07e556a` | **47.5** | **+0.5** | scored backup; retain immutable |
+| `B1-A3-L2_E95_EXPRESSION_PROBE-T1_val` | `t1_v0006` | `submissions/candidates/T1_val/v0006_b1_a3_e95_expression_probe/submission.h5ad` / `ba6b83cd4135968a3ce4f15ae4ca5dce01ed019cef268e5c01edf012a45bd4b4` | **47.7** | **+0.7** | B1-A3 lane winner; below T1 best v0004=48.5; retain immutable |
+
+Consistency and decision:
+- The server returned the T1 board score only; no new Total/T2/T3 values were supplied.
+- Both B1-A3 candidates beat the immutable T1 baseline 47.0; L2 is higher than L1 by 0.2 points, but both are below the earlier v0004 score 48.5.
+- This earlier B1-A3-derived aggregate is superseded by the current server snapshot below; do not use `48.5 + 55.5 + 45.3 = 149.3` as the current Total.
+- User-provided values are registered as supplied. No additional screenshot, link, or JSON evidence is required.
+
+### Current leaderboard snapshot — 2026-08-28
+| Field | Server value | Basis |
+|---|---:|---|
+| Total | **149.5** | server-returned current leaderboard value |
+| T1 | **48.5** | server-returned; `candidate/T1_val/v0004_strict_pseudobulk_shift` |
+| T2 | **55.7** | server-returned task aggregate |
+| T3 | **45.3** | server-returned; baseline `wt_identity` |
+| T1 · single-cell temporal | **48.5** | server-returned |
+| T2 · heart interpolation | **56.3** | server-returned; B1-A1 L1 |
+| T2 · heart extrapolation | **50.5** | server-returned; baseline, higher than B1-A1 L1=50.2 |
+| T2 · embryo interpolation | **60.1** | server-returned; B1-A1 L1 |
+| T3 · Gata4 KO | **45.3** | server-returned; baseline |
+
+Consistency note:
+- The displayed T2 components average to `55.633...`, not exactly the displayed `55.7`; the local record does not expose the server's unrounded component values or aggregation precision. The server-returned T2/Total values are authoritative and must not be replaced by a hand-rounded local recomputation.
+- The current aggregate is the server-returned **149.5**; the previous local derivation **149.3** was invalid because it selected 50.2 instead of the higher baseline 50.5 and was not a server Total.
+
+### B1-A4 — T2 J1 hard expression-coordinate permutation scoring round
+| Record date | 2026-08-28 |
+|---|---|
+| Submission label | B1-A4: L1/L2 source-only J1 permutation candidates |
+| Board/phase | T2:embryo:val_interp; T2:heart:val_interp; T2:heart:val_extrap |
+| Source | User-provided server results; portal Model filename used only for local candidate mapping |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs parent | Per-board decision |
+|---|---|---|---:|---:|---|
+| `B1-A4-L1_LATENT_KNN10-T2_embryo_val_interp` | not supplied | `submissions/candidates/T2_embryo_val_interp/v0004_b1_a4_latent_knn10/submission.h5ad` / `5bcc56b57ac021e608ba6b94e427e93accd03c780c9cf072c8767be8eb4a3645` | **59.3** | **-0.8** vs B1-A1 L1=60.1 | rejected; below current board best |
+| `B1-A4-L2_STATE_HASH10-T2_embryo_val_interp` | not supplied | `submissions/candidates/T2_embryo_val_interp/v0005_b1_a4_state_hash10/submission.h5ad` / `85218c4edbf3430abe5cd7c670f2957dffb06c302d566372345479157b2977a2` | **59.2** | **-0.9** vs B1-A1 L1=60.1 | rejected; below current board best |
+| `B1-A4-L1_LATENT_KNN10-T2_heart_val_interp` | not supplied | `submissions/candidates/T2_heart_val_interp/v0005_b1_a4_latent_knn10/submission.h5ad` / `d999bde5d118cb23ce5e16821592a0509b785ca78c47593f23223ab44fafacc1` | **56.3** | **0.0** vs B1-A1 L1=56.3 | tie; no promotion |
+| `B1-A4-L2_STATE_HASH10-T2_heart_val_interp` | not supplied | `submissions/candidates/T2_heart_val_interp/v0006_b1_a4_state_hash10/submission.h5ad` / `cb91e88b0e2db0e2820d95d17aa9accecc203083b15c4241b11832a6646bd1ca` | **56.3** | **0.0** vs B1-A1 L1=56.3 | tie; no promotion |
+| `B1-A4-L1_LATENT_KNN10-T2_heart_val_extrap` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0004_b1_a4_latent_knn10/submission.h5ad` / `3f1869bbb9fbc8f1f00ce4b7214c4ac8a8ec2a76336651c0060f69e5d067ad30` | **50.0** | **-0.5** vs baseline=50.5 | rejected; below parent |
+| `B1-A4-L2_STATE_HASH10-T2_heart_val_extrap` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0005_b1_a4_state_hash10/submission.h5ad` / `bfec39b18a2e7d0b2a8c2a1d978550ff258728a4433aaec4ecf7dc65337325c8` | **49.9** | **-0.6** vs baseline=50.5 | rejected; below parent |
+
+Consistency and decision:
+- A4 L1/L2 tie on heart interpolation at 56.3, but neither exceeds the retained B1-A1 L1 board score.
+- The current per-board selection remains B1-A1 L1 for embryo interpolation and heart interpolation, plus baseline for heart extrapolation: T2 **55.7**, Total **149.5**.
+- A4 all-L1 would imply `(59.3 + 56.3 + 50.0) / 3 = 55.2` from board values; A4 all-L2 would imply `55.1`. These are protocol-derived comparisons, not new server Total values.
+- Decision: retain all six scored artifacts as immutable records; reject A4 as a leaderboard improvement and do not start B1-C1 or another atom from this result.
+- User-provided values are registered as supplied; no additional screenshot, link, or JSON evidence is required.

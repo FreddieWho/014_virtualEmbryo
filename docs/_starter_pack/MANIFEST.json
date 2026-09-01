@@ -1,0 +1,30 @@
+{
+  "package": "Virtual_Embryo_Agent_Starter_Pack_20260814",
+  "version": "1.1",
+  "purpose": "First-cycle implementation package for a Human Team workflow",
+  "primary_entry": "01_MASTER_AGENT_PROMPT.md",
+  "files": [
+    "00_START_HERE.md",
+    "01_MASTER_AGENT_PROMPT.md",
+    "02_IMPLEMENTATION_SPEC.md",
+    "03_OFFICIAL_SNAPSHOT_20260814.md",
+    "config/task_contracts.yaml",
+    "config/pseudo_holdouts.yaml",
+    "compliance/external_sources.tsv",
+    "experiments/registry.csv"
+  ],
+  "closure": {
+    "status": "CLOSED_FOR_COMPETITION_BASELINE",
+    "date": "2026-08-22",
+    "report": "../../reports/STARTER_PACK_CLOSURE.md",
+    "research_extension_open": true
+  },
+  "default_policy": {
+    "allow_scored_submission": true,
+    "advanced_models_first_cycle": false,
+    "external_data_without_audit": false,
+    "primary_research_task_first_cycle": "T2",
+    "allowed_t2_research_modules": ["B1", "B2"],
+    "competition_submission_prerequisites": ["official_board_contract", "local_format_check", "provenance_record", "candidate_sha256"]
+  }
+}

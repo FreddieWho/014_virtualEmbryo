@@ -1,0 +1,16 @@
+{
+  "atom": "B2-T3-A1",
+  "files": [
+    {
+      "bytes": 12773886,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/MM9_GTF_RELEASE67/Mus_musculus.NCBIM37.67.gtf.gz",
+      "sha256": "db26bfb1e4d487149759d1590e836d7a08152785418b25ee32c0ffc5e28d135f"
+    }
+  ],
+  "forbidden_records_remaining": 0,
+  "model_input": false,
+  "role": "technical mm9/NCBIM37 gene-coordinate mapping only",
+  "source_id": "MM9_GTF_RELEASE67",
+  "status": "PASS",
+  "task": "T3"
+}

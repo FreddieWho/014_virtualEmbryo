@@ -1,0 +1,16 @@
+把本目录放到 Virtual Embryo 项目仓库中，例如：
+
+  docs/tool_integration_20260830/
+
+然后把下面两份文件一起交给总控 agent：
+
+  1. 01_AGENT_CONTROLLER_PROMPT.md
+  2. config/active_task.yaml
+
+默认 active task 是 P0-LOCK。Agent 只执行这个任务，写完 RESULT.md 后停止；不得自动上传服务器。
+
+完成 P0 后，使用以下命令切换任务：
+
+  python scripts/activate_task.py --task T3-S1-PRIOR
+
+可用模板位于 config/active_templates/。

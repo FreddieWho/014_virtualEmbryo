@@ -1,0 +1,26 @@
+{
+  "atom": "B2-T3-A1",
+  "files": [
+    {
+      "bytes": 32227785,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/GO/go-basic.obo",
+      "sha256": "b08d45b268b8c24ccb2513dbbbc7d4df9f6521c099b413f79eb31e06e0fa3bcc"
+    },
+    {
+      "bytes": 10579993,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/GO/MOUSE-mod.gaf.gz",
+      "sha256": "6cbefce3a2efd9862f102a2732e923fde525c8fa59a3e5ce22e8178c3ebb0093"
+    },
+    {
+      "bytes": 10238295,
+      "path": "/home/huyudi/014_virtualEmbryo/infra/external_data/sanitized/T3/B2-T3-A1/GO/MOUSE-uniprot.gaf.gz",
+      "sha256": "ea07d1a19adad445da59b2d8c48e7f7678827b09c12cc056f3faf7a1f88068b8"
+    }
+  ],
+  "forbidden_records_remaining": 0,
+  "model_input": true,
+  "role": "module membership and ontology terms only",
+  "source_id": "GO",
+  "status": "PASS",
+  "task": "T3"
+}

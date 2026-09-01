@@ -1,0 +1,91 @@
+{
+  "package": "Virtual_Embryo_Batch1_Atomic_Optimization_Pack_20260827",
+  "created": "2026-08-27",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "size": 4193,
+      "sha256": "d36917728ecfd977235714a8ddabbdbb3b491c33f1bfe4921af465f46ee0add1"
+    },
+    {
+      "path": "01_CODEX_CONTROLLER_PROMPT.md",
+      "size": 4724,
+      "sha256": "1f5ab765a81c24b1e577bb691da744dc096f87aa9ea2e40112372991127fef86"
+    },
+    {
+      "path": "02_DECISION_RULES.md",
+      "size": 2558,
+      "sha256": "418ab80d0a3735618d9a73c34abab656a5fa816cd337fde0bd1573f019fba7d4"
+    },
+    {
+      "path": "03_NOT_IN_BATCH1.md",
+      "size": 1036,
+      "sha256": "552ccb7ae13c03de82f06ab7a6fa743f283c6d218cef1ee41a60718c8adcc3bc"
+    },
+    {
+      "path": "04_FILE_INVENTORY.md",
+      "size": 1487,
+      "sha256": "9f68f7455177e40c115ef94f033e16e01322b099c27c5ed4a575bd7c0f75ddf9"
+    },
+    {
+      "path": "config/active_atom.yaml",
+      "size": 306,
+      "sha256": "e1b4bfd24404819c72da370895b4e43ff4bbd479e31a9da03e675a5b35bde4ba"
+    },
+    {
+      "path": "config/batch1_manifest.yaml",
+      "size": 2552,
+      "sha256": "38f073ba5351eb1ac7d4170edfe53cad7de8569721ceaae99daf24c4c015bcc0"
+    },
+    {
+      "path": "config/scoring_targets.yaml",
+      "size": 1177,
+      "sha256": "b4649009d32226e5a83bc7f926a267473db6be54220b2c366df7d31c755b0abf"
+    },
+    {
+      "path": "prompts/B1_A1_T2_G1_SCALE.md",
+      "size": 5073,
+      "sha256": "a6af65ffaf58a7ff9529e0fbfc7c7d3a54d95e905050fef510d963020f02f255"
+    },
+    {
+      "path": "prompts/B1_A2_T3_C1_SIGNED_RESPONSE.md",
+      "size": 4086,
+      "sha256": "d529bb1b53eb22e7d36f459deffea902db4165120fa7ae720dc9e00c0b49959b"
+    },
+    {
+      "path": "prompts/B1_A3_T1_P2_C7_MASS_RESIDUAL.md",
+      "size": 4516,
+      "sha256": "0f8436f7a75dd7589280ed2a296e410ae7d426d41b32a16a6e72f70e7cda06eb"
+    },
+    {
+      "path": "prompts/B1_A4_T2_J1_POST_PAIRING.md",
+      "size": 3217,
+      "sha256": "6e1db9cab6043fd3c37f01953cb219ec535ad99abd4e9dad1681bf7552a73a84"
+    },
+    {
+      "path": "prompts/B1_C1_T2_COMPOSE_SCALE_PAIRING.md",
+      "size": 1477,
+      "sha256": "5fae9c1100151cb8fed3976691a001268f99ca077333d58f3e2230b8db324290"
+    },
+    {
+      "path": "reference/OFFICIAL_SOURCE_LOCK_20260827.md",
+      "size": 1141,
+      "sha256": "121257a86a32bfff8d028940ba02625b78fde484fc43054449e41204d7fa9067"
+    },
+    {
+      "path": "templates/ATOM_RESULT_TEMPLATE.md",
+      "size": 1932,
+      "sha256": "c0ee728581808c2a2cf98b77d3e2e4f683bf1a12a2186c318476281b23918b4e"
+    },
+    {
+      "path": "templates/MANIFEST_SCHEMA.json",
+      "size": 2398,
+      "sha256": "bbf21fe51d084d08e0629b15001649cc06b390dab5fd21e7cd96d975d5c66f22"
+    },
+    {
+      "path": "templates/FINAL_SET_SCHEMA.json",
+      "size": 1932,
+      "sha256": "69a1a3d2e6ff46a96bcf2fd8255611b4e62b0d49513e34bad03099e994841bb1"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+pack_id: VE-TOOLS-20260830
+active_task: T3-S1-PRIOR
+prompt_file: prompts/T3_S1_PRIOR_COMMITTEE.md
+execution_mode: single_task
+artifact_root: artifacts/tool_integration
+seed: 20260830
+allow_network: true
+allow_external_downloads: false
+allow_server_submission: false
+small_smoke_budget: 1
+full_generation_budget_per_lane: 1
+final_local_score_budget_per_lane: 1
+allow_grid_search: false
+stop_after_result: true

@@ -1,0 +1,21 @@
+# P0 must replace expected labels with actual current board IDs from the locked registry.
+regimes:
+  embryo_interpolation:
+    expected_target_stages: [E7.5, E7.75]
+    regime: interpolation
+    geometry_rule: two_sided
+    scale_rule: reuse_locked_board_specific_G1
+
+  heart_interpolation:
+    expected_target_stages: [E8.5]
+    regime: interpolation
+    geometry_rule: two_sided
+    scale_rule: reuse_locked_board_specific_G1
+
+  heart_extrapolation:
+    expected_target_stages: [E10.5, E12.5]
+    regime: extrapolation
+    geometry_rule: endpoint_field_with_strong_shrinkage
+    scale_rule: reuse_locked_parent_not_interpolation_slope
+
+actual_board_mapping: null

@@ -1,0 +1,20 @@
+{
+  "accession": "E-MTAB-11763",
+  "atom": "B2-T3-A1",
+  "fallback_reason": "public API exposes SDRF but no processed expression object; raw FASTQ was not downloaded or processed in this atom",
+  "forbidden_records_remaining": 0,
+  "keep_rule": "explicit WT and E8.5-E9.5 metadata only",
+  "license": "EBI Terms if no record-specific license",
+  "metadata_rows_kept": 2820,
+  "metadata_rows_removed": 0,
+  "metadata_rows_total": 2820,
+  "model_input": false,
+  "processed_snapshot_available": false,
+  "public_url": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11763",
+  "raw_fastq_used": false,
+  "source_api_sha256": "668e116f4a972eff8d7882759be0a12c86e5080d257873ddbe713564e6e9cea0",
+  "source_id": "E-MTAB-11763",
+  "source_sdrf_sha256": "e8d4716d29b107849536ef3476817baecebff79f0d88aa8d92df219715bee8d9",
+  "status": "PASS_METADATA_ONLY_NO_PROCESSED_SNAPSHOT",
+  "task": "T3"
+}

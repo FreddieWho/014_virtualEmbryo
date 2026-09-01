@@ -1,0 +1,165 @@
+version: '1.0'
+batch_id: BATCH2_EXTERNAL_INFORMATION
+date: '2026-08-29'
+global:
+  seed: 20260829
+  allow_server_submission: false
+  max_final_lanes_per_atom: 2
+  functional_check_budget: 1
+  full_generation_budget_per_lane: 1
+  final_local_score_budget_per_lane: 1
+  grid_search_budget: 0
+  stop_after_atom: true
+  fail_closed_on_compliance: true
+canonical_parents:
+  T1:
+    resolve_from_registry: true
+    expected_label: v0004_strict_pseudobulk_shift
+    known_score: 48.5
+  T2:
+    resolve_boardwise_from_registry: true
+    known_task_score: 55.7
+  T3:
+    resolve_from_registry: true
+    expected_label: wt_identity
+    known_score: 45.3
+prerequisite:
+  id: P0_DATA_AUDIT_AND_INGEST
+  prompt: prompts/P0_DATA_AUDIT_AND_INGEST.md
+  run_only_for_active_atom_sources: true
+  submission_required: false
+atoms:
+  B2-T3-A1:
+    priority: 1
+    task: T3
+    status: READY
+    prompt: prompts/B2_T3_A1_SIGNED_PRIOR_COMMITTEE.md
+    depends_on: []
+    objectives:
+    - E1_response_gene_set
+    - E2_response_direction
+    - K1_intervention_scope
+    - K2_WT_background
+    required_sources:
+    - EMTAB6967
+    - EMTAB11763
+    - GSE52123
+    - REACTOME
+    - GO
+    - CELLORACLE
+    - SCTENIFOLDKNK
+    optional_sources:
+    - COLLECTRI
+    - OMNIPATH
+    lanes:
+    - L1_STRICT_WT_DIRECT
+    - L2_GATA4_GATA6_CONDITION_AWARE
+    board:
+    - T3:gata4
+    minimum_submit_ready_lanes: 1
+  B2-T1-A1:
+    priority: 2
+    task: T1
+    status: READY
+    prompt: prompts/B2_T1_A1_EXTERNAL_STATE_BRIDGE.md
+    depends_on: []
+    objectives:
+    - P1_state_support
+    - P2_state_mass
+    - P3_within_state_distribution
+    - P4_covariation
+    required_sources:
+    - OFFICIAL_T1_E775
+    - EMTAB6967
+    - EMTAB11763
+    - GSE193346
+    - GO
+    optional_sources: []
+    lanes:
+    - L1_HARMONIZED_SUPPORT
+    - L2_LATE_PROGRAM_BIRTH
+    board:
+    - T1:val
+    minimum_submit_ready_lanes: 2
+  B2-T1-A2:
+    priority: 3
+    task: T1
+    status: READY_AFTER_DEPENDENCY
+    prompt: prompts/B2_T1_A2_TEMPORAL_OPERATOR_PRETRAIN.md
+    depends_on:
+    - B2-T1-A1
+    objectives:
+    - E1_de_program
+    - E2_direction
+    - P2_mass
+    - P3_distribution
+    - P4_covariation
+    required_sources:
+    - EMTAB6967
+    - EMTAB11763
+    - GSE193346
+    optional_sources: []
+    lanes:
+    - L1_EARLY_UOT_OPERATOR
+    - L2_LATE_CONSTRAINED_OPERATOR
+    board:
+    - T1:val
+    minimum_submit_ready_lanes: 2
+  B2-T3-A2:
+    priority: 4
+    task: T3
+    status: CONDITIONAL
+    prompt: prompts/B2_T3_A2_PERTURB_RESPONSE_PRETRAIN.md
+    depends_on:
+    - B2-T3-A1
+    - ORGANIZER_CLEARANCE_GENERIC_PERTURB
+    objectives:
+    - E3_response_magnitude
+    - P3_heterogeneity
+    - P4_covariation
+    - K2_WT_background
+    required_sources:
+    - REPLOGLE2022
+    - SCPERTURB
+    optional_sources: []
+    lanes:
+    - L1_ROBUST_STANDARDIZED_SCALE
+    - L2_CONFIDENCE_CALIBRATED_SCALE
+    board:
+    - T3:gata4
+    minimum_submit_ready_lanes: 1
+  B2-T1-C1:
+    priority: 5
+    task: T1
+    status: CONDITIONAL
+    prompt: prompts/B2_T1_C1_COMPOSE_SUPPORT_DYNAMICS.md
+    depends_on:
+    - B2-T1-A1
+    - B2-T1-A2
+    objectives:
+    - COMPOSE_state_support_and_temporal_operator
+    required_sources: []
+    optional_sources: []
+    lanes:
+    - L1_MECHANICAL_COMPOSE
+    board:
+    - T1:val
+    minimum_submit_ready_lanes: 1
+  B2-T2-X1:
+    priority: 6
+    task: T2
+    status: BLOCKED_PENDING_ORGANIZER
+    prompt: prompts/B2_T2_X1_EXTERNAL_SPATIAL_CONDITIONAL.md
+    depends_on:
+    - ORGANIZER_CLEARANCE_T2_EXTERNAL_SPATIAL
+    objectives:
+    - G2_occupancy_shape
+    - G3_internal_geometry
+    required_sources:
+    - MOSTA
+    optional_sources: []
+    lanes:
+    - L1_APPROVED_STAGE_SHAPE_PRIOR
+    board:
+    - T2:board_specific
+    minimum_submit_ready_lanes: 1

@@ -1,0 +1,50 @@
+source_lock_date: 2026-08-27
+T1:
+  groups:
+    response:
+      weight: 0.50
+      metrics: {DES: 0.50, DCS: 0.50}
+    population:
+      weight: 0.30
+      metrics: {MMD: 1.00}
+    covariance:
+      weight: 0.20
+      metrics: {CSS: 1.00}
+  floor: copy_last
+T2:
+  groups:
+    expression:
+      weight: 0.25
+      metrics: {DES: 0.50, DCS: 0.50}
+    population:
+      weight: 0.25
+      metrics: {MMD: 0.60, CSS: 0.40}
+    geometry:
+      weight: 0.25
+      metrics: {SDD: 0.333333, ODS: 0.333333, TSR: 0.333334}
+    neighborhood:
+      weight: 0.25
+      metrics: {NFS: 1.00}
+  floor: copy_last
+  invariances:
+    - translation
+    - rotation
+    - cell_count_above_contract_minimum
+T3:
+  groups:
+    response_gene_recovery:
+      weight: 0.30
+      metrics: {DES: 1.00}
+    response_direction:
+      weight: 0.25
+      metrics: {DCS: 1.00}
+    response_magnitude:
+      weight: 0.25
+      metrics: {PSS: 1.00}
+    population:
+      weight: 0.20
+      metrics: {MMD: 0.60, CSS: 0.40}
+  floor: wt_identity
+notes:
+  - Raw metrics are converted to floor/ceiling-normalized skill by the official scorer.
+  - Do not combine raw metrics manually into a replacement leaderboard score.

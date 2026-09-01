@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Virtual Embryo Atomic Candidate Manifest",
+  "type": "object",
+  "required": [
+    "atom_id", "task", "board", "base_submission", "output_file",
+    "sha256", "n_obs", "n_vars", "gene_order_hash", "scorer_version",
+    "seed", "primary_metrics", "protected_checks", "recommend_submit"
+  ],
+  "properties": {
+    "atom_id": {"type": "string"},
+    "lane_id": {"enum": ["L1_FORMAL_LOG_RMS", "L2_ALL_STAGE_LOG_RMS_OLS", "L1_CELL_LEVEL_SPEARMAN", "L2_STATE_PSEUDOBULK_SPEARMAN", "L1_SHARED_UNRESOLVED", "L2_E95_EXPRESSION_PROBE", "L1_LATENT_KNN10", "L2_STATE_HASH10"]},
+    "candidate_id": {"type": "string"},
+    "task": {"enum": ["T1", "T2", "T3"]},
+    "board": {"type": "string"},
+    "base_submission": {"type": "string"},
+    "output_file": {"type": "string"},
+    "sha256": {"type": "string"},
+    "n_obs": {"type": "integer", "minimum": 1000},
+    "n_vars": {"type": "integer"},
+    "gene_order_hash": {"type": "string"},
+    "expression_multiset_hash": {"type": ["string", "null"]},
+    "coordinate_hash": {"type": ["string", "null"]},
+    "scorer_version": {"type": "string"},
+    "official_index_hash": {"type": ["string", "null"]},
+    "seed": {"type": "integer"},
+    "primary_metrics": {"type": "object"},
+    "protected_checks": {"type": "object"},
+    "recommend_submit": {"type": "boolean"},
+    "final_candidate": {"type": "boolean"},
+    "score_required": {"type": "boolean"},
+    "attempt_id": {"type": ["string", "null"]},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"atom_id": {"const": "B1-A1"}}},
+      "then": {
+        "required": ["lane_id", "candidate_id", "final_candidate", "score_required"],
+        "properties": {"final_candidate": {"const": true}, "score_required": {"const": true}}
+      }
+    },
+    {
+      "if": {"properties": {"atom_id": {"const": "B1-A2"}}},
+      "then": {
+        "required": ["lane_id", "candidate_id", "final_candidate", "score_required"],
+        "properties": {"final_candidate": {"const": true}, "score_required": {"const": true}}
+      }
+    },
+    {
+      "if": {"properties": {"atom_id": {"const": "B1-A3"}}},
+      "then": {
+        "required": ["lane_id", "candidate_id", "final_candidate", "score_required"],
+        "properties": {"final_candidate": {"const": true}, "score_required": {"const": true}}
+      }
+    }
+    ,{
+      "if": {"properties": {"atom_id": {"const": "B1-A4"}}},
+      "then": {
+        "required": ["lane_id", "candidate_id", "final_candidate", "score_required"],
+        "properties": {"final_candidate": {"const": true}, "score_required": {"const": true}}
+      }
+    }
+  ],
+  "additionalProperties": true
+}

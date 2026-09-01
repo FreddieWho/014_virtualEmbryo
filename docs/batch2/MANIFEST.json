@@ -1,0 +1,139 @@
+{
+  "package": "Virtual_Embryo_Batch2_External_Data_Optimization_Pack_20260829",
+  "version": "1.0",
+  "created_at": "2026-08-29",
+  "purpose": "External-data-driven atomic optimization construction pack for Virtual Embryo Challenge Batch 2",
+  "default_active_atom": "B2-T3-A1",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "size_bytes": 3559,
+      "sha256": "64895562ad19b9b652f683e4ed58d99abc14eaafa1a6e92f1305b9205bb9e11a"
+    },
+    {
+      "path": "01_CODEX_CONTROLLER_PROMPT.md",
+      "size_bytes": 4733,
+      "sha256": "d685770a66d44f46bed17ed7d41a4406333c5a4f551060fc8baaa8c073125af7"
+    },
+    {
+      "path": "02_BATCH2_RATIONALE.md",
+      "size_bytes": 4225,
+      "sha256": "a6bb3e84934f863772adfdbe010eacea684e823b9c9666f5db56cc27b9b5fe13"
+    },
+    {
+      "path": "03_COMPLIANCE_RULES_SNAPSHOT_20260829.md",
+      "size_bytes": 4091,
+      "sha256": "fd0cc8fa11209486db38d81bb7652270144dfbb5f150b209ef2dc901abb35cf5"
+    },
+    {
+      "path": "04_EXTERNAL_DATA_SELECTION_REPORT.md",
+      "size_bytes": 5493,
+      "sha256": "13a7621914e3c920db8654e5356c10cf952a8a5d2bce30825be4a049e9cfdea8"
+    },
+    {
+      "path": "05_STOP_AND_SUBMIT_RULES.md",
+      "size_bytes": 3028,
+      "sha256": "e1d0f2dfd5a48c90e827f0f2941d42c044796b1c6eb6cc81e8deb332a2627795"
+    },
+    {
+      "path": "REFERENCES.md",
+      "size_bytes": 2780,
+      "sha256": "656257ee2b98190672dd6ba0fc6e50e57306fb91343e13020f3fd022a05fb0c2"
+    },
+    {
+      "path": "compliance/DATA_FIREWALL_SPEC.md",
+      "size_bytes": 3902,
+      "sha256": "adc78d960570dbb9170bace55f4681eed158ba7665e493786cf778f89b8cfc3c"
+    },
+    {
+      "path": "compliance/METHOD_DISCLOSURE_TEMPLATE.md",
+      "size_bytes": 1130,
+      "sha256": "8e7e9e9bd66f54e7b2c1af3e620a964b050c07241232d3ec503dbfdba4267d9d"
+    },
+    {
+      "path": "compliance/ORGANIZER_QUERY.md",
+      "size_bytes": 1991,
+      "sha256": "2f04d516282a8609de3046da244575cbd35b2b64179d1a88f8e4f110fc6eceaf"
+    },
+    {
+      "path": "compliance/external_sources.tsv",
+      "size_bytes": 6648,
+      "sha256": "4f08e9f882a77056bc3a825a28cca485669813f9785ae0f8cd01050a94713e7c"
+    },
+    {
+      "path": "compliance/protected_windows.yaml",
+      "size_bytes": 1700,
+      "sha256": "0eecc22e7074d4efc74ea8be9c0e18cbecca47afa8106e95210f2b8987ceb104"
+    },
+    {
+      "path": "compliance/target_leakage_blacklist.tsv",
+      "size_bytes": 1086,
+      "sha256": "f668eafd88b1c12a314f800a72adfbb3499180213f6566652fad9e156dafadd9"
+    },
+    {
+      "path": "config/active_atom.yaml",
+      "size_bytes": 277,
+      "sha256": "720b003c169a583737031d655dd72b4b0a61dc642f43887ebb1fcc3c34319425"
+    },
+    {
+      "path": "config/batch2_manifest.yaml",
+      "size_bytes": 3748,
+      "sha256": "af13fcd51eef12f8f17ed9aeb267a147ffa0f4a47f67771c4a25d053dddc3b25"
+    },
+    {
+      "path": "prompts/B2_T1_A1_EXTERNAL_STATE_BRIDGE.md",
+      "size_bytes": 4238,
+      "sha256": "16e1af90885cb63d4b32aadcb5503ce6722eb534909b5201c59c676d35985a22"
+    },
+    {
+      "path": "prompts/B2_T1_A2_TEMPORAL_OPERATOR_PRETRAIN.md",
+      "size_bytes": 3094,
+      "sha256": "0fbd2d78518f2b099da80d233cc3d7e64dd3d3ac58d241485c762ad0ae2ee112"
+    },
+    {
+      "path": "prompts/B2_T1_C1_COMPOSE_SUPPORT_DYNAMICS.md",
+      "size_bytes": 1191,
+      "sha256": "9e8074e677267481f2e14c866f75430c86d10aaaab6a3497f36489622f0b7d79"
+    },
+    {
+      "path": "prompts/B2_T2_X1_EXTERNAL_SPATIAL_CONDITIONAL.md",
+      "size_bytes": 1302,
+      "sha256": "4ae7ce2b431849cae469fc1727bea923e6403921727c472973aceba159581d97"
+    },
+    {
+      "path": "prompts/B2_T3_A1_SIGNED_PRIOR_COMMITTEE.md",
+      "size_bytes": 5540,
+      "sha256": "8d37f6291fc4931cf5920d45bcf59aa5c867955db8635e753b0a774834af77c1"
+    },
+    {
+      "path": "prompts/B2_T3_A2_PERTURB_RESPONSE_PRETRAIN.md",
+      "size_bytes": 2370,
+      "sha256": "37b926f6f5af5224d878cc7d264b1b98fcbffd9d61430671a055b84f23d49040"
+    },
+    {
+      "path": "prompts/P0_DATA_AUDIT_AND_INGEST.md",
+      "size_bytes": 2166,
+      "sha256": "4b78973069667f93bc1f6b05b7295cd202a50830c77430e06071965a9e824eaa"
+    },
+    {
+      "path": "schemas/external_dataset_manifest.schema.yaml",
+      "size_bytes": 1436,
+      "sha256": "c766d2267a28a22ef0d97d78cd0ed8154766b6e26674555e041c0586078a95cb"
+    },
+    {
+      "path": "templates/DATA_AUDIT_REPORT.md",
+      "size_bytes": 404,
+      "sha256": "3e17be44d67c98ac07c3bdd72371ad9c3d3dbceb067d2d21ad8337aa47ec91f3"
+    },
+    {
+      "path": "templates/METHOD_SUMMARY.md",
+      "size_bytes": 240,
+      "sha256": "dd26605aaaaea93afcecf72f393bbb2bdd2d0a231a804a89a832b960c63ca46f"
+    },
+    {
+      "path": "templates/RESULT.md",
+      "size_bytes": 687,
+      "sha256": "e73c409f9eb7ba99af59172dd645c9be1e41bd4576b6ee2fa878796cfaca7827"
+    }
+  ]
+}

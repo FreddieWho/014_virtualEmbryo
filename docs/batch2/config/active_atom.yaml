@@ -1,0 +1,9 @@
+active_atom: B2-T3-A1
+run_prerequisite_if_missing: P0_DATA_AUDIT_AND_INGEST
+allow_external_download: true
+allow_external_data_training: true
+allow_server_submission: false
+max_final_lanes: 2
+seed: 20260829
+stop_after_atom: true
+controller_prompt: 01_CODEX_CONTROLLER_PROMPT.md

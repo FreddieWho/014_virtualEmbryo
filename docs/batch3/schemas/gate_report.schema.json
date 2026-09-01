@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gate Report",
+  "type": "object",
+  "required": [
+    "task_id",
+    "gate_id",
+    "status",
+    "criteria"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "gate_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "HOLD",
+        "BLOCKED",
+        "NOT_EVALUATED"
+      ]
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "result"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "NOT_APPLICABLE",
+              "BLOCKED"
+            ]
+          },
+          "value": {},
+          "evidence": {
+            "type": [
+              "string",
+              "array",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "evidence_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+version: '2026-08-29'
+source_of_truth: https://virtualembryo.ai/challenge/rules
+policy: fail_closed
+tasks:
+  T1:
+    absolute_heldout_stages:
+    - E10.5
+    - E12.5
+    forbidden_external_interval:
+      left: E9.5
+      left_inclusive: false
+      right: E13.5
+      right_inclusive: true
+    explicitly_allowed:
+    - stage <= E9.5
+    - stage > E13.5
+    notes:
+    - E9.5 allowed
+    - E13.5 forbidden
+    - all external sources disclosed
+  T2_embryo:
+    absolute_heldout_stages:
+    - E7.5
+    - E7.75
+    forbidden_external_intervals:
+    - left: E7.5
+      right: E7.75
+      inclusive: true
+    conservative_policy: external measured data not active until organizer clearance
+  T2_heart:
+    absolute_heldout_stages:
+    - E8.5
+    - E10.5
+    - E12.5
+    forbidden_external_intervals:
+    - left: E8.25
+      right: E8.75
+      inclusive: true
+    conservative_extrapolation_policy: block external measured data after E9.5 unless
+      written organizer clearance specifies allowed stages
+  T3:
+    heldout_conditions:
+    - Mesp1-Cre; Gata4 F/F; Gata6 F/+ @ E8.75
+    - Mesp1-Cre; Ctnnb1/beta-catenin F/F @ E8.75
+    forbidden_equivalents:
+    - same-gene alternative allele at comparable stage
+    - knockdown/KO/mutation of target at comparable stage
+    - perturbation judged to phenocopy heldout condition
+    allowed_default:
+    - WT data
+    - general ontology/pathway knowledge
+    - WT-only context GRN trained locally
+pretrained_models:
+  allow_if:
+  - complete corpus manifest exists
+  - protected samples can be proven absent or removed before training
+  reject_if:
+  - corpus unknown
+  - mouse embryogenesis stages not auditable
+  - heldout genotype/phenocopy may be present

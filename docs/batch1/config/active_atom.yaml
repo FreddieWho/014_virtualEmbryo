@@ -1,0 +1,16 @@
+# Batch 1 is closed for review. A new atom requires explicit reactivation.
+active_atom: null
+prompt_file: null
+batch_status: CLOSED_FOR_REVIEW
+closure_report: reports/PHASE_REPORT_BATCH1_20260829.md
+release_changelog: reports/RELEASE_CHANGELOG_20260829.md
+allow_scored_submission: true
+submission_mode: manual_user_upload
+auto_submit: false
+final_lane_count: 2
+boards_per_lane: 3
+final_artifact_count: 6
+exploration_attempt_budget: 4
+final_generation_budget: 6
+final_score_budget: 6
+seed: 20260827

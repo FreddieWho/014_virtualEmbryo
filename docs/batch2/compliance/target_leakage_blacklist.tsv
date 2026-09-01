@@ -1,0 +1,9 @@
+category	symbol_or_pattern	reason	applies_to	action
+target_gene	GATA4	held-out target gene	T3 generic perturb pretraining	exclude perturbation
+condition_gene	GATA6	held-out Gata4 condition includes Gata6 F/+	T3 generic perturb pretraining	exclude perturbation
+target_gene	CTNNB1	held-out beta-catenin target	T3 generic perturb pretraining	exclude perturbation
+lineage_driver	MESP1	could alter the same mesoderm lineage gate	T3 generic perturb pretraining	exclude perturbation
+canonical_WNT	APC|AXIN1|AXIN2|GSK3A|GSK3B|DVL1|DVL2|DVL3|LRP5|LRP6|TCF7L1|TCF7L2|LEF1	high risk of beta-catenin phenocopy	T3 generic perturb pretraining	exclude perturbation
+cardiac_core_TF	NKX2-5|TBX5|MEF2C|HAND1|HAND2|ISL1	high risk of Gata4-like cardiac developmental phenocopy	T3 generic perturb pretraining	exclude perturbation
+same_family	GATA1|GATA2|GATA3|GATA5	conservative target-family exclusion	T3 generic perturb pretraining	exclude perturbation
+metadata_pattern	gata4|gata6|ctnnb1|beta.?catenin|mesp1|canonical wnt	text-level safety screen	all external perturb datasets	manual review then exclude
