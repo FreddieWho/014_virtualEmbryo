@@ -33,3 +33,7 @@
 - T1/T2/T3 专属代码、输出和候选由对应 agent 负责。
 - `docs/coordination/`、`submissions/INDEX.tsv` 和 `reports/SERVER_SCORE_REGISTRY.md` 由 coordinator 负责。
 - `docs/starter_pack/` 默认只读；其中的官方契约优先于旧叙述。
+
+## Manual-upload naming rule (fixed 2026-09-03, mandatory)
+
+交付 zip 成员名（= portal Model 名）必须为 `<task>_<board>__<lane>__v<NNNN>.h5ad`，全小写、总长 ≤50 字符；zip 包名为 `<atom短码>__<task>__upload__<YYYYMMDD>.zip`，≤50 字符。board 短码与细则见 `submissions/README.md`。身份核验以 SHA256 与 `submissions/INDEX.tsv` 为准，短名不承载语义完整性；历史长名 artifact 不回溯改名。

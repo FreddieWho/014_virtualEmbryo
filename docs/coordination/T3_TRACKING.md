@@ -1,6 +1,6 @@
 # T3 任务追踪：gene perturbation
 
-更新时间：2026-09-01
+更新时间：2026-09-02
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件明确区分已评分路线和待验证路线。
 
@@ -8,8 +8,8 @@
 
 - 当前最高服务器分数：**45.3**
 - 当前最佳：`baseline-001/T3_gata4/v0001`，`wt_identity`
-- 当前状态：`hold_as_component`；S1C-A/v1、S1C-B/v3 与 S1D/v1 已形成可审计组件，S1C-B/v1/v2 失败或不可复用 receipt 保持不可变，旧 T3-S1-PRIOR、S1A v5/v6/v7 和 S1B v1/v2/v3 保持不可变，候选生成仍关闭
-- 任务阻塞：`T3-S1A-GATE-001`；S1C 已解决 target-compatible GRN 的方法接口适用性，但未验证 biological activity；S1D 仅得到 E8.75 外部 context，独立 signed-family stability 仍未满足 route gate，`blocks_submission: false`
+- 当前状态：`closed_as_research_component`（2026-09-02 收口，见 `artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md`）；S1A v7、S1B v3、S1C-A/v1、S1C-B/v3、S1D/v3 均为可审计组件，所有历史 artifact 与失败 receipt 不可变，候选生成仍关闭
+- 任务阻塞：`T3-S1A-GATE-001`；缺口为公开证据边界（E8.75 state-matched signed family 不存在且近窗口数据属 target leakage），非工程问题；最小解锁条件见收口报告第 3 节，`blocks_submission: false`
 
 ## Top 3 路线
 
@@ -54,9 +54,10 @@
 | 2026-09-01 | `T3-S1B-STATE-JOIN-20260901-v1` | `T3-S1A-STATE-JOIN-20260901-v7` | 首次执行 external state-context adapter；在输入行身份比较正确前置下，发现 unresolved OmniPath path 的 hop-rank 表示与 v7 不一致，fail-closed 并保留失败 receipt。 | `BLOCKED_INPUT_IDENTITY`；未生成候选、不评分、不上传；作为不可复用的封装失败记录保留 |
 | 2026-09-01 | `T3-S1B-STATE-JOIN-20260901-v2` | `T3-S1A-STATE-JOIN-20260901-v7` | 修正 unresolved path 保留 hop-based rank，并将 external edge/path 严格隔离为 `GLOBAL_CONTEXTUAL`；LOFO 从 family-native biological rows 重算，冲突只对派生 sign 归零。 | 4/4 route gate `HOLD`；5808 条 external contextual rows、137148 条总 source rows；manifest SHA256 `239e5c474986cb54e70d5b1451330a20350be38fadaf7641c1e2177b2aea34ea`；53 项回归测试 PASS；不生成 H5AD/候选、不运行 scorer、不上传 |
 | 2026-09-01 | `T3-S1B-STATE-JOIN-20260901-v3` | `T3-S1A-STATE-JOIN-20260901-v7` | 将实现脚本 SHA256 和无 initial Git commit 状态写入 input lock、stable manifest 与 gate，补齐 artifact-to-code provenance。 | 4/4 route gate `HOLD`；5808 条 external contextual rows、137148 条总 source rows；实现脚本 SHA256 `cd480790fa6cbf7e6618ec28675983143466788847e79e73040d63df7dfe9d8c`；manifest SHA256 `396b15d976e10700709c7628539dd2e9cac21b66612d9b72faa772921413744e`；53 项回归测试与独立 tester PASS；不生成 H5AD/候选、不运行 scorer、不上传 |
+| 2026-09-02 | `T3-S1-CLOSURE-20260902-v1` | `T3-S1A/v7`、`S1B/v3`、`S1C-A/v1`、`S1C-B/v3`、`S1D/v3` | 纯文档收口，无新计算：汇总五组件证据链 SHA，写死三条未满足硬条件（signed family<2、E8.75 activity 不可得、stability 未闭合）与最小解锁条件；采纳外部建议，执行主线切换 T1。 | 链状态 `CLOSED_AS_RESEARCH_COMPONENT`；与同日 `T3-S1C-GATE-SATISFIABILITY` 的 `UNSATISFIABLE_UNDER_FIREWALL` 结论一致；best 仍为 45.3，`blocks_submission: false`；历史 artifact 全部不可变 |
 ## 下一步
 
-下一步：保持 S1B v3 为审计组件，在获得可审计 biological activity 与至少两个独立 signed biological families 前，不进入正式候选生成；baseline-001/T3_gata4/v0001（45.3）仍是已评分 best。S1B gate 的完整 claim vector、contextual conflict、LOFO 和 script provenance 见 `artifacts/tool_integration/T3-S1B-STATE-JOIN-20260901-v3/`。
+下一步（2026-09-02 更新）：T3-S1 链已收口为 `CLOSED_AS_RESEARCH_COMPONENT`（见 `artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md`），同日 gate 可满足性审计判定 `UNSATISFIABLE_UNDER_FIREWALL`，两条结论一致：在当前 firewall 下 signed-family/activity 证据结构性不可得。baseline-001/T3_gata4/v0001（45.3）仍是已评分 best。重开条件见收口报告第 6 节（官方新数据、organizer 书面放宽、或研究分支产出可审计独立 signed family）。执行资源切换至 `T1-PRE-HARMONIZE`。
 
 Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`。后续 T3 工作需要新 atom 授权，并应先解决 signed prior 与绝对效应预算的可辨识性问题。
 
@@ -70,3 +71,4 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`。后续 T3 工
 | 2026-09-01 | `T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v1` | `T3-S1A-STATE-JOIN-20260901-v7`、`T3-S1B-STATE-JOIN-20260901-v3` | 获取并审计 GSE156307/GSE255237 两份 processed GEO 表达数据，同时登记 3 个 metadata-only 候选；保留样本设计冲突和阶段/组织不匹配。 | Gata4 E14.5 HS cKO/WT log2FC `-1.1839`（5/5 方向一致），Gata6 E11.5 OFT MUT/WT log2FC `-0.3362`（4/4 方向一致）；均为 off-target context，E8.75 matched activity `NOT_IDENTIFIABLE`，independent signed families `0`；stable manifest `9017b2db83c09a776c8c1620f8ca00c6740f3c1d288ed857d9635c1b30f42fdf`；不解锁候选/提交，`blocks_submission: false`。 |
 | 2026-09-01 | `T3-S1C-B-SOURCE-ADAPTER-SMOKE-20260901-v3` | `T3-S1C-A-REGULATOR-PRIOR-BUILD-20260901-v1` | v2 的 post-run self-check 发现 genomepy SQLite `cache.db-shm` 临时文件被误列入 stable manifest；新版本排除 runtime cache/mpl/numba 前缀和 SQLite sidecar，再次运行相同 2-target smoke。 | Gata6/Ctnnb1 真实 CellOracle 0.22.0 fit/simulate 2/2 PASS；stable manifest 自校验 7/7 PASS，SHA256 `7770e075838309af5d339506b02e7975459aa651deb8d10f4079f25fec9c822d`；v2 原子产物保持不可变但不再作为复用版本；仍为 synthetic structural smoke、`NOT_VALIDATED`，无候选/上传，`blocks_submission: false`。 |
 | 2026-09-01 | `T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v3` | `T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v2`、`T3-S1A-STATE-JOIN-20260901-v7`、`T3-S1B-STATE-JOIN-20260901-v3` | 在保留 v2 初步原子的前提下补齐冻结 contract、逐 GSM sample QC、GPL probe/Entrez mapping QC、gene/study effects 和 deterministic run manifest；三份官方 E9.5 series matrix 与两个官方 platform annotation 均 hash-locked，GPL1261 多探针改用样本内 median。 | GSE5298/GSE9652 为 Gata4 两个早期心脏组织 family，GSE78125 为 Ctnnb1 一个 AHF family；矩阵完整性/映射 `PASS`，target expression 仅 descriptive；E8.75 state-matched activity `NOT_IDENTIFIABLE`，independent signed family `0`，stable manifest `6c2806aa381f099e3db88f38a35278d4500e1aeb1f8de7fe3cfa20e2db487e0c`；无候选/上传，`blocks_submission: false`。 |
+| 2026-09-02 | `T3-S1C-GATE-SATISFIABILITY-20260902-v1` | `T3-S1C-A/v1`、`T3-S1C-B/v3`、`T3-S1D/v3` | 对现行 activity gate、T3 firewall、S1B candidate contract 做证据集合审计，区分 WT-context coherence 与 target-specific activity；不读取新矩阵、不运行模型。 | 当前 gate 判定 `UNSATISFIABLE_UNDER_FIREWALL`；保持 `HOLD_AS_COMPONENT`、`candidate_generation=false`、`server_submission=false`、`blocks_submission=false`。只有正式 contract/claim 变更后才可另建 S1C-C exact E8.75 WT inference；旧 artifact 不变。 |

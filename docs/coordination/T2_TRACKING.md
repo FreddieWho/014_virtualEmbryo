@@ -1,16 +1,16 @@
 # T2 任务追踪：spatial-temporal
 
-更新时间：2026-08-29
+更新时间：2026-09-03
 
 T2 有多个 board；不同 board 的分数不能直接当作同一个指标比较。服务器分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。
 
 ## 当前状态
 
 - 当前最高 aggregate：**149.5（服务器当前返回值）**
-- 当前最佳分叉：按 board 选择 B1-A1 L1（embryo interpolation、heart interpolation）+ baseline（heart extrapolation）
-- 当前 T2 task 分数：**55.7（服务器当前返回值）**
-- 当前最佳 board：embryo interpolation **60.1**、heart interpolation **56.3**、heart extrapolation **50.5**；raw score/ID 以 `reports/SERVER_SCORE_REGISTRY.md` 为准
-- 下一步：B1-A4 六个候选已完成服务器评分但未提升当前 per-board selection；不启动 B1-C1 重复缩放或新的 T2 atom
+- 当前最佳分叉：按 board 选择 B1-A1 L1（embryo interpolation）+ T2-S3 L1 pycpd（heart interpolation）+ baseline（heart extrapolation）
+- 当前 T2 task 分数：**55.7（服务器当前返回值）**；heart_interp 晋级 56.7 后推导 T2≈55.8、Total≈149.6（derived，待服务器页面确认）
+- 当前最佳 board：embryo interpolation **60.1**、heart interpolation **56.7**、heart extrapolation **50.5**；raw score/ID 以 `reports/SERVER_SCORE_REGISTRY.md` 为准
+- 下一步：T2-S3 两条 READY 候选已评分（embryo 59.7 未提升、heart_interp 56.7 +0.4 晋级）；T2-J1-PROXY gate `J1_PROXY_PASS`（2026-09-03），FGW soft-assignment objective 值得重启 J1 路线，授权 assignment candidate 前需审视 heart 参考构建质量
 
 ## Top 3 路线
 
@@ -18,7 +18,7 @@ T2 有多个 board；不同 board 的分数不能直接当作同一个指标比�
 
 | 位次 | 路线 | 通俗说明 | 服务器证据 | 状态 |
 |---|---|---|---|---|
-| 1 | 当前 per-board selection | B1-A1 L1 保留 embryo/interp，heart extrap 回到 baseline | server T2 **55.7**；server Total **149.5** | 以服务器当前榜单为准；不是手工 composite |
+| 1 | 当前 per-board selection | B1-A1 L1 保留 embryo interp，T2-S3 L1 保留 heart interp（56.7），heart extrap 回到 baseline | server T2 **55.7**；server Total **149.5** | 以服务器当前榜单为准；heart_interp 晋级后的新 aggregate 待服务器确认 |
 | 2 | B1-A1 `L1_FORMAL_LOG_RMS` | 只做 source-only 的统一 G1 空间尺度校准 | raw board scores **60.1/56.3/50.2** | embryo/interp 胜出；heart extrap 低于 baseline 50.5 |
 | 3 | B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS` | 用全部训练阶段的 log-RMS OLS 校准统一尺度 | raw board scores **59.9/55.3/49.8** | 已评分；各 board scored backup |
 
@@ -43,6 +43,29 @@ B1-A1 双 lane 最终集已完成服务器评分；L1 在三个 B1-A1 lane 中�
 | 2026-08-29 | `B1-A4 J1` 双 lane × 三 board | B1-A1 immediate parents（heart extrapolation 为 baseline） | 固定种子下做 source-only hard expression-coordinate permutation；L1 为 latent KNN10，L2 为 same-celltype state-hash10，表达行、坐标和 15-NN 结构分别保持不变。 | 六个 contract-valid 候选；local NFS `0.15017/0.19003/0.10775` 与 `0.15104/0.19050/0.11151`（按 embryo/heart-interp/heart-extrap）；服务器已评分，未晋级 |
 | 2026-08-29 | `B1-A4__T2__manual_upload__20260829.zip` | B1-A4 六个最终候选 | 按统一字段顺序重命名 ZIP 内副本：batch、task、board、lane、version；canonical artifact 保持不变。 | ZIP 含 6 个可上传 `.h5ad`、`UPLOAD_MANIFEST.tsv` 和说明；成员 SHA256 已逐一复核 |
 | 2026-08-29 | `B1-A4` 服务器评分 | B1-A4 六个最终候选 | 按包内文件名映射回填用户返回的六条 board 分数；不使用 portal Model 字段推断候选。 | embryo `59.3/59.2`、heart-interp `56.3/56.3`、heart-extrap `50.0/49.9`；无 board 提升，全部 artifact 保持 scored immutable |
+| 2026-09-03 | `T2-S3-SHAPE-FIELD-20260903-v1` | 各 board 锁定 parent（embryo/heart_interp 为 B1-A1-L1，heart_extrap 为 baseline-001） | 只改 3D 几何占据形状与内部距离（G2/G3 原子），G1 scale/表达/行序/J1 全部冻结；L1 pycpd 2.0.0 non-rigid CPD，L2 Spateo 1.1.1 vector field；interp 双向时间加权场、extrap endpoint 场+ρ0.25 强收缩；场应用后重新中心化和 RMS 回锁。 | 6 候选 contract 全过、表达 hash 不变、RMS 回锁在 P0 容差内；holdout：L1 在 H1（embryo 留 E7.25）/H2（heart 留 E8.25）三 proxy 全胜，H3（heart 宽间隔留 E8.75）/H4（外推留 E9.5）全负；L2 四个 holdout 全负且 heart_extrap kNN CATASTROPHIC（该候选 contract FAIL 为设计行为）；coordinator 裁定：embryo L1 与 heart_interp L1 `READY_FOR_MANUAL_SUBMISSION`（附 H3 反例与 pseudo-target 偏袒声明），heart_extrap L1 与全部 L2 `REJECT`；6 条已登记 INDEX.tsv `score_pending`，未上传；14 测试 PASS、157 文件 manifest 自校验 PASS，SHA256 `4ffef666e95f9046811346e1d940fde322de9dca53f06f7c4055a8a1051f8a76` |
+
+## T2-S3 服务器评分与决定（2026-09-03 回填）
+
+| 日期 | 版本/分叉 | 父版本 | 一句话变更 | 结果/决定 |
+|---|---|---|---|---|
+| 2026-09-03 | `T2-S3` 服务器评分 | embryo v0006 / heart_interp v0007 | 用户上传两条 READY 候选并返回 board 分数（Model 短名与本地版本精确对应）。 | embryo `59.7`（-0.4 vs 60.1）rejected；heart_interp `56.7`（**+0.4** vs 56.3）**晋级为该 board 新 best**；当前 selection 变为 B1-A1 L1 embryo + T2-S3 L1 heart_interp + baseline heart_extrap；服务器未返回新 T2/Total，derived T2≈55.8/Total≈149.6 待确认；embryo 在 H1 全胜却服务器下降，印证 H3 警示（窄间隔 holdout 获益不保证 board 获益）；4 条本地 REJECT 候选保持 score_pending 不上传 |
+
+## T2-S3 gate 裁定（2026-09-03，coordinator）
+
+依据 `docs/batch3/04_DECISION_RULES.md` §6：
+
+- L1 pycpd 满足"至少两个独立 holdout 同方向优于低成本基线"（H1 embryo、H2 heart 均三 proxy 全胜）；H3 为同 board 宽间隔反例，已如实记录为已知限制（插值获益随间隔变宽消失），不构成"无解释的方向不一致"。
+- `READY_FOR_MANUAL_SUBMISSION`：embryo `v0006_t2_s3_l1_pycpd`、heart_interp `v0007_t2_s3_l1_pycpd`。是否上传由用户决定；不自动上传。
+- `REJECT`：heart_extrap L1（唯一外推 holdout H4 全负）；全部 L2 Spateo（4/4 holdout 全负 + heart_extrap kNN 拓扑灾难，规则限定只能 HOLD/REJECT 且无 proxy 改善支持 HOLD）。
+- 本地 scorer 分数均为 pseudo-target（embryo/extrap 两 board 的 pseudo-target 恰为 parent 几何底 stage，结构性偏袒 parent），不是 leaderboard 证据。
+- 服务器分数未回填前不得宣称 T2 提升；当前 per-board selection 与 T2=55.7、Total=149.5 不变。
+
+## T2-J1-PROXY gate 裁定（2026-09-03，coordinator 确认）
+
+| 日期 | 版本 | 父版本 | 一句话变更 | 结果/决定 |
+|---|---|---|---|---|
+| 2026-09-03 | `T2-J1-PROXY-20260903-v1` | `T2-S3-SHAPE-FIELD-20260903-v1`（执行序）、B1-A4（定性对照引用） | 固定 POT entropic-FGW 软配对 objective（表达 PCA30 + 内部距离 cost，alpha=0.5、eps=0.005，spec 先冻结），在 embryo 留 E7.25、heart 留 E8.75 两个 leave-one-stage-out holdout 上对照 identity/random/B1-A4 类 greedy。 | 7/7 criteria PASS，gate `J1_PROXY_PASS`：NFS-like 从 random 中位 0.137/0.172 降到 0.012/0.015（64 次随机无一更优）；label-only 与 scrambled-reference 对照均差于 random，改善依赖真实表达-位置信息；B1-A4 已发布 local NFS 落在 random 包络内，与其服务器失败一致。**caution**：heart holdout 逐位置 pearson 为负（参考跨 1.25 天、标签交集仅 5），授权正式 assignment candidate 前须审视 heart 参考构建。source-only 第 4 层证据，不构成 leaderboard 宣称；46 文件 manifest 自校验 PASS，SHA256 `b5e2abe2718f4708363df4189088071e29f6ad6d52007f22ffcb68565511b751`；148 全量回归 PASS |
 
 ## B1-A1 服务器结果与决定
 

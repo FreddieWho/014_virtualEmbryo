@@ -266,3 +266,37 @@ Consistency and decision:
 - A4 all-L1 would imply `(59.3 + 56.3 + 50.0) / 3 = 55.2` from board values; A4 all-L2 would imply `55.1`. These are protocol-derived comparisons, not new server Total values.
 - Decision: retain all six scored artifacts as immutable records; reject A4 as a leaderboard improvement and do not start B1-C1 or another atom from this result.
 - User-provided values are registered as supplied; no additional screenshot, link, or JSON evidence is required.
+
+### T1-S2 — moscot coupling/decoder dual-lane scoring round
+| Record date | 2026-09-03 |
+|---|---|
+| Submission label | T1-S2-MOSCOT-DECODER-20260902-v1: L1/L2 E10.5 extrapolation candidates |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-02 19:55 and 2026-09-03 00:05; portal Model filename contains lane/version and is consistent with local mapping) |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs T1 best v0004=48.5 | Decision |
+|---|---|---|---:|---:|---|
+| `T1-S2 v0007 L1_EMPIRICAL_RESIDUAL` | not supplied | `submissions/candidates/T1_val/v0007_t1_s2_l1_moscot_empirical/submission.h5ad` / `4297f3fd344d4592eaf2176caa7f28b03148993aa1bbbcc52c6156f0b121d866` | **44.9** | **-3.6** | rejected; below T1 best and below T1 baseline 47.0 |
+| `T1-S2 v0008 L2_MODULE_SCDESIGN3` | not supplied | `submissions/candidates/T1_val/v0008_t1_s2_l2_module_scdesign3/submission.h5ad` / `d664db404418fe8558dbe9a966352921c2498e74343318e0f8c9c08ff9774280` | **44.8** | **-3.7** | rejected; below T1 best and below T1 baseline 47.0 |
+
+Consistency and decision:
+- The server returned T1 board scores only; no new Total/T2/T3 values were supplied. The retained aggregate remains Total **149.5** (T1 48.5 / T2 55.7 / T3 45.3).
+- Both candidates passed local contract/protected checks but scored well below the immutable T1 best `v0004_strict_pseudobulk_shift` (48.5) and even below the `copy_last` baseline (47.0). The moscot coupling + state-mass forecast + state-specific delta route is therefore **rejected as a leaderboard improvement on the E10.5 extrapolation board**, superseding the earlier local `HOLD_AS_COMPONENT` disposition: the server probe has now arbitrated the question that the source-only pseudo-holdout could not (whether structured extrapolation beats strict shift extension), and the answer is negative for both decoders.
+- Both scored artifacts stay immutable as audit snapshots; no causal claim is made beyond this board. User-provided values are registered as supplied; no additional screenshot, link, or JSON evidence is required.
+
+### T2-S3 — shape-field geometry dual-board scoring round
+| Record date | 2026-09-03 |
+|---|---|
+| Submission label | T2-S3-SHAPE-FIELD-20260903-v1: L1 pycpd non-rigid geometry candidates |
+| Board/phase | T2:embryo:val_interp; T2:heart:val_interp |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-03 12:12 and 12:14; portal Model filenames `t2_emb_int__l1__v0006` / `t2_hrt_int__l1__v0007` match the fixed short-name rule and local versions exactly) |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs current board best | Decision |
+|---|---|---|---:|---:|---|
+| `T2-S3 embryo v0006 L1_PYCPD` | not supplied | `submissions/candidates/T2_embryo_val_interp/v0006_t2_s3_l1_pycpd/submission.h5ad` / `a46671bbd9f7c149c128a5f73f3f2cb479d5fdd468490bc18e245773476eff36` | **59.7** | **-0.4** vs B1-A1 L1=60.1 | rejected; board best unchanged |
+| `T2-S3 heart_interp v0007 L1_PYCPD` | not supplied | `submissions/candidates/T2_heart_val_interp/v0007_t2_s3_l1_pycpd/submission.h5ad` / `0ca4f217915ed53dfa35370cc8026704531eefd5e701f63b976433b9ce4dd416` | **56.7** | **+0.4** vs B1-A1 L1=56.3 | **new board best; promote to current selection** |
+
+Consistency and decision:
+- The server returned the two board scores only; no new T2 aggregate or Total was supplied. The retained server values remain T2 **55.7** and Total **149.5** until the server page is re-read.
+- Protocol-derived (not server-returned): if the server aggregates best-per-board with embryo 60.1 (B1-A1 L1), heart interpolation 56.7 (T2-S3 L1), heart extrapolation 50.5 (baseline), the derived T2 mean is `(60.1 + 56.7 + 50.5) / 3 = 55.77` and the derived Total is `48.5 + 55.77 + 45.3 = 149.6`; these derived values must be confirmed against the server page on the next read and must not be quoted as server values.
+- The heart-interpolation improvement (+0.4) is consistent with the source-only holdout evidence (H2 full win) but the embryo decline (-0.4) despite H1 full win confirms the H3 caveat: narrow-window holdout gains do not guarantee board gains. No causal claim is made from leaderboard scores alone.
+- The four non-uploaded T2-S3 candidates (L2 lanes and heart-extrap L1, all locally REJECTED) remain `score_pending`/immutable and will not be uploaded.
+- Both scored artifacts stay immutable; user-provided values are registered as supplied.

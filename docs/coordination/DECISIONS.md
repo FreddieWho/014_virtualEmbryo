@@ -456,3 +456,11 @@ reuse_promoted
 - evidence: "`artifacts/tool_integration/T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v3/metrics/gate_report.json`；GSE5298/GSE9652 Gata4 两个 family，GSE78125 Ctnnb1 一个 family，Gata6 为 0；stable manifest SHA256 `6c2806aa381f099e3db88f38a35278d4500e1aeb1f8de7fe3cfa20e2db487e0c`；核心输出复跑一致，4 个 targeted tests PASS。"
 - boundary: "target expression 仅作 descriptive readout；未将 E9.5 组织限定效应转写为 E8.75 state-specific signed activity，independent signed family 仍为 0；candidate_generation=false；server_submission=false；blocks_submission=false。"
 - next_action: "继续寻找真正 E8.0-E9.5、目标状态匹配且可复现的 signed-family 证据；若无法获得，在单独授权下再评估是否收窄科学声明，不自动启动 E8.75 全量推断。"
+
+### D-20260902-T3-S1C-001 — 先完成 activity gate 可满足性审计，不直接启动 exact rerun
+- date: 2026-09-02
+- scope: T3-S1C activity gate and claim boundary
+- decision: "接受 `T3-S1C-GATE-SATISFIABILITY-20260902-v1` 作为当前决策 atom。按现行 firewall，旧 gate 所需的 E8.75/comparable-stage target-specific perturbational signed evidence 与允许证据集合不具备足够交集，判定为 `UNSATISFIABLE_UNDER_FIREWALL`。保持 S1B/S1C/S1D 历史结果不变，不重跑 S1B，不继续搜索近 E8.75 target perturbation，不立即启动 S1C exact rerun。"
+- evidence: "`docs/batch3/T3_S1C_GATE_SATISFIABILITY_DECISION_20260902.md`；`docs/batch2/compliance/DATA_FIREWALL_SPEC.md`；`docs/batch2/compliance/protected_windows.yaml`；`docs/batch3/prompts/T3_S1B_PRIOR_TO_CANDIDATE.md`；当前 S1A v7、S1B v3、S1C-A/v1、S1C-B/v3、S1D/v3 receipts。"
+- boundary: "E8.75 WT 只能支持 WT-context regulatory coherence；远窗口数据不能桥接为 E8.75 activity；CollecTRI/OmniPath、adapter、synthetic smoke 和 unsigned rank 不构成 independent signed family；quarantine 中的 S1D 矩阵在用途重新取得 permit 前不得继续复用。candidate_generation=false；server_submission=false；blocks_submission=false。"
+- next_action: "若用户或 contract owner 正式授权 scope-change，先建立新 contract，再执行限定为 WT-context/modelled response 的 S1C-C exact E8.75 atom；否则维持 HOLD，不增加无效计算。"

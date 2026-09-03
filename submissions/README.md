@@ -35,3 +35,21 @@ submissions/
 
 Board directory names are stable slugs: `T1_val`, `T2_embryo_val_interp`,
 `T2_heart_val_extrap`, `T2_heart_val_interp`, and `T3_gata4`.
+
+## Manual-upload naming rule (fixed 2026-09-03, mandatory)
+
+Portal `Model` 名来自上传文件名，因此交付 zip 的成员名必须短且稳定：
+
+- 成员名（= portal Model 名）：`<task>_<board>__<lane>__v<NNNN>.h5ad`，全小写，
+  **总长 ≤50 字符（含扩展名）**。
+  - `task` ∈ `t1` / `t2` / `t3`
+  - `board` 短码：t1 `val`；t2 `emb_int` / `hrt_int` / `hrt_ext`；t3 `gata4`；
+    新 board 按同风格追加并在本文件登记
+  - `lane`：如 `l1` / `l2` / `base`
+  - `v<NNNN>` 必须与 `INDEX.tsv` 的 version 完全一致（board 内唯一锚点）
+- zip 包名：`<atom短码>__<task>__upload__<YYYYMMDD>.zip`，≤50 字符；
+  atom 短码如 `b1a4` / `b2t3a1` / `t1s2` / `t2s3`
+- 包内必须附 `MANIFEST.tsv`（`filename / bytes / sha256`），身份核验以 SHA256 为准，
+  短名不承载语义完整性
+- 2026-09-03 之前已上传/已评分的长名 artifact 不回溯改名（历史记录不变）
+

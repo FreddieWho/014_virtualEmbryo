@@ -6,7 +6,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-09-01"
+updated_at: "2026-09-02"
 updated_by: coordinator
 
 policy:
@@ -90,8 +90,8 @@ tasks:
     worktree: current
     current_best: "baseline-001/T3_gata4/v0001"
     current_best_score: 45.3
-    active_atom: "T3-S1C-A/v1 + T3-S1C-B/v3 + T3-S1D/v3"
-    next_action: "S1C-A/B 已完成 target-compatible GRN 的方法接口闭合，S1D v3 已获得三个 E9.5 exact-stage 但组织限定的 processed perturbation context；E8.75 state-matched activity 与 signed-family stability 仍未通过，保持不生成候选、不上传"
+    active_atom: "T3-S1C-GATE-SATISFIABILITY-20260902-v1"
+    next_action: "已完成 activity gate 与 firewall 的可满足性审计；当前判定为 UNSATISFIABLE_UNDER_FIREWALL。保持 S1C/S1D 为审计组件，不重跑 S1B、不搜索近 E8.75 target perturbation；只有正式 claim/contract 授权后才可执行限定为 WT-context/modelled response 的 S1C-C exact E8.75 atom"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -138,8 +138,8 @@ blockers:
     blocks_submission: false
     status: open
     status: open
-    reason: "v7 exact input/state join PASS；S1B v3 已完成 full snapshot identity、external contextual integration、conflict audit 和 family-native LOFO；S1C target-compatible adapter/smoke 已通过方法边界；S1D v3 的三个 E9.5 context 仍非 E8.75 state-matched activity，biological activity 仍 NOT_VALIDATED，signed-family stability NOT_IDENTIFIABLE，四条 route 均 HOLD"
-    unblock_condition: "提供 target-compatible 且可审计的 GRN 或经授权收窄 route applicability，并完成 state-specific activity、独立 signed-family stability 和 route gate 复核；不得用 proxy、降采样或未等价替代解除"
+    reason: "v7 exact input/state join PASS；S1B v3 已完成 full snapshot identity、external contextual integration、conflict audit 和 family-native LOFO；S1C target-compatible adapter/smoke 已通过方法边界；S1D v3 的三个 E9.5 context 仍非 E8.75 state-matched activity。进一步的 gate 可满足性审计判定旧 target-specific activity 要求与现行 firewall 不具备足够交集，biological activity 仍 NOT_VALIDATED，signed-family stability NOT_IDENTIFIABLE，四条 route 均 HOLD"
+    unblock_condition: "获得 organizer/contract-owner 对合法 state-matched evidence 的书面许可，或正式建立新版本 claim/route gate；新版本必须保留 firewall、method、无泄漏和明确的 WT-context 语义，不得用 proxy、降采样或未等价替代解除旧 gate"
     owner: coordinator
 
 leases: []
@@ -322,6 +322,66 @@ handoffs:
     recommended_decision: "接受 v3 为 exact-stage contextual evidence 组件；v2 初步原子保留但不复用；不写入 challenge input、submissions/INDEX.tsv 或 server registry"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     action: "继续寻找真正 E8.0-E9.5、目标状态匹配且可复现的 signed-family 证据；在此之前不启动 E8.75 全量推断"
+  - task: T3
+    atom: T3-S1-CLOSURE-20260902-v1
+    status: CLOSED_AS_RESEARCH_COMPONENT
+    final_artifacts: 1
+    candidate_ids: "none；纯文档收口，无新计算"
+    parents: "T3-S1A-STATE-JOIN-20260901-v7；T3-S1B-STATE-JOIN-20260901-v3；T3-S1C-A/v1；T3-S1C-B/v3；T3-S1D/v3"
+    current_artifacts: "artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md"
+    current_checks: "五组件证据链 SHA 抄录完毕；三条未满足硬条件（signed family<2、E8.75 activity NOT_IDENTIFIABLE、stability 未闭合）与最小解锁条件已写死；与同日 T3-S1C-GATE-SATISFIABILITY 的 UNSATISFIABLE_UNDER_FIREWALL 结论一致"
+    risks: "无；不改变任何已登记分数与历史 artifact；T3 best 仍为 45.3"
+    recommended_decision: "接受收口；重开条件见 CLOSURE_REPORT 第 6 节；执行资源切换 T1-PRE-HARMONIZE"
+    blocker: null
+    action: "不生成 H5AD/候选、不运行 scorer、不上传；blocks_submission: false"
+  - task: T1
+    atom: T1-PRE-HARMONIZE-20260902-v1
+    status: STATE_GATE_PASS_AND_FULL_PANEL_SCORER_PASS
+    final_artifacts: 15
+    candidate_ids: "none；本 atom 只建立词表/crosswalk/验证链，不生成正式候选"
+    parents: "P0-LOCK；parent candidate/T1_val/v0004_strict_pseudobulk_shift（只读，SHA 与 P0-LOCK 一致）"
+    current_artifacts: "artifacts/tool_integration/T1-PRE-HARMONIZE-20260902-v1/；stable manifest SHA256 e2f2889081d8bfffffe3111eb8cd024882c98d3304519618a964518b74698413；实现脚本 scripts/t1_pre_harmonize.py SHA256 5c2fed4c3d5c941819170dcf21d08dd540d38abb07c52347ff530318120add75"
+    current_checks: "28 个 union fine_state（11 SHARED_EXACT/7 SOURCE_ONLY/10 TARGET_ONLY）；crosswalk 前向 13/18 解析、5 UNRESOLVED，反向 3/10、7 UNRESOLVED，无强配；stability 预声明一次（非 exact 边 bootstrap 0.40-0.50 已如实记录）；source-only pseudo-holdout projection 经锁定 full-panel scorer 实测 exit 0、323s、meta 三项校验全过；15 项新测试+103 全量回归 PASS；未触 E10.5/E12.5"
+    risks: "pseudo-holdout 分数（de_score 0.6226）只验证表示与验证链，不是 leaderboard preview；wrapper 首版 RSS 采样只覆盖 supervisor 进程（已修为进程树合计，后续运行生效）"
+    recommended_decision: "接受为 T1-S2-MOSCOT-DECODER 的前置组件；T1-S2 需单独授权"
+    blocker: null
+    action: "不生成正式候选、不上传；等待 T1-S2 授权"
+  - task: T1
+    atom: T1-S2-MOSCOT-DECODER-20260902-v1
+    status: SCORED_REJECTED
+    final_artifacts: 44
+    candidate_ids: "T1-S2 v0007 (L1_EMPIRICAL_RESIDUAL, server 44.9)、v0008 (L2_MODULE_SCDESIGN3, server 44.8)；submissions/INDEX.tsv 已回填 scored/registered"
+    parents: "T1-PRE-HARMONIZE-20260902-v1；candidate/T1_val/v0004_strict_pseudobulk_shift"
+    current_artifacts: "artifacts/tool_integration/T1-S2-MOSCOT-DECODER-20260902-v1/；stable manifest SHA256 前缀 461fb3378ce4f9dc；实现 scripts/t1_s2_moscot_decoder.py；v0007 SHA256 4297f3fd344d4592eaf2176caa7f28b03148993aa1bbbcc52c6156f0b121d866；v0008 SHA256 d664db404418fe8558dbe9a966352921c2498e74343318e0f8c9c08ff9774280"
+    current_checks: "moscot 0.5.2 coupling converged（234 非零 transition，主通量 lineage 内）；mass 21 state 归一化+clip/收缩；alpha=1.0127 一次解析冻结；双 lane 5118×32285 contract PASS、protected checks 全 PASS；formal scorer pseudo-target E9.5 双 lane exit 0；17 测试 PASS、manifest 自校验 PASS；服务器 v0007=44.9、v0008=44.8（2026-09-03 回填 reports/SERVER_SCORE_REGISTRY.md）"
+    risks: "pseudo-holdout parent 臂占优已获服务器印证：结构化 moscot 外推在 E10.5 未胜 strict shift（-3.6/-3.7），且低于 copy_last baseline 47.0；本地 pseudo-target 分数不构成 leaderboard 证据"
+    recommended_decision: "REJECT 为 leaderboard 改进，T1-S2 路线关闭；两份候选保留不可变做失败诊断；T1 best 仍为 v0004=48.5，不追加 T1 调参"
+    blocker: null
+    action: "链关闭；执行资源转向 T2-S3-SHAPE-FIELD"
+  - task: T2
+    atom: T2-S3-SHAPE-FIELD-20260903-v1
+    status: SCORED_PARTIAL_PROMOTION
+    final_artifacts: 157
+    candidate_ids: "embryo v0006(L1, server 59.7 rejected)/v0007(L2)、heart_interp v0007(L1, server 56.7 PROMOTED)/v0008(L2)、heart_extrap v0006/v0007（本地 REJECT 不上传）；INDEX.tsv 已回填"
+    parents: "embryo/heart_interp: B1-A1-L1；heart_extrap: baseline-001-v0001"
+    current_artifacts: "artifacts/tool_integration/T2-S3-SHAPE-FIELD-20260903-v1/；stable manifest SHA256 4ffef666e95f9046811346e1d940fde322de9dca53f06f7c4055a8a1051f8a76；实现 scripts/t2_s3_shape_field.py"
+    current_checks: "6/6 候选 contract PASS、表达/obs/var/gene order hash 不变、RMS 回锁在 P0 容差内；holdout L1: H1/H2 全胜、H3/H4 全负；L2: 4/4 全负、heart_extrap kNN CATASTROPHIC；服务器（2026-09-03）：embryo 59.7（-0.4 rejected）、heart_interp 56.7（+0.4 new board best）；14 测试 PASS、manifest 自校验 PASS"
+    risks: "embryo H1 全胜但服务器 -0.4，印证窄间隔 holdout 获益不保证 board 获益；derived T2≈55.8/Total≈149.6 待服务器页面确认，不得引用为服务器值"
+    recommended_decision: "heart_interp 56.7 晋级当前 selection；embryo 保留 B1-A1 L1=60.1；4 条 REJECT 候选不可变保留不上传"
+    blocker: null
+    action: "已完成评分回填；下一方向 T2-J1 FGW assignment candidate"
+  - task: T2
+    atom: T2-J1-PROXY-20260903-v1
+    status: J1_PROXY_PASS
+    final_artifacts: 46
+    candidate_ids: "none；条件 gate atom，不生成候选"
+    parents: "B1-A4 结果引用；T2-S3-SHAPE-FIELD-20260903-v1（执行序）"
+    current_artifacts: "artifacts/tool_integration/T2-J1-PROXY-20260903-v1/；stable manifest SHA256 b5e2abe2718f4708363df4189088071e29f6ad6d52007f22ffcb68565511b751；实现 scripts/t2_j1_proxy.py"
+    current_checks: "FGW objective spec 先冻结（SHA256 4cf86109…）；2 独立 holdout 同向改善（NFS-like 0.012/0.015 vs random 0.137/0.172，64 随机无一更优）；label-only/scrambled-reference null 均差于 random；行序不变性 abs diff=0；14 测试 PASS、148 全量回归 PASS"
+    risks: "heart holdout 逐位置 pearson 为负（参考跨 1.25 天、标签交集仅 5），heart 参考构建需审视；source-only 第 4 层证据，不构成 leaderboard 宣称"
+    recommended_decision: "J1_PROXY_PASS；可另行授权 FGW assignment candidate（先审视 heart 参考）"
+    blocker: null
+    action: "不生成候选、不上传；等待授权"
 ```
 <!-- ve-status:end -->
 
