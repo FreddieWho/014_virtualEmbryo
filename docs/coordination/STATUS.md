@@ -6,7 +6,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-09-02"
+updated_at: "2026-09-03"
 updated_by: coordinator
 
 policy:
@@ -72,10 +72,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "B1-A1-L1 per-board selection"
+    current_best: "per-board selection: B1-A1 L1 embryo 60.1 + T2-S3 L1 heart_interp 56.7 + baseline heart_extrap 50.5"
     current_best_score: 55.7
-    current_best_score_basis: "current server-returned T2 task score; displayed board scores are rounded independently"
-    next_action: "B1-A4 六个候选均已获得服务器分数；未提升当前 per-board selection，不启动 B1-C1 或新的 T2 atom"
+    current_best_score_basis: "current server-returned T2 task score; derived T2≈55.8 after heart_interp 56.7 promotion pending server confirmation"
+    next_action: "T2-J1-FGW-ASSIGNMENT 完成：heart_interp v0009 READY（弱置信）待用户上传决策、embryo v0008 HOLD_AS_COMPONENT；batch3 剩余未做任务 HX-DYNAMICS-KILLTEST"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -382,6 +382,18 @@ handoffs:
     recommended_decision: "J1_PROXY_PASS；可另行授权 FGW assignment candidate（先审视 heart 参考）"
     blocker: null
     action: "不生成候选、不上传；等待授权"
+  - task: T2
+    atom: T2-J1-FGW-ASSIGNMENT-20260903-v1
+    status: GATE_RULED
+    final_artifacts: 40
+    candidate_ids: "T2:embryo:val_interp v0008 j1_fgw_assignment（HOLD_AS_COMPONENT）、T2:heart:val_interp v0009 j1_fgw_assignment（READY 弱置信）；详见 submissions/INDEX.tsv"
+    parents: "embryo v0002 g1_formal_log_rms（60.1）；heart_interp v0007 t2_s3_l1_pycpd（56.7）；objective 继承 T2-J1-PROXY-20260903-v1 冻结 spec 4cf86109"
+    artifacts: "artifacts/tool_integration/T2-J1-FGW-ASSIGNMENT-20260903-v1/；候选 SHA256 以 submissions/INDEX.tsv 为准（embryo 81442478…、heart 4f2e7552…）"
+    checks: "heart 参考审视按预声明标准 PROCEED（跨度 0.50、标签交集 33、探针弱正 +0.0138）；全量 FGW 无子采样；column_argmax_margin_greedy_v1 双射 PASS（conflicts 72.2%/73.3%）；objective 同靶 embryo −12.2%、heart −26.6%；contract 2/2 PASS、protected 2/2 PASS（坐标/obs/var/kNN 图/表达 multiset 精确一致）；重跑字节一致；40 文件 manifest 自校验 PASS；14 新测试 + 162 全量回归 PASS"
+    risks: "heart morans_I_agreement 同靶 0.7365→0.6743 变差（已声明）；embryo NFS 镜像 no_improvement 0.0312→0.0344 且 bracket 探针为负；训练期 pseudo-target 循环论证；本地证据非 leaderboard 证据"
+    recommended_decision: "heart_interp v0009 READY_FOR_MANUAL_SUBMISSION（弱置信，是否消耗提交由用户决定，不自动上传）；embryo v0008 HOLD_AS_COMPONENT 不可变保留"
+    blocker: null
+    action: "分数回填前 score_pending、不宣称进步；batch3 剩余 HX-DYNAMICS-KILLTEST"
 ```
 <!-- ve-status:end -->
 
@@ -390,7 +402,7 @@ handoffs:
 | 任务 | 当前状态 | 当前最佳 | 下一动作 |
 |---|---|---|---|
 | T1 | active | v0004 strict pseudobulk shift，48.5 | v0004 保持 best；B1-A3 v0006/v0005 为已评分候选，暂无本批后续调参 |
-| T2 | active | per-board selection，服务器 T2 55.7 | B1-A4 六件套已评分但未晋级；暂无新增计算 |
+| T2 | active | per-board selection（embryo 60.1 / heart_interp 56.7 / heart_extrap 50.5），服务器 T2 55.7 | J1-FGW heart_interp v0009 READY（弱置信）待上传决策；embryo v0008 HOLD；余 HX-DYNAMICS-KILLTEST |
 | T3 | gate_blocked | baseline-001，45.3 | S1C-A/B 方法组件已通过、S1D v3 获得 E9.5 exact-stage 但组织限定 context；继续寻找 E8.0-E9.5 state-matched activity/stability，不生成候选 |
 
 Batch 1 已关闭为 `CLOSED_FOR_REVIEW`。综合评审报告为 `reports/PHASE_REPORT_BATCH1_20260829.md`；新 atom 需要新的明确授权。

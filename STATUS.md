@@ -32,9 +32,11 @@
 
 ### T2 — spatial-temporal
 
-1. 当前 per-board selection：B1-A1 L1 保留 embryo/interp，baseline 保留 heart extrap；服务器 T2 **55.7**、Total **149.5**。
+1. 当前 per-board selection：B1-A1 L1 embryo 60.1 + T2-S3 L1 heart_interp **56.7** + baseline heart extrap 50.5；服务器 T2 **55.7**、Total **149.5**（derived T2≈55.8 待服务器确认）。
 2. B1-A1 `L1_FORMAL_LOG_RMS`：raw scores 60.1/56.3/50.2；heart extrap 低于 baseline 50.5。
 3. B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS`：raw scores 59.9/55.3/49.8，已评分 backup。
+
+Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1` 已生成两条未评分候选：embryo_interp v0008 与 heart_interp v0009（均 `j1_fgw_assignment`，只置换表达行、坐标与 obs 不变）。contract/protected/确定性全过；embryo 因同靶 NFS 镜像无改善裁定 `HOLD_AS_COMPONENT`，heart_interp 因同靶 nmmd 改善裁定 `READY_FOR_MANUAL_SUBMISSION`（弱置信，morans 同靶变差已声明），均保持 `score_pending`、不自动上传。
 
 详情：[T2_TRACKING.md](docs/coordination/T2_TRACKING.md)
 
@@ -61,7 +63,7 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
 | T1 | `T1-S2-MOSCOT-DECODER-20260902-v1` 服务器仲裁完成：v0007=44.9、v0008=44.8，均低于 best 48.5 与 baseline 47.0，REJECT 为改进，路线关闭；当前 best 仍为 v0004=48.5，不追加 T1 调参 | 分数已回填 `reports/SERVER_SCORE_REGISTRY.md` 与 INDEX.tsv |
-| T2 | T2-S3 服务器评分回填：heart_interp **56.7（+0.4）晋级 board best**，embryo 59.7（-0.4）未提升；当前 selection = B1-A1 L1 embryo + T2-S3 L1 heart_interp + baseline extrap；`T2-J1-PROXY` gate PASS，下一方向 FGW assignment candidate | 服务器未返回新 T2/Total（保持 55.7/149.5）；derived T2≈55.8/Total≈149.6 待服务器确认 |
+| T2 | `T2-J1-FGW-ASSIGNMENT-20260903-v1` 完成：heart_interp v0009 gate `READY_FOR_MANUAL_SUBMISSION`（弱置信：同靶 nmmd 0.0967→0.0747 改善，morans 0.7365→0.6743 变差已声明），待用户上传决策；embryo v0008 `HOLD_AS_COMPONENT`；batch3 剩余 `HX-DYNAMICS-KILLTEST` | 分数回填前 score_pending、不宣称进步；不自动上传 |
 | T3 | S1 链已收口 `CLOSED_AS_RESEARCH_COMPONENT`（2026-09-02）；当前 best 仍为 45.3，不生成新候选 | 重开需满足收口报告第 6 节条件（官方新数据/organizer 放宽/研究分支独立 signed family） |
 
 ## 更新规则

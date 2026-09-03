@@ -80,6 +80,17 @@ B1-A1 双 lane 最终集已完成服务器评分；L1 在三个 B1-A1 lane 中�
 - A4 全 L1 的 board 值只能推导为 T2 `55.2`，全 L2 为 `55.1`；服务器未返回新的 Total，当前服务器 T2 `55.7`、Total `149.5` 保持不变。
 - 决定：B1-A4 不晋级；六份 artifact 作为不可变 scored 记录保留；不启动 B1-C1 重复缩放或新的 T2 atom。
 
+## T2-J1-FGW-ASSIGNMENT gate 裁定（2026-09-03，coordinator 确认）
+
+| 日期 | 版本 | 父版本 | 一句话变更 | 结果/决定 |
+|---|---|---|---|---|
+| 2026-09-03 | `T2-J1-FGW-ASSIGNMENT-20260903-v1` | embryo v0002（g1_formal_log_rms）、heart_interp v0007（t2_s3_l1_pycpd）；objective 继承 `T2-J1-PROXY-20260903-v1` 冻结 spec | 固定表达行集合+固定坐标点云，用冻结 FGW objective（α=0.5/ε=0.005/PGD，全量无子采样）求解 soft plan，按预声明 `column_argmax_margin_greedy_v1` 转离散双射，只置换 X 行、obs/坐标不动。 | heart 参考审视按预声明标准 PROCEED（跨度 0.50、标签交集 33、探针弱正 +0.0138、支撑充足）。objective 同靶：embryo −12.2%、heart −26.6%（均优于恒等配对）。contract 2/2 PASS、protected 2/2 PASS（坐标/obs/var/kNN 图/表达 multiset 与 parent 精确一致）、重跑字节一致。40 文件 manifest 自校验 PASS；新增测试 14 passed、全量回归 162 passed。 |
+
+裁定（依据 §6/§7，同靶相对证据优先）：
+
+- **heart_interp v0009 `j1_fgw_assignment`：`READY_FOR_MANUAL_SUBMISSION`（弱置信）**。同靶 NFS 镜像 0.0967→0.0747 改善（与 J1-PROXY 预声明 gate 指标同向），objective −26.6%；随附声明：morans_I_agreement 同靶 0.7365→0.6743 变差、A3 探针仅勉强为正、conflict 率 73.3%、训练期 pseudo-target 循环论证，本地证据非 leaderboard 证据。是否消耗提交由用户决定，不自动上传。
+- **embryo_interp v0008 `j1_fgw_assignment`：`HOLD_AS_COMPONENT`**。机械项全过、objective −12.2%，但唯一同靶 parent 相对证据（NFS 镜像）no_improvement（0.0312→0.0344），且 embryo bracket 同型探针为负；本地证据不支持消耗提交。作为不可变组件保留，若未来推进需先补同靶 parent scorer 参照与探针问题。
+
 ## 下一步
 
-B1-A4 已完成六个 contract-valid 候选及服务器评分；结果未改善当前选择，下一步等待新的明确授权。若需要科学晋级，仍需独立 stage/replicate 证据；本次 leaderboard 分数不构成因果机制证据。
+J1 assignment 已完成：heart_interp v0009 待用户上传决策（若上传，分数回填前标记 score_pending、不宣称进步）；embryo_interp v0008 HOLD。batch3 剩余未做任务为 HX-DYNAMICS-KILLTEST（前置已满足）。若需要科学晋级，仍需独立 stage/replicate 证据；leaderboard 分数不构成因果机制证据。
