@@ -1,8 +1,44 @@
 # Virtual Embryo 项目状态
 
-更新时间：2026-09-03
+更新时间：2026-09-04
 
-这是给人看的总入口。完整分数不在这里重复维护：候选文件看 [`submissions/INDEX.tsv`](submissions/INDEX.tsv)，服务器分数看 [`reports/SERVER_SCORE_REGISTRY.md`](reports/SERVER_SCORE_REGISTRY.md)，任务细节看下面三个追踪文档。
+## 第一部分：给人读的进展
+
+**已完成什么。** 三个比赛任务都已建立合法提交并拿到服务器分数，当前总分 149.5。最近一轮把心脏插值从 56.3 提到 57.3（位移场 +0.4、表达重排 +0.6 两步），胚胎插值保持 60.1；六条新路线里两条晋级、四条被证明无效并已关闭存档。
+
+**正在做什么。** 第三批计划（batch3）的全部任务已执行完毕，此刻没有正在运行的计算。等你从比赛页面读回最新总分，确认我们推算的 149.8 是否成立。
+
+**卡在哪里。** 时间外推任务（T1）停在 48.5：结构化传输和"增长/死亡动力学"两条路都被严格判掉了，剩下的提升空间需要全新想法而不是调参。扰动任务（T3）的科学验证在当前数据规则下结构性做不到，已正式收口，但不影响比赛提交。
+
+**准备怎么解决。** 不盲目追加实验。T1 等待新假设或接受现状；T3 等待官方新数据或规则放宽；下一步是开辟第四批方向（候选见 TODO.md 与 LEADS.md）还是封板，由你决定。
+
+```
+
+2026/9/4
+ROADMAP  [#######-] 7/8 节点（N8 待授权）
+本周投入  科学问题 ███████░░░ 70%   基础设施 ███░░░░░░░ 30%
+
+偏离程度  中
+偏离位置  T3-S1 链（N3）连续 6 个 atom、约 3 个工作日，最终全部 HOLD/收口，
+         未产生任何候选；产出的否定边界真实有价值，但探索深度超出
+         "快速证伪"的初衷，且期间 blocks_submission=false 才未耽误主线。
+建议      科学 promotion 类探索预设更硬的早期止损：连续 2 个 atom 无阳性
+         证据即暂停上报，由人决定是否继续深挖。
+```
+
+## 第二部分：给 agent 的接手信息
+
+- 活跃节点：无；batch3 完毕，N8（batch4 方向）待用户授权。
+- 核心文件：`submissions/INDEX.tsv`（候选+哈希）、`reports/SERVER_SCORE_REGISTRY.md`（分数）、`docs/coordination/STATUS.md`（并行状态）。
+- 复现：`PYTHONPATH=docs/batch3/interfaces /opt/anaconda3/bin/python -m pytest tests/ -q`（174 passed）。
+- 最近 DECISIONS：`D-20260904-HX-001`（HX REJECT）；同批 `D-20260904-T2-J1-001`（57.3 晋级）。
+- 下一步：等服务器 Total 读数确认 derived 149.8；等 push 与 batch4/封板授权。
+
+---
+
+## 比赛细节（以下为本项目原有 STATUS 内容）
+
+完整分数不在本文件重复维护：候选文件与哈希看 [`submissions/INDEX.tsv`](submissions/INDEX.tsv)，服务器分数看 [`reports/SERVER_SCORE_REGISTRY.md`](reports/SERVER_SCORE_REGISTRY.md)，任务细节看 [`docs/coordination/`](docs/coordination/) 下的三个追踪文档。
 
 ## 总体状态
 
@@ -20,6 +56,14 @@
 - 收尾变更日志：[`reports/RELEASE_CHANGELOG_20260829.md`](reports/RELEASE_CHANGELOG_20260829.md)
 - 新 atom 或新提交前需要明确授权。
 
+## Batch 3 收尾
+
+- 状态：`COMPLETE`（2026-09-04）；8 条路线全部执行完毕，无 active atom。
+- 净收益：T2 heart_interp 56.3 → 57.3（+1.0）；moscot、MIOFlow、spateo lane 三条方向关闭；T3-S1 链证据环境锁死收口；FGW 留有后手（LEADS L-002）。
+- 综合评审报告：[`reports/PHASE_REPORT_BATCH3_20260904.md`](reports/PHASE_REPORT_BATCH3_20260904.md)
+- 收尾变更日志：[`reports/RELEASE_CHANGELOG_BATCH3_20260904.md`](reports/RELEASE_CHANGELOG_BATCH3_20260904.md)
+- 新 atom 或新提交前需要明确授权。
+
 ## 各任务评分最高的 Top 3 路线
 
 ### T1 — single-cell temporal
@@ -32,11 +76,11 @@
 
 ### T2 — spatial-temporal
 
-1. 当前 per-board selection：B1-A1 L1 embryo 60.1 + T2-S3 L1 heart_interp **56.7** + baseline heart extrap 50.5；服务器 T2 **55.7**、Total **149.5**（derived T2≈55.8 待服务器确认）。
+1. 当前 per-board selection：B1-A1 L1 embryo 60.1 + T2-J1 v0009 `j1_fgw_assignment` heart_interp **57.3** + baseline heart extrap 50.5；服务器 T2 **55.7**、Total **149.5**（derived T2≈55.97/Total≈149.8 待服务器确认）。
 2. B1-A1 `L1_FORMAL_LOG_RMS`：raw scores 60.1/56.3/50.2；heart extrap 低于 baseline 50.5。
 3. B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS`：raw scores 59.9/55.3/49.8，已评分 backup。
 
-Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1` 已生成两条未评分候选：embryo_interp v0008 与 heart_interp v0009（均 `j1_fgw_assignment`，只置换表达行、坐标与 obs 不变）。contract/protected/确定性全过；embryo 因同靶 NFS 镜像无改善裁定 `HOLD_AS_COMPONENT`，heart_interp 因同靶 nmmd 改善裁定 `READY_FOR_MANUAL_SUBMISSION`（弱置信，morans 同靶变差已声明），均保持 `score_pending`、不自动上传。
+Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1`：heart_interp v0009 服务器 **57.3（+0.6 vs v0007 56.7）** 晋级 board best（2026-09-04 回填）；embryo_interp v0008 未上传，保持 `HOLD_AS_COMPONENT` 不可变。
 
 详情：[T2_TRACKING.md](docs/coordination/T2_TRACKING.md)
 
@@ -62,8 +106,8 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | `T1-S2-MOSCOT-DECODER-20260902-v1` 服务器仲裁完成：v0007=44.9、v0008=44.8，均低于 best 48.5 与 baseline 47.0，REJECT 为改进，路线关闭；当前 best 仍为 v0004=48.5，不追加 T1 调参 | 分数已回填 `reports/SERVER_SCORE_REGISTRY.md` 与 INDEX.tsv |
-| T2 | `T2-J1-FGW-ASSIGNMENT-20260903-v1` 完成：heart_interp v0009 gate `READY_FOR_MANUAL_SUBMISSION`（弱置信：同靶 nmmd 0.0967→0.0747 改善，morans 0.7365→0.6743 变差已声明），待用户上传决策；embryo v0008 `HOLD_AS_COMPONENT`；batch3 剩余 `HX-DYNAMICS-KILLTEST` | 分数回填前 score_pending、不宣称进步；不自动上传 |
+| T1 | `HX-DYNAMICS-KILLTEST-20260904-v1` 完成：MIOFlow（增长/死亡+随机动力学）在预声明 kill metric（留 E9.5 state-mass L1）上 0.7475，未同时优于 moscot 0.6645 与 parent 1.1894 → **REJECT**，方向关闭；当前 best 仍为 v0004=48.5，无新授权不追加 T1 atom | kill test 只出 report，不生成候选；分数已回填的候选见 `reports/SERVER_SCORE_REGISTRY.md` 与 INDEX.tsv |
+| T2 | J1-FGW heart_interp v0009 服务器 **57.3（+0.6）晋级 board best**（2026-09-04 回填）；embryo v0008 保持 HOLD 不上传；**batch3 全部任务执行完毕**（`HX-DYNAMICS-KILLTEST` 已 REJECT，见 T1 行） | 服务器未返回新 T2/Total（保持 55.7/149.5）；derived T2≈55.97/Total≈149.8 待服务器确认 |
 | T3 | S1 链已收口 `CLOSED_AS_RESEARCH_COMPONENT`（2026-09-02）；当前 best 仍为 45.3，不生成新候选 | 重开需满足收口报告第 6 节条件（官方新数据/organizer 放宽/研究分支独立 signed family） |
 
 ## 更新规则

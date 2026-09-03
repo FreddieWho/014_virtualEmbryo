@@ -1,6 +1,6 @@
 pack_id: VE-TOOLS-20260830
-active_task: T2-J1-FGW-ASSIGNMENT
-prompt_file: prompts/T2_J1_FGW_ASSIGNMENT.md
+active_task: HX-DYNAMICS-KILLTEST
+prompt_file: prompts/HX_MIOFLOW_SDIFFEQ_KILLTEST.md
 execution_mode: single_task
 artifact_root: artifacts/tool_integration
 seed: 20260830
@@ -12,4 +12,5 @@ full_generation_budget_per_lane: 1
 final_local_score_budget_per_lane: 1
 allow_grid_search: false
 stop_after_result: true
-derived_from: T2-J1-PROXY-20260903-v1 (gate J1_PROXY_PASS)
+derived_from: T2-J1-FGW-ASSIGNMENT-20260903-v1 (scored: heart_interp v0009=57.3 promoted)
+note: network exception granted once for pinned PyPI deployment of mioflow into .venvs/ve-hx-mioflow (hash-locked, audited); compute phase network off. No H5AD candidate generation in this atom.

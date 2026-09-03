@@ -464,3 +464,34 @@ reuse_promoted
 - evidence: "`docs/batch3/T3_S1C_GATE_SATISFIABILITY_DECISION_20260902.md`；`docs/batch2/compliance/DATA_FIREWALL_SPEC.md`；`docs/batch2/compliance/protected_windows.yaml`；`docs/batch3/prompts/T3_S1B_PRIOR_TO_CANDIDATE.md`；当前 S1A v7、S1B v3、S1C-A/v1、S1C-B/v3、S1D/v3 receipts。"
 - boundary: "E8.75 WT 只能支持 WT-context regulatory coherence；远窗口数据不能桥接为 E8.75 activity；CollecTRI/OmniPath、adapter、synthetic smoke 和 unsigned rank 不构成 independent signed family；quarantine 中的 S1D 矩阵在用途重新取得 permit 前不得继续复用。candidate_generation=false；server_submission=false；blocks_submission=false。"
 - next_action: "若用户或 contract owner 正式授权 scope-change，先建立新 contract，再执行限定为 WT-context/modelled response 的 S1C-C exact E8.75 atom；否则维持 HOLD，不增加无效计算。"
+
+### D-20260903-T2-S3-001 — T2-S3 服务器评分与 heart_interp 晋级
+- date: 2026-09-03
+- scope: T2-S3-SHAPE-FIELD-20260903-v1
+- decision: "heart_interp v0007 t2_s3_l1_pycpd 服务器 56.7（+0.4 vs B1-A1 L1 56.3）晋级 board best 与当前 selection；embryo v0006 59.7（-0.4）不晋级；4 条本地 REJECT 候选（L2 全部 + heart_extrap L1）不上传、不可变保留。"
+- evidence: "用户回填 leaderboard 行（2026-09-03 12:12/12:14）；reports/SERVER_SCORE_REGISTRY.md T2-S3 节；submissions/INDEX.tsv v0006/v0007 行。"
+- boundary: "服务器未返回新 T2/Total，55.7/149.5 保持；derived 值不引用为服务器值；leaderboard 分数不作因果机制证据。"
+- review_trigger: "服务器页面刷新后 Total/T2 与 derived 55.77/149.6 不一致时复核聚合规则。"
+
+### D-20260903-NAME-001 — 上传命名规则固化
+- date: 2026-09-03
+- scope: 全部手动上传包
+- decision: "上传 zip 成员名固定 `<task>_<board>__<lane>__vNNNN.h5ad`（≤50 字符，board 短码 t1 val / t2 emb_int|hrt_int|hrt_ext / t3 gata4），zip 名 `<atom短码>__<task>__upload__<YYYYMMDD>.zip`，包内附 MANIFEST.tsv（filename/bytes/sha256）。规则写入 AGENTS.md 与 submissions/README.md。"
+- evidence: "deliveries/t2s3__t2__upload__20260903.zip、deliveries/t2j1__t2__upload__20260903.zip。"
+- review_trigger: "官方 portal 变更文件名约束时。"
+
+### D-20260904-T2-J1-001 — J1-FGW heart_interp v0009 晋级、embryo v0008 HOLD
+- date: 2026-09-04（回填；服务器行 2026-09-03 19:51）
+- scope: T2-J1-FGW-ASSIGNMENT-20260903-v1
+- decision: "heart_interp v0009 j1_fgw_assignment 服务器 57.3（+0.6 vs v0007 56.7）晋级 board best 与当前 selection；embryo v0008 本地同靶 NFS 镜像无改善且探针为负，HOLD_AS_COMPONENT 不上传；当前 selection = embryo 60.1（B1-A1 L1）+ heart_interp 57.3（T2-J1 v0009）+ heart_extrap 50.5（baseline）。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md T2-J1 节；artifacts/tool_integration/T2-J1-FGW-ASSIGNMENT-20260903-v1/（manifest 40 文件自校验 PASS）；本地混合证据（nmmd 0.0967→0.0747 改善 vs morans 0.7365→0.6743 变差）由服务器正向仲裁。"
+- boundary: "derived T2≈55.97/Total≈149.8 待服务器页面确认；FGW 改善不构成机制因果证据。"
+- review_trigger: "服务器页面 Total 与 derived 不一致；或 embryo 补齐同靶 parent scorer 参照后重评 v0008。"
+
+### D-20260904-HX-001 — HX-DYNAMICS-KILLTEST REJECT，增长/死亡动力学方向关闭
+- date: 2026-09-04
+- scope: HX-DYNAMICS-KILLTEST-20260904-v1（MIOFlow × T1 state-mass 单假设）
+- decision: "预声明 kill metric（留 E9.5 per-state mass L1，须同时严格优于 strict-shift parent 与 moscot 双臂）未达成：mioflow 0.7475 vs moscot 0.6645 vs parent 1.1894 → REJECT。结论：moscot 的 state-mass 预测已显著优于 strict-shift，T1-S2 失败不在 mass 环节；增长/死亡+随机动力学方向对 T1 关闭。不生成候选、不上传。"
+- evidence: "artifacts/tool_integration/HX-DYNAMICS-KILLTEST-20260904-v1/metrics/holdout_mass_l1.json（双臂复用冻结 artifact，SHA 记录）；mioflow==0.1.14 一次性 hash-lock 部署（Yale 非商业许可已披露）；12 新测试+174 全量回归 PASS。"
+- boundary: "E9.5 为训练期 stage，holdout 只验证假设机制；kill test 不产生 leaderboard 证据；mioflow venv 保留可复用但不得作为统一 backbone。"
+- review_trigger: "出现独立证据表明 T1 残差确实由 state-mass 漂移主导时，方可重开本方向。"

@@ -300,3 +300,20 @@ Consistency and decision:
 - The heart-interpolation improvement (+0.4) is consistent with the source-only holdout evidence (H2 full win) but the embryo decline (-0.4) despite H1 full win confirms the H3 caveat: narrow-window holdout gains do not guarantee board gains. No causal claim is made from leaderboard scores alone.
 - The four non-uploaded T2-S3 candidates (L2 lanes and heart-extrap L1, all locally REJECTED) remain `score_pending`/immutable and will not be uploaded.
 - Both scored artifacts stay immutable; user-provided values are registered as supplied.
+
+### T2-J1 — FGW assignment heart-interp scoring round
+| Record date | 2026-09-04 |
+|---|---|
+| Submission label | T2-J1-FGW-ASSIGNMENT-20260903-v1: heart_interp v0009 j1_fgw_assignment |
+| Board/phase | T2:heart:val_interp |
+| Source | User-provided server results in score-return message (leaderboard row 2026-09-03 19:51; portal Model filename `t2_hrt_int__j1fgw__v0009` matches the fixed short-name rule and local version exactly) |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs current board best | Decision |
+|---|---|---|---:|---:|---|
+| `T2-J1 heart_interp v0009 J1_FGW_ASSIGNMENT` | not supplied | `submissions/candidates/T2_heart_val_interp/v0009_j1_fgw_assignment/submission.h5ad` / `4f2e7552a4ff5a11191f8cf6f1e94393882d131aa76855e5da34faef3f43ac43` | **57.3** | **+0.6** vs T2-S3 L1=56.7 | **new board best; promote to current selection** |
+
+Consistency and decision:
+- The server returned the board score only; no new T2 aggregate or Total was supplied. The retained server values remain T2 **55.7** and Total **149.5** until the server page is re-read.
+- Protocol-derived (not server-returned): with embryo 60.1 (B1-A1 L1), heart interpolation 57.3 (T2-J1 v0009), heart extrapolation 50.5 (baseline), the derived T2 mean is `(60.1 + 57.3 + 50.5) / 3 = 55.97` and the derived Total is `48.5 + 55.97 + 45.3 = 149.8`; these derived values must be confirmed against the server page on the next read and must not be quoted as server values.
+- The +0.6 resolves the local mixed evidence in the positive direction: the same-target NFS-mirror improvement (0.0967→0.0747) was the pre-declared gate metric direction, while the same-target morans decline (0.7365→0.6743) did not dominate the board outcome. Consistent with J1-PROXY holdout evidence; no causal claim is made from leaderboard scores alone.
+- embryo v0008 (`j1_fgw_assignment`, HOLD_AS_COMPONENT) was not uploaded and stays immutable/score_pending; the four non-uploaded T2-S3 candidates likewise remain untouched.
+- The scored artifact stays immutable; user-provided value registered as supplied.

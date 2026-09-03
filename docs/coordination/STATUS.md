@@ -6,7 +6,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-09-03"
+updated_at: "2026-09-04"
 updated_by: coordinator
 
 policy:
@@ -33,6 +33,13 @@ batch1:
   phase_report: reports/PHASE_REPORT_BATCH1_20260829.md
   release_changelog: reports/RELEASE_CHANGELOG_20260829.md
   next_action: "等待新的明确授权；不自动启动 B1-C1 或新的 atom"
+batch3:
+  status: COMPLETE
+  routes_executed: 8
+  active_atom: null
+  phase_report: reports/PHASE_REPORT_BATCH3_20260904.md
+  release_changelog: reports/RELEASE_CHANGELOG_BATCH3_20260904.md
+  next_action: "等待 batch4 授权（LEADS L-002 首选）或封板；已关闭路线不追加微调"
 data:
   challenge_manifest: data/MANIFEST.tsv
   auxiliary_links: 7
@@ -55,7 +62,7 @@ tasks:
     worktree: current
     current_best: "candidate/T1_val/v0004_strict_pseudobulk_shift"
     current_best_score: 48.5
-    next_action: "已校对历史榜单；v0004=48.5 为 T1 best，B1-A3 v0006=47.7、v0005=47.5 保留为 scored candidates；新授权 atom 前不追加 T1 调参"
+    next_action: "HX-DYNAMICS-KILLTEST 已 REJECT（mioflow 0.7475 未优于 moscot 0.6645），增长/死亡动力学方向关闭；T1 无新授权前不追加 atom"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -72,10 +79,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: B1-A1 L1 embryo 60.1 + T2-S3 L1 heart_interp 56.7 + baseline heart_extrap 50.5"
+    current_best: "per-board selection: B1-A1 L1 embryo 60.1 + T2-J1 v0009 heart_interp 57.3 + baseline heart_extrap 50.5"
     current_best_score: 55.7
-    current_best_score_basis: "current server-returned T2 task score; derived T2≈55.8 after heart_interp 56.7 promotion pending server confirmation"
-    next_action: "T2-J1-FGW-ASSIGNMENT 完成：heart_interp v0009 READY（弱置信）待用户上传决策、embryo v0008 HOLD_AS_COMPONENT；batch3 剩余未做任务 HX-DYNAMICS-KILLTEST"
+    current_best_score_basis: "current server-returned T2 task score; derived T2≈55.97 after heart_interp 57.3 promotion pending server confirmation"
+    next_action: "T2-J1 heart_interp v0009 服务器 57.3（+0.6）晋级；batch3 剩余 HX-DYNAMICS-KILLTEST（单工具/单 board/单 kill metric，实例化后执行）"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -384,7 +391,7 @@ handoffs:
     action: "不生成候选、不上传；等待授权"
   - task: T2
     atom: T2-J1-FGW-ASSIGNMENT-20260903-v1
-    status: GATE_RULED
+    status: SCORED_PARTIAL_PROMOTION
     final_artifacts: 40
     candidate_ids: "T2:embryo:val_interp v0008 j1_fgw_assignment（HOLD_AS_COMPONENT）、T2:heart:val_interp v0009 j1_fgw_assignment（READY 弱置信）；详见 submissions/INDEX.tsv"
     parents: "embryo v0002 g1_formal_log_rms（60.1）；heart_interp v0007 t2_s3_l1_pycpd（56.7）；objective 继承 T2-J1-PROXY-20260903-v1 冻结 spec 4cf86109"
@@ -393,7 +400,19 @@ handoffs:
     risks: "heart morans_I_agreement 同靶 0.7365→0.6743 变差（已声明）；embryo NFS 镜像 no_improvement 0.0312→0.0344 且 bracket 探针为负；训练期 pseudo-target 循环论证；本地证据非 leaderboard 证据"
     recommended_decision: "heart_interp v0009 READY_FOR_MANUAL_SUBMISSION（弱置信，是否消耗提交由用户决定，不自动上传）；embryo v0008 HOLD_AS_COMPONENT 不可变保留"
     blocker: null
-    action: "分数回填前 score_pending、不宣称进步；batch3 剩余 HX-DYNAMICS-KILLTEST"
+    action: "服务器仲裁（2026-09-04 回填，行 2026-09-03 19:51）：heart_interp v0009=57.3（+0.6 vs v0007 56.7）晋级 board best 与当前 selection；embryo v0008 未上传保持 HOLD；derived T2≈55.97/Total≈149.8 待服务器页面确认；batch3 剩余 HX-DYNAMICS-KILLTEST"
+  - task: T1
+    atom: HX-DYNAMICS-KILLTEST-20260904-v1
+    status: REJECT
+    final_artifacts: 18
+    candidate_ids: "none；kill test 只出 report，不生成候选"
+    parents: "candidate/T1_val/v0004_strict_pseudobulk_shift（只读）；双臂复用 T1-PRE-HARMONIZE-20260902-v1 与 T1-S2-MOSCOT-DECODER-20260902-v1 冻结 artifact"
+    artifacts: "artifacts/tool_integration/HX-DYNAMICS-KILLTEST-20260904-v1/；stable manifest 18 文件自校验 PASS；实现 scripts/hx_dynamics_killtest.py + scripts/hx_mioflow_worker.py"
+    checks: "一次性固定部署 mioflow==0.1.14（wheel/sdist SHA256 核验、Yale 非商业许可披露、56 包依赖快照）；kill metric 定义先于运行写死（config 04:15 早于训练产物 05:06）；MIOFlow 一次训练 wall 2747s<7200s cap、库默认超参无搜索；三臂 L1：parent 1.1894 / moscot 0.6645 / mioflow 0.7475；12 新测试 + 174 全量回归 PASS"
+    risks: "E9.5 是训练期 stage，holdout 只验证假设机制、非 leaderboard preview；mioflow 上游 growth_rate 导入损坏以 sys.modules 别名绕过（源码未改，已记录 deviation）"
+    recommended_decision: "REJECT（预声明阈值未达成：未严格优于 moscot 臂）；moscot mass 质量不是 T1-S2 失败点，增长/死亡动力学方向关闭；不生成候选、不上传"
+    blocker: null
+    action: "kill test 收口；batch3 全部任务执行完毕；T1 无新授权前不追加 atom"
 ```
 <!-- ve-status:end -->
 
@@ -401,8 +420,8 @@ handoffs:
 
 | 任务 | 当前状态 | 当前最佳 | 下一动作 |
 |---|---|---|---|
-| T1 | active | v0004 strict pseudobulk shift，48.5 | v0004 保持 best；B1-A3 v0006/v0005 为已评分候选，暂无本批后续调参 |
-| T2 | active | per-board selection（embryo 60.1 / heart_interp 56.7 / heart_extrap 50.5），服务器 T2 55.7 | J1-FGW heart_interp v0009 READY（弱置信）待上传决策；embryo v0008 HOLD；余 HX-DYNAMICS-KILLTEST |
+| T1 | active | v0004 strict pseudobulk shift，48.5 | HX-KILLTEST 已 REJECT（增长/死亡动力学方向关闭）；无新授权不追加 T1 atom |
+| T2 | active | per-board selection（embryo 60.1 / heart_interp **57.3** / heart_extrap 50.5），服务器 T2 55.7 | J1-FGW heart_interp v0009 服务器 57.3（+0.6）晋级；余 HX-DYNAMICS-KILLTEST 实例化 |
 | T3 | gate_blocked | baseline-001，45.3 | S1C-A/B 方法组件已通过、S1D v3 获得 E9.5 exact-stage 但组织限定 context；继续寻找 E8.0-E9.5 state-matched activity/stability，不生成候选 |
 
 Batch 1 已关闭为 `CLOSED_FOR_REVIEW`。综合评审报告为 `reports/PHASE_REPORT_BATCH1_20260829.md`；新 atom 需要新的明确授权。

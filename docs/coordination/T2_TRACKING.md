@@ -91,6 +91,8 @@ B1-A1 双 lane 最终集已完成服务器评分；L1 在三个 B1-A1 lane 中�
 - **heart_interp v0009 `j1_fgw_assignment`：`READY_FOR_MANUAL_SUBMISSION`（弱置信）**。同靶 NFS 镜像 0.0967→0.0747 改善（与 J1-PROXY 预声明 gate 指标同向），objective −26.6%；随附声明：morans_I_agreement 同靶 0.7365→0.6743 变差、A3 探针仅勉强为正、conflict 率 73.3%、训练期 pseudo-target 循环论证，本地证据非 leaderboard 证据。是否消耗提交由用户决定，不自动上传。
 - **embryo_interp v0008 `j1_fgw_assignment`：`HOLD_AS_COMPONENT`**。机械项全过、objective −12.2%，但唯一同靶 parent 相对证据（NFS 镜像）no_improvement（0.0312→0.0344），且 embryo bracket 同型探针为负；本地证据不支持消耗提交。作为不可变组件保留，若未来推进需先补同靶 parent scorer 参照与探针问题。
 
+**服务器仲裁（2026-09-04 回填，行时间 2026-09-03 19:51）**：heart_interp v0009 = **57.3（+0.6 vs v0007 56.7）**，晋级 board best，进入当前 selection；本地混合证据（nmmd 改善 vs morans 变差）由服务器正向仲裁。embryo v0008 未上传，保持 HOLD。derived T2≈55.97/Total≈149.8 待服务器页面确认，不得引用为服务器值。详见 `reports/SERVER_SCORE_REGISTRY.md`。
+
 ## 下一步
 
-J1 assignment 已完成：heart_interp v0009 待用户上传决策（若上传，分数回填前标记 score_pending、不宣称进步）；embryo_interp v0008 HOLD。batch3 剩余未做任务为 HX-DYNAMICS-KILLTEST（前置已满足）。若需要科学晋级，仍需独立 stage/replicate 证据；leaderboard 分数不构成因果机制证据。
+J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 board best；embryo_interp v0008 保持 HOLD 不上传。batch3 剩余未做任务为 HX-DYNAMICS-KILLTEST（单工具/单 board/单 kill metric，需实例化授权）。若需要科学晋级，仍需独立 stage/replicate 证据；leaderboard 分数不构成因果机制证据。
