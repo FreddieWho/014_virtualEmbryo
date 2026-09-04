@@ -1,0 +1,42 @@
+run_id: REQUIRED
+task_id: REQUIRED
+track: Agent Team
+lock_time_utc: REQUIRED
+git:
+  commit: REQUIRED_OR_NO_COMMIT
+  dirty: true
+  dirty_digest: REQUIRED
+prompts:
+  controller_sha256: REQUIRED
+  task_sha256: REQUIRED
+  active_task_sha256: REQUIRED
+  task_manifest_sha256: REQUIRED
+model:
+  provider: REQUIRED
+  model: REQUIRED
+  effort: REQUIRED
+harness:
+  path_or_commit: REQUIRED
+  sha256: REQUIRED
+permissions:
+  network: false
+  external_downloads: false
+  server_submission: false
+  write_roots:
+    - artifacts/batch4
+    - scripts/batch4
+    - tests
+budget:
+  walltime_seconds: REQUIRED
+  gpu_hours: 0
+  cpu_threads: REQUIRED
+  memory_gb: REQUIRED
+random:
+  seed: 20260904
+lanes: []
+parents: []
+evidence:
+  trajectory_capture: REQUIRED
+  prompts_capture: REQUIRED
+  harness_capture: REQUIRED
+configuration_locked: true

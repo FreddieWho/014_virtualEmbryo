@@ -32,6 +32,7 @@ submissions/
    the move preserves its recorded SHA-256; otherwise keep it in place and update the
    index with the server ID.
 5. `reports/SERVER_SCORE_REGISTRY.md` records scores; this directory records files.
+6. Every upload/score MUST register per-metric skills (standing rule, fixed 2026-09-04): append one row per board x metric to `reports/SERVER_SUBMETRIC_REGISTRY.tsv` (record_date, board, version, method, portal_file, submitted, precise board_score, metric, skill), add/update the snapshot section in `reports/SERVER_SCORE_REGISTRY.md`, and point the INDEX.tsv notes of the scored rows at the TSV. A score without its submetric breakdown is not a complete registration.
 
 Board directory names are stable slugs: `T1_val`, `T2_embryo_val_interp`,
 `T2_heart_val_extrap`, `T2_heart_val_interp`, and `T3_gata4`.

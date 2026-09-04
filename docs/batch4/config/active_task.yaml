@@ -1,0 +1,13 @@
+active_task: B4-P0-STATE-FLOOR-PARITY
+controller_prompt: docs/batch4/01_CODEX_CONTROLLER_PROMPT.md
+task_manifest: docs/batch4/config/task_manifest.yaml
+route_status: docs/batch4/config/route_status.yaml
+score_targets: docs/batch4/config/score_targets.yaml
+run_mode: single_locked_run
+stop_after_task: true
+allow_server_submission: false
+allow_human_midrun_steering: false
+default_seed: 20260904
+artifact_root: artifacts/batch4
+new_code_root: scripts/batch4
+evidence_required: true

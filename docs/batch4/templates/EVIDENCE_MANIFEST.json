@@ -1,0 +1,26 @@
+{
+  "run_id": "REQUIRED",
+  "task_id": "REQUIRED",
+  "candidate_sha256": [],
+  "evidence_kinds": {
+    "prompts": {
+      "path": "evidence/PROMPTS",
+      "sha256": "REQUIRED"
+    },
+    "trajectory": {
+      "path": "evidence/trajectory.*",
+      "sha256": "REQUIRED"
+    },
+    "harness": {
+      "path": "evidence/harness_snapshot.*",
+      "sha256": "REQUIRED"
+    }
+  },
+  "run_lock": {
+    "path": "RUN_LOCK.yaml",
+    "sha256": "REQUIRED"
+  },
+  "configuration_changed_after_lock": false,
+  "human_midrun_steering": false,
+  "agent_wrote_prediction": true
+}

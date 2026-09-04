@@ -39,18 +39,24 @@ batch3:
   active_atom: null
   phase_report: reports/PHASE_REPORT_BATCH3_20260904.md
   release_changelog: reports/RELEASE_CHANGELOG_BATCH3_20260904.md
-  next_action: "等待 batch4 授权（LEADS L-002 首选）或封板；已关闭路线不追加微调"
+  next_action: "已收口；后续见 batch4"
+batch4:
+  status: P0_COMPLETE_WAVE1_PENDING_AUTHORIZATION
+  active_task: null
+  completed: "B4-P0-STATE-FLOOR-PARITY (COMPLETE; artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/)"
+  floor_parity: "FLOOR_PARITY_UNRESOLVED (T1 exact floor 47.0 == stratified 47.0; T3 exact floor 46.8 > wt_identity 45.3; both below official 50)"
+  next_action: "Wave 1 (B4-T1-R1 / B4-T2-R1 / B4-T3-R1) 待用户授权；T3 对比基准已改为 46.8"
 data:
   challenge_manifest: data/MANIFEST.tsv
   auxiliary_links: 7
   auxiliary_model_input: false
 
 leaderboard:
-  total: 149.5
-  T1: 48.5
-  T2: 55.7
-  T3: 45.3
-  aggregate_basis: "149.5 is the current server-returned Total; T3 45.3 is the last server-returned task value; board-level best is now 45.5 (B2-T3-A1 v0006/v0007), derived Total≈149.7 pending server page confirmation"
+  total: 151.2
+  T1: 48.47
+  T2: 55.98
+  T3: 46.79
+  aggregate_basis: "151.2 is the server-returned Total (2026-09-04 page read); boards precise: 48.47/60.15/57.25/50.53/46.79; T2 55.98 is the board-mean derivation (server rounding gives 151.2 vs hand 151.24); per-metric skills: reports/SERVER_SUBMETRIC_REGISTRY.tsv"
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -61,8 +67,8 @@ tasks:
     branch: master
     worktree: current
     current_best: "candidate/T1_val/v0004_strict_pseudobulk_shift"
-    current_best_score: 48.5
-    next_action: "HX-DYNAMICS-KILLTEST 已 REJECT（mioflow 0.7475 未优于 moscot 0.6645），增长/死亡动力学方向关闭；T1 无新授权前不追加 atom"
+    current_best_score: 48.47
+    next_action: "B4-P0 exact floor v0009 服务器 47.0（分层被排除）；补充探针 v0010（n=1,706）服务器 46.8（-0.2，n_obs 假设被排除）；FLOOR_PARITY_UNRESOLVED 维持，剩余本地不可见的 bundle 级差异；T1 selection 不变（v0004=48.5）；Wave 1 B4-T1-R1-CONSERVATIVE-FAMILY 待授权"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -79,9 +85,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: B1-A1 L1 embryo 60.1 + T2-J1 v0009 heart_interp 57.3 + baseline heart_extrap 50.5"
-    current_best_score: 55.7
-    current_best_score_basis: "current server-returned T2 task score; derived T2≈55.97 after heart_interp 57.3 promotion pending server confirmation"
+    current_best: "per-board selection: B1-A1 L1 embryo 60.15 + T2-J1 v0009 heart_interp 57.25 + baseline heart_extrap 50.53"
+    current_best_score: 55.98
+    current_best_score_basis: "board-mean derivation (60.15+57.25+50.53)/3=55.98; consistent with server Total 151.2"
     next_action: "T2-J1 heart_interp v0009 服务器 57.3（+0.6）晋级；batch3 剩余 HX-DYNAMICS-KILLTEST（单工具/单 board/单 kill metric，实例化后执行）"
     blocker: null
     owned_paths:
@@ -95,10 +101,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "B2-T3-A1 v0006 (L1_STRICT_WT_DIRECT) / v0007 (L2_GATA4_GATA6_CONDITION_AWARE), tied 45.5"
-    current_best_score: 45.5
-    active_atom: "T3-S1C-GATE-SATISFIABILITY-20260902-v1 (closure)"
-    next_action: "B2-T3-A1 v0006/v0007 并列 45.5（+0.2 vs baseline 45.3，首次超过 wt_identity）；derived Total≈149.7 待服务器确认；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT（UNSATISFIABLE_UNDER_FIREWALL），leaderboard 增益不解除 gate；重开条件见收口报告 §6"
+    current_best: "B4-P0 v0008 b4p0_l0_exact_floor (46.79 precise, new board best; supersedes B2-T3-A1 v0006/v0007 tied 45.5)"
+    current_best_score: 46.79
+    active_atom: null
+    next_action: "B4-P0 exact floor v0008 服务器 46.8（+1.5 vs wt_identity 45.3，+1.3 vs v0006/7）晋级 board best；FLOOR_PARITY_UNRESOLVED 开启（仍低于官方 50）；旧 signed-prior residual 相对 no-change 有害获实证；Wave 1 B4-T3-R1-GENOTYPE-ONLY-ABLATION 待授权，对比基准改为 46.8；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -151,6 +157,30 @@ blockers:
 
 leases: []
 handoffs:
+  - task: T1+T3
+    atom: B4-P0-STATE-FLOOR-PARITY
+    status: COMPLETE_FLOOR_PARITY_UNRESOLVED
+    final_artifacts: 2
+    candidate_ids: "T1:val v0009 b4p0_l0_exact_floor (47.0)；T3:gata4 v0008 b4p0_l0_exact_floor (46.8)；详见 submissions/INDEX.tsv"
+    parents: "官方 floor 语义（无模型 parent）；参照 baseline-001 v0001"
+    artifacts: "artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/；canonical 候选与 SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "protected checks 全 PASS（行身份/原始行序/表达与坐标逐值一致、重跑字节一致）；scorer smoke 仅链路验证；2/2 已人工上传并评分"
+    risks: "官方 floor 行子集规则不公开；T1 两种不同子集规则同得 47.0（分层被排除）；剩余假设 pred n_obs 或 bundle 级差异；本地 smoke 不构成 leaderboard 预测"
+    recommended_decision: "T3 v0008 晋级 board best（基准改 46.8）；T1 selection 不变；FLOOR_PARITY_UNRESOLVED 开启；Wave 1 待授权"
+    blocker: "FLOOR_PARITY_UNRESOLVED; blocks_submission: false"
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；不自动上传；等待 Wave 1 授权"
+  - task: T1
+    atom: B4-P0-T1-FLOOR-PROBE2
+    status: SCORED_N_OBS_EXCLUDED
+    final_artifacts: 1
+    candidate_ids: "T1:val v0010 b4p0_l0floor_n1706 (46.8)；详见 submissions/INDEX.tsv"
+    parents: "官方 floor 语义（无模型 parent）；同一种子均匀抽样，n=1,706"
+    artifacts: "artifacts/batch4/B4-P0-T1-FLOOR-PROBE2-20260904-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "protected checks 全 PASS（1706 行、panel 顺序、逐值精确一致、重跑字节一致）；scorer smoke 仅链路验证；已人工上传并评分"
+    risks: "官方 floor 构造仍不公开；本地 smoke 不构成 leaderboard 预测"
+    recommended_decision: "n_obs 被排除；T1 selection 不变；Wave 1 可按 provisional-score 身份继续"
+    blocker: "FLOOR_PARITY_UNRESOLVED; blocks_submission: false"
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 Wave 1 授权"
   - task: T2
     atom: B1-A1
     status: complete
@@ -434,7 +464,7 @@ handoffs:
 |---|---|---|---|
 | T1 | active | v0004 strict pseudobulk shift，48.5 | HX-KILLTEST 已 REJECT（增长/死亡动力学方向关闭）；无新授权不追加 T1 atom |
 | T2 | active | per-board selection（embryo 60.1 / heart_interp **57.3** / heart_extrap 50.5），服务器 T2 55.7 | J1-FGW heart_interp v0009 服务器 57.3（+0.6）晋级；余 HX-DYNAMICS-KILLTEST 实例化 |
-| T3 | active（比赛）/ gate_blocked（科学） | B2-T3-A1 v0006/v0007 并列 45.5，服务器 T3 任务值 45.3 | 双候选并列晋级 board best；科学 gate 仍收口，derived Total≈149.7 待确认 |
+| T3 | active（比赛）/ gate_blocked（科学） | B4-P0 v0008 exact floor 46.8（新 board best），服务器 T3 任务值 45.3 | exact floor 46.8 晋级；FLOOR_PARITY_UNRESOLVED；Wave 1 T3-R1 待授权，基准 46.8 |
 
 Batch 1 已关闭为 `CLOSED_FOR_REVIEW`。综合评审报告为 `reports/PHASE_REPORT_BATCH1_20260829.md`；新 atom 需要新的明确授权。
 

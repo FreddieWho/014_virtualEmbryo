@@ -335,3 +335,66 @@ Consistency and decision:
 - First T3 candidates above the `wt_identity` 45.3 baseline after five rejected attempts (v0002 45.2, v0003 43.8, v0004 44.7, v0005 44.0); both lanes tie at 45.5, so the server probe cannot separate them. Both are promoted as tied board bests; no lane preference is claimed.
 - The +0.2 does not constitute mechanistic or causal evidence: T3-S1 scientific gate remains CLOSED_AS_RESEARCH_COMPONENT (UNSATISFIABLE_UNDER_FIREWALL), `blocks_submission: false`; local leaderboard gains do not unlock the science gate.
 - Both scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-P0 — exact-floor parity probe scoring round
+| Record date | 2026-09-04 |
+|---|---|
+| Submission label | B4-P0-STATE-FLOOR-PARITY L0_EXACT_FLOOR（包 `b4p0__t1__upload__20260904.zip` / `b4p0__t3__upload__20260904.zip`；portal Model 列显示为 zip 包名） |
+| Board/phase | T1:val; T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-04 15:56 T1 / 14:17 T3) |
+| Run | `B4-P0-STATE-FLOOR-PARITY-2026-09-04T110859.403071+0000`（artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-P0 T1 v0009 L0_EXACT_FLOOR` | not supplied | `submissions/candidates/T1_val/v0009_b4p0_l0_exact_floor/submission.h5ad` / `38267746dfa4a5b2b3f44ee9dd3bbfb04d7674b5b68315e3477872d5bb81cd34` | **47.0** | baseline-001 copy_last 47.0; official floor defined as 50; T1 best v0004=48.5 | floor parity **UNRESOLVED**; stratification exonerated (identical score with different subset rule); no change to T1 selection |
+| `B4-P0 T3 v0008 L0_EXACT_FLOOR` | not supplied | `submissions/candidates/T3_gata4/v0008_b4p0_l0_exact_floor/submission.h5ad` / `478786034343cc3ed1a604cd494ab2134751f4a1f4696204f9d105e404bdbef3` | **46.8** | baseline-001 wt_identity 45.3; v0006/v0007 45.5; official floor defined as 50 | **new board best (+1.3 vs 45.5); promote to current selection**; floor parity **UNRESOLVED** (below 50) |
+
+Consistency and decision:
+- The server returned the two board scores only; no new T1/T3 aggregates or Total was supplied.
+- T1: two materially different 5,118-cell subsets (celltype-stratified seed 20260821 vs uniform seed 20260904, ~30% overlap) scored **identically 47.0**, so the -3.0 gap vs official floor=50 is not caused by celltype stratification; remaining hypotheses are prediction n_obs (contract max 5,118 vs scorer reference working copy 1,706) or other bundle-level differences not visible locally.
+- T3: the no-change exact floor (uniform subset, original row order, float32 coords) scored 46.8, **above** both the old stratified wt_identity (45.3) and the signed-prior candidates v0006/v0007 (45.5). This is consistent with the Batch 4 premise that the old downstream residuals were harmful relative to no-change, and it makes the floor probe itself the T3 board best.
+- Protocol-derived (not server-returned): with T3 board best 46.8, derived T3 task value is `46.8` and derived Total is `48.5 + 55.7 + 46.8 = 151.0`; these must be confirmed against the server page and must not be quoted as server values.
+- Per Batch 4 execution rules, `FLOOR_PARITY_UNRESOLVED` is now open for T1 and T3; low-risk candidate generation (Wave 1) may proceed, but no complex candidate becomes a final parent while parity is unresolved. T3 Wave-1 comparisons must use 46.8 as the reference, not 45.3/45.5.
+- The 45.5 tie of v0006/v0007 is superseded as board best; both artifacts stay immutable. The +1.3 floor gain is a construction/bundle effect, not mechanistic evidence; the T3-S1 scientific gate is unchanged.
+- Both scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-P0 supplemental — T1 n=1,706 floor probe scoring round
+| Record date | 2026-09-04 |
+|---|---|
+| Submission label | B4-P0 T1 L0_EXACT_FLOOR_N1706（包 `b4p0p2__t1__upload__20260904.zip`；portal Model 列显示为 zip 包名） |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message (leaderboard row 2026-09-04 19:09) |
+| Run | `B4-P0-STATE-FLOOR-PARITY-2026-09-04T164205.780061+0000`（artifacts/batch4/B4-P0-T1-FLOOR-PROBE2-20260904-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-P0 T1 v0010 L0_EXACT_FLOOR_N1706` | not supplied | `submissions/candidates/T1_val/v0010_b4p0_l0floor_n1706/submission.h5ad` / `6994a38e108a29ba6791f3d81bde6347f92cf92e8c9c28153e385b973ff54a18` | **46.8** | n=5118 v0009 47.0; official floor defined as 50; T1 best v0004=48.5 | n_obs hypothesis **EXCLUDED**; floor parity stays **UNRESOLVED**; no change to T1 selection |
+
+Consistency and decision:
+- The server returned the board score only; no new T1 aggregate or Total was supplied.
+- n=1,706 scored **46.8** vs n=5,118 **47.0** (delta -0.2, wrong direction and far smaller than the ~3-point floor gap): the gap vs official floor=50 does not shrink with fewer cells, so prediction n_obs is excluded as its cause. The remaining explanation is bundle-level differences not visible locally (official floor construction unpublished; local truth unavailable for verification).
+- Derived aggregates unchanged: T1 best remains v0004=48.5; derived Total stays ≈151.0 pending server page confirmation and must not be quoted as a server value.
+- Per Batch 4 rules Wave 1 low-risk candidates may proceed as provisional scores while parity is unresolved; no complex candidate becomes a final parent.
+- The scored artifact stays immutable; user-provided value registered as supplied.
+
+### Current-best snapshot — Total 151.2 (server-returned) with per-metric skills
+| Record date | 2026-09-04 |
+|---|---|
+| Source | User-provided server page read: Total **151.2** plus per-board precise scores and per-metric skill breakdowns for all five current-best boards |
+| Selection | T1 v0004 + T2 embryo v0002 (B1-A1 L1) + T2 heart_interp v0009 (T2-J1) + T2 heart_extrap baseline v0001 + T3 v0008 (B4-P0 floor) |
+
+| Board | Version / portal file | Precise board score | Per-metric skills |
+|---|---|---:|---|
+| T1:val | v0004 `shrunk_pseudobulk_shift_strict` / `t1_v0004.h5ad` (submitted 2026-08-24 12:43) | **48.47** | de_score 43.8 / de_direction 55.9 / mmd_u 51.5 / variogram 40.6 |
+| T2:embryo:val_interp | v0002 `g1_formal_log_rms` / `t2_emb_val_int_b1_a1_l1.h5ad` (submitted 2026-08-27 13:07) | **60.15** | de_score 50.5 / de_direction 53.2 / mmd_u 60.9 / variogram 59.0 / d2_shape 52.8 / occupancy_dice 46.6 / scale_log_ratio 91.9 / neighborhood_mmd 64.8 |
+| T2:heart:val_interp | v0009 `j1_fgw_assignment` / `t2_hrt_int__j1fgw__v0009.h5ad` (submitted 2026-09-03 19:51) | **57.25** | de_score 57.8 / de_direction 60.2 / mmd_u 53.9 / variogram 32.2 / d2_shape 62.0 / occupancy_dice 48.6 / scale_log_ratio 82.5 / neighborhood_mmd 60.4 |
+| T2:heart:val_extrap | baseline v0001 `pseudobulk_shift` / `T2_heart_val_extrap_pseudobulk_shift.h5ad` (submitted 2026-08-21 13:07) | **50.53** | de_score 49.6 / de_direction 52.2 / mmd_u 49.9 / variogram 47.7 / d2_shape 46.2 / occupancy_dice 53.2 / scale_log_ratio 49.7 / neighborhood_mmd 52.4 |
+| T3:gata4 | v0008 `b4p0_l0_exact_floor` / `t3_gata4__l0floor__v0008.h5ad` (submitted 2026-09-04 14:17) | **46.79** | de_score 38.8 / de_direction 49.7 / severity_slope 50.0 / mmd_u 51.3 / variogram 50.9 |
+
+Machine-readable rows: `reports/SERVER_SUBMETRIC_REGISTRY.tsv` (one row per board x metric; standing rule: every future upload/score must append its per-metric skills there).
+
+Consistency and decision:
+- Arithmetic check: `(60.15 + 57.25 + 50.53) / 3 = 55.98` (T2 derived); `48.47 + 55.98 + 46.79 = 151.24`, server Total **151.2**. The 0.04 gap is server-side rounding at task/Total level; the server-returned Total is authoritative and must not be replaced by the hand recomputation.
+- This supersedes all earlier derived Totals (149.3/149.6/149.7/149.8/151.0): the confirmed server Total is **151.2**.
+- Per-metric read (diagnostic, not causal): T1's weakest anchored metric is variogram (40.6) vs de_direction 55.9; heart_interp's weakest is variogram (32.2) vs d2_shape 62.0; T3's weakest is de_score (38.8) with the other four near 50; embryo's standout is scale_log_ratio (91.9) vs occupancy_dice 46.6; heart_extrap is flat 46-53 across all eight metrics. No route decision is changed by these breakdowns alone.
+- All five scored artifacts stay immutable; user-provided values registered as supplied.

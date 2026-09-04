@@ -1,38 +1,36 @@
 # Virtual Embryo 项目状态
 
-更新时间：2026-09-04
+更新时间：2026-09-04（晚）
 
 ## 第一部分：给人读的进展
 
-**已完成什么。** 三个比赛任务都已建立合法提交并拿到服务器分数，当前总分 149.5。最近一轮把心脏插值从 56.3 提到 57.3（位移场 +0.4、表达重排 +0.6 两步），胚胎插值保持 60.1，扰动预测首次超过基线（45.5 vs 45.3，两条并列）；六条新路线里两条晋级、四条被证明无效并已关闭存档。
+**已完成什么。** 第四批（batch4）已授权启动并完成第一步 P0：核对账目、生成“严格不改任何表达”的官方基线候选并各上传一次。结果：T1 新基线 47.0 与旧基线完全相同——证明之前低于官方基准线（50）不是抽样方式造成的；T3 新基线 46.8，反而超过旧基线（45.3）和此前最佳候选（45.5），成为扰动任务新的最高分。服务器页面确认总分 **151.2**（精确 board：T1 48.47 / 胚胎插值 60.15 / 心脏插值 57.25 / 心脏外推 50.53 / 扰动 46.79；33 个子项分数已入库 `reports/SERVER_SUBMETRIC_REGISTRY.tsv`）。
 
-**正在做什么。** 第三批计划（batch3）的全部任务已执行完毕，此刻没有正在运行的计算。等你从比赛页面读回最新总分，确认我们推算的 149.8 是否成立。
+**正在做什么。** “细胞数量”假设已验证并被排除（1,706 行得 46.8，反而比 5,118 行的 47.0 低 0.2）。等待你授权 batch4 的第一波正式修复（T1 保守家族、T2 配对修复、T3 基因型消融）。
 
-**卡在哪里。** 时间外推任务（T1）停在 48.5：结构化传输和"增长/死亡动力学"两条路都被严格判掉了，剩下的提升空间需要全新想法而不是调参。扰动任务（T3）的预测分数已超过基线（45.5），但它的科学验证在当前数据规则下结构性做不到，已正式收口——分数提升不代表机制验证，两者我们分开记账。
+**卡在哪里。** 两个任务的“什么都不改”基线都到不了官方定义的 50 分（T1 47.0、T3 46.8），说明我们提交的基线文件和官方基准的构造仍有未知差别；这个差别不排除，复杂模型的分数就难以归因。
 
-**准备怎么解决。** 不盲目追加实验。T1 等待新假设或接受现状；T3 等待官方新数据或规则放宽；下一步是开辟第四批方向（候选见 TODO.md 与 LEADS.md）还是封板，由你决定。
+**准备怎么解决。** floor 差距的原因本地已无法查清（官方基准构造不公开），按规则转入 Wave 1 三条修复路线（见 TODO.md），其中 T2 配对修复的服务器先验最强；Wave 1 产出先以“临时评分”身份对比，不直接当最终版本。
 
 ```
 
 2026/9/4
-ROADMAP  [#######-] 7/8 节点（N8 待授权）
+ROADMAP  [#######-] 7/8 节点（N8 batch4 已启动，P0 完成）
 本周投入  科学问题 ███████░░░ 70%   基础设施 ███░░░░░░░ 30%
 
-偏离程度  中
-偏离位置  T3-S1 链（N3）连续 6 个 atom、约 3 个工作日，最终全部 HOLD/收口，
-         未产生任何候选；产出的否定边界真实有价值，但探索深度超出
-         "快速证伪"的初衷，且期间 blocks_submission=false 才未耽误主线。
-建议      科学 promotion 类探索预设更硬的早期止损：连续 2 个 atom 无阳性
-         证据即暂停上报，由人决定是否继续深挖。
+偏离程度  低
+偏离位置  batch4 P0 发现其静态快照与本地分数注册表冲突（v0006/7 实为 45.5 晋级而非失败），
+         已按权威顺序以本地为准并给出补丁建议；属文档卫生问题，未影响计算。
+建议      应用 coordinator_patch.md 后再启动 Wave 1。
 ```
 
 ## 第二部分：给 agent 的接手信息
 
-- 活跃节点：无；batch3 完毕，N8（batch4 方向）待用户授权。
-- 核心文件：`submissions/INDEX.tsv`（候选+哈希）、`reports/SERVER_SCORE_REGISTRY.md`（分数）、`docs/coordination/STATUS.md`（并行状态）。
+- 活跃节点：N8 batch4；P0 完成 + T1 n=1,706 补充探针已评分（46.8，n_obs 被排除），FLOOR_PARITY_UNRESOLVED 维持，Wave 1 待授权。
+- 核心文件：`submissions/INDEX.tsv`（候选+哈希）、`reports/SERVER_SCORE_REGISTRY.md`（分数）、`docs/coordination/STATUS.md`（并行状态）、`artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/`。
 - 复现：`PYTHONPATH=docs/batch3/interfaces /opt/anaconda3/bin/python -m pytest tests/ -q`（174 passed）。
-- 最近 DECISIONS：`D-20260904-HX-001`（HX REJECT）；同批 `D-20260904-T2-J1-001`（57.3 晋级）。
-- 下一步：等服务器 Total 读数确认 derived 149.8；等 push 与 batch4/封板授权。
+- 最近 DECISIONS：`D-20260904-B4P0-003`（n=1,706 探针 46.8，n_obs 被排除）；同批 `D-20260904-B4P0-002/001`。
+- 下一步：Total 151.2 已确认；等 push 授权与 Wave 1 授权（T2-R1 优先）。
 
 ---
 
@@ -43,7 +41,7 @@ ROADMAP  [#######-] 7/8 节点（N8 待授权）
 ## 总体状态
 
 - 比赛优先；starter_pack 已关闭为 `CLOSED_FOR_COMPETITION_BASELINE`。
-- 当前 aggregate best：**149.5（服务器当前返回值）**。
+- 当前 aggregate best：**151.2（服务器返回值，2026-09-04 页面确认）**。
 - 当前任务分数：T1 **48.5**，T2 **55.7（服务器当前返回值）**，T3 **45.3（服务器当前返回值；board best 已升至 45.5）**。
 - 科学 promotion 仍开放，但 `blocks_submission: false`。
 - 仓库已于 2026-09-02 完成首次推送：`github.com/FreddieWho/014_virtualEmbryo` main 分支（commit `cde3c9c`，251 个代码/文档/配置文件；`data/`、`artifacts/`、`outputs/` 等大文件按 `.gitignore` 排除）。
@@ -76,7 +74,7 @@ ROADMAP  [#######-] 7/8 节点（N8 待授权）
 
 ### T2 — spatial-temporal
 
-1. 当前 per-board selection：B1-A1 L1 embryo 60.1 + T2-J1 v0009 `j1_fgw_assignment` heart_interp **57.3** + baseline heart extrap 50.5；服务器 T2 **55.7**、Total **149.5**（derived T2≈55.97/Total≈149.8 待服务器确认）。
+1. 当前 per-board selection：B1-A1 L1 embryo 60.15 + T2-J1 v0009 `j1_fgw_assignment` heart_interp **57.25** + baseline heart extrap 50.53；T2 board 均值 55.98、Total **151.2**（均为 2026-09-04 服务器确认；子项见 SUBMETRIC_REGISTRY）。
 2. B1-A1 `L1_FORMAL_LOG_RMS`：raw scores 60.1/56.3/50.2；heart extrap 低于 baseline 50.5。
 3. B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS`：raw scores 59.9/55.3/49.8，已评分 backup。
 

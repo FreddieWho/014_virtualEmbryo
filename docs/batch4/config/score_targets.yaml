@@ -1,0 +1,42 @@
+snapshot_date: 2026-09-04
+leaderboard_reference:
+  source: user_supplied
+  rank: 10
+  T1: 62.0
+  T2: 62.0
+  T3: 68.0
+
+project_reference:
+  source: public_repo_plus_user_update
+  T1:
+    score: 48.5
+    candidate: candidate/T1_val/v0004_strict_pseudobulk_shift
+  T2:
+    score: 55.97
+    score_type: derived_from_displayed_board_best
+    server_aggregate_must_override: true
+    boards:
+      embryo_val_interp: 60.1
+      heart_val_interp: 57.3
+      heart_val_extrap: 50.5
+  T3:
+    score: 45.3
+    candidate: baseline-001/T3_gata4/v0001
+    note: B2 v0006/v0007 exact failed scores must be read from local registry
+
+batch4_stretch:
+  T1: [54.0, 55.0]
+  T2: [59.0, 60.0]
+  T3: [52.0, 55.0]
+
+clear_promotion_delta: 0.5
+weak_positive_delta_min: 0.2
+tie_abs_delta_max: 0.1
+clear_reject_delta: -0.5
+
+architecture_reset_thresholds:
+  T1_below_after_batch4: 52.0
+  T2_below_after_batch4: 58.0
+  T3_at_or_below_after_batch4: 50.0
+  global_min_gap_reduction_fraction: 0.10
+  global_min_any_task_gain: 1.0

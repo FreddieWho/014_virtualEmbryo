@@ -1,0 +1,65 @@
+snapshot_date: 2026-09-04
+read_local_registry_first: true
+
+T1:
+  keep_parent:
+    - v0004_strict_pseudobulk_shift
+  keep_components:
+    - t1_pre_harmonized_state_crosswalk
+    - moscot_state_mass_forecast_only
+    - full_vector_residual_replay
+  close_routes:
+    - composition_extrap_plus_global_fallback
+    - global_type_shrink_v0003
+    - moscot_raw_delta_empirical_decoder
+    - moscot_raw_delta_scdesign3_decoder
+    - current_mioflow_mass_replacement
+  repair:
+    - official_copy_last_floor_parity
+    - strict_shift_amplitude
+    - population_mixture
+    - strict_expression_plus_moscot_mass
+  conditional_gap_completion:
+    - late_program_birth_from_existing_batch2_plan
+
+T2:
+  keep_frozen:
+    - board_specific_log_rms_scale
+    - heart_interp_pycpd_geometry
+    - heart_interp_fgw_objective
+  optimize:
+    - fgw_soft_to_hard_global_assignment
+    - interpolation_expression_bridge
+    - heart_extrap_expression_calibration
+  close_routes:
+    - b1_greedy_pairing
+    - spateo_lane
+    - embryo_pycpd_current_application
+    - heart_extrap_shape_field_current_application
+  hold:
+    - embryo_fgw_v0008
+
+T3:
+  keep_parent:
+    - exact_wt_identity_after_floor_parity
+  close_routes:
+    - shift_transfer
+    - wt_spearman_signed_response
+    - b2_t3_a1_v0006
+    - b2_t3_a1_v0007
+    - old_signed_prior_committee_candidate_family
+  archive_components_only:
+    - batch3_real_celloracle_outputs
+    - batch3_sctenifold_outputs
+    - collectri_omnipath_audits
+    - mesp1_lineage_probability
+  repair:
+    - official_wt_identity_floor_parity
+    - genotype_only_ablation
+    - normal_development_stage_conditioning
+  forbidden_in_batch4:
+    - retune_old_prior_topk
+    - add_new_grn_tool
+    - rerun_publication_grade_prior_gate
+    - copy_mab21l2_direction
+    - infer_hidden_effect_from_server_scores

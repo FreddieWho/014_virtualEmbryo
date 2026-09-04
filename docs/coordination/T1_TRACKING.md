@@ -50,3 +50,7 @@
 2026-09-03：`T1-S2-MOSCOT-DECODER-20260902-v1` 完成，产物见 `artifacts/tool_integration/T1-S2-MOSCOT-DECODER-20260902-v1/`。候选 v0007（L1 empirical residual）与 v0008（L2 module scDesign3）已经服务器探针仲裁：**v0007=44.9、v0008=44.8，均低于 best 48.5（-3.6/-3.7）且低于 baseline 47.0，REJECT 为 leaderboard 改进** —— 服务器证据回答了 pseudo-holdout 无法回答的问题（结构化 moscot 外推 vs strict shift 延伸），答案为否定，T1-S2 路线关闭，两份候选保留不可变做失败诊断。当前 best 仍为 v0004=48.5。T1 暂不追加调参；执行资源转向 `T2-S3-SHAPE-FIELD`。
 
 2026-09-04：`HX-DYNAMICS-KILLTEST-20260904-v1` 完成，产物见 `artifacts/tool_integration/HX-DYNAMICS-KILLTEST-20260904-v1/`。唯一假设（增长/死亡+随机动力学改善 state-mass 外推）在预声明 kill metric 上未同时优于双臂（mioflow 0.7475 vs moscot 0.6645 vs parent 1.1894）→ **REJECT**：moscot 的 state-mass 预测本身已显著优于 strict-shift，T1-S2 的失败不在 mass 环节，增长/死亡动力学方向关闭。batch3 全部任务执行完毕；T1 无新授权前不追加 atom。
+
+2026-09-04（batch4）：`B4-P0-STATE-FLOOR-PARITY` 完成并评分。T1 exact-floor 候选 v0009（`b4p0_l0_exact_floor`，均匀抽样 seed 20260904、原始行序、零表达变换、不用 celltype）服务器 **47.0**，与分层版 baseline-001 v0001 完全相同 → celltype 分层被排除为 floor 差距（-3.0 vs 官方 50）的原因；`FLOOR_PARITY_UNRESOLVED` 开启，剩余主假设为 pred n_obs 或 bundle 级差异。当前 best 不变：v0004=48.5。产物 `artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/`。下一步：Wave 1 `B4-T1-R1-CONSERVATIVE-FAMILY` 待授权。
+
+2026-09-04（夜）：B4-P0 补充探针 v0010（`b4p0_l0floor_n1706`，n=1,706，同一种子均匀抽样、原始行序、零变换）服务器 **46.8**（-0.2 vs v0009=47.0）→ **n_obs 假设被排除**，FLOOR_PARITY_UNRESOLVED 维持；T1 best 仍为 v0004=48.5。产物 `artifacts/batch4/B4-P0-T1-FLOOR-PROBE2-20260904-v1/`。下一步：Wave 1 `B4-T1-R1-CONSERVATIVE-FAMILY` 待授权（provisional-score 身份）。

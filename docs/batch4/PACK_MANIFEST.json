@@ -1,0 +1,157 @@
+{
+  "pack_name": "Virtual_Embryo_Batch4_Remediation_Catchup_Pack_20260904",
+  "pack_version": "2026-09-04",
+  "purpose": "Batch 4 remediation and catch-up; not a final architecture",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 6972,
+      "sha256": "3ffdc6f73e63ee553a49af6c9d26b2361ed14f436152ee855e6b0d9a49d60e0c"
+    },
+    {
+      "path": "01_CODEX_CONTROLLER_PROMPT.md",
+      "bytes": 8312,
+      "sha256": "b9c46ed784795a5fc74922b915cce99b0576de7500e3921128042e9d805d1744"
+    },
+    {
+      "path": "02_SCOPE_AND_SUCCESS_CRITERIA.md",
+      "bytes": 4908,
+      "sha256": "0182a1ebec926ed11a3dc7b6a036339e9ba13236c11002cc176566cbbe306bce"
+    },
+    {
+      "path": "03_FAILURE_AUDIT_AND_ROUTE_STATUS.md",
+      "bytes": 5849,
+      "sha256": "19f47f1f56ba3a6c9498fc292324aa2222cbb0eb73fb8b78847e0d2b9799c716"
+    },
+    {
+      "path": "04_EXECUTION_ORDER_AND_SERVER_BUDGET.md",
+      "bytes": 4995,
+      "sha256": "ae043e38f645dd57764f3e80bc248a84ac2c205cc3da27a40277f9cb8a3d8108"
+    },
+    {
+      "path": "05_AGENT_TEAM_RUN_AND_EVIDENCE_RULES.md",
+      "bytes": 3793,
+      "sha256": "ef0d3446043afb7ae946b3af4a32f1741cee088a9487c53f7c8f0a68463c4cd9"
+    },
+    {
+      "path": "06_FUTURE_ARCHITECTURE_HANDOFF.md",
+      "bytes": 4622,
+      "sha256": "3f5d67752c32a499d877cbb3fcae526e51e6365c18a47b46449b5d932e403e15"
+    },
+    {
+      "path": "config/active_task.yaml",
+      "bytes": 481,
+      "sha256": "2d6da9079b843c2a7480807a9f029552e43bed47e9251a48e72b077ad4c40173"
+    },
+    {
+      "path": "config/route_status.yaml",
+      "bytes": 1815,
+      "sha256": "c05a3d2f2c41ffeed91fd595607a25e56b04046d0be2f956ec830fea6389f307"
+    },
+    {
+      "path": "config/score_targets.yaml",
+      "bytes": 998,
+      "sha256": "93d950407754d3366cb1fff8211ce531a5492ef318a18051c3ba20c6a94247e6"
+    },
+    {
+      "path": "config/task_manifest.yaml",
+      "bytes": 4711,
+      "sha256": "3ad0177f2e8c5852320f7e02e6b6ed3bfa56ad6fa9208a2430a3b0fbafe148d2"
+    },
+    {
+      "path": "prompts/CLOSEOUT_ARCHITECTURE_HANDOFF.md",
+      "bytes": 2015,
+      "sha256": "8df9243418f04696dcc3d08405f482c72c5e739f6fc9af4811169c9a8d1c8a36"
+    },
+    {
+      "path": "prompts/P0_STATE_AND_FLOOR_PARITY.md",
+      "bytes": 4703,
+      "sha256": "bf0fd4e480ad4c209b54de0b5986f86d43f244a65541cf80138e57c33ecfe3ec"
+    },
+    {
+      "path": "prompts/T1_R1_CONSERVATIVE_FAMILY.md",
+      "bytes": 3546,
+      "sha256": "18bc28ecffbd0e1367c782cbb263d71b341ffdc5ae8c86189eea3947f538a3d4"
+    },
+    {
+      "path": "prompts/T1_R2_LATE_PROGRAM_BRIDGE.md",
+      "bytes": 2559,
+      "sha256": "55bf9f43f22d61fe8e6dcf35a7bcace033ec095c1e651eb52a57e3066d1e8b36"
+    },
+    {
+      "path": "prompts/T2_R1_FGW_ASSIGNMENT_REPAIR.md",
+      "bytes": 2828,
+      "sha256": "aec6870aae503eeb97afe2b0e9856352e27d939e5b11287293951379719c9220"
+    },
+    {
+      "path": "prompts/T2_R2_INTERPOLATION_EXPRESSION_BRIDGE.md",
+      "bytes": 2885,
+      "sha256": "0bb222cae29a238182d699108f7df9adf417cda0e7d3a12a92c2c6a66d417a27"
+    },
+    {
+      "path": "prompts/T2_R3_HEART_EXTRAP_EXPRESSION_CAL.md",
+      "bytes": 1725,
+      "sha256": "abe915306a4d0f328c2b7daee6678a602a283460ea68411463f154834bfd7c01"
+    },
+    {
+      "path": "prompts/T3_R1_GENOTYPE_ONLY_ABLATION.md",
+      "bytes": 3009,
+      "sha256": "9d52142cefda4682b0fba61a217a815960eb9145d00e136c7bbea555ff59b649"
+    },
+    {
+      "path": "prompts/T3_R2_DEVELOPMENTAL_AXIS_REPAIR.md",
+      "bytes": 2617,
+      "sha256": "586aae02e4959a6d4e8d35023d3514e15ac543900c3a5faf0e9acb78ad69e7b5"
+    },
+    {
+      "path": "reference/OFFICIAL_AND_PROJECT_SNAPSHOT_20260904.md",
+      "bytes": 3242,
+      "sha256": "406c13446b82c4135aea41759cdc0a7d83d6f09567cd8cbd7412a91dd20e7b10"
+    },
+    {
+      "path": "scripts/create_run_lock.py",
+      "bytes": 4880,
+      "sha256": "7880034e29b3217ee4718aae26bcd4626f721f0e9a5a18ba7e0059971391799b"
+    },
+    {
+      "path": "scripts/preflight_repo_state.py",
+      "bytes": 3561,
+      "sha256": "32edbb1410a6ea76e21794930ef9442334042f648fd0455f475feab31fad1903"
+    },
+    {
+      "path": "scripts/validate_pack.py",
+      "bytes": 1698,
+      "sha256": "00db1dea7939ce070464022655764c7590156994175735a2ec99f773ddcd3dd3"
+    },
+    {
+      "path": "templates/ARCHITECTURE_RESET_BRIEF.md",
+      "bytes": 627,
+      "sha256": "822d613bed8f1db44d1188121274c77c030dd11777cd71dee65c4549b14ed102"
+    },
+    {
+      "path": "templates/CANDIDATE_HANDOFF.md",
+      "bytes": 379,
+      "sha256": "9c5ae3a8703bfa4de4b5dc57ccb49ddcf9fb91222790325d2d3b8bb170786ace"
+    },
+    {
+      "path": "templates/EVIDENCE_MANIFEST.json",
+      "bytes": 566,
+      "sha256": "17e6dbae56e997368be5187a85126dc90f0e6fa51ee40e43c90a3c991894be17"
+    },
+    {
+      "path": "templates/RESULT.md",
+      "bytes": 904,
+      "sha256": "7da4c1b28013f5298cf663bf39f3d1f1cff11c655d70014df58bd4b90e99408c"
+    },
+    {
+      "path": "templates/RUN_LOCK.yaml",
+      "bytes": 825,
+      "sha256": "7aa62d4efa7368269e4d86b2bef722cd66fa12dc48eb99dad1ca8bf18af9764d"
+    },
+    {
+      "path": "templates/SERVER_SCORE_BACKFILL.tsv",
+      "bytes": 124,
+      "sha256": "e97f176133b262b070dbb25f39074482019e5be7b41f3111a462592486b379f6"
+    }
+  ]
+}

@@ -503,3 +503,31 @@ reuse_promoted
 - evidence: "reports/SERVER_SCORE_REGISTRY.md B2-T3-A1 节；INDEX.tsv v0006/v0007 行（d3cc8adb… / 012ac745…）；deliveries/b2t3a1__t3__upload__20260904.zip。"
 - boundary: "derived T3=45.5/Total≈149.7 待服务器页面确认；leaderboard 增益不解除 T3-S1 科学 gate（仍 CLOSED_AS_RESEARCH_COMPONENT，UNSATISFIABLE_UNDER_FIREWALL），不作机制/因果证据；blocks_submission: false。"
 - review_trigger: "服务器页面 Total 与 derived 149.7 不一致；或科学重开条件（收口报告 §6）被新证据满足时重估 gate。"
+
+### D-20260904-B4P0-001 — Batch 4 启动与 P0 完成（human team）
+- scope: B4-P0-STATE-FLOOR-PARITY（run `B4-P0-STATE-FLOOR-PARITY-2026-09-04T110859.403071+0000`）
+- decision: "用户授权 batch4 并声明 human team（官方 Agent Team evidence 规则仅作内部纪律）；P0 完成：v0006/7 状态同步核对一致（45.5/45.5），INDEX.tsv 回填 6 行 B1-A1 缺分（60.1/59.9/56.3/55.3/50.2/49.8），生成 T1/T3 exact-floor 候选各一（均匀无放回抽样、保持原始行序、零表达变换）。"
+- evidence: "artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/（RUN_LOCK.yaml、RESULT.md、floor_constructor_diff.tsv、protected_checks/floor_checks.json 全 PASS、重跑字节级一致）。"
+- boundary: "floor parity 未在本地解决；官方 floor 行子集规则不公开；本地 scorer 只作 smoke。"
+- review_trigger: "服务器分数回填（已发生，见 D-20260904-B4P0-002）或官方公开 floor 构造细节。"
+
+### D-20260904-B4P0-002 — exact-floor 探针评分：T1 47.0 / T3 46.8，floor parity 正式 UNRESOLVED
+- scope: T1:val v0009、T3:gata4 v0008（B4-P0 L0_EXACT_FLOOR）
+- decision: "T1 exact floor=47.0，与分层版 baseline-001 完全相同 → celltype 分层抽样被排除为 -3.0 差距的原因，剩余主要假设为 pred n_obs（5,118 vs scorer 参考工作副本 1,706）或其他 bundle 级差异；T3 exact floor=46.8（+1.5 vs wt_identity 45.3，+1.3 vs v0006/7 45.5）→ 晋级 T3 新 board best，同时确认旧 signed-prior 下游 residual 相对 no-change 有害。T1/T3 均打开 FLOOR_PARITY_UNRESOLVED；Wave 1 低风险候选可继续，但 parity 未解决前复杂候选不作最终 parent；T3 后续对比基准改为 46.8。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §B4-P0；INDEX.tsv v0009(T1)/v0008(T3) 行；deliveries/b4p0__t1__upload__20260904.zip、b4p0__t3__upload__20260904.zip。"
+- boundary: "derived T3=46.8/Total≈151.0 待服务器页面确认，不得引用为服务器值；+1.3 为构造/bundle 效应，非机制证据，T3-S1 科学 gate 不变；blocks_submission: false。"
+- review_trigger: "服务器页面 Total 与 derived 151.0 不一致；或官方公布 floor bundle 构造；或 Wave 1 完成后 closeout 复核。"
+
+### D-20260904-B4P0-003 — T1 n=1,706 floor 探针 46.8，n_obs 假设被排除
+- scope: T1:val v0010 `b4p0_l0floor_n1706`（B4-P0 补充探针 run `…164205…`）
+- decision: "v0010（n=1,706）服务器 46.8，比 n=5,118 的 v0009（47.0）低 0.2——细胞数假设被排除为 floor 差距（≈-3 vs 官方 50）的原因；FLOOR_PARITY_UNRESOLVED 维持，剩余解释为本地不可见的 bundle 级差异；T1 selection 不变（v0004=48.5）；Wave 1 可按 provisional-score 身份继续。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §B4-P0 supplemental；INDEX.tsv v0010 行（6994a38e…）；deliveries/b4p0p2__t1__upload__20260904.zip；artifacts/batch4/B4-P0-T1-FLOOR-PROBE2-20260904-v1/（检查全 PASS，重跑字节一致）。"
+- boundary: "46.8/47.0 均为 board 分数；derived Total≈151.0 待服务器页面确认；blocks_submission: false。"
+- review_trigger: "官方公布 floor bundle 构造；或 Wave 1 完成后 closeout 复核。"
+
+### D-20260904-TOTAL-001 — 服务器确认 Total 151.2，子项分数入库并立规
+- scope: 全任务当前 best（T1 v0004 48.47 / T2 embryo v0002 60.15 / heart_interp v0009 57.25 / heart_extrap baseline 50.53 / T3 v0008 46.79）
+- decision: "服务器页面确认 Total=151.2（derived 151.24，差 0.04 为服务端舍入，以服务器为准）；五 board 精确分与全部 33 个 per-metric skill 回填 `reports/SERVER_SUBMETRIC_REGISTRY.tsv` 并在 registry 立快照节；即日起每次上传/评分必须登记子项分数（见 submissions/README.md 新增规则）。"
+- evidence: "用户 2026-09-04 服务器页面读数；reports/SERVER_SCORE_REGISTRY.md §Current-best snapshot — Total 151.2；reports/SERVER_SUBMETRIC_REGISTRY.tsv（33 行）。"
+- boundary: "子项分数只做误差归因与路线诊断，不单独构成机制证据；T2 任务值 55.98 为 board 均值推导，非服务器直接返回值；blocks_submission: false。"
+- review_trigger: "下一次 board 分数变化时刷新快照与 TSV；若服务器口径变化则修订本规则。"
