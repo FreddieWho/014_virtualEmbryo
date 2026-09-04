@@ -50,7 +50,7 @@ leaderboard:
   T1: 48.5
   T2: 55.7
   T3: 45.3
-  aggregate_basis: "149.5 is the current server-returned Total; displayed T1/T2/T3 and board values are rounded independently"
+  aggregate_basis: "149.5 is the current server-returned Total; T3 45.3 is the last server-returned task value; board-level best is now 45.5 (B2-T3-A1 v0006/v0007), derived Total≈149.7 pending server page confirmation"
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -95,10 +95,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "baseline-001/T3_gata4/v0001"
-    current_best_score: 45.3
-    active_atom: "T3-S1C-GATE-SATISFIABILITY-20260902-v1"
-    next_action: "已完成 activity gate 与 firewall 的可满足性审计；当前判定为 UNSATISFIABLE_UNDER_FIREWALL。保持 S1C/S1D 为审计组件，不重跑 S1B、不搜索近 E8.75 target perturbation；只有正式 claim/contract 授权后才可执行限定为 WT-context/modelled response 的 S1C-C exact E8.75 atom"
+    current_best: "B2-T3-A1 v0006 (L1_STRICT_WT_DIRECT) / v0007 (L2_GATA4_GATA6_CONDITION_AWARE), tied 45.5"
+    current_best_score: 45.5
+    active_atom: "T3-S1C-GATE-SATISFIABILITY-20260902-v1 (closure)"
+    next_action: "B2-T3-A1 v0006/v0007 并列 45.5（+0.2 vs baseline 45.3，首次超过 wt_identity）；derived Total≈149.7 待服务器确认；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT（UNSATISFIABLE_UNDER_FIREWALL），leaderboard 增益不解除 gate；重开条件见收口报告 §6"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -211,6 +211,18 @@ handoffs:
     recommended_decision: "两条均保持 score_pending，不自动上传；作为独立 component 候选等待人工选择"
     blocker: null
     action: "停止在 B2-T3-A1；不启动下一个 atom，等待人工上传决定或新授权"
+  - task: T3
+    atom: B2-T3-A1 (scoring round)
+    status: SCORED_TIED_BOARD_BEST
+    final_artifacts: 2
+    candidate_ids: "B2-T3-A1 v0006 (45.5) / v0007 (45.5)；详见 submissions/INDEX.tsv"
+    parents: "baseline-001/T3_gata4/v0001 (wt_identity 45.3)"
+    artifacts: "submissions/candidates/T3_gata4/v0006_b2_t3_a1_l1/、v0007_b2_t3_a1_l2/；候选哈希以 submissions/INDEX.tsv 为准"
+    checks: "2/2 contract/protected PASS（此前已记录）；服务器 45.5/45.5，并列新 board best，首次超过 wt_identity；derived T3=45.5/Total≈149.7 待服务器页面确认"
+    risks: "两 lane 服务器无法区分（tie），不声称 lane 偏好；local source-only 诊断曾偏低（de_score 0.1884）与服务器 +0.2 并存，诊断不可作 leaderboard 预测；科学 gate 不变，leaderboard 增益不构成机制证据"
+    recommended_decision: "并列晋级当前 selection；v0002–v0005 五条历史候选保持不可变淘汰记录"
+    blocker: null
+    action: "分数回填完成；科学 promotion gate 维持 CLOSED_AS_RESEARCH_COMPONENT，重开条件见收口报告 §6"
   - task: T3
     atom: T3-S1-PRIOR
     status: HOLD_AS_COMPONENT
@@ -422,7 +434,7 @@ handoffs:
 |---|---|---|---|
 | T1 | active | v0004 strict pseudobulk shift，48.5 | HX-KILLTEST 已 REJECT（增长/死亡动力学方向关闭）；无新授权不追加 T1 atom |
 | T2 | active | per-board selection（embryo 60.1 / heart_interp **57.3** / heart_extrap 50.5），服务器 T2 55.7 | J1-FGW heart_interp v0009 服务器 57.3（+0.6）晋级；余 HX-DYNAMICS-KILLTEST 实例化 |
-| T3 | gate_blocked | baseline-001，45.3 | S1C-A/B 方法组件已通过、S1D v3 获得 E9.5 exact-stage 但组织限定 context；继续寻找 E8.0-E9.5 state-matched activity/stability，不生成候选 |
+| T3 | active（比赛）/ gate_blocked（科学） | B2-T3-A1 v0006/v0007 并列 45.5，服务器 T3 任务值 45.3 | 双候选并列晋级 board best；科学 gate 仍收口，derived Total≈149.7 待确认 |
 
 Batch 1 已关闭为 `CLOSED_FOR_REVIEW`。综合评审报告为 `reports/PHASE_REPORT_BATCH1_20260829.md`；新 atom 需要新的明确授权。
 

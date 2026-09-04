@@ -495,3 +495,11 @@ reuse_promoted
 - evidence: "artifacts/tool_integration/HX-DYNAMICS-KILLTEST-20260904-v1/metrics/holdout_mass_l1.json（双臂复用冻结 artifact，SHA 记录）；mioflow==0.1.14 一次性 hash-lock 部署（Yale 非商业许可已披露）；12 新测试+174 全量回归 PASS。"
 - boundary: "E9.5 为训练期 stage，holdout 只验证假设机制；kill test 不产生 leaderboard 证据；mioflow venv 保留可复用但不得作为统一 backbone。"
 - review_trigger: "出现独立证据表明 T1 残差确实由 state-mass 漂移主导时，方可重开本方向。"
+
+### D-20260904-T3-001 — B2-T3-A1 双 lane 并列晋级 T3 board best
+- date: 2026-09-04（回填；服务器行 2026-09-03 23:40 / 23:41）
+- scope: T3:gata4 / B2-T3-A1 v0006 L1_STRICT_WT_DIRECT、v0007 L2_GATA4_GATA6_CONDITION_AWARE
+- decision: "两条候选服务器均 45.5（+0.2 vs wt_identity 45.3），并列新 board best，晋级当前 selection；v0002–v0005 五条历史候选保持不可变淘汰记录。服务器无法区分两 lane，不声称 lane 偏好。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md B2-T3-A1 节；INDEX.tsv v0006/v0007 行（d3cc8adb… / 012ac745…）；deliveries/b2t3a1__t3__upload__20260904.zip。"
+- boundary: "derived T3=45.5/Total≈149.7 待服务器页面确认；leaderboard 增益不解除 T3-S1 科学 gate（仍 CLOSED_AS_RESEARCH_COMPONENT，UNSATISFIABLE_UNDER_FIREWALL），不作机制/因果证据；blocks_submission: false。"
+- review_trigger: "服务器页面 Total 与 derived 149.7 不一致；或科学重开条件（收口报告 §6）被新证据满足时重估 gate。"

@@ -1,15 +1,15 @@
 # T3 任务追踪：gene perturbation
 
-更新时间：2026-09-02
+更新时间：2026-09-04
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件明确区分已评分路线和待验证路线。
 
 ## 当前状态
 
-- 当前最高服务器分数：**45.3**
-- 当前最佳：`baseline-001/T3_gata4/v0001`，`wt_identity`
+- 当前最高服务器分数：**45.5**（v0006 / v0007 并列，2026-09-04 回填；derived Total≈149.7 待服务器页面确认）
+- 当前最佳：`B2-T3-A1` `v0006_b2_t3_a1_l1` 与 `v0007_b2_t3_a1_l2`，并列 board best；原 baseline `wt_identity` 45.3 为历史 best
 - 当前状态：`closed_as_research_component`（2026-09-02 收口，见 `artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md`）；S1A v7、S1B v3、S1C-A/v1、S1C-B/v3、S1D/v3 均为可审计组件，所有历史 artifact 与失败 receipt 不可变，候选生成仍关闭
-- 任务阻塞：`T3-S1A-GATE-001`；缺口为公开证据边界（E8.75 state-matched signed family 不存在且近窗口数据属 target leakage），非工程问题；最小解锁条件见收口报告第 3 节，`blocks_submission: false`
+- 任务阻塞：`T3-S1A-GATE-001`；缺口为公开证据边界（E8.75 state-matched signed family 不存在且近窗口数据属 target leakage），非工程问题；最小解锁条件见收口报告第 3 节，`blocks_submission: false`。**leaderboard +0.2 不解除科学 gate**：服务器分数不作机制/因果证据
 
 ## Top 3 路线
 
@@ -17,11 +17,11 @@
 
 | 位次 | 路线 | 通俗说明 | 服务器分数 | 状态 |
 |---|---|---|---:|---|
-| 1 | `wt_identity` | 直接把 matched WT 当作 Gata4 KO 预测，先建立扰动 floor | **45.3** | 已评分，当前 best |
-| 2 | `B1-A2 L1_CELL_LEVEL_SPEARMAN` | WT 细胞级 Spearman 反相关符号的稀疏 residual | **44.7** | v0004，低于 baseline 0.6，淘汰并保留诊断 |
-| 3 | `B1-A2 L2_STATE_PSEUDOBULK_SPEARMAN` | WT 状态 pseudobulk Spearman 反相关符号的稀疏 residual | **44.0** | v0005，低于 baseline 1.3，淘汰并保留诊断 |
+| 1 | `B2-T3-A1 L1_STRICT_WT_DIRECT` (v0006) | Gata4 自身+49 个 ChIP 直接下游基因的 WT-only 严格 residual | **45.5** | 已评分，并列当前 best |
+| 1 | `B2-T3-A1 L2_GATA4_GATA6_CONDITION_AWARE` (v0007) | 加 Gata6 half-dose 条件的 73 下游基因 residual | **45.5** | 已评分，并列当前 best |
+| 3 | `wt_identity` | 直接把 matched WT 当作 Gata4 KO 预测，先建立扰动 floor | **45.3** | 已评分，历史 best（被并列超越 0.2） |
 
-历史对照：`shift_transfer_norm` v0002 为 45.2（低于 best 0.1），`shift_transfer_shrunk` v0003 为 43.8（低于 best 1.5），均已淘汰。
+历史对照：`shift_transfer_norm` v0002 为 45.2（低于 best 0.1），`shift_transfer_shrunk` v0003 为 43.8（低于 best 1.5），均已淘汰；B1-A2 `L1_CELL_LEVEL_SPEARMAN` v0004 为 44.7（−0.6）与 `L2_STATE_PSEUDOBULK_SPEARMAN` v0005 为 44.0（−1.3），均低于当时的 45.3，淘汰并保留失败诊断。
 
 ## 变更记录
 
@@ -37,6 +37,7 @@
 | 2026-08-28 | `v0004` / `v0005` | `v0001` | 生成 7,449×500 的 Gata4 signed sparse residual 两候选；硬性 contract/invariant 均通过，self-check 仅作诊断。 | `score_pending`；两条均交付人工上传 |
 | 2026-08-28 | `v0004` / `v0005` 评分回填 | `v0001` | 用户返回 T3 服务器分数 44.7 / 44.0；两条均低于 45.3 baseline。 | 淘汰为 leaderboard 改进；保留不可变文件做失败诊断，暂停 B1-A3 |
 | 2026-08-30 | `B2-T3-A1` / `v0006` / `v0007` | `v0001` | 按 signed prior committee 只用 sanitized WT 外部表达、GATA4 ChIP directness 和两票本地 WT-only 模型，生成 L1 严格 direct 与 L2 Gata6 half-dose 两 lane。 | 2/2 contract/protected PASS；local source-only diagnostic 已完成；服务器未提交，均 `score_pending`，结论 `HOLD_AS_COMPONENT` |
+| 2026-09-04 | `B2-T3-A1` / `v0006` / `v0007` 评分回填 | `v0001` | 用户回填服务器分数：**L1=45.5、L2=45.5，均 +0.2 vs baseline 45.3，并列新 board best**。 | 首次有候选超过 `wt_identity` 45.3（此前 v0002–v0005 五次均失败）；两 lane 服务器无法区分，并列晋级当前 selection，不声称 lane 偏好；derived T3=45.5/Total=149.7 待服务器页面确认；科学 gate 不变（仍 `CLOSED_AS_RESEARCH_COMPONENT`，`blocks_submission: false`）；artifact 不可变 |
 | 2026-08-31 | `T3-S1-PRIOR` | `P0-LOCK` | 按 Batch 3 契约开始 prior committee 实现；先锁定已审计本地数据/源归档并核验隔离部署，再实现多 condition schema、lineage gate 和 L1/L2 prior。 | 任务已激活；本阶段不生成 H5AD、不上传；外部快照缺失将显式 `BLOCKED_EXTERNAL_DATA` |
 | 2026-08-31 | `T3-S1-PRIOR` bundle | `P0-LOCK` | 完成 B2 evidence adapter、multi-condition/dosage prior schema、L1/L2 cap/conflict/lineage gate 和 source-only checks。 | 31,458 records；L1/L2 非零 2,050/5,125；gate `HOLD_AS_COMPONENT`；β-catenin 10,500 条均 `BLOCKED_EXTERNAL_DATA`；不生成候选 |
 | 2026-08-31 | `T3-S1-PRIOR` deployment hardening | `T3-S1-PRIOR` | 将 velocyto 改为显式锁定本地 wheel；补齐 source/archive SHA256、known-KO JSON、dosage/conflict/lineage fail-closed 与双源知识快照审计。 | velocyto import PASS；CellOracle 仍因 `genomepy` 缺失阻塞，scTenifoldKnk 仍因 `scTenifoldNet 1.3 < 1.4` 阻塞；两份 prior schema/manifest PASS；仍不进入 S1B |
@@ -57,9 +58,9 @@
 | 2026-09-02 | `T3-S1-CLOSURE-20260902-v1` | `T3-S1A/v7`、`S1B/v3`、`S1C-A/v1`、`S1C-B/v3`、`S1D/v3` | 纯文档收口，无新计算：汇总五组件证据链 SHA，写死三条未满足硬条件（signed family<2、E8.75 activity 不可得、stability 未闭合）与最小解锁条件；采纳外部建议，执行主线切换 T1。 | 链状态 `CLOSED_AS_RESEARCH_COMPONENT`；与同日 `T3-S1C-GATE-SATISFIABILITY` 的 `UNSATISFIABLE_UNDER_FIREWALL` 结论一致；best 仍为 45.3，`blocks_submission: false`；历史 artifact 全部不可变 |
 ## 下一步
 
-下一步（2026-09-02 更新）：T3-S1 链已收口为 `CLOSED_AS_RESEARCH_COMPONENT`（见 `artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md`），同日 gate 可满足性审计判定 `UNSATISFIABLE_UNDER_FIREWALL`，两条结论一致：在当前 firewall 下 signed-family/activity 证据结构性不可得。baseline-001/T3_gata4/v0001（45.3）仍是已评分 best。重开条件见收口报告第 6 节（官方新数据、organizer 书面放宽、或研究分支产出可审计独立 signed family）。执行资源切换至 `T1-PRE-HARMONIZE`。
+下一步（2026-09-04 更新）：`B2-T3-A1` v0006/v0007 服务器双双 **45.5**（+0.2 vs baseline 45.3），并列新 board best 已晋级——这是 T3 首次有候选超过 `wt_identity`。科学 gate 不变：T3-S1 链仍 `CLOSED_AS_RESEARCH_COMPONENT`（`UNSATISFIABLE_UNDER_FIREWALL`），leaderboard 增益不解除 gate、不作机制证据；重开条件见收口报告第 6 节（官方新数据、organizer 书面放宽、或研究分支产出可审计独立 signed family）。derived T3=45.5/Total=149.7 待服务器页面确认。后续 T3 工作仍需新 atom 授权。
 
-Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`。后续 T3 工作需要新 atom 授权，并应先解决 signed prior 与绝对效应预算的可辨识性问题。
+Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收尾报告：`reports/PHASE_REPORT_BATCH3_20260904.md`。
 
 ## 2026-09-01 新增组件与证据
 

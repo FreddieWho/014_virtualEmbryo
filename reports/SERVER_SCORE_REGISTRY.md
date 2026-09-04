@@ -317,3 +317,21 @@ Consistency and decision:
 - The +0.6 resolves the local mixed evidence in the positive direction: the same-target NFS-mirror improvement (0.0967→0.0747) was the pre-declared gate metric direction, while the same-target morans decline (0.7365→0.6743) did not dominate the board outcome. Consistent with J1-PROXY holdout evidence; no causal claim is made from leaderboard scores alone.
 - embryo v0008 (`j1_fgw_assignment`, HOLD_AS_COMPONENT) was not uploaded and stays immutable/score_pending; the four non-uploaded T2-S3 candidates likewise remain untouched.
 - The scored artifact stays immutable; user-provided value registered as supplied.
+
+### B2-T3-A1 — T3 Gata4 signed-response dual-lane scoring round
+| Record date | 2026-09-04 |
+|---|---|
+| Submission label | B2-T3-A1 L1_STRICT_WT_DIRECT / L2_GATA4_GATA6_CONDITION_AWARE（新命名规则包 `b2t3a1__t3__upload__20260904.zip`） |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-03 23:40 / 23:41; portal Model filenames `t3_gata4__l1__v0006` / `t3_gata4__l2__v0007` match the fixed short-name rule and local versions exactly) |
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Delta vs current board best | Decision |
+|---|---|---|---:|---:|---|
+| `B2-T3-A1 v0006 L1_STRICT_WT_DIRECT` | not supplied | `submissions/candidates/T3_gata4/v0006_b2_t3_a1_l1/submission.h5ad` / `d3cc8adb6f46070f7dbfecbdff9c10e9df9184a417376fb0d4a4813b2517c175` | **45.5** | **+0.2** vs wt_identity 45.3 | **new board best (tied); promote to current selection** |
+| `B2-T3-A1 v0007 L2_GATA4_GATA6_CONDITION_AWARE` | not supplied | `submissions/candidates/T3_gata4/v0007_b2_t3_a1_l2/submission.h5ad` / `012ac745c995f5f5ef0209c44250cf8aa1bb35ae1fe2355550e7ab16297cf900` | **45.5** | **+0.2** vs wt_identity 45.3 | **new board best (tied); promote to current selection** |
+
+Consistency and decision:
+- The server returned the two board scores only; no new T3 aggregate or Total was supplied. The retained server values remain T3 **45.3** and Total **149.5** until the server page is re-read.
+- Protocol-derived (not server-returned): with a T3 board best of 45.5, the derived T3 task value is `45.5` and the derived Total is `48.5 + 55.7 + 45.5 = 149.7`; these derived values must be confirmed against the server page on the next read and must not be quoted as server values.
+- First T3 candidates above the `wt_identity` 45.3 baseline after five rejected attempts (v0002 45.2, v0003 43.8, v0004 44.7, v0005 44.0); both lanes tie at 45.5, so the server probe cannot separate them. Both are promoted as tied board bests; no lane preference is claimed.
+- The +0.2 does not constitute mechanistic or causal evidence: T3-S1 scientific gate remains CLOSED_AS_RESEARCH_COMPONENT (UNSATISFIABLE_UNDER_FIREWALL), `blocks_submission: false`; local leaderboard gains do not unlock the science gate.
+- Both scored artifacts stay immutable; user-provided values registered as supplied.

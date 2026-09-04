@@ -24,3 +24,4 @@
 
 - 2026-09-04：建立本文件（batch3 收口后）。初始内容：3 条待办 + 分支记录；此前待办散见于各 TRACKING 文档"下一步"节，现以本文件为唯一入口。
 - 2026-09-04：新增"用户读服务器页面确认 derived 149.8 / 授权 push / 决定 batch4 或封板"三条为当前待办（由 batch3 收尾事件产生）；同日落盘 `reports/PHASE_REPORT_BATCH3_20260904.md` 与 `reports/RELEASE_CHANGELOG_BATCH3_20260904.md`，分支记录不变。
+- 2026-09-04：T3 评分事件（v0006/v0007 双双 45.5 并列晋级 board best，首次超过 wt_identity）回填完毕，登记于 registry/INDEX/TRACKING/STATUS/DECISIONS；待办清单不变（"读服务器页面确认"条目推算值由 149.8 变为 149.7，语义不变）。

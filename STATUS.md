@@ -4,11 +4,11 @@
 
 ## 第一部分：给人读的进展
 
-**已完成什么。** 三个比赛任务都已建立合法提交并拿到服务器分数，当前总分 149.5。最近一轮把心脏插值从 56.3 提到 57.3（位移场 +0.4、表达重排 +0.6 两步），胚胎插值保持 60.1；六条新路线里两条晋级、四条被证明无效并已关闭存档。
+**已完成什么。** 三个比赛任务都已建立合法提交并拿到服务器分数，当前总分 149.5。最近一轮把心脏插值从 56.3 提到 57.3（位移场 +0.4、表达重排 +0.6 两步），胚胎插值保持 60.1，扰动预测首次超过基线（45.5 vs 45.3，两条并列）；六条新路线里两条晋级、四条被证明无效并已关闭存档。
 
 **正在做什么。** 第三批计划（batch3）的全部任务已执行完毕，此刻没有正在运行的计算。等你从比赛页面读回最新总分，确认我们推算的 149.8 是否成立。
 
-**卡在哪里。** 时间外推任务（T1）停在 48.5：结构化传输和"增长/死亡动力学"两条路都被严格判掉了，剩下的提升空间需要全新想法而不是调参。扰动任务（T3）的科学验证在当前数据规则下结构性做不到，已正式收口，但不影响比赛提交。
+**卡在哪里。** 时间外推任务（T1）停在 48.5：结构化传输和"增长/死亡动力学"两条路都被严格判掉了，剩下的提升空间需要全新想法而不是调参。扰动任务（T3）的预测分数已超过基线（45.5），但它的科学验证在当前数据规则下结构性做不到，已正式收口——分数提升不代表机制验证，两者我们分开记账。
 
 **准备怎么解决。** 不盲目追加实验。T1 等待新假设或接受现状；T3 等待官方新数据或规则放宽；下一步是开辟第四批方向（候选见 TODO.md 与 LEADS.md）还是封板，由你决定。
 
@@ -44,7 +44,7 @@ ROADMAP  [#######-] 7/8 节点（N8 待授权）
 
 - 比赛优先；starter_pack 已关闭为 `CLOSED_FOR_COMPETITION_BASELINE`。
 - 当前 aggregate best：**149.5（服务器当前返回值）**。
-- 当前任务分数：T1 **48.5**，T2 **55.7（服务器当前返回值）**，T3 **45.3**。
+- 当前任务分数：T1 **48.5**，T2 **55.7（服务器当前返回值）**，T3 **45.3（服务器当前返回值；board best 已升至 45.5）**。
 - 科学 promotion 仍开放，但 `blocks_submission: false`。
 - 仓库已于 2026-09-02 完成首次推送：`github.com/FreddieWho/014_virtualEmbryo` main 分支（commit `cde3c9c`，251 个代码/文档/配置文件；`data/`、`artifacts/`、`outputs/` 等大文件按 `.gitignore` 排除）。
 
@@ -86,11 +86,11 @@ Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1`：heart_interp v0009 服务器 **57.3�
 
 ### T3 — gene perturbation
 
-1. `wt_identity`：**45.3**，已评分，当前 best。
-2. B1-A2 `L1_CELL_LEVEL_SPEARMAN`：v0004，**44.7（-0.6）**，低于 baseline，淘汰并保留诊断。
-3. B1-A2 `L2_STATE_PSEUDOBULK_SPEARMAN`：v0005，**44.0（-1.3）**，低于 baseline，淘汰并保留诊断。
+1. B2-T3-A1 `L1_STRICT_WT_DIRECT`（v0006）：**45.5**，已评分，并列当前 best（2026-09-04 回填）。
+2. B2-T3-A1 `L2_GATA4_GATA6_CONDITION_AWARE`（v0007）：**45.5**，已评分，并列当前 best。
+3. `wt_identity`（v0001）：**45.3**，已评分，历史 best（被并列超越 0.2）。
 
-历史对照：`shift_transfer_norm` v0002 为 45.2（-0.1），`shift_transfer_shrunk` v0003 为 43.8（-1.5），均已淘汰。
+两条新候选是其五次尝试（v0002–v0005 及 baseline 之后）里首次超过 `wt_identity` 的结果；并列说明服务器无法区分 lane，不声称偏好。derived T3=45.5、derived Total≈149.7 待服务器页面确认。
 
 Batch2 `B2-T3-A1` 已生成两条未评分候选：L1 `v0006`（49 个下游基因 + Gata4）和 L2 `v0007`（73 个下游基因 + Gata4/Gata6 half-dose）。二者 contract/protected 均 PASS；本地 Mab21l2 source-only 诊断不等于 Gata4 或服务器分数，状态保持 `score_pending`、结论 `HOLD_AS_COMPONENT`，不自动上传。
 
@@ -108,7 +108,7 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 |---|---|---|
 | T1 | `HX-DYNAMICS-KILLTEST-20260904-v1` 完成：MIOFlow（增长/死亡+随机动力学）在预声明 kill metric（留 E9.5 state-mass L1）上 0.7475，未同时优于 moscot 0.6645 与 parent 1.1894 → **REJECT**，方向关闭；当前 best 仍为 v0004=48.5，无新授权不追加 T1 atom | kill test 只出 report，不生成候选；分数已回填的候选见 `reports/SERVER_SCORE_REGISTRY.md` 与 INDEX.tsv |
 | T2 | J1-FGW heart_interp v0009 服务器 **57.3（+0.6）晋级 board best**（2026-09-04 回填）；embryo v0008 保持 HOLD 不上传；**batch3 全部任务执行完毕**（`HX-DYNAMICS-KILLTEST` 已 REJECT，见 T1 行） | 服务器未返回新 T2/Total（保持 55.7/149.5）；derived T2≈55.97/Total≈149.8 待服务器确认 |
-| T3 | S1 链已收口 `CLOSED_AS_RESEARCH_COMPONENT`（2026-09-02）；当前 best 仍为 45.3，不生成新候选 | 重开需满足收口报告第 6 节条件（官方新数据/organizer 放宽/研究分支独立 signed family） |
+| T3 | B2-T3-A1 v0006/v0007 双双 **45.5（+0.2）** 并列晋级 board best（2026-09-04 回填，首次超过 wt_identity 45.3）；科学 gate 仍收口 `CLOSED_AS_RESEARCH_COMPONENT`，leaderboard 增益不解除 gate | derived T3=45.5/Total≈149.7 待服务器页面确认；重开条件见收口报告 §6 |
 
 ## 更新规则
 
