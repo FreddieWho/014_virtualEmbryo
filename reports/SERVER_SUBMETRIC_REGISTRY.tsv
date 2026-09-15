@@ -32,3 +32,87 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-04	T3:gata4	v0008	b4p0_l0_exact_floor	t3_gata4__l0floor__v0008.h5ad	2026-09-04 14:17	46.79	severity_slope	50.0
 2026-09-04	T3:gata4	v0008	b4p0_l0_exact_floor	t3_gata4__l0floor__v0008.h5ad	2026-09-04 14:17	46.79	mmd_u	51.3
 2026-09-04	T3:gata4	v0008	b4p0_l0_exact_floor	t3_gata4__l0floor__v0008.h5ad	2026-09-04 14:17	46.79	variogram	50.9
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	de_score	57.8
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	de_direction	60.2
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	mmd_u	54.9
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	variogram	32.0
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	d2_shape	62.0
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	occupancy_dice	48.6
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	scale_log_ratio	82.5
+2026-09-04	T2:heart:val_interp	v0010	b4_t2_r1_l1_globalmatch	t2_hrt_int__l1glob05__v0010.h5ad	2026-09-04 19:52	57.3	neighborhood_mmd	60.1
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	de_score	57.8
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	de_direction	60.2
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	mmd_u	54.9
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	variogram	32.1
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	d2_shape	62.0
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	occupancy_dice	48.6
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	scale_log_ratio	82.5
+2026-09-04	T2:heart:val_interp	v0011	b4_t2_r1_l2_globalmatch	t2_hrt_int__l2glob002__v0011.h5ad	2026-09-04 19:52	57.31	neighborhood_mmd	60.1
+2026-09-05	T3:gata4	v0009	b4_t3_r1_l1_gata4_zero_all	t3_gata4__l1gata4zero__v0009.h5ad	2026-09-05	46.95	de_score	39.2
+2026-09-05	T3:gata4	v0009	b4_t3_r1_l1_gata4_zero_all	t3_gata4__l1gata4zero__v0009.h5ad	2026-09-05	46.95	de_direction	49.7
+2026-09-05	T3:gata4	v0009	b4_t3_r1_l1_gata4_zero_all	t3_gata4__l1gata4zero__v0009.h5ad	2026-09-05	46.95	severity_slope	50.0
+2026-09-05	T3:gata4	v0009	b4_t3_r1_l1_gata4_zero_all	t3_gata4__l1gata4zero__v0009.h5ad	2026-09-05	46.95	mmd_u	51.5
+2026-09-05	T3:gata4	v0009	b4_t3_r1_l1_gata4_zero_all	t3_gata4__l1gata4zero__v0009.h5ad	2026-09-05	46.95	variogram	51.0
+2026-09-05	T3:gata4	v0010	b4_t3_r1_l2_gata4_zero_hard	t3_gata4__l2gata4hard__v0010.h5ad	2026-09-05	46.95	de_score	39.2
+2026-09-05	T3:gata4	v0010	b4_t3_r1_l2_gata4_zero_hard	t3_gata4__l2gata4hard__v0010.h5ad	2026-09-05	46.95	de_direction	49.7
+2026-09-05	T3:gata4	v0010	b4_t3_r1_l2_gata4_zero_hard	t3_gata4__l2gata4hard__v0010.h5ad	2026-09-05	46.95	severity_slope	50.0
+2026-09-05	T3:gata4	v0010	b4_t3_r1_l2_gata4_zero_hard	t3_gata4__l2gata4hard__v0010.h5ad	2026-09-05	46.95	mmd_u	51.5
+2026-09-05	T3:gata4	v0010	b4_t3_r1_l2_gata4_zero_hard	t3_gata4__l2gata4hard__v0010.h5ad	2026-09-05	46.95	variogram	51.0
+2026-09-05	T1:val	v0011	b4_t1_r1_l1_damp050	t1_val__l1damp050__v0011.h5ad	2026-09-05	47.58	de_score	41.0
+2026-09-05	T1:val	v0011	b4_t1_r1_l1_damp050	t1_val__l1damp050__v0011.h5ad	2026-09-05	47.58	de_direction	54.7
+2026-09-05	T1:val	v0011	b4_t1_r1_l1_damp050	t1_val__l1damp050__v0011.h5ad	2026-09-05	47.58	mmd_u	50.0
+2026-09-05	T1:val	v0011	b4_t1_r1_l1_damp050	t1_val__l1damp050__v0011.h5ad	2026-09-05	47.58	variogram	43.3
+2026-09-05	T1:val	v0012	b4_t1_r1_l2_popmix050	t1_val__l2popmix050__v0012.h5ad	2026-09-05	47.77	de_score	40.3
+2026-09-05	T1:val	v0012	b4_t1_r1_l2_popmix050	t1_val__l2popmix050__v0012.h5ad	2026-09-05	47.77	de_direction	54.2
+2026-09-05	T1:val	v0012	b4_t1_r1_l2_popmix050	t1_val__l2popmix050__v0012.h5ad	2026-09-05	47.77	mmd_u	50.5
+2026-09-05	T1:val	v0012	b4_t1_r1_l2_popmix050	t1_val__l2popmix050__v0012.h5ad	2026-09-05	47.77	variogram	45.0
+2026-09-05	T1:val	v0013	b4_t1_r1_l3_massgraft025	t1_val__l3massgraft025__v0013.h5ad	2026-09-05	47.85	de_score	43.0
+2026-09-05	T1:val	v0013	b4_t1_r1_l3_massgraft025	t1_val__l3massgraft025__v0013.h5ad	2026-09-05	47.85	de_direction	55.0
+2026-09-05	T1:val	v0013	b4_t1_r1_l3_massgraft025	t1_val__l3massgraft025__v0013.h5ad	2026-09-05	47.85	mmd_u	51.2
+2026-09-05	T1:val	v0013	b4_t1_r1_l3_massgraft025	t1_val__l3massgraft025__v0013.h5ad	2026-09-05	47.85	variogram	40.0
+2026-09-05	T1:val	v0014	b4_t1_r1_l4_massgraft050	t1_val__l4massgraft050__v0014.h5ad	2026-09-05	46.90	de_score	42.7
+2026-09-05	T1:val	v0014	b4_t1_r1_l4_massgraft050	t1_val__l4massgraft050__v0014.h5ad	2026-09-05	46.90	de_direction	54.1
+2026-09-05	T1:val	v0014	b4_t1_r1_l4_massgraft050	t1_val__l4massgraft050__v0014.h5ad	2026-09-05	46.90	mmd_u	49.8
+2026-09-05	T1:val	v0014	b4_t1_r1_l4_massgraft050	t1_val__l4massgraft050__v0014.h5ad	2026-09-05	46.90	variogram	38.8
+2026-09-14	T3:gata4	v0011	b4_t3_r2_l1_delay025	t3_gata4__l1delay025__v0011.h5ad	2026-09-14	46.45	de_score	38.1
+2026-09-14	T3:gata4	v0011	b4_t3_r2_l1_delay025	t3_gata4__l1delay025__v0011.h5ad	2026-09-14	46.45	de_direction	49.4
+2026-09-14	T3:gata4	v0011	b4_t3_r2_l1_delay025	t3_gata4__l1delay025__v0011.h5ad	2026-09-14	46.45	severity_slope	50.0
+2026-09-14	T3:gata4	v0011	b4_t3_r2_l1_delay025	t3_gata4__l1delay025__v0011.h5ad	2026-09-14	46.45	mmd_u	51.2
+2026-09-14	T3:gata4	v0011	b4_t3_r2_l1_delay025	t3_gata4__l1delay025__v0011.h5ad	2026-09-14	46.45	variogram	50.3
+2026-09-14	T3:gata4	v0012	b4_t3_r2_l2_delay050	t3_gata4__l2delay050__v0012.h5ad	2026-09-14	46.47	de_score	38.5
+2026-09-14	T3:gata4	v0012	b4_t3_r2_l2_delay050	t3_gata4__l2delay050__v0012.h5ad	2026-09-14	46.47	de_direction	49.3
+2026-09-14	T3:gata4	v0012	b4_t3_r2_l2_delay050	t3_gata4__l2delay050__v0012.h5ad	2026-09-14	46.47	severity_slope	50.0
+2026-09-14	T3:gata4	v0012	b4_t3_r2_l2_delay050	t3_gata4__l2delay050__v0012.h5ad	2026-09-14	46.47	mmd_u	51.0
+2026-09-14	T3:gata4	v0012	b4_t3_r2_l2_delay050	t3_gata4__l2delay050__v0012.h5ad	2026-09-14	46.47	variogram	49.9
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	de_score	55.8
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	de_direction	70.1
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	mmd_u	60.0
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	variogram	52.9
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	d2_shape	52.8
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	occupancy_dice	46.6
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	scale_log_ratio	91.9
+2026-09-14	T2:embryo:val_interp	v0009	b4_t2_r2_l1_mean_bridge	t2_emb_int__l1mean__v0009.h5ad	2026-09-14	61.79	neighborhood_mmd	63.3
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	de_score	54.1
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	de_direction	67.5
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	mmd_u	60.2
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	variogram	52.0
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	d2_shape	54.6
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	occupancy_dice	51.2
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	scale_log_ratio	90.8
+2026-09-14	T2:embryo:val_interp	v0010	b4_t2_r2_l2_mean_mass_bridge	t2_emb_int__l2meanmass__v0010.h5ad	2026-09-14	62.29	neighborhood_mmd	65.9
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	de_score	55.3
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	de_direction	59.1
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	mmd_u	54.0
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	variogram	29.8
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	d2_shape	62.0
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	occupancy_dice	48.6
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	scale_log_ratio	82.5
+2026-09-14	T2:heart:val_interp	v0012	b4_t2_r2_l1_mean_bridge	t2_hrt_int__l1mean__v0012.h5ad	2026-09-14	56.27	neighborhood_mmd	59.2
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	de_score	60.6
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	de_direction	65.8
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	mmd_u	62.5
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	variogram	28.4
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	d2_shape	65.4
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	occupancy_dice	47.8
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	scale_log_ratio	97.9
+2026-09-14	T2:heart:val_interp	v0013	b4_t2_r2_l2_mean_mass_bridge	t2_hrt_int__l2meanmass__v0013.h5ad	2026-09-14	62.04	neighborhood_mmd	65.8

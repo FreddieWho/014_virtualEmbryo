@@ -1,0 +1,12 @@
+input_artifact	status	sha256_or_pointer	ready_for_next_arch	notes
+submissions/candidates/T2_embryo_val_interp/v0010_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad	ready	34caae70aff220b6a754dedea54bd27a5c4d0962305341994dd239f60f14364e	yes	T2 interp parent (embryo 62.29)
+submissions/candidates/T2_heart_val_interp/v0013_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad	ready	9080cfc3adbed773ad57a601548e15427b25696461b68d083a45c522b85daf08	yes	T2 interp parent (heart 62.04)
+submissions/candidates/T1_val/v0004_strict_pseudobulk_shift/submission.h5ad	ready	1bc069d9aecd4b9b15f3ff91c328ef27a9773bfd0d3c890f36f5f1b6fb4f49bd	yes	T1 parent (48.47); S1 gate unresolved
+submissions/candidates/T3_gata4/v0009_b4_t3_r1_l1_gata4_zero_all/submission.h5ad	ready	c6be65ec7d8c8a4b94bce936ff0cad985ac26f78c77ea3e4f68643f07076b088	yes	T3 parent (46.95 tied)
+artifacts/tool_integration/T1-S2-MOSCOT-DECODER-20260902-v1/intermediates/state_mass.tsv	ready	9fecb0076bb9e826a1cee4f37533c572d0cb62d488c01a47b16833643d6e2b8c	partial	state mass interface (dose-sensitive); re-verify hash before reuse
+T3-S1A exact E8.75 WT sanitized input	ready	see infra/bioinf-data-index/INDEX.tsv	yes	68,910 firewalled rows
+CollecTRI/OmniPath panel snapshots	ready	see infra/bioinf-data-index/INDEX.tsv	yes	panel-scoped, audited
+CellOracle mm10 base-GRN	ready	32de319419199f53bbdbf7c8545394a70052b28a7fe3efa48cba1e00195761f25e1f	yes	local loader smoke passed
+T1 late-program processed object	missing	—	no	blocks T1-R2 reopen
+T2-R3 extrap candidates (v0008/v0009/v0010)	unscored	see submissions/INDEX.tsv	yes	scorable in a future batch without rebuild
+Official floor bundle construction	unknown	—	no	root cause of S1 failure; required for attribution

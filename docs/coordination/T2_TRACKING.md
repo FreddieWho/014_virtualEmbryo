@@ -96,3 +96,13 @@ B1-A1 双 lane 最终集已完成服务器评分；L1 在三个 B1-A1 lane 中�
 ## 下一步
 
 J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 board best；embryo_interp v0008 保持 HOLD 不上传。batch3 剩余未做任务为 HX-DYNAMICS-KILLTEST（单工具/单 board/单 kill metric，需实例化授权）。若需要科学晋级，仍需独立 stage/replicate 证据；leaderboard 分数不构成因果机制证据。
+
+2026-09-04（batch4 Wave 1）：`B4-T2-R1-FGW-ASSIGNMENT-REPAIR` 完成，双 lane 待上传评分——v0010（L1 eps0.005+全局匹配：mass capture 0.718→0.796，NFS 0.0747→0.0733 improvement，Moran 0.6743→0.6823）、v0011（L2 eps0.002+全局匹配：mass 0.873，NFS 0.0732 improvement，Moran 0.6833）；contract/protected 全 PASS，确定性字节一致。产物 `artifacts/batch4/B4-T2-R1-FGW-ASSIGNMENT-REPAIR-20260904-v1/`，交付包 `deliveries/b4t2r1__t2__upload__20260904.zip`（先传）与 `deliveries/b4t2r1b__t2__upload__20260904.zip`（后传）。结论待服务器仲裁。
+
+2026-09-04（夜）：B4-T2-R1 双 lane 服务器仲裁——v0010=**57.3**（+0.05）、v0011=**57.31**（+0.06），相对 greedy v0009=57.25 均落入 ±0.1 噪声带 → **TIE，不晋级**；v0009 留任 selection；按预声明停止规则**关闭 FGW 离散化微调**，不再扫 epsilon。16 个子项已入库。详见 registry §B4-T2-R1 与 DECISIONS D-20260904-B4T2R1-001。
+
+2026-09-11（batch4 Wave 2）：`B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE` 完成，四 lane 待上传评分——embryo v0009/v0010（L1 mean bridge / L2 mean+mass，11/18 双端共享，7 缺 R keep-parent）、heart v0012/v0013（L1/L2，33/33 全共享；clip 60% 已披露，无 collapse）；geometry 全冻结。L1 双 lane contract PASS，L2 双 lane 行组成四项 FAIL_BY_DESIGN_ACCEPTED；四 lane 重跑字节一致。产物 `artifacts/batch4/B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE-20260911-v1/`，交付包 `deliveries/b4t2r2{a,b,c,d}__t2__upload__20260911.zip`（推荐 embryo L1→embryo L2→heart L2→heart L1）。结论待服务器仲裁。
+
+2026-09-14（batch4 Wave 2）：`B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE` 四 lane 服务器仲裁——embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1，组成重采样是增量来源；heart 60% clip 未兑现为损伤。derived T2=58.29/Total≈153.71 待确认。详见 registry §B4-T2-R2 与 DECISIONS D-20260914-WAVE2-001。
+
+2026-09-14（batch4 Wave 2）：`B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL` 完成，三 lane 待上传评分——v0008（L1 damp0.5，clip 0%）、v0009（L2 time1.333，clip 21.6% 已披露）、v0010（L3 popmix，clip 2.4%）；仅 5/22 states 有位移；backtest 偏好小 damp（仅记录）；contract 全 PASS，字节一致。单包 `deliveries/b4t2r3__t2__upload__20260914.zip`（一批一包新规首用）。产物 `artifacts/batch4/B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL-20260914-v1/`。结论待服务器仲裁。

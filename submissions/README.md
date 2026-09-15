@@ -54,3 +54,12 @@ Portal `Model` 名来自上传文件名，因此交付 zip 的成员名必须短
   短名不承载语义完整性
 - 2026-09-03 之前已上传/已评分的长名 artifact 不回溯改名（历史记录不变）
 
+## Batch packaging rule (fixed 2026-09-11, mandatory, going forward)
+
+一个批次（一次 locked run / 一个 task 及其全部 lane）的产出打成**一份 zip**，不再按 lane 分包：
+
+- 包内含该批次全部成员 h5ad（成员命名仍遵守上面的短名规则，`v<NNNN>` 与 INDEX.tsv 一致）；
+- 包内必须附 `MANIFEST.tsv`（全体成员的 `filename / bytes / sha256`）+ `UPLOAD_MANIFEST.tsv`（全体成员的 board/version/canonical 路径映射）+ `RUN_ID_MAP.tsv` + `EVIDENCE_MANIFEST_POINTERS.tsv`；
+- zip 包名沿用 `<atom短码>__<task>__upload__<YYYYMMDD>.zip`（≤50 字符），一批次一包；
+- 已产生的历史分包（2026-09-11 及以前）不回溯重打，不影响已登记的 SHA256 身份核验。
+

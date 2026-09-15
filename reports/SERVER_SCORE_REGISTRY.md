@@ -398,3 +398,156 @@ Consistency and decision:
 - This supersedes all earlier derived Totals (149.3/149.6/149.7/149.8/151.0): the confirmed server Total is **151.2**.
 - Per-metric read (diagnostic, not causal): T1's weakest anchored metric is variogram (40.6) vs de_direction 55.9; heart_interp's weakest is variogram (32.2) vs d2_shape 62.0; T3's weakest is de_score (38.8) with the other four near 50; embryo's standout is scale_log_ratio (91.9) vs occupancy_dice 46.6; heart_extrap is flat 46-53 across all eight metrics. No route decision is changed by these breakdowns alone.
 - All five scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-T2-R1 — FGW assignment repair scoring round (TIE, no promotion)
+| Record date | 2026-09-04 |
+|---|---|
+| Submission label | B4-T2-R1-FGW-ASSIGNMENT-REPAIR L1/L2 global matching（包 `b4t2r1__t2__upload__20260904.zip` / `b4t2r1b__t2__upload__20260904.zip`；portal Model 列显示为成员短名） |
+| Board/phase | T2:heart:val_interp |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-04 19:52) |
+| Run | `B4-T2-R1-FGW-ASSIGNMENT-REPAIR-2026-09-04T193416.762071+0000`（artifacts/batch4/B4-T2-R1-FGW-ASSIGNMENT-REPAIR-20260904-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-T2-R1 v0010 L1_EPS005_GLOBALMATCH` | not supplied | `submissions/candidates/T2_heart_val_interp/v0010_b4_t2_r1_l1_globalmatch/submission.h5ad` / `0f9d35db64f737bbe254e84c4df118df41282fd23509ce864254c468ef0aee25` | **57.3** | v0009 greedy 57.25 | **TIE (+0.05, within ±0.1 noise); no promotion** |
+| `B4-T2-R1 v0011 L2_EPS002_GLOBALMATCH` | not supplied | `submissions/candidates/T2_heart_val_interp/v0011_b4_t2_r1_l2_globalmatch/submission.h5ad` / `7ed7aaba7229b4af3e92d20901a21b6766c05ccbcc62313acb8041d05bffed03` | **57.31** | v0009 greedy 57.25 | **TIE (+0.06, within ±0.1 noise); no promotion** |
+
+Per-metric skills (server page; rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd |
+|---|---|---|---|---|---|---|---|---|
+| v0010 L1 | 57.8 | 60.2 | 54.9 | 32.0 | 62.0 | 48.6 | 82.5 | 60.1 |
+| v0011 L2 | 57.8 | 60.2 | 54.9 | 32.1 | 62.0 | 48.6 | 82.5 | 60.1 |
+
+Consistency and decision:
+- The server returned the two board scores only; no new T2 aggregate or Total was supplied. T2 selection and derived aggregates unchanged (heart_interp incumbent v0009=57.25 retained on tie; derived Total stays ≈151.2 pending page re-read and must not be quoted as a server value).
+- Both lanes land within ±0.1 of greedy v0009 (57.25): the local wins (mass capture 0.718→0.796/0.873, NFS 0.0747→0.0733/0.0732, Moran 0.6743→0.6823/0.6833, hard objective 0.17168→0.17037) did **not** transfer to the board. Per the pre-declared stop rule, FGW discretization tuning is CLOSED: no further epsilon sweep.
+- The two lanes are mutually indistinguishable on the server (delta 0.01; only variogram differs by 0.1): no lane preference is claimed, and eps=0.002 concentration shows no board benefit over eps=0.005.
+- Both scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-T3-R1 — genotype-only ablation scoring round (new board best, tied lanes)
+| Record date | 2026-09-05 |
+|---|---|
+| Submission label | B4-T3-R1-GENOTYPE-ONLY-ABLATION L1/L2（包 `b4t3r1a__t3__upload__20260905.zip` / `b4t3r1b__t3__upload__20260905.zip`） |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-05) |
+| Run | `B4-T3-R1-GENOTYPE-ONLY-ABLATION-2026-09-05T010331.625263+0000`（artifacts/batch4/B4-T3-R1-GENOTYPE-ONLY-ABLATION-20260905-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-T3-R1 v0009 L1_GATA4_ZERO_ALL` | not supplied | `submissions/candidates/T3_gata4/v0009_b4_t3_r1_l1_gata4_zero_all/submission.h5ad` / `c6be65ec7d8c8a4b94bce936ff0cad985ac26f78c77ea3e4f68643f07076b088` | **46.95** | exact floor 46.8 | **new board best (+0.15); tied lanes** |
+| `B4-T3-R1 v0010 L2_GATA4_ZERO_HARD_LINEAGE` | not supplied | `submissions/candidates/T3_gata4/v0010_b4_t3_r1_l2_gata4_zero_hard/submission.h5ad` / `6f789ae8cf841ca59289779682ddb7c52a0db5f2c54e368c6424f0d1f6ec38cb` | **46.95** | exact floor 46.8 | **new board best (+0.15); tied lanes** |
+
+Per-metric skills (identical both lanes; rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+de_score 39.2 / de_direction 49.7 / severity_slope 50.0 / mmd_u 51.5 / variogram 51.0.
+
+Consistency and decision:
+- Both lanes beat the exact floor (46.8) by +0.15: per the pre-declared branches, the old downstream residuals were very likely the main harm source. L2 == L1 exactly, so no lineage-encoding preference can be claimed at board level: the gain comes from removing the harmful residual, not from the Mesp1 gate.
+- v0008 floor (46.8) is superseded as board best; all scored artifacts stay immutable. The gain is a construction effect, not mechanistic evidence; the T3-S1 scientific gate is unchanged.
+- Protocol-derived (not server-returned): derived T3=46.95 and derived Total=`48.47 + 55.98 + 46.95 = 151.40`; must be confirmed against the server page and must not be quoted as server values.
+- Both scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-T1-R1 — conservative family scoring round (no promotion; mass graft is family best)
+| Record date | 2026-09-05 |
+|---|---|
+| Submission label | B4-T1-R1-CONSERVATIVE-FAMILY L1-L4（包 `b4t1r1{a,b,c,d}__t1__upload__20260904.zip`） |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-05) |
+| Run | `B4-T1-R1-CONSERVATIVE-FAMILY-2026-09-04T195835.729374+0000`（artifacts/batch4/B4-T1-R1-CONSERVATIVE-FAMILY-20260904-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-T1-R1 v0011 L1_DAMP050` | not supplied | `submissions/candidates/T1_val/v0011_b4_t1_r1_l1_damp050/submission.h5ad` / `d67bf5dbcbf7b69c22bdfd0269b0af7527fd75257344e1f7b3c227587b147628` | **47.58** | best 48.47 | REJECT as improvement (-0.89) |
+| `B4-T1-R1 v0012 L2_POPMIX050` | not supplied | `submissions/candidates/T1_val/v0012_b4_t1_r1_l2_popmix050/submission.h5ad` / `8090413532275f6fed3acc1d36f0cb4c6ae257b64a51ad7a293596249e918a1d` | **47.77** | best 48.47 | REJECT as improvement (-0.70) |
+| `B4-T1-R1 v0013 L3_MASSGRAFT025` | not supplied | `submissions/candidates/T1_val/v0013_b4_t1_r1_l3_massgraft025/submission.h5ad` / `8ac4f7cff702da7766fc6e9035ba4e6555de7e85740b6c67e82ac75d7f0b7fbb` | **47.85** | best 48.47 | family best but REJECT (-0.62) |
+| `B4-T1-R1 v0014 L4_MASSGRAFT050` | not supplied | `submissions/candidates/T1_val/v0014_b4_t1_r1_l4_massgraft050/submission.h5ad` / `561a5421b11c8ba540cc5f60688fb638f0a2bd09981444e593ff3d67b0521bc8` | **46.90** | floor 47.0 | REJECT, below floor (-1.57) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram |
+|---|---|---|---|---|
+| v0011 L1 | 41.0 | 54.7 | 50.0 | 43.3 |
+| v0012 L2 | 40.3 | 54.2 | 50.5 | 45.0 |
+| v0013 L3 | 43.0 | 55.0 | 51.2 | 40.0 |
+| v0014 L4 | 42.7 | 54.1 | 49.8 | 38.8 |
+
+Consistency and decision:
+- All four lanes below best 48.47; v0014 even below the 47.0 floor. The family ranking (L3 > L2 > L1 > L4) shows 25% mass graft helps vs damp/popmix but 50% graft overshoots: the moscot mass signal is real but weak, and only at conservative dose.
+- v0004 stays incumbent. Per stop rules the T1 conservative family is closed as a promotion route; whether a follow-up micro-run is justified depends on Wave 2 authorization, not on re-tuning these lanes.
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-T3-R2 — developmental-axis repair scoring round (both below floor)
+| Record date | 2026-09-14 |
+|---|---|
+| Submission label | B4-T3-R2-DEVELOPMENTAL-AXIS-REPAIR L1/L2（单批次包，按一批一包规则） |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-14) |
+| Run | `B4-T3-R2-DEVELOPMENTAL-AXIS-REPAIR-2026-09-11T201916.227503+0000`（artifacts/batch4/B4-T3-R2-DEVELOPMENTAL-AXIS-REPAIR-20260911-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-T3-R2 v0011 L1_DELAY025` | not supplied | `submissions/candidates/T3_gata4/v0011_b4_t3_r2_l1_delay025/submission.h5ad` / `248910d4770edd207a00e2665b2cdd80e0a9411beba284744a98274a35ce2fea` | **46.45** | floor 46.8; R1 best 46.95 | REJECT (-0.35 vs floor) |
+| `B4-T3-R2 v0012 L2_DELAY050` | not supplied | `submissions/candidates/T3_gata4/v0012_b4_t3_r2_l2_delay050/submission.h5ad` / `270f9afcd2ae2fefbb2b7b1e44b46d873224d25fa30f33ca18ecce1cea025511` | **46.47** | floor 46.8; R1 best 46.95 | REJECT (-0.33 vs floor) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---|---|---|---|---|
+| v0011 L1 | 38.1 | 49.4 | 50.0 | 51.2 | 50.3 |
+| v0012 L2 | 38.5 | 49.3 | 50.0 | 51.0 | 49.9 |
+
+Consistency and decision:
+- Both lanes below the exact floor (46.8): per the pre-declared branch, T3 is marked **`ARCHITECTURE_RESET_REQUIRED`** — no reverse direction, no third alpha, no old-prior recombination within Batch 4.
+- Delay adds nothing over the genotype-only R1 best (46.95): de_score stays the weakest metric (38.1/38.5 vs 38.8 for the floor probe), i.e. the developmental-delay hypothesis does not move differential-expression magnitude.
+- T3 selection stays v0009/v0010 (46.95). All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### B4-T2-R2 — interpolation expression bridge scoring round (3 promotions)
+| Record date | 2026-09-14 |
+|---|---|
+| Submission label | B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE（单批次包，按一批一包规则） |
+| Board/phase | T2:embryo:val_interp; T2:heart:val_interp |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-14) |
+| Run | `B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE-2026-09-11T201037.603176+0000`（artifacts/batch4/B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE-20260911-v1/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `B4-T2-R2 embryo v0009 L1_MEAN_BRIDGE` | not supplied | `submissions/candidates/T2_embryo_val_interp/v0009_b4_t2_r2_l1_mean_bridge/submission.h5ad` / `0fb2dc40718ac2cbbe421fceb5a93ce5c61cd1addd35a5a3a70f423f7c9e11f2` | **61.79** | best 60.15 | **promote (+1.64)** |
+| `B4-T2-R2 embryo v0010 L2_MEAN_MASS_BRIDGE` | not supplied | `submissions/candidates/T2_embryo_val_interp/v0010_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad` / `34caae70aff220b6a754dedea54bd27a5c4d0962305341994dd239f60f14364e` | **62.29** | best 60.15 | **new board best (+2.14)** |
+| `B4-T2-R2 heart v0012 L1_MEAN_BRIDGE` | not supplied | `submissions/candidates/T2_heart_val_interp/v0012_b4_t2_r2_l1_mean_bridge/submission.h5ad` / `94e2b018b5a90712a3a815128fb2a25e891a06d3359923ec3cc9b9a0d3c60029` | **56.27** | best 57.25 | REJECT (-0.98) |
+| `B4-T2-R2 heart v0013 L2_MEAN_MASS_BRIDGE` | not supplied | `submissions/candidates/T2_heart_val_interp/v0013_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad` / `9080cfc3adbed773ad57a601548e15427b25696461b68d083a45c522b85daf08` | **62.04** | best 57.25 | **new board best (+4.79)** |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd |
+|---|---|---|---|---|---|---|---|---|
+| embryo v0009 L1 | 55.8 | 70.1 | 60.0 | 52.9 | 52.8 | 46.6 | 91.9 | 63.3 |
+| embryo v0010 L2 | 54.1 | 67.5 | 60.2 | 52.0 | 54.6 | 51.2 | 90.8 | 65.9 |
+| heart v0012 L1 | 55.3 | 59.1 | 54.0 | 29.8 | 62.0 | 48.6 | 82.5 | 59.2 |
+| heart v0013 L2 | 60.6 | 65.8 | 62.5 | 28.4 | 65.4 | 47.8 | 97.9 | 65.8 |
+
+Consistency and decision:
+- Embryo: both lanes promote; L2 (mean+mass, 62.29) is the new board best, +2.14. L2 beats L1 by +0.50 with occupancy_dice 51.2 vs 46.6 — composition resampling is the incremental gain on top of the mean bridge.
+- Heart: L2 (62.04, +4.79) is the new board best and the largest single-lane gain of Batch 4; L1 (56.27, -0.98) is rejected. The mean-shift-only lane fails while mean+mass succeeds — same pattern as embryo (L2 > L1 on both boards). Notably the 60%-clip concern did not materialize as damage: heart L2 leads on de_score (60.6), mmd_u (62.5), d2_shape (65.4), scale (97.9).
+- Variogram stays the weakest submetric on heart (28.4–29.8) while everything else rises — spatial autocorrelation remains the headroom.
+- Protocol-derived (not server-returned): derived T2 = `(62.29 + 62.04 + 50.53) / 3 = 58.29` and derived Total = `48.47 + 58.29 + 46.95 = 153.71`; must be confirmed against the server page and must not be quoted as server values.
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### Current-best snapshot — Total 153.7 (server-returned) with per-metric skills
+| Record date | 2026-09-15 |
+|---|---|
+| Source | User-provided server page read: Total **153.7** plus per-board precise scores (T2-R3 unscored per user closeout decision, see below) |
+| Selection | T1 v0004 (48.47) + T2 embryo v0010 (62.29) + T2 heart_interp v0013 (62.04) + T2 heart_extrap baseline v0001 (50.53) + T3 v0009/v0010 (46.95) |
+
+| Board | Score |
+|---|---:|
+| T1:val (v0004) | 48.47 |
+| T2:embryo:val_interp (v0010) | 62.29 |
+| T2:heart:val_interp (v0013) | 62.04 |
+| T2:heart:val_extrap (baseline v0001) | 50.53 |
+| T3:gata4 (v0009/v0010 tied) | 46.95 |
+| **Total (server)** | **153.7** |
+
+Consistency and decision:
+- Arithmetic check: `(62.29 + 62.04 + 50.53) / 3 = 58.29` (T2 derived); `48.47 + 58.29 + 46.95 = 153.71`, server Total **153.7**. The 0.01 gap is server-side rounding; the server-returned Total is authoritative.
+- This supersedes the 151.2 snapshot: the confirmed server Total is **153.7** (+2.5 vs 151.2, all of it from T2-R2).
+- T2-R3 (heart_extrap v0008/v0009/v0010) was closed unscored by explicit user decision on 2026-09-15 (see D-20260915-B4CLOSE-001); heart_extrap selection stays baseline v0001 (50.53). No score is fabricated for unsubmitted lanes.

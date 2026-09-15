@@ -1,0 +1,16 @@
+component	board	verdict	server_evidence	local_only	interface_ready	next_use
+T1 strict pseudobulk shift (v0004)	T1:val	server_positive (incumbent 48.47)	—	yes (recipe frozen)	keep as T1 parent until new architecture
+T1 damp050	T1:val	server_negative (-0.89)	—	yes	close
+T1 popmix050	T1:val	server_negative (-0.70)	—	yes	close
+T1 massgraft025	T1:val	server_negative (-0.62, family best)	pseudo best	yes	keep interface (state_mass.tsv), dose-sensitive
+T1 massgraft050	T1:val	server_negative (-1.57, below floor)	—	yes	close
+T1 late-program bridge	T1:val	not_tested (BLOCKED_DATA_NOT_READY)	—	no	data gate first
+T2 FGW global matching	T2:heart_interp	neutral (tie 57.3/57.31 vs 57.25)	local wins (mass/NFS/Moran)	yes	closed as tuning; keep code
+T2 mean bridge	T2 interp	server_positive (+1.64 embryo; heart L1 rejected)	pseudo high	yes	keep (L2 base)
+T2 mean+mass bridge	T2 interp	server_positive (+2.14 embryo; +4.79 heart)	—	yes	PROMOTE_PARENT (v0010/v0013)
+T2 heart_extrap damp/time/popmix	T2:heart_extrap	not_tested (closed_unscored)	backtest only	yes	future batch may score
+T3 genotype zeroing (Gata4)	T3:gata4	server_positive (+0.15 tied)	—	yes	keep as T3 parent
+T3 Mesp1 lineage gate	T3:gata4	neutral (L2==L1)	—	yes	no incremental value at board level
+T3 developmental delay	T3:gata4	server_negative (both below floor)	—	yes	close as method; keep ladder code
+T3 signed-prior family	T3:gata4	server_negative (old)	—	archived	closed (batch3)
+T1/T3 exact-floor constructors	T1/T3	neutral (47.0/46.8, below 50)	—	yes	keep as diagnostic baselines

@@ -531,3 +531,38 @@ reuse_promoted
 - evidence: "用户 2026-09-04 服务器页面读数；reports/SERVER_SCORE_REGISTRY.md §Current-best snapshot — Total 151.2；reports/SERVER_SUBMETRIC_REGISTRY.tsv（33 行）。"
 - boundary: "子项分数只做误差归因与路线诊断，不单独构成机制证据；T2 任务值 55.98 为 board 均值推导，非服务器直接返回值；blocks_submission: false。"
 - review_trigger: "下一次 board 分数变化时刷新快照与 TSV；若服务器口径变化则修订本规则。"
+
+### D-20260904-B4T2R1-001 — T2-R1 双 lane 57.3/57.31，均与 v0009 打平，关闭 FGW 离散化微调
+- scope: T2:heart:val_interp v0010/v0011（B4-T2-R1 run `…193416…`）
+- decision: "L1=57.3（+0.05）、L2=57.31（+0.06）相对 greedy v0009=57.25 均落在 ±0.1 噪声带内 → TIE，不晋级；按预声明停止规则关闭 FGW 离散化微调，不再扫 epsilon；incumbent v0009 留任当前 selection（tie 归现任）；两 lane 之间不声称偏好（差 0.01）。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §B4-T2-R1；INDEX.tsv v0010/v0011 行；metrics/greedy_vs_global.tsv；deliveries/b4t2r1__t2__upload__20260904.zip、b4t2r1b__t2__upload__20260904.zip。"
+- boundary: "本地 NFS/Moran/objective 全优但 board 打平——proxy 乐观偏差再添一例，不得用本地诊断宣称离散化胜利；16 个子项已按规则入库；blocks_submission: false。"
+- review_trigger: "Wave 1 其余路线（T1-R1/T3-R1）完成后 closeout 复核；或官方口径变化。"
+
+### D-20260905-WAVE1-001 — Wave 1 剩余评分：T3 双 lane 46.95 新 best（打平），T1 四 lane 均未晋级
+- scope: T3:gata4 v0009/v0010（B4-T3-R1 run `…010331…`）；T1:val v0011-v0014（B4-T1-R1 run `…195835…`）
+- decision: "T3 L1/L2 双双 46.95（+0.15 vs floor 46.8），并列新 board best：旧下游 residual 为主要伤害源获第二实证；L2==L1，不声称 lineage 偏好。T1 四 lane 47.58/47.77/47.85/46.90 均低于 best 48.47（排序 L3>L2>L1>L4），v0004 留任；保守族作为晋级路线关闭。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §B4-T3-R1 / §B4-T1-R1；INDEX.tsv 六行；26 个子项已入库；deliveries 六包。"
+- boundary: "derived Total≈151.40 待服务器页面确认，不得引用为服务器值；T3 增益为构造效应，非机制证据，科学 gate 不变；blocks_submission: false。"
+- review_trigger: "服务器页面 Total 与 derived 151.40 不一致；或 Wave 2 授权后 closeout 复核。"
+
+### D-20260911-B4T1R2-001 — T1-R2 数据就绪门控：BLOCKED_DATA_NOT_READY，立即停止
+- scope: B4-T1-R1-LATE-PROGRAM-BRIDGE（Wave 2 条件任务，进入条件 8 项核查）
+- decision: "门控未通过，任务停止，不建 run、不开网络窗口：(1) P0 完成 ✓；(2) 无已登记 allowlist（全仓 grep 仅见 prompt 对 allowlist 的引用性文字，无登记条目）✗；(3) 无可直接使用的已净化 processed expression——T3-S1A 的 atlas 净化输入仅 exact E8.75，不含可连 E9.5 前体的 late program；7 个辅助外链均为人类肝/癌/perturbseq，与小鼠胚胎 late program 无关 ✗；(4) 全量 atlas 含 E10.5+ 阶段，启用即触禁区；(5) 无 mutant 需求 ✓ 但无意义；(6)(7) 满足但无可用对象。按 prompt 判 BLOCKED_DATA_NOT_READY。"
+- evidence: "infra/bioinf-data-index/INDEX.tsv（75 行，无 allowlist 条目）；data/external/INDEX.tsv（7 外链，人类非胚胎）；T3-S1A state_input_counts.mtx（exact E8.75 only）。"
+- boundary: "这是 prompt 预设的数据停止位，不是科学失败；不得花数天修数据；blocks_submission: false。"
+- review_trigger: "未来出现已登记 allowlist + 合规 late-program processed 对象时可重开新 run；本结论不关闭 T1 其他路线。"
+
+### D-20260914-WAVE2-001 — Wave 2 评分：T2-R2 三晋级（含 heart +4.79），T3-R2 双败触发架构重置
+- scope: T2 embryo v0009/v0010 + heart v0012/v0013（B4-T2-R2 run `…201037…`）；T3 v0011/v0012（B4-T3-R2 run `…201916…`）
+- decision: "embryo L1=61.79（+1.64）晋级、L2=62.29（+2.14）新 best；heart L2=62.04（+4.79）新 best、L1=56.27（-0.98）淘汰；两 board 均为 L2> L1，组成重采样是 mean bridge 之上的增量。T3 双 lane 46.45/46.47 均低于 floor 46.8 → T3 标 ARCHITECTURE_RESET_REQUIRED，Batch 4 内不再追加 T3 手工路线。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §B4-T2-R2 / §B4-T3-R2；INDEX.tsv 六行；42 个子项已入库。"
+- boundary: "derived T2=58.29/Total≈153.71 待服务器页面确认，不得引用为服务器值；T3 结论不解除科学 gate；blocks_submission: false。"
+- review_trigger: "服务器页面 Total 与 derived 153.71 不一致；或 closeout 复核。"
+
+### D-20260915-B4CLOSE-001 — Batch 4 closeout：Total 153.7 确认，ARCHITECTURE_RESET_REQUIRED
+- scope: batch4 全批（P0 + R1×3 + R2×3，T1-R2 BLOCKED_DATA_NOT_READY，T2-R3 closed_unscored）
+- decision: "服务器确认 Total=153.7（derived 153.71，差 0.01 为服务端舍入）；S0 达成、S1 未达成、S2 达成（T2 +2.31）、S3 未达成；触发器多项成立（floor 未解、总差距缩小 6.1%、T1<52、T3≤50 且离 68 差 21.05）→ ARCHITECTURE_RESET_REQUIRED；T2 插值 parent（v0010/v0013）保留为增量资产；T2-R3 三 lane 按用户明确决定关闭不评分（artifact 不变，可未来复用）。"
+- evidence: "reports/BATCH4_PHASE_REPORT_20260915.md、BATCH4_SCORE_GAP.md、BATCH4_ERROR_SIGNATURES.md、BATCH4_COMPONENT_LEDGER.tsv、BATCH4_PROXY_VS_SERVER.md、ARCHITECTURE_RESET_BRIEF.md、ARCHITECTURE_INPUT_READINESS.tsv；registry Total 153.7 确认节；INDEX T2-R3 三行 closed_unscored 标注。"
+- boundary: "closeout 不训练、不生成 H5AD、不改 scored artifact；新架构另行立项，本批不再追加 run；blocks_submission: false。"
+- review_trigger: "新架构立项时重读 ARCHITECTURE_RESET_BRIEF.md §9–§12。"

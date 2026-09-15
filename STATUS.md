@@ -26,11 +26,11 @@ ROADMAP  [#######-] 7/8 节点（N8 batch4 已启动，P0 完成）
 
 ## 第二部分：给 agent 的接手信息
 
-- 活跃节点：N8 batch4；P0 完成 + T1 n=1,706 补充探针已评分（46.8，n_obs 被排除），FLOOR_PARITY_UNRESOLVED 维持，Wave 1 待授权。
+- 活跃节点：无（batch4 已封板，2026-09-15）：Total 服务器确认 **153.7**；T2-R3 按用户决定关闭不评分；判定 **ARCHITECTURE_RESET_REQUIRED**（T2 插值 parent 保留）；新架构另行立项。
 - 核心文件：`submissions/INDEX.tsv`（候选+哈希）、`reports/SERVER_SCORE_REGISTRY.md`（分数）、`docs/coordination/STATUS.md`（并行状态）、`artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/`。
 - 复现：`PYTHONPATH=docs/batch3/interfaces /opt/anaconda3/bin/python -m pytest tests/ -q`（174 passed）。
 - 最近 DECISIONS：`D-20260904-B4P0-003`（n=1,706 探针 46.8，n_obs 被排除）；同批 `D-20260904-B4P0-002/001`。
-- 下一步：Total 151.2 已确认；等 push 授权与 Wave 1 授权（T2-R1 优先）。
+- 下一步：无待办 run；新架构立项时重读 `reports/ARCHITECTURE_RESET_BRIEF.md` §9–§12；本批改动待 push（需授权）。
 
 ---
 
@@ -104,9 +104,9 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | `HX-DYNAMICS-KILLTEST-20260904-v1` 完成：MIOFlow（增长/死亡+随机动力学）在预声明 kill metric（留 E9.5 state-mass L1）上 0.7475，未同时优于 moscot 0.6645 与 parent 1.1894 → **REJECT**，方向关闭；当前 best 仍为 v0004=48.5，无新授权不追加 T1 atom | kill test 只出 report，不生成候选；分数已回填的候选见 `reports/SERVER_SCORE_REGISTRY.md` 与 INDEX.tsv |
-| T2 | J1-FGW heart_interp v0009 服务器 **57.3（+0.6）晋级 board best**（2026-09-04 回填）；embryo v0008 保持 HOLD 不上传；**batch3 全部任务执行完毕**（`HX-DYNAMICS-KILLTEST` 已 REJECT，见 T1 行） | 服务器未返回新 T2/Total（保持 55.7/149.5）；derived T2≈55.97/Total≈149.8 待服务器确认 |
-| T3 | B2-T3-A1 v0006/v0007 双双 **45.5（+0.2）** 并列晋级 board best（2026-09-04 回填，首次超过 wt_identity 45.3）；科学 gate 仍收口 `CLOSED_AS_RESEARCH_COMPONENT`，leaderboard 增益不解除 gate | derived T3=45.5/Total≈149.7 待服务器页面确认；重开条件见收口报告 §6 |
+| T1 | B4-T1-R1 四 lane 服务器 47.58/47.77/47.85/46.90，均低于 best 48.47（排序 L3>L2>L1>L4）；v0004 留任，保守族晋级路线关闭 | 16 子项已入库；Wave 2 或封板待授权 |
+| T2 | B4-T2-R2 四 lane：embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1。T2-R3 三 lane 按用户决定关闭不评分 | selection：embryo v0010 + heart v0013 + extrap baseline；Total 153.7 已确认 |
+| T3 | B4-T3-R2 双 lane v0011=**46.45**/v0012=**46.47**，均低于 floor 46.8 → **ARCHITECTURE_RESET_REQUIRED**；selection 保持 v0009/v0010（46.95）；科学 gate 仍收口 | Total 153.7 已确认 |
 
 ## 更新规则
 

@@ -54,3 +54,7 @@
 2026-09-04（batch4）：`B4-P0-STATE-FLOOR-PARITY` 完成并评分。T1 exact-floor 候选 v0009（`b4p0_l0_exact_floor`，均匀抽样 seed 20260904、原始行序、零表达变换、不用 celltype）服务器 **47.0**，与分层版 baseline-001 v0001 完全相同 → celltype 分层被排除为 floor 差距（-3.0 vs 官方 50）的原因；`FLOOR_PARITY_UNRESOLVED` 开启，剩余主假设为 pred n_obs 或 bundle 级差异。当前 best 不变：v0004=48.5。产物 `artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/`。下一步：Wave 1 `B4-T1-R1-CONSERVATIVE-FAMILY` 待授权。
 
 2026-09-04（夜）：B4-P0 补充探针 v0010（`b4p0_l0floor_n1706`，n=1,706，同一种子均匀抽样、原始行序、零变换）服务器 **46.8**（-0.2 vs v0009=47.0）→ **n_obs 假设被排除**，FLOOR_PARITY_UNRESOLVED 维持；T1 best 仍为 v0004=48.5。产物 `artifacts/batch4/B4-P0-T1-FLOOR-PROBE2-20260904-v1/`。下一步：Wave 1 `B4-T1-R1-CONSERVATIVE-FAMILY` 待授权（provisional-score 身份）。
+
+2026-09-05（batch4 Wave 1）：`B4-T1-R1-CONSERVATIVE-FAMILY` 完成，四 lane 待上传评分——v0011（L1 damp0.5，damp=1.0 字节复现 v0004）、v0012（L2 popmix，shift 与 v0004 重叠行逐值一致）、v0013/v0014（L3/L4 mass graft 0.25/0.50，obs-identity 记 FAIL_BY_DESIGN_ACCEPTED）；contract 服务器维度全过，行追溯 ledger 全断言通过，4× 本地 scorer 仅排序/防灾难。产物 `artifacts/batch4/B4-T1-R1-CONSERVATIVE-FAMILY-20260904-v1/`，交付包 `deliveries/b4t1r1{a,b,c,d}__t1__upload__20260904.zip`（推荐顺序 L1→L2→L4→L3）。结论待服务器仲裁。
+
+2026-09-05（batch4 Wave 1）：`B4-T1-R1-CONSERVATIVE-FAMILY` 四 lane 服务器仲裁——v0011=**47.58**（-0.89）、v0012=**47.77**（-0.70）、v0013=**47.85**（-0.62，族内最优）、v0014=**46.90**（-1.57，低于 floor）；v0004=48.47 留任，保守族晋级路线关闭。26 个子项中 T1 占 16，已入库。详见 registry §B4-T1-R1 与 DECISIONS D-20260905-WAVE1-001。

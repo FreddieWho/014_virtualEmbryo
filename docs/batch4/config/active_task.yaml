@@ -1,4 +1,4 @@
-active_task: B4-P0-STATE-FLOOR-PARITY
+active_task: B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL
 controller_prompt: docs/batch4/01_CODEX_CONTROLLER_PROMPT.md
 task_manifest: docs/batch4/config/task_manifest.yaml
 route_status: docs/batch4/config/route_status.yaml

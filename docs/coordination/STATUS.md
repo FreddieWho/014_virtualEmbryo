@@ -41,22 +41,22 @@ batch3:
   release_changelog: reports/RELEASE_CHANGELOG_BATCH3_20260904.md
   next_action: "已收口；后续见 batch4"
 batch4:
-  status: P0_COMPLETE_WAVE1_PENDING_AUTHORIZATION
+  status: CLOSED_ARCHITECTURE_RESET_REQUIRED
   active_task: null
-  completed: "B4-P0-STATE-FLOOR-PARITY (COMPLETE; artifacts/batch4/B4-P0-STATE-FLOOR-PARITY-20260904-v1/)"
+  completed: "B4-P0 + R1x3 + R2x3 (T1-R2 blocked data, T2-R3 closed unscored); closeout 2026-09-15, D-20260915-B4CLOSE-001"
   floor_parity: "FLOOR_PARITY_UNRESOLVED (T1 exact floor 47.0 == stratified 47.0; T3 exact floor 46.8 > wt_identity 45.3; both below official 50)"
-  next_action: "Wave 1 (B4-T1-R1 / B4-T2-R1 / B4-T3-R1) 待用户授权；T3 对比基准已改为 46.8"
+  next_action: "Batch 4 closed; next architecture separate proposal (see reports/ARCHITECTURE_RESET_BRIEF.md)"
 data:
   challenge_manifest: data/MANIFEST.tsv
   auxiliary_links: 7
   auxiliary_model_input: false
 
 leaderboard:
-  total: 151.2
+  total: 153.7
   T1: 48.47
-  T2: 55.98
-  T3: 46.79
-  aggregate_basis: "151.2 is the server-returned Total (2026-09-04 page read); boards precise: 48.47/60.15/57.25/50.53/46.79; T2 55.98 is the board-mean derivation (server rounding gives 151.2 vs hand 151.24); per-metric skills: reports/SERVER_SUBMETRIC_REGISTRY.tsv"
+  T2: 58.29
+  T3: 46.95
+  aggregate_basis: "153.7 is the server-returned Total (2026-09-15 user confirm; derived 153.71, 0.01 rounding); boards 48.47/62.29/62.04/50.53/46.95; per-metric skills: reports/SERVER_SUBMETRIC_REGISTRY.tsv"
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -68,7 +68,7 @@ tasks:
     worktree: current
     current_best: "candidate/T1_val/v0004_strict_pseudobulk_shift"
     current_best_score: 48.47
-    next_action: "B4-P0 exact floor v0009 服务器 47.0（分层被排除）；补充探针 v0010（n=1,706）服务器 46.8（-0.2，n_obs 假设被排除）；FLOOR_PARITY_UNRESOLVED 维持，剩余本地不可见的 bundle 级差异；T1 selection 不变（v0004=48.5）；Wave 1 B4-T1-R1-CONSERVATIVE-FAMILY 待授权"
+    next_action: "B4-T1-R1 四 lane 服务器 47.58/47.77/47.85/46.90，均低于 best 48.47（排序 L3>L2>L1>L4）；v0004 留任，保守族晋级路线关闭；Wave 2 或封板待授权"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -85,10 +85,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: B1-A1 L1 embryo 60.15 + T2-J1 v0009 heart_interp 57.25 + baseline heart_extrap 50.53"
-    current_best_score: 55.98
-    current_best_score_basis: "board-mean derivation (60.15+57.25+50.53)/3=55.98; consistent with server Total 151.2"
-    next_action: "T2-J1 heart_interp v0009 服务器 57.3（+0.6）晋级；batch3 剩余 HX-DYNAMICS-KILLTEST（单工具/单 board/单 kill metric，实例化后执行）"
+    current_best: "per-board selection: B4-T2-R2 v0010 embryo 62.29 + v0013 heart_interp 62.04 + baseline heart_extrap 50.53"
+    current_best_score: 58.29
+    current_best_score_basis: "board-mean derivation (62.29+62.04+50.53)/3=58.29; derived Total≈153.71 pending confirmation"
+    next_action: "B4-T2-R2 四 lane 服务器 embryo 61.79/62.29、heart 56.27/62.04 → embryo v0010 与 heart v0013 晋级新 best；L2>L1 双 board 一致；T2-R3（heart_extrap 校准）待独立 UTC 日；机械组合 run 许可待评估"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -101,10 +101,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "B4-P0 v0008 b4p0_l0_exact_floor (46.79 precise, new board best; supersedes B2-T3-A1 v0006/v0007 tied 45.5)"
-    current_best_score: 46.79
+    current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
+    current_best_score: 46.95
     active_atom: null
-    next_action: "B4-P0 exact floor v0008 服务器 46.8（+1.5 vs wt_identity 45.3，+1.3 vs v0006/7）晋级 board best；FLOOR_PARITY_UNRESOLVED 开启（仍低于官方 50）；旧 signed-prior residual 相对 no-change 有害获实证；Wave 1 B4-T3-R1-GENOTYPE-ONLY-ABLATION 待授权，对比基准改为 46.8；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT"
+    next_action: "B4-T3-R2 双 lane 服务器 46.45/46.47，均低于 floor 46.8 → T3 标 ARCHITECTURE_RESET_REQUIRED，Batch 4 内不再追加手工路线；selection 保持 v0009/v0010（46.95）；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -181,6 +181,66 @@ handoffs:
     recommended_decision: "n_obs 被排除；T1 selection 不变；Wave 1 可按 provisional-score 身份继续"
     blocker: "FLOOR_PARITY_UNRESOLVED; blocks_submission: false"
     action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 Wave 1 授权"
+  - task: T3
+    atom: B4-T3-R1-GENOTYPE-ONLY-ABLATION
+    status: SCORED_NEW_BOARD_BEST_TIED
+    final_artifacts: 2
+    candidate_ids: "T3:gata4 v0009 b4_t3_r1_l1_gata4_zero_all (46.95); v0010 b4_t3_r1_l2_gata4_zero_hard (46.95);详见 submissions/INDEX.tsv"
+    parents: "v0008 exact floor (provisional); frozen B2-T3-A1 lineage_gate"
+    artifacts: "artifacts/batch4/B4-T3-R1-GENOTYPE-ONLY-ABLATION-20260905-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "2/2 contract pass、坐标/行序/n_obs/Gata6未动逐位一致；10 子项已入库"
+    risks: "L3 BLOCKED_CONDITION_NOT_CONFIRMED（非阻塞）；增益为构造效应，非机制证据"
+    recommended_decision: "双 lane 并列晋级 board best；derived Total≈151.40 待确认"
+    blocker: null
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 Wave 2 或封板授权"
+  - task: T1
+    atom: B4-T1-R1-CONSERVATIVE-FAMILY
+    status: SCORED_NO_PROMOTION
+    final_artifacts: 4
+    candidate_ids: "T1:val v0011 (47.58); v0012 (47.77); v0013 (47.85, family best); v0014 (46.90);详见 submissions/INDEX.tsv"
+    parents: "v0004 recipe / v0009 pool / moscot mass"
+    artifacts: "artifacts/batch4/B4-T1-R1-CONSERVATIVE-FAMILY-20260904-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "L1/L2 contract PASS；L3/L4 FAIL_BY_DESIGN_ACCEPTED（obs-identity only）；16 子项已入库"
+    risks: "v0014 低于 floor；本地 pseudo 分数偏高未兑现"
+    recommended_decision: "v0004 留任；保守族晋级路线关闭"
+    blocker: null
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 Wave 2 或封板授权"
+  - task: T2
+    atom: B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE
+    status: SCORED_THREE_PROMOTIONS
+    final_artifacts: 4
+    candidate_ids: "T2:embryo v0009 (61.79); v0010 (62.29 best); T2:heart v0012 (56.27 rej); v0013 (62.04 best);详见 submissions/INDEX.tsv"
+    parents: "embryo v0002 scale; heart v0009 FGW; frozen brackets E7.25/E8.0 and E8.25/E8.75"
+    artifacts: "artifacts/batch4/B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE-20260911-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "L1双PASS、L2双FAIL_BY_DESIGN_ACCEPTED；字节确定；42子项中T2占32已入库"
+    risks: "heart 60% clip已披露无collapse；本地pseudo循环性已声明"
+    recommended_decision: "embryo v0010、heart v0013晋级selection；T2-R3另日起跑；机械组合run许可待评估"
+    blocker: null
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 Total 确认与 T2-R3 授权"
+  - task: T3
+    atom: B4-T3-R2-DEVELOPMENTAL-AXIS-REPAIR
+    status: SCORED_ARCHITECTURE_RESET_REQUIRED
+    final_artifacts: 2
+    candidate_ids: "T3:gata4 v0011 (46.45); v0012 (46.47);详见 submissions/INDEX.tsv"
+    parents: "v0008 exact floor; WT ladder E8.25/E8.75/E9.5; frozen p_mesp1"
+    artifacts: "artifacts/batch4/B4-T3-R2-DEVELOPMENTAL-AXIS-REPAIR-20260911-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "2/2 contract PASS、逐位一致、字节确定；10子项已入库"
+    risks: "仅5/33 states有方向；增益为构造效应"
+    recommended_decision: "T3标ARCHITECTURE_RESET_REQUIRED；selection保持46.95；Batch4内不追加手工路线"
+    blocker: "ARCHITECTURE_RESET_REQUIRED; blocks_submission: false"
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；等待 closeout"
+  - task: T2
+    atom: B4-T2-R1-FGW-ASSIGNMENT-REPAIR
+    status: SCORED_TIED_NO_PROMOTION
+    final_artifacts: 2
+    candidate_ids: "T2:heart:val_interp v0010 b4_t2_r1_l1_globalmatch (57.3); v0011 b4_t2_r1_l2_globalmatch (57.31);详见 submissions/INDEX.tsv"
+    parents: "v0007 t2_s3_l1_pycpd（与 v0009 相同 parent）；frozen FGW problem 4a957da5"
+    artifacts: "artifacts/batch4/B4-T2-R1-FGW-ASSIGNMENT-REPAIR-20260904-v1/；SHA256 以 submissions/INDEX.tsv 为准"
+    checks: "2/2 contract pass、protected PASS、字节确定；本地 NFS/Moran/objective 全优但 board 打平；16 子项已入库"
+    risks: "proxy 乐观偏差再添一例；两 lane 服务器不可区分（差 0.01）"
+    recommended_decision: "TIE 不晋级，v0009 留任；关闭 FGW 离散化微调；Wave 1 其余待授权"
+    blocker: null
+    action: "分数已回填 registry/INDEX/DECISIONS/TRACKING；16 子项已入库；等待 Wave 1 其余授权"
   - task: T2
     atom: B1-A1
     status: complete
