@@ -19,7 +19,7 @@
 - [x] T2-R3 处置（2026-09-15 用户明确决定）：关闭不评分 —— v0008/v0009/v0010 保留 candidate/score_pending，INDEX 已标 closed_unscored，artifact 不变，可未来复用；不再追分
 - [x] 服务器确认 Total=**153.7**（derived 153.71，差 0.01 为服务端舍入）
 - [x] Batch 4 closeout（2026-09-15）：六报告 + ARCHITECTURE_RESET_BRIEF 落盘；判定 **ARCHITECTURE_RESET_REQUIRED**（T2 插值 parent 保留）；D-20260915-B4CLOSE-001
-- [ ] commit + push 本批改动（需授权）
+- [x] commit + push 本批改动——已推送 `c7cb36b`（Total 153.7 确认、T2-R3 关闭、closeout 七报告；大文件按惯例留本地）
 
 ## 分支记录
 
