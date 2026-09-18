@@ -40,14 +40,9 @@
 
 用户已将下载结果落在 `baseline/veckit_tutorial.ipynb`。其代码单元内容与 `third_party/veckit/veckit_tutorial.ipynb` 一致，差异仅为 notebook 元数据、cell id 和已执行输出。
 
-### 3. 官方 released 的 T1 E7.75 unused background（可选）
+### 3. E7.75 single-cell（未发布，无下载）
 
-官网列出 E7.75 single-cell RNA 为 **unused / outside the Task-1 split，911 MB**。它不是当前 T2 heart 工作的必需数据；只有要完整保留官方公开 release 或做合规的 T1 background 实验时才下载。数据页要求登录后下载：
-
-- [Challenge data](https://virtualembryo.ai/challenge/data)
-- [Challenge account / sign-in](https://virtualembryo.ai/challenge/account)
-
-下载后文件名、实际 bytes、SHA-256 和用途必须写入 `infra/bioinf-data-index/`；不能把它当作 T2 embryo 的 E7.75 target 使用。
+2026-09-17 重抓官网 Data 页：E7.75 列为 **unused / not released — held out as the Task-2 embryo test stage**，原文“no measured data from that stage is distributed for any task”。此前“已发布/911 MB/登录下载”的缓存记录作废（来源：https://virtualembryo.ai/challenge/data，2026-09-17 实抓）。T1-D7 前提不存在，转 CLOSED；不得从第三方镜像补齐（withheld 清单：T2 embryo E7.75 test；外部数据若落在 protected window 或同一 genotype 属违规风险）。
 
 ## 当前不可下载的内容
 

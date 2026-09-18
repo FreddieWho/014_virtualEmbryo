@@ -551,3 +551,163 @@ Consistency and decision:
 - Arithmetic check: `(62.29 + 62.04 + 50.53) / 3 = 58.29` (T2 derived); `48.47 + 58.29 + 46.95 = 153.71`, server Total **153.7**. The 0.01 gap is server-side rounding; the server-returned Total is authoritative.
 - This supersedes the 151.2 snapshot: the confirmed server Total is **153.7** (+2.5 vs 151.2, all of it from T2-R2).
 - T2-R3 (heart_extrap v0008/v0009/v0010) was closed unscored by explicit user decision on 2026-09-15 (see D-20260915-B4CLOSE-001); heart_extrap selection stays baseline v0001 (50.53). No score is fabricated for unsubmitted lanes.
+
+### G1-T3 — 15-round goal T3 lanes scoring round (all below best; selection unchanged)
+| Record date | 2026-09-16 |
+|---|---|
+| Submission label | G1 15-round goal T3 lanes（包 `g0t3__t3__upload__20260916.zip`，成员 `t3_gata4__r1prop__v0013.h5ad` 等 5 个） |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-16) |
+| Run | `G1-T3-R1-DIRECTPROP-20260916-v1` / `G1-T3-R2-GRADEDDOSE-20260916-v1` / `G1-T3-R3-LINEAGEDOSE-20260916-v1` / `G1-T3-R4-COMBO-20260916-v1` / `G1-T3-R5-AMP2-20260916-v1`（artifacts/g0/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `G1-T3-R1 v0013 L_A_DIRECTPROP` | not supplied | `submissions/candidates/T3_gata4/v0013_g0_t3_r1_directprop/submission.h5ad` / `b8467cc07880f7f5ca73986738cd99cd26dfd502acecfcf21b0e6ff89b36e789` | **46.88** | best 46.95 | REJECT as improvement (-0.07) |
+| `G1-T3-R2 v0014 L_B_GRADEDDOSE` | not supplied | `submissions/candidates/T3_gata4/v0014_g0_t3_r2_gradeddose/submission.h5ad` / `b3406e154e7bb6e791dddc8f815967bab9eede705c408fcd942eebd030ced552` | **46.95** | best 46.95 | TIE, v0009/v0010 stay (0.00) |
+| `G1-T3-R3 v0015 L_C_LINEAGEDOSE` | not supplied | `submissions/candidates/T3_gata4/v0015_g0_t3_r3_lineagedose/submission.h5ad` / `86c12e4901e8ff14dc98d74ab257f07d050adf033d77f2d3cc37e44833ddafa3` | **46.95** | best 46.95 | TIE, v0009/v0010 stay (0.00) |
+| `G1-T3-R4 v0016 L_D_COMBO` | not supplied | `submissions/candidates/T3_gata4/v0016_g0_t3_r4_combo/submission.h5ad` / `28caf0e473e4b72aba6ecc0ea1f2b7a3d6394eed8a7a6ce21b84df5fe66d9846` | **46.88** | best 46.95 | REJECT as improvement (-0.07) |
+| `G1-T3-R5 v0017 L_E_AMP2X` | not supplied | `submissions/candidates/T3_gata4/v0017_g0_t3_r5_amp2/submission.h5ad` / `9e05be511b6c56271bf7313af28b0ec74afdd0d358ca25527ae664bc3c41131c` | **46.84** | best 46.95 | REJECT as improvement (-0.11) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---|---|---|---|---|
+| v0013 L_A | 39.2 | 49.6 | 50.0 | 51.5 | 50.4 |
+| v0014 L_B | 39.2 | 49.7 | 50.0 | 51.5 | 51.0 |
+| v0015 L_C | 39.2 | 49.7 | 50.0 | 51.5 | 51.0 |
+| v0016 L_D | 39.2 | 49.6 | 50.0 | 51.5 | 50.4 |
+| v0017 L_E | 39.2 | 49.6 | 50.0 | 51.4 | 50.0 |
+
+Consistency and decision:
+- No lane beats best 46.95; two TIE (v0014/v0015 = 46.95), three below (v0013/v0016 = 46.88, v0017 = 46.84). Selection stays v0009/v0010 (46.95 tied).
+- de_score is pinned at 39.2 across all five lanes — the weakest submetric does not move under any Gata4-axis mechanism, consistent with the pre-registered local-kit blindness diagnosis (proxy de 0.1739 ×5 identical). Direction/slope/mmd_u/variogram move only ±0.1–1.0.
+- T3 propagation-dose family is CLOSED as a promotion route (mirrors the B4-T3-R2 architecture-reset call, now with five more server points): no further hand-built lanes on this axis without a new mechanism.
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### G1-T2 — 15-round goal heart_extrap lanes scoring round (1 promotion: v0011 shrink)
+| Record date | 2026-09-16 |
+|---|---|
+| Submission label | G1 15-round goal T2-extrap lanes（包 `g0t2__t2__upload__20260916.zip`，成员 `t2_hrt_ext__r2shr__v0011.h5ad` 等 6 个） |
+| Board/phase | T2:heart:val_extrap |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-16) |
+| Run | `G1-T2-R1-EXTRAP-GATE-20260916-v1`（门控） / `G1-T2-R2-SHRINK-20260916-v1` / `G1-T2-R3-SPATIAL-20260916-v1` / `G1-T2-R4-KSWEEP-20260916-v1` / `G1-T2-R5-K60-20260916-v1`（artifacts/g0/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `G1-T2-R2 v0011 L1_SHRINK` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0011_g0_t2_r2_shrink/submission.h5ad` / `38edc52e3a9af7cdf87085c0f87d12d630dcfec8d5bb55735b383e62017d44e9` | **50.64** | baseline 50.53 | **promote (+0.11), new board best** |
+| `G1-T2-R3 v0012 L1_SPATIAL_K15` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0012_g0_t2_r3_spatial/submission.h5ad` / `4456cc7568a237093d9e944f36a5877d4d0bb465342f40df7ee50c04b0c00873` | **50.26** | baseline 50.53 | REJECT (-0.27) |
+| `G1-T2-R4 v0013 L1_K07` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0013_g0_t2_r4_k07/submission.h5ad` / `451837a8d9b69f2cf87c1147e2401866baad1165fe837bc9cbc09516d8f6cd0b` | **50.32** | baseline 50.53 | REJECT (-0.21) |
+| `G1-T2-R4 v0014 L2_K15` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0014_g0_t2_r4_k15/submission.h5ad` / `d7583979c33ca686143a270e7f195e3daf4dfe9f7e459db658c7735b804cec99` | **50.26** | baseline 50.53 | REJECT (-0.27) |
+| `G1-T2-R4 v0015 L3_K30` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0015_g0_t2_r4_k30/submission.h5ad` / `04e360c51dbf01295a9c2a6eaf22061d68bea9a7f1118260ccfb1256f6c134fa` | **50.28** | baseline 50.53 | REJECT (-0.25) |
+| `G1-T2-R5 v0016 L1_K60` | not supplied | `submissions/candidates/T2_heart_val_extrap/v0016_g0_t2_r5_k60/submission.h5ad` / `1f02c2f2605217644852443baab7d04222c3490cb5f248223bad4bf4f087026d` | **50.25** | baseline 50.53 | REJECT (-0.28) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd |
+|---|---|---|---|---|---|---|---|---|
+| v0011 L1 shrink | 50.0 | 51.9 | 49.9 | 48.5 | 46.2 | 53.2 | 49.7 | 52.5 |
+| v0012 k15 | 49.2 | 52.2 | 49.9 | 45.3 | 46.2 | 53.2 | 49.7 | 52.5 |
+| v0013 k07 | 49.2 | 52.3 | 50.0 | 45.9 | 46.2 | 53.2 | 49.7 | 52.5 |
+| v0014 k15 | 49.2 | 52.2 | 49.9 | 45.3 | 46.2 | 53.2 | 49.7 | 52.5 |
+| v0015 k30 | 49.6 | 52.1 | 49.9 | 45.0 | 46.2 | 53.2 | 49.7 | 52.6 |
+| v0016 k60 | 49.6 | 52.1 | 49.8 | 44.6 | 46.2 | 53.2 | 49.7 | 52.7 |
+
+Consistency and decision:
+- v0011 (t-shrink C=2) = **50.64 (+0.11)** → **new heart_extrap board best** (displaces baseline v0001 50.53). The T1-winning mechanism DID port to extrap at server level even though the local gate called it pinned-negative (local 0.2466/0.4183 vs baseline 0.2466/0.4221). Local proxy direction was inverted on this family — recorded as a proxy-lesson update.
+- All five spatial-smoothing lanes (k07–k60) score BELOW baseline (-0.21 to -0.28) despite winning locally (local 0.2603 > 0.2466). The local extrap proxy is ADVERSARIAL on the spatial family: local win → server loss. Spatial-smoothing family is CLOSED as a promotion route on heart_extrap.
+- Net effect: heart_extrap 50.53 → 50.64 (+0.11); selection updates to v0011. New weakest board is now T3 (46.95).
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### G1-T1 — 15-round goal lanes scoring round (no promotion; best stays v0004)
+| Record date | 2026-09-17 |
+|---|---|
+| Submission label | G1 15-round goal T1 lanes（包 `g0t1__t1__upload__20260916.zip`，成员 `t1_val__r1node__v0015.h5ad` 等 7 个） |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-17) |
+| Run | `G1-T1-R1-NEURAL-ODE-20260916-v1` / `G1-T1-R2-SUBSTATE-20260916-v1` / `G1-T1-R3-MATURITY-20260916-v1` / `G1-T1-R4-SHRINK-20260916-v1` / `G1-T1-R5-SHRINKSWEEP-20260916-v1`（artifacts/g0/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `G1-T1-R1 v0015 L1_NODE` | not supplied | `submissions/candidates/T1_val/v0015_g0_t1_r1_neural_ode/submission.h5ad` / `a2ca6bd555e3e01b16026c15144063d733916b6204180aec163c1edc894d4273` | **48.51** | best 48.47 | TIE (+0.04, within ±0.1), v0004 stays |
+| `G1-T1-R2 v0016 L1_SUB` | not supplied | `submissions/candidates/T1_val/v0016_g0_t1_r2_substate/submission.h5ad` / `889f87bbf2f3c327d304856532ea6902569f6a13f874319e589fef216126d2c1` | **48.14** | best 48.47 | REJECT (-0.33) |
+| `G1-T1-R3 v0017 L1_MAT` | not supplied | `submissions/candidates/T1_val/v0017_g0_t1_r3_maturity/submission.h5ad` / `594db45fc5be4a024e3ab0842b7e90461d42a8adda1d9f5d8292b899b774c1fb` | **47.46** | best 48.47 | REJECT (-1.01) |
+| `G1-T1-R4 v0018 L1_C2` | not supplied | `submissions/candidates/T1_val/v0018_g0_t1_r4_shrink/submission.h5ad` / `8dbcabcc096082aaec75fbd54a797628f1eda49edf2c527d643fb94de050cc6d` | **48.48** | best 48.47 | TIE (+0.01), v0004 stays |
+| `G1-T1-R5 v0019 L1_C1` | not supplied | `submissions/candidates/T1_val/v0019_g0_t1_r5_c1/submission.h5ad` / `617cdd3db1362054856333e935c9ea77d813a4d3ec786ef2f4ffda844a115c7e` | **48.54** | best 48.47 | TIE (+0.07, within ±0.1), v0004 stays |
+| `G1-T1-R5 v0020 L2_C2` | not supplied | `submissions/candidates/T1_val/v0020_g0_t1_r5_c2/submission.h5ad` / `6ec62b099fc0802b8cddc127423bda825101e2560ec1dba530bc3f865c0ab07f` | **48.48** | best 48.47 | TIE (+0.01), v0004 stays |
+| `G1-T1-R5 v0021 L3_C4` | not supplied | `submissions/candidates/T1_val/v0021_g0_t1_r5_c4/submission.h5ad` / `ab44c7036088141c24cd5cb523537e2c9d9a04fda1d43a64e588116b23df0698` | **48.34** | best 48.47 | REJECT (-0.13) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram |
+|---|---|---|---|---|
+| v0015 node | 43.8 | 55.8 | 51.6 | 40.6 |
+| v0016 substate | 43.8 | 55.8 | 51.1 | 39.5 |
+| v0017 maturity | 43.9 | 55.1 | 50.3 | 38.0 |
+| v0018 shrink C2 | 43.2 | 55.1 | 51.1 | 42.9 |
+| v0019 shrink C1 | 43.6 | 55.4 | 51.2 | 42.1 |
+| v0020 shrink C2 | 43.2 | 55.1 | 51.1 | 42.9 |
+| v0021 shrink C4 | 42.6 | 54.7 | 50.8 | 44.0 |
+
+Consistency and decision:
+- No promotion: best stays v0004 (48.47). v0019 (+0.07) and v0015 (+0.04) fall inside the standing ±0.1 TIE band → incumbent stays per rule (same rule as B4-T2-R1).
+- Shrink sweep ordering C1 (48.54) > C2 (48.48) = R4 (48.48) > C4 (48.34): monotone preference for lighter shrinkage, but the full sweep spans only 0.20 — C is a weak knob.
+- Proxy lesson (positive control): the T1 local proxy RANKED correctly — locally-PROMOTED shrink lanes all scored ≥48.34 on server (all within 0.13 of best), locally-rejected lanes (node/substate/maturity) all scored below. T1 proxy is the only one of three tasks whose gate direction survived contact with the server (T2-extrap inverted, T3 blind).
+- Submetric note: shrink lanes trade de_score (43.2–43.6 < best 43.8) for variogram (42.1–44.0 > 40.6); v0021/C4 pushes variogram highest (44.0) but loses de most (42.6) → net negative. The T1 ceiling is a de↔variogram trade, not a single weak term.
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### G1-T3-R9..R13 — 30-round plan lanes scoring round (one exact tie, one catastrophe; selection unchanged)
+| Record date | 2026-09-17 |
+|---|---|
+| Submission label | G1-T3 30 轮计划 R9–R13（包 `g1t3__t3__upload__20260917.zip`，成员 `t3_gata4__r9hop2__v0021.h5ad` 等 5 个；同包 R6–R8 v0018–v0020 已上传仍待评分） |
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-17) |
+| Run | `G1-T3-R9-HOP2` / `R10-GRAPH` / `R11-SIGNMAX` / `R12-DEBIAS` / `R13-SPATIAL`（artifacts/g0/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `G1-T3-R9 v0021 L_A_HOP2` | not supplied | `submissions/candidates/T3_gata4/v0021_g0_t3_r9_hop2/submission.h5ad` / `1bde8b96a0e8263e579abb8bab666fa98c29dafe18347dbccf47d902af7be5c0` | **46.88** | best 46.95 | TIE (-0.07, within ±0.1), v0009/v0010 stay |
+| `G1-T3-R10 v0022 L_A_GRAPH` | not supplied | `submissions/candidates/T3_gata4/v0022_g0_t3_r10_graph/submission.h5ad` / `5423dc569723ef87c1af4d06d7826df2708e45f87bb1dbc491a96116735821d6` | **46.93** | best 46.95 | TIE (-0.02, within ±0.1), v0009/v0010 stay |
+| `G1-T3-R11 v0023 L_A_SIGNMAX` | not supplied | `submissions/candidates/T3_gata4/v0023_g0_t3_r11_signmax/submission.h5ad` / `22340b14d9139c1dff044371043170398358f3d995784aea8f543ed5374bfbc4` | **46.95** | best 46.95 | exact TIE (0.00), v0009/v0010 stay |
+| `G1-T3-R12 v0024 L_A_DEBIAS` | not supplied | `submissions/candidates/T3_gata4/v0024_g0_t3_r12_debias/submission.h5ad` / `b1a3c01d9379624dd67a1fb06fd244c5e2039061bed34c281fa7b2efbfbb46d3` | **46.90** | best 46.95 | TIE (-0.05, within ±0.1), v0009/v0010 stay |
+| `G1-T3-R13 v0025 L_A_SPATIAL` | not supplied | `submissions/candidates/T3_gata4/v0025_g0_t3_r13_spatial/submission.h5ad` / `4f64ce1e19e8507cf691f5024cbb86ec9a03f4117b27f3984a62655a8b62a93c` | **43.30** | best 46.95 | **CATASTROPHIC REJECT (-3.65)** |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---|---|---|---|---|
+| v0021 hop2 | 39.2 | 49.6 | 50.0 | 51.5 | 50.4 |
+| v0022 graph | 39.6 | 49.8 | 50.0 | 51.6 | 49.0 |
+| v0023 signmax | 39.6 | 49.7 | 50.0 | 51.5 | 49.6 |
+| v0024 debias | 39.2 | 49.7 | 50.0 | 51.5 | 50.5 |
+| v0025 spatial | 38.1 | 49.3 | 50.0 | 42.1 | 25.0 |
+
+Consistency and decision:
+- Selection stays v0009/v0010 (46.95 tied). v0023 is an exact tie → incumbent stays per the standing ±0.1 TIE rule (same rule as B4-T2-R1, G1-T1, G1-T3-R2/R3); v0021/v0022/v0024 also fall inside the band. No co-promotion for late ties (precedent: G1-T3-R2/R3 v0014/v0015).
+- de_score moves for the first time: v0022/v0023 = **39.6 (+0.4)** vs the pinned 39.2 across all ten previous G1/B4 lanes — the weakest submetric finally moves under graph/signmax mechanisms. But variogram gives it back (49.0/49.6 vs 51.0): the T3 ceiling is now a de↔variogram trade, same shape as T1's. v0024 debias reproduces baseline direction to 4 decimals locally yet scores -0.05: offset-debias adds nothing.
+- R13 spatial is a catastrophe (mmd_u -9.4, variogram -26.0, total -3.65), mirroring the T2-extrap spatial family (local PROMOTED → server -0.21…-0.28, family closed D-20260916-G0T2-001). The local spatial proxy is adversarial on T3 as well: spatial smoothing is CLOSED as a promotion route on T3; the disclosed lib-ratio/Jensen note did not save it.
+- R6/R7/R8 (v0018/v0019/v0020, same pack) remain score_pending; no claim until return. Server Total stays **153.7** (no new Total supplied; T3 best unchanged so derived aggregates unchanged).
+- All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### G1-T1-D3 — OT-CFM field-forecast lane scoring round (REJECT; first T1-proxy false positive)
+| Record date | 2026-09-17 |
+|---|---|
+| Submission label | G1-T1-D3 单包 `g1t1d3__t1__upload__20260917.zip`（成员 `t1_val__d3otcfm__v0022.h5ad`；首适用 D-20260917-T1UPLOAD-001 上传仲裁政策） |
+| Board/phase | T1:val |
+| Source | User-provided server results in score-return message (leaderboard rows 2026-09-17) |
+| Run | `G1-T1-D3-FLOW-20260917-v1` + `scripts/g0/t1_d3_build.py`（artifacts/g0/） |
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `G1-T1-D3 v0022 L1_OTCFM` | not supplied | `submissions/candidates/T1_val/v0022_g0_t1_d3_otcfm/submission.h5ad` / `269dbfd64f97aadec1cf309dcb1ae89c61b2b9a2c89fa0c78d3d9292823cd687` | **45.3** | best 48.47; floor 47.0 | **REJECT (-3.17, below floor)** |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram |
+|---|---|---|---|---|
+| v0022 otcfm | 43.7 | 55.9 | 47.9 | 30.2 |
+
+Consistency and decision:
+- Arithmetic check with T1 weights (0.25/0.25/0.30/0.20): 0.25×43.7+0.25×55.9+0.30×47.9+0.20×30.2 = 45.31 → 45.3 ✓. Deltas vs best (43.8/55.9/51.5/40.6): de -0.1, dir 0.0, mmd -3.6, variogram **-10.4**. The entire loss sits in distribution/covariation.
+- Proxy lesson (honest revision): first T1-proxy false positive. Local de 0.9623 (best-ever local) transferred as server de 43.7 (≈par with best 43.8) — de decoupled via variogram collapse. BUT the local distribution-side flag warned correctly: field energy 0.486 vs baseline 0.434. Refined doctrine: local de/dir alone insufficient; distribution-side local metrics (energy/variogram) carry veto signal. The G0 ranking claim stands for the lanes it covered; v0022 bounds its scope.
+- Selection stays v0004 (48.47). Server Total stays **153.7** (T1 best unchanged). D3 remains CLOSED; upload-arbitration policy (D-20260917-T1UPLOAD-001) worked as designed — arbitration returned REJECT, no promotion claimed.
+- All scored artifacts stay immutable; user-provided values registered as supplied.

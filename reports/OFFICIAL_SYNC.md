@@ -49,7 +49,7 @@ Gate 仍未全部闭合，但不阻断 leaderboard 迭代。
 - train: E8.5、E9.5；
 - validation: E10.5；
 - hidden test: E12.5；
-- E7.75 是随 release 提供但不在 T1 split 中的 whole-embryo background；
+- E7.75：2026-09-17 重抓官网 Data 页，列为 unused / not released（held out as Task-2 embryo test stage），不向任何任务分发实测数据；此前“随 release 提供”的缓存作废；
 - .X 为 32,285-gene、log1p-normalised、finite、non-negative 表达；
 - 不需要空间坐标，也不提交 celltype。
 
@@ -173,7 +173,7 @@ E9.5_mab21l2_ko.h5ad 的 obs index 非唯一，且使用 genotype/time 等字段
 
 ### 仍缺失但按官方保密/发布规则可解释
 
-- E7.75 T1 single-cell background 也未在 data/ 中发现；官网当前列为 released、outside Task-1 split、911 MB。它不是当前 T2 工作必需项，若下载后只能按官网用途作为 T1 background，并登记 provenance。
+- E7.75 T1 single-cell background：2026-09-17 重抓确认 not released（见上），无下载、无 provenance 待登记项；T1-D7 前提不存在，转 CLOSED（D-20260917-T1D7-002）。
 - T1 E10.5/E12.5、T2 heart E8.5/E10.5/E12.5、T3 Gata4/β-catenin KO 仍是 validation/test target，正常不在本地；官网 Data 页明确训练数据下载需要注册登录，held-out 数据不公开分发。
 
 ### E8.25 文件状态

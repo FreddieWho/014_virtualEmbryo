@@ -58,3 +58,86 @@
 2026-09-05（batch4 Wave 1）：`B4-T1-R1-CONSERVATIVE-FAMILY` 完成，四 lane 待上传评分——v0011（L1 damp0.5，damp=1.0 字节复现 v0004）、v0012（L2 popmix，shift 与 v0004 重叠行逐值一致）、v0013/v0014（L3/L4 mass graft 0.25/0.50，obs-identity 记 FAIL_BY_DESIGN_ACCEPTED）；contract 服务器维度全过，行追溯 ledger 全断言通过，4× 本地 scorer 仅排序/防灾难。产物 `artifacts/batch4/B4-T1-R1-CONSERVATIVE-FAMILY-20260904-v1/`，交付包 `deliveries/b4t1r1{a,b,c,d}__t1__upload__20260904.zip`（推荐顺序 L1→L2→L4→L3）。结论待服务器仲裁。
 
 2026-09-05（batch4 Wave 1）：`B4-T1-R1-CONSERVATIVE-FAMILY` 四 lane 服务器仲裁——v0011=**47.58**（-0.89）、v0012=**47.77**（-0.70）、v0013=**47.85**（-0.62，族内最优）、v0014=**46.90**（-1.57，低于 floor）；v0004=48.47 留任，保守族晋级路线关闭。26 个子项中 T1 占 16，已入库。详见 registry §B4-T1-R1 与 DECISIONS D-20260905-WAVE1-001。
+
+2026-09-17（G0 15 轮目标）：`G1-T1-R1..R5` 七 lane 服务器仲裁——v0015=**48.51**（+0.04）/v0019=**48.54**（+0.07）落入 TIE 带，v0018/v0020=**48.48**（+0.01）TIE，v0016=**48.14**/v0017=**47.46**/v0021=**48.34** REJECT；selection 保持 v0004（48.47）。收缩 sweep 跨度仅 0.20，C 为弱旋钮，关闭。T1 本地 proxy 方向存活（三任务唯一正对照）。详见 registry §G1-T1 与 DECISIONS D-20260917-G0T1-001。
+
+2026-09-17（T1-P0-1 开工门槛）：reset brief §9–§12 重读完毕——D5/D6/D3/OPT-A 对 §12(2) 非自主分支生成，D7＋OPT-A(c) 对 §12(1) 开放集多锚点；缺口：“外部时序预训练”无直接对应 lane、全转录组 decoder 待代码评估单列，记入 P0-2 仲裁；§10 四禁令（禁 target 反推、禁 proxy-win 即晋级、禁 validation 当 test、禁动 scored artifact）D 系均遵守；§11 floor 门延续（新 lane 只比 best，不重释 floor）。contract 核对：T1 background=[E7.75]（task_contracts.yaml 第 23 行），D7 合法。P0-2/P0-3 执行中。
+
+2026-09-17（T1-P0-2 检索-评估＋仲裁）：OPT-A scIMF ✅（论文 PLOS Comp Biol 2026 pcbi.1013916＋代码 QiJiang-QJ/scIMF；scTimeBench forecast 最优）；OPT-B CellMNN 论文 ✅（ICLR 2026＋coherence 最优与 scNODE 并列）但代码 URL 未定位（OpenReview CAPTCHA；czi-ai/cell-mnn 判为同名假友，禁直接复用；D2 按论文实现）；D3 TorchCFM ✅（atong01/conditional-flow-matching）；D5 SquidDiff ✅（siyuh/Squidiff，Nature Methods 2025）；D6 PRESCIENT 接受为已知包；D4 锚点 ✅（mass_plan_heart.tsv＋ledgers＋L1/L2 h5ad 本地齐）；D7 ❌ 数据 blocked（E7.75.h5ad 本地无，官方 911MB 登录下载，OFFICIAL_SYNC 已定性 optional）。引文订正：scTimeBench 为 bioRxiv 预印本（非 Bioinformatics 期刊）＋9 方法（非 10），实质结论（forecast scIMF 最优、lineage 全员最难、pseudotime 救 lineage）成立且支持保守姿态。仲裁出场序：D4 → D2 → D3 → D1 → D6/D5 → D7（解 block 后）。R1 实测 wall 768s：D2/D3/D4 原型先走 CPU，GPU 只租 D1/D5 级。详见 DECISIONS D-20260917-T1P02-001。
+
+2026-09-17（T1-P1 D4 起跑）：`G1-T1-D4-BRIDGE-20260917-v1` 执行中（脚本 `scripts/g0/t1_d4_bridge.py`）——门 G（E8.5→E9.5 回报：G1 份额锚定 vs G0 纯位移，不过则停、不建候选）；过门后双 lane：L1 v0022 fine-state 位移＋收缩份额 k=0.25 重采样（B4-L3 剂量先例固定值）vs L2 v0023 纯位移（组成消融）。后台任务运行中，门结果回包后仲裁。
+
+2026-09-17（T1-P1 D4 门 FAIL 关闭）：G0 纯位移回报 de **0.566**/dir **0.6127** vs G1 份额锚定 de **0.4151**/dir **0.5869**——G1 双低于 G0（−0.151/−0.026），组成锚定无回报信号，按预声明停建候选，D4 关闭。组成雷区第四确认（v0002/B4-graft/今回报消融）。门臂 contract FAIL 仅 cell_limits（16,787 行诊断件超 5,118 板限），实质项全 PASS，分数比较有效。详见 run 内 RESULT.md 与 DECISIONS D-20260917-T1D4-001。P2 进 D2。
+
+2026-09-17（T1-P2 D2 写码完成）：`scripts/g0/t1_d2_cellmnn.py` 落盘（编译通过）——单 MLP＋lineage 条件（用户裁决前者）、富集门从宽（用户裁决）；PCA 取 centered 版＋均值回加（1 行偏差备案）；torch CPU 16 线程；冒烟（dz=10）后台运行中，过则全量 dz=50（90 分钟 cap）。设计稿 §6 已记两条裁决； repo 不 clone。
+
+2026-09-17（T1-P2 D2 冒烟通过＋null 门生效）：dz=10 全链路通（contract PASS）；富集初值 **10.38**（PCA 结构空赢实锤）vs 训练后 **22.84**（学习增量 ×2.2），null 门按设计扣掉空赢；机制声称双条件（>1 且 >初值）冒烟即满足。全量 dz=50 已起跑（90 分钟 cap），回包报三数。
+
+2026-09-17（T1-P2 D2 首跑 VOID）：proxy 看似过（de 0.9434/dir 0.9519）但 step-41 NaN，
+候选出自仅见 ~8k 细胞的早停模型——设计的 lane 没跑出来，按门 intent 判 VOID，不注册
+v0022、不上传。伴随分布坍缩签名（variance 0.21/energy 6.48/library 0.84），富集数一并作废。
+疑凶：L_inv=1/(det+eps) 在 50 维奇异。修复：warmup ramp（50..200 步）＋既有 guards，单次重跑；
+再 NaN 则降 dz=20 或关 D2。详见 run 内 RESULT_VOID_01.md 与 DECISIONS D-20260917-T1D2-001。
+
+2026-09-17（T1-P2 D2 warmup 重跑仍 NaN）：死亡推迟 41→88 步，未治愈；proxy de 0.7547/
+dir 0.7581 双低于门（与 dz=10 冒烟 de 完全同值 0.7547，欠训模型输出坍缩到同一结构，存疑不追）；
+富集训练后 2.08 < 初值 6.23（训练越练越差），机制双条件挂零。按预案降 dz=20（新目录
+G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 进 D3（届时请示）。
+
+2026-09-17（T1-P2 D2 调参挂起＋D3 开工，用户裁决 D-20260917-T1P23-001）：D2 不关闭——dz=20 加 patience/调参挂起入 TODO 暂缓（触发条件 D3/D1 双败或另行指示；注意这踩调参红线，已获用户特批）；执行分支切 D3 OT-CFM。
+
+2026-09-17（T1-P2 D3 起跑）：`G1-T1-D3-FLOW-20260917-v1` panel 原型执行中（脚本 `scripts/g0/t1_d3_flow.py`；vendor torchcfm 7c65385 MIT＋POT 0.9.7；top-500 HVG＋E8.5 冻结 scaler；MLP 场 3×256；门 G-return：场积分回报 vs 同空间 per-type-shift 双指标 energy＋cosine，不过则停、不进全基因）。冒烟后台运行中。
+
+2026-09-17（T1-P2 D3 冒烟链路通、门挂）：100 基因小网全链路通；场回报 energy 0.5655 < 基线 0.6123（分布胜）但 cosine 0.4289 < 0.5197（方向负），门按双指标判 FAIL——冒烟规模不作 verdict。panel 全量（500 基因、3×256、2000 步）已起跑，回包再仲裁。
+
+2026-09-17（T1-P2 D3 scaler bug 作废首轮）：E8.5 冻结 scaler 把 9 个 E8.5 零方差维放大 1e8 倍，基线 energy 失真到 ~1.9e4（独立重算复现 1.6e4，同量级，证非偶发）；场 cosine≈0 亦不可信。改合并训练集 z-score＋下限 1e-3（DESIGN 已备案），panel 全量重跑。冒烟数同废止（同 scaler）。
+
+2026-09-17（T1-P2 D2 dz20 稳定但挂门）：410 步无 NaN（降维治愈发散）；proxy de 0.8113/dir 0.8652 双低于门，不晋级；富集训练后 6.23 > 初值 4.15（双条件满足，但 proxy 挂则无上传）；分布侧仍差（energy 6.6/library 0.83）。注：训练后富集数与 warmup 初值小数点后 15 位全同（同为 3/500 命中同基线率，粗粒度巧合，存档不追）。按预案下一步为关 D2 进 D3，已请示用户待裁决。
+
+2026-09-17（T1-P2 D3 panel 门 PASS）：scaler 修复后尺度健康——场回报 energy **0.0562**（基线 0.2595，4.6×）＋cosine **0.9852**（基线 0.5912），双指标严格超，按预声明进 Phase-2 全基因（v0022）。
+
+2026-09-17（T1-P2 D3 全基因起跑）：`--full` 模式已加（32285 维、MLP 512 宽、batch 256 exact-OT、1200 步＋3h cap；t=1→2 场外推预报 bank 行；过 standing 门才 PROMOTED）；v0022 候选构建＋scorer＋INDEX 登记全在门内。后台运行中，回包仲裁。
+
+2026-09-17（T1-P2 D3 v0022 上传构建中，用户 override D-20260917-T1UPLOAD-001）：本地门降格为上传筛选器——D3 cosine 显著优＋余门无显著劣，建 v0022 走一次上传仲裁；门 FAIL 记录保留，实现链 verdict 不变。构建脚本 `scripts/g0/t1_d3_build.py`（复用训练场，不重训），contract＋scorer＋INDEX＋单包全在门内。
+
+2026-09-17（T1-P2 D3 全基因门 FAIL 关闭）：1200 步足额跑完（~26 分钟，无 cap 无 NaN）——场回报 energy **0.4855** 差于基线 0.4340，cosine **0.8125** 优于 0.7796；门要双指标，按预声明停建 v0022，D3 关闭。panel 成功未传到 32285 维（仲裁时点名的风险兑现：高维噪声主导 OT 耦合）。事后改单指标 cosine 放行属于移动门柱，拒绝（§10）。详见 run 内 RESULT.md 与 DECISIONS D-20260917-T1D3-001。P2 进 D1（GPU 级，需 P0-3 租赁批）。
+
+2026-09-17（T1-P2 D3 v0022 已交付上传，首适用 D-20260917-T1UPLOAD-001）：构建数 de **0.9623**（+0.076，T1 本地历史最强）/dir **0.8889**（差门 0.0006，非显著劣）；分布侧健康（var 0.976/lib 1.012/composition_JSD 0.0，无坍缩）——这正是 doctrine 说的情形。INDEX 已登记（score_pending）；单包 `deliveries/g1t1d3__t1__upload__20260917.zip`（成员 t1_val__d3otcfm__v0022.h5ad＋双 MANIFEST，406MB）已交用户上传。
+
+2026-09-17（T1-P2 D1 回报门 FAIL 关闭）：V100 足额训完（30 epochs/870 步/~17min，无 NaN）但回报 de **0.3585**/dir **0.6243**双远低于门；坍缩签名（variance 0.086/library 0.77/energy 13.4）——联合 VAE+SDE 塌向均值，非 marginal，加步难救，按预声明停建 E10.5，D1 关闭。GPU 机已闲置待命（续租/释放等你一句话）。
+
+2026-09-17（T1-P2 D1 V100 全量开训）：GPU 冒烟 smoke_ok（依赖闭包逐层追补 4 文件＋PYTHONPATH 双保险）；全量训练已 nohup detached（6h kill 内置），回传 checkpoint 即本地建候选过门。
+
+2026-09-17（T1-P2 D1 首训 OOM Killed＋流式 PCA 修复重开）：vstack float64 峰值 ~15GB 撑爆 15GB 机（dmesg OOM 实锤，anon-rss 15.4GB）；改 IncrementalPCA 2048 行流式（峰值 ~5.5GB，固定顺序确定性；DESIGN 已备案）；GPU 冒烟复过；全量 detached 重开。
+
+2026-09-17（T1-P2 D1 训练完成回传，本地建候选中）：V100 实跑 30 epochs/870 步/~17 分钟，无 NaN；checkpoint（98MB，sha 双验一致）＋pca.npz 已回传；本地 --build-only 建回报候选→locked scorer 门→过门建 E10.5，后台运行中。
+
+2026-09-17（T1-P2 D1 V100 上机中）：双线 SSH 均通（同机 ubuntu22）；V100-SXM2-32GB（超预期 16GB）＋driver 550；密钥登录已生效、密码文件已销毁；裸机（无 pip/torch）→后台装 cu121 全家桶；数据 1.2GB 已上传，SHA 双验通过（E8.5/E9.5/panel 全对）。待环境回包即冒烟开训。
+
+2026-09-17（T1-P2 D1 冒烟通过，待 V100 登录）：tiny 子集全链路通（PCA→VAE→谱系掩码注意力→EM→可微 Sinkhorn→checkpoint 存取，smoke_ok）；附带修好 DOT 梯度断流（前版 W2 被包成常数）。STAGING 上机清单＋RUN_LOCK＋lineage_map（100% 覆盖）齐备。
+
+2026-09-17（T1-P2 D1 上机准备中，V100 已批待登录 D-20260917-T1GPU-001）：OPT-A(c) 修订（去 E7.75 锚点，回两点 DOT）；设计稿＋训练脚本＋CPU 冒烟＋STAGING 上机清单本地备齐；GPU 只回传 checkpoint，候选构建与门放本地。
+
+2026-09-17（T1-P2 D3 v0022 服务器仲裁 REJECT）：**45.3**（-3.17，连 floor 47.0 都没过）。分项：de 43.7≈持平、dir 55.9 持平，mmd -3.6、variogram **-10.4**——输的全在分布/协变侧。proxy 教训修正：T1 首个假阳性（本地 de 0.9623 最强却传成持平），但本地 energy 旗（0.486 差于基线）预警正确；细化 doctrine：de/dir 需分布侧本地指标（energy/variogram）连署，单看 de 会被 variogram 崩盘背刺。详见 registry §G1-T1-D3 与 DECISIONS D-20260917-T1D3-002。
+
+2026-09-17（轻微劣势落选者横扫，用户要求）：INDEX 待分行＋各 run 目录未注册候选逐项核——结论：无新增可打包。
+
+2026-09-17（T1-P2 D5 起跑，费用纪律 D-20260917-T1GPU-002）：SquidDiff 式条件扩散＋v0004 按权重拼；D5 先行（写码→冒烟→GPU 训），D6 排队；完工/双败即关机，单 lane wall 4h 上限。
+
+2026-09-17（T1-P2 D5 冒烟通过＋GPU 全量开训）：本地冒烟 smoke_ok（纯自实现 DDPM 无外部依赖）；脚本已上传 GPU 机；全量训练中（20 epochs，4h cap 内置；输出本地任务日志＋远端 log 双保险）。
+
+2026-09-17（T1-P2 D6 冒烟通过＋GPU 全量开训）：本地冒烟 smoke_ok（double-backward autograd drift 通）；脚本已上传；全量训练中（25 epochs，4h cap；阻塞式 SSH＋远端 log 双保险）。
+
+2026-09-17（T1-P2 D6 训练完成回传，本地建门中）：V100 实跑 25 epochs/825 步/~18 分钟，无 NaN；checkpoint（97MB，sha 双验一致）已回传；本地 --build-only 建回报门→过门建 v0025，后台运行中。
+
+2026-09-17（T1-P2 D6 回报门 FAIL 关闭＋GPU 已关机）：de **0.8868** 恰等门线（须严格超，不算过）、dir 0.7921 差 0.097； accomp 坍缩签名（variance 0.26）——能量/MMD 系训练第三次塌方差。平局不算过（TIE 带是服务器规则，本地门无此例，§10）。GPU 实例已 OS halt（双线验不可达），控制台释放待用户确认。P2 GPU lane 清零；D2 调参触发条件已满足（D3/D1 双败），待用户定夺。
+
+2026-09-17（独立复核 D-20260917-T1AUDIT-001）：D1/D6/D4/D2/v0022 verdict 全确认；D5 测试无效（阶段条件死代码＋JSD 腿恒不可过）——CLOSE 维持但不得引为证伪，D5b 属新 lane 待立项；D2 重名目录已改名去雷；SHA/台账全对。
+
+2026-09-17（T1-P2 D5 训练完成回传，本地建门中）：V100 实跑 20 epochs/680 步/~14 分钟，无 NaN；checkpoint（109MB，sha 双验一致）已回传；本地 --build-only 建回报门→过门建 v0024，后台运行中。
+
+2026-09-17（T1-P2 D5 回报门 FAIL 关闭）：场回报 energy **2.203** 差基线 0.265 **8 倍**；compJSD 0.1555==0.1555（按持留细胞类型逐个生成，成分被迫一致，门腿空转——设计债如实记，不追溯修门）。非 marginal，按预声明停建 v0024，D5 关闭。P2 进 D6（码即写，GPU 闲置中）。。D2-dz20（de/dir 双低、无显著优项，不合上传仲裁条）、warmup 件（同上；初版 NaN 件已被 warmup 重跑覆盖，现文件即 warmup 件）、D4 门臂（诊断件非候选）、T2-S3 四件（holdout 全负/kNN 灾难，有因淘汰）、T2-J1 v0008（缺参照 component hold，非门误杀）、G0 各 lane（已全部分数回填）。唯一上传就绪未传是 T2-R3 三 lane 包（`b4t2r3__t2__upload__20260914.zip`，contract PASS×3，7 文件齐）——但系用户 09-15 明示关闭，且无本地显著优记录（backtest 明示不作服务器预测）、board best 已移至 v0011=50.64；重开需用户明示，不擅自打包。
+
+2026-09-17（T1-P2 D5b 立项开工，D-20260917-T1D5B-001）：审计修复三件套＋坍缩 veto＋v0026；用户令 CPU 先行，GPU 保持关机；冒烟过（stage_sensitivity 0.745，条件活的）。
+
+2026-09-17（T1-P2 D5b 训练完成，本地建门中）：CPU 实跑 20 epochs/680 步/~12 分钟，无 NaN，checkpoint SHA 自洽，PCA 与 D5 同值；本地 --build-only 建回报门→过门建 v0026，后台运行中。

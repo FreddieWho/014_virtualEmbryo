@@ -566,3 +566,157 @@ reuse_promoted
 - evidence: "reports/BATCH4_PHASE_REPORT_20260915.md、BATCH4_SCORE_GAP.md、BATCH4_ERROR_SIGNATURES.md、BATCH4_COMPONENT_LEDGER.tsv、BATCH4_PROXY_VS_SERVER.md、ARCHITECTURE_RESET_BRIEF.md、ARCHITECTURE_INPUT_READINESS.tsv；registry Total 153.7 确认节；INDEX T2-R3 三行 closed_unscored 标注。"
 - boundary: "closeout 不训练、不生成 H5AD、不改 scored artifact；新架构另行立项，本批不再追加 run；blocks_submission: false。"
 - review_trigger: "新架构立项时重读 ARCHITECTURE_RESET_BRIEF.md §9–§12。"
+
+### D-20260916-G0T3-001 — 15 轮目标 T3 五 lane 评分：无晋级（两持平三负），传播-剂量族关闭
+- scope: T3 v0013–v0017（G1-T3-R1–R5 run `artifacts/g0/G1-T3-R*-20260916-v1/`）
+- decision: "服务器 v0013=46.88（-0.07）、v0014=46.95（持平）、v0015=46.95（持平）、v0016=46.88（-0.07）、v0017=46.84（-0.11），selection 保持 v0009/v0010（46.95）；de_score 五 lane 全钉 39.2（最弱子项不动）；T3 传播-剂量手工族关闭为晋级路线。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §G1-T3；INDEX.tsv 五行 scored；25 个子项已入库；与开工前本地盲性诊断一致（proxy de 0.1739 五连同）。"
+- boundary: "scored artifact 不变；T3 上传总挑仍以已证 best 为锚；blocks_submission: false。"
+- review_trigger: "新机制出现时重开 T3 建模；当前族内不再追加 lane。"
+
+### D-20260916-G0T2-001 — 15 轮目标 T2-extrap 六 lane 评分：一晋级（v0011 收缩 +0.11），空间族关闭
+- scope: T2 heart_extrap v0011–v0016（G1-T2-R2–R5 run `artifacts/g0/G1-T2-R*-20260916-v1/`；R1 为门控轮无新候选）
+- decision: "服务器 v0011=50.64（+0.11）→ 新 board best（取代 baseline v0001 50.53）；v0012=50.26、v0013=50.32、v0014=50.26、v0015=50.28、v0016=50.25 均低于 baseline。空间平滑族关闭为晋级路线；selection 更新为 v0011。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §G1-T2；INDEX.tsv 六行 scored；48 个子项已入库。关键反转：本地门判收缩钉死-微负、空间胜出，服务器正好反过来——本地 extrap proxy 在这两族上方向反了，已记 proxy 教训。"
+- boundary: "scored artifact 不变；heart_extrap 新最弱项变为 T3；blocks_submission: false。"
+- review_trigger: "新机制出现时重开 extrap 建模；空间平滑族内不再追加 lane。"
+
+### D-20260917-G0T1-001 — 15 轮目标 T1 七 lane 评分：无晋级（v0004 留任），收缩族 C1 最优但落入 TIE 带
+- scope: T1 v0015–v0021（G1-T1-R1–R5 run `artifacts/g0/G1-T1-R*-20260916-v1/`）
+- decision: "服务器 v0015=48.51（+0.04）/v0019=48.54（+0.07）落入 ±0.1 TIE 带 → v0004（48.47）留任；v0018/v0020=48.48（+0.01）TIE；v0016=48.14/v0017=47.46/v0021=48.34 REJECT。收缩族内 C1>C2=C4 排序成立但全程仅 0.20 跨度，C 为弱旋钮，关闭收缩扫参。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §G1-T1；INDEX.tsv 七行 scored；28 个子项已入库。T1 本地 proxy 方向存活（PROMOTED 全 ≥48.34，rejected 全低于），三任务中唯一正对照。"
+- boundary: "scored artifact 不变；selection 不变；blocks_submission: false。"
+- review_trigger: "新机制（非收缩族）出现时重开 T1 建模。"
+
+### D-20260917-G0T3R9R13-001 — 30 轮计划 R9–R13 五 lane 评分：一持平（v0023 46.95）+ 一灾难（v0025 43.30），selection 不变，空间族关闭
+- scope: T3 v0021–v0025（G1-T3-R9-HOP2 / R10-GRAPH / R11-SIGNMAX / R12-DEBIAS / R13-SPATIAL；统包 `g1t3__t3__upload__20260917.zip` 内 5 成员；R6–R8 同包仍待评分）
+- decision: "服务器 v0021=46.88（-0.07）、v0022=46.93（-0.02）、v0023=46.95（持平 exact TIE）、v0024=46.90（-0.05），四 lane 均落 ±0.1 TIE 带 → selection 保持 v0009/v0010（46.95），不做 late-tie 共晋级（先例 G1-T3-R2/R3）；v0025=43.30（-3.65）灾难性淘汰。空间平滑族在 T3 关闭为晋级路线。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md §G1-T3-R9..R13；INDEX.tsv 五行 scored；25 个子项已入库。de 首动（R10/R11 de=39.6，+0.4 vs 十连钉 39.2）但 variogram 回吐（49.0/49.6 vs 51.0）；R13 mmd 42.1/variogram 25.0，复刻 T2-extrap 空间族本地胜→服务器败。"
+- boundary: "scored artifact 不变；Total 153.7 不变（T3 best 未动）；R6–R8 回分前不做新 claim；blocks_submission: false。"
+- review_trigger: "R6–R8 分数返回；或新机制（非空间/传播-剂量族）出现时重开 T3 建模。"
+
+### D-20260917-T1P02-001 — T1 P0-2 仲裁：D4 先行，D2/D3 随后，D1/D5/D6 押后，D7 数据 blocked
+- scope: G1_T1_30ROUND_RESEARCH D1–D7（OPT-A=scIMF 联合 VAE+SDE；OPT-B=CellMNN 局部线性 ODE；D3=OT-CFM；D4=T2 桥移植；D5=条件扩散组合；D6=势景观 SDE；D7=E7.75 对齐）
+- decision: "出场序 D4 → D2 → D3 → D1 → D6/D5 → D7。D4 数据齐＋CPU 便宜＋proxy 门可用，最先；D2 论文与 benchmark 双强、单阶段比 SDE 便宜，代码未定位则按 ICLR 论文实现；D3 TorchCFM 现成，需单细胞适配＋panel-then-fullgene；D1 代码现成但最重（SDE＋Sinkhorn），等 D2/D3 方向信号；D5/D6 GPU 重，届时按原型成本二选一；D7 等 E7.75 下载解 block。R1 wall 768s 证明小 lane CPU 可跑，原型一律先 CPU，GPU 只为 D1/D5 级租赁。"
+- evidence: "T1_TRACKING P0-2 行；scIMF PLOS pcbi.1013916＋QiJiang-QJ/scIMF；CellMNN ICLR 2026 proceedings（代码未定位，czi-ai 同名假友禁复用）；TorchCFM atong01；Squidiff siyuh＋Nat Methods 2025；mass_plan_heart.tsv 本地齐；E7.75 缺（OFFICIAL_SYNC/INVENTORY 已定性）。引文订正：scTimeBench=bioRxiv 预印本＋9 方法，实质结论成立。"
+- boundary: "外部时序预训练（reset §9）在 D 系无直接 lane，记为后续调研缺口，不阻塞出场；全转录组 decoder 在 D2/D3 实现时单列核查（PCA-first 可疑）；§10 四禁令延续；blocks_submission: false。"
+- review_trigger: "D4 本地门结果；D2 代码定位成功；E7.75 下载完成；任一 lane 服务器仲裁。"
+
+### D-20260917-T1D7-001 — 撤回 E7.75 下载要求：T1 用途合规但即时需求不成立，D7 转 PARKED
+- scope: T1-D7（E7.75 background＋时间扭曲对齐）；用户质疑下载必要性
+- decision: "撤回下载要求。合规核查：E7.75 的 absolute-holdout 身份属于 T2-embryo（hidden test E7.75，外部数据禁区 [E7.5, E7.75]，conservative policy 未 clearance 前外部实测数据不启用）；T1 侧 E7.75 是 contract 明示 background（task_contracts.yaml 第 23 行）＋protected_windows T1 explicitly_allowed（含 stage≤E9.5）＋OFFICIAL_SYNC 限定'只能按官网用途作为 T1 background'＋pseudo_holdouts T1_sanity_holdout 列 optional_background——T1-background 用途合规，但防火墙是禁入 T2-embryo（INVENTORY 原话：不能把它当作 T2 embryo 的 E7.75 target 使用）。不下载的理由：D7 排仲裁末位、价值只是'多一个锚点'（且 pseudo_holdouts 已注 whole-embryo 非 matched-heart，收益本就打折），911MB 登录下载＋provenance 成本现在不值得。D7 转暂缓 PARKED。"
+- evidence: "OFFICIAL_SYNC.md §2/§7；protected_windows.yaml（T1/T2_embryo 条款）；pseudo_holdouts.yaml T1_sanity_holdout；OFFICIAL_DOWNLOAD_INVENTORY.md §3。"
+- boundary: "将来若触发（D4→D5 均败），下载前重议防火墙：文件落盘即登记、T2-embryo 工作区隔离、provenance 进 infra/bioinf-data-index/；blocks_submission: false。"
+- review_trigger: "D4→D5 均败且需新数据轴；或 organizer 对 E7.75 出新口径。"
+
+### D-20260917-T1D7-002 — E7.75 缓存订正：not released，D7 由 PARKED 转 CLOSED
+- scope: E7.75 缓存记录（SYNC §2/§7、INVENTORY §3）＋T1-D7
+- decision: "2026-09-17 实抓 https://virtualembryo.ai/challenge/data：E7.75 行为'unused / not released — held out as the Task-2 embryo test stage'，'no measured data from that stage is distributed for any task'。此前'released/911MB/登录下载'缓存作废（官方页优先于静态快照），三处文件已订正并记录来源日期。T1-D7 前提（能拿到 E7.75）不存在，由 PARKED 转 CLOSED，D-20260917-T1D7-001 的下载触发条件作废；禁从第三方镜像补齐（withheld 清单＋protected window）。出场序删除 D7，止于 D6/D5。"
+- evidence: "官网 Data 页 2026-09-17 实抓原文；SYNC/INVENTORY 订正 diff。"
+- boundary: "若官网未来发布 E7.75，重开需新决议＋合规重议；blocks_submission: false。"
+- review_trigger: "官网 Data 页 E7.75 状态变化。"
+
+### D-20260917-T1P23-001 — D2 调参挂起（用户特批）＋D3 开工
+- scope: T1-P2 执行分支切换（D2→D3）
+- decision: "用户裁决：D2 不关闭，dz=20 加 patience/调参挂起入 TODO 暂缓（触发条件 D3/D1 双败或另行指示）；执行分支切为 T1-P2 D3 OT-CFM。明确记录：D2 调参踩收缩/sweep 类调参红线，本次为例外特批，不构成先例；复活时仍须过同一本地门（de>0.8868 且 dir>0.8895），门槛不降。"
+- evidence: "dz20 run RESULT.json（410 步稳定，de 0.8113/dir 0.8652 挂门）；用户原话'D2调参进入TODO，开始D3'。"
+- boundary: "D2 调参冻结当前脚本与种子，复活即开新 run 目录；blocks_submission: false。"
+- review_trigger: "D3/D1 双败；或用户另行指示。"
+
+### D-20260917-T1D3-001 — D3 全基因门 FAIL 关闭：panel 成功未传导，P2 进 D1（待 GPU 批）
+- scope: G1-T1-D3-FLOW（panel PASS → full 1200 步；v0022 未建）
+- decision: "门 FAIL 即关闭：全基因场回报 energy 0.4855 差于基线 0.4340（cosine 0.8125 优于 0.7796 但门要双指标），不建 v0022，不上传；D3 关闭；P2 进 D1 OPT-A。D1 为 GPU 级（SDE＋Sinkhorn），启动前需 P0-3 租赁批准。"
+- evidence: "run 内 RESULT.json/RESULT.md（足额 1200 步，wall ~26min）；panel 门 PASS 记录（energy 4.6×/cos 0.985）同 run 可查，同 scaler 下比较有效。"
+- boundary: "panel→full 的传导失败记为 D3 机制结论（高维 OT 耦合噪声主导），不是实现 bug——实现链（vendor loss＋积分＋门）全程 PASS；blocks_submission: false。"
+- review_trigger: "D1 本地门结果；V100 上机启动。"
+
+### D-20260917-T1GPU-001 — V100 沿用获批＋OPT-A(c) 修订（去 E7.75 锚点）
+- scope: T1-P2 D1（OPT-A scIMF 式联合 VAE＋Transformer-MV-SDE）上机准备
+- decision: "用户批 V100 沿用链路，待登录方式。OPT-A(c) 修订：原三点 DOT（E7.75 作锚点正则）回退为两点 DOT E8.5→E9.5（论文原装）＋预报 E9.5→E10.5——E7.75 CLOSED（D-20260917-T1D7-002），锚点前提不存在。验证门不变：E8.5→E9.5 回报 held-out 先行，standing 双门（de>0.8868 且 dir>0.8895）过才碰 E10.5。scIMF repo（QiJiang-QJ）LICENSE 未明示（main/LICENSE 404），沿 D2 先例按论文规格自实现，repo 仅作对照、不 clone。候选构建与 contract/scorer 链放本地，GPU 只回传 checkpoint（~MB 级），训练数据外不出境。"
+- evidence: "用户原话'沿用v100，现在做好准备，等待登陆方式即启动工作'；G1_T1_30ROUND_RESEARCH.md §3 OPT-A；LICENSE 404 实抓。"
+- boundary: "GPU 机只跑训练（locked run：network/external/server_submission 均为 false，除 pip 依赖安装）；候选/上传仲裁仍走本地链；blocks_submission: false。"
+- review_trigger: "登录方式到达即上机；D1 本地门结果。"
+
+### D-20260917-T1D1-001 — D1 回报门 FAIL 关闭：联合 VAE+SDE 塌向均值
+- scope: G1-T1-D1-SCIMF（V100 足额训练＋本地回报门）
+- decision: "门 FAIL 即关闭：回报 de 0.3585/dir 0.6243 双远低于门（-0.53/-0.27），不建 E10.5 候选，不上传；D1 关闭。非 marginal，加步同配方难救；修复属重加权/重架构＝新 lane，不在本次重跑之列。P2 剩 D5/D6（皆 GPU 级，需新设计＋续租决策）。"
+- evidence: "run 内 RESULT_train.json（870 步无 NaN）＋BUILD.json（回报 contract 实质 PASS，行身份 FAIL_BY_DESIGN 沿 D4 先例）＋RESULT.md；坍缩签名 variance 0.086。"
+- boundary: "GPU 机闲置保留，续租/释放由用户定；blocks_submission: false。"
+- review_trigger: "D5/D6 启动决策；或 D1 重设计授权。"
+
+### D-20260917-T1GPU-002 — D5/D6 全开＋费用纪律：完工即关机
+- scope: T1-P2 D5（条件扩散）＋D6（势景观SDE）；V100 计费
+- decision: "用户指令：D5/D6 全开，快开；任务完成之后及时关闭实例（烧钱）。执行：D5 先行（脚本→冒烟→GPU 训练），D6 排队（D5 训练期间写码，GPU 空出即上）；任一 lane 回报门 FAIL 即关，不续跑烧钱；全部完工（或双败）后即关机——先远程 poweroff，再请用户控制台确认释放（面板侧停止才停费的按面板为准）。 early-stop/patience/cap 一律从紧， wall 上限单 lane 4h。"
+- evidence: "用户原话'开，快开，任务完成之后要及时关闭实例，你烧了我的钱！'"
+- boundary: "关机前必须回传全部 checkpoint＋RESULT＋日志；blocks_submission: false。"
+- review_trigger: "D5 回报门结果；D6 上机；双败或完工即关机。"
+
+### D-20260917-T1D5-001 — D5 回报门 FAIL 关闭：扩散回报分布崩（8×），门腿空转设计债
+- scope: G1-T1-D5-DIFF（V100 足额训练＋本地回报门）
+- decision: "门 FAIL 即关闭：场回报 energy 2.203 差于基线 0.265（8×），compJSD 双边 0.1555 全同；不建 v0024，不上传；D5 关闭。非 marginal，不加训。P2 进 D6。"
+- evidence: "run 内 RESULT_train.json（680 步无 NaN）＋BUILD.json＋RESULT.md。设计债：逐持留细胞类型生成迫使成分一致，JSD 腿空转——门实质单指标（energy）；如实记录，不追溯修门（移动门柱，§10）。"
+- boundary: "D5 扩散路线关闭；v0024 空号保留不再用；blocks_submission: false。"
+- review_trigger: "D6 回报门结果。"
+
+### D-20260917-T1UPLOAD-001 — 本地门降格为上传筛选器：单门显著优＋余门无显著劣→一次上传仲裁
+- scope: 全任务上传政策（由此前 D3 全基因门 FAIL 争议触发）
+- decision: "用户裁决：本地计分不完全可靠，standing 门不再一票否决上传。今后：某 lane 在任一本地门上显著优化、其余门无显著劣化，即建候选走一次服务器上传仲裁（8/task/day 内）。D3 v0022 首适用（cosine 0.8125>0.7796 显著优，energy 差记入风险由服务器仲裁）。本条为例外政策，与 §10 禁 proxy-win 直写'晋级结论'不冲突——上传仲裁≠晋级宣称，回分前仍只能记 score_pending。"
+- evidence: "用户原话（2026-09-17）：本地计分不一定准确，全基因门给结果上传试一下。"
+- boundary: "上传仍须 contract PASS＋字节一致＋INDEX 登记；blocks_submission: false。"
+- review_trigger: "上传仲裁连续两次证伪本地门（双向误判统计）。"
+
+### D-20260917-T1D3-002 — v0022 服务器仲裁 REJECT（45.3）：上传仲裁政策首战即证伪，proxy 教训修正
+- scope: G1-T1-D3 v0022（单包上传仲裁，D-20260917-T1UPLOAD-001 首适用）
+- decision: "服务器 45.3（-3.17 vs best 48.47，低于 floor 47.0），REJECT；selection 保持 v0004；D3 维持关闭。上传仲裁政策本身按设计工作（仲裁回 REJECT，未宣称晋级）。"
+- evidence: "registry §G1-T1-D3；INDEX v0022 行 scored；4 子项已入库。加权验算 45.31→45.3 ✓；分项增量 de -0.1/dir 0.0/mmd -3.6/vario -10.4。"
+- boundary: "proxy 教训修正入库：T1 首个本地假阳性——本地 de 0.9623 传成服务器持平，崩盘点在 variogram（-10.4）；但本地 energy 旗预警正确。细化 doctrine：de/dir 须分布侧本地指标连署。G0 正对照结论收敛适用范围，不推翻。blocks_submission: false。"
+- review_trigger: "再一次本地/服务器双向误判即重审门权重。"
+
+### D-20260917-T1D4-001 — D4 门 FAIL 关闭：组成锚定无回报信号，P2 进 D2
+- scope: G1-T1-D4-BRIDGE-20260917-v1（脚本 scripts/g0/t1_d4_bridge.py；门 G E8.5→E9.5 回报）
+- decision: "门 FAIL 即关闭：G1（位移＋E9.5 份额锚定）de 0.4151/dir 0.5869 双低于 G0（纯位移）0.566/0.6127，不建 L1/L2 候选，D4 关闭；P2 仲裁序进 D2（OPT-B，按 ICLR 论文实现）。"
+- evidence: "run 内 RESULT.json/RESULT.md；门臂 contract FAIL 仅 cell_limits（诊断件 16,787 行超板限），基因序/finite/非负/obs 唯一全 PASS，scorer 分布比较有效。"
+- boundary: "组成雷区第四确认（v0002 −1.1、B4 graft ≤47.85、今回报 −0.15）；D4 的 k=0.25 收缩份额、`__dup`+ledger 重采样件随门同葬，不进入候选；blocks_submission: false。"
+- review_trigger: "D2 本地门结果；或新的组成机制证据出现。"
+
+### D-20260917-T1D2-000 — 订正：CellMNN 代码已定位（论文自引 czi-ai），仍按论文自实现
+- scope: D-20260917-T1P02-001 中的“OPT-B 代码未定位 / czi-ai 同名假友禁复用”
+- decision: "订正：ICLR 论文全文（摘要页＋§Reproducibility）自引 github.com/czi-ai/cell-mnn，假友结论作废。但 D2 仍按论文规格自实现、不 clone（免 license 审计＋免网络窗口）；repo 仅作实现对照。设计稿见 artifacts/g0/G1-T1-D2-CELLMNN-20260917-v1/DESIGN.md，待用户过目后写码。"
+- evidence: "arXiv:2510.02903v2 PDF（27pp）§2.1/Table 3/App F；repo URL 论文内两处。"
+- boundary: "订正只改代码可得性判断，不改出场序与门；blocks_submission: false。"
+- review_trigger: "D2 写码启动。"
+
+### D-20260917-T1D2-001 — D2 首跑 VOID（step-41 发散）：门按 intent 不判晋级，warmup 后单次重跑
+- scope: G1-T1-D2-CELLMNN 首跑（dz=50，论文原损失＋λ-clamp/grad-clip guards）
+- decision: "首跑 VOID：proxy de 0.9434/dir 0.9519 字面过门，但 step-41 NaN（仅 ~8k 细胞更新），候选非 designed-lane 产物，不注册 v0022、不上传；伴随分布坍缩（variance 0.21/energy 6.48），富集 18.69 同作废。单次重跑：L_inv warmup ramp（50..200 步）；再 NaN 则降 dz=20 或关 D2。字面过门但训练失败的 lane 按 intent 不得晋级——此即 §10 禁 proxy-win 直写晋级在本案的适用。"
+- evidence: "run 内 RESULT_VOID_01.md＋RESULT.json（nan_loss_at_step=41）；DESIGN §7 补丁。"
+- boundary: "void 只杀本次 run，不杀 D2 机制；重跑仍走双门；blocks_submission: false。"
+- review_trigger: "warmup 重跑结果。"
+
+### D-20260917-T1D6-001 — D6 回报门 FAIL 关闭：de 恰等门线不算过＋GPU 已关机
+- scope: G1-T1-D6-POT（V100 足额训练＋本地回报门）
+- decision: "门 FAIL 即关闭：回报 de 0.8868 恰等于门线 0.8868（须严格大于，不算过），dir 0.7921 差 0.097；不建 v0025，不上传；D6 关闭。平局适用服务器 TIE 带、不适用本地门（§10，无移动门柱）。费用纪律执行：GPU 实例 OS halt（双线验不可达），控制台释放待用户确认。"
+- evidence: "run 内 RESULT_train.json（825 步无 NaN）＋BUILD.json（回报 contract 实质 PASS）＋RESULT.md；坍缩签名 variance 0.26（D1 0.086/D2-void/D6 0.26 三连）。"
+- boundary: "P2 GPU lane 清零；D2 调参触发条件已满足（D3/D1 双败），启动待用户定夺；blocks_submission: false。"
+- review_trigger: "D2 调参启动；或新架构立项。"
+
+### D-20260917-T1AUDIT-001 — 独立复核：D5 测试无效（模型缺阶段条件＋门 JSD 腿不可满足），其余 verdict 确认
+- scope: 本轮 T1-P2 全部 lane（D1/D5/D6 GPU＋D2/D3/D4 CPU＋v0022 上传）：脚本重读＋JSON 数字复核＋SHA 重验
+- decision: "D1/D6/D4/D2/v0022 verdict 全部确认无误；D5 的 FAIL  verdict（不建 v0024）维持，但理由订正：测试无效而非机制证伪。D2 run-local 重名目录已改名去雷（v0022X_…_UNREGISTERED），未注册产物零影响。"
+- evidence: "(1) D5 主 bug：t1_d5_diff.py 里阶段时间条件 tc 建而不用（L262 建、L265 den(x,tcur,ty) 未传；训练侧 L218 同样丢弃 tt0；Denoiser 输入唯一标量是扩散步不是阶段）→ generate(tcond=1.0) 与 (2.0) 输出全同，模型学的是阶段混合 p(x|type)，回报 energy 8× 差主要由此解释。DESIGN 的 t=2 外推风险披露针对的是不存在的机制。(2) D5 门 bug：JSD 腿按持留类型逐个生成、成分被迫一致 → 要求严格更优的腿恒为平局 → 门恒不可通过；能量腿再好也救不回来。两 bug 叠加：扩散假设未经检验。(3) 确认项：D1 真 held-out（h_mask 排除训练）、D5/D6 为样本内回报（保守方向，不翻转 FAIL）；D6 de 0.8868 为 scorer 实算（FULLSCORER 独立文件一致），dir 差 0.097 verdict 鲁棒；D2 dz20 数值/未晋级、D4 双低、v0022 SHA 与 INDEX 一致、v0004 未动、三 checkpoint SHA 全对、submissions 无 v0023/24/25 孤儿。"
+- boundary: "D5b（补阶段条件＋释放成分别腿）属新 lane，需立项＋约 15 分钟 GPU，不属重跑；开不开用户定。D2 调参问题仍悬。blocks_submission: false。"
+- review_trigger: "D5b 立项；或 D2 调参启动；或 T1 封存。"
+
+### D-20260917-T1D5B-001 — D5b 新 lane 立项：审计修复＋CPU 先行，零 GPU 花费
+- scope: G1-T1-D5B-DIFF（D5 的审计修复子 lane）
+- decision: "立项 D5b：Fix A 阶段条件实接线（含冒烟敏感性断言——D5 缺的正是这个测试）、Fix B 全 schedule 采样、Fix C 可满足分布门（overall＋per-type energy，JSD 腿删除、成分输入化）＋坍缩 veto；其余配方冻结以隔离修复效应；同种子保基线可比（build 内断言基线复现 0.265）。用户令 CPU 先行：本地全量训练＋建门，不开机不花钱。交付 v0026。"
+- evidence: "DESIGN.md（6 节）＋t1_d5b_diff.py（d+2 输入、lane 标记防 D5 ckpt 误装）。"
+- boundary: "D5b 是新 lane 不是重跑；v0026 空号启用；blocks_submission: false。"
+- review_trigger: "D5b 回报门结果。"
+
+### D-20260917-T1D5B-002 — D5b 回报门 FAIL 关闭：接线修好后暴露严重欠拟合，27× 落败
+- scope: G1-T1-D5B-DIFF（CPU 全量训练＋本地回报门，零 GPU 花费）
+- decision: "门 FAIL 即关闭：场 overall energy 7.23 差基线 0.265（27×），per-type 12.12 差 0.63（19×）；不建 v0026，不上传；D5b 关闭。基线复现断言通过（同设置可比成立）。诊断：20 epochs 的 score 又糙又错，正确全 schedule 采样把误差放大到底（library 4.3×/方差 2.2× 发散状）；D5 的截断采样是误打误撞的正则。公平检验扩散需 ~10× 训练量＝新假设 D5c，不属重跑，开不开用户定。"
+- evidence: "run 内 RESULT_train.json（680 步无 NaN）＋BUILD.json（基线 0.26469780398582543 精确复现）＋RESULT.md；重读代码未发现新 bug（接线顺序/采样器/数据通路一致）。"
+- boundary: "扩散线两连败但死因不同（D5 测试无效，D5b 欠拟合发散）；‘扩散证伪’仍不成立，‘扩散可 promotion’同样无证据。D2 调参仍悬。blocks_submission: false。"
+- review_trigger: "D5c 立项；或 D2 调参启动；或 T1 封存。"

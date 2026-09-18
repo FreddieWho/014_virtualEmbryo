@@ -106,3 +106,5 @@ J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 bo
 2026-09-14（batch4 Wave 2）：`B4-T2-R2-INTERPOLATION-EXPRESSION-BRIDGE` 四 lane 服务器仲裁——embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1，组成重采样是增量来源；heart 60% clip 未兑现为损伤。derived T2=58.29/Total≈153.71 待确认。详见 registry §B4-T2-R2 与 DECISIONS D-20260914-WAVE2-001。
 
 2026-09-14（batch4 Wave 2）：`B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL` 完成，三 lane 待上传评分——v0008（L1 damp0.5，clip 0%）、v0009（L2 time1.333，clip 21.6% 已披露）、v0010（L3 popmix，clip 2.4%）；仅 5/22 states 有位移；backtest 偏好小 damp（仅记录）；contract 全 PASS，字节一致。单包 `deliveries/b4t2r3__t2__upload__20260914.zip`（一批一包新规首用）。产物 `artifacts/batch4/B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL-20260914-v1/`。结论待服务器仲裁。
+
+2026-09-16（G0 15 轮目标）：`G1-T2-R2..R5` 六 lane 服务器仲裁——v0011（收缩）=**50.64**（+0.11）**新 board best**、v0012=**50.26**/v0013=**50.32**/v0014=**50.26**/v0015=**50.28**/v0016=**50.25**（空间族五 lane 全低于 baseline 50.53）；selection 更新为 v0011。本地/服务器方向反转：本地判收缩钉死、空间胜，服务器反之——proxy 教训已记。详见 registry §G1-T2 与 DECISIONS D-20260916-G0T2-001。

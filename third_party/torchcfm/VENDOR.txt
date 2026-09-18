@@ -1,0 +1,5 @@
+Source: https://github.com/atong01(torchcfm) (atong01/flow-matching replica used by D3)
+Pinned commit: 7c65385 (MIT), recorded in artifacts/g0/G1-T1-D3-FLOW-20260917-v1/DESIGN.md
+Pruned 2026-09-18: removed .git/ (71MB), assets/ (53MB), examples/ (26MB).
+Only torchcfm/ package + tests/ + LICENSE are needed (t1_d3_flow.py imports
+torchcfm.conditional_flow_matching.ExactOptimalTransportConditionalFlowMatcher).

@@ -1,0 +1,27 @@
+round	board	version	method	local_de	local_dir	local_aux	verdict	upload
+BASE	T1:val	v0004	strict_shift	0.8868	0.8895	-	incumbent anchor	no (scored 48.47)
+R1	T1:val	v0015	neural_ode_reassign	0.8868	0.8903	-	tie, not promoted	no
+R2	T1:val	v0016	substate_split	0.8868	0.8616	-	regressed	no
+R3	T1:val	v0017	maturity_bins	0.8491	0.8284	-	regressed	no
+R4	T1:val	v0018	tshrink_C2	0.9057	0.9033	-	PROMOTED	YES
+R5	T1:val	v0019	tshrink_C1	0.9057	0.8997	-	promoted	YES
+R5	T1:val	v0020	tshrink_C2	0.9057	0.9033	-	promoted (R4 repro)	YES
+R5	T1:val	v0021	tshrink_C4	0.9057	0.9071	-	promoted, T1 best	YES first
+BASE	T3:gata4	v0009	genotype_zero	0.1739	0.2444	slope -0.5368	incumbent anchor	no (scored 46.95)
+R1	T3:gata4	v0013	directprop_17	0.1739	0.2442	slope -0.5375	proxy-blind, mechanism bet	YES
+R2	T3:gata4	v0014	tertile_dose	0.1739	0.2444	slope -0.5368	proxy-blind, mechanism bet	YES
+R3	T3:gata4	v0015	lineage_dose	0.1739	0.2444	slope -0.5428	proxy-blind, mechanism bet	YES
+R4	T3:gata4	v0016	dose_plus_prop	0.1739	0.2442	slope -0.5436	proxy-blind, upload pick	YES first
+R5	T3:gata4	v0017	combo_amp2x	0.1739	0.2444	slope -0.5443	proxy-blind, amplitude variant	YES
+BASE	T2:heart:val_extrap	v0001	strict_shift	0.2466	0.4221	vario 0.0743	incumbent anchor	no (scored 50.53)
+CAL	T2:heart:val_extrap	v0008	damp050	0.2192	0.3829	-	worse, existing lane	no
+CAL	T2:heart:val_extrap	v0009	time1333	0.2466	0.4299	-	tie (dir +0.008), existing lane	no
+CAL	T2:heart:val_extrap	v0010	popmix050	0.2329	0.3859	-	worse, existing lane	no
+R2	T2:heart:val_extrap	v0011	tshrink_C2	0.2466	0.4183	-	de pinned, dir negative	no
+R3	T2:heart:val_extrap	v0012	spatial_knn15	0.2603	0.4236	vario 0.0780	PROMOTED	YES
+R4	T2:heart:val_extrap	v0013	spatial_knn07	0.2466	0.4229	-	de tied, not promoted	no
+R4	T2:heart:val_extrap	v0014	spatial_knn15	0.2603	0.4236	-	promoted (R3 repro)	no (score-dup)
+R4	T2:heart:val_extrap	v0015	spatial_knn30	0.2603	0.4241	-	promoted	YES
+R5	T2:heart:val_extrap	v0016	spatial_knn60	0.2603	0.4245	-	promoted, extrap best	YES first
+BASE	T2:embryo:val_interp	v0010	mean_mass_bridge	0.7241	0.6589	-	incumbent anchor (no T2-interp rounds this goal)	no (scored 62.29)
+BASE	T2:heart:val_interp	v0013	mean_mass_bridge	0.5435	0.7697	-	incumbent anchor (no T2-interp rounds this goal)	no (scored 62.04)

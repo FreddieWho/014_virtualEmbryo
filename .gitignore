@@ -20,3 +20,6 @@ infra/external_data/manifests/
 *.h5
 *.zip
 *.gz
+
+# agent session scratch (background task logs, goals)
+.pi/
