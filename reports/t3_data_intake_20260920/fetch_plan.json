@@ -1,0 +1,74 @@
+[
+  {
+    "name": "official_rules.html",
+    "url": "https://virtualembryo.ai/challenge/rules"
+  },
+  {
+    "name": "connectomedb_downloads.html",
+    "url": "https://connectomedb.org/downloads.html"
+  },
+  {
+    "name": "connectomedb_license.html",
+    "url": "https://connectomedb.org/docs/policy.html"
+  },
+  {
+    "name": "connectomedb_mouse.csv",
+    "url": "https://connectomedb.org/downloads/CDB2025v1/CSV/ConnectomeDB2025_mouse.csv"
+  },
+  {
+    "name": "fibro_zenodo.json",
+    "url": "https://zenodo.org/api/records/14794723"
+  },
+  {
+    "name": "fibro_readme.md",
+    "url": "https://raw.githubusercontent.com/csbg/fibroblast-perturb-seq-analysis/main/README.md"
+  },
+  {
+    "name": "brain_readme.md",
+    "url": "https://raw.githubusercontent.com/jinlabneurogenomics/wholebrainperturbseq/main/README.md"
+  },
+  {
+    "name": "replogle_figshare.json",
+    "url": "https://api.figshare.com/v2/articles/20029387"
+  },
+  {
+    "name": "cellphonedb_interactions.csv",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/interaction_input.csv"
+  },
+  {
+    "name": "cellphonedb_receptor_tf.csv",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/TF_input.csv"
+  },
+  {
+    "name": "cellphonedb_license",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/LICENSE"
+  },
+  {
+    "name": "fibro_paper.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12749234/fullTextXML"
+  },
+  {
+    "name": "brain_paper.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13108593/fullTextXML"
+  },
+  {
+    "name": "GSE90063_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90063&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE133344_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133344&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE193736_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193736&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE306429_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306429&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE261742_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261742&targ=self&form=text&view=full"
+  }
+]

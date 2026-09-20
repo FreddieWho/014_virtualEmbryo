@@ -1,0 +1,58 @@
+[
+  {
+    "name": "GSM8151750_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151750&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151751_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151751&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151752_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151752&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151753_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151753&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151754_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151754&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151755_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151755&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151756_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151756&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151757_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151757&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151758_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151758&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSM8151759_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151759&targ=self&form=text&view=full"
+  },
+  {
+    "name": "fibro_ftp_list.html",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE261nnn/GSE261783/suppl/"
+  },
+  {
+    "name": "fibro_github_tree.html",
+    "url": "https://github.com/csbg/fibroblast-perturb-seq-analysis/tree/main"
+  },
+  {
+    "name": "brain_hf_tree.json",
+    "url": "https://huggingface.co/api/datasets/perturbai/wholebrain_crispr_atlas/tree/main?recursive=true&expand=false&limit=1000"
+  },
+  {
+    "name": "brain_card.md",
+    "url": "https://huggingface.co/datasets/perturbai/wholebrain_crispr_atlas/raw/main/README.md"
+  }
+]

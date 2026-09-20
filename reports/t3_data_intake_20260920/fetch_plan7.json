@@ -1,0 +1,154 @@
+[
+  {
+    "name": "lr_cards/ADM-RAMP2.html",
+    "url": "https://connectomedb.org/cards/human/ADM-RAMP2.html"
+  },
+  {
+    "name": "lr_cards/APLN-APLNR.html",
+    "url": "https://connectomedb.org/cards/human/APLN-APLNR.html"
+  },
+  {
+    "name": "lr_cards/CXCL12-ACKR3.html",
+    "url": "https://connectomedb.org/cards/human/CXCL12-ACKR3.html"
+  },
+  {
+    "name": "lr_cards/EDN1-EDNRB.html",
+    "url": "https://connectomedb.org/cards/human/EDN1-EDNRB.html"
+  },
+  {
+    "name": "lr_cards/EFNA5-EPHA4.html",
+    "url": "https://connectomedb.org/cards/human/EFNA5-EPHA4.html"
+  },
+  {
+    "name": "lr_cards/NLGN1-NRXN3.html",
+    "url": "https://connectomedb.org/cards/human/NLGN1-NRXN3.html"
+  },
+  {
+    "name": "lr_cards/NODAL-ACVR1C.html",
+    "url": "https://connectomedb.org/cards/human/NODAL-ACVR1C.html"
+  },
+  {
+    "name": "lr_cards/NPPA-NPR3.html",
+    "url": "https://connectomedb.org/cards/human/NPPA-NPR3.html"
+  },
+  {
+    "name": "lr_cards/NPPB-NPR3.html",
+    "url": "https://connectomedb.org/cards/human/NPPB-NPR3.html"
+  },
+  {
+    "name": "lr_cards/NRG1-ERBB4.html",
+    "url": "https://connectomedb.org/cards/human/NRG1-ERBB4.html"
+  },
+  {
+    "name": "lr_cards/NTF4-NGFR.html",
+    "url": "https://connectomedb.org/cards/human/NTF4-NGFR.html"
+  },
+  {
+    "name": "lr_cards/PDGFB-PDGFRB.html",
+    "url": "https://connectomedb.org/cards/human/PDGFB-PDGFRB.html"
+  },
+  {
+    "name": "lr_cards/PTN-PTPRZ1.html",
+    "url": "https://connectomedb.org/cards/human/PTN-PTPRZ1.html"
+  },
+  {
+    "name": "lr_cards/RSPO1-LGR6.html",
+    "url": "https://connectomedb.org/cards/human/RSPO1-LGR6.html"
+  },
+  {
+    "name": "lr_cards/RSPO3-LGR6.html",
+    "url": "https://connectomedb.org/cards/human/RSPO3-LGR6.html"
+  },
+  {
+    "name": "lr_cards/SEMA3A-NRP2.html",
+    "url": "https://connectomedb.org/cards/human/SEMA3A-NRP2.html"
+  },
+  {
+    "name": "lr_cards/SLIT2-ROBO2.html",
+    "url": "https://connectomedb.org/cards/human/SLIT2-ROBO2.html"
+  },
+  {
+    "name": "lr_cards/SLIT3-ROBO2.html",
+    "url": "https://connectomedb.org/cards/human/SLIT3-ROBO2.html"
+  },
+  {
+    "name": "lr_cards/TNC-ITGA8.html",
+    "url": "https://connectomedb.org/cards/human/TNC-ITGA8.html"
+  },
+  {
+    "name": "lr_cards/TNC-PTPRZ1.html",
+    "url": "https://connectomedb.org/cards/human/TNC-PTPRZ1.html"
+  },
+  {
+    "name": "lr_cards/VEGFC-NRP2.html",
+    "url": "https://connectomedb.org/cards/human/VEGFC-NRP2.html"
+  },
+  {
+    "name": "lr_cards/CADM1-CADM1.html",
+    "url": "https://connectomedb.org/cards/human/CADM1-CADM1.html"
+  },
+  {
+    "name": "lr_cards/CXCL12-ITGA4.html",
+    "url": "https://connectomedb.org/cards/human/CXCL12-ITGA4.html"
+  },
+  {
+    "name": "lr_cards/MMRN2-CD93.html",
+    "url": "https://connectomedb.org/cards/human/MMRN2-CD93.html"
+  },
+  {
+    "name": "lr_cards/MMRN2-CLEC14A.html",
+    "url": "https://connectomedb.org/cards/human/MMRN2-CLEC14A.html"
+  },
+  {
+    "name": "lr_cards/ROBO2-ROBO2.html",
+    "url": "https://connectomedb.org/cards/human/ROBO2-ROBO2.html"
+  },
+  {
+    "name": "lr_cards/CDH4-CDH4.html",
+    "url": "https://connectomedb.org/cards/human/CDH4-CDH4.html"
+  },
+  {
+    "name": "lr_cards/EPHA4-EFNA5.html",
+    "url": "https://connectomedb.org/cards/human/EPHA4-EFNA5.html"
+  },
+  {
+    "name": "lr_cards/ESAM-ESAM.html",
+    "url": "https://connectomedb.org/cards/human/ESAM-ESAM.html"
+  },
+  {
+    "name": "lr_cards/FGB-CDH5.html",
+    "url": "https://connectomedb.org/cards/human/FGB-CDH5.html"
+  },
+  {
+    "name": "lr_cards/LAMA2-ADGRG6.html",
+    "url": "https://connectomedb.org/cards/human/LAMA2-ADGRG6.html"
+  },
+  {
+    "name": "lr_cards/MPZ-MPZ.html",
+    "url": "https://connectomedb.org/cards/human/MPZ-MPZ.html"
+  },
+  {
+    "name": "lr_cards/NEGR1-NEGR1.html",
+    "url": "https://connectomedb.org/cards/human/NEGR1-NEGR1.html"
+  },
+  {
+    "name": "lr_cards/NTM-NTM.html",
+    "url": "https://connectomedb.org/cards/human/NTM-NTM.html"
+  },
+  {
+    "name": "lr_cards/PECAM1-PECAM1.html",
+    "url": "https://connectomedb.org/cards/human/PECAM1-PECAM1.html"
+  },
+  {
+    "name": "lr_cards/SVEP1-ITGA4.html",
+    "url": "https://connectomedb.org/cards/human/SVEP1-ITGA4.html"
+  },
+  {
+    "name": "lr_cards/VWF-ITGA4.html",
+    "url": "https://connectomedb.org/cards/human/VWF-ITGA4.html"
+  },
+  {
+    "name": "brain_features.tsv.gz",
+    "url": "https://cells.ucsc.edu/whole-brain-perturb/combined/features.tsv.gz"
+  }
+]

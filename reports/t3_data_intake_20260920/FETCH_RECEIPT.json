@@ -1,0 +1,165 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "official_rules.html",
+      "url": "https://virtualembryo.ai/challenge/rules",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/official_rules.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 162847,
+      "sha256": "ff319f7f1e7cdde177224ad2055f26971a1785403936f9864e2f7a835d60db83",
+      "model_input": false
+    },
+    {
+      "name": "connectomedb_downloads.html",
+      "url": "https://connectomedb.org/downloads.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/connectomedb_downloads.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 29442,
+      "sha256": "84e49250f29edc7ee134f16aa17e68ff488a1d72bb16ce7085ec9775a4419cc7",
+      "model_input": false
+    },
+    {
+      "name": "connectomedb_license.html",
+      "url": "https://connectomedb.org/docs/policy.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/connectomedb_license.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 31831,
+      "sha256": "454964fa3e53daa34f409a9beaac71204fb8da85237ce3987a5701fd581b079c",
+      "model_input": false
+    },
+    {
+      "name": "connectomedb_mouse.csv",
+      "url": "https://connectomedb.org/downloads/CDB2025v1/CSV/ConnectomeDB2025_mouse.csv",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/connectomedb_mouse.csv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1428106,
+      "sha256": "79b04cc1ec8a48860ce3936de3d8641dbc578db4aa0b81c4ba6b52bb5323baf4",
+      "model_input": false
+    },
+    {
+      "name": "fibro_zenodo.json",
+      "url": "https://zenodo.org/api/records/14794723",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/fibro_zenodo.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 5003,
+      "sha256": "43c244f154bb05337e0cd994251339abb4c2a6a5d19f13e39aaed94634643624",
+      "model_input": false
+    },
+    {
+      "name": "fibro_readme.md",
+      "url": "https://raw.githubusercontent.com/csbg/fibroblast-perturb-seq-analysis/main/README.md",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/fibro_readme.md",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3285,
+      "sha256": "a3a9d7deee3993be65c14c8e7b94c5d4bbe1063a616dd9b7eb1c21a647fd0d34",
+      "model_input": false
+    },
+    {
+      "name": "brain_readme.md",
+      "url": "https://raw.githubusercontent.com/jinlabneurogenomics/wholebrainperturbseq/main/README.md",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/brain_readme.md",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 4848,
+      "sha256": "48e5fb509ea53d7410352fcc4e82ffe053ed960e9f422f58d2c5c5254eb68660",
+      "model_input": false
+    },
+    {
+      "name": "replogle_figshare.json",
+      "url": "https://api.figshare.com/v2/articles/20029387",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/replogle_figshare.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 11400,
+      "sha256": "8fca06c135b0a5ec3f37f15b6e27f841ab865578f33aa96e14c124d21ecb1eda",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_interactions.csv",
+      "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/interaction_input.csv",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/cellphonedb_interactions.csv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 505620,
+      "sha256": "3cf0ceace45dcb42478f0e6a7be9a50104794eac68d731f7c82d4c13325175ab",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_receptor_tf.csv",
+      "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/TF_input.csv",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/TF_input.csv",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_license",
+      "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/LICENSE",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/LICENSE",
+      "model_input": false
+    },
+    {
+      "name": "fibro_paper.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12749234/fullTextXML",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/fibro_paper.xml",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 217535,
+      "sha256": "2005e50058ab3ef7557a12f77053bb9c8de81b7c043cefdd08b3b50a544ccfcc",
+      "model_input": false
+    },
+    {
+      "name": "brain_paper.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13108593/fullTextXML",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/brain_paper.xml",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 214896,
+      "sha256": "cdeb940eae064198e35ca9148fe23a878af37796e63a03521a0589939ee15221",
+      "model_input": false
+    },
+    {
+      "name": "GSE90063_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE90063&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSE90063_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3474,
+      "sha256": "8416d48733825ae1fae403461880e82094af66b5d9f55cf5d90bbe0637689072",
+      "model_input": false
+    },
+    {
+      "name": "GSE133344_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133344&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSE133344_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3219,
+      "sha256": "a9a1698ae6240b2f85ce69283a760a65b9628eb596e45c6f8de283dbb2608a62",
+      "model_input": false
+    },
+    {
+      "name": "GSE193736_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193736&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSE193736_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 6134,
+      "sha256": "653c34c57ea5c016056ad92bda20ea800ceb8029fcfdea923b01642ae43c2214",
+      "model_input": false
+    },
+    {
+      "name": "GSE306429_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306429&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSE306429_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 21251,
+      "sha256": "c7dc0f643cdd0360513f0d9adc7c18f7347c977020917b34bfaf0e8c23e1d6e6",
+      "model_input": false
+    },
+    {
+      "name": "GSE261742_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261742&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSE261742_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3865,
+      "sha256": "35396c65726ecdc6c1908d345863c9c9184fdcdb431d5e0dc92594117182fdf5",
+      "model_input": false
+    }
+  ]
+}

@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "六路线实现收口：v0026/v0027/v0030/v0031 合同通过，待人工上传与回分；R3 裁剪超限、R4 映射失败；R5/R6 输入阻塞，正式计算 NOT_RUN。见 reports/T3_NEXT_EXECUTION_20260920.md。"
+    next_action: "四候选 v0026/v0027/v0030/v0031 待上传回分；R3/R4 修复已入 TODO；R5/R6 首轮数据收集完成但全为隔离，GSE261783 保留 5454 细胞/26 候选扰动、panel 500/500，用途/来源审查仍未闭合，正式训练 NOT_RUN。见 reports/t3_data_intake_20260920/REPORT.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

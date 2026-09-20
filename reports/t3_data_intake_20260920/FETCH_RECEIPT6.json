@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "connectomedb_mouse.json",
+      "url": "https://connectomedb.org/downloads/CDB2025v1/JSON/mouse_gene_pair.json",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/connectomedb_mouse.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 4676690,
+      "sha256": "bf16c34e188e7251fd0296209c682b36e336fa0e9bd335846474dc877d0a47a7",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_terms.html",
+      "url": "https://www.cellphonedb.org/legal.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/cellphonedb_terms.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 16843,
+      "sha256": "b26c5f2f2e0eaadcc958f9e01400605e5677812927e4dcb421e3c0f693133f98",
+      "model_input": false
+    },
+    {
+      "name": "brain_ucsc_combined.json",
+      "url": "https://cells.ucsc.edu/whole-brain-perturb/combined/dataset.json",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/brain_ucsc_combined.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 621308,
+      "sha256": "8653a112512033af1d8fe0052b2a9f0fea117c78f22cf45114c85edcdf2a563f",
+      "model_input": false
+    },
+    {
+      "name": "brain_hf_page.html",
+      "url": "https://huggingface.co/datasets/perturbai/wholebrain_crispr_atlas",
+      "status": "FETCH_FAILED",
+      "error": "SSLError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/perturbai/wholebrain_crispr_atlas (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))",
+      "model_input": false
+    }
+  ]
+}

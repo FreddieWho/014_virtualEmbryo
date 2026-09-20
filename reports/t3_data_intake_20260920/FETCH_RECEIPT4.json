@@ -1,0 +1,183 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151750_Activated_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151750/suppl/GSM8151750_Activated_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151750_Activated_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 46091,
+      "sha256": "0845901a71fb07c6e458bac83ad8228fd9c19bb15482877b92e100d5783e3a3e",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151751_Activated_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151751/suppl/GSM8151751_Activated_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151751_Activated_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 46232,
+      "sha256": "d8329d9f2947cd2c342b9a77788623aa142998152a5d5057f70da9e9b69f3c2d",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151752_Quiescent_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151752/suppl/GSM8151752_Quiescent_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151752_Quiescent_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 52381,
+      "sha256": "79a52dae3a2b2700d3735bc64a736c9c5861b96ab96896e8067a91b3888736fa",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151753_Quiescent_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151753/suppl/GSM8151753_Quiescent_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151753_Quiescent_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 44228,
+      "sha256": "3aa9a3aa6497b18b370ccd5541ad599a40b3bea39cf55c6465cf9b081738d05e",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151754_exVivo_OP2_IL1b_1_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151754/suppl/GSM8151754_exVivo_OP2_IL1b_1_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151754_exVivo_OP2_IL1b_1_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 45515,
+      "sha256": "bcaed78f4716a17de2c2d07af9785bc43ae9a62cbe3807471b2af222586b7ccf",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151755_exVivo_OP2_IL1b_2_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151755/suppl/GSM8151755_exVivo_OP2_IL1b_2_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151755_exVivo_OP2_IL1b_2_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 45035,
+      "sha256": "2f894dcc0357da5dd87c5c8ff8ceb7f824dee2455783f8aa944fa211c1c2bb63",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151756_exVivo_OP2_resting_1_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151756/suppl/GSM8151756_exVivo_OP2_resting_1_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151756_exVivo_OP2_resting_1_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 37817,
+      "sha256": "ea9ffa7a7f5ad4e2f845538e593cb84aefc019a826b6b539b30bac99b9a8a22e",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151757_exVivo_OP2_resting_2_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151757/suppl/GSM8151757_exVivo_OP2_resting_2_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151757_exVivo_OP2_resting_2_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 49280,
+      "sha256": "3dd93db83a79239afe27f7916968e209ae2debecc793e6660a9a686825fc9a30",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151758_exVivo_OP2_TGFb_1_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151758/suppl/GSM8151758_exVivo_OP2_TGFb_1_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151758_exVivo_OP2_TGFb_1_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 45078,
+      "sha256": "1833d6667bbdb05ed5f14bd7865bf90ee467a05af76c11c90741bfe983778a59",
+      "model_input": false
+    },
+    {
+      "name": "cr-outputs-gex-overview",
+      "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview",
+      "status": "FETCH_FAILED",
+      "error": "InvalidSchema: No connection adapters were found for 'Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview'",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151759_exVivo_OP2_TGFb_2_protospacer_calls_per_cell.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151759/suppl/GSM8151759_exVivo_OP2_TGFb_2_protospacer_calls_per_cell.csv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151759_exVivo_OP2_TGFb_2_protospacer_calls_per_cell.csv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 11938,
+      "sha256": "6e0c0f0725090bccd5a47281269074917865c40b4fc4f5296696b8600c348ff4",
+      "model_input": false
+    },
+    {
+      "name": "brain_ucsc_description.html",
+      "url": "https://cells.ucsc.edu/whole-brain-perturb/desc.html",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://cells.ucsc.edu/whole-brain-perturb/desc.html",
+      "model_input": false
+    },
+    {
+      "name": "brain_ucsc_config.json",
+      "url": "https://cells.ucsc.edu/whole-brain-perturb/dataset.json",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/brain_ucsc_config.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 956,
+      "sha256": "784ffbfef757c6e8b9c67b298b8bf6e23fbdf9eceb380a0c57b1e75b9c0e858b",
+      "model_input": false
+    }
+  ]
+}

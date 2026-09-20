@@ -113,3 +113,5 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 2026-09-20（v0031 r2random）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v5/r2/RESULT.json。
 
 | 2026-09-20 | T3-NEXT-SIX 收口 | R1 v0026/v0027、R2 v0030/v0031 已打包，未提交/未评分；R3 全量线性/样条裁剪超限，R4 映射劣于类型均值，无候选；R5/R6 缺输入，正式计算 NOT_RUN；12 项测试通过 | reports/T3_NEXT_EXECUTION_20260920.md；D-20260920-T3NEXT-001 |
+
+| 2026-09-20 | R5/R6 首轮数据收集 | GSE261783 两样本完成隔离过滤，5454×32287，26 候选扰动，500/500 panel；R5 来源表/37 引用卡片落盘但完整链未准入；全部未训练、model_input=false；R3/R4 修复加入 TODO | reports/t3_data_intake_20260920/REPORT.md；D-20260920-T3DATA-001 |

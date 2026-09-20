@@ -56,3 +56,7 @@ S1D v3 的描述性效应为：GSE5298 Gata4 `+0.02084`（linear-expression log2
 
 ## 2026-09-20 T3 新路线输入引用修正
 三个 exact E8.75 WT 当前输入索引由已清理 v5 改指实际存在的 `artifacts/tool_integration/T3-S1A-STATE-JOIN-20260901-v7/data/`；三文件 SHA256 已按 v7 MANIFEST 实际重算通过。原始 MatrixMarket 是 genes×cells（27,669×68,910），建模时转置；不是新增外部数据，也不解除 S1 科学 gate。执行证据见 `artifacts/t3_next/` 的 r4/ATLAS_PERMIT.json。
+
+## 2026-09-20 — T3 路线 5/6 数据收集
+
+新增 94 个实际下载/派生文件索引，全部 QUARANTINE_NOT_APPROVED、model_input=false。优先源 GSE261783 两个静息小鼠心脏样本：9,762→5,454 个细胞、26 个候选扰动＋220 个对照、32,287 基因，panel 500/500；近似表型与通用 Perturb-seq 用途许可未闭合。R5 已收集 3,252 对小鼠 LR、37 张 panel 引用卡片及 212 条人类 receptor–TF，许可/完整链仍未准入。对 ~/006/data 仅做 metadata 只读核查，不复制整个原库。详见 `reports/t3_data_intake_20260920/REPORT.md` 与 COLLECTION_MANIFEST.json。

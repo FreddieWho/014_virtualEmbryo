@@ -1,0 +1,248 @@
+{
+  "status": "METADATA_SCREENED_QUARANTINE_ONLY",
+  "model_input": false,
+  "expression_read": false,
+  "source": "GSE261783",
+  "age": "8 weeks, paper methods",
+  "species": "Mus musculus",
+  "selected_context": "OP2 resting primary cardiac fibroblasts; two replicates",
+  "project_blacklist": [
+    "APC",
+    "AXIN1",
+    "AXIN2",
+    "CTNNB1",
+    "DVL1",
+    "DVL2",
+    "DVL3",
+    "GATA1",
+    "GATA2",
+    "GATA3",
+    "GATA4",
+    "GATA5",
+    "GATA6",
+    "GSK3A",
+    "GSK3B",
+    "HAND1",
+    "HAND2",
+    "ISL1",
+    "LEF1",
+    "LRP5",
+    "LRP6",
+    "MEF2C",
+    "MESP1",
+    "NKX2-5",
+    "TBX5",
+    "TCF7L1",
+    "TCF7L2"
+  ],
+  "additional_exclusions": [
+    "SMAD2",
+    "SMAD3",
+    "SMAD4",
+    "TGFBR1"
+  ],
+  "gene_counts": {
+    "Arid2": 194,
+    "Brd7": 246,
+    "Brd9": 207,
+    "Chd4": 148,
+    "Dmap1": 139,
+    "Egr2": 370,
+    "Hcfc1": 143,
+    "Ino80": 172,
+    "Kansl1": 140,
+    "Kat5": 164,
+    "Kat8": 157,
+    "Kmt2a": 217,
+    "ctrl": 220,
+    "Paxip1": 229,
+    "Pbrm1": 240,
+    "Rest": 310,
+    "Rnf40": 201,
+    "Setd1b": 186,
+    "Setdb1": 252,
+    "Smarca4": 169,
+    "Smarcd1": 322,
+    "Srcap": 146,
+    "Tfpt": 268,
+    "Wdr82": 99,
+    "Yeats4": 182,
+    "Yy1": 139,
+    "Znhit1": 194
+  },
+  "genes_ge20": 26,
+  "samples": {
+    "GSM8151750": {
+      "treatment": "TGFb",
+      "guide_assigned_cells": 3448,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 1182,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 1782,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 484
+      }
+    },
+    "GSM8151751": {
+      "treatment": "TGFb",
+      "guide_assigned_cells": 3631,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 1416,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 1784,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 431
+      }
+    },
+    "GSM8151752": {
+      "treatment": "Unstimulated",
+      "guide_assigned_cells": 3901,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 1279,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 2105,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 517
+      }
+    },
+    "GSM8151753": {
+      "treatment": "Unstimulated",
+      "guide_assigned_cells": 3656,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 1663,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 1553,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 440
+      }
+    },
+    "GSM8151754": {
+      "treatment": "Il1b",
+      "guide_assigned_cells": 4335,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 3163,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 549,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 623
+      }
+    },
+    "GSM8151755": {
+      "treatment": "Il1b",
+      "guide_assigned_cells": 4301,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 3180,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 585,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 536
+      }
+    },
+    "GSM8151756": {
+      "treatment": "Unstimulated",
+      "guide_assigned_cells": 3609,
+      "selected": true,
+      "provisional_counts": {
+        "Arid2": 101,
+        "Brd7": 116,
+        "Brd9": 92,
+        "Chd4": 73,
+        "Dmap1": 71,
+        "Egr2": 183,
+        "Hcfc1": 62,
+        "Ino80": 88,
+        "Kansl1": 66,
+        "Kat5": 79,
+        "Kat8": 74,
+        "Kmt2a": 95,
+        "ctrl": 118,
+        "Paxip1": 118,
+        "Pbrm1": 105,
+        "Rest": 143,
+        "Rnf40": 91,
+        "Setd1b": 82,
+        "Setdb1": 119,
+        "Smarca4": 79,
+        "Smarcd1": 162,
+        "Srcap": 66,
+        "Tfpt": 141,
+        "Wdr82": 41,
+        "Yeats4": 92,
+        "Yy1": 75,
+        "Znhit1": 90
+      },
+      "reason_counts": {
+        "PROVISIONAL_KEEP_MANUAL_PHENOCOPY_REVIEW_PENDING": 2622,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 446,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 541
+      }
+    },
+    "GSM8151757": {
+      "treatment": "Unstimulated",
+      "guide_assigned_cells": 4328,
+      "selected": true,
+      "provisional_counts": {
+        "Arid2": 93,
+        "Brd7": 130,
+        "Brd9": 115,
+        "Chd4": 75,
+        "Dmap1": 68,
+        "Egr2": 187,
+        "Hcfc1": 81,
+        "Ino80": 84,
+        "Kansl1": 74,
+        "Kat5": 85,
+        "Kat8": 83,
+        "Kmt2a": 122,
+        "ctrl": 102,
+        "Paxip1": 111,
+        "Pbrm1": 135,
+        "Rest": 167,
+        "Rnf40": 110,
+        "Setd1b": 104,
+        "Setdb1": 133,
+        "Smarca4": 90,
+        "Smarcd1": 160,
+        "Srcap": 80,
+        "Tfpt": 127,
+        "Wdr82": 58,
+        "Yeats4": 90,
+        "Yy1": 64,
+        "Znhit1": 104
+      },
+      "reason_counts": {
+        "PROVISIONAL_KEEP_MANUAL_PHENOCOPY_REVIEW_PENDING": 2832,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 769,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 727
+      }
+    },
+    "GSM8151758": {
+      "treatment": "TGFb",
+      "guide_assigned_cells": 4299,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 3080,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 654,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 565
+      }
+    },
+    "GSM8151759": {
+      "treatment": "TGFb",
+      "guide_assigned_cells": 1002,
+      "selected": false,
+      "provisional_counts": {},
+      "reason_counts": {
+        "NOT_SELECTED_STIMULATION_OR_BATCH_CONTEXT": 737,
+        "REMOVE_MULTI_GUIDE_OR_MULTI_GENE": 142,
+        "REMOVE_ADDITIONAL_DEVELOPMENTAL_SIGNALLING_RISK": 123
+      }
+    }
+  },
+  "remaining_blockers": [
+    "manual phenocopy review not complete",
+    "generic Perturb-seq task permission/use role unresolved",
+    "500 gene feature audit pending",
+    "no approved training manifest"
+  ]
+}

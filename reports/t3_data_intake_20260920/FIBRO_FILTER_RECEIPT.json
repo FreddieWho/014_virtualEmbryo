@@ -1,0 +1,74 @@
+{
+  "status": "FILTERED_QUARANTINE_NOT_APPROVED",
+  "task": "T3:gata4",
+  "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/filtered/GSE261783_OP2_resting_provisional_raw.h5ad",
+  "sha256": "6e9f22292c420abf40ce3dd1925a5fdde3b7a986e516e330064f668020a9265d",
+  "shape": [
+    5454,
+    32287
+  ],
+  "panel_coverage": 500,
+  "normalization": "RAW_COUNTS_NOT_NORMALIZED",
+  "model_input": false,
+  "formal_training": "NOT_RUN",
+  "forbidden_records_remaining": "NOT_ASSERTED_MANUAL_PHENOCOPY_REVIEW_PENDING",
+  "project_symbol_blacklist_hits_remaining": 0,
+  "embeddings": "NONE",
+  "adjacency": "NONE",
+  "samples": [
+    {
+      "sample": "GSM8151756",
+      "raw_shape": [
+        32349,
+        4537
+      ],
+      "raw_cells": 4537,
+      "retained_cells": 2622,
+      "removed_cells": 1915,
+      "gene_expression_features": 32287,
+      "sha256": "a4dd3b3000648093b23a96298603d7c0916cbcb6c696293494d880c2a317fa69"
+    },
+    {
+      "sample": "GSM8151757",
+      "raw_shape": [
+        32349,
+        5225
+      ],
+      "raw_cells": 5225,
+      "retained_cells": 2832,
+      "removed_cells": 2393,
+      "gene_expression_features": 32287,
+      "sha256": "3b1e8782c8c9a4bcf38eca2f1e39c8143592bea7578ad17893efff2d4c78ff46"
+    }
+  ],
+  "condition_counts": {
+    "Egr2": 370,
+    "Smarcd1": 322,
+    "Rest": 310,
+    "Tfpt": 268,
+    "Setdb1": 252,
+    "Brd7": 246,
+    "Pbrm1": 240,
+    "Paxip1": 229,
+    "ctrl": 220,
+    "Kmt2a": 217,
+    "Brd9": 207,
+    "Rnf40": 201,
+    "Znhit1": 194,
+    "Arid2": 194,
+    "Setd1b": 186,
+    "Yeats4": 182,
+    "Ino80": 172,
+    "Smarca4": 169,
+    "Kat5": 164,
+    "Kat8": 157,
+    "Chd4": 148,
+    "Srcap": 146,
+    "Hcfc1": 143,
+    "Kansl1": 140,
+    "Dmap1": 139,
+    "Yy1": 139,
+    "Wdr82": 99
+  },
+  "plan_sha256": "353775af068057fe93643ed5d2f9e80405151221637a68ac7226ffb3dfcfee49"
+}

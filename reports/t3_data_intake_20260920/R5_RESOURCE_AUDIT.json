@@ -1,0 +1,30 @@
+{
+  "status": "PARTIAL_RELATIONSHIP_RESOURCES_COLLECTED_NOT_APPROVED",
+  "model_input": false,
+  "connectomedb": {
+    "total_mouse_pairs": 3252,
+    "direct": 894,
+    "inferred": 2358,
+    "panel_pairs": 37,
+    "panel_direct": 11,
+    "cards_present": 37,
+    "pairs_with_primary_links": 37,
+    "license": "CONFLICT: downloads says MIT; terms distinguish database CC-BY-NC-4.0 from software MIT; no permissive interpretation adopted",
+    "ai_summary_used": false
+  },
+  "cellphonedb": {
+    "lr_rows": 2911,
+    "receptor_tf_rows": 212,
+    "receptor_tf_rows_with_pmid": 93,
+    "species": "human",
+    "orthology_audit": "NOT_RUN",
+    "license": "data license unresolved: website defaults CC-BY-NC-ND-4.0; software MIT is not a data license"
+  },
+  "complete_approved_ligand_receptor_target_edges": 0,
+  "limitations": [
+    "LR pairs do not specify downstream target genes",
+    "receptor-to-TF activation is not evidence of TF transcript response",
+    "per-reference target/phenocopy provenance still requires manual review",
+    "no trained NicheNet weights or aggregated target-response priors used"
+  ]
+}

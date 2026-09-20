@@ -1,0 +1,54 @@
+[
+  {
+    "name": "cellphonedb_transcription_factor.csv",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/transcription_factor_input.csv"
+  },
+  {
+    "name": "cellphonedb_readme.md",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/README.md"
+  },
+  {
+    "name": "cellphonedb_repo.json",
+    "url": "https://api.github.com/repos/ventolab/cellphonedb-data"
+  },
+  {
+    "name": "brain_hf.json",
+    "url": "https://huggingface.co/api/datasets/perturbai/wholebrain_crispr_atlas"
+  },
+  {
+    "name": "brain_hf_tree.json",
+    "url": "https://huggingface.co/api/datasets/perturbai/wholebrain_crispr_atlas/tree/main?recursive=true&expand=false&limit=1000"
+  },
+  {
+    "name": "brain_card.md",
+    "url": "https://huggingface.co/datasets/perturbai/wholebrain_crispr_atlas/raw/main/README.md"
+  },
+  {
+    "name": "fibro_repo_tree.json",
+    "url": "https://api.github.com/repos/csbg/fibroblast-perturb-seq-analysis/git/trees/main?recursive=1"
+  },
+  {
+    "name": "geo_disclaimer.html",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html"
+  },
+  {
+    "name": "GSE261740_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261740&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE261741_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261741&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE261783_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE281868_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE281868&targ=self&form=text&view=full"
+  },
+  {
+    "name": "GSE281871_metadata.soft",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE281871&targ=self&form=text&view=full"
+  }
+]

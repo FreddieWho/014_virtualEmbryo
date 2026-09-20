@@ -736,3 +736,11 @@ reuse_promoted
 - evidence: "reports/T3_NEXT_EXECUTION_20260920.md 与 .json；configs/t3_next/design.json；候选身份以 submissions/INDEX.tsv 为准；12 项定向测试通过，交付包四候选哈希/CRC 通过。"
 - boundary: "v0028/v0029 自 donor 对照缺陷导致 invalidated_unsubmitted，原文件不可变且排除上传；修复重跑生成 v0030/v0031。不用错靶 local scorer，不放宽门槛，不宣称新 best 或科学识别；blocks_submission: false。"
 - review_trigger: "四候选服务器分数与原始证据，或 R5/R6 所缺的合规输入到位。"
+
+
+### D-20260920-T3DATA-001 — R3/R4 待修复，R5/R6 首轮数据收集
+
+- decision: "按用户要求将 R3 非负输出/传播修复、R4 跨平台映射修复写入 TODO，未执行；线上优先选 GSE261783 OP2 静息两个样本，metadata-first 后下载并隔离过滤为 5454×32287，26 个候选扰动，另有 220 对照细胞计入总细胞数，panel 500/500。R5 关系资源与 37 张 panel 引用卡片已收集。"
+- evidence: "reports/t3_data_intake_20260920/REPORT.md；SOURCE_SHORTLIST.tsv；COLLECTION_MANIFEST.json；FIBRO_FILTER_RECEIPT.json；FILTER_VALIDATION.json；R5_RESOURCE_AUDIT.json。生信索引同步。"
+- boundary: "所有新文件 QUARANTINE_NOT_APPROVED，model_input=false；固定 blacklist 零命中不等于完整 phenocopy 审查通过。generic Perturb-seq 响应形状用途/许可未闭合，R5 许可和下游 target 链未闭合；正式训练/归一化/embedding/候选生成均 NOT_RUN。既有候选待评分和 selection 不变。blocks_submission: false。"
+- next_action: "完成明确剩余的数据准入与用途审查；R3/R4 保留待办。不替组织者发消息、不自动把已收集文件晋级为模型输入。"

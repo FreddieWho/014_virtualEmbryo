@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "connectomedb_human.csv",
+      "url": "https://connectomedb.org/downloads/CDB2025v1/CSV/ConnectomeDB2025_human.csv",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/connectomedb_human.csv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1436980,
+      "sha256": "da5a713b615a3d4df26d3d95082d09b92e27f153fc1b8fb35c5d5297a4b004f3",
+      "model_input": false
+    },
+    {
+      "name": "connectomedb_mouse_browser.html",
+      "url": "https://connectomedb.org/mouse.html",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://connectomedb.org/mouse.html",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_proteins.csv",
+      "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/protein_input.csv",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/cellphonedb_proteins.csv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 158940,
+      "sha256": "322f277963ca2fc879c97660eb1409478603a3d2d7442c6606bce79a45f14ae2",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_genes.csv",
+      "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/gene_input.csv",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/cellphonedb_genes.csv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 65195,
+      "sha256": "538fff62a77d9077e0307337552bed087817632da015c620f17666d088066623",
+      "model_input": false
+    },
+    {
+      "name": "cellphonedb_software_license",
+      "url": "https://raw.githubusercontent.com/ventolab/CellphoneDB/master/LICENSE.txt",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ventolab/CellphoneDB/master/LICENSE.txt",
+      "model_input": false
+    }
+  ]
+}

@@ -282,3 +282,7 @@ veckit 上游 HEAD 经 git ls-remote 核对为 `46d41e6`（与本地 pin 一致�
 
 ### 策略含义（记录，不形成决策）
 - Validation probing 有明确截止（10-20 转 test ranking）；test 期每 board 只有 2 发——攒足证据再打。
+
+## 2026-09-20 — T3 外部数据收集前复核
+
+来源：https://virtualembryo.ai/challenge/rules（本轮在线读取；原始网页、SHA256 见 reports/t3_data_intake_20260920/FETCH_RECEIPT.json）。T3 held-out genotype、同基因其他 allele/近似表型和预训练污染禁用边界与既有缓存一致；未据此放宽本地 generic Perturb-seq 的响应形状用途及书面确认要求。未重新抓取其他官方页面、未重定其他任务许可。实际新数据均隔离，未训练。

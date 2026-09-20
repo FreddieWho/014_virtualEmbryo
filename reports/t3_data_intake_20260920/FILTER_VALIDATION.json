@@ -1,0 +1,12 @@
+{
+  "status": "PASS_STRUCTURAL_FILTER_ONLY",
+  "n_cells": 5454,
+  "n_genes": 32287,
+  "panel_unique_coverage": 500,
+  "project_and_added_symbol_hits": [],
+  "full_phenocopy_audit": "NOT_COMPLETE",
+  "model_input": false,
+  "raw_counts_retained": true,
+  "embeddings_present": false,
+  "training": "NOT_RUN"
+}

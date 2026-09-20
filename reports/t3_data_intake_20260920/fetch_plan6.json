@@ -1,0 +1,18 @@
+[
+  {
+    "name": "connectomedb_mouse.json",
+    "url": "https://connectomedb.org/downloads/CDB2025v1/JSON/mouse_gene_pair.json"
+  },
+  {
+    "name": "cellphonedb_terms.html",
+    "url": "https://www.cellphonedb.org/legal.html"
+  },
+  {
+    "name": "brain_ucsc_combined.json",
+    "url": "https://cells.ucsc.edu/whole-brain-perturb/combined/dataset.json"
+  },
+  {
+    "name": "brain_hf_page.html",
+    "url": "https://huggingface.co/datasets/perturbai/wholebrain_crispr_atlas"
+  }
+]

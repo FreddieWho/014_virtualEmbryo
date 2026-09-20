@@ -1,0 +1,349 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "lr_cards/ADM-RAMP2.html",
+      "url": "https://connectomedb.org/cards/human/ADM-RAMP2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/ADM-RAMP2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 65653,
+      "sha256": "ff13c0225f839bbf53a163d5bbdc0fc9e058b41cb8737a801e4cad8bc774a82b",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/APLN-APLNR.html",
+      "url": "https://connectomedb.org/cards/human/APLN-APLNR.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/APLN-APLNR.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 67767,
+      "sha256": "d06df79de74b618491834288502563dfa207370be8690403cfabe52e00fadde5",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/CXCL12-ACKR3.html",
+      "url": "https://connectomedb.org/cards/human/CXCL12-ACKR3.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/CXCL12-ACKR3.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 61731,
+      "sha256": "d1d539e69fd54008e14017257a63949790f7d4a4bb72db841e29143042383218",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/EDN1-EDNRB.html",
+      "url": "https://connectomedb.org/cards/human/EDN1-EDNRB.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/EDN1-EDNRB.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 61500,
+      "sha256": "043d6774a11b7c42ddddb9e0fecfab0ff2dfc7db1f83162e2608528ad64b6f14",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/EFNA5-EPHA4.html",
+      "url": "https://connectomedb.org/cards/human/EFNA5-EPHA4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/EFNA5-EPHA4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 61987,
+      "sha256": "1c2ac35ebb3f58fd25aa3b2c4bb127b6fbd835cda12f2bb7bd8e7c9f04af9c46",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NLGN1-NRXN3.html",
+      "url": "https://connectomedb.org/cards/human/NLGN1-NRXN3.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NLGN1-NRXN3.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57127,
+      "sha256": "7f61c3654123f76fb4434bc07f15e59bd14b73edd6dd4cf8412a53d0d4ccc0d4",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NODAL-ACVR1C.html",
+      "url": "https://connectomedb.org/cards/human/NODAL-ACVR1C.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NODAL-ACVR1C.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60045,
+      "sha256": "db21ec217e39426b255683014ba8e880ab3ffd7f2ef7428c666ae420dfa2d91e",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NPPA-NPR3.html",
+      "url": "https://connectomedb.org/cards/human/NPPA-NPR3.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NPPA-NPR3.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57258,
+      "sha256": "812971855bac66159635ba9da4c82b6db11369f44192b6dae2f88e8763612a7a",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NPPB-NPR3.html",
+      "url": "https://connectomedb.org/cards/human/NPPB-NPR3.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NPPB-NPR3.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60305,
+      "sha256": "c884dba335741c0b490698ef94b2269d19d1465ca3f281c1a0388abad690c225",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NRG1-ERBB4.html",
+      "url": "https://connectomedb.org/cards/human/NRG1-ERBB4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NRG1-ERBB4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 69381,
+      "sha256": "3badfdf789d6bd0eb48112be2bb99d80b8f17923af5445cfcdc2ce4c12eb337f",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NTF4-NGFR.html",
+      "url": "https://connectomedb.org/cards/human/NTF4-NGFR.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NTF4-NGFR.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 55613,
+      "sha256": "fbca671a86c53c91b289207e898c4af724b733c9288ac5df802d18ddb8308ede",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/PDGFB-PDGFRB.html",
+      "url": "https://connectomedb.org/cards/human/PDGFB-PDGFRB.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/PDGFB-PDGFRB.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56487,
+      "sha256": "a670750162a92e2fab4a9f3d25831ac079a056c111eb36890f2758257228b8f1",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/PTN-PTPRZ1.html",
+      "url": "https://connectomedb.org/cards/human/PTN-PTPRZ1.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/PTN-PTPRZ1.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 62960,
+      "sha256": "8b438ee19f77aa9caa2d86efbe6c61469158eeff9d4ea853499f2f040c48b4e4",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/RSPO1-LGR6.html",
+      "url": "https://connectomedb.org/cards/human/RSPO1-LGR6.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/RSPO1-LGR6.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56465,
+      "sha256": "c7e6de90bb5ddfed2b5f09d723ed3b0c03e06b628c01a8e8a0699ce251eff0c3",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/RSPO3-LGR6.html",
+      "url": "https://connectomedb.org/cards/human/RSPO3-LGR6.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/RSPO3-LGR6.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56344,
+      "sha256": "efc3fa2caf55dc8407bb98e2f24bccca77f90b6981d36f6582e2f0f4f8d3c805",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/SEMA3A-NRP2.html",
+      "url": "https://connectomedb.org/cards/human/SEMA3A-NRP2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/SEMA3A-NRP2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 58216,
+      "sha256": "15ec322c500633dab5af4d6aebb2c92c757b9c2a4200f36200631c4187157693",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/SLIT2-ROBO2.html",
+      "url": "https://connectomedb.org/cards/human/SLIT2-ROBO2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/SLIT2-ROBO2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57217,
+      "sha256": "a2a6c906380bdd7a9a4cbef48850571d813f3680b8e0e80eb4dfcf6f09684d3e",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/SLIT3-ROBO2.html",
+      "url": "https://connectomedb.org/cards/human/SLIT3-ROBO2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/SLIT3-ROBO2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56851,
+      "sha256": "0637f723d053b81d939eb220d2ff0c6e2a622d8a0eae705f3909eaef9e379bc1",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/TNC-ITGA8.html",
+      "url": "https://connectomedb.org/cards/human/TNC-ITGA8.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/TNC-ITGA8.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 58580,
+      "sha256": "eacab7f20400d08da15aef2526ffe4704b4df6cfd0e2eeb7967f897059592012",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/TNC-PTPRZ1.html",
+      "url": "https://connectomedb.org/cards/human/TNC-PTPRZ1.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/TNC-PTPRZ1.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60831,
+      "sha256": "c381dae7e840f8aa1d80ae8ea963bd98bc4a06f79d59fb523b7bc20d76fb6742",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/VEGFC-NRP2.html",
+      "url": "https://connectomedb.org/cards/human/VEGFC-NRP2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/VEGFC-NRP2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 58885,
+      "sha256": "d4ee5e44e221af8777e71e5ab93b430db83c357f5b02caa91c2308e51697eba4",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/CADM1-CADM1.html",
+      "url": "https://connectomedb.org/cards/human/CADM1-CADM1.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/CADM1-CADM1.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60982,
+      "sha256": "8e47e5a0ff8af06435d977ada4e97df866557e4e32793af13c6e3498f3fa015a",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/CXCL12-ITGA4.html",
+      "url": "https://connectomedb.org/cards/human/CXCL12-ITGA4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/CXCL12-ITGA4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60971,
+      "sha256": "c7b07f5da6fc0a1123e467b7dea907b2dfedd7a6eac31e82d33c3dcf9b3a41aa",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/MMRN2-CD93.html",
+      "url": "https://connectomedb.org/cards/human/MMRN2-CD93.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/MMRN2-CD93.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 58789,
+      "sha256": "c7331f859773e8ef790375c6965041063cacb8dec061c0fad55ab6ff2b7c8738",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/MMRN2-CLEC14A.html",
+      "url": "https://connectomedb.org/cards/human/MMRN2-CLEC14A.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/MMRN2-CLEC14A.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56055,
+      "sha256": "24a5485a8020dd82d251ab196b7c1f1e4c7796ba8848257d3ed8b911b4c4dd0e",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/ROBO2-ROBO2.html",
+      "url": "https://connectomedb.org/cards/human/ROBO2-ROBO2.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/ROBO2-ROBO2.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56118,
+      "sha256": "f5dbef5ecb701f2c32bb4dcd68ffa7feb3c77e22e830ea13945540d1d24d81bf",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/CDH4-CDH4.html",
+      "url": "https://connectomedb.org/cards/human/CDH4-CDH4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/CDH4-CDH4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 55219,
+      "sha256": "89c22f9c08fd5e0c6f817206a234748fbe3641309864ae02e2c45170a697d891",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/EPHA4-EFNA5.html",
+      "url": "https://connectomedb.org/cards/human/EPHA4-EFNA5.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/EPHA4-EFNA5.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60172,
+      "sha256": "9d53c896a17d348433e677c0f39a9cb993087f457693c3ff19a96478a0500ffb",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/ESAM-ESAM.html",
+      "url": "https://connectomedb.org/cards/human/ESAM-ESAM.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/ESAM-ESAM.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 55853,
+      "sha256": "86af7e722b8c3d35e1cb9591e08e1fe02570a236b1f4e05db891be7d82b0f69d",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/FGB-CDH5.html",
+      "url": "https://connectomedb.org/cards/human/FGB-CDH5.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/FGB-CDH5.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56469,
+      "sha256": "78bb898bccfe514b13913de401c2b58647fd42dab2265c1aa02a6851c2296dc1",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/LAMA2-ADGRG6.html",
+      "url": "https://connectomedb.org/cards/human/LAMA2-ADGRG6.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/LAMA2-ADGRG6.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56860,
+      "sha256": "83d66f6b72c5e69bed8db9b1f6b895f5402cba0732e235fbaa864f9d3f666f4a",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/MPZ-MPZ.html",
+      "url": "https://connectomedb.org/cards/human/MPZ-MPZ.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/MPZ-MPZ.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 56631,
+      "sha256": "259907b3bcfe19054101c22cd00594c2c850374c58f866bd546fe903b760b6be",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NEGR1-NEGR1.html",
+      "url": "https://connectomedb.org/cards/human/NEGR1-NEGR1.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NEGR1-NEGR1.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 55519,
+      "sha256": "8d6c765f10ad78b202e869be14e3b3a9deefa0da7ec7adbaa62827d6ec841082",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/NTM-NTM.html",
+      "url": "https://connectomedb.org/cards/human/NTM-NTM.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/NTM-NTM.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57874,
+      "sha256": "d20907545b2eaf9f4c057fa8780ebf1d95e4863778191bfea6d05c4dc4af9ca1",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/PECAM1-PECAM1.html",
+      "url": "https://connectomedb.org/cards/human/PECAM1-PECAM1.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/PECAM1-PECAM1.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57706,
+      "sha256": "3a68f6c9c705a1bb3fab65001da5865f818d1e8239d8bbd31642cd2a2a2b6a38",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/SVEP1-ITGA4.html",
+      "url": "https://connectomedb.org/cards/human/SVEP1-ITGA4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/SVEP1-ITGA4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60189,
+      "sha256": "06ac9d13506a5f376d3b462bfbacd18b5ad7cb7e1f6ce73661f7d91bbe99ace9",
+      "model_input": false
+    },
+    {
+      "name": "lr_cards/VWF-ITGA4.html",
+      "url": "https://connectomedb.org/cards/human/VWF-ITGA4.html",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/lr_cards/VWF-ITGA4.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 60625,
+      "sha256": "cbbecbf06b26ceb575f685a9a867ad52844711d2775e3f00befbf417be5ae2bf",
+      "model_input": false
+    },
+    {
+      "name": "brain_features.tsv.gz",
+      "url": "https://cells.ucsc.edu/whole-brain-perturb/combined/features.tsv.gz",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/brain_features.tsv.gz",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 63857,
+      "sha256": "afce52dc5edee525c077f6e758b2ea93657f6feafa25c68504231409d0026c23",
+      "model_input": false
+    }
+  ]
+}

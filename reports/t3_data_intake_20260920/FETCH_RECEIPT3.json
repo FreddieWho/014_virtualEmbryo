@@ -1,0 +1,129 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "GSM8151750_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151750&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151750_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3396,
+      "sha256": "098ad5a5835e80943481ba318b7cd4aedf828dbb237db8df169c9760626f59e2",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151751_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151751&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151751_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3396,
+      "sha256": "77deea4af4777199b3952eb0c6f3a3372c2b55e8c76a1f1fdb43ad0178739911",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151752_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151752&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151752_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3404,
+      "sha256": "955ec25e9c26e53c1a5005001a0ea845d0003a7c6d405f14b80da9f41eafc3d5",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151753_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151753&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151753_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3404,
+      "sha256": "dd2fc3e293148dde9a2abd7ac49e31fe510ee72bccc3692e5426b08b1a74dd49",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151754_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151754&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151754_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3372,
+      "sha256": "c4a6f9bae7fef64d31b0d4ff063bcf6169b1019622d59719e443a2ec4478dd57",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151755_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151755&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151755_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3372,
+      "sha256": "fee16c97b5a4c56986b70bda9850daaf8e4fa66c613625c59c04f42d9aa9adf3",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151756_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151756&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151756_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3389,
+      "sha256": "8951f88c98125c0cdf1861e0ffa47c4a62bcbe35811aaeefc75faab7641efc46",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151757_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151757&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151757_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3389,
+      "sha256": "3810892ead5f5bc6f40abce1e09c7e5d22dded335bdc671bf3d8d382c1a77b5f",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151758_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151758&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151758_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3372,
+      "sha256": "4bd9e3e8a9c54470903dd4bbfa993c64cf706402b61f9a82ad8faff1838195d9",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151759_metadata.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8151759&targ=self&form=text&view=full",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/GSM8151759_metadata.soft",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3372,
+      "sha256": "80ddbbd60f1c60c3338c579eae1a5aa38a6b36d79660a68104ca3f3d9dc639b5",
+      "model_input": false
+    },
+    {
+      "name": "fibro_ftp_list.html",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE261nnn/GSE261783/suppl/",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/fibro_ftp_list.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 673,
+      "sha256": "42079099e46da4cebc02e8be4c47f53b9cfc881b627036aca49a0ec8df5ee3e7",
+      "model_input": false
+    },
+    {
+      "name": "fibro_github_tree.html",
+      "url": "https://github.com/csbg/fibroblast-perturb-seq-analysis/tree/main",
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/metadata/fibro_github_tree.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 293696,
+      "sha256": "870b264a6bd2fd71533cec77eb0c2185e46aff890ab80ff71d29e1de596264c1",
+      "model_input": false
+    },
+    {
+      "name": "brain_hf_tree.json",
+      "url": "https://huggingface.co/api/datasets/perturbai/wholebrain_crispr_atlas/tree/main?recursive=true&expand=false&limit=1000",
+      "status": "FETCH_FAILED",
+      "error": "SSLError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/perturbai/wholebrain_crispr_atlas/tree/main?recursive=true&expand=false&limit=1000 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))",
+      "model_input": false
+    },
+    {
+      "name": "brain_card.md",
+      "url": "https://huggingface.co/datasets/perturbai/wholebrain_crispr_atlas/raw/main/README.md",
+      "status": "FETCH_FAILED",
+      "error": "SSLError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/perturbai/wholebrain_crispr_atlas/raw/main/README.md (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))",
+      "model_input": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task": "T3:gata4",
+  "date": "2026-09-20",
+  "status": "QUARANTINE_NOT_APPROVED",
+  "model_input": false,
+  "allowed_operations": [
+    "metadata_inspection",
+    "explicit_row_filtering",
+    "structural_validation"
+  ],
+  "forbidden_operations": [
+    "training",
+    "embedding",
+    "clustering",
+    "pseudobulk",
+    "marker_analysis",
+    "response_direction_learning"
+  ],
+  "rules": [
+    "docs/batch2/compliance/DATA_FIREWALL_SPEC.md",
+    "docs/batch2/03_COMPLIANCE_RULES_SNAPSHOT_20260829.md",
+    "docs/batch2/compliance/target_leakage_blacklist.tsv"
+  ],
+  "rules_sha256": {
+    "docs/batch2/compliance/DATA_FIREWALL_SPEC.md": "adc78d960570dbb9170bace55f4681eed158ba7665e493786cf778f89b8cfc3c",
+    "docs/batch2/03_COMPLIANCE_RULES_SNAPSHOT_20260829.md": "fd0cc8fa11209486db38d81bb7652270144dfbb5f150b209ef2dc901abb35cf5",
+    "docs/batch2/compliance/target_leakage_blacklist.tsv": "f668eafd88b1c12a314f800a72adfbb3499180213f6566652fad9e156dafadd9"
+  },
+  "source_shortlist": "reports/t3_data_intake_20260920/SOURCE_SHORTLIST.tsv",
+  "r6_filtered_receipt": "reports/t3_data_intake_20260920/FIBRO_FILTER_RECEIPT.json",
+  "r5_resource_audit": "reports/t3_data_intake_20260920/R5_RESOURCE_AUDIT.json",
+  "organizer_clearance": "NOT_PRESENT",
+  "forbidden_records_remaining": "NOT_ASSERTED_FULL_REVIEW_PENDING",
+  "training": "NOT_RUN"
+}

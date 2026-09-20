@@ -1,0 +1,22 @@
+[
+  {
+    "name": "connectomedb_human.csv",
+    "url": "https://connectomedb.org/downloads/CDB2025v1/CSV/ConnectomeDB2025_human.csv"
+  },
+  {
+    "name": "connectomedb_mouse_browser.html",
+    "url": "https://connectomedb.org/mouse.html"
+  },
+  {
+    "name": "cellphonedb_proteins.csv",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/protein_input.csv"
+  },
+  {
+    "name": "cellphonedb_genes.csv",
+    "url": "https://raw.githubusercontent.com/ventolab/cellphonedb-data/master/data/gene_input.csv"
+  },
+  {
+    "name": "cellphonedb_software_license",
+    "url": "https://raw.githubusercontent.com/ventolab/CellphoneDB/master/LICENSE.txt"
+  }
+]

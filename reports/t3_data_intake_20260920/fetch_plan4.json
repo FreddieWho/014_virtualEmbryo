@@ -1,0 +1,90 @@
+[
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151750_Activated_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151750/suppl/GSM8151750_Activated_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151751_Activated_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151751/suppl/GSM8151751_Activated_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151752_Quiescent_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151752/suppl/GSM8151752_Quiescent_OP1L_NM_NA_Rep1_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151753_Quiescent_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151753/suppl/GSM8151753_Quiescent_OP1L_NM_NA_Rep2_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151754_exVivo_OP2_IL1b_1_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151754/suppl/GSM8151754_exVivo_OP2_IL1b_1_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151755_exVivo_OP2_IL1b_2_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151755/suppl/GSM8151755_exVivo_OP2_IL1b_2_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151756_exVivo_OP2_resting_1_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151756/suppl/GSM8151756_exVivo_OP2_resting_1_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151757_exVivo_OP2_resting_2_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151757/suppl/GSM8151757_exVivo_OP2_resting_2_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151758_exVivo_OP2_TGFb_1_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151758/suppl/GSM8151758_exVivo_OP2_TGFb_1_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "cr-outputs-gex-overview",
+    "url": "Supplementary files format and content: standard cell ranger output files: a cell-gene count matrix in HDF5 format and a \"protospacer_calls_per_cell\" table mapping cells to a CRISPR guides. For details see: https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-crispr-overview and https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/outputs/cr-outputs-gex-overview"
+  },
+  {
+    "name": "GSM8151759_exVivo_OP2_TGFb_2_protospacer_calls_per_cell.csv.gz",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151759/suppl/GSM8151759_exVivo_OP2_TGFb_2_protospacer_calls_per_cell.csv.gz"
+  },
+  {
+    "name": "brain_ucsc_description.html",
+    "url": "https://cells.ucsc.edu/whole-brain-perturb/desc.html"
+  },
+  {
+    "name": "brain_ucsc_config.json",
+    "url": "https://cells.ucsc.edu/whole-brain-perturb/dataset.json"
+  }
+]

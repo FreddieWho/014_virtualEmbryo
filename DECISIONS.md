@@ -48,3 +48,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - **D-20260920-G0T3R6R8-001｜T3 R6–R8 评分闭环**：两 TIE、一 REJECT，原 selection 留任；统包八候选全部已评分，后续轮次待决定。详见 docs/coordination/DECISIONS.md。
 
 - **D-20260920-T3NEXT-001｜T3 六路线实现收口**：四候选待上传，R3/R4 门槛失败，R5/R6 输入阻塞；修复 R2 对照并作废未提交旧对，selection 不变。见 docs/coordination/DECISIONS.md。
+
+- **D-20260920-T3DATA-001｜T3 R5/R6 数据收集**：GSE261783 静息组隔离过滤 5,454 细胞/26 候选扰动，R5 资料与引用落盘；全为 model_input=false。R3/R4 修复加入 TODO。见 docs/coordination/DECISIONS.md。

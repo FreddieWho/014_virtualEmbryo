@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-20",
+  "mode": "primary-source online search plus local metadata",
+  "paperSearch": {
+    "query": "mouse embryonic stem cell Perturb-seq transcription factor screen dataset",
+    "source": "pubmed",
+    "results": 0,
+    "warnings": []
+  },
+  "search_topics": [
+    "mouse developmental/stem-cell Perturb-seq",
+    "mouse cardiac fibroblast multi-gene Perturb-seq",
+    "mouse in vivo brain Perturb-seq",
+    "Replogle primary raw datasets",
+    "CellPhoneDB receptor-to-TF source table",
+    "ConnectomeDB 2025 mouse pairs and primary evidence",
+    "source data licences"
+  ],
+  "primary_source_identifiers": [
+    "doi:10.1038/s41467-025-66597-9",
+    "GSE261783",
+    "doi:10.5281/zenodo.14794723",
+    "doi:10.1093/nar/gkaf1108",
+    "arxiv:2311.04567",
+    "GSE90063",
+    "doi:10.25452/figshare.plus.20029387",
+    "PMID:42039528"
+  ],
+  "pretrained_model_downloads": 0,
+  "external_messages_sent": 0
+}
