@@ -96,7 +96,7 @@ tasks:
       - "outputs/t2_*"
 
   T3:
-    status: hold_as_component
+    status: score_pending
     dependencies: []
     owner: coordinator
     branch: master
@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "G1-T3 R6–R13 全部已评分，余分队列清零；R6/R7 TIE、R8 REJECT，selection 保持 v0009/v0010；下一轮待用户决定，科学 gate 不变。"
+    next_action: "六路线实现收口：v0026/v0027/v0030/v0031 合同通过，待人工上传与回分；R3 裁剪超限、R4 映射失败；R5/R6 输入阻塞，正式计算 NOT_RUN。见 reports/T3_NEXT_EXECUTION_20260920.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

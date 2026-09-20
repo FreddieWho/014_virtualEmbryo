@@ -1,0 +1,21 @@
+{
+  "schema": "ve.t3.next.v1",
+  "date": "2026-09-20",
+  "seed": 20260920,
+  "task": "T3:gata4",
+  "authorization": "User requested implementation of all six proposed routes; run all admissible full-panel experiments, no portal upload or GPU rental",
+  "ownership": ["scripts/t3_next", "tests/t3_next", "configs/t3_next", "artifacts/t3_next"],
+  "recipient_shape": [7449, 500],
+  "science_status": "NOT_IDENTIFIABLE",
+  "blocks_submission": false,
+  "max_candidates_per_route": 2,
+  "threads": 8,
+  "memory_gb": 64,
+  "wall_hours": {"r1": 1, "r2": 4, "r3": 4, "r4": 8, "r5": 4, "r6": 8},
+  "disaster_bounds": {"cell_library_ratio_q01_min": 0.5, "cell_library_ratio_q99_max": 2.0, "variance_ratio_min": 0.25, "variance_ratio_max": 4.0, "negative_clip_fraction_max": 0.01},
+  "r2": {"activity_folds": 4, "min_cells_per_type": 80, "donor_quantile": 0.25, "recipient_quantile": 0.75, "neighbor_k": 32, "common_support_radius_quantile": 0.95, "maturity_components": 2, "cell_cycle_symbols": ["Mki67", "Top2a", "Pcna", "Mcm2", "Mcm3", "Mcm4", "Mcm5", "Mcm6", "Cdk1", "Ccnb1", "Ccnb2"]},
+  "r3": {"max_depth": 2, "max_parents": 6, "ridge_alpha": 10.0, "basis": ["linear", "bounded_spline"], "knots_quantiles": [0.1, 0.5, 0.9], "context_shrinkage": "global parents plus ridge-penalized type interactions", "block_folds": 4},
+  "r4": {"max_offpanel_mediators": 64, "n_neighbors": 5, "mapping_components": 16, "held_gene_modulo": 5, "sample_reduction": false, "operator": "same one-step residual-preserving Gata4-conditioned ridge in panel-only and augmented spaces", "unmapped_policy": "keep_parent_and_report", "min_crossmodal_supported_fraction": 0.8},
+  "r5": {"neighbors": 16, "required_edge_fields": ["ligand", "receptor", "target", "source_reference", "license", "target_phenocopy_free"], "local_snapshot_without_references": "BLOCKED_PROVENANCE; do not infer ligand receptor roles from generic directed edges"},
+  "r6": {"min_perturbation_genes": 20, "min_cells_per_condition": 20, "heldout_fraction": 0.2, "epochs": 100, "hidden_dim": 32, "model": "explicit from-scratch two-layer graph-conditioned residual regressor versus ridge; architecture implementation, not claimed GEARS/TxPert reproduction", "data_required": "hash-bound sanitized task-scoped manifest including human-to-mouse map if relevant; no pretrained checkpoint", "scientific_training_without_data": "BLOCKED_DATA_NOT_READY"}
+}

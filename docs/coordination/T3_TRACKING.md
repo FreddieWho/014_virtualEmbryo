@@ -93,3 +93,23 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 2026-09-17（G1-T3 30 轮计划 R9–R13 仲裁）：v0021=**46.88**（-0.07）/v0022=**46.93**（-0.02）/v0024=**46.90**（-0.05）落 TIE 带不晋级，v0023=**46.95**（持平，exact TIE）留任不断，v0025=**43.30**（-3.65，mmd -9.4/variogram -26）灾难性淘汰；selection 保持 v0009/v0010（46.95）。de_score 首次松动（R10/R11=39.6，+0.4 vs 十连钉 39.2），但 variogram 回吐，天花板呈 de↔variogram 互换（同 T1 形）。空间平滑族在 T3 关闭（本地 proxy 再反一例）。R6–R8（v0018–v0020）同包仍待分。详见 registry §G1-T3-R9..R13 与 DECISIONS D-20260917-G0T3R9R13-001。
 
 2026-09-20（D-20260920-G0T3R6R8-001）：T3 R6–R8 分数回填完成：v0018=46.94（TIE）、v0019=46.95（exact TIE）、v0020=46.64（REJECT）；selection 保持 v0009/v0010=46.95。R6–R13 八候选均已评分，余分队列清零，后续轮次待决定。三个 de_score 均为 39.2；R8 direction 增益伴随 variogram 下降，不能据此声称机制改进。15 子项入库；科学 gate 不变。
+
+2026-09-20（新路线提案，未执行）：结合 R6–R13 评分提出六方向：表达排序重建、WT 流形内异质响应、稀疏条件机制、全转录组中介映射、细胞间信号、多扰动监督训练。详见 `reports/T3_NEXT_ROUTES_20260920.md`；均为 PROPOSED/NOT_RUN，未建候选。建议先做前两项；v7 WT 输入在盘但旧索引部分指向已清理 v5，多扰动数据尚未就绪。selection、科学 gate 与 active_atom 不变。
+
+2026-09-20（六路线执行开工）：用户授权实现六方案；设计锁定于 configs/t3_next/design.json，独占 scripts/t3_next、tests/t3_next、configs/t3_next 与 artifacts/t3_next。先实现共用校验与路线算法，再逐路线执行全 panel；缺数据/许可的正式计算记录 BLOCKED，不以 smoke 替代。
+
+2026-09-20（v0026 r1graph）：新建六路线候选，parent=v0022；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r1/RESULT.json。
+
+2026-09-20（v0027 r1sign）：新建六路线候选，parent=v0023；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r1/RESULT.json。
+
+2026-09-20（v0028 r2adapt）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r2/RESULT.json。
+
+2026-09-20（v0029 r2random）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r2/RESULT.json。
+
+2026-09-20（路线二对照修复）：回查发现 v0029 随机臂包含 self donor，实际改变 1,383 细胞而非标称 1,840；v0028/v0029 成对撤回、未上传，artifact 保留，INDEX 标 invalidated_unsubmitted。新增禁止 self/相同表达 donor 和实际改变计数断言，另 run 重跑；不将旧对照用于结论。
+
+2026-09-20（v0030 r2adapt）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v5/r2/RESULT.json。
+
+2026-09-20（v0031 r2random）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-NEXT-SIX-20260920-v5/r2/RESULT.json。
+
+| 2026-09-20 | T3-NEXT-SIX 收口 | R1 v0026/v0027、R2 v0030/v0031 已打包，未提交/未评分；R3 全量线性/样条裁剪超限，R4 映射劣于类型均值，无候选；R5/R6 缺输入，正式计算 NOT_RUN；12 项测试通过 | reports/T3_NEXT_EXECUTION_20260920.md；D-20260920-T3NEXT-001 |

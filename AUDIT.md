@@ -7,14 +7,15 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
 
-Score-pending rows: 9 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050)
+Score-pending rows: 13 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0026/next_r1graph, v0027/next_r1sign, v0030/next_r2adapt, v0031/next_r2random)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (31 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (37 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 23
-- FAIL: 5
+- FAIL: 7
 - VOID: 1
-- PARKED: 1
+- PARKED: 3
+- PENDING_SERVER: 2
 - GATE_ONLY: 1
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -23,8 +24,10 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - G1-T1-D5: energy 2.203 vs 0.265 (8x); TEST INVALID per audit (dead conditioning+unsatisfiable gate)
   - G1-T1-D5B: energy 7.23 vs 0.265 (27x); severe underfit divergence; baseline reproduced exact
   - G1-T1-D6: de 0.8868=tie (strict fail); dir 0.7921; var 0.26
+  - T3-NEXT-R3: FAILED_DISASTER
+  - T3-NEXT-R4: FAILED_MAPPING_GATE
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T1-P2 待定（2026-09-20 起；结构整理三期已执行完；D4/D3/D1/D5/D6/D5b 门 FAIL 已关闭，D2 调参＋D5c 长训仍待用户定夺；GPU 保持关机）。
+- **当前执行分支**：T3 六路线实现与可行计算已收口；四候选已打包为 `deliveries/t3next6__t3__upload__20260920.zip`，待人工上传并提供分数与证据；R3/R4 门槛失败，R5/R6 输入阻塞。详见 `reports/T3_NEXT_EXECUTION_20260920.md`。GPU 保持关机。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

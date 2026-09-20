@@ -42,12 +42,12 @@
 
 ## 分支记录
 
-- **当前执行分支**：T1-P2 待定（2026-09-20 起；结构整理三期已执行完；D4/D3/D1/D5/D6/D5b 门 FAIL 已关闭，D2 调参＋D5c 长训仍待用户定夺；GPU 保持关机）。
+- **当前执行分支**：T3 六路线实现与可行计算已收口；四候选已打包为 `deliveries/t3next6__t3__upload__20260920.zip`，待人工上传并提供分数与证据；R3/R4 门槛失败，R5/R6 输入阻塞。详见 `reports/T3_NEXT_EXECUTION_20260920.md`。GPU 保持关机。
 - **并行分支**：无。
 - **暂缓分支**：
   - T1-P2 D2 调参挂起（用户特批，2026-09-17）：dz=20 加 patience/调参；触发条件：D3/D1 双败后或用户另行指示。当前 D2 状态：dz20 稳定（410 步无 NaN）但挂门（de 0.8113/dir 0.8652），v0022 未注册；复活时从 `scripts/g0/t1_d2_cellmnn.py --dz` 起步。
   - T1-D7 E7.75 对齐：CLOSED（2026-09-17）。官网实抓：E7.75 not released，不向任何任务分发，前提不存在；此前 PARKED 及下载触发条件一并作废。
-  - T3 后续轮次：R6–R13 已全部评分（2026-09-20）；selection 不变，下一轮待决定，无待回填分数。
+  - T3 路线五/六：BLOCKED_PROVENANCE / BLOCKED_DATA_NOT_READY；代码入口已完成，需合规信号边/多扰动输入，正式计算 NOT_RUN。路线三/四本次门槛失败，无候选；后续不自动放宽门槛。
   - T2 embryo_interp v0008 `j1_fgw_assignment`：HOLD_AS_COMPONENT（缺同靶 parent scorer 参照，见 LEADS L-001）
   - T2-S3 L2 spateo v0007/v0008 与 heart_extrap v0006/v0007：本地 REJECT，不可变保留不上传
   - B2-T3-A1 v0006/v0007 条目已移除：二者已评分 45.5/45.5 并列 board best 并晋级当前 selection，不再属于暂缓（原"score_pending"记录过时）

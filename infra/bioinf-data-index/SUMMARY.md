@@ -53,3 +53,6 @@ S1D v3 的描述性效应为：GSE5298 Gata4 `+0.02084`（linear-expression log2
 ## 2026-09-20 存储注记（结构整理 P2，用户定保留）
 - `infra/external_data/quarantine/`（~51G）与 `sanitized/`（~7G）保留：外部原始数据，已索引（本 INDEX 含 quarantine 路径引用 21 处），删除前必须先 re-index；用户未授权删除。
 - 同期清理（见 `reports/DELETION_MANIFEST.tsv`）：tool_integration S1A 旧版 v1–v6、outputs/t2_*、g0 重复副本/训练件、v0002 孤儿副本；scored 产物、INDEX、git 历史均未触碰。
+
+## 2026-09-20 T3 新路线输入引用修正
+三个 exact E8.75 WT 当前输入索引由已清理 v5 改指实际存在的 `artifacts/tool_integration/T3-S1A-STATE-JOIN-20260901-v7/data/`；三文件 SHA256 已按 v7 MANIFEST 实际重算通过。原始 MatrixMarket 是 genes×cells（27,669×68,910），建模时转置；不是新增外部数据，也不解除 S1 科学 gate。执行证据见 `artifacts/t3_next/` 的 r4/ATLAS_PERMIT.json。

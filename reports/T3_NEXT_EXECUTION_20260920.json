@@ -1,0 +1,286 @@
+{
+  "r1": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r1",
+    "result": {
+      "status": "CANDIDATES_READY",
+      "candidates": [
+        {
+          "lane": "r1graph",
+          "version": "v0026",
+          "path": "submissions/candidates/T3_gata4/v0026_next_r1graph/submission.h5ad",
+          "sha256": "d2cedbd6cfc040af301f5fb6d369312f451468429882ccea5c1ec3201bf2cd10",
+          "parent": "v0022",
+          "portal_file": "t3_gata4__r1graph__v0026.h5ad",
+          "checks": {
+            "status": "PASS",
+            "library_ratio_q01": 0.9003156447410583,
+            "library_ratio_q99": 1.0011602210998536,
+            "variance_ratio": 0.9971542954444885,
+            "neighbor_semivariance_ratio": 0.9984032045114075,
+            "semivariance_role": "descriptive_only_not_server_variogram",
+            "changed_entries": 204720
+          }
+        },
+        {
+          "lane": "r1sign",
+          "version": "v0027",
+          "path": "submissions/candidates/T3_gata4/v0027_next_r1sign/submission.h5ad",
+          "sha256": "db30a56b9630225ee687bb10dc868e7d1fe0ac94b8dbba23ce92a783b88b2536",
+          "parent": "v0023",
+          "portal_file": "t3_gata4__r1sign__v0027.h5ad",
+          "checks": {
+            "status": "PASS",
+            "library_ratio_q01": 0.9899580287933349,
+            "library_ratio_q99": 0.9999877572059631,
+            "variance_ratio": 0.9990456104278564,
+            "neighbor_semivariance_ratio": 0.9990617106960007,
+            "semivariance_role": "descriptive_only_not_server_variogram",
+            "changed_entries": 366842
+          }
+        }
+      ],
+      "wall_s": 3.9878017902374268,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "outcomes": [
+        {
+          "donor": "v0022",
+          "changed_entries": 84546,
+          "status": "NONTRIVIAL",
+          "column_multisets_exact": true
+        },
+        {
+          "donor": "v0023",
+          "changed_entries": 126469,
+          "status": "NONTRIVIAL",
+          "column_multisets_exact": true
+        }
+      ]
+    }
+  },
+  "r2": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v5/r2",
+    "result": {
+      "status": "CANDIDATES_READY",
+      "candidates": [
+        {
+          "lane": "r2adapt",
+          "version": "v0030",
+          "path": "submissions/candidates/T3_gata4/v0030_next_r2adapt/submission.h5ad",
+          "sha256": "3d9af80d7d903c0b16d1a26760b557f6888c0b86790038a7483550e2fecaad91",
+          "parent": "v0009",
+          "portal_file": "t3_gata4__r2adapt__v0030.h5ad",
+          "checks": {
+            "status": "PASS",
+            "library_ratio_q01": 0.9891273713111878,
+            "library_ratio_q99": 1.0143345355987547,
+            "variance_ratio": 1.0010552406311035,
+            "neighbor_semivariance_ratio": 1.0049875256304723,
+            "semivariance_role": "descriptive_only_not_server_variogram",
+            "changed_entries": 153315
+          },
+          "replaced_cells": 1840
+        },
+        {
+          "lane": "r2random",
+          "version": "v0031",
+          "path": "submissions/candidates/T3_gata4/v0031_next_r2random/submission.h5ad",
+          "sha256": "b9b86fb2034497cdd5a1fab816bd1e14b5867c6b86aea8ad3dd57b73b70e79b4",
+          "parent": "v0009",
+          "portal_file": "t3_gata4__r2random__v0031.h5ad",
+          "checks": {
+            "status": "PASS",
+            "library_ratio_q01": 0.9891393613815308,
+            "library_ratio_q99": 1.0124020290374756,
+            "variance_ratio": 1.0023735761642456,
+            "neighbor_semivariance_ratio": 1.0151688164147614,
+            "semivariance_role": "descriptive_only_not_server_variogram",
+            "changed_entries": 145198
+          },
+          "replaced_cells": 1840
+        }
+      ],
+      "wall_s": 5.630774736404419,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "matched_replacement_count": 1840,
+      "random_control_count": 1840,
+      "limitations": [
+        "WT low activity is not KO",
+        "same-specimen spatial blocks",
+        "maturity inferred, not measured"
+      ]
+    }
+  },
+  "r3": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v6/r3",
+    "result": {
+      "status": "FAILED_DISASTER",
+      "candidates": [],
+      "wall_s": 26.33239436149597,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "models": [
+        {
+          "model": "linear",
+          "modeled_genes": 356,
+          "heldout_mse": 1.265774057307834,
+          "type_baseline_mse": 1.287428855895996,
+          "negative_clip_fraction": 0.061900657806416966,
+          "zero_intervention_identity": true,
+          "source_ko_validation": "NOT_APPLICABLE: Mab21l2 has no motif TF regulator entry",
+          "zero_input_support": "extrapolation; nonlinear uses constant boundary, not validated KO"
+        },
+        {
+          "model": "bounded_spline",
+          "modeled_genes": 356,
+          "heldout_mse": 1.2640420536845713,
+          "type_baseline_mse": 1.287428855895996,
+          "negative_clip_fraction": 0.026754732178815948,
+          "zero_intervention_identity": true,
+          "source_ko_validation": "NOT_APPLICABLE: Mab21l2 has no motif TF regulator entry",
+          "zero_input_support": "extrapolation; nonlinear uses constant boundary, not validated KO"
+        }
+      ],
+      "full_500_output": true
+    }
+  },
+  "r4": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v3/r4",
+    "result": {
+      "status": "FAILED_MAPPING_GATE",
+      "candidates": [],
+      "wall_s": 33.484530448913574,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "full_atlas_mapping": "COMPLETED",
+      "counterfactual_models": "NOT_RUN_GATE_FAILED",
+      "gate": {
+        "mapped_fraction": 0.9409316686803598,
+        "heldout_gene_count": 100,
+        "heldout_spatial_cells": 5648,
+        "mapping_mse": 1.643099069595337,
+        "celltype_baseline_mse": 1.4616146087646484,
+        "groups": [
+          {
+            "group": "cardiac",
+            "atlas_cells": 4851,
+            "wt_cells": 6036,
+            "median_distance": 4.485840209269186
+          },
+          {
+            "group": "crest",
+            "atlas_cells": 2996,
+            "wt_cells": 1939,
+            "median_distance": 3.572143855083264
+          },
+          {
+            "group": "ectoderm",
+            "atlas_cells": 4295,
+            "wt_cells": 2780,
+            "median_distance": 4.0847990034618995
+          },
+          {
+            "group": "endoderm",
+            "atlas_cells": 6378,
+            "wt_cells": 2006,
+            "median_distance": 4.421447794128661
+          },
+          {
+            "group": "endothelial",
+            "atlas_cells": 4842,
+            "wt_cells": 2485,
+            "median_distance": 4.024295482853136
+          },
+          {
+            "group": "mesoderm",
+            "atlas_cells": 17986,
+            "wt_cells": 3937,
+            "median_distance": 3.99946827433543
+          },
+          {
+            "group": "mesothelium",
+            "atlas_cells": 2965,
+            "wt_cells": 432,
+            "median_distance": 3.812259510028707
+          },
+          {
+            "group": "neural",
+            "atlas_cells": 15497,
+            "wt_cells": 3768,
+            "median_distance": 3.0174313681385287
+          }
+        ],
+        "unmapped_wt_types": [
+          "Caudal Epiblast",
+          "Unknown"
+        ],
+        "no_hidden_target_used": true
+      }
+    }
+  },
+  "r5": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r5",
+    "result": {
+      "status": "BLOCKED_PROVENANCE",
+      "candidates": [],
+      "wall_s": 0.6220560073852539,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "intrinsic_model": "NOT_RUN",
+      "signal_on_off": "NOT_RUN",
+      "permutation_diagnostic": "NOT_RUN",
+      "missing": [
+        "ligand",
+        "receptor",
+        "source_reference",
+        "license",
+        "target_phenocopy_free"
+      ]
+    }
+  },
+  "r6": {
+    "run_dir": "artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r6",
+    "result": {
+      "status": "BLOCKED_DATA_NOT_READY",
+      "candidates": [],
+      "wall_s": 0.5672464370727539,
+      "scientific_status": "NOT_IDENTIFIABLE",
+      "server_status": "NOT_SUBMITTED",
+      "server_scoring": "NOT_RUN",
+      "full_panel_local_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+      "blocks_submission": false,
+      "ridge_training": "NOT_RUN",
+      "graph_training": "NOT_RUN",
+      "gene_heldout_evaluation": "NOT_RUN",
+      "target_inference": "NOT_RUN"
+    }
+  },
+  "delivery": {
+    "status": "READY_NOT_SUBMITTED",
+    "zip_path": "deliveries/t3next6__t3__upload__20260920.zip",
+    "zip_sha256": "c567ccb4f69640f9594c736770e97b58d935a08db54e0be458fef3701d213909",
+    "members": 4,
+    "portal_upload": "NOT_RUN",
+    "server_scores": "NOT_RUN",
+    "run_dirs": [
+      "artifacts/t3_next/T3-NEXT-SIX-20260920-v4/r1",
+      "artifacts/t3_next/T3-NEXT-SIX-20260920-v5/r2"
+    ]
+  }
+}

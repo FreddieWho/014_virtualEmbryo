@@ -728,3 +728,11 @@ reuse_promoted
 - evidence: "用户本轮提供的三个 board 分数和 15 子项，原值见 reports/SERVER_SCORE_REGISTRY.md 的 G1-T3-R6..R8 节及 reports/SERVER_SUBMETRIC_REGISTRY.tsv；成员映射和本地 SHA256 核对通过。submission ID、上传时间和新 Total 未提供，不补造。"
 - boundary: "不把评分闭环写成 30 轮全部执行，不新增训练或上传；科学 gate 不变，blocks_submission: false。"
 - review_trigger: "用户决定下一轮路线。"
+
+
+### D-20260920-T3NEXT-001 — 六路线实现与可行计算收口
+
+- decision: "R1/R2 四候选 v0026/v0027/v0030/v0031 待人工上传回分，selection 不变；R3 FAILED_DISASTER（裁剪 6.19%/2.68% > 1%），R4 FAILED_MAPPING_GATE；R5 BLOCKED_PROVENANCE、R6 BLOCKED_DATA_NOT_READY，正式计算 NOT_RUN。"
+- evidence: "reports/T3_NEXT_EXECUTION_20260920.md 与 .json；configs/t3_next/design.json；候选身份以 submissions/INDEX.tsv 为准；12 项定向测试通过，交付包四候选哈希/CRC 通过。"
+- boundary: "v0028/v0029 自 donor 对照缺陷导致 invalidated_unsubmitted，原文件不可变且排除上传；修复重跑生成 v0030/v0031。不用错靶 local scorer，不放宽门槛，不宣称新 best 或科学识别；blocks_submission: false。"
+- review_trigger: "四候选服务器分数与原始证据，或 R5/R6 所缺的合规输入到位。"
