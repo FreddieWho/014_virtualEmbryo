@@ -96,7 +96,7 @@ tasks:
       - "outputs/t2_*"
 
   T3:
-    status: score_pending
+    status: awaiting_next_design
     dependencies: []
     owner: coordinator
     branch: master
@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "R6首次执行FAILED_DISASTER，0候选；下一版需修复非负输出，尚未执行。R5 v0032/v0033待上传回分，R3/R4修复保留。见 reports/t3_r6_execution_20260921/REPORT.md。"
+    next_action: "R6首次执行FAILED_DISASTER，0候选；下一版需修复非负输出，尚未执行。R5 v0032/v0033已评分并列父版本，未晋级；R3/R4修复保留。见 reports/t3_r6_execution_20260921/REPORT.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -545,3 +545,7 @@ R5最小输入已就绪并实际执行：4条SIGNOR源边/1条LRT，WT拟合，v
 ### 2026-09-21 R6首次执行收口
 
 R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033仍待回分；best不变。 证据 `reports/t3_r6_execution_20260921/REPORT.md`；blocks_submission: false。
+
+### 2026-09-21 R5回分收口
+
+两候选总分及五子分已登记，文件SHA实核通过；两者与父版本同总分，signal on/off在回报精度下无差异。selection保持，R5回分队列清零；R6仍输出门槛失败，后继待设计。证据 `reports/SERVER_SCORE_REGISTRY.md#t3-next-r5-score-return-20260921`；blocks_submission: false。

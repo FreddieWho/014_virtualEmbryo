@@ -7,15 +7,14 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
 
-Score-pending rows: 11 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0032/next_r5off, v0033/next_r5on)
+Score-pending rows: 9 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
 ## Lane verdicts (39 rows in LANE_VERDICTS.tsv)
-- SHIPPED: 25
+- SHIPPED: 26
 - FAIL: 8
 - VOID: 1
 - PARKED: 1
-- PENDING_SERVER: 1
 - GATE_ONLY: 3
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -29,6 +28,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-NEXT-R6: FAILED_DISASTER after gene holdout PASS; both outputs exceed negative clip bound
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033仍待回分；best不变。 R6非负输出修复待新设计；R3/R4修复保留。
+- **当前执行分支**：R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033已评分、均与父版本总分相同，未晋级；best不变。 R6非负输出修复待新设计；R3/R4修复保留。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

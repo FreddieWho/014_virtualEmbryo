@@ -60,3 +60,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260921-T3POLICY-LAUNCH-001：内部规则修改生效，R6来源重审及三件套准备完成（训练NOT_RUN），R5保留现有两候选待评分。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260921-T3R6RUN-001：R6实际训练及推断完成，留出通过但两个输出负值门槛失败，0候选，后继非负修复待办。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260921-T3R5SCORE-001：R5 v0032/v0033回分登记，均与父版本总分相同，on/off全部回报指标一致，不晋级。见 [协调决策](docs/coordination/DECISIONS.md)。

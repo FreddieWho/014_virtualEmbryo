@@ -765,3 +765,20 @@ Decisions:
 - R1 rank reconstruction shows no board-total improvement over either parent. R2 current candidates are not retained as best. Selection remains v0009/v0010 (46.95). R5 v0032/v0033 remain unsubmitted/unscored.
 - No new overall server Total supplied. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260920-T3NEXTSCORE-001. Candidate identities, parents, paths and SHA256 remain authoritative in submissions/INDEX.tsv.
+
+<a id="t3-next-r5-score-return-20260921"></a>
+## T3 NEXT R5 score return — 2026-09-21
+
+Source / raw evidence: user transcribed these exact portal names, board totals and five skills in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Both local artifact SHA256 values match submissions/INDEX.tsv; artifacts remain immutable. Identities, parent v0009 and contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__r5off__v0032.h5ad | 46.95 | 39.2 | 49.7 | 50.0 | 51.5 | 51.0 |
+| t3_gata4__r5on__v0033.h5ad | 46.95 | 39.2 | 49.7 | 50.0 | 51.5 | 51.0 |
+
+Decision and limits:
+- Both totals exactly tie parent v0009 and incumbent 46.95 (delta 0.00); no promotion, selection v0009/v0010 unchanged.
+- Signal-on versus signal-off totals and all five displayed skills are identical. This tested minimal SIGNOR implementation shows no gain at the reported precision; this is not proof that cell communication is biologically irrelevant or that the artifacts are identical.
+- R5 score-return queue closed; lane SHIPPED (scored, no gain). R6 remains FAILED_DISASTER with no candidate; no new training or submission in this registration task.
+- No overall server Total supplied. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260921-T3R5SCORE-001.
