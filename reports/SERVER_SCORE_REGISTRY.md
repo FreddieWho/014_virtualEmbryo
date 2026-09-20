@@ -743,3 +743,25 @@ Decision and limits:
 - No new server Total was supplied; the last confirmed Total remains 153.7. Published rounded skills are stored as supplied rather than used to replace the reported board scores.
 - Canonical artifact SHA256 checks passed for these three files; scored artifacts remain immutable. Scientific gate unchanged; blocks_submission: false.
 - Decision: D-20260920-G0T3R6R8-001.
+
+<a id="t3-next-r1r2-score-return-20260920"></a>
+## T3 NEXT R1/R2 score return — 2026-09-20
+
+Source / raw evidence: user transcribed the following portal model names, board totals and five skills in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values below preserve supplied precision; no total was reconstructed from rounded skills. All four local artifact SHA256 values match submissions/INDEX.tsv. Artifacts remain immutable.
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__r1graph__v0026.h5ad | 46.93 | 39.6 | 49.8 | 50.0 | 51.6 | 49.0 |
+| t3_gata4__r1sign__v0027.h5ad | 46.95 | 39.6 | 49.7 | 50.0 | 51.5 | 49.6 |
+| t3_gata4__r2adapt__v0030.h5ad | 46.6 | 38.1 | 49.7 | 50.0 | 51.4 | 51.1 |
+| t3_gata4__r2random__v0031.h5ad | 46.12 | 37.4 | 49.0 | 50.0 | 51.1 | 50.3 |
+
+Decisions:
+- v0026: 46.93, exact tie with parent v0022; -0.02 versus incumbent. TIE under existing ±0.1 band; not promoted.
+- v0027: 46.95, exact tie with parent v0023 and incumbent; not co-promoted.
+- v0030: 46.6, -0.35 versus parent v0009/incumbent; REJECT.
+- v0031: 46.12, -0.83 versus parent v0009/incumbent; REJECT.
+- Adaptive replacement beats matched random replacement by 0.48 on this returned score, but both underperform the parent. This is one ablation comparison, not evidence of statistical significance or causal validity.
+- R1 rank reconstruction shows no board-total improvement over either parent. R2 current candidates are not retained as best. Selection remains v0009/v0010 (46.95). R5 v0032/v0033 remain unsubmitted/unscored.
+- No new overall server Total supplied. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260920-T3NEXTSCORE-001. Candidate identities, parents, paths and SHA256 remain authoritative in submissions/INDEX.tsv.

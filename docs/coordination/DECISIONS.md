@@ -757,3 +757,10 @@ reuse_promoted
 - evidence: reports/t3_r5_completion_20260920/SOURCE_MANIFEST.json、FILTER_RECEIPT.json、EDGE_CONTEXT_REVIEW.tsv、EXECUTION.json；artifacts/t3_next/T3-R5-SIGNOR-MINIMAL-20260920-v1/RESULT.json；submissions/INDEX.tsv。
 - boundary: 跨背景拼接为探索性先验，不是已验证的胚胎因果链；信号改变量小，服务器提升未知。原始全网络未批准，未使用外部响应值/符号/权重。R6保持隔离，不通过本许可放行。blocks_submission: false。
 - rule attribution correction: 官网§10无所有外部Perturb-seq统一书面预审批或shape-only条款；两者来自本地2026-08-29保守解释。R5该范围为允许的通用pathway知识，不含受保护目标特异边或外部表达训练。不能把内部审查称为主办方批准。
+
+## D-20260920-T3NEXTSCORE-001
+
+- decision: 登记用户提供的R1/R2四候选总分及20子分。R1两候选分别与父版本同分，不晋级；R2两候选低于父版本，淘汰当前候选。selection v0009/v0010保持。
+- evidence: reports/SERVER_SCORE_REGISTRY.md#t3-next-r1r2-score-return-20260920；submissions/INDEX.tsv四个SHA实核一致；submission ID/time未提供，不伪造。
+- boundary: 观察到自适应优于随机不等于优于基线或统计显著；无新模型训练。R5 v0032/v0033仍未提交/未评分。blocks_submission: false。
+- rule_review: reports/T3_INTERNAL_RULE_REVIEW_20260920.md建议取消shape-only合规硬限制、统一书面确认和以通路关联替代phenocopy判定；本次只评审，现行规则/代码/数据许可未修改。

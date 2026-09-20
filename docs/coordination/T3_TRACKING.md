@@ -1,17 +1,22 @@
 # T3 任务追踪：gene perturbation
 
-更新时间：2026-09-04
+更新时间：2026-09-20
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件明确区分已评分路线和待验证路线。
 
-## 当前状态
+## 当前状态（2026-09-20）
+
+- selection保持v0009/v0010。R1 v0026/v0027均与各自父版本总分相同；R2 v0030/v0031均低于父版本。详见权威分数登记。
+- R5 v0032/v0033未提交/未评分；R6仍隔离，规则修订建议已完成但未生效。
+
+## 历史状态（2026-09-04）
 
 - 当前最高服务器分数：**45.5**（v0006 / v0007 并列，2026-09-04 回填；derived Total≈149.7 待服务器页面确认）
 - 当前最佳：`B2-T3-A1` `v0006_b2_t3_a1_l1` 与 `v0007_b2_t3_a1_l2`，并列 board best；原 baseline `wt_identity` 45.3 为历史 best
 - 当前状态：`closed_as_research_component`（2026-09-02 收口，见 `artifacts/tool_integration/T3-S1-CLOSURE-20260902-v1/CLOSURE_REPORT.md`）；S1A v7、S1B v3、S1C-A/v1、S1C-B/v3、S1D/v3 均为可审计组件，所有历史 artifact 与失败 receipt 不可变，候选生成仍关闭
 - 任务阻塞：`T3-S1A-GATE-001`；缺口为公开证据边界（E8.75 state-matched signed family 不存在且近窗口数据属 target leakage），非工程问题；最小解锁条件见收口报告第 3 节，`blocks_submission: false`。**leaderboard +0.2 不解除科学 gate**：服务器分数不作机制/因果证据
 
-## Top 3 路线
+## 历史 Top 3 路线（2026-09-04）
 
 旧的两条 shift-transfer 候选已评分且低于 best；B1-A2 两条最终候选已评分且均低于 best，进入失败诊断 hold。
 
@@ -123,3 +128,5 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 2026-09-20（v0033 r5on）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-R5-SIGNOR-MINIMAL-20260920-v1/RESULT.json。
 
 - 2026-09-20｜R5最小SIGNOR链补齐并执行｜4条源边组成Pdgfb/Pdgfrb/S100a10先验，系数仅官方WT拟合。父v0009→v0032(r5off)、v0033(r5on)，contract/checks PASS；未提交/未评分。artifact/SHA见submissions/INDEX.tsv；信号幅度小，未证明增益。报告 `reports/t3_r5_completion_20260920/REPORT.md`。
+
+- 2026-09-20｜R1/R2服务器回分｜v0026/v0027父版本同分，不晋级；v0030/v0031低于父版本，当前候选淘汰。四个SHA核验通过，R5两候选仍未提交/未评分。证据 `reports/SERVER_SCORE_REGISTRY.md#t3-next-r1r2-score-return-20260920`；决策 D-20260920-T3NEXTSCORE-001。

@@ -1,5 +1,5 @@
 # Virtual Embryo 项目状态
-
+最新事件（2026-09-20）：T3 R1/R2四候选分数已登记：R1均与各自父版本同分，R2两候选均低于基线；selection v0009/v0010不变。R5 v0032/v0033合约PASS，未提交/未评分。R6内部规则评审建议缩减额外限制，修订尚未生效。详见 reports/SERVER_SCORE_REGISTRY.md 与 reports/T3_INTERNAL_RULE_REVIEW_20260920.md。以下为历史阶段摘要。
 最新事件（2026-09-20）：R3/R4 修复已入 TODO；R5/R6 首轮数据收集完成，GSE261783 两样本隔离过滤为 5,454 细胞/26 候选扰动，500/500 panel；R5 关系资料已落盘。全部 model_input=false，未训练，准入审查仍开放。见 `reports/t3_data_intake_20260920/REPORT.md`。既有四候选仍待人工上传回分，best 46.95 不变。以下为历史阶段摘要。
 
 更新时间：2026-09-04（晚）

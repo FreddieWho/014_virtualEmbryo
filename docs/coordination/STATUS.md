@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "四候选 v0026/v0027/v0030/v0031 待上传回分；R3/R4 修复已入 TODO；R5/R6 首轮数据收集完成但全为隔离，GSE261783 保留 5454 细胞/26 候选扰动、panel 500/500，用途/来源审查仍未闭合，正式训练 NOT_RUN。见 reports/t3_data_intake_20260920/REPORT.md。"
+    next_action: "R1/R2四候选回分完成，selection不变；R5 v0032/v0033待上传回分；R3/R4修复TODO保留。R6规则适度性评审已给出修订建议但未生效，源数据仍隔离。见 reports/T3_INTERNAL_RULE_REVIEW_20260920.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
