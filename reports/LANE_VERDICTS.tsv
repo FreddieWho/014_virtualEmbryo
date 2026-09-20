@@ -1,0 +1,36 @@
+# LANE_VERDICTS — machine-readable lane verdict table (G0 generation + T1-P2 D-lanes)
+# Scope: artifacts/g0 run dirs (31). Batch1-4 era lanes: see reports/PHASE_*.md + submissions/INDEX.tsv.
+# Rule (D-20260920-REORG): closing/scoring a lane MUST append/update one row here. Verdicts cite evidence; numbers live in evidence files, not here.
+# Verdict enum: PASS(=shipped+beats incumbent) | SHIPPED(=shipped+scored, no gain) | FAIL(=gate fail, no candidate) | VOID | PARKED | PENDING_SERVER | GATE_ONLY
+lane	task	verdict	key_metric	candidates	server	evidence	decision
+G1-T1-D1	T1:val	FAIL	return de 0.3585/dir 0.6243; var 0.086 collapse	none	—	artifacts/g0/G1-T1-D1-SCIMF-20260917-v1/RESULT.md	D-20260917-T1D1-001
+G1-T1-D2	T1:val	VOID	void step41 NaN; warmup NaN step88; null-gate concept only	none	—	artifacts/g0/G1-T1-D2-CELLMNN-20260917-v1/RESULT_VOID_01.md	D-20260917-T1D2-001
+G1-T1-D2R2	T1:val	PARKED	dz20 stable 410 steps; de 0.8113/dir 0.8652 gate FAIL; tuning suspended	unregistered local only	—	artifacts/g0/G1-T1-D2R2-DZ20-20260917-v1/RESULT.json	D-20260917-T1P23-001
+G1-T1-D3	T1:val	SHIPPED	full-gene energy 0.4855>baseline 0.4340; v0022 server REJECT	v0022	45.3 REJECT (<floor 47.0)	artifacts/g0/G1-T1-D3-FLOW-20260917-v1/RESULT.md	D-20260917-T1D3-001;D-20260917-T1D3-002
+G1-T1-D4	T1:val	FAIL	G1 de 0.4151/dir 0.5869 both < G0 0.566/0.6127	none	—	artifacts/g0/G1-T1-D4-BRIDGE-20260917-v1/RESULT.md	D-20260917-T1D4-001
+G1-T1-D5	T1:val	FAIL	energy 2.203 vs 0.265 (8x); TEST INVALID per audit (dead conditioning+unsatisfiable gate)	none	—	artifacts/g0/G1-T1-D5-DIFF-20260917-v1/RESULT.md	D-20260917-T1D5-001;D-20260917-T1AUDIT-001
+G1-T1-D5B	T1:val	FAIL	energy 7.23 vs 0.265 (27x); severe underfit divergence; baseline reproduced exact	none	—	artifacts/g0/G1-T1-D5B-DIFF-20260917-v1/RESULT.md	D-20260917-T1D5B-002
+G1-T1-D6	T1:val	FAIL	de 0.8868=tie (strict fail); dir 0.7921; var 0.26	none	—	artifacts/g0/G1-T1-D6-POT-20260917-v1/RESULT.md	D-20260917-T1D6-001
+G1-T1-R1	T1:val	SHIPPED	local NOT promoted; server above incumbent but TIE band	v0015	48.51 scored (TIE, incumbent stays)	artifacts/g0/G1-T1-R1-NEURAL-ODE-20260916-v1/RESULT.md	D-20260917-G0T1-001
+G1-T1-R2	T1:val	SHIPPED	local NOT promoted, direction regressed	v0016	48.14 scored	artifacts/g0/G1-T1-R2-SUBSTATE-20260916-v1/RESULT.md	D-20260917-G0T1-001
+G1-T1-R3	T1:val	SHIPPED	local NOT promoted, worse than R2	v0017	47.46 scored	artifacts/g0/G1-T1-R3-MATURITY-20260916-v1/RESULT.md	D-20260917-G0T1-001
+G1-T1-R4	T1:val	SHIPPED	local PROMOTED; server TIE band	v0018	48.48 scored (TIE)	artifacts/g0/G1-T1-R4-SHRINK-20260916-v1/RESULT.md	D-20260917-G0T1-001
+G1-T1-R5	T1:val	SHIPPED	local PROMOTED x3 (C=4 best); server TIE band	v0019;v0020;v0021	48.54;48.48;48.34 scored (v0019 numeric best, TIE)	artifacts/g0/G1-T1-R5-SHRINKSWEEP-20260916-v1/RESULT.md	D-20260917-G0T1-001
+G1-T2-R1	T2:heart:val_extrap	GATE_ONLY	extrapolation gate established; no candidate built	none	—	artifacts/g0/G1-T2-R1-EXTRAP-GATE-20260916-v1/RESULT.md	D-20260916-G0T2-001
+G1-T2-R2	T2:heart:val_extrap	SHIPPED	local NOT promoted	v0011	50.64 scored	artifacts/g0/G1-T2-R2-SHRINK-20260916-v1/RESULT.md	D-20260916-G0T2-001
+G1-T2-R3	T2:heart:val_extrap	SHIPPED	local PROMOTED; spatial family	v0012	50.26 scored	artifacts/g0/G1-T2-R3-SPATIAL-20260916-v1/RESULT.md	D-20260916-G0T2-001
+G1-T2-R4	T2:heart:val_extrap	SHIPPED	local TWO PROMOTED (k=30 best)	v0013;v0014;v0015	50.32;50.26;50.28 scored	artifacts/g0/G1-T2-R4-KSWEEP-20260916-v1/RESULT.md	D-20260916-G0T2-001
+G1-T2-R5	T2:heart:val_extrap	SHIPPED	local PROMOTED (extrap best); K-sweep closed	v0016	50.25 scored	artifacts/g0/G1-T2-R5-K60-20260916-v1/RESULT.md	D-20260916-G0T2-001
+G1-T3-R1	T3:gata4	SHIPPED	proxy blindness proven (de identical 4dp)	v0013	46.88 scored	artifacts/g0/G1-T3-R1-DIRECTPROP-20260916-v1/RESULT.md	D-20260916-G0T3-001
+G1-T3-R2	T3:gata4	SHIPPED	non-regression PASS; blindness x2	v0014	46.95 scored (TIE best)	artifacts/g0/G1-T3-R2-GRADEDDOSE-20260916-v1/RESULT.md	D-20260916-G0T3-001
+G1-T3-R3	T3:gata4	SHIPPED	non-regression PASS; blindness x3	v0015	46.95 scored (TIE best)	artifacts/g0/G1-T3-R3-LINEAGEDOSE-20260916-v1/RESULT.md	D-20260916-G0T3-001
+G1-T3-R4	T3:gata4	SHIPPED	non-regression PASS; blindness x4	v0016	46.88 scored	artifacts/g0/G1-T3-R4-COMBO-20260916-v1/RESULT.md	D-20260916-G0T3-001
+G1-T3-R5	T3:gata4	SHIPPED	non-regression PASS; blindness x5; propagation-dose family closed	v0017	46.84 scored	artifacts/g0/G1-T3-R5-AMP2-20260916-v1/RESULT.md	D-20260916-G0T3-001
+G1-T3-R6	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0018	score_pending	artifacts/g0/G1-T3-R6-CIPHER-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R7	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0019	score_pending	artifacts/g0/G1-T3-R7-SPLIT-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R8	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0020	score_pending	artifacts/g0/G1-T3-R8-KNK-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R9	T3:gata4	SHIPPED	local NOT promoted; mechanism bet	v0021	46.88 scored (TIE)	artifacts/g0/G1-T3-R9-HOP2-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R10	T3:gata4	SHIPPED	local NOT promoted; mechanism bet	v0022	46.93 scored (TIE)	artifacts/g0/G1-T3-R10-GRAPH-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R11	T3:gata4	SHIPPED	local NOT promoted; exact TIE best	v0023	46.95 scored (exact TIE, selection stays)	artifacts/g0/G1-T3-R11-SIGNMAX-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R12	T3:gata4	SHIPPED	local NOT promoted; mechanism bet	v0024	46.90 scored (TIE)	artifacts/g0/G1-T3-R12-DEBIAS-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R13	T3:gata4	SHIPPED	local NOT promoted; CATASTROPHIC; spatial family closed	v0025	43.30 scored (-3.65)	artifacts/g0/G1-T3-R13-SPATIAL-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
