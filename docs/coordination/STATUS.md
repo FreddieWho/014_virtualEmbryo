@@ -96,7 +96,7 @@ tasks:
       - "outputs/t2_*"
 
   T3:
-    status: awaiting_next_design
+    status: score_pending
     dependencies: []
     owner: coordinator
     branch: master
@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "技术复核已完成；建议优先R6非负输出与强基线、R3机制输出、R4残差映射；新修复均未执行。见 reports/t3_route_review_20260921/REPORT.md。R5已回分，selection保持。"
+    next_action: "6个修复候选已打包，等待上传回分；R6图优势未成立，R3/R4通过WT评估但KO效果未验证。见 reports/t3_repairs_20260921/REPORT.md。selection保持；R5扩链后续。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -549,3 +549,11 @@ R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优�
 ### 2026-09-21 R5回分收口
 
 两候选总分及五子分已登记，文件SHA实核通过；两者与父版本同总分，signal on/off在回报精度下无差异。selection保持，R5回分队列清零；R6仍输出门槛失败，后继待设计。证据 `reports/SERVER_SCORE_REGISTRY.md#t3-next-r5-score-return-20260921`；blocks_submission: false。
+
+### 2026-09-21 修复执行lease
+
+coordinator owns scripts/t3_next/common.py、repair.py、repair_ops.py、configs/t3_next/repair_20260921.json、tests/t3_next/test_repairs.py及共享候选登记。用户授权开始修复；顺序R6→R3→R4，独立新run，旧结果不改。固定设计先于新训练；R1/R5组件以有效信号与新响应输入为后续前提。
+
+### 2026-09-21 修复首批收口
+
+R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。 交付 `deliveries/r634fix__t3__upload__20260921.zip`；23项定向测试通过，六候选SHA/配置快照/坐标和组内差异核验通过。修复lease释放；科学限制blocks_submission: false。见 `reports/t3_repairs_20260921/REPORT.md`。

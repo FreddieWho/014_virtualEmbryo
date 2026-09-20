@@ -1,5 +1,5 @@
 # Virtual Embryo 项目状态
-最新事件（2026-09-21）：T3全路线复核完成，建议优先R6非负输出/强基线、R3机制输出与R4残差映射。仅审查及只读诊断，无新候选或分数；selection不变。见 reports/t3_route_review_20260921/REPORT.md。以下为历史阶段摘要。
+最新事件（2026-09-21）：R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。 上传包 deliveries/r634fix__t3__upload__20260921.zip；报告 reports/t3_repairs_20260921/REPORT.md。以下为历史阶段摘要。
 最新事件（2026-09-20）：R3/R4 修复已入 TODO；R5/R6 首轮数据收集完成，GSE261783 两样本隔离过滤为 5,454 细胞/26 候选扰动，500/500 panel；R5 关系资料已落盘。全部 model_input=false，未训练，准入审查仍开放。见 `reports/t3_data_intake_20260920/REPORT.md`。既有四候选仍待人工上传回分，best 46.95 不变。以下为历史阶段摘要。
 
 更新时间：2026-09-04（晚）

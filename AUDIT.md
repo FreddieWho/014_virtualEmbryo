@@ -7,15 +7,16 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
 
-Score-pending rows: 9 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050)
+Score-pending rows: 15 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0034/next_r6meanfix, v0035/next_r6graphfix, v0036/next_r3linfix, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (39 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (44 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 26
 - FAIL: 8
-- VOID: 1
+- VOID: 2
 - PARKED: 1
-- GATE_ONLY: 3
+- PENDING_SERVER: 3
+- GATE_ONLY: 4
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only
@@ -26,8 +27,9 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-NEXT-R3: FAILED_DISASTER
   - T3-NEXT-R4: FAILED_MAPPING_GATE
   - T3-NEXT-R6: FAILED_DISASTER after gene holdout PASS; both outputs exceed negative clip bound
+  - T3-REPAIR-R4-V1: withdrawn before delivery: inference omitted fitted calibration slopes
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033已评分、均与父版本总分相同，未晋级；best不变。 R6非负输出修复待新设计；R3/R4修复保留。
+- **当前执行分支**：T3修复首批六候选已打包，等待回分；R6图优势未成立，R3/R4 WT门通过。R5扩链后续，selection不变。见 reports/t3_repairs_20260921/REPORT.md。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

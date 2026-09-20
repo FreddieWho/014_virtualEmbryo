@@ -1,0 +1,10 @@
+{
+  "versions": [
+    "v0038",
+    "v0039"
+  ],
+  "status": "INVALIDATED_UNSUBMITTED",
+  "reason": "validation/inference calibration mismatch",
+  "artifacts_preserved": true,
+  "replacement_run": "artifacts/t3_next/T3-REPAIR-R4-20260921-v2"
+}

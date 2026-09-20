@@ -794,3 +794,12 @@ reuse_promoted
 - decision: 仅形成优化建议，优先R6非负输出与强基线、R3机制输出、R4残差映射；R5/R1作为组件，R2整细胞替换与旧全表达平滑不原样重跑。既有verdict和selection不变。
 - evidence: reports/t3_route_review_20260921/REPORT.md、CHECKS.json、check.py；R1/R5真实文件差分及R6训练集平均响应、最终权重推断诊断。
 - boundary: 无新GCN训练、候选、提交或分数；补充对照非预注册，成人→胚胎泛化未知。旧替代实现不等同于原论文方法失败；blocks_submission: false。
+
+## D-20260921-T3REPAIR-001
+
+- authorization: 用户在全路线复核后要求“好的你来开始修”。
+- decision: 完成第一优先级R6/R3/R4修复和完整数据执行，交付六候选；仅结构/格式通过，不晋级。R1叠加R6为NO_OP；R5扩链尚未执行。
+- execution: R6样本内NTC/非负倍率及强对照，R3四空间块/比例机制，R4五基因组×四块残差映射及真正应用斜率的panel/中介推断；23测试通过。
+- correction: R4 v1评估/推断校准不一致，未提交v0038/v0039撤回保留；v2完整重跑生成v0040/v0041。原失败记录及旧评分不改。
+- evidence: reports/t3_repairs_20260921/REPORT.md、VALIDATION.json、R4_WITHDRAWAL.json；候选身份SHA见submissions/INDEX.tsv；上传包deliveries/r634fix__t3__upload__20260921.zip及receipt。
+- boundary: R6图未胜过平均响应/平均倍率/置乱图，跨样本不稳定；R3/R4的WT评价不是KO验证。新候选未提交/未评分，selection v0009/v0010保持；blocks_submission: false。

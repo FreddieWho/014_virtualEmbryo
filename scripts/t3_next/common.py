@@ -42,9 +42,9 @@ def indexed(version):
 
 
 class Context:
-    def __init__(self,run):
+    def __init__(self,run,design=DESIGN):
         self.run=Path(run).resolve();self.run.mkdir(parents=True,exist_ok=False)
-        self.started=time.time();self.cfg=json.loads(DESIGN.read_text())
+        self.started=time.time();self.design=Path(design);self.cfg=json.loads(self.design.read_text())
         self.row,self.parent_path=indexed('v0009');self.parent=ad.read_h5ad(self.parent_path)
         self.genes=list(self.parent.var_names.astype(str));self.gi=self.genes.index('Gata4')
         panel=(ROOT/'data/gene_panel/T3__gata4.genes.txt').read_text().splitlines()
@@ -68,13 +68,13 @@ class Context:
         z=self.coords[:,2];edges=np.quantile(z,[.25,.5,.75]);self.blocks=np.searchsorted(edges,z,side='right')
         if len(np.unique(self.blocks))<2:raise ValueError('no spatial split support')
         self.candidates=[]
-        inputs={str(self.wt_path.relative_to(ROOT)):r['sha256'],self.row['path']:self.row['sha256'],str(DESIGN.relative_to(ROOT)):sha(DESIGN)}
+        inputs={str(self.wt_path.relative_to(ROOT)):r['sha256'],self.row['path']:self.row['sha256'],str(self.design.relative_to(ROOT)):sha(self.design)}
         inputs.update({str(p.relative_to(ROOT)):sha(p) for p in sorted((ROOT/'scripts/t3_next').glob('*.py'))})
         # Retain the exact implementation for this receipt even after later repairs.
         import shutil
         (self.run/'code').mkdir()
         for p in sorted((ROOT/'scripts/t3_next').glob('*.py')):shutil.copy2(p,self.run/'code'/p.name)
-        shutil.copy2(DESIGN,self.run/'code/design.json')
+        shutil.copy2(self.design,self.run/'code/design.json')
         dump(self.run/'INPUT_LOCK.json',{'inputs':inputs,'identity_reproduced':True,'shape':self.base.shape,'block_counts':pd.Series(self.blocks).value_counts().to_dict(),'split_limit':'within-specimen spatial blocks, not biological replicates','seed':self.cfg['seed']})
 
     def finish(self,status,**extra):
@@ -115,14 +115,14 @@ class Context:
         out=folder/f'{version}_{method}'/'submission.h5ad'
         sys.path.insert(0,str(ROOT/'docs/batch3/interfaces'))
         from virtual_embryo_tools.contract_io import write_candidate_from_parent,validate_h5ad_contract
-        write_candidate_from_parent(parent_path=parent_path,output_path=out,expression=x,row_names=list(parent.obs_names),normalization='log_normalized',parent_sha256=row['sha256'],metadata_updates={'ve_t3_next':json.dumps({'lane':lane,'run':str(self.run.relative_to(ROOT)),'design_sha256':sha(DESIGN),'parent':parent_version,'seed':self.cfg['seed'],'target_used':False},sort_keys=True)})
+        write_candidate_from_parent(parent_path=parent_path,output_path=out,expression=x,row_names=list(parent.obs_names),normalization='log_normalized',parent_sha256=row['sha256'],metadata_updates={'ve_t3_next':json.dumps({'lane':lane,'run':str(self.run.relative_to(ROOT)),'design_sha256':sha(self.design),'parent':parent_version,'seed':self.cfg['seed'],'target_used':False},sort_keys=True)})
         report=validate_h5ad_contract(out,task='T3',board='gata4',scorer_lock=ROOT/'artifacts/tool_integration/P0-LOCK/locks/SCORER_LOCK.json',parent_path=parent_path,parent_sha256=row['sha256'])
         dump(self.run/f'{lane}_CONTRACT.json',report)
         if report['status']!='PASS':raise ValueError('contract failed; artifact retained unregistered: '+str(out))
         new=dict.fromkeys(rows[0].keys(),'');new.update(status='candidate',submission_group='T3-NEXT-'+lane.split('_')[0].upper(),board='T3:gata4',version=version,method=method,path=str(out.relative_to(ROOT)),n_cells=str(x.shape[0]),n_genes=str(x.shape[1]),seed=str(self.cfg['seed']),target_used='false',local_contract='pass',sha256=sha(out),score_status='score_pending',notes=f'parent={parent_version}; run={self.run.relative_to(ROOT)}; NOT_SUBMITTED; local structural checks only; scientific NOT_IDENTIFIABLE')
         with (ROOT/'submissions/INDEX.tsv').open('a') as f:csv.DictWriter(f,fieldnames=list(new),delimiter='\t',lineterminator='\n').writerow(new)
         info={'lane':lane,'version':version,'path':new['path'],'sha256':new['sha256'],'parent':parent_version,'portal_file':f't3_gata4__{lane}__{version}.h5ad','checks':checks,**(extra or {})};self.candidates.append(info)
-        with (ROOT/'docs/coordination/T3_TRACKING.md').open('a') as f:f.write(f'\n2026-09-20（{version} {lane}）：新建六路线候选，parent={parent_version}；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 {self.run.relative_to(ROOT)}/RESULT.json。\n')
+        with (ROOT/'docs/coordination/T3_TRACKING.md').open('a') as f:f.write(f'\n{self.cfg["date"]}（{version} {lane}）：新建六路线候选，parent={parent_version}；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 {self.run.relative_to(ROOT)}/RESULT.json。\n')
         return info
 
 

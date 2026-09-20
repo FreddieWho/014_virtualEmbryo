@@ -57,3 +57,14 @@ The existing R6 learns signed responses. It now requires `allowed_response_role=
 ## Effective policy: 2026-09-21
 
 The 2026-09-20 universal organizer-letter requirement above is superseded by `docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md`. R6 requires a hash-bound completed ALLOWED source/context review, scoped condition allowlist, permitted role, license and sanitized-file integrity. Signed responses are permitted for eligible sources; a shape-only method remains optional. EXCLUDED/NEEDS_CLARIFICATION sources remain blocked until a new evidence-backed review resolves them. Historical runs and permits are not rewritten.
+
+
+## 2026-09-21 repair runner
+
+`python -m scripts.t3_next.repair {r6,r3,r4} --run-dir <new-directory>` uses `configs/t3_next/repair_20260921.json`; each run freezes that configuration and all module sources. Run with `LD_LIBRARY_PATH=/opt/anaconda3/lib` and BLAS/OMP/MKL thread counts 8. The old `run` entrypoint and original configuration remain available for historical reproduction.
+
+R6 calibrates bounded raw-intensity multipliers on individual within-sample controls, then evaluates five gene folds and both sample-transfer directions against mean response, mean rate, Ridge, MLP and a permuted graph. Passing the no-change screen permits a mean/graph candidate pair; beating all stronger controls is reported separately and is not claimed by contract PASS. No hyperparameter search is performed.
+
+R3 uses the ratio of fitted geometric intensities (regularized means, never pseudocount-added observations), checks all four spatial blocks and preserves observed zeros. R4 uses train-only type-centered residual calibration over five masked feature groups and four spatial blocks, including unmapped test cells; only a passed mapping gate permits its panel/mediator pair. All repaired outputs keep the parent WT observation support: activation of previously zero entries is not modeled.
+
+Receipt details and scientific limitations: `reports/t3_repairs_20260921/`. R1 reconstruction of the repaired R6 outputs is an exact no-op; no duplicate candidates are registered. R5 chain expansion is not part of these three repair runners.

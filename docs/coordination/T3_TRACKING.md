@@ -6,8 +6,8 @@
 
 ## 当前状态（2026-09-21）
 
-- selection保持v0009/v0010。R1 v0026/v0027均与各自父版本总分相同；R2 v0030/v0031均低于父版本。详见权威分数登记。
-- R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033已评分、均与父版本总分相同，未晋级；best不变。
+- R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。
+- 新上传包 `deliveries/r634fix__t3__upload__20260921.zip`；父版本均v0009。R1叠加R6为NO_OP；R5扩链未执行。证据 `reports/t3_repairs_20260921/REPORT.md`。
 
 ## 历史状态（2026-09-04）
 
@@ -138,3 +138,27 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-21：R5 v0032/v0033回分登记，总分及五子分在显示精度下完全相同，两者均与父版本同总分；保留原selection，不晋级。证据 `reports/SERVER_SCORE_REGISTRY.md#t3-next-r5-score-return-20260921`；D-20260921-T3R5SCORE-001。
 
 - 2026-09-21：本轮六路线与历史路线复核完成；R6缩幅不能消除零条目负值，图模型相对平均响应优势约1.36%；R5实际只改变一列。优化建议见 `reports/t3_route_review_20260921/REPORT.md`，无新候选，历史结果不改写。
+
+- 2026-09-21：启动新修复分支R6→R3→R4；冻结repair_20260921.json，采用非负输出、样本内NTC/强对照、四空间块与五遮蔽基因折；无超参搜索，旧失败保留，服务器未提交。
+
+2026-09-21（v0034 r6meanfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R6-20260921-v1/RESULT.json。
+
+2026-09-21（v0035 r6graphfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R6-20260921-v1/RESULT.json。
+
+- 2026-09-21：R6修复v1生成v0034/v0035，负值消除但未优于平均倍率/置乱图；R3/R4正式运行前将比例输出统一到expm1后的强度空间，保持原观察零值且限制强度倍率，不在log表达上直接相乘。新设计与代码快照以各run为准，R6历史快照不改。
+
+2026-09-21（v0036 r3linfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R3-20260921-v1/RESULT.json。
+
+2026-09-21（v0037 r3splfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R3-20260921-v1/RESULT.json。
+
+2026-09-21（v0038 r4panelfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R4-20260921-v1/RESULT.json。
+
+2026-09-21（v0039 r4medfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R4-20260921-v1/RESULT.json。
+
+- 2026-09-21：R4修复v1的映射评估通过，但最终推断漏用校准斜率；v0038/v0039未提交撤回，文件保留。补齐验证/推断一致性并在v2重跑完整映射与反事实，不修改旧run。
+
+2026-09-21（v0040 r4panelfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R4-20260921-v2/RESULT.json。
+
+2026-09-21（v0041 r4medfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R4-20260921-v2/RESULT.json。
+
+- 2026-09-21：修复首批最终交付6候选，R4 v2已应用校准斜率；R1结构组件对R6为NO_OP，不重复打包。23测试及最终身份/包校验通过，未提交/未评分。见 `reports/t3_repairs_20260921/REPORT.md`；D-20260921-T3REPAIR-001。

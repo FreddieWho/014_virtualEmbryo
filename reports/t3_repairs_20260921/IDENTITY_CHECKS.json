@@ -1,0 +1,98 @@
+[
+  {
+    "version": "v0034",
+    "lane": "r6meanfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R6-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.8737075209617615,
+      "library_ratio_q99": 1.0502198600769042,
+      "variance_ratio": 0.9717395901679993,
+      "neighbor_semivariance_ratio": 0.9711941903310383,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 303912
+    }
+  },
+  {
+    "version": "v0035",
+    "lane": "r6graphfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R6-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.8780736827850342,
+      "library_ratio_q99": 1.1216564273834229,
+      "variance_ratio": 0.977584958076477,
+      "neighbor_semivariance_ratio": 0.977419682192196,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 389694
+    }
+  },
+  {
+    "version": "v0036",
+    "lane": "r3linfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R3-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.9804005146026611,
+      "library_ratio_q99": 1.0033292818069457,
+      "variance_ratio": 0.9987128376960754,
+      "neighbor_semivariance_ratio": 0.9988180115568206,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 8986
+    }
+  },
+  {
+    "version": "v0037",
+    "lane": "r3splfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R3-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.9834499740600586,
+      "library_ratio_q99": 1.0038894844055175,
+      "variance_ratio": 0.9988223910331726,
+      "neighbor_semivariance_ratio": 0.9988544129914181,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 8987
+    }
+  },
+  {
+    "version": "v0038",
+    "lane": "r4panelfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R4-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.9873451018333435,
+      "library_ratio_q99": 1.0038993072509765,
+      "variance_ratio": 0.9995065927505493,
+      "neighbor_semivariance_ratio": 0.9996518583725998,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 11297
+    }
+  },
+  {
+    "version": "v0039",
+    "lane": "r4medfix",
+    "run": "artifacts/t3_next/T3-REPAIR-R4-20260921-v1",
+    "design_sha_matches": true,
+    "sha_matches": true,
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.953145592212677,
+      "library_ratio_q99": 1.006190872192383,
+      "variance_ratio": 0.9989315271377563,
+      "neighbor_semivariance_ratio": 0.9993935563323312,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 63824
+    }
+  }
+]
