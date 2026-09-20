@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "R6首次执行FAILED_DISASTER，0候选；下一版需修复非负输出，尚未执行。R5 v0032/v0033已评分并列父版本，未晋级；R3/R4修复保留。见 reports/t3_r6_execution_20260921/REPORT.md。"
+    next_action: "技术复核已完成；建议优先R6非负输出与强基线、R3机制输出、R4残差映射；新修复均未执行。见 reports/t3_route_review_20260921/REPORT.md。R5已回分，selection保持。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

@@ -136,3 +136,5 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-21：R6按冻结设计首次训练及目标推断完成；负值门槛失败，0候选，未改参数。证据 `reports/t3_r6_execution_20260921/REPORT.md`。
 
 - 2026-09-21：R5 v0032/v0033回分登记，总分及五子分在显示精度下完全相同，两者均与父版本同总分；保留原selection，不晋级。证据 `reports/SERVER_SCORE_REGISTRY.md#t3-next-r5-score-return-20260921`；D-20260921-T3R5SCORE-001。
+
+- 2026-09-21：本轮六路线与历史路线复核完成；R6缩幅不能消除零条目负值，图模型相对平均响应优势约1.36%；R5实际只改变一列。优化建议见 `reports/t3_route_review_20260921/REPORT.md`，无新候选，历史结果不改写。

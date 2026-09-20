@@ -262,3 +262,10 @@ boundary         适用范围或不可推断边界
 - reusable_in: "可用于候选前的 external context inventory、样本/平台/探针映射审计和后续假设生成；不能作为 E8.75 candidate activity、leaderboard improvement 或机制证明。"
 - limitations: "E9.5 与 E8.75 不同，组织为 AVC/pooled heart/AHF 而非挑战状态；pooled biological material、平台尺度、probe placement 和 lineage composition 限制跨状态转移；无 raw CEL、无 state-specific signed gene set、无独立 signed-family stability，因此 gate 为 HOLD，blocks_submission=false。"
 - decision: "接受 S1D v3 为当前 exact-stage contextual evidence 组件；保持 candidate_generation=false、server_submission=false，继续寻找 state-matched signed-family 证据。"
+
+## 2026-09-21 T3输出与验证限制复核
+
+- 成熟度：当前冻结artifact的直接数值诊断。R6最终GCN负值全部落在父版本零条目；幅度1/0.1/0.01时负值比例不变，说明当前加法表示不能靠缩小正幅度解决。证据 `reports/t3_route_review_20260921/CHECKS.json`；不外推为所有模型的普遍失败。
+- 成熟度：补充对照，非预注册独立验证。R6图模型相对训练基因平均扰动响应的留出MSE优势仅约1.36%；原始两对照通过事实保留，但基因特异学习证据较弱。证据同上；成人→胚胎泛化未验证。
+- 成熟度：当前候选的直接差分。R5 on/off仅S100a10的1,319个表达条目不同；同分只限制本次最小链实现，不能推出通信机制无效。证据同上和权威分数注册表。
+- 成熟度：待验证技术假设。非负表达依赖输出、样本内NTC、R4类型内残差映射可能改变工程/泛化结果，均未执行新训练或生成候选，不声称服务器增益。详细复核 `reports/t3_route_review_20260921/REPORT.md`；blocks_submission: false。

@@ -787,3 +787,10 @@ reuse_promoted
 - decision: v0032/v0033均与父版本同总分，不晋级；on/off全部回报指标相同。R5本轮SHIPPED，无已观测增益，selection保持v0009/v0010。
 - evidence: reports/SERVER_SCORE_REGISTRY.md#t3-next-r5-score-return-20260921；两个本地artifact SHA与INDEX一致；submission ID/time未提供。
 - boundary: 显示精度相同不证明通信机制无效；未新建候选、训练或提交。科学状态不变，blocks_submission: false。
+
+## D-20260921-T3REVIEW-001
+
+- authorization: 用户要求复核本轮1–6及历史T3技术路线并整合汇报。
+- decision: 仅形成优化建议，优先R6非负输出与强基线、R3机制输出、R4残差映射；R5/R1作为组件，R2整细胞替换与旧全表达平滑不原样重跑。既有verdict和selection不变。
+- evidence: reports/t3_route_review_20260921/REPORT.md、CHECKS.json、check.py；R1/R5真实文件差分及R6训练集平均响应、最终权重推断诊断。
+- boundary: 无新GCN训练、候选、提交或分数；补充对照非预注册，成人→胚胎泛化未知。旧替代实现不等同于原论文方法失败；blocks_submission: false。
