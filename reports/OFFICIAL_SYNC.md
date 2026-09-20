@@ -1,6 +1,6 @@
 # Virtual Embryo Challenge — Official Sync
 
-更新时间：2026-09-01
+更新时间：2026-09-20（§9 定例刷新；09-01 全量基线不变）
 
 状态：PASS_FOR_COMPETITION_BASELINE；官方页面、panel、scorer、公开元数据和两个
 notebook 已复核，资源下载闭环完成，首个服务器 baseline 已取得。科学 promotion
@@ -257,3 +257,28 @@ submission。
 按 cache-first 规则，本次仅在现有缓存缺少目标扰动证据时访问 NCBI GEO/FTP，新增并 hash-lock 三份 official processed series matrix：GSE5298、GSE9652、GSE78125；同时新增其对应 GPL1261/GPL6246 platform annotation。GSE5298/GSE9652 为 E9.5 Gata4 cardiac-tissue contexts，GSE78125 为 E9.5 Ctnnb1 AHF context；raw CEL 未下载，数据未进入 challenge input。
 
 官方入口：[GSE5298](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5298)、[GSE9652](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE9652)、[GSE78125](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78125)、[GPL1261 annotation](https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL1nnn/GPL1261/annot/GPL1261.annot.gz)、[GPL6246 annotation](https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL6nnn/GPL6246/annot/GPL6246.annot.gz)。文件身份、字节数和 SHA256 见 `infra/bioinf-data-index/INDEX.tsv` 与 `artifacts/tool_integration/T3-S1D-INDEPENDENT-ACTIVITY-EVIDENCE-20260901-v3/metrics/source_audit.json`；该刷新只补充 contextual evidence，不改变 E8.75 gate。
+
+## 9. 定例刷新（2026-09-20，有变更但无 board contract 变更）
+
+抓取源（fresh）：`challenge/`、`challenge/data`、`challenge/baselines`、
+`challenge/evaluation`（T1 节）、`challenge/panels/index.json`、
+`challenge/panels/t1_composition.json`、`challenge/timeline`；
+veckit 上游 HEAD 经 git ls-remote 核对为 `46d41e6`（与本地 pin 一致，无 scorer 更新）。
+
+### 确认无变更（与 09-01/09-17 缓存一致）
+- 5 board 的 genes/cell limits/truth/ref 规模：index.json 逐项对过，全同（T1 32285/1000–5118/1249/1706；T2 embryo 498/583–5000/583/1330；heart extrap 500/1000–25179/8393/5374；heart interp 500/1000–17616/1185/5872；T3 500/1000–7449/2320/2483）。
+- E7.75 仍为 unused / not released（Data 页＋evaluation 页双确认，09-17 订正继续有效）。
+- Baselines 页引用行定义与 §4 一致（floor=50 按定义、逐 board 实测；controls 含 structure-gate 修补故事）。
+- Panel 文件未重抓（无变更信号；本地 SHA 见 §3）。
+
+### 新增入库（规则/策略相关，非 contract 变更）
+- **Test-phase 规则**（timeline 页，权威日程）：P3 自 2026-10-20 起全任务释放 validation 答案；test inputs 无标签下发；**每 board 整个 phase 限 2 个 official test submissions**；final due 12-02；eval 12-04；NeurIPS 公布 12-11。deadline 只延不提前。
+- **修正窗口声明**：timeline 页明示 datasets 与 metric formulations 仍可能被修正——定例刷新继续。
+- index.json anchors 首次入库：逐 board floor/ceiling（如 T1 de ceiling 0.8464/dir 0.7901；T3 severity_slope floor −6.9078/ceiling −0.0088）。无法确认是否变更过，记为首次捕获，供本地门校准参考。
+- Data 页新增操作细节：scorer 先对每 stage 下采样 10%；MMD 取 2000、energy/variogram 各 1500；cell 数只影响证据量不影响排名；T1 心脏中心解剖说明（Neural Tube E8.5 占 4.6%、E9.5 为 0，composition.json 已含 18/21 类型与未调和词表警告）。
+- 口径注记：evaluation 正文称 E8.5/E9.5 共享 "5 cell types"，composition.json 列 exact-name 共享 11 个——系调和词表差异，非规则变更；本地 lineage（28 states→10）不受影响。
+- 外部数据披露规则确认（evaluation 页）：可训外部公开单细胞数据，须随 submission 披露——与 `infra/bioinf-data-index/` 做法一致。
+- 奖金 $112K（winner $54K＋generality $8K＋travel $30K＋community $20K），备查非规则。
+
+### 策略含义（记录，不形成决策）
+- Validation probing 有明确截止（10-20 转 test ranking）；test 期每 board 只有 2 发——攒足证据再打。
