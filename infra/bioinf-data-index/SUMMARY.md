@@ -1,5 +1,7 @@
 # Bioinformatics data index summary
 
+跨任务数据资源入口：[`data_infra.md`](../../data_infra.md)（按来源查找；各 task 的使用许可独立）。
+
 更新时间：2026-09-01
 
 本索引覆盖当前工作区中的 9 个 challenge H5AD、5 个官方 board gene panels、官方 board `index.json`、官方 T1 released-stage composition JSON，以及随官方 `veckit` scorer 落盘的 6 个 tutorial sample H5AD。另登记了从 `/home/huyudi/006/data` 和实际存在的 `/home/huyudi/013_spatial/data` 接入的 7 个只读辅助目录链接。完整逐条记录见 [INDEX.tsv](INDEX.tsv)，辅助链接的来源、用途和许可边界见 [data/external/INDEX.tsv](../../data/external/INDEX.tsv)。
