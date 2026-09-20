@@ -533,3 +533,11 @@ Batch 1 已关闭为 `CLOSED_FOR_REVIEW`。综合评审报告为 `reports/PHASE_
 ## 状态更新要求
 
 coordinator 只在候选、检查、上传、评分、决策、阻塞或共享知识发生变化时更新本文件。agent 通过 handoff 提交更新，不直接并行编辑本文件。
+
+### 2026-09-20 T3 R5/R6 补充准备
+
+状态 PREPARATION_PARTIAL_QUARANTINE：新增4998细胞隔离派生集和500基因唯一映射；原R6增加signed用途门，shape-only数据不能进入方向学习。4项针对性测试通过。R5完整获批链仍0；R6剩23扰动待完整背景审查和书面确认，shape后继完整集成未完成，训练NOT_RUN。报告 `reports/t3_r56_readiness_20260920/REPORT.md`；未提交/未评分，blocks_submission: false。
+
+### 2026-09-20 R5解阻、R6规则归因订正
+
+R5最小输入已就绪并实际执行：4条SIGNOR源边/1条LRT，WT拟合，v0032/v0033（父v0009）contract PASS，PENDING_SERVER但未提交/未评分。交付 `deliveries/r5sig__t3__upload__20260920.zip`。仅该通用非目标拓扑获项目范围许可，不授权R6。R6仍隔离；shape-only和书面确认是内部严格解释，非官网统一条文。证据 `reports/t3_r5_completion_20260920/REPORT.md`、`R6_RULE_EXPLANATION.md`。selection不变，blocks_submission: false。

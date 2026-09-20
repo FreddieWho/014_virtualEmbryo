@@ -62,3 +62,7 @@ S1D v3 的描述性效应为：GSE5298 Gata4 `+0.02084`（linear-expression log2
 ## 2026-09-20 — T3 路线 5/6 数据收集
 
 新增 94 个实际下载/派生文件索引，全部 QUARANTINE_NOT_APPROVED、model_input=false。优先源 GSE261783 两个静息小鼠心脏样本：9,762→5,454 个细胞、26 个候选扰动＋220 个对照、32,287 基因，panel 500/500；近似表型与通用 Perturb-seq 用途许可未闭合。R5 已收集 3,252 对小鼠 LR、37 张 panel 引用卡片及 212 条人类 receptor–TF，许可/完整链仍未准入。对 ~/006/data 仅做 metadata 只读核查，不复制整个原库。详见 `reports/t3_data_intake_20260920/REPORT.md` 与 COLLECTION_MANIFEST.json。
+
+- 2026-09-20 R5/R6补充准备：新增第二轮隔离派生矩阵4998×32287，保留23扰动+220对照；Chd4/Smarca4/Yy1共456细胞保守剔除。全部仍model_input=false；23项背景审查和来源用途书面确认待完成。见 [准备报告](../../reports/t3_r56_readiness_20260920/REPORT.md)。
+
+- 2026-09-20 R5最小SIGNOR来源：新增27个注册文件（原始文献/网络/映射缓存及3个净化包文件）；只批准1条LRT的T3通用拓扑用途，4条来源边人工审核，全部原始缓存继续隔离。R5实际运行生成v0032/v0033，未评分。见 `reports/t3_r5_completion_20260920/REPORT.md`；R6许可不变。

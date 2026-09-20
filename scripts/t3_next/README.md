@@ -49,3 +49,7 @@ LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest tests
 ```
 
 This is a scoped behavior suite; broad project tests are not required for new isolated scripts. Candidate validation invokes the project's existing board/protected-field/round-trip checks. There is no valid hidden Gata4 expression target locally, so the historical mismatched Gata4-vs-Mab21l2 scorer is deliberately not run or presented as validation. Each receipt marks the local full-panel scorer NOT_RUN_NO_MATCHED_GATA4_TARGET.
+
+## 2026-09-20 response-use gate
+
+The existing R6 learns signed responses. It now requires `allowed_response_role=SIGNED_RESPONSE` plus a hash-bound, human-verified organizer scope record and original written evidence before opening an external matrix. A shape-only permit does not authorize this route. See `source_roles.py` for the required fields; no approved production record currently exists. The shape-only successor is described in `reports/t3_r56_readiness_20260920/R6_SHAPE_DESIGN.md`; only its unsigned-target primitive is implemented, not its complete training/inference pipeline.

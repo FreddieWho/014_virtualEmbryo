@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "apelin_2011.html",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3113525/",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/apelin_2011.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 188886,
+      "sha256": "61a4b11448d7297c055a90a984ba72cbcc3b689aba6649ecafb9536c9a26d6ee",
+      "model_input": false
+    },
+    {
+      "name": "apelin_2024.html",
+      "url": "https://www.nature.com/articles/s41467-024-50540-5",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/apelin_2024.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 622762,
+      "sha256": "3d8b021240897b140a5fb1aa9b5327b4f0e638fdd6cc1512be29696efffb6e1f",
+      "model_input": false
+    },
+    {
+      "name": "lookup_ENSG00000164867.json",
+      "url": "https://rest.ensembl.org/lookup/id/ENSG00000164867?content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/lookup_ENSG00000164867.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 433,
+      "sha256": "f034547da301dc147bc10cf9b22096cb3743ee7a17b1e9a958067abcee5d5dfa",
+      "model_input": false
+    },
+    {
+      "name": "lookup_ENSMUSG00000028978.json",
+      "url": "https://rest.ensembl.org/lookup/id/ENSMUSG00000028978?content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/lookup_ENSMUSG00000028978.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 454,
+      "sha256": "ca7deab74cd622cfa7539d4f72a157618e4bcdd62324b84fb7cc26fa7a02692b",
+      "model_input": false
+    }
+  ]
+}

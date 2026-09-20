@@ -79,3 +79,11 @@
 5. 新增来源或状态变化时，更新本页对应资源行和 [文件索引/汇总](infra/bioinf-data-index/SUMMARY.md)；新增 task 使用另加 permit 指针。来源、许可、哈希、过滤回执不只留在某次对话中。
 
 防火墙：[DATA_FIREWALL_SPEC.md](docs/batch2/compliance/DATA_FIREWALL_SPEC.md)；任务禁区：[规则快照](docs/batch2/03_COMPLIANCE_RULES_SNAPSHOT_20260829.md)；扰动黑名单：[target_leakage_blacklist.tsv](docs/batch2/compliance/target_leakage_blacklist.tsv)。
+
+## 2026-09-20：T3 R5/R6 第二轮准备
+
+[准备报告](reports/t3_r56_readiness_20260920/REPORT.md)：GSE261783新增4998×32287隔离派生文件，23候选扰动、220对照、500基因唯一映射。输入输出身份见该目录PREPARATION_RECEIPT.json和生信INDEX。旧5454细胞文件保留为历史隔离输入；新旧文件不是可合并的独立样本。R5完整批准链为0，R6逐扰动审查/书面用途确认未闭合，均不能作为其他task的自动许可。
+
+## 2026-09-20：R5最小来源已获项目范围许可
+
+SIGNOR 4.0（CC-BY4.0）缓存及原始论文/同源映射元数据已入索引。仅 `infra/external_data/sanitized/T3-R5-SIGNOR-MINIMAL-20260920/edges.tsv` 的1条LRT允许T3:gata4按通路结构使用；4条源边逐项审查，5节点一对一映射，外部方向/幅度/表达数值未进入模型。原始全网络仍隔离，不授予R6或其他任务许可。源证据与permit见 `reports/t3_r5_completion_20260920/SOURCE_MANIFEST.json`、`FILTER_RECEIPT.json`。R5已实际运行并生成两候选（未提交/未评分）。

@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "signor_human.tsv",
+      "url": "https://signor.uniroma2.it/API/getHumanData.php",
+      "max_bytes": 50000000,
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/signor_human.tsv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 19866055,
+      "sha256": "bff4649f96d04652000216786d529b0df28c8fe4ca0802bba1c3d3585ab6ad73",
+      "model_input": false
+    }
+  ]
+}

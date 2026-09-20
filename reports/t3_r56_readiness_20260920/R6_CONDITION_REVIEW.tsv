@@ -1,0 +1,28 @@
+gene	cells	decision	source_reference	reason	model_input
+Arid2	194	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Brd7	246	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Brd9	207	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Chd4	148	EXCLUDE_CONSERVATIVE_CONTEXT_RISK	https://pmc.ncbi.nlm.nih.gov/articles/PMC9067406/	Direct GATA4/NKX2-5/TBX5 cardiac developmental complex; conservative risk exclusion, not a proven identical phenocopy	false
+Dmap1	139	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Egr2	370	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Hcfc1	143	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Ino80	172	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Kansl1	140	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Kat5	164	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Kat8	157	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Kmt2a	217	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Paxip1	229	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Pbrm1	240	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Rest	310	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Rnf40	201	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Setd1b	186	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Setdb1	252	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Smarca4	169	EXCLUDE_CONSERVATIVE_CONTEXT_RISK	https://pmc.ncbi.nlm.nih.gov/articles/PMC3096875/	BRG1 dosage modulates cardiac developmental transcription factors; conservative risk exclusion	false
+Smarcd1	322	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Srcap	146	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Tfpt	268	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Wdr82	99	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Yeats4	182	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+Yy1	139	EXCLUDE_CONSERVATIVE_CONTEXT_RISK	https://pmc.ncbi.nlm.nih.gov/articles/PMC6048588/	Cardiac progenitor regulation and developmental conditional loss; conservative risk exclusion	false
+Znhit1	194	HOLD_FULL_CONTEXT_REVIEW	GSE261783	Exact blacklist screen alone cannot establish absence of protected phenocopy	false
+ctrl	220	CONTROL_METADATA_ONLY	GSE261783	Explicit NTC assignment; not a perturbation	false

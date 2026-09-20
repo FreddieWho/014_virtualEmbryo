@@ -1,0 +1,12 @@
+{
+  "selected_ids": [
+    "SIGNOR-107400",
+    "SIGNOR-247979",
+    "SIGNOR-235696",
+    "SIGNOR-255237"
+  ],
+  "original_rows": 40745,
+  "unselected_rows": 40741,
+  "unselected_disposition": "NOT_USED_NOT_ASSERTED_FORBIDDEN",
+  "rule": "only these individually reviewed generic non-target relationships; no full-network training"
+}

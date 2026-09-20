@@ -7,16 +7,16 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
 
-Score-pending rows: 13 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0026/next_r1graph, v0027/next_r1sign, v0030/next_r2adapt, v0031/next_r2random)
+Score-pending rows: 15 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0026/next_r1graph, v0027/next_r1sign, v0030/next_r2adapt, v0031/next_r2random, v0032/next_r5off, v0033/next_r5on)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (38 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (39 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 23
 - FAIL: 7
 - VOID: 1
-- PARKED: 3
-- PENDING_SERVER: 2
-- GATE_ONLY: 2
+- PARKED: 2
+- PENDING_SERVER: 3
+- GATE_ONLY: 3
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only

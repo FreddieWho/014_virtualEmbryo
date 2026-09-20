@@ -744,3 +744,16 @@ reuse_promoted
 - evidence: "reports/t3_data_intake_20260920/REPORT.md；SOURCE_SHORTLIST.tsv；COLLECTION_MANIFEST.json；FIBRO_FILTER_RECEIPT.json；FILTER_VALIDATION.json；R5_RESOURCE_AUDIT.json。生信索引同步。"
 - boundary: "所有新文件 QUARANTINE_NOT_APPROVED，model_input=false；固定 blacklist 零命中不等于完整 phenocopy 审查通过。generic Perturb-seq 响应形状用途/许可未闭合，R5 许可和下游 target 链未闭合；正式训练/归一化/embedding/候选生成均 NOT_RUN。既有候选待评分和 selection 不变。blocks_submission: false。"
 - next_action: "完成明确剩余的数据准入与用途审查；R3/R4 保留待办。不替组织者发消息、不自动把已收集文件晋级为模型输入。"
+
+## D-20260920-T3R56PREP-001
+
+- decision: 完成GSE261783第二次隔离过滤和R6用途门；原signed路线不得消费shape-only许可。新增shape后继设计与基础函数，未称为完整实现。
+- evidence: reports/t3_r56_readiness_20260920/REPORT.md；PREPARATION_RECEIPT.json；R6_CONDITION_REVIEW.tsv；4项针对性测试通过。
+- boundary: 4998细胞/23扰动仍QUARANTINE，3扰动保守排除不等于其他扰动通过；R5完整批准链0；书面确认NOT_PRESENT，草稿NOT_SENT；标准化、图、训练、候选均NOT_RUN。未提交/未评分，blocks_submission: false。
+
+## D-20260920-T3R5SOURCE-001
+
+- decision: R5采用最小SIGNOR CC-BY4通用非目标信号拓扑，逐边审核4关系、5节点人鼠一对一映射，聚合为Pdgfb/Pdgfrb/S100a10；仅官方WT拟合系数。生成父v0009的v0032/v0033，未提交/未评分。
+- evidence: reports/t3_r5_completion_20260920/SOURCE_MANIFEST.json、FILTER_RECEIPT.json、EDGE_CONTEXT_REVIEW.tsv、EXECUTION.json；artifacts/t3_next/T3-R5-SIGNOR-MINIMAL-20260920-v1/RESULT.json；submissions/INDEX.tsv。
+- boundary: 跨背景拼接为探索性先验，不是已验证的胚胎因果链；信号改变量小，服务器提升未知。原始全网络未批准，未使用外部响应值/符号/权重。R6保持隔离，不通过本许可放行。blocks_submission: false。
+- rule attribution correction: 官网§10无所有外部Perturb-seq统一书面预审批或shape-only条款；两者来自本地2026-08-29保守解释。R5该范围为允许的通用pathway知识，不含受保护目标特异边或外部表达训练。不能把内部审查称为主办方批准。

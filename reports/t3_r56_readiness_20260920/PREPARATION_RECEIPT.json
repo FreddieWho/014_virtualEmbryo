@@ -1,0 +1,37 @@
+{
+  "status": "PREPARATION_PARTIAL_QUARANTINE",
+  "task": "T3:gata4",
+  "model_input": false,
+  "source": {
+    "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/filtered/GSE261783_OP2_resting_provisional_raw.h5ad",
+    "sha256": "6e9f22292c420abf40ce3dd1925a5fdde3b7a986e516e330064f668020a9265d"
+  },
+  "output": {
+    "path": "infra/external_data/quarantine/T3-R56-READINESS-20260920/GSE261783_OP2_resting_review2_raw.h5ad",
+    "sha256": "02944b6ec259fe6d6be11ef3fa1dc7a71c9ca73e72c0144d536fd46b2c69b88b",
+    "shape": [
+      4998,
+      32287
+    ]
+  },
+  "removed_conditions": [
+    "Chd4",
+    "Smarca4",
+    "Yy1"
+  ],
+  "removed_cells": 456,
+  "remaining_perturbations": 23,
+  "controls": 220,
+  "panel_unique_matches": 500,
+  "full_phenocopy_review": "PENDING",
+  "organizer_clearance": "NOT_PRESENT",
+  "normalization": "NOT_RUN",
+  "embedding": "NOT_RUN",
+  "adjacency": "NOT_RUN",
+  "training": "NOT_RUN",
+  "r5_approved_complete_edges": 0,
+  "blocks_submission": false,
+  "script_sha256": "c2a1234f8d6223e62f562698b17a65a1b0aa77f77f182ea07ab190051b669893",
+  "review_sha256": "a8ab04adf796cccbc9023d0f6fcc3139388a68eabe2e328709c79cdbb0b8b755",
+  "plan_sha256": "1bbd5a456bbc6a2578c595c6e4184022248563aa69e2d2effe36a2bbd08d000e"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "chain_papers2.json",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2815489898%20OR%2014978237%20OR%2012645529%20OR%2025071020%20OR%2027692180%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/chain_papers2.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 35211,
+      "sha256": "fd0e8d74dc6c4677eeb88eb7358cbd394b0d3b608f539da6e348a4e93b6d0824",
+      "model_input": false
+    }
+  ]
+}

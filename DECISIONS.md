@@ -50,3 +50,7 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - **D-20260920-T3NEXT-001｜T3 六路线实现收口**：四候选待上传，R3/R4 门槛失败，R5/R6 输入阻塞；修复 R2 对照并作废未提交旧对，selection 不变。见 docs/coordination/DECISIONS.md。
 
 - **D-20260920-T3DATA-001｜T3 R5/R6 数据收集**：GSE261783 静息组隔离过滤 5,454 细胞/26 候选扰动，R5 资料与引用落盘；全为 model_input=false。R3/R4 修复加入 TODO。见 docs/coordination/DECISIONS.md。
+
+- D-20260920-T3R56PREP-001：T3 R5/R6第二轮隔离准备、signed/shape用途门和确认草稿；真实训练仍未获准。详见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260920-T3R5SOURCE-001：R5最小SIGNOR来源闭环并生成v0032/v0033（未提交/未评分）；订正R6官方与内部规则归因。详见 [协调决策](docs/coordination/DECISIONS.md)。

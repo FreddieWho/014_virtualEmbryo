@@ -286,3 +286,5 @@ veckit 上游 HEAD 经 git ls-remote 核对为 `46d41e6`（与本地 pin 一致�
 ## 2026-09-20 — T3 外部数据收集前复核
 
 来源：https://virtualembryo.ai/challenge/rules（本轮在线读取；原始网页、SHA256 见 reports/t3_data_intake_20260920/FETCH_RECEIPT.json）。T3 held-out genotype、同基因其他 allele/近似表型和预训练污染禁用边界与既有缓存一致；未据此放宽本地 generic Perturb-seq 的响应形状用途及书面确认要求。未重新抓取其他官方页面、未重定其他任务许可。实际新数据均隔离，未训练。
+
+- 2026-09-20 R5/R6规则复核：重新获取 https://virtualembryo.ai/challenge/rules ，§10正文与前次缓存一致；缓存 `infra/external_data/quarantine/T3-R5-COMPLETION-20260920/official_rules.html`，哈希见 `reports/t3_r5_completion_20260920/FETCH_RECEIPT.json`。纠正归因：统一书面确认和shape-only为项目内部保守约束，不是官网逐字要求；官方为边界不确定时提交前询问。

@@ -11,6 +11,7 @@ from sklearn.linear_model import Ridge
 from .common import ROOT,ATLAS,sha,dump,dense
 from .routes_local import graph_from_motif,ConditionalModel
 from .algorithms import signal_delta,forbidden_perturbation,gene_split,fit_graph_comparator
+from .source_roles import require_response_role
 
 # Explicit broad anatomical vocabulary, not a claim that subtypes are equivalent.
 WT_GROUPS={'Neural Tube':'neural','Forebrain':'neural','NCC':'crest','V-CM':'cardiac','IFT-CM':'cardiac','aPHM':'cardiac','pPHM':'cardiac','JCF':'cardiac','d-CSE':'ectoderm','V-CSE':'ectoderm','pSE':'ectoderm','Intra-Endoth-1':'endothelial','Intra-Endoth-2':'endothelial','HEM-Endoth':'endothelial','Endo':'endothelial','D-FG':'endoderm','a-FG':'endoderm','Lateral FG':'endoderm','Gut Endoderm':'endoderm','EXE-Endoderm':'endoderm','Hindgut':'endoderm','PAM-1':'mesoderm','PAM-2':'mesoderm','PAM-3':'mesoderm','PAM-4':'mesoderm','ExEM-1':'mesoderm','ExEM-2':'mesoderm','LPM':'mesoderm','SOM':'mesoderm','Allantois':'mesoderm','Peri':'mesothelium'}
@@ -167,6 +168,9 @@ def r6(c,manifest=None):
         dump(c.run/'DATA_READINESS.json',{'declared_data_source':'none','searched_permit_manifests':[str(p.relative_to(ROOT)) for p in candidates],'auxiliary_links':'data/external/INDEX.tsv has model_input=false; not consumed','official_training_perturbations':['Mab21l2'],'min_required':c.cfg['r6']['min_perturbation_genes'],'required_interface':['expression','embedding','adjacency','filter_receipt'],'scientific_training':'NOT_RUN'})
         return c.finish('BLOCKED_DATA_NOT_READY',ridge_training='NOT_RUN',graph_training='NOT_RUN',gene_heldout_evaluation='NOT_RUN',target_inference='NOT_RUN')
     import anndata as ad
+    # The existing comparator learns signed responses. A shape-only permit cannot
+    # authorize it, even if every blacklist and file-integrity check passed.
+    require_response_role(json.loads(Path(manifest).read_text()), ROOT, 'SIGNED_RESPONSE')
     m=approved_manifest(manifest,['expression','embedding','adjacency']);a=ad.read_h5ad(ROOT/m['files']['expression']['path'],backed='r')
     if m.get('embedding_role')!='WT_OR_ONTOLOGY_ONLY' or m.get('adjacency_role')!='WT_OR_ONTOLOGY_ONLY':raise ValueError('outcome-free graph and embedding provenance not declared')
     # Inspect metadata before reading any expression. This runner never sanitizes quarantine itself.

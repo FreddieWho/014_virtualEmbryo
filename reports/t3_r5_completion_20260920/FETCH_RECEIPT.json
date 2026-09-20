@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "official_rules.html",
+      "url": "https://virtualembryo.ai/challenge/rules",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/official_rules.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 162847,
+      "sha256": "1d6c28c0eab0008da3ee43dd260f3d26e84b96ad3dc0011f0d08e8e71ac4dbbd",
+      "model_input": false
+    },
+    {
+      "name": "signor_license.html",
+      "url": "https://signor.uniroma2.it/documentation/",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/signor_license.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 2747902,
+      "sha256": "29e56c883c02986ccf7a7d0448dc01611bcd97d677cbc4d935281271da7b16a0",
+      "model_input": false
+    },
+    {
+      "name": "signor_pdgfrb.tsv",
+      "url": "https://signor.uniroma2.it/getData.php?id=P09619",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/signor_pdgfrb.tsv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 47846,
+      "sha256": "e30df434b0a67c004a8eff8ba16a806fabec9d8d11c3a6e88ef01b763b5eb3f3",
+      "model_input": false
+    },
+    {
+      "name": "pdgf_article.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8667318/fullTextXML",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/pdgf_article.xml",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 179910,
+      "sha256": "27164733bc89851753e449a6c476645c06826271396e25c74aa6929614a266a1",
+      "model_input": false
+    },
+    {
+      "name": "reactome_license.html",
+      "url": "https://reactome.org/license",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/reactome_license.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 57886,
+      "sha256": "dc51f8a05462379008fcb271376c6ef97a857b17654e153641f42c053617ff3e",
+      "model_input": false
+    }
+  ]
+}

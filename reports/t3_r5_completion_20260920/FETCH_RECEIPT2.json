@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "apelin_2011.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3113525/fullTextXML",
+      "status": "FETCH_FAILED",
+      "error": "HTTPError: 500 Server Error:  for url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3113525/fullTextXML",
+      "model_input": false
+    },
+    {
+      "name": "signor_aplnr.tsv",
+      "url": "https://signor.uniroma2.it/getData.php?id=P35414",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/signor_aplnr.tsv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 11144,
+      "sha256": "cd802c2d82dd8ca9409184bc4b30cd185fec30b02e4ad09ba781ac3c5a9ef43a",
+      "model_input": false
+    },
+    {
+      "name": "signor_klf2.tsv",
+      "url": "https://signor.uniroma2.it/getData.php?id=Q9Y5W3",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/signor_klf2.tsv",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3752,
+      "sha256": "276e377915a0442f4d6e84fd2860d5d565461789d4c84261e1aa167130ffa0c9",
+      "model_input": false
+    },
+    {
+      "name": "orthology_APLN.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/APLN?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_APLN.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 692,
+      "sha256": "5a3b4cb11e6878a55f4cc178bccc5f6e6bb07168c88d05f3a60baf82144c78a5",
+      "model_input": false
+    },
+    {
+      "name": "orthology_APLNR.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/APLNR?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_APLNR.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1295,
+      "sha256": "e781482bec0ba1543f83264fce0f8fa4a29bbf8146f1a9143e0886e57e71dcff",
+      "model_input": false
+    },
+    {
+      "name": "orthology_KLF2.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/KLF2?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_KLF2.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1257,
+      "sha256": "a0c7641eb74b531f2db90422c0e1674afdb7eed5a7a49b3ee407c182ab0a0103",
+      "model_input": false
+    },
+    {
+      "name": "orthology_NOS3.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/NOS3?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_NOS3.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 3888,
+      "sha256": "42c45a172a168a277a6b5f8eecee8ea90e340d48b07215e4909c5e013be7ff12",
+      "model_input": false
+    }
+  ]
+}

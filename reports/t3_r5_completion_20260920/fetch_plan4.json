@@ -1,0 +1,7 @@
+[
+  {
+    "name": "signor_human.tsv",
+    "url": "https://signor.uniroma2.it/API/getHumanData.php",
+    "max_bytes": 50000000
+  }
+]

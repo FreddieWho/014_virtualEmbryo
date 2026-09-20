@@ -1,0 +1,6 @@
+[
+  {
+    "name": "chain_papers.json",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2833498611%20OR%2023038772%20OR%2014699954%20OR%2012438652%20OR%2011331882%20OR%2031160049%20OR%2035302493%20OR%2039580518%20OR%2020208568%20OR%2028686668%20OR%2018852293%20OR%2020508200%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100"
+  }
+]

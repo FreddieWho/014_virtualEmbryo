@@ -107,3 +107,17 @@
 - 2026-09-20：结构整理 P2 执行完——删 S1A v1–v6（留 v7，P0-LOCK intact）、outputs/t2_*、27 个 g0 重复副本（SHA 双验一致才删）、7 训练件、6 回报探针、v0002 孤儿副本；g0 12G→1.3G，outputs 5.2G→80K；门检查全过（INDEX 零 artifacts 引用、JSON 零 truthy、D2 豁免）；ENV_SNAPSHOT＋DELETION_MANIFEST（54 行）入库；quarantine 保留注记。待办变化：当前执行分支切为结构整理 P3。
 - 2026-09-20：结构整理 P3 执行完——AST 逆依赖确认 24 死脚本，但 18 个用 parents[1] 定位根，搬家必炸，改立牌（scripts/ARCHIVED.md）不搬家；t3_s1_prior 有 incoming 剔除；包装/契约入口豁免。待办变化：整理收工，当前执行分支切回 T1-P2 待定。
 - 2026-09-20：T3 R6–R8 分数回填完成：v0018=46.94（TIE）、v0019=46.95（exact TIE）、v0020=46.64（REJECT）；selection 保持 v0009/v0010=46.95。R6–R13 八候选均已评分，余分队列清零，后续轮次待决定。15 子项入库，LANE_VERDICTS 三行转 SHIPPED（已评分无增益），审计入口重生成；T1-P2 待定不变。
+
+### T3 R5/R6 补充准备（2026-09-20）
+
+- [x] 第二轮隔离过滤、500基因唯一映射、逐条件处置表、signed/shape用途门、书面确认草稿。
+- [ ] R5逐边补全target链和物种/实验背景/数据许可审查；当前批准链0。
+- [ ] R6剩23扰动完整背景审查、主办方来源用途书面确认；草稿NOT_SENT。
+- [ ] 获批后集成shape-only完整分支，构建许可内标准化矩阵/WT或ontology图与embedding，再做gene holdout。当前全部训练NOT_RUN，禁止降低20扰动门。
+- 证据：`reports/t3_r56_readiness_20260920/REPORT.md`。R3/R4已有修复TODO保留。
+
+### T3 R5 本轮补齐结果
+
+- [x] 最小链4条SIGNOR关系的来源/许可/同源映射审核，建立1条LRT及hash绑定manifest，官方WT实际运行，v0032/v0033 contract PASS。原37条不宣称全部补齐。
+- [ ] 用户上传 `deliveries/r5sig__t3__upload__20260920.zip` 并提供服务器总分/子分/证据；既有v0026/v0027/v0030/v0031分数也尚未回填。
+- [ ] R6其余背景审查与内部要求确认继续保留；官网和内部要求区别见 `reports/t3_r5_completion_20260920/R6_RULE_EXPLANATION.md`。

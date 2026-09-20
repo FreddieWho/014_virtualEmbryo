@@ -1,0 +1,21 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "forbidden_records_remaining": 0,
+  "model_input": true,
+  "allowed_role": "GENERIC_TOPOLOGY_ONLY_WT_FITTED_COEFFICIENTS",
+  "source_reference": "https://signor.uniroma2.it/API/getHumanData.php",
+  "license": "CC-BY-4.0",
+  "filter_receipt": {
+    "path": "reports/t3_r5_completion_20260920/FILTER_RECEIPT.json",
+    "sha256": "32cda0592a5d50ba6811c88cbe247d4d6ca3bea32aad524ce78ee169941dd199"
+  },
+  "files": {
+    "edges": {
+      "path": "infra/external_data/sanitized/T3-R5-SIGNOR-MINIMAL-20260920/edges.tsv",
+      "sha256": "13ca71e0a07947705cb52999af155a32bd12ae1ac7a8ae655ac4c3f42933d216"
+    }
+  },
+  "scientific_status": "EXPLORATORY_CROSS_CONTEXT_PRIOR",
+  "r6_permission": false
+}

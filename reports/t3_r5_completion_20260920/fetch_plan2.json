@@ -1,0 +1,30 @@
+[
+  {
+    "name": "apelin_2011.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3113525/fullTextXML"
+  },
+  {
+    "name": "signor_aplnr.tsv",
+    "url": "https://signor.uniroma2.it/getData.php?id=P35414"
+  },
+  {
+    "name": "signor_klf2.tsv",
+    "url": "https://signor.uniroma2.it/getData.php?id=Q9Y5W3"
+  },
+  {
+    "name": "orthology_APLN.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/APLN?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_APLNR.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/APLNR?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_KLF2.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/KLF2?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_NOS3.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/NOS3?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  }
+]

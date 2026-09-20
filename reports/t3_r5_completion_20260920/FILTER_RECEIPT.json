@@ -1,0 +1,24 @@
+{
+  "task": "T3:gata4",
+  "status": "PASS_SELECTED_TOPOLOGY_REVIEW",
+  "forbidden_records_remaining": 0,
+  "scope": "only four selected source edges and one collapsed topology row",
+  "original_sha256": "bff4649f96d04652000216786d529b0df28c8fe4ca0802bba1c3d3585ab6ad73",
+  "selected_ids": [
+    "SIGNOR-107400",
+    "SIGNOR-247979",
+    "SIGNOR-235696",
+    "SIGNOR-255237"
+  ],
+  "context_review": {
+    "path": "reports/t3_r5_completion_20260920/EDGE_CONTEXT_REVIEW.tsv",
+    "sha256": "26d1bf6b80cc5ef266cfe550256c947c8d1f961bb1b6ce7d65607b7e697d2e1d"
+  },
+  "no_protected_target_genotype_or_stage_evidence": true,
+  "no_external_measured_response_values": true,
+  "no_pretrained_parameters": true,
+  "external_source_signs_and_weights": "NOT_USED",
+  "complete_chain_experiment": "NOT_ESTABLISHED",
+  "organizer_clearance": "NOT_REQUIRED_FOR_THIS_GENERIC_NON_TARGET_TOPOLOGY_SCOPE",
+  "rationale": "Local rules allow generic pathway knowledge; no Gata4/Gata6/Ctnnb1-specific edge or external expression training source is admitted"
+}

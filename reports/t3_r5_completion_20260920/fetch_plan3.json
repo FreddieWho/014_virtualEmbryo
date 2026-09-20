@@ -1,0 +1,18 @@
+[
+  {
+    "name": "apelin_2011.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3113525/"
+  },
+  {
+    "name": "apelin_2024.html",
+    "url": "https://www.nature.com/articles/s41467-024-50540-5"
+  },
+  {
+    "name": "lookup_ENSG00000164867.json",
+    "url": "https://rest.ensembl.org/lookup/id/ENSG00000164867?content-type=application/json"
+  },
+  {
+    "name": "lookup_ENSMUSG00000028978.json",
+    "url": "https://rest.ensembl.org/lookup/id/ENSMUSG00000028978?content-type=application/json"
+  }
+]

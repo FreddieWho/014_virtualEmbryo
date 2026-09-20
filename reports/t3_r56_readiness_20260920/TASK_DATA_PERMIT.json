@@ -1,0 +1,30 @@
+{
+  "task": "T3:gata4",
+  "status": "QUARANTINE_NOT_APPROVED",
+  "model_input": false,
+  "files": {
+    "raw_expression": {
+      "path": "infra/external_data/quarantine/T3-R56-READINESS-20260920/GSE261783_OP2_resting_review2_raw.h5ad",
+      "sha256": "02944b6ec259fe6d6be11ef3fa1dc7a71c9ca73e72c0144d536fd46b2c69b88b",
+      "shape": [
+        4998,
+        32287
+      ]
+    }
+  },
+  "allowed_operations": [
+    "metadata_inspection",
+    "immediate_filtering",
+    "structural_validation"
+  ],
+  "allowed_response_role": "NONE_PENDING_REVIEW",
+  "organizer_clearance": {
+    "status": "NOT_PRESENT"
+  },
+  "forbidden_records_remaining": "NOT_ASSERTED_FULL_REVIEW_PENDING",
+  "filter_receipt": {
+    "path": "reports/t3_r56_readiness_20260920/PREPARATION_RECEIPT.json",
+    "sha256": "aa2dad01aafc142c52edd3a6fa3fa3e63dcfa1c13d8281fd93996b16d190f512"
+  },
+  "training": "NOT_RUN"
+}

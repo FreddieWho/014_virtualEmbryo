@@ -1,0 +1,22 @@
+[
+  {
+    "name": "official_rules.html",
+    "url": "https://virtualembryo.ai/challenge/rules"
+  },
+  {
+    "name": "signor_license.html",
+    "url": "https://signor.uniroma2.it/documentation/"
+  },
+  {
+    "name": "signor_pdgfrb.tsv",
+    "url": "https://signor.uniroma2.it/getData.php?id=P09619"
+  },
+  {
+    "name": "pdgf_article.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8667318/fullTextXML"
+  },
+  {
+    "name": "reactome_license.html",
+    "url": "https://reactome.org/license"
+  }
+]

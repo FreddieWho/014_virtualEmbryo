@@ -1,0 +1,5 @@
+source_id	upstream	downstream	pmid	mechanism	context_review	decision	license
+SIGNOR-107400	PDGFB	PDGFRB	11331882	binding	Ligand binding; independently checked PDGF-B/PDGFR-beta structural study PMC2895058; no embryonic response data	ALLOW_GENERIC_TOPOLOGY_ONLY	CC-BY-4.0
+SIGNOR-247979	PDGFRB	SRC	15489898	phosphorylation	Human lung adenocarcinoma cell detachment/anoikis; RTK signaling context, not embryonic cardiac knockout	ALLOW_GENERIC_TOPOLOGY_ONLY	CC-BY-4.0
+SIGNOR-235696	SRC	STAT1	14978237	phosphorylation	Human NCI-H292 epithelial cells; IFN-gamma/TPA signaling; different stimulus from PDGF	ALLOW_GENERIC_TOPOLOGY_ONLY	CC-BY-4.0
+SIGNOR-255237	STAT1	S100A10	12645529	transcriptional regulation	Human BEAS-2B and HeLa cells; p11 promoter GAS-site mutagenesis and STAT1 dominant negative; transcription, not protein-only activation	ALLOW_GENERIC_TOPOLOGY_ONLY	CC-BY-4.0

@@ -1,0 +1,41 @@
+{
+  "status": "CANDIDATES_READY",
+  "run": "artifacts/t3_next/T3-R5-SIGNOR-MINIMAL-20260920-v1",
+  "parent": "v0009",
+  "candidates": [
+    {
+      "version": "v0032",
+      "lane": "r5off",
+      "artifact": "submissions/candidates/T3_gata4/v0032_next_r5off/submission.h5ad",
+      "portal_name": "t3_gata4__r5off__v0032.h5ad",
+      "checks": "PASS"
+    },
+    {
+      "version": "v0033",
+      "lane": "r5on",
+      "artifact": "submissions/candidates/T3_gata4/v0033_next_r5on/submission.h5ad",
+      "portal_name": "t3_gata4__r5on__v0033.h5ad",
+      "checks": "PASS"
+    }
+  ],
+  "candidate_identity_registry": "submissions/INDEX.tsv",
+  "zip": "deliveries/r5sig__t3__upload__20260920.zip",
+  "server_status": "NOT_SUBMITTED",
+  "server_score": "NOT_RUN",
+  "scientific_status": "NOT_IDENTIFIABLE",
+  "blocks_submission": false,
+  "diagnostics": {
+    "edge_count": 1,
+    "permutation_mse": 6.865982170423233e-08,
+    "signal_rms": 0.00023105105477044647,
+    "coefficients": [
+      [
+        345,
+        346,
+        396,
+        0.11094652352658901
+      ]
+    ],
+    "signal_sigma": 16.809862696205677
+  }
+}

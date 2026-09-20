@@ -1,0 +1,26 @@
+[
+  {
+    "name": "pdgf_structure.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2895058/"
+  },
+  {
+    "name": "orthology_PDGFB.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/PDGFB?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_PDGFRB.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/PDGFRB?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_SRC.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/SRC?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_STAT1.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/STAT1?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  },
+  {
+    "name": "orthology_S100A10.json",
+    "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/S100A10?target_species=mus_musculus;type=orthologues;content-type=application/json"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "pdgf_structure.html",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2895058/",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/pdgf_structure.html",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 177350,
+      "sha256": "45b4701b1f6f44e99a690d4cd340a431081231d21e62458327a9ed8d8a6b6377",
+      "model_input": false
+    },
+    {
+      "name": "orthology_PDGFB.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/PDGFB?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_PDGFB.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1003,
+      "sha256": "f749089326999135839d970564b08d3c60a843974e8eced76cff3950a885dd65",
+      "model_input": false
+    },
+    {
+      "name": "orthology_PDGFRB.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/PDGFRB?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_PDGFRB.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 2791,
+      "sha256": "09517fee9b76578f575d31092a704ee674dac7440433281e167d8e79c4ef9bbe",
+      "model_input": false
+    },
+    {
+      "name": "orthology_SRC.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/SRC?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_SRC.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 1598,
+      "sha256": "6c1c8de0f2c6be8a7481c12127a64694555740d2c51485bc903433b88a0e92c3",
+      "model_input": false
+    },
+    {
+      "name": "orthology_STAT1.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/STAT1?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_STAT1.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 2034,
+      "sha256": "7dd6d86418269aaa9940df2d004e3d8b296996ea101a77130eec611d260c8182",
+      "model_input": false
+    },
+    {
+      "name": "orthology_S100A10.json",
+      "url": "https://rest.ensembl.org/homology/symbol/homo_sapiens/S100A10?target_species=mus_musculus;type=orthologues;content-type=application/json",
+      "path": "infra/external_data/quarantine/T3-R5-COMPLETION-20260920/orthology_S100A10.json",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 720,
+      "sha256": "cb496723f7e22cf350ffbb5e0dc0d768b8ed3337ad16b31a13dfc9cbaffd13d5",
+      "model_input": false
+    }
+  ]
+}
