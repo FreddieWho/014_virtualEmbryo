@@ -24,7 +24,7 @@
 - [x] G0-T2 六包回填——v0011=50.64（+0.11 新 board best）、v0012=50.26/v0013=50.32/v0014=50.26/v0015=50.28/v0016=50.25（空间族全负关闭）；selection 更新为 v0011；48 子项入库；本地/服务器方向反转已记
 - [x] G0-T1 七包回填——v0015=48.51/v0019=48.54（TIE 带内，v0004 留任）、v0018/v0020=48.48（TIE）、v0016=48.14/v0017=47.46/v0021=48.34（REJECT）；收缩 sweep 关闭（C 弱旋钮）；T1 proxy 方向存活唯一正对照；28 子项入库（2026-09-17）
 - [x] T3 D2 首轮构建——v0018（`a82b16e0…`，119 基因位移，contract PASS，恒等复现通过，本地盲无回归；心脏实占 20.75% 更正 52% 口径）；单包 `deliveries/g1t3r6__t3__upload__20260917.zip` 就绪（2026-09-17）
-- [ ] 用户统一提交 `deliveries/g1t3__t3__upload__20260917.zip`并回填余分——R9–R13 已回填（2026-09-17，D-20260917-G0T3R9R13-001）；R6–R8（v0018–v0020）同包已上传仍待分（INDEX 3 行 score_pending；单包 g1t3r6 作废，以统包为准）
+- [x] T3 统包余分回填——T3 R6–R8 分数回填完成：v0018=46.94（TIE）、v0019=46.95（exact TIE）、v0020=46.64（REJECT）；selection 保持 v0009/v0010=46.95。R6–R13 八候选均已评分，余分队列清零，后续轮次待决定。（2026-09-20，D-20260920-G0T3R6R8-001）
 - [x] 用户上传 `deliveries/g1t1d3__t1__upload__20260917.zip`（T1 v0022，首适用上传仲裁政策）并回填分数＋子项——服务器 **45.3**（-3.17，低于 floor，REJECT；分项 de 43.7/dir 55.9/mmd 47.9/vario 30.2）；registry/INDEX/子项/TRACKING/DECISIONS 全套回填（D-20260917-T1D3-002）
 - [x] T1-P0-1 开工门槛：reset brief §9–§12 重读＋contract E7.75 核对（D7 合法）——2026-09-17 完成，见 T1_TRACKING；CPU only
 - [x] T1-P0-2 剩余检索-评估＋综合仲裁——2026-09-17 完成（D-20260917-T1P02-001）：OPT-A/D3/D5 代码 ✅，OPT-B 代码未定位（按论文实现），D4 数据齐，D7 数据 blocked；出场序 D4→D2→D3→D1→D6/D5→D7
@@ -47,7 +47,7 @@
 - **暂缓分支**：
   - T1-P2 D2 调参挂起（用户特批，2026-09-17）：dz=20 加 patience/调参；触发条件：D3/D1 双败后或用户另行指示。当前 D2 状态：dz20 稳定（410 步无 NaN）但挂门（de 0.8113/dir 0.8652），v0022 未注册；复活时从 `scripts/g0/t1_d2_cellmnn.py --dz` 起步。
   - T1-D7 E7.75 对齐：CLOSED（2026-09-17）。官网实抓：E7.75 not released，不向任何任务分发，前提不存在；此前 PARKED 及下载触发条件一并作废。
-  - T3 30 轮统包余分：R6–R8（v0018/v0019/v0020）同包已上传待评分，R9–R13 已回填（D-20260917-G0T3R9R13-001）；待 3 分返回后定 D 次轮
+  - T3 后续轮次：R6–R13 已全部评分（2026-09-20）；selection 不变，下一轮待决定，无待回填分数。
   - T2 embryo_interp v0008 `j1_fgw_assignment`：HOLD_AS_COMPONENT（缺同靶 parent scorer 参照，见 LEADS L-001）
   - T2-S3 L2 spateo v0007/v0008 与 heart_extrap v0006/v0007：本地 REJECT，不可变保留不上传
   - B2-T3-A1 v0006/v0007 条目已移除：二者已评分 45.5/45.5 并列 board best 并晋级当前 selection，不再属于暂缓（原"score_pending"记录过时）
@@ -98,3 +98,4 @@
 - 2026-09-20：项目结构整理开工（方案 v2，用户批 A 全执行）——P1：AGENTS 路径修复＋维护规则、LANE_VERDICTS 31 行、generate_audit.py＋AUDIT.md、立牌不搬家、根 DECISIONS 补齐到 09-17。待办变化：当前执行分支切为结构整理 P1。
 - 2026-09-20：结构整理 P2 执行完——删 S1A v1–v6（留 v7，P0-LOCK intact）、outputs/t2_*、27 个 g0 重复副本（SHA 双验一致才删）、7 训练件、6 回报探针、v0002 孤儿副本；g0 12G→1.3G，outputs 5.2G→80K；门检查全过（INDEX 零 artifacts 引用、JSON 零 truthy、D2 豁免）；ENV_SNAPSHOT＋DELETION_MANIFEST（54 行）入库；quarantine 保留注记。待办变化：当前执行分支切为结构整理 P3。
 - 2026-09-20：结构整理 P3 执行完——AST 逆依赖确认 24 死脚本，但 18 个用 parents[1] 定位根，搬家必炸，改立牌（scripts/ARCHIVED.md）不搬家；t3_s1_prior 有 incoming 剔除；包装/契约入口豁免。待办变化：整理收工，当前执行分支切回 T1-P2 待定。
+- 2026-09-20：T3 R6–R8 分数回填完成：v0018=46.94（TIE）、v0019=46.95（exact TIE）、v0020=46.64（REJECT）；selection 保持 v0009/v0010=46.95。R6–R13 八候选均已评分，余分队列清零，后续轮次待决定。15 子项入库，LANE_VERDICTS 三行转 SHIPPED（已评分无增益），审计入口重生成；T1-P2 待定不变。

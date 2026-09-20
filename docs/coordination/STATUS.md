@@ -6,7 +6,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-09-04"
+updated_at: "2026-09-20"
 updated_by: coordinator
 
 policy:
@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "B4-T3-R2 双 lane 服务器 46.45/46.47，均低于 floor 46.8 → T3 标 ARCHITECTURE_RESET_REQUIRED，Batch 4 内不再追加手工路线；selection 保持 v0009/v0010（46.95）；科学 gate 仍 CLOSED_AS_RESEARCH_COMPONENT"
+    next_action: "G1-T3 R6–R13 全部已评分，余分队列清零；R6/R7 TIE、R8 REJECT，selection 保持 v0009/v0010；下一轮待用户决定，科学 gate 不变。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

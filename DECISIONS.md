@@ -44,3 +44,5 @@
 ## 最近一条
 
 D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一悬（D2 调参＋D5c 待定夺）；GPU 保持关机。
+
+- **D-20260920-G0T3R6R8-001｜T3 R6–R8 评分闭环**：两 TIE、一 REJECT，原 selection 留任；统包八候选全部已评分，后续轮次待决定。详见 docs/coordination/DECISIONS.md。

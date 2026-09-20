@@ -1,5 +1,7 @@
 # Virtual Embryo 项目状态
 
+最新事件（2026-09-20）：T3 R6–R13 统包八候选已全部评分，无待回填；本轮两 TIE、一 REJECT，当前 selection 不变。下一轮待决定。分数见 `reports/SERVER_SCORE_REGISTRY.md`；其余历史摘要以最新 TODO/任务追踪为准。
+
 更新时间：2026-09-04（晚）
 
 ## 第一部分：给人读的进展

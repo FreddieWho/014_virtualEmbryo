@@ -246,3 +246,18 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-17	T1:val	v0022	g0_t1_d3_otcfm	t1_val__d3otcfm__v0022.h5ad	2026-09-17	45.3	de_direction	55.9
 2026-09-17	T1:val	v0022	g0_t1_d3_otcfm	t1_val__d3otcfm__v0022.h5ad	2026-09-17	45.3	mmd_u	47.9
 2026-09-17	T1:val	v0022	g0_t1_d3_otcfm	t1_val__d3otcfm__v0022.h5ad	2026-09-17	45.3	variogram	30.2
+2026-09-20	T3:gata4	v0018	g0_t3_r6_cipher	t3_gata4__r6cipher__v0018.h5ad	not supplied	46.94	de_score	39.2
+2026-09-20	T3:gata4	v0018	g0_t3_r6_cipher	t3_gata4__r6cipher__v0018.h5ad	not supplied	46.94	de_direction	49.7
+2026-09-20	T3:gata4	v0018	g0_t3_r6_cipher	t3_gata4__r6cipher__v0018.h5ad	not supplied	46.94	severity_slope	50.0
+2026-09-20	T3:gata4	v0018	g0_t3_r6_cipher	t3_gata4__r6cipher__v0018.h5ad	not supplied	46.94	mmd_u	51.5
+2026-09-20	T3:gata4	v0018	g0_t3_r6_cipher	t3_gata4__r6cipher__v0018.h5ad	not supplied	46.94	variogram	50.8
+2026-09-20	T3:gata4	v0019	g0_t3_r7	t3_gata4__r7split__v0019.h5ad	not supplied	46.95	de_score	39.2
+2026-09-20	T3:gata4	v0019	g0_t3_r7	t3_gata4__r7split__v0019.h5ad	not supplied	46.95	de_direction	49.7
+2026-09-20	T3:gata4	v0019	g0_t3_r7	t3_gata4__r7split__v0019.h5ad	not supplied	46.95	severity_slope	50.0
+2026-09-20	T3:gata4	v0019	g0_t3_r7	t3_gata4__r7split__v0019.h5ad	not supplied	46.95	mmd_u	51.5
+2026-09-20	T3:gata4	v0019	g0_t3_r7	t3_gata4__r7split__v0019.h5ad	not supplied	46.95	variogram	50.9
+2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	de_score	39.2
+2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	de_direction	50.3
+2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	severity_slope	50.0
+2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	mmd_u	51.5
+2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	variogram	45.2

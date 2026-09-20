@@ -26,9 +26,9 @@ G1-T3-R2	T3:gata4	SHIPPED	non-regression PASS; blindness x2	v0014	46.95 scored (
 G1-T3-R3	T3:gata4	SHIPPED	non-regression PASS; blindness x3	v0015	46.95 scored (TIE best)	artifacts/g0/G1-T3-R3-LINEAGEDOSE-20260916-v1/RESULT.md	D-20260916-G0T3-001
 G1-T3-R4	T3:gata4	SHIPPED	non-regression PASS; blindness x4	v0016	46.88 scored	artifacts/g0/G1-T3-R4-COMBO-20260916-v1/RESULT.md	D-20260916-G0T3-001
 G1-T3-R5	T3:gata4	SHIPPED	non-regression PASS; blindness x5; propagation-dose family closed	v0017	46.84 scored	artifacts/g0/G1-T3-R5-AMP2-20260916-v1/RESULT.md	D-20260916-G0T3-001
-G1-T3-R6	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0018	score_pending	artifacts/g0/G1-T3-R6-CIPHER-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
-G1-T3-R7	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0019	score_pending	artifacts/g0/G1-T3-R7-SPLIT-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
-G1-T3-R8	T3:gata4	PENDING_SERVER	local NOT promoted; mechanism bet	v0020	score_pending	artifacts/g0/G1-T3-R8-KNK-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
+G1-T3-R6	T3:gata4	SHIPPED	server TIE (-0.01); incumbent stays	v0018	46.94 scored (TIE (-0.01))	artifacts/g0/G1-T3-R6-CIPHER-20260917-v1/RESULT.md;reports/SERVER_SCORE_REGISTRY.md	D-20260920-G0T3R6R8-001
+G1-T3-R7	T3:gata4	SHIPPED	server exact TIE (0.00); incumbent stays	v0019	46.95 scored (exact TIE (0.00))	artifacts/g0/G1-T3-R7-SPLIT-20260917-v1/RESULT.md;reports/SERVER_SCORE_REGISTRY.md	D-20260920-G0T3R6R8-001
+G1-T3-R8	T3:gata4	SHIPPED	server REJECT (-0.31); incumbent stays	v0020	46.64 scored (REJECT (-0.31))	artifacts/g0/G1-T3-R8-KNK-20260917-v1/RESULT.md;reports/SERVER_SCORE_REGISTRY.md	D-20260920-G0T3R6R8-001
 G1-T3-R9	T3:gata4	SHIPPED	local NOT promoted; mechanism bet	v0021	46.88 scored (TIE)	artifacts/g0/G1-T3-R9-HOP2-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
 G1-T3-R10	T3:gata4	SHIPPED	local NOT promoted; mechanism bet	v0022	46.93 scored (TIE)	artifacts/g0/G1-T3-R10-GRAPH-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001
 G1-T3-R11	T3:gata4	SHIPPED	local NOT promoted; exact TIE best	v0023	46.95 scored (exact TIE, selection stays)	artifacts/g0/G1-T3-R11-SIGNMAX-20260917-v1/RESULT.md	D-20260917-G0T3R9R13-001

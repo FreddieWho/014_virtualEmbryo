@@ -711,3 +711,35 @@ Consistency and decision:
 - Proxy lesson (honest revision): first T1-proxy false positive. Local de 0.9623 (best-ever local) transferred as server de 43.7 (≈par with best 43.8) — de decoupled via variogram collapse. BUT the local distribution-side flag warned correctly: field energy 0.486 vs baseline 0.434. Refined doctrine: local de/dir alone insufficient; distribution-side local metrics (energy/variogram) carry veto signal. The G0 ranking claim stands for the lanes it covered; v0022 bounds its scope.
 - Selection stays v0004 (48.47). Server Total stays **153.7** (T1 best unchanged). D3 remains CLOSED; upload-arbitration policy (D-20260917-T1UPLOAD-001) worked as designed — arbitration returned REJECT, no promotion claimed.
 - All scored artifacts stay immutable; user-provided values registered as supplied.
+
+### G1-T3-R6..R8 — remaining unified-pack scores (TIE / TIE / REJECT)
+
+| Record date | 2026-09-20 |
+|---|---|
+| Board/phase | T3:gata4 |
+| Source | User-provided server results in this score-return message; submission IDs and submission timestamps not supplied |
+| Package | `deliveries/g1t3__t3__upload__20260917.zip`; member identity mapped via UPLOAD_MANIFEST.tsv and INDEX SHA256 |
+
+The supplied R6 label omitted `.h5ad`; mapped to the exact package member `t3_gata4__r6cipher__v0018.h5ad`. No artifact was renamed.
+
+| Candidate / portal file | Submission ID | Submission file / SHA256 | Server score | Decision vs incumbent 46.95 |
+|---|---|---|---:|---|
+| `G1-T3-R6 / t3_gata4__r6cipher__v0018.h5ad` | not supplied | `submissions/candidates/T3_gata4/v0018_g0_t3_r6_cipher/submission.h5ad` / `a82b16e008eb9158097b356322db455604117fee0edd7fbd13112768765aab3f` | **46.94** | TIE (-0.01); no promotion |
+| `G1-T3-R7 / t3_gata4__r7split__v0019.h5ad` | not supplied | `submissions/candidates/T3_gata4/v0019_g0_t3_r7_split/submission.h5ad` / `4b6c5b4541219d3726d8f85100aedd16b6e5cb02a4e2bb4c7c5a4a2c0b0e133d` | **46.95** | exact TIE (0.00); no promotion |
+| `G1-T3-R8 / t3_gata4__r8knk__v0020.h5ad` | not supplied | `submissions/candidates/T3_gata4/v0020_g0_t3_r8_knk/submission.h5ad` / `d8b50dd9721ca3a9a821401d9603d7ce1ecec4408a73f03bbbe49246aeb2f717` | **46.64** | REJECT (-0.31); no promotion |
+
+Per-metric skills (user values preserved; also registered in SERVER_SUBMETRIC_REGISTRY.tsv):
+
+| Lane | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---|---|---|---|---|
+| v0018 r6cipher | 39.2 | 49.7 | 50.0 | 51.5 | 50.8 |
+| v0019 r7split | 39.2 | 49.7 | 50.0 | 51.5 | 50.9 |
+| v0020 r8knk | 39.2 | 50.3 | 50.0 | 51.5 | 45.2 |
+
+Decision and limits:
+- R6 is within the standing ±0.1 TIE band; R7 is an exact tie; R8 is rejected. Selection stays v0009/v0010 (46.95); no late-tie co-promotion.
+- All three de_score values remain 39.2. R8 improves de_direction by 0.6 relative to R7 but loses 5.7 variogram points; its board score is lower by 0.31. These are observed score differences, not causal-mechanism evidence.
+- All eight candidates R6–R13 in this package now have registered scores. This closes the score-return queue, not a claim that all planned 30 research rounds were executed. Further rounds require a separate decision; no automatic run or upload.
+- No new server Total was supplied; the last confirmed Total remains 153.7. Published rounded skills are stored as supplied rather than used to replace the reported board scores.
+- Canonical artifact SHA256 checks passed for these three files; scored artifacts remain immutable. Scientific gate unchanged; blocks_submission: false.
+- Decision: D-20260920-G0T3R6R8-001.

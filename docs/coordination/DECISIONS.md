@@ -720,3 +720,11 @@ reuse_promoted
 - evidence: "run 内 RESULT_train.json（680 步无 NaN）＋BUILD.json（基线 0.26469780398582543 精确复现）＋RESULT.md；重读代码未发现新 bug（接线顺序/采样器/数据通路一致）。"
 - boundary: "扩散线两连败但死因不同（D5 测试无效，D5b 欠拟合发散）；‘扩散证伪’仍不成立，‘扩散可 promotion’同样无证据。D2 调参仍悬。blocks_submission: false。"
 - review_trigger: "D5c 立项；或 D2 调参启动；或 T1 封存。"
+
+### D-20260920-G0T3R6R8-001 — T3 R6–R8 评分回填，统包评分闭环
+
+- scope: G1-T3-R6/R7/R8；仅登记和评分决策。
+- decision: "T3 R6–R8 分数回填完成：v0018=46.94（TIE）、v0019=46.95（exact TIE）、v0020=46.64（REJECT）；selection 保持 v0009/v0010=46.95。R6–R13 八候选均已评分，余分队列清零，后续轮次待决定。R8 淘汰为晋级候选；R6/R7 不替换 incumbent。"
+- evidence: "用户本轮提供的三个 board 分数和 15 子项，原值见 reports/SERVER_SCORE_REGISTRY.md 的 G1-T3-R6..R8 节及 reports/SERVER_SUBMETRIC_REGISTRY.tsv；成员映射和本地 SHA256 核对通过。submission ID、上传时间和新 Total 未提供，不补造。"
+- boundary: "不把评分闭环写成 30 轮全部执行，不新增训练或上传；科学 gate 不变，blocks_submission: false。"
+- review_trigger: "用户决定下一轮路线。"
