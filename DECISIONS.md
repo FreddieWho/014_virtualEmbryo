@@ -66,3 +66,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260921-T3REVIEW-001：T3全路线复核，补充R6零值/平均响应及R5差分证据，整合四项后继建议；未执行新分支，selection不变。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260921-T3REPAIR-001：T3首批修复完成，六候选待评分；R6图优势未成立，R3/R4 WT评估通过；R4旧未提交对撤回并以校准一致的v2替换。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260921-T1NEXT-001：T1六路线方案准备完成，全部未执行；订正D5b旧滞后状态，selection不变。见 [协调决策](docs/coordination/DECISIONS.md)。

@@ -1,18 +1,17 @@
 # T1 任务追踪：single-cell temporal
 
-更新时间：2026-09-02
+更新时间：2026-09-21
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件只做简短解释和路线选择。
 
-## 当前状态
+## 当前状态（2026-09-21）
 
-- 当前最高服务器分数：**48.5**
-- 当前最佳：`candidate/T1_val/v0004_strict_pseudobulk_shift`
-- 当前状态：`active`；`v0002` 已评分 45.9（-1.1）淘汰；v0004 取得 48.5，B1-A3 两条均低于该 best，v0006 仅为 B1-A3 lane winner；T1-S2 moscot 双 lane（v0007=44.9、v0008=44.8）服务器仲裁失败，均淘汰
-- batch3 进展：`T1-PRE-HARMONIZE-20260902-v1` gate PASS；`T1-S2-MOSCOT-DECODER-20260902-v1` 已完成服务器探针并被拒绝为改进（结构化外推未胜 strict shift），链关闭
-- 任务阻塞：无（full-panel scorer 可运行性已于 P0 解决并在 T1-PRE 实测 323s 跑通）；科学 promotion 阻塞不影响提交
+- selection保持v0004 strict pseudobulk shift；v0019最高观测值按原TIE规则未晋级。精确分数以SERVER_SCORE_REGISTRY为准。
+- D1/D3/D4/D6及D5b已完成并未晋级；D2稳定版未过门，原调参分支保留为待决定，未自动启动。D5b最终RESULT明确失败、未生成v0026，订正本页旧尾部“训练完成、本地建门中”的滞后摘要。
+- 新六路线方案已准备：`reports/T1_NEXT_ROUTES_20260921.md`。建议R2残差decoder→R1分布形状→R5依赖结构→R3稳定动力学→R4模块运输→R6早期时间数据；全部PROPOSED / NOT_RUN。
+- 官方E7.75未发布；官方RNA仅有celltype元数据，不能宣称独立胚胎留出。无新候选，无训练，无上传。
 
-## Top 3 路线
+## 历史 Top 3 路线（2026-09-02，非当前重新排名）
 
 三条路线均已有服务器分数；B1-A3 两条均高于旧 baseline。
 
@@ -141,3 +140,12 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 2026-09-17（T1-P2 D5b 立项开工，D-20260917-T1D5B-001）：审计修复三件套＋坍缩 veto＋v0026；用户令 CPU 先行，GPU 保持关机；冒烟过（stage_sensitivity 0.745，条件活的）。
 
 2026-09-17（T1-P2 D5b 训练完成，本地建门中）：CPU 实跑 20 epochs/680 步/~12 分钟，无 NaN，checkpoint SHA 自洽，PCA 与 D5 同值；本地 --build-only 建回报门→过门建 v0026，后台运行中。
+
+## 2026-09-21 新六路线提案（未执行）
+
+- 2026-09-21 T1-NEXT-R1：零率与阳性分位数的阶段外推，分布形状对照；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。
+- 2026-09-21 T1-NEXT-R2：同一动力学下保留/丢弃逐细胞全基因残差的decoder比较；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。
+- 2026-09-21 T1-NEXT-R3：有界对角/低秩仿射动力学，替换病态det目标；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。
+- 2026-09-21 T1-NEXT-R4：模块运输代价与正交残差保留，全基因最终验证；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。
+- 2026-09-21 T1-NEXT-R5：固定基因边际，独立检验阶段依赖演化；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。
+- 2026-09-21 T1-NEXT-R6：T1合规早期多阶段表示与来源滚动留出，数据审查未完成；PROPOSED / NOT_RUN。证据 `reports/T1_NEXT_ROUTES_20260921.md`。

@@ -803,3 +803,11 @@ reuse_promoted
 - correction: R4 v1评估/推断校准不一致，未提交v0038/v0039撤回保留；v2完整重跑生成v0040/v0041。原失败记录及旧评分不改。
 - evidence: reports/t3_repairs_20260921/REPORT.md、VALIDATION.json、R4_WITHDRAWAL.json；候选身份SHA见submissions/INDEX.tsv；上传包deliveries/r634fix__t3__upload__20260921.zip及receipt。
 - boundary: R6图未胜过平均响应/平均倍率/置乱图，跨样本不稳定；R3/R4的WT评价不是KO验证。新候选未提交/未评分，selection v0009/v0010保持；blocks_submission: false。
+
+## D-20260921-T1NEXT-001
+
+- authorization: 用户要求按T3方案形式准备T1六路线方案。
+- decision: 发布T1-NEXT-R1–R6，分离边际、残差、稳定动力学、模块运输、依赖结构与早期时间数据；建议实施顺序R2→R1→R5→R3→R4→R6。全部PROPOSED / NOT_RUN，未启动旧D2调参或D5b重跑。
+- evidence: reports/T1_NEXT_ROUTES_20260921.md；SERVER_SCORE_REGISTRY、INDEX、D系列receipt；官方RNA metadata实读仅celltype且无layers；文献原站链接见方案。
+- status_correction: D5b最终RESULT为FAIL且无v0026，更新旧摘要；v0004仍为selection，v0019按原TIE规则不晋级。官方E7.75未发布，外部T1许可不继承T3。
+- boundary: 无新模型/候选/评分/下载；两点细胞留出不是独立时间外推，未证明E10.5或E12.5泛化；blocks_submission: false。

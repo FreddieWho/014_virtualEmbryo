@@ -61,14 +61,14 @@ leaderboard:
 
 tasks:
   T1:
-    status: active
+    status: proposed_not_run
     dependencies: []
     owner: coordinator
     branch: master
     worktree: current
     current_best: "candidate/T1_val/v0004_strict_pseudobulk_shift"
     current_best_score: 48.47
-    next_action: "B4-T1-R1 四 lane 服务器 47.58/47.77/47.85/46.90，均低于 best 48.47（排序 L3>L2>L1>L4）；v0004 留任，保守族晋级路线关闭；Wave 2 或封板待授权"
+    next_action: "六路线方案已发布，建议R2→R1→R5→R3→R4→R6；全部NOT_RUN。D5b已失败无候选，D2旧调参未重开。见 reports/T1_NEXT_ROUTES_20260921.md；selection v0004保持。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -557,3 +557,7 @@ coordinator owns scripts/t3_next/common.py、repair.py、repair_ops.py、configs
 ### 2026-09-21 修复首批收口
 
 R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。 交付 `deliveries/r634fix__t3__upload__20260921.zip`；23项定向测试通过，六候选SHA/配置快照/坐标和组内差异核验通过。修复lease释放；科学限制blocks_submission: false。见 `reports/t3_repairs_20260921/REPORT.md`。
+
+### 2026-09-21 T1新六路线提案
+
+结合全部已登记技术家族及D5b最终失败receipt，发布 `reports/T1_NEXT_ROUTES_20260921.md`；仅metadata检查与方法文献检索，没有训练/候选/下载。T1现行选择不变；T3六个修复候选仍待上传回分，不受本次提案影响。
