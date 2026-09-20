@@ -12,7 +12,7 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
 
 ## Lane verdicts (39 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 25
-- FAIL: 7
+- FAIL: 8
 - VOID: 1
 - PARKED: 1
 - PENDING_SERVER: 1
@@ -26,8 +26,9 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - G1-T1-D6: de 0.8868=tie (strict fail); dir 0.7921; var 0.26
   - T3-NEXT-R3: FAILED_DISASTER
   - T3-NEXT-R4: FAILED_MAPPING_GATE
+  - T3-NEXT-R6: FAILED_DISASTER after gene holdout PASS; both outputs exceed negative clip bound
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：R5 v0032/v0033待上传回分；R6 READY_FOR_R6_TRAINING，26扰动/5454细胞及三件套就绪，尚未训练。R3/R4修复待办保留。
+- **当前执行分支**：R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033仍待回分；best不变。 R6非负输出修复待新设计；R3/R4修复保留。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

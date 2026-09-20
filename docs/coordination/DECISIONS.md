@@ -772,3 +772,11 @@ reuse_promoted
 - execution: GSE261783 OP2选定26条件重新审查通过；Chd4/Smarca4/Yy1经实际成人实验背景复核恢复。5454×500标准化矩阵、27×80 WT特征和27×27图已准备，使用原净化WT全部68910细胞。R5既有两候选身份复核通过。
 - evidence: reports/t3_r56_launch_20260921/REPORT.md、SOURCE_REVIEW.json、READINESS.json、GRAPH_PROVENANCE.json、VALIDATION.json；19项针对性测试通过。
 - boundary: R6仅READY_FOR_R6_TRAINING，预测器训练/gene holdout/目标推断均NOT_RUN；无新候选。R5 v0032/v0033未提交/未评分。许可不跨task自动传播；成人→胚胎泛化未知，blocks_submission: false。
+
+## D-20260921-T3R6RUN-001
+
+- authorization: 用户“路线六开始”。
+- execution: 原设计完成100步留出训练、26来源基因最终训练和Gata4推断；图模型通过整基因留出门槛，两个输出均失败负值门槛。
+- decision: 本次run收口FAILED_DISASTER，0候选，不自动放宽1%门槛或修改设计。R6非负输出修复进入TODO；selection保持。
+- evidence: reports/t3_r6_execution_20260921/REPORT.md、DIAGNOSTICS.json；artifacts/t3_next/T3-R6-OP2-20260921-v1/RESULT.json及两个权重。
+- boundary: 未提交/未评分；源域留出通过不证明成人→胚胎泛化，完整Gata4真值评分NOT_RUN。blocks_submission: false。

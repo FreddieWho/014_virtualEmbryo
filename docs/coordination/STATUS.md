@@ -104,7 +104,7 @@ tasks:
     current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
     current_best_score: 46.95
     active_atom: null
-    next_action: "R5 v0032/v0033待上传回分；R6新规则下来源审查及三件套准备完成，READY_FOR_R6_TRAINING，下一步执行START.md。预测器训练NOT_RUN；R3/R4修复保留。见 reports/t3_r56_launch_20260921/REPORT.md。"
+    next_action: "R6首次执行FAILED_DISASTER，0候选；下一版需修复非负输出，尚未执行。R5 v0032/v0033待上传回分，R3/R4修复保留。见 reports/t3_r6_execution_20260921/REPORT.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -541,3 +541,7 @@ coordinator 只在候选、检查、上传、评分、决策、阻塞或共享�
 ### 2026-09-20 R5解阻、R6规则归因订正
 
 R5最小输入已就绪并实际执行：4条SIGNOR源边/1条LRT，WT拟合，v0032/v0033（父v0009）contract PASS，PENDING_SERVER但未提交/未评分。交付 `deliveries/r5sig__t3__upload__20260920.zip`。仅该通用非目标拓扑获项目范围许可，不授权R6。R6仍隔离；shape-only和书面确认是内部严格解释，非官网统一条文。证据 `reports/t3_r5_completion_20260920/REPORT.md`、`R6_RULE_EXPLANATION.md`。selection不变，blocks_submission: false。
+
+### 2026-09-21 R6首次执行收口
+
+R6已完成整基因留出及最终训练/目标推断；图模型留出MSE优于两个对照，但r6ridge/r6graph负值33.61%/38.72%均超过1%，FAILED_DISASTER，0候选，未提交/未评分。R5 v0032/v0033仍待回分；best不变。 证据 `reports/t3_r6_execution_20260921/REPORT.md`；blocks_submission: false。

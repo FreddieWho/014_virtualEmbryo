@@ -1,0 +1,32 @@
+{
+  "method": "Final GCN checkpoint inference; deterministic final ridge refit only. No GCN retraining or parameter change.",
+  "source_manifest_sha256": "5663e0d55d347014906c39a7da844f4ec63387255d056b82537ffc38c5e90e38",
+  "checkpoint_sha256": "a5b2ee90590ade653945b5d55a2e94d8f7318a05f3e7fd018f57f3c8959b309a",
+  "parent_sha256": "c6be65ec7d8c8a4b94bce936ff0cad985ac26f78c77ea3e4f68643f07076b088",
+  "threshold": 0.01,
+  "lanes": {
+    "r6ridge": {
+      "negative_clip_fraction": 0.3361001476708283,
+      "negative_entries": 1251805,
+      "total_entries": 3724500,
+      "minimum_before_clip": -0.37784716486930847,
+      "residual_rms": 0.04255656152963638,
+      "passes": false
+    },
+    "r6graph": {
+      "negative_clip_fraction": 0.3872039199892603,
+      "negative_entries": 1442141,
+      "total_entries": 3724500,
+      "minimum_before_clip": -0.35371607542037964,
+      "residual_rms": 0.04274776205420494,
+      "passes": false
+    }
+  },
+  "evidence_sha256": {
+    "RESULT.json": "28d0e0a050f95a665766b7968b94971f262f8c1caab807c5237cd6e0c791cc39",
+    "GENE_HOLDOUT.json": "43522600beee4ef9ba3d53ddd847d974acd728163b758ad286a9390f2e4e189a",
+    "INPUT_LOCK.json": "7e4cf92e4f3d21a03067cf18d2980a1bb650c8ab9b2f4336d711e3e2a30ef514",
+    "graph_holdout.pt": "690efa2f8d3669c279563f4d62a8ac30832a00372bbaa37e46c5faf431c6d786",
+    "graph_final.pt": "a5b2ee90590ade653945b5d55a2e94d8f7318a05f3e7fd018f57f3c8959b309a"
+  }
+}
