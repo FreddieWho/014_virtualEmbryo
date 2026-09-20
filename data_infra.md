@@ -87,3 +87,7 @@
 ## 2026-09-20：R5最小来源已获项目范围许可
 
 SIGNOR 4.0（CC-BY4.0）缓存及原始论文/同源映射元数据已入索引。仅 `infra/external_data/sanitized/T3-R5-SIGNOR-MINIMAL-20260920/edges.tsv` 的1条LRT允许T3:gata4按通路结构使用；4条源边逐项审查，5节点一对一映射，外部方向/幅度/表达数值未进入模型。原始全网络仍隔离，不授予R6或其他任务许可。源证据与permit见 `reports/t3_r5_completion_20260920/SOURCE_MANIFEST.json`、`FILTER_RECEIPT.json`。R5已实际运行并生成两候选（未提交/未评分）。
+
+## 2026-09-21：R6正式开工输入
+
+按新生效T3政策完成26条件审查。GSE261783本次选中5454细胞/26扰动/220NTC；恢复Chd4/Smarca4/Yy1基于实际成人来源背景的重新审查，不是自动恢复或全基因全场景许可。新派生包 `infra/external_data/sanitized/T3-R6-OP2-20260921/` 含5454×500 lognorm表达、27×80 WT-only特征及27×27邻接矩阵。来源permit与哈希见 `reports/t3_r56_launch_20260921/SOURCE_MANIFEST.json`；旧5454/4998隔离件均保留，彼此不是独立新增样本。仅T3:gata4范围获准，其他task需独立审查；R6预测器训练NOT_RUN。

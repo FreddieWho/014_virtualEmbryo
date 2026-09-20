@@ -1,5 +1,6 @@
 # 外部数据防火墙规范
 
+当前T3准入解释以 `docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md` 为准：取消shape-only及统一书面确认要求，保留按来源/条件审查与真实边界疑问处理；仅替代旧快照中相应T3额外解释，其他任务约束不变。
 ## 1. 目录
 
 ```text

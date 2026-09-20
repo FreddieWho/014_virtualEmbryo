@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PREPARATION_AND_SCOPED_CODE_TESTS",
+  "test_command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=4 python -m pytest tests/t3_next -q",
+  "tests_passed": 19,
+  "role_gate_tests": 7,
+  "r6_ready": true,
+  "r6_predictor_training": "NOT_RUN",
+  "source_metadata_check": {
+    "stage": "8_weeks_ex_vivo",
+    "treatment": "Unstimulated"
+  },
+  "r5_candidate_sha": "PASS"
+}

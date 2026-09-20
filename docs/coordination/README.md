@@ -1,5 +1,6 @@
 # T1/T2/T3 并行推进与交付系统
 
+当前T3准入解释以 `docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md` 为准：取消shape-only及统一书面确认要求，保留按来源/条件审查与真实边界疑问处理；仅替代旧快照中相应T3额外解释，其他任务约束不变。
 跨任务数据资源入口：[`data_infra.md`](../../data_infra.md)（按来源查找；各 task 的使用许可独立）。
 
 这是本项目的人类和 agent 共同入口。根目录 `STATUS.md` 是快速总览；三个任务追踪文档记录路线变更；本目录的 `STATUS.md` 保留机器可读的并行状态。

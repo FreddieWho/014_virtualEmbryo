@@ -1,0 +1,15 @@
+{
+  "status": "CANDIDATES_READY_AWAITING_SERVER",
+  "versions": [
+    "v0032",
+    "v0033"
+  ],
+  "parent": "v0009",
+  "identity_registry": "submissions/INDEX.tsv",
+  "artifact_sha_check": "PASS",
+  "contract": "PASS existing receipt",
+  "source_manifest": "reports/t3_r5_completion_20260920/SOURCE_MANIFEST.json",
+  "zip": "deliveries/r5sig__t3__upload__20260920.zip",
+  "server_score": "NOT_SUPPLIED",
+  "rerun": "NOT_RUN_NOT_NEEDED"
+}

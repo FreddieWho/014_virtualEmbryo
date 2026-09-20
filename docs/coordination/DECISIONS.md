@@ -764,3 +764,11 @@ reuse_promoted
 - evidence: reports/SERVER_SCORE_REGISTRY.md#t3-next-r1r2-score-return-20260920；submissions/INDEX.tsv四个SHA实核一致；submission ID/time未提供，不伪造。
 - boundary: 观察到自适应优于随机不等于优于基线或统计显著；无新模型训练。R5 v0032/v0033仍未提交/未评分。blocks_submission: false。
 - rule_review: reports/T3_INTERNAL_RULE_REVIEW_20260920.md建议取消shape-only合规硬限制、统一书面确认和以通路关联替代phenocopy判定；本次只评审，现行规则/代码/数据许可未修改。
+
+## D-20260921-T3POLICY-LAUNCH-001
+
+- authorization: 用户要求按评审修改内部规则并准备开启R5/R6。
+- decision: 生效政策 `docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md` 替代旧shape-only及统一书面确认硬限制；保留按来源/条件审查、真实疑问隔离、许可和哈希。R6代码改用hash绑定ALLOWED review及condition allowlist；旧快照和permit不追改。
+- execution: GSE261783 OP2选定26条件重新审查通过；Chd4/Smarca4/Yy1经实际成人实验背景复核恢复。5454×500标准化矩阵、27×80 WT特征和27×27图已准备，使用原净化WT全部68910细胞。R5既有两候选身份复核通过。
+- evidence: reports/t3_r56_launch_20260921/REPORT.md、SOURCE_REVIEW.json、READINESS.json、GRAPH_PROVENANCE.json、VALIDATION.json；19项针对性测试通过。
+- boundary: R6仅READY_FOR_R6_TRAINING，预测器训练/gene holdout/目标推断均NOT_RUN；无新候选。R5 v0032/v0033未提交/未评分。许可不跨task自动传播；成人→胚胎泛化未知，blocks_submission: false。

@@ -1,0 +1,21 @@
+{
+  "task": "T3:gata4",
+  "forbidden_records_remaining": 0,
+  "scope": "selected 5454 cells, 26 perturbations plus explicit controls; not entire source",
+  "source_review": {
+    "path": "reports/t3_r56_launch_20260921/SOURCE_REVIEW.json",
+    "sha256": "7c80f2ef5bb7725f318d3b6377546a8c71db9390df04cfb3c6784437b7016bea"
+  },
+  "raw_source": {
+    "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/filtered/GSE261783_OP2_resting_provisional_raw.h5ad",
+    "sha256": "6e9f22292c420abf40ce3dd1925a5fdde3b7a986e516e330064f668020a9265d"
+  },
+  "expression": {
+    "path": "infra/external_data/sanitized/T3-R6-OP2-20260921/expression.h5ad",
+    "sha256": "8ddba6c0891a2d74fb2ea2193d5118a5e1eaeb20e0029a024a660a43c4a12487"
+  },
+  "graph_provenance": {
+    "path": "reports/t3_r56_launch_20260921/GRAPH_PROVENANCE.json",
+    "sha256": "245d230bc10979928b44658a363beea46ab435e8e118fde5ee4c1ae59c0970f9"
+  }
+}

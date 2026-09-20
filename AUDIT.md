@@ -14,7 +14,7 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
 - SHIPPED: 25
 - FAIL: 7
 - VOID: 1
-- PARKED: 2
+- PARKED: 1
 - PENDING_SERVER: 1
 - GATE_ONLY: 3
 - Closed lanes (one-line cause):
@@ -28,6 +28,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-NEXT-R4: FAILED_MAPPING_GATE
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T3 R1/R2回分登记完成；R5最小SIGNOR链已跑通，v0032/v0033待上传回分；R3/R4修复待办保留；R6规则评审建议修改额外限制（未生效），来源仍隔离。GPU保持关机。
+- **当前执行分支**：R5 v0032/v0033待上传回分；R6 READY_FOR_R6_TRAINING，26扰动/5454细胞及三件套就绪，尚未训练。R3/R4修复待办保留。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

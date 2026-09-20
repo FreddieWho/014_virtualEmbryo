@@ -4,28 +4,44 @@ import json
 from pathlib import Path
 
 
+def _bound_json(record, root):
+    path = Path(root) / record.get('path', '')
+    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != record.get('sha256'):
+        raise ValueError('review/policy evidence missing or hash mismatch')
+    return json.loads(path.read_text())
+
+
 def require_response_role(manifest, root, role):
+    """Task/source-scoped review, without a universal organizer-letter gate.
+
+    An unresolved source must first get a new resolved review; setting ALLOWED
+    on the manifest alone never overrides EXCLUDED/NEEDS_CLARIFICATION evidence.
+    """
     if role not in {'RESPONSE_SHAPE_ONLY', 'SIGNED_RESPONSE'}:
         raise ValueError('unknown response role')
     if manifest.get('allowed_response_role') != role:
         raise ValueError('source permit does not authorize ' + role)
-    record = manifest.get('organizer_clearance', {})
-    if record.get('status') != 'WRITTEN_CONFIRMATION_PRESENT':
-        raise ValueError('written organizer confirmation missing')
-    path = Path(root) / record.get('path', '')
-    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != record.get('sha256'):
-        raise ValueError('organizer confirmation missing or hash mismatch')
-    scope = json.loads(path.read_text())
-    if (scope.get('task') != manifest.get('task')
-            or scope.get('source_reference') != manifest.get('source_reference')
-            or scope.get('allowed_response_role') != role
-            or scope.get('review_status') != 'HUMAN_VERIFIED_WRITTEN_CONFIRMATION'):
-        raise ValueError('organizer confirmation scope mismatch')
-    evidence = scope.get('evidence', {})
-    evidence_path = Path(root) / evidence.get('path', '')
-    if (not evidence_path.is_file()
-            or hashlib.sha256(evidence_path.read_bytes()).hexdigest() != evidence.get('sha256')):
-        raise ValueError('original written confirmation evidence missing or hash mismatch')
+    if manifest.get('task') != 'T3:gata4' or manifest.get('status') != 'APPROVED_SANITIZED':
+        raise ValueError('manifest not approved for task')
+    review = _bound_json(manifest.get('compliance_review', {}), root)
+    if (review.get('task') != manifest['task']
+            or review.get('source_reference') != manifest.get('source_reference')
+            or review.get('policy_version') != 'T3_EXTERNAL_DATA_20260921'
+            or review.get('review_status') != 'COMPLETED'
+            or review.get('classification') != 'ALLOWED'
+            or type(review.get('prohibited_records_remaining')) is not int
+            or review['prohibited_records_remaining'] != 0
+            or role not in review.get('allowed_response_roles', [])
+            or review.get('license_status') != 'PERMITTED'
+            or not review.get('source_context_review')
+            or not review.get('condition_allowlist')):
+        raise ValueError('review does not establish permitted source, context and role')
+    # Policy text need not be JSON, but its exact version must be hash-bound.
+    policy = review.get('policy', {})
+    path = Path(root) / policy.get('path', '')
+    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != policy.get('sha256'):
+        raise ValueError('policy evidence missing or hash mismatch')
+    return review
 
 
 def unsigned_response_shape(delta):

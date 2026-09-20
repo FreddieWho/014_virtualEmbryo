@@ -1,0 +1,19 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "source_reference": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783",
+  "allowed_response_role": "SIGNED_RESPONSE",
+  "compliance_review": {
+    "path": "reports/t3_r56_launch_20260921/SOURCE_REVIEW.json",
+    "sha256": "7c80f2ef5bb7725f318d3b6377546a8c71db9390df04cfb3c6784437b7016bea"
+  },
+  "raw_source": {
+    "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/filtered/GSE261783_OP2_resting_provisional_raw.h5ad",
+    "sha256": "6e9f22292c420abf40ce3dd1925a5fdde3b7a986e516e330064f668020a9265d"
+  },
+  "allowed_operations": [
+    "normalize selected records",
+    "map fixed panel",
+    "build representation from separately permitted WT"
+  ]
+}

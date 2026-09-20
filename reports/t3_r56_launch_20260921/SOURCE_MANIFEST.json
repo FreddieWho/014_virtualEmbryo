@@ -1,0 +1,35 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "source_reference": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783",
+  "allowed_response_role": "SIGNED_RESPONSE",
+  "compliance_review": {
+    "path": "reports/t3_r56_launch_20260921/SOURCE_REVIEW.json",
+    "sha256": "7c80f2ef5bb7725f318d3b6377546a8c71db9390df04cfb3c6784437b7016bea"
+  },
+  "forbidden_records_remaining": 0,
+  "license": "CC-BY-4.0",
+  "species": "mouse",
+  "model_input": true,
+  "cell_type": "adult_mouse_cardiac_fibroblast",
+  "embedding_role": "WT_OR_ONTOLOGY_ONLY",
+  "adjacency_role": "WT_OR_ONTOLOGY_ONLY",
+  "filter_receipt": {
+    "path": "reports/t3_r56_launch_20260921/FILTER_RECEIPT.json",
+    "sha256": "123bb33ee625c0bfcb34a1d060877977f3435eeb6844a4fa30c63b2215839f2a"
+  },
+  "files": {
+    "expression": {
+      "path": "infra/external_data/sanitized/T3-R6-OP2-20260921/expression.h5ad",
+      "sha256": "8ddba6c0891a2d74fb2ea2193d5118a5e1eaeb20e0029a024a660a43c4a12487"
+    },
+    "embedding": {
+      "path": "infra/external_data/sanitized/T3-R6-OP2-20260921/embedding.npz",
+      "sha256": "955d0721b5c0801f17491200e29e9a68d821cc8b2089bc0c3c2efff8ded0ba8b"
+    },
+    "adjacency": {
+      "path": "infra/external_data/sanitized/T3-R6-OP2-20260921/adjacency.npz",
+      "sha256": "ac6db5f47ee73d29f8725a76e09d0551b5e7da06a26d2f81bea6c3072564742f"
+    }
+  }
+}

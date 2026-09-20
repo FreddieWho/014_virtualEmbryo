@@ -1,0 +1,67 @@
+{
+  "task": "T3:gata4",
+  "source_reference": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783",
+  "policy_version": "T3_EXTERNAL_DATA_20260921",
+  "policy": {
+    "path": "docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md",
+    "sha256": "542cdd0c2d342a36017cd310b010314bf5cb06bfb56f90d891bad9de8d4b212a"
+  },
+  "review_status": "COMPLETED",
+  "classification": "ALLOWED",
+  "prohibited_records_remaining": 0,
+  "allowed_response_roles": [
+    "SIGNED_RESPONSE",
+    "RESPONSE_SHAPE_ONLY"
+  ],
+  "condition_allowlist": [
+    "Arid2",
+    "Brd7",
+    "Brd9",
+    "Chd4",
+    "Dmap1",
+    "Egr2",
+    "Hcfc1",
+    "Ino80",
+    "Kansl1",
+    "Kat5",
+    "Kat8",
+    "Kmt2a",
+    "Paxip1",
+    "Pbrm1",
+    "Rest",
+    "Rnf40",
+    "Setd1b",
+    "Setdb1",
+    "Smarca4",
+    "Smarcd1",
+    "Srcap",
+    "Tfpt",
+    "Wdr82",
+    "Yeats4",
+    "Yy1",
+    "Znhit1",
+    "ctrl"
+  ],
+  "license_status": "PERMITTED",
+  "license": "CC-BY-4.0; author-linked Zenodo doi:10.5281/zenodo.14794723",
+  "source_context_review": "GSE261783 GSM8151756/57: single-gene CRISPR loss-of-function, resting OP2 cardiac fibroblasts isolated from 8-week mice; original publication doi:10.1038/s41467-025-66597-9. No selected protected embryonic genotype or equivalent phenotype evidence identified. This is a scoped evidence-based judgment, not proof of universal absence of phenocopy.",
+  "raw_source": {
+    "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/filtered/GSE261783_OP2_resting_provisional_raw.h5ad",
+    "sha256": "6e9f22292c420abf40ce3dd1925a5fdde3b7a986e516e330064f668020a9265d"
+  },
+  "condition_review": {
+    "path": "reports/t3_r56_launch_20260921/CONDITION_REVIEW.tsv",
+    "sha256": "7e5294df729f85c0fe3ab6a6b83567a512be145b9c820d4a741383889344bbfc"
+  },
+  "previous_filter": {
+    "path": "reports/t3_data_intake_20260920/FIBRO_FILTER_RECEIPT.json",
+    "sha256": "3e175c96a96447a0f83fe4ff83381865b48ce0c6a5277dcae26bb0e118f6d755"
+  },
+  "unselected_source_records": "NOT_AUTHORIZED_BY_THIS_REVIEW; no blanket prohibited classification",
+  "organizer_clearance": "NOT_REQUIRED_NO_SPECIFIC_UNRESOLVED_RULE_BOUNDARY_IDENTIFIED",
+  "scientific_limits": [
+    "adult fibroblast to embryo transfer unvalidated",
+    "replicate sample labels do not establish independent donors",
+    "no claim to identify Gata4 causal effects"
+  ]
+}

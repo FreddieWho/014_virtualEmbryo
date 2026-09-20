@@ -1,0 +1,58 @@
+{
+  "status": "READY_FOR_R6_TRAINING",
+  "cells": 5454,
+  "perturbations": 26,
+  "controls": 220,
+  "panel_genes": 500,
+  "embedding_shape": [
+    27,
+    80
+  ],
+  "adjacency_shape": [
+    27,
+    27
+  ],
+  "planned_train_genes": [
+    "Rest",
+    "Pbrm1",
+    "Setd1b",
+    "Setdb1",
+    "Hcfc1",
+    "Tfpt",
+    "Smarca4",
+    "Kmt2a",
+    "Chd4",
+    "Brd7",
+    "Srcap",
+    "Arid2",
+    "Znhit1",
+    "Yy1",
+    "Yeats4",
+    "Smarcd1",
+    "Dmap1",
+    "Wdr82",
+    "Egr2",
+    "Kat5"
+  ],
+  "planned_test_genes": [
+    "Kat8",
+    "Kansl1",
+    "Paxip1",
+    "Ino80",
+    "Rnf40",
+    "Brd9"
+  ],
+  "source_manifest": {
+    "path": "reports/t3_r56_launch_20260921/SOURCE_MANIFEST.json",
+    "sha256": "5663e0d55d347014906c39a7da844f4ec63387255d056b82537ffc38c5e90e38"
+  },
+  "preparation_code": {
+    "path": "scripts/t3_data_intake/prepare_r6_20260921.py",
+    "sha256": "2e19a50a35fdd2b363600e479a5c47fc2eee5548aa3f0ab5c4ac55c9681d2163"
+  },
+  "predictor_training": "NOT_RUN",
+  "gene_holdout_evaluation": "NOT_RUN",
+  "target_inference": "NOT_RUN",
+  "candidates": "NOT_GENERATED",
+  "blocks_submission": false
+}

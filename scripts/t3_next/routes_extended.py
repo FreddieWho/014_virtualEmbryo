@@ -170,13 +170,16 @@ def r6(c,manifest=None):
     import anndata as ad
     # The existing comparator learns signed responses. A shape-only permit cannot
     # authorize it, even if every blacklist and file-integrity check passed.
-    require_response_role(json.loads(Path(manifest).read_text()), ROOT, 'SIGNED_RESPONSE')
+    review = require_response_role(json.loads(Path(manifest).read_text()), ROOT, 'SIGNED_RESPONSE')
     m=approved_manifest(manifest,['expression','embedding','adjacency']);a=ad.read_h5ad(ROOT/m['files']['expression']['path'],backed='r')
     if m.get('embedding_role')!='WT_OR_ONTOLOGY_ONLY' or m.get('adjacency_role')!='WT_OR_ONTOLOGY_ONLY':raise ValueError('outcome-free graph and embedding provenance not declared')
     # Inspect metadata before reading any expression. This runner never sanitizes quarantine itself.
     if not {'condition','cell_type'}<=set(a.obs):raise ValueError('source metadata missing')
     conditions=a.obs.condition.astype(str).to_numpy();celltypes=a.obs.cell_type.astype(str).to_numpy()
-    if any(forbidden_perturbation(x) for x in conditions):raise ValueError('forbidden perturbation remains')
+    if not set(conditions) <= set(review['condition_allowlist']):raise ValueError('unreviewed condition remains')
+    # Target-gene exclusion is part of this experiment design, not a universal
+    # claim that all ages/contexts of that gene are prohibited by the contest.
+    if any(x.upper() in {'GATA4','GATA6','CTNNB1','MESP1'} for x in conditions):raise ValueError('target-family labels excluded by R6 design')
     if len(set(celltypes))!=1:raise ValueError('first experiment requires one declared training context; cross-context not silently pooled')
     if m.get('species')!='mouse':raise ValueError('requires pre-audited one-to-one mouse-symbol object; no inferred orthology')
     if not set(c.genes)<=set(a.var_names):raise ValueError('source lacks full output panel')
