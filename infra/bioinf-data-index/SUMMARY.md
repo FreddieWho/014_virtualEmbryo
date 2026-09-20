@@ -49,3 +49,7 @@ GSE67463、GSE50859、GSE70134 目前仅登记官方 metadata，未下载 proces
 在用户授权下继续补齐 E8.0-E9.5 目标扰动证据：新增 GSE5298（45101×8，Gata4，E9.5 AVC）、GSE9652（45101×11，Gata4，E9.5 pooled heart）和 GSE78125（35556×24，Ctnnb1，E9.5 AHF mesoderm）官方 series matrix，以及 GPL1261/GPL6246 官方 annotation。所有文件 gzip/矩阵结构、GSM 列身份、平台探针映射和 SHA256 均通过；Gata4 对应 GPL1261 的 2 个探针（Entrez 14463），Ctnnb1 对应 GPL6246 的 1 个探针（Entrez 12387）。
 
 S1D v3 的描述性效应为：GSE5298 Gata4 `+0.02084`（linear-expression log2 ratio，target probe down fraction 0.50；排除 target 后 panel 373 down/108 up），GSE9652 Gata4 `+0.25275`（0.40；206 down/275 up），GSE78125 Ctnnb1 `-0.02584`（RMA Δlog2，0.50；272 down/219 up）；多探针按样本内 median 聚合。两份 Gata4 与一份 Ctnnb1 是早期、组织限定的 direct-perturbation context，但不等同于 E8.75 state-matched activity；target expression 仅作 descriptive readout，未计入 signed family。当前 gate 仍为 `HOLD_EXACT_STAGE_CONTEXTUAL_ACTIVITY_NOT_STATE_MATCHED`，independent signed family `0`，无候选、无 scorer、无服务器提交，`blocks_submission: false`。v3 artifact stable manifest SHA256 为 `6c2806aa381f099e3db88f38a35278d4500e1aeb1f8de7fe3cfa20e2db487e0c`；v2 初步原子保留但不作为当前复用版本。
+
+## 2026-09-20 存储注记（结构整理 P2，用户定保留）
+- `infra/external_data/quarantine/`（~51G）与 `sanitized/`（~7G）保留：外部原始数据，已索引（本 INDEX 含 quarantine 路径引用 21 处），删除前必须先 re-index；用户未授权删除。
+- 同期清理（见 `reports/DELETION_MANIFEST.tsv`）：tool_integration S1A 旧版 v1–v6、outputs/t2_*、g0 重复副本/训练件、v0002 孤儿副本；scored 产物、INDEX、git 历史均未触碰。

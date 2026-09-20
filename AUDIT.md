@@ -26,6 +26,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - G1-T1-D6: de 0.8868=tie (strict fail); dir 0.7921; var 0.26
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T1-P2 待定（2026-09-17 起；D4/D3/D1/D5/D6/D5b 门 FAIL 已关闭，D2 调参＋D5c 长训均待用户定夺；GPU 保持关机）。
+- **当前执行分支**：项目结构整理 P1（2026-09-20 起；方案 v2 已验证通过，用户批 A 全执行；P1 文档层先行）。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).
