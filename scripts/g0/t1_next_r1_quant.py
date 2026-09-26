@@ -104,7 +104,13 @@ def sigmoid(z: np.ndarray) -> np.ndarray:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-dir", required=True)
+    ap.add_argument("--scale", type=float, default=1.0,
+                    help="delta scale: scales logit zero-rate delta and quantile increments")
+    ap.add_argument("--only-b", action="store_true",
+                    help="sweep mode: build+score B arm only, skip A/controls/recon")
     args = ap.parse_args()
+    SCALE = float(args.scale)
+    assert 0.1 <= SCALE <= 3.0, "scale out of range"
     RUN = Path(args.run_dir)
     (RUN / "intermediates").mkdir(parents=True, exist_ok=True)
     (RUN / "metrics").mkdir(parents=True, exist_ok=True)
@@ -166,11 +172,11 @@ def main() -> int:
             if p0_85 > 0.999 and p0_95 > 0.999:
                 continue  # uninformative: keep parent
             d = float(np.clip(logit(np.array([p0_95]))[0] - logit(np.array([p0_85]))[0],
-                              -LOGIT_CAP, LOGIT_CAP))
+                              -LOGIT_CAP, LOGIT_CAP)) * SCALE
             p_pred = float(sigmoid(logit(np.array([p0_85]))[0] + d))
             Qa = np.quantile(a, U)
             Qb = np.quantile(b, U)
-            Qp = np.maximum(Qa + (Qb - Qa), 0.0)
+            Qp = np.maximum(Qa + SCALE * (Qb - Qa), 0.0)
             n_mono = int((np.diff(Qp) < 0).sum())
             Qp = np.maximum.accumulate(Qp)
             mono_fix_frac.append(n_mono / (N_Q - 1))
@@ -198,6 +204,7 @@ def main() -> int:
     out_parent = Xr.copy()
     out_A = np.where(use_map, QpredA, out_parent).astype(np.float32)
     out_B = np.where(use_map, Qpred, out_parent).astype(np.float32)
+    res["scale"] = SCALE
 
     # ---- controls: identity + train-fitted strict shift ----
     mu85 = {c: X85tr[ttr85 == c].mean(axis=0) for c in common}
@@ -208,8 +215,10 @@ def main() -> int:
         "identity": Xr.copy(),
         "strict_shift": np.clip(Xr + Gshift, 0.0, None).astype(np.float32),
         "A_qpos_only": np.clip(out_A, 0.0, None).astype(np.float32),
-        "B_qpos_zero": np.clip(out_B, 0.0, None).astype(np.float32),
+        f"B_s{SCALE:g}": np.clip(out_B, 0.0, None).astype(np.float32),
     }
+    if args.only_b:
+        arms = {k: v for k, v in arms.items() if k.startswith("B_s")}
     res["zero_rate"] = {k: float((v == 0).mean()) for k, v in arms.items()}
     res["lib_mean"] = {k: float(v.sum(axis=1).mean()) for k, v in arms.items()}
 
@@ -231,38 +240,41 @@ def main() -> int:
         res["arms"][name] = {k: m.get(k) for k in KEEP}
         print(f"ARM {name}: " + json.dumps(res["arms"][name]), flush=True)
 
-    # ---- check 1: E9.5 within-stage reconstruction (E9.5-train CDFs, no change) ----
-    X9r = X95[te95]
-    t9r = t95[te95]
-    lib9 = X9r.sum(axis=1)
-    out9 = X9r.copy()
-    for c in sorted(set(t9r)):
-        m = (t9r == c)
-        if c not in common:
-            continue
-        v = X95tr[ttr95 == c]
-        if len(v) < MIN_N:
-            continue
-        order = np.argsort(-lib9[m], kind="stable")
-        lr = np.empty(m.sum())
-        lr[order] = (np.arange(m.sum()) + 0.5) / m.sum()
-        for g in range(D):
-            a = v[:, g].astype(np.float64)
-            p0 = float((a == 0).mean())
-            if p0 > 0.999:
+    # ---- check 1: E9.5 within-stage reconstruction (skipped in sweep mode) ----
+    if args.only_b:
+        res["recon_skipped_sweep"] = True
+    else:
+        X9r = X95[te95]
+        t9r = t95[te95]
+        lib9 = X9r.sum(axis=1)
+        out9 = X9r.copy()
+        for c in sorted(set(t9r)):
+            m = (t9r == c)
+            if c not in common:
                 continue
-            Q = np.quantile(a, U)
-            x = X9r[m][:, g].astype(np.float64)
-            s = np.sort(a)
-            u = np.searchsorted(s, x, side="right") / len(s)
-            u[x == 0] = lr[x == 0] * p0
-            out9[np.where(m)[0], g] = np.interp(u, U, Q)
-    p9 = RUN / "intermediates" / "arm_recon_e95.h5ad"
-    write_sub(out9.astype(np.float32), t9r, p9, panel)
-    m9 = run_scorer(p9, tgt, ref, RUN / "metrics" / "scorer_recon_e95.json")
-    res["recon_e95"] = {k: m9.get(k) for k in KEEP}
-    res["recon_zero_rate"] = float((out9 == 0).mean())
-    print("RECON_E95: " + json.dumps(res["recon_e95"]), flush=True)
+            v = X95tr[ttr95 == c]
+            if len(v) < MIN_N:
+                continue
+            order = np.argsort(-lib9[m], kind="stable")
+            lr = np.empty(m.sum())
+            lr[order] = (np.arange(m.sum()) + 0.5) / m.sum()
+            for g in range(D):
+                a = v[:, g].astype(np.float64)
+                p0 = float((a == 0).mean())
+                if p0 > 0.999:
+                    continue
+                Q = np.quantile(a, U)
+                x = X9r[m][:, g].astype(np.float64)
+                s = np.sort(a)
+                u = np.searchsorted(s, x, side="right") / len(s)
+                u[x == 0] = lr[x == 0] * p0
+                out9[np.where(m)[0], g] = np.interp(u, U, Q)
+        p9 = RUN / "intermediates" / "arm_recon_e95.h5ad"
+        write_sub(out9.astype(np.float32), t9r, p9, panel)
+        m9 = run_scorer(p9, tgt, ref, RUN / "metrics" / "scorer_recon_e95.json")
+        res["recon_e95"] = {k: m9.get(k) for k in KEEP}
+        res["recon_zero_rate"] = float((out9 == 0).mean())
+        print("RECON_E95: " + json.dumps(res["recon_e95"]), flush=True)
 
     res["wall_s"] = time.time() - t00
     (RUN / "RESULT.json").write_text(json.dumps(res, indent=1, default=float))
