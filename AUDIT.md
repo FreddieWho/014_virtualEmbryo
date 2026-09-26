@@ -10,13 +10,13 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 Score-pending rows: 20 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0034/next_r6meanfix, v0035/next_r6graphfix, v0036/next_r3linfix, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix, v0042/next_n1quant, v0044/next_n3latent, v0046/next_o2shrink, v0047/next_o1stable, v0048/next_n2hurdle)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (52 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (56 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 27
-- FAIL: 9
+- FAIL: 11
 - VOID: 2
 - PARKED: 2
 - PENDING_SERVER: 8
-- GATE_ONLY: 4
+- GATE_ONLY: 6
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only
@@ -29,8 +29,10 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-NEXT-R6: FAILED_DISASTER after gene holdout PASS; both outputs exceed negative clip bound
   - T3-REPAIR-R4-V1: withdrawn before delivery: inference omitted fitted calibration slopes
   - T1-NEXT-R2: decoder damage confirmed (A energy 32x + var collapse) but residual repair only ties strict; no promotion path
+  - T1-NEXT-R3: diagonal ties strict; lowrank loses (dir -0.05, energy +21%); two-point linear step is weak link
+  - T1-NEXT-R4: module transport collapses (energy 6.79, lib 0.476); A/B identical; train fit already poor
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T1-v0023 服务器 50.82 晋级新 best（Total 156.06）；R5 开工中（todo #30），R1 第二候选位保留，R3/R4 待对 v0023 基线，R6 PARKED 待数据源裁决。
+- **当前执行分支**：T2 九路线 M0 已冻结（5% 判据 + 父版本 SHA 实核 + 已耗尽轴清单），M1 researcher 检索与设计定稿待启动；T3 五路线 5 个候选已交付待回分；T1-NEXT R5 开工中。分支详情见“T2 九路线”节与 DECISIONS D-20260927-T2M0FREEZE-001。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).
