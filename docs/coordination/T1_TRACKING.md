@@ -161,3 +161,5 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-26 T1-NEXT-R1 v0023 服务器分数回填（D-20260926-T1V23SCORE-001）：用户转录 total **50.82**（de 44.0/dir 57.4/mmd 53.1/vario 47.8；权重验算 50.84 差 0.02 系舍入，不重构；submission ID/时间戳未提供）。+2.35 vs v0004，远超 TIE 带，PROMOTED：新 T1 selection＋最高观测（亦超 v0019 48.54）。Total 153.7→**156.06**。子项全超 v0004（40.6→47.8 variogram 增幅最大）。R1 SHIPPED，第二候选位保留；R5/R3/R4 改对 v0023 基线。INDEX scored、submetrics＋4 行、verdicts＋3 行。
 
 - 2026-09-27 T1-NEXT-R1 尺度扫描关闭（优化轮）：0.5x 五项全败；1.5x 以 de/energy 为代价换 dir/mmd，未达预设胜者标准；DE 呈倒 U（0.611/0.630/0.611），1x 为峰。不建 v0025，R1 第二候选位保留。证据 `artifacts/g0/T1-NEXT-R1-SCALE-20260921-v1/RESULT.md`。
+
+- 2026-09-27 T1-NEXT-R5 诊断关闭（无候选）：边际断言全过（值集/零率恒等），但秩重分配破坏细胞内聚——energy A 0.894/B 0.686 vs identity 0.52；学习方向差于置乱方向，触发 §8 停止条（无特异结构信号）。R4 必须整体搬运表达值，不得重排归属。证据 `artifacts/g0/T1-NEXT-R5-COV-20260921-v1/RESULT.md`。
