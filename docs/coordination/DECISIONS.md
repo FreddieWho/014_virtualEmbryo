@@ -811,3 +811,10 @@ reuse_promoted
 - evidence: reports/T1_NEXT_ROUTES_20260921.md；SERVER_SCORE_REGISTRY、INDEX、D系列receipt；官方RNA metadata实读仅celltype且无layers；文献原站链接见方案。
 - status_correction: D5b最终RESULT为FAIL且无v0026，更新旧摘要；v0004仍为selection，v0019按原TIE规则不晋级。官方E7.75未发布，外部T1许可不继承T3。
 - boundary: 无新模型/候选/评分/下载；两点细胞留出不是独立时间外推，未证明E10.5或E12.5泛化；blocks_submission: false。
+
+## D-20260926-T1V23SCORE-001
+
+- authorization: 用户转录 v0023 服务器分数（total 50.82＋四子项），按既定回填链登记。
+- decision: v0023 PROMOTED 为新 T1 selection（+2.35，超 TIE 带）；Total 记 156.06；R1 SHIPPED，R2 FAIL（诊断关闭），R6 PARKED（待数据源裁决）；R5/R3/R4 后续对 v0023 基线。
+- evidence: reports/SERVER_SCORE_REGISTRY.md#t1-next-r1-score-return-20260926；INDEX v0023 行 scored；SUBMETRIC＋4 行；用户转录原文（ID/时间戳未提供）。
+- boundary: 分数未从舍入子项重构；单次仲裁成功不证明 proxy 可靠排序；本次无新拟合/候选；blocks_submission: false。

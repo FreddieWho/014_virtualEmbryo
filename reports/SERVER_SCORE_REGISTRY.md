@@ -782,3 +782,19 @@ Decision and limits:
 - R5 score-return queue closed; lane SHIPPED (scored, no gain). R6 remains FAILED_DISASTER with no candidate; no new training or submission in this registration task.
 - No overall server Total supplied. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260921-T3R5SCORE-001.
+
+<a id="t1-next-r1-score-return-20260926"></a>
+## T1 NEXT R1 score return — 2026-09-26
+
+Source / raw evidence: user transcribed the portal Model name, board total and four skills in the current conversation. Submission ID, timestamp and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported total is not reconstructed from rounded skills (weights-check 0.25/0.25/0.30/0.20 over supplied 1-decimal skills = 50.84 vs reported 50.82; difference is rounding). Local artifact SHA256 matches submissions/INDEX.tsv; artifact immutable. Parent v0004, contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| t1_val__r1qshape__v0023.h5ad | 50.82 | 44.0 | 57.4 | 53.1 | 47.8 |
+
+Decision and limits:
+- v0023 50.82 vs incumbent v0004 48.47: +2.35, far outside the ±0.1 TIE band. PROMOTED: new T1 selection and highest observed (also above v0019 48.54). Server Total updates 153.7 → 156.06 (50.82 + 58.29 + 46.95; T2/T3 components unchanged).
+- Skill-level read (descriptive, not causal): all four returned skills beat v0004's recorded submetrics (de 43.8→44.0, dir 55.9→57.4, mmd 51.5→53.1, vario 40.6→47.8; largest move on variogram +7.2). The report-scenario prediction (B uniform gains incl. variogram −69%) is consistent in direction with the server outcome, but local-proxy insufficiency stands: this is one arbitration success, not proof the proxy ranks reliably.
+- R1 lane SHIPPED (scored, promoted). R1 second-candidate slot stays in reserve. R5/R3/R4 proceed against the new v0023 baseline; strict-shift remains a secondary control, not the bar.
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260926-T1V23SCORE-001.

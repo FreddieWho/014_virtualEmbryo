@@ -157,3 +157,5 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-21 T1-NEXT-R6 数据源审查（只读元数据，零下载）：E-MTAB-6967 与 ExtendedMouseAtlas 实为同一研究谱系（Pijuan-Sala 2019 Original＋Marioni Extension），"至少两个来源"条不满足；atlas 含 14,493 个 E7.75 WT 细胞（T2 隐藏测试期，R6 训练须排除除非用户明批）；基因覆盖 83%/80% 可用；与官方 T1 barcode 去重待做。 verdict：BLOCKED_DATA_NOT_READY。本地件：`artifacts/g0/T1-NEXT-R6-SOURCE-REVIEW-20260921-v1/REVIEW.md`。
 
 - 2026-09-21 T1-NEXT-R1 v0023 已建待传：B-rule 全量拟合，recipient=v0004 的 5,118 E9.5 行，fallback=父行，覆盖 33%；SHA `d462c166…`，contract PASS；INDEX 登记 score_pending；上传包 `deliveries/t1nxr1__t1__upload__20260921.zip`（SHA `1979815f…`，成员 `t1_val__r1qshape__v0023.h5ad`，4 manifests＋receipt READY_NOT_SUBMITTED）。单发仲裁依据：报告内 B 对 strict 七项全优零退化＋caveat，服务器仲裁。门户上传 NOT_RUN，待用户操作。
+
+- 2026-09-26 T1-NEXT-R1 v0023 服务器分数回填（D-20260926-T1V23SCORE-001）：用户转录 total **50.82**（de 44.0/dir 57.4/mmd 53.1/vario 47.8；权重验算 50.84 差 0.02 系舍入，不重构；submission ID/时间戳未提供）。+2.35 vs v0004，远超 TIE 带，PROMOTED：新 T1 selection＋最高观测（亦超 v0019 48.54）。Total 153.7→**156.06**。子项全超 v0004（40.6→47.8 variogram 增幅最大）。R1 SHIPPED，第二候选位保留；R5/R3/R4 改对 v0023 基线。INDEX scored、submetrics＋4 行、verdicts＋3 行。

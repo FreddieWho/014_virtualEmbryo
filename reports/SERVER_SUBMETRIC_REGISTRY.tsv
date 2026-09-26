@@ -261,3 +261,7 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	severity_slope	50.0
 2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	mmd_u	51.5
 2026-09-20	T3:gata4	v0020	g0_t3_r8	t3_gata4__r8knk__v0020.h5ad	not supplied	46.64	variogram	45.2
+2026-09-26	T1:val	v0023	t1_next_r1_qshape	t1_val__r1qshape__v0023.h5ad	2026-09-26	50.82	de_score	44.0
+2026-09-26	T1:val	v0023	t1_next_r1_qshape	t1_val__r1qshape__v0023.h5ad	2026-09-26	50.82	de_direction	57.4
+2026-09-26	T1:val	v0023	t1_next_r1_qshape	t1_val__r1qshape__v0023.h5ad	2026-09-26	50.82	mmd_u	53.1
+2026-09-26	T1:val	v0023	t1_next_r1_qshape	t1_val__r1qshape__v0023.h5ad	2026-09-26	50.82	variogram	47.8
