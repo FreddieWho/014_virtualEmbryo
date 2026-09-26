@@ -818,3 +818,7 @@ reuse_promoted
 - decision: v0023 PROMOTED 为新 T1 selection（+2.35，超 TIE 带）；Total 记 156.06；R1 SHIPPED，R2 FAIL（诊断关闭），R6 PARKED（待数据源裁决）；R5/R3/R4 后续对 v0023 基线。
 - evidence: reports/SERVER_SCORE_REGISTRY.md#t1-next-r1-score-return-20260926；INDEX v0023 行 scored；SUBMETRIC＋4 行；用户转录原文（ID/时间戳未提供）。
 - boundary: 分数未从舍入子项重构；单次仲裁成功不证明 proxy 可靠排序；本次无新拟合/候选；blocks_submission: false。
+
+## D-20260927-T3FIVE-001 — 三条新路线与两条优化交付
+
+用户授权的五路线已全部实现并执行真实数据拟合/评价/目标推断，最终 v0042/v0044/v0046/v0047/v0048 contract PASS，11定向测试与五模型逐值重放PASS；未提交/未评分，selection v0009/v0010 不变。v0043/v0045 撤回保留，分别修正非负decoder与下游稳定性尺度后完整重训。收缩GCN仅小幅优于平均倍率、仍有跨样本失败；WT概率模型仅证明描述性预测优势，不能推导KO有效性。五lane PENDING_SERVER，旧六修复候选仍待回分。报告 reports/t3_five_20260927/REPORT.md；包 deliveries/five27__t3__upload__20260927.zip；blocks_submission: false。

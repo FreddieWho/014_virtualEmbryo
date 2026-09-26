@@ -1,0 +1,75 @@
+{
+  "objective": "3 new T3 routes + 2 existing-route optimizations, all implemented and executed",
+  "status": "PASS",
+  "checks": [
+    {
+      "requirement": "design three new routes based on existing research",
+      "status": "PASS",
+      "evidence": [
+        "reports/T3_FIVE_DESIGN_20260927.md",
+        "reports/t3_five_20260927/REPORT.md"
+      ]
+    },
+    {
+      "requirement": "design two optimizations of existing routes",
+      "status": "PASS",
+      "evidence": [
+        "reports/T3_FIVE_DESIGN_20260927.md",
+        "scripts/t3_next/five.py"
+      ]
+    },
+    {
+      "requirement": "implement and fully execute all five routes",
+      "status": "PASS",
+      "evidence": [
+        "artifacts/t3_next/T3-FIVE-20260927-v1/n1quant/RESULT.json",
+        "artifacts/t3_next/T3-FIVE-20260927-v2/n2hurdle/RESULT.json",
+        "artifacts/t3_next/T3-FIVE-20260927-v1/n3latent/RESULT.json",
+        "artifacts/t3_next/T3-FIVE-20260927-v2/o1stable/RESULT.json",
+        "artifacts/t3_next/T3-FIVE-20260927-v1/o2shrink/RESULT.json"
+      ]
+    },
+    {
+      "requirement": "test behavior and reproduce actual complete output",
+      "status": "PASS",
+      "evidence": [
+        "reports/t3_five_20260927/TESTS.json",
+        "reports/t3_five_20260927/VALIDATION.json"
+      ]
+    },
+    {
+      "requirement": "five registered contract-valid candidates and verified delivery",
+      "status": "PASS",
+      "evidence": [
+        "submissions/INDEX.tsv",
+        "deliveries/five27__t3__upload__20260927.receipt.json"
+      ]
+    },
+    {
+      "requirement": "record boundaries, withdrawals, tracking and decisions",
+      "status": "PASS",
+      "evidence": [
+        "reports/t3_five_20260927/WITHDRAWAL.json",
+        "reports/t3_five_20260927/HURDLE_WITHDRAWAL.json",
+        "docs/coordination/T3_TRACKING.md",
+        "docs/coordination/DECISIONS.md",
+        "DECISIONS.md",
+        "reports/LANE_VERDICTS.tsv",
+        "AUDIT.md"
+      ]
+    }
+  ],
+  "excluded_from_completion_claim": [
+    "server submission NOT_RUN",
+    "server scoring NOT_RUN_NO_MATCHED_GATA4_TARGET",
+    "scientific causal qualification NOT_VALIDATED"
+  ],
+  "package_members": [
+    "t3_gata4__n1quant__v0042.h5ad",
+    "t3_gata4__n2hurdle__v0048.h5ad",
+    "t3_gata4__n3latent__v0044.h5ad",
+    "t3_gata4__o1stable__v0047.h5ad",
+    "t3_gata4__o2shrink__v0046.h5ad"
+  ],
+  "withdrawn_excluded": true
+}

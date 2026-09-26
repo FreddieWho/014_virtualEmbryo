@@ -70,3 +70,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260921-T1NEXT-001：T1六路线方案准备完成，全部未执行；订正D5b旧滞后状态，selection不变。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260926-T1V23SCORE-001：T1-v0023 服务器 50.82（+2.35）晋级新 best，Total 156.06；R1 SHIPPED，R2 诊断关闭，R6 PARKED。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T3FIVE-001：T3 三新+两优化全量完成，五候选未提交/未评分，两个首跑撤回；contract/重放/11测试通过，best不变。见 [统一报告](reports/t3_five_20260927/REPORT.md)、[协调决策](docs/coordination/DECISIONS.md)。

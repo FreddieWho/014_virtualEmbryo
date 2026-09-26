@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "lane": "n1quant",
+      "version": "v0042",
+      "candidate_sha_matches_index": true,
+      "contract": "PASS",
+      "snapshot_inputs": "PASS",
+      "exact_model_replay": "PASS",
+      "pairwise_distinct": true,
+      "changed_entries": 505,
+      "changed_genes": 17,
+      "changed_cells": 248,
+      "zero_to_positive": 0,
+      "models": {
+        "quantile_model.pkl": "12d01e45e2277f7379cd20aefd331791daf9ae1ff3902f34df84d1d6e4d341f6"
+      },
+      "run": "artifacts/t3_next/T3-FIVE-20260927-v1/n1quant"
+    },
+    {
+      "lane": "n2hurdle",
+      "version": "v0048",
+      "candidate_sha_matches_index": true,
+      "contract": "PASS",
+      "snapshot_inputs": "PASS",
+      "exact_model_replay": "PASS",
+      "pairwise_distinct": true,
+      "changed_entries": 301307,
+      "changed_genes": 499,
+      "changed_cells": 1354,
+      "zero_to_positive": 214296,
+      "models": {
+        "hurdle_model.pkl": "f6037b5caf4d44f38c4210b80916f1a9387e386301fbc313746bf38e44860e23"
+      },
+      "run": "artifacts/t3_next/T3-FIVE-20260927-v2/n2hurdle"
+    },
+    {
+      "lane": "n3latent",
+      "version": "v0044",
+      "candidate_sha_matches_index": true,
+      "contract": "PASS",
+      "snapshot_inputs": "PASS",
+      "exact_model_replay": "PASS",
+      "pairwise_distinct": true,
+      "changed_entries": 303912,
+      "changed_genes": 308,
+      "changed_cells": 7447,
+      "zero_to_positive": 0,
+      "models": {
+        "pooled_fold4.pkl": "8118125c6f3cf4934322791f9831df00b0acdaab1c5e8dc2d538d277513d11e7",
+        "sample0_to_1_fold1.pkl": "f238c1538d1250dff2128f4b12a80062fc1a023d536c211a6982ca4b1021e444",
+        "sample0_to_1_fold3.pkl": "0340588a46d220be83f323b654bd9cb1c55d25d432a85df80080784f19295cc8",
+        "sample0_to_1_fold2.pkl": "7fda0676a16104bd611ee2d2a0266934d3773bba88b6a5d754db7cb73fb0c824",
+        "sample1_to_0_fold1.pkl": "e3c3e25a7b227a64f8448a8c1b36569415df9138ece14ebcedfe9c6f0edbfeea",
+        "sample1_to_0_fold3.pkl": "eaddad70b3cf53e5fdf0d6523793698940839f775599f92279ec3bcaf048bc35",
+        "pooled_fold3.pkl": "cc1d3a657662ad8ba876861a71e50ecf81866a4413d7c8bf8b3132c9fe6cc430",
+        "pooled_fold1.pkl": "ec542eb560889e2d68d5cfee0648ba8b39263fc1a11e2b8a0cbf350a84fa5c1a",
+        "pooled_fold2.pkl": "7e8201454ad4ed3bbd5c80c798033484409149929d10c78e925d753e65c7cba8",
+        "sample0_to_1_fold0.pkl": "c0707c2c30bc222bdf92682e34b0c90ae3c6f7dd610a1313ad3a573f8f2f8d05",
+        "final_model.pkl": "a8e876aafae40e8e54953f801c4fa25e07e980e147675c3bd8a13b605c238921",
+        "sample1_to_0_fold4.pkl": "8b3c4c50beae001114449210e6209232f0683eccc7849754befe04c0410520f9",
+        "sample1_to_0_fold0.pkl": "4fd7ea3b9d6cb5f5af32e58b64ae72a0c25753a8d8cff443f577a20631c03235",
+        "pooled_fold0.pkl": "75516429fe918006a6d02ec71d35fb15df0f65e235b2d28cb8a7672aa36f3742",
+        "sample0_to_1_fold4.pkl": "2103531ad69b0ad49ae84bdc343af59394e7c841a782a2c5fe1bd47e5055a0e6",
+        "sample1_to_0_fold2.pkl": "5a2f9dba91b7bd42f3252babd747b87fe7daf80d68292ba107a90d2e32d7c48a"
+      },
+      "run": "artifacts/t3_next/T3-FIVE-20260927-v1/n3latent"
+    },
+    {
+      "lane": "o1stable",
+      "version": "v0047",
+      "candidate_sha_matches_index": true,
+      "contract": "PASS",
+      "snapshot_inputs": "PASS",
+      "exact_model_replay": "PASS",
+      "pairwise_distinct": true,
+      "changed_entries": 8054,
+      "changed_genes": 282,
+      "changed_cells": 1184,
+      "zero_to_positive": 0,
+      "models": {
+        "fold2.pkl": "9b1999e0d67095e95df7022b677c33b18c11df1ac4880346b7c27535fcde9b75",
+        "final_model.pkl": "47b96a946e08cea10503350cd0a1c1f3a9a51b0755d7d80a3aae49f9fe5d1f7b",
+        "fold0.pkl": "5786b59509fd8267e1ab4937d2879b236e6cd4d44ecd41f21c230159169d7bf8",
+        "fold1.pkl": "14f7fd27ad023dd2c4a63d01268e84f77cb8fa66ab5bbc496e35e9d37fad9bdf",
+        "fold3.pkl": "626544c90a2446a824d67916b9845be20dd9c65fe51d4c5b1ff1c277b513b99d"
+      },
+      "run": "artifacts/t3_next/T3-FIVE-20260927-v2/o1stable"
+    },
+    {
+      "lane": "o2shrink",
+      "version": "v0046",
+      "candidate_sha_matches_index": true,
+      "contract": "PASS",
+      "snapshot_inputs": "PASS",
+      "exact_model_replay": "PASS",
+      "pairwise_distinct": true,
+      "changed_entries": 389020,
+      "changed_genes": 498,
+      "changed_cells": 7449,
+      "zero_to_positive": 0,
+      "models": {
+        "pooled_fold4.pkl": "50dee066f3c445ea23162272730eb163f5dc33ccbdbbef5557b14025f72f4699",
+        "sample0_to_1_fold1.pkl": "b99a1091a1ac165d6b993cd0e09637b0c966de769b17422f3c4dfa45e8627ea1",
+        "sample0_to_1_fold3.pkl": "ddf695d6ef74468cd303ed4de959d7c4c61013e728e44eaaf5c8aae1a978c5df",
+        "sample0_to_1_fold2.pkl": "73dee8367ae9c1c7ce34d56e53006e8c50e09ddc43e2d28a0afce5089ad79795",
+        "sample1_to_0_fold1.pkl": "eddaaf031b086cff78675cfb97d029ff5f8b8d3babdaa9ec2c8d03342bf12f68",
+        "sample1_to_0_fold3.pkl": "c61768f6bca802080f940075fef228e48fb6c621213f59bbeaa6c3827195e6ba",
+        "pooled_fold3.pkl": "6dc36669739b01ea722ff689f6d56fc9bfb35b46ecc1f3591a540533ca9e7e4b",
+        "pooled_fold1.pkl": "314eeca79999e607e5e1da61683af9820b06a564d9fc90a6aa25f8c6fbda927b",
+        "pooled_fold2.pkl": "c1058d7eec4917e9d686b1a1da7368413f889f488395ea689b00832fc0e925de",
+        "sample0_to_1_fold0.pkl": "76b0950dfaf8abca03c0f6789ea4b6f0fcb15f6e60f8d50a5e0af341f06fc4dc",
+        "final_model.pkl": "8a89560bd410c19a7ad4da5616e9b5d001d25e464467b1fd776e6d4ff72ad791",
+        "sample1_to_0_fold4.pkl": "46d150becfb7226e080309f1c7a406da767988218bedd9be6764866d4ff8d985",
+        "sample1_to_0_fold0.pkl": "39c2ff089b19da034c4a4746170c6880061b3cc264f5f93d756091d4261b2b8b",
+        "pooled_fold0.pkl": "55f4442338a5f2830b11ae298754d849c6246bc15c47d030c04968377812f4e8",
+        "sample0_to_1_fold4.pkl": "1c61279e958c4d24f7f04aaf55651e2cd37714cd22ba01e9a0949be17b483683",
+        "sample1_to_0_fold2.pkl": "f164c84e4e87e6ffbc7212cb896feffe7641aaac9939fd47bfd076975c132c72"
+      },
+      "run": "artifacts/t3_next/T3-FIVE-20260927-v1/o2shrink"
+    }
+  ],
+  "new_routes": 3,
+  "optimizations": 2,
+  "server_scoring": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+  "blocks_submission": false
+}

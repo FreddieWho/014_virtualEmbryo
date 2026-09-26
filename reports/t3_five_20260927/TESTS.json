@@ -1,0 +1,7 @@
+{
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q tests/t3_next/test_five.py tests/t3_next/test_repairs.py",
+  "exit_code": 0,
+  "result": "11 passed in 1.57s",
+  "evidence": "exec session 47091 final stdout, observed 2026-09-27",
+  "scope": "five-route operator invariants, outer-label isolation, hurdle identity and existing nonnegative/calibration repairs; not scientific validation"
+}

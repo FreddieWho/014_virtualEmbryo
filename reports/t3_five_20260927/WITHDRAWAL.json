@@ -1,0 +1,26 @@
+{
+  "candidate": {
+    "lane": "o1stable",
+    "version": "v0045",
+    "path": "submissions/candidates/T3_gata4/v0045_next_o1stable/submission.h5ad",
+    "sha256": "63e858962bcc20e28d331af6b9d86f4b0abcc63180a62597677842ba87c3c2dd",
+    "parent": "v0009",
+    "portal_file": "t3_gata4__o1stable__v0045.h5ad",
+    "checks": {
+      "status": "PASS",
+      "library_ratio_q01": 0.983374695777893,
+      "library_ratio_q99": 1.0018777990341186,
+      "variance_ratio": 0.9988889098167419,
+      "neighbor_semivariance_ratio": 0.9990128227227913,
+      "semivariance_role": "descriptive_only_not_server_variogram",
+      "changed_entries": 8053
+    },
+    "route_class": "OPTIMIZATION",
+    "algorithm_parent": "v0036",
+    "negative_clip_fraction": 0.0
+  },
+  "status": "INVALIDATED_UNSUBMITTED",
+  "reason": "exclude Gata4 self-intervention from downstream stability scale",
+  "old_artifact_preserved": true,
+  "replacement_run": "artifacts/t3_next/T3-FIVE-20260927-v2/o1stable"
+}

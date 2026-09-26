@@ -162,3 +162,33 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 2026-09-21（v0041 r4medfix）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-REPAIR-R4-20260921-v2/RESULT.json。
 
 - 2026-09-21：修复首批最终交付6候选，R4 v2已应用校准斜率；R1结构组件对R6为NO_OP，不重复打包。23测试及最终身份/包校验通过，未提交/未评分。见 `reports/t3_repairs_20260921/REPORT.md`；D-20260921-T3REPAIR-001。
+
+- 2026-09-27｜n1quant｜新路线：按类型和深度分层的阳性分位数响应迁移，不替换整细胞；执行前设计冻结于 configs/t3_next/five_20260927.json，报告 reports/T3_FIVE_DESIGN_20260927.md；未提交/未评分。
+
+- 2026-09-27｜n2hurdle｜新路线：出现概率/阳性强度分开建模，允许零条目响应；执行前设计冻结于 configs/t3_next/five_20260927.json，报告 reports/T3_FIVE_DESIGN_20260927.md；未提交/未评分。
+
+- 2026-09-27｜n3latent｜新路线：来源响应低秩核回归，无图传播；执行前设计冻结于 configs/t3_next/five_20260927.json，报告 reports/T3_FIVE_DESIGN_20260927.md；未提交/未评分。
+
+- 2026-09-27｜o1stable｜优化既有R3：四空间块响应稳定性收缩；执行前设计冻结于 configs/t3_next/five_20260927.json，报告 reports/T3_FIVE_DESIGN_20260927.md；未提交/未评分。
+
+- 2026-09-27｜o2shrink｜优化既有R6：训练扰动内嵌套估计向均值收缩；执行前设计冻结于 configs/t3_next/five_20260927.json，报告 reports/T3_FIVE_DESIGN_20260927.md；未提交/未评分。
+
+2026-09-27（v0042 n1quant）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v1/n1quant/RESULT.json。
+
+2026-09-27（v0043 n2hurdle）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v1/n2hurdle/RESULT.json。
+
+2026-09-27（v0044 n3latent）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v1/n3latent/RESULT.json。
+
+2026-09-27（v0045 o1stable）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v1/o1stable/RESULT.json。
+
+2026-09-27（v0046 o2shrink）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v1/o2shrink/RESULT.json。
+
+- 2026-09-27｜o1stable首跑撤回｜v0045未提交，保留文件；Gata4自身置零幅度混入下游稳定性先验，v2排除该列并完整重训四块及最终模型；其余四路线不受影响。
+
+2026-09-27（v0047 o1stable）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v2/o1stable/RESULT.json。
+
+- 2026-09-27｜n2hurdle首跑撤回｜v0043未提交保留；原零值的负向加法请求需投影，改为正向有界log增量/负向有界原强度衰减，无负值裁剪；配置新快照与v2完整重训。
+
+2026-09-27（v0048 n2hurdle）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v2/n2hurdle/RESULT.json。
+
+- 2026-09-27｜五路线收口｜3新+2优化全量执行，最终 n1quant=v0042、n2hurdle=v0048、n3latent=v0044、o1stable=v0047、o2shrink=v0046；五contract/重放PASS，11测试；v0043/v0045撤回，未提交/未评分，不晋级。reports/t3_five_20260927/REPORT.md；D-20260927-T3FIVE-001。注：本轮候选自动登记沿用旧writer的“六路线”文案，实际属于本次五路线方案。

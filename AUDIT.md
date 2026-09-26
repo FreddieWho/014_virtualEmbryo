@@ -7,15 +7,15 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
 
-Score-pending rows: 15 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0034/next_r6meanfix, v0035/next_r6graphfix, v0036/next_r3linfix, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix)
+Score-pending rows: 20 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0034/next_r6meanfix, v0035/next_r6graphfix, v0036/next_r3linfix, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix, v0042/next_n1quant, v0044/next_n3latent, v0046/next_o2shrink, v0047/next_o1stable, v0048/next_n2hurdle)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (47 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (52 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 27
 - FAIL: 9
 - VOID: 2
 - PARKED: 2
-- PENDING_SERVER: 3
+- PENDING_SERVER: 8
 - GATE_ONLY: 4
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -31,6 +31,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T1-NEXT-R2: decoder damage confirmed (A energy 32x + var collapse) but residual repair only ties strict; no promotion path
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T3修复首批六候选已打包，等待回分；R6图优势未成立，R3/R4 WT门通过。R5扩链后续，selection不变。见 reports/t3_repairs_20260921/REPORT.md。
+- **当前执行分支**：T1-v0023 服务器 50.82 晋级新 best（Total 156.06）；R5 开工中（todo #30），R1 第二候选位保留，R3/R4 待对 v0023 基线，R6 PARKED 待数据源裁决。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

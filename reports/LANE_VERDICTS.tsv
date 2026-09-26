@@ -50,3 +50,8 @@ T3-REPAIR-R1-COMPONENT	T3:gata4	GATE_ONLY	NO_OP on both repaired R6 outputs; no 
 T1-NEXT-R1	T1:val	SHIPPED	B-rule quantile-shape: server 50.82 (+2.35, PROMOTED new best); zero-rate carries signal	v0023	SCORED 50.82; submetrics in SERVER_SUBMETRIC_REGISTRY.tsv	reports/SERVER_SCORE_REGISTRY.md#t1-next-r1-score-return-20260926	D-20260926-T1V23SCORE-001
 T1-NEXT-R2	T1:val	FAIL	decoder damage confirmed (A energy 32x + var collapse) but residual repair only ties strict; no promotion path	none	NOT_SUBMITTED / NOT_SCORED	artifacts/g0/T1-NEXT-R2-RESID-20260921-v1/RESULT.md	D-20260926-T1V23SCORE-001
 T1-NEXT-R6	T1:val	PARKED	sources are one study lineage; E7.75 exclusion ruling + barcode dedup + second source pending	none	NOT_SUBMITTED / NOT_SCORED	artifacts/g0/T1-NEXT-R6-SOURCE-REVIEW-20260921-v1/REVIEW.md	D-20260926-T1V23SCORE-001
+T3-FIVE-n1quant	T3:gata4	PENDING_SERVER	full run; contract and exact replay PASS; scientific NOT_VALIDATED	v0042	NOT_SUBMITTED	reports/t3_five_20260927/REPORT.md	D-20260927-T3FIVE-001
+T3-FIVE-n2hurdle	T3:gata4	PENDING_SERVER	full run; contract and exact replay PASS; scientific NOT_VALIDATED	v0048	NOT_SUBMITTED	reports/t3_five_20260927/REPORT.md	D-20260927-T3FIVE-001
+T3-FIVE-n3latent	T3:gata4	PENDING_SERVER	full run; contract and exact replay PASS; scientific NOT_VALIDATED	v0044	NOT_SUBMITTED	reports/t3_five_20260927/REPORT.md	D-20260927-T3FIVE-001
+T3-FIVE-o1stable	T3:gata4	PENDING_SERVER	full run; contract and exact replay PASS; scientific NOT_VALIDATED	v0047	NOT_SUBMITTED	reports/t3_five_20260927/REPORT.md	D-20260927-T3FIVE-001
+T3-FIVE-o2shrink	T3:gata4	PENDING_SERVER	full run; contract and exact replay PASS; scientific NOT_VALIDATED	v0046	NOT_SUBMITTED	reports/t3_five_20260927/REPORT.md	D-20260927-T3FIVE-001
