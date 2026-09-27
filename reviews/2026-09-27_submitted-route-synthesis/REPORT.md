@@ -148,7 +148,7 @@
 - `figures/01_board_best_vs_baseline.png`
 - `figures/02_family_gain.png`
 - `figures/03_submetric_deltas.png`
-- `data/all_scored.tsv`：全部已有总分的版本
-- `data/family_best.tsv`：路线族最好成绩
-- `data/submetric_delta.tsv`：子项变化
-- `data/build_review_assets.py`：图和表的生成脚本，只读台账
+- `tables/all_scored.tsv`：全部已有总分的版本
+- `tables/family_best.tsv`：路线族最好成绩
+- `tables/submetric_delta.tsv`：子项变化
+- `build_review_assets.py`：图和表的生成脚本，只读台账
