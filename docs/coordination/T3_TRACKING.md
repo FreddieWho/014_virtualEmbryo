@@ -192,3 +192,5 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 2026-09-27（v0048 n2hurdle）：新建六路线候选，parent=v0009；contract PASS，结构灾难检查 PASS，未提交/未评分，不晋级。证据 artifacts/t3_next/T3-FIVE-20260927-v2/n2hurdle/RESULT.json。
 
 - 2026-09-27｜五路线收口｜3新+2优化全量执行，最终 n1quant=v0042、n2hurdle=v0048、n3latent=v0044、o1stable=v0047、o2shrink=v0046；五contract/重放PASS，11测试；v0043/v0045撤回，未提交/未评分，不晋级。reports/t3_five_20260927/REPORT.md；D-20260927-T3FIVE-001。注：本轮候选自动登记沿用旧writer的“六路线”文案，实际属于本次五路线方案。
+
+- 2026-09-27｜FIVE+修复回分｜v0048 47.93 (+0.98) PROMOTED 新 T3 best；v0046 47.65 (+0.70)/v0034 47.53 (+0.58)/v0044 47.47 (+0.52) 超旧线居次；v0035 47.03/v0036 46.98/v0047 46.97 TIE；v0042 46.95 exact tie。Total 156.06→157.04。v0037/v0040/v0041 仍 score_pending。D-20260927-T3SCORE-001。

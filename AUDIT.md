@@ -5,18 +5,18 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
 - T1:val: **50.82** (v0023 t1_next_r1_qshape)
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
-- T3:gata4: **46.95** (v0014 g0_t3_r2_gradeddose)
+- T3:gata4: **47.93** (v0048 next_n2hurdle)
 
-Score-pending rows: 20 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0034/next_r6meanfix, v0035/next_r6graphfix, v0036/next_r3linfix, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix, v0042/next_n1quant, v0044/next_n3latent, v0046/next_o2shrink, v0047/next_o1stable, v0048/next_n2hurdle)
+Score-pending rows: 12 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (56 rows in LANE_VERDICTS.tsv)
-- SHIPPED: 27
+## Lane verdicts (58 rows in LANE_VERDICTS.tsv)
+- SHIPPED: 33
 - FAIL: 11
 - VOID: 2
 - PARKED: 2
-- PENDING_SERVER: 8
-- GATE_ONLY: 6
+- PENDING_SERVER: 2
+- GATE_ONLY: 8
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only
@@ -33,6 +33,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T1-NEXT-R4: module transport collapses (energy 6.79, lib 0.476); A/B identical; train fit already poor
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T2 九路线 M0 已冻结（5% 判据 + 父版本 SHA 实核 + 已耗尽轴清单），M1 researcher 检索与设计定稿待启动；T3 五路线 5 个候选已交付待回分；T1-NEXT R5 开工中。分支详情见“T2 九路线”节与 DECISIONS D-20260927-T2M0FREEZE-001。
+- **当前执行分支**：T2 九路线 M0 已冻结（5% 判据 + 父版本 SHA 实核 + 已耗尽轴清单），M1 researcher 检索与设计定稿待启动；T3 五路线 5 个候选已交付待回分；T1-NEXT 全收口（R1 v0023 50.82 selection 在位，R2/R3/R4/R5 诊断关闭，R6 PARKED）。分支详情见“T2 九路线”节与 DECISIONS D-20260927-T2M0FREEZE-001。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

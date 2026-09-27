@@ -798,3 +798,26 @@ Decision and limits:
 - R1 lane SHIPPED (scored, promoted). R1 second-candidate slot stays in reserve. R5/R3/R4 proceed against the new v0023 baseline; strict-shift remains a secondary control, not the bar.
 - No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260926-T1V23SCORE-001.
+
+<a id="t3-five-repair-score-return-20260927"></a>
+## T3 FIVE + repairs score return — 2026-09-27
+
+Source / raw evidence: user transcribed eight portal Model names, board totals and five skills each in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv; artifacts immutable. Parent v0009, contract PASS remain in that index. v0037/v0040/v0041 still score_pending (not in this return).
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__n1quant__v0042.h5ad | 46.95 | 39.2 | 49.7 | 50.0 | 51.5 | 51.0 |
+| t3_gata4__n3latent__v0044.h5ad | 47.47 | 40.8 | 49.5 | 50.0 | 52.1 | 51.2 |
+| t3_gata4__o2shrink__v0046.h5ad | 47.65 | 41.2 | 49.7 | 50.0 | 52.1 | 51.3 |
+| t3_gata4__o1stable__v0047.h5ad | 46.97 | 39.2 | 49.8 | 50.0 | 51.5 | 51.0 |
+| t3_gata4__n2hurdle__v0048.h5ad | 47.93 | 42.6 | 50.0 | 50.0 | 51.8 | 49.3 |
+| t3_gata4__r6meanfix__v0034.h5ad | 47.53 | 40.8 | 49.7 | 50.0 | 52.2 | 51.3 |
+| t3_gata4__r6graphfix__v0035.h5ad | 47.03 | 40.0 | 49.2 | 50.0 | 51.3 | 50.8 |
+| t3_gata4__r3linfix__v0036.h5ad | 46.98 | 39.2 | 49.8 | 50.0 | 51.5 | 51.0 |
+
+Decision and limits:
+- v0048 47.93 vs incumbent 46.95: +0.98, far outside the ±0.1 TIE band. PROMOTED: new T3 selection and highest observed. Server Total updates 156.06 → 157.04 (50.82 + 58.29 + 47.93; T1/T2 components unchanged; T2 heart_extrap 50.64-vs-50.53 OPEN item unaffected).
+- v0046 (+0.70), v0034 (+0.58), v0044 (+0.52) all beat the old incumbent but trail the new best; recorded as scored backups. v0035 (+0.08), v0036 (+0.03), v0047 (+0.02) TIE; v0042 exact tie.
+- Skill-level read (descriptive, not causal): v0048's gain concentrates in de_score (39.2→42.6, +3.4) with direction at 50.0; its variogram (49.3) trails v0046/v0034 (51.3). severity_slope reads 50.0 on all eight returns — floor-anchored, carries no discriminative signal in this batch.
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260927-T3SCORE-001.

@@ -812,6 +812,17 @@ reuse_promoted
 - status_correction: D5b最终RESULT为FAIL且无v0026，更新旧摘要；v0004仍为selection，v0019按原TIE规则不晋级。官方E7.75未发布，外部T1许可不继承T3。
 - boundary: 无新模型/候选/评分/下载；两点细胞留出不是独立时间外推，未证明E10.5或E12.5泛化；blocks_submission: false。
 
+  - boundary: 零候选、零评分、零上传；T2 自此无未跑的已规划路线；heart_extrap 50.64-vs-50.53 的聚合差异仍未闭合；blocks_submission: false。
+
+## D-20260927-T2LEADS-001
+
+- authorization: 用户于 2026-09-27 授权执行 T2 两条未完成线索（L-001 同靶 parent 参照、L-002 ε 两值敏感性），并要求其按敏感性分析而非网格搜索定性。
+- decision: L-001 关闭——对 T2 embryo parent v0002 跑锁定 scorer（同 pseudo-target E7.25／同 reference E6.75／同 seed 20260830），两个独立耦合指标同向变差（neighborhood_mmd 0.03124→0.03445；morans_I_agreement 0.9722→0.9555），排除“度量偏祥 parent”解释，embryo v0008 的 HOLD_AS_COMPONENT 升级为确证拒绝。L-002 关闭为已放弃——ε=0.002 使 plan 分散度大幅下降（有效来源数降到 18–20%）但效应未在两 holdout 同时变强（H1 反向 +0.000124），预声明升级判据未达成，不再扫 ε。
+- evidence: reports/T2_LEADS_CLOSURE_20260927.md；artifacts/tool_integration/T2-L001-EMBRYO-PARENT-REF-20260927-v1/；artifacts/tool_integration/T2-L002-FGW-EPS-SENSITIVITY-20260927-v1/（含复现对照，相对偏差 ≤7.5e-6，容差 1e-4）；scripts/t2_l2_eps_sensitivity.py；scorer 与 parent SHA 均与 P0-LOCK／input_lock 逐位一致。
+- method_note: 附带两条方法学结论——J1 的 NFS 镜像在 parent 臂上与官方 scorer 逐位吻合（代理当时无偏差）；冻结 FGW objective 的取值与官方度量镜像在 ε 方向上不对齐（objective 两 holdout 都更低而 NFS 只 H2 降），“objective 降 12.2% ⇒ 方向有效”缺一环。
+- boundary: 零候选、零评分、零上传，未消耗提交配额；INDEX 未改；J1-PROXY／J1-FGW-ASSIGNMENT／B4-T2-R1 只读未改；复现对照只到浮点精度未主张位级一致；H1 上 Q2 反向幅度小（相对 +1.1%），不声明“ε=0.002 在 embryo 上有害”；L-001 不能区分“置换无效”与“参考太弱”，二者对 v0008 处置结论相同；L-002 不回答是否存在更优第三值。
+- next_action: embryo 若再做行-点配对，前置条件是先修 M 参考构建（bracket 探针为负），已记入 LEADS L-006；heart_extrap 50.64-vs-50.53 聚合差异需重读门户页面。
+
 ## D-20260926-T1V23SCORE-001
 
 - authorization: 用户转录 v0023 服务器分数（total 50.82＋四子项），按既定回填链登记。
@@ -822,3 +833,58 @@ reuse_promoted
 ## D-20260927-T3FIVE-001 — 三条新路线与两条优化交付
 
 用户授权的五路线已全部实现并执行真实数据拟合/评价/目标推断，最终 v0042/v0044/v0046/v0047/v0048 contract PASS，11定向测试与五模型逐值重放PASS；未提交/未评分，selection v0009/v0010 不变。v0043/v0045 撤回保留，分别修正非负decoder与下游稳定性尺度后完整重训。收缩GCN仅小幅优于平均倍率、仍有跨样本失败；WT概率模型仅证明描述性预测优势，不能推导KO有效性。五lane PENDING_SERVER，旧六修复候选仍待回分。报告 reports/t3_five_20260927/REPORT.md；包 deliveries/five27__t3__upload__20260927.zip；blocks_submission: false。
+
+## D-20260927-T2M0FREEZE-001
+
+- authorization: 用户授权 T2 三个 board 各 2 新路线 + 1 条既有路线优化迭代共 9 条 lane，并裁定 5% 为量化阈值。
+- decision: 冻结 9 lane 的执行口径。(1) 父版本：embryo v0010(62.29)、heart_interp v0013(62.04)、heart_extrap 迭代父 v0011(50.64)，extrap selection 仍为 baseline v0001(50.53) 不改动，v0011 与 156.06 聚合的 0.11 差异保持 OPEN。(2) 5% 三分类：主指标 neighborhood_mmd（lower-better），degradation%>5% 或任一结构性失败→严重劣势、关闭淘汰且不占名额、触发替补；≤5% 且无签名→轻微劣势、照常交付可提交；边界一律从宽按轻微处理。(3) 每 lane 须同时报告 degradation% 与重复测量相对离散度 disp%（同输入同伪目标 3 个 scorer seed 的极差/均值），未报 disp% 者不得声明落在噪声内。(4) 设计文档 mtime 必须早于 run 目录 mtime，M5 逐条核查。(5) 替补上限每 board 1 条，用尽仍无候选则停止询问用户。(6) 不得重提已耗尽轴：FGW ε 离散化、heart_extrap 空间平滑族、extrap 位移幅度族、embryo 行-点配对（须先修 M 参考构建）。
+- evidence: reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md；父版本 SHA 磁盘复算与 submissions/INDEX.tsv 逐位一致；git status --porcelain submissions/ 输出 0 行（无已评分或候选产物被改动）；board 契约取自 artifacts/tool_integration/P0-LOCK/locks/BOARD_REGISTRY.yaml（veckit-0.1.1@46d41e6）。
+- counter_evidence_must_cite: extrap 迭代父 v0011（G1-T2-R2-SHRINK）当年本地门判 NOT promoted（neighborhood_mmd 0.20506、de_score 0.2466 钉死）而服务器给 50.64、+0.11、board 最高。若机械套用 5% 会误杀这条已晋级最高分路线，故 5% 只能作筛选器不能作证伪器；同一板另有反向例（空间平滑族本地全胜、服务器全负）。
+- boundary: 官方 target 为隐藏集，本地 scorer 无真值为 NOT_RUN_NO_MATCHED_TRUTH 而非跑不通；本地一律用观测期 stage 作 pseudo-target（证据第 4 层）并强制披露；5% 为单板单指标口径，主指标选择理由已在冻结文件写明；outputs/t2_pseudo_holdouts/ 当前未构建，extrap lane 如需 proxy 须先构建且不计 lane 预算；blocks_submission: false。
+
+## D-20260927-T2UNATTENDED-001
+
+- authorization: 用户 2026-09-27 睡前指示三件事——(1) 先跑 M1 两个预执行闸门；(2) **某条路线失败不消耗预算，须继续测试新路线**；(3) **所有形成硬阻隔的决策都尽量避免或推后**（用户将离开，不在线）。
+- decision: 进入无人值守窗口，coordinator 的决策权限边界如下。(a) **可自行决定并记名**：pseudo-target 选择、每 lane 2 臂的构成、几何/正则化等实现细节、闸门后对路线做的重定向、6 条新路线的取舍、替补路线的挑选。全部写入 DECISIONS 并在收口报告披露，供用户醒来后追认或否决。(b) **仍然必须停下，不因"避免阻隔"而越过**：改动任何已评分或不可变 artifact；需要目标阶段真值才能拟合（泄漏）；放宽或重定义既有 contract；伪造或推测服务器分数；覆盖用户已明确关闭的路线。(c) 「失败不消耗预算」的操作化：严重劣势淘汰的 lane 不占该 board 的 3 个名额，替补上限仍为每 board 1 条（M0 已定），替补用尽则转入"新路线轮"而非停机——新路线同样须走 researcher 检索 + 设计冻结 + 审稿，且每轮消耗一次用户未明示的算力，故每 board 累计超过 5 条 lane 时必须停下等用户醒来。
+- evidence: 用户的原始指示（本次会话）；M0 冻结文件 §8 预算记账与阻塞规则；reports/T2_NINE_ROUTES_20260927_M1_CANDIDATES.md §4 三条检索者自报存疑项。
+- boundary: 本决策只放宽"停机等待"这一项，不放宽任何科学或完整性约束；用户醒来后所有 (a) 类决定均标记为"待追认"，用户可否决并要求重做；blocks_submission: false。
+
+## D-20260927-T2GATES-001
+
+- authorization: 用户 2026-09-27 睡前授权「先跑 M1 两个预执行闸门」；并按 D-20260927-T2UNATTENDED-001 授权 coordinator 在无人值守窗口内自决模糊项并记名待追认。
+- decision: (1) **官方指标分层判决**——`T2/metrics_v2.py` 明示 `morans_I_agreement` 为 CONSTRAINT 非分数；`variogram_score(pred_X,true_X)` 为 PRIMARY-expression 且**坐标无关**；`d2_shape/occupancy_dice/sliced_wasserstein/scale_log_ratio` 为**纯坐标**指标，而现役几何逐位冻结，故这四个子分对只改表达的候选**恒定不变**。registry 中 heart `variogram` 32.2 为唯一离群项（其余 53–62）。(2) **闸门 A 判 CONFIRMED**：行置换统计不可分辨（均值偏移 −0.81%，落在同输入 6-seed 极差 4.19% 内），仅预测侧基因置乱恶化 **4.35×**，两侧同置乱 0.997×（对称不变）⇒ 度量的是基因间联合结构。原判据逻辑有错（位级阈值 1e-9 + 误用两侧同置乱臂），已在报告中纠正并公开。(3) **闸门 B 判前提未救回**：唯一为正的 V1 仅单方向 +0.0055，researcher 推荐的 V2/V3 全负且不优于基线；我原设的"任一变体任一方向>0"规则过松已纠正。另记：我的 V0 与 J1 历史值不等，因分层子样 seed 依赖 `side` 键。(4) **探针 C**：现役表达桥在两个插值板上**主动破坏**基因间协方差——embryo v0010 0.0907 vs 基线 0.0364（2.49× 更差）、heart v0013 0.0802 vs 基线 0.0557（1.44× 更差）；extrap v0011 0.0027 略优于基线 0.0032。(5) **噪声标定**：`neighborhood_mmd` 零噪声、de/de_direction/morans 零噪声、`variogram` 4.18%、`d2_shape` 4.50%、`energy_distance` 6.96%、`mmd_u` 9.00%。(6) **路线重定向**：E-N2/H-N1/X-N1 三条空间变异函数路线降级为备选（不占槽位）；E-N1/H-N2/X-N2 保留为新路线；三条迭代路线全部保留；每 board 腾出 1 个槽位给新增 GJC 族（基因间协方差保持/修复，A=保持、B=结构外推修复）。
+- evidence: reports/T2_M1_GATES_REPORT_20260927.md；artifacts/gate/T2_M1_GATES_20260927-v1/{gates.json,probe_c_variogram_tradeoff.json}；scripts/gate/t2_m1_gates_20260927.py；scripts/gate/t2_m1_probe_c_variogram.py；third_party/veckit/T2/metrics_v2.py 模块 docstring；reports/SERVER_SCORE_REGISTRY.md 的 heart_interp 子分登记。
+- self_corrections_disclosed: 闸门脚本 parents[1]→[2] 路径错；`mmd_u`→`mmd_unbiased` 函数名错；**闸门 A 判据逻辑错**（位级阈值 + 误用两侧同置乱臂），差点把已证实的假设标成不确定。
+- lesson_recorded: researcher 三份简报独立收敛到"空间变异函数"，而官方 `variogram` 是基因间协方差——**名字撞了、被预测量完全不同**；researcher 无代码读权限故非其失误，但后续不得再以"官方 variogram ⇒ 空间"为推理前提。
+- new_family_provenance: **GJC 族是本报告的推断，非 researcher 检索产物，无文献锚点**；按 M1 流程须补检索或由 coordinator 明确标注为"无先例的自研方向"，用户可整族撤销。
+- boundary: 全部为 pseudo-target（E7.25/E8.75/E9.5 观测期）上的**同目标相对**比较，不预测服务器分数；heart 的 E8.75 为 bracket stage，部分循环论证；`variogram` 判据阈值须 ≥10%（噪声 4.18%），`mmd_u` 须 >9%，**均不得套用 5%**；veckit 快照与服务器是否同版本无法验证，6 子分权重只能从回填值反推；blocks_submission: false。
+
+## D-20260927-T2LEADS-003
+
+- authorization: 用户 2026-09-27 指示「修 status/roadmap，然后完成 T2 的未完成路线」，并对 L-002 复现门问题明确选择「立新 atom 重跑一次」。
+- decision: (1) L-002 首次执行（atom v1）预声明的**绝对 1e-9** 复现容差**未通过**，且其 `reproduction_control_passed: false` **原样保留、产物不删不改**——根因是参照 TSV 只存 8 位小数（自对齐精度 ±5e-9），绝对 1e-9 在构造上不可达。(2) 立 **atom B**（`T2-L002B-FGW-EPS-SENSITIVITY-20260927-v1`），把容差改为**相对 1e-4 并在跑前声明**（PRE_RUN_DECLARED.py 与执行版 SHA 相同 `dd33f13e…`），对照**通过**（相对偏差 2.4e-08 ~ 7.5e-06）。(3) **atom B 不是第二次独立观测**：ε/冻结输入/离散规则/随机包络与 v1 逐位相同且求解确定，实测四臂 NFS 差值 0.000e+00；1e-4 系看过 v1 偏差后标定，**引用必须成对**。(4) **机制更正**：新诊断测得两 ε 臂离散化后**只有 46.05% / 45.80% 的位置选中同一行**（54% 不同），故"两 ε 落到相同行"被否证；正确机制是**冻结目标面在 ε 方向上接近退化**——两个解很不一样但 objective 分不出高下（hard 相对差 2.4e-03 / 4.6e-03），这是 `B4-T2-R1` 全量 heart 双 TIE（57.3 / 57.31）的成因。(5) L-002 关闭结论不变（已放弃、不再扫 ε），但**理由升级**：「把同一目标解得更好」这条轴在 T2 判为死路，复活该方向需要让目标有判别力或换参考构建，均属新路线。
+- evidence: reports/T2_LEADS_CLOSURE_20260927.md（atom B 补正节）；artifacts/tool_integration/T2-L002B-FGW-EPS-SENSITIVITY-20260927-v1/{RESULT.md,metrics/sensitivity_results.json,provenance/}；atom v1 provenance/PROVENANCE.json 与 t2_l2_eps_sensitivity.EXECUTED.cpython-311.pyc（SHA `429814c6…`，即实际执行 1e-9 版本的字节级见证）。
+- boundary: 零候选、零 h5ad、零 submission、`submissions/INDEX.tsv` 未改、零上传、未消耗提交配额；全部为 pseudo-target（E7.25 / E8.75 观测期）上的 source-only 相对比较，不预测服务器分数；不构成对 T2 任一 board 的机制性主张；blocks_submission: false。
+- process_note: 本 atom 跑在共享工作树中，同时段另一持租约会话（T3 五路线 → T1-NEXT R3/R4 → T2 M1 闸门）在同一目录写入，且在 v1 执行后改写过本 atom 的产出脚本。已通过 `.pyc` 留证实际执行版本、以 atom B 重建事前声明链解决；未触碰任何已评分 artifact、INDEX 行、registry 条目或其他 lane 结果。**教训：共享工作树下的 gate 容差不得由后到会话"顺手修正"，须以新 atom 事前声明。**
+
+## D-20260927-T2M0APPX-001
+
+- authorization: 用户 2026-09-27 指令范围为 T2；本条为 `reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md` §7 关闭依据的证据更新。
+- decision: 按 M0 §0「不得回改而不追加新决策」的规则，**新增附录 A（§11）而不修改 §7 原文**。§7 两行的判定与后果**均不变**，仅更新关闭依据：① FGW ε 轴的真实理由是**冻结目标面在 ε 方向接近退化**（两 ε 落点差 54%、hard objective 仅差 2.4e-03/4.6e-03），而非「ε 不敏感」；后果扩展为**任何「把同一目标解得更好」的方向都不应被期待带来 board 增益**。② embryo 配对轴补一条前置约束：只换 M 参考数据可能不够，新参考需**同时改变被优化的目标**。已核对：本轮 9 条 lane 均不使用 FGW 目标、不做行-点配对，**与该约束一致，无需修改任何 lane**。
+- evidence: reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md §11；artifacts/tool_integration/T2-L002B-FGW-EPS-SENSITIVITY-20260927-v1/RESULT.md；reports/T2_LEADS_CLOSURE_20260927.md（atom B 补正节）；LEADS.md L-002 与 L-006 各自的 2026-09-27 补正。
+- boundary: 纯文档口径更新；未训练、未改已评分/候选产物、未改 selection、未上传；`blocks_submission: false`。
+
+## D-20260927-T2PROBED-001
+
+- authorization: 用户 2026-09-27「全都开始执行」。在执行前发现闸门 A/B 与引用核验已推翻 9 条候选中 4 条的被预测量，故未盲目建候选，改先跑**无争议且为所有修复路线共同前置**的探针 D。
+- decision: 探针 D（只读）定位 B4-T2-R2 表达桥的基因间协方差损失来源，**结论三条**：(1) **归因修正**——罪魁是 **mean bridge 本身**，不是 mass/组成重采样；embryo 父→L1 已跳 2.440×，L2 相对 L1 仅 +2.24%，heart 上 L2 反而 −2.77%，两者均在闸门标定的 4.2% 噪声带内**不可分辨**。探针 C「组成重采样破坏协方差」的矛头指向错误，照原建议改 mass 臂会改错对象。(2) **探针 C 的行动建议被部分推翻**——「该子分可免费拿回且不影响其他子分」不成立：破坏最重的 embryo L2（2.495×）与 heart L2（1.209×）**恰是服务器 board best**（62.29/62.04），而破坏较轻的 heart L1（1.243×）反被淘汰（56.27）。服务器未因该子分变差而惩罚这两条路线，故「拿回协方差」是高风险假设而非已确认的高性价比入口。(3) **新增一个 proxy–server 反向族**——两个插值板上 `mmd_u` 均判 L1 更好而服务器均给 L2 更高分；连同 G1-T2-R3/R4 空间族与 G1-T2-R2 收缩，构成第三个本地门失效族。
+- evidence: artifacts/gate/T2_PROBE_D_GENE_COV-20260927-v1/{RESULT.md,probe_d_gene_cov.json}；scripts/gate/t2_probe_d_gene_cov.py；上游 D-20260927-T2GATES-001（闸门 A/B、探针 C、噪声标定）。arm 路径逐条取自 submissions/INDEX.tsv 并在跑前核对。
+- open_issue_for_coordinator: 探针 D 结论 (3) 对 M0 §3.2「分布侧会签」有直接影响——若会签单独使用 `mmd_u`，在 B4-T2-R2 族会给出与服务器相反的信号。**建议**追加新决策：该族上会签须与 `neighborhood_mmd` 同向才生效。**本次未回改 M0**（按其 §0 冻结规则须追加而非修改）。
+- boundary: 只读探针；零候选、零 h5ad、零 submission、`submissions/INDEX.tsv` 未改、零上传；全部为 pseudo-target 上的同目标同 seed 相对比较，**不预测服务器分数**；未重新查询服务器、未产生新分数；`blocks_submission: false`。
+
+## D-20260927-T3SCORE-001
+
+- authorization: 用户转录 8 个 T3 分数（FIVE 五件＋修复三件：v0042/v0044/v0046/v0047/v0048/v0034/v0035/v0036），按既定回填链登记。
+- decision: v0048 47.93（+0.98）PROMOTED 为新 T3 selection；Total 记 157.04；FIVE 五 lane＋REPAIR-R6 转 SHIPPED，REPAIR-R3 部分回填（v0037 待分）；v0046/v0034/v0044 记 scored backup。
+- evidence: reports/SERVER_SCORE_REGISTRY.md#t3-five-repair-score-return-20260927；INDEX 八行 scored；SUBMETRIC＋40 行；用户转录原文（ID/时间戳未提供）。
+- boundary: 分数未从舍入子项重构；severity 全 50.0 无判别信号；本次无新拟合/候选；v0037/v0040/v0041 不在此轮；blocks_submission: false。

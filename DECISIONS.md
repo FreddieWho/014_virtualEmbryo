@@ -69,6 +69,22 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 
 - D-20260921-T1NEXT-001：T1六路线方案准备完成，全部未执行；订正D5b旧滞后状态，selection不变。见 [协调决策](docs/coordination/DECISIONS.md)。
 
+- D-20260927-T2LEADS-001：T2 两条未完成线索（L-001/L-002）执行收口；embryo v0008 确证拒绝、FGW ε 轴耗尽，T2 无未跑已规划路线；零候选零评分。见 [协调决策](docs/coordination/DECISIONS.md)。
+
 - D-20260926-T1V23SCORE-001：T1-v0023 服务器 50.82（+2.35）晋级新 best，Total 156.06；R1 SHIPPED，R2 诊断关闭，R6 PARKED。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260927-T3FIVE-001：T3 三新+两优化全量完成，五候选未提交/未评分，两个首跑撤回；contract/重放/11测试通过，best不变。见 [统一报告](reports/t3_five_20260927/REPORT.md)、[协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2M0FREEZE-001：T2 九路线 M0 冻结——父版本 SHA 实核、5% 三分类判据（主指标 neighborhood_mmd，结构性失败一票否决、边界从宽）、disp% 必报、设计先于训练、替补上限每 board 1 条、5 条已耗尽轴不得重提；extrap 迭代父用 v0011(50.64) 但不动 selection，0.11 差异 OPEN。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2UNATTENDED-001：无人值守窗口决策边界——模糊选择由 coordinator 自行决定并记名待追认；改动已评分 artifact／目标泄漏／放宽 contract／伪造分数／复活已关闭路线仍然硬停；「失败不消耗预算」= 淘汰不占名额，替补上限后转入新路线轮，每 board 累计超 5 条 lane 即停等用户。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2GATES-001：M1 闸门判决——官方 `variogram` 经三臂对照确认为**坐标无关的基因间协方差**（行置换不可分辨、基因置乱 4.35×），`morans_I_agreement` 为 CONSTRAINT 非分数，几何冻结使四个纯坐标子分恒定；探针 C 实测现役表达桥把协方差**弄坏**（embryo 2.49×、heart 1.44× 于基线），噪声标定 `neighborhood_mmd` 零噪声而 `variogram` 4.18%。据此把三条空间变异函数路线降级为备选，腾出槽位给新增 GJC 族（**无文献先例的自研方向，用户可整族撤销**）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2LEADS-003：L-002 atom B 程序性修复＋机制更正——复现门由绝对 1e-9 改为**跑前声明**的相对 1e-4 并通过；atom B **非独立复现**（与 v1 数字逐位相同）；新诊断测得两 ε 臂落点仅 46% 重合，故"落到相同行"被否证，正确机制是**冻结 FGW 目标面在 ε 方向近退化**（两解不同但 objective 分不出高下），据此判定「把同一目标解得更好」这条轴在 T2 为死路。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2M0APPX-001：T2 九路线 M0 §7 关闭依据的证据更新（**追加附录 A，不回改 §7**）——FGW ε 轴真实理由为**目标面近退化**（落点差 54% 而 objective 仅差 2.4e-03/4.6e-03），后果扩展为「把同一目标解得更好」在 T2 均无望；embryo 配对轴补「只换参考可能不够，须同时换目标」的前置约束。已核对 9 条 lane 均不触碰该约束。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2PROBED-001：T2 探针 D（只读）——表达桥的基因间协方差损失**归因于 mean bridge 本身**而非 mass 臂（embryo 父→L1 已 2.440×；L2 vs L1 差在 4.2% 噪声内不可分辨），并**部分推翻探针 C 的「免费拿回」建议**（破坏最重的两臂恰是服务器 board best）；另发现 `mmd_u` 在 B4-T2-R2 族**与服务器反向**，构成第三个本地门失效族，对 M0 §3.2 会签规则有影响（建议追加新决策，未回改 M0）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T3SCORE-001：T3 八分回填，v0048 47.93（+0.98）晋级新 best，Total 157.04；FIVE＋R6 转 SHIPPED，R3 部分回填。见 [协调决策](docs/coordination/DECISIONS.md)。
