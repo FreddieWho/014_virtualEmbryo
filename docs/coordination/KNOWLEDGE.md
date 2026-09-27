@@ -283,3 +283,7 @@ boundary         适用范围或不可推断边界
 ### 2026-09-27 T1：显式分布参数、类型迁移与实际代码
 
 成熟度：工程复现CONFIRMED、预测EXPLORATORY_LOCAL。证据 reports/t1_five_20260927/REPORT.md 与所指五个run。旧R1 builder计算的p_pred未用于输出；已评分v0023实际是重复施加经验分布映射，已逐值复现，评分保持有效但旧机制表述需收窄。新类型变化迁移本地五主项均胜v0023规则，但逐类型留出仅接近平均倍率，不能据此识别谱系；显式零质量优化与非负倍率残差均未形成整体收益。完整32,285列输入scorer，使用锁定官方内部抽样/降维默认；已见同阶段训练细胞、同一split重复使用、无独立胚胎编号，不等于E10.5外推或因果验证。blocks_submission: false。
+
+### 2026-09-28 T3：组合与可恢复空间
+
+成熟度：工程复现CONFIRMED，科学INCONCLUSIVE_NEEDS_INDEPENDENT_TRUTH。证据 reports/t3_round2_20260928/REPORT.md 与所指完整run。高分H/G输出变化余弦0.1263不能替代真实错误相关性；正反次序差249982条目，说明算子不交换而非一方更准。WT正交模型不胜混杂基线，logistic当前C=.01较旧hurdle差；基因收缩只在一个源样本迁移方向改善。固定源模型消融说明收益主要来自强度，出现率贡献不稳定。不能由此声称真实KO信息受限、dropout可恢复比例或因果机制否定。v0049组合合法可仲裁；blocks_submission: false。

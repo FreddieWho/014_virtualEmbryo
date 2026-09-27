@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Itemized delivery closure using completed execution and independent validation receipts; no model rerun",
+  "checks": {
+    "three_new_two_optimizations": "PASS",
+    "all_full_models_contract_and_hashes": "PASS",
+    "n1stack_executed": "PASS",
+    "n1stack_registered": "PASS",
+    "n1stack_audit_entry": "PASS",
+    "n2orth_executed": "PASS",
+    "n2orth_registered": "PASS",
+    "n2orth_audit_entry": "PASS",
+    "n3occup_executed": "PASS",
+    "n3occup_registered": "PASS",
+    "n3occup_audit_entry": "PASS",
+    "o1logit_executed": "PASS",
+    "o1logit_registered": "PASS",
+    "o1logit_audit_entry": "PASS",
+    "o2geneshrink_executed": "PASS",
+    "o2geneshrink_registered": "PASS",
+    "o2geneshrink_audit_entry": "PASS",
+    "actual_high_score_stack_six_arms": "PASS",
+    "specified_KIR_document_locked": "PASS",
+    "tests_passed": "PASS",
+    "package_five_members_hash": "PASS",
+    "readonly_component_ablation": "PASS",
+    "paired_decision_indices": "PASS",
+    "five_lane_verdicts": "PASS",
+    "tracking_report": "PASS"
+  },
+  "unrun": {
+    "matched_Gata4_KO_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+    "portal_upload": "NOT_RUN",
+    "new_server_scores": "NOT_RUN",
+    "independent_causal_validation": "NOT_RUN"
+  },
+  "scientific_verdict": "INCONCLUSIVE_NEEDS_INDEPENDENT_TRUTH",
+  "blocks_submission": false,
+  "external_data_added": false
+}

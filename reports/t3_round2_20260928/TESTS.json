@@ -1,0 +1,7 @@
+{
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q tests/t3_round2/test_ops.py tests/t3_next/test_five.py",
+  "exit_code": 0,
+  "result": "13 passed in 1.41s",
+  "evidence": "exec session 28209 final stdout",
+  "scope": "nonnegative/identity, occupancy support, orthogonal predictor isolation, logistic probability and nested shrink outer-label isolation; engineering not biological validation"
+}

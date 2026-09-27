@@ -194,3 +194,25 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-27｜五路线收口｜3新+2优化全量执行，最终 n1quant=v0042、n2hurdle=v0048、n3latent=v0044、o1stable=v0047、o2shrink=v0046；五contract/重放PASS，11测试；v0043/v0045撤回，未提交/未评分，不晋级。reports/t3_five_20260927/REPORT.md；D-20260927-T3FIVE-001。注：本轮候选自动登记沿用旧writer的“六路线”文案，实际属于本次五路线方案。
 
 - 2026-09-27｜FIVE+修复回分｜v0048 47.93 (+0.98) PROMOTED 新 T3 best；v0046 47.65 (+0.70)/v0034 47.53 (+0.58)/v0044 47.47 (+0.52) 超旧线居次；v0035 47.03/v0036 46.98/v0047 46.97 TIE；v0042 46.95 exact tie。Total 156.06→157.04。v0037/v0040/v0041 仍 score_pending。D-20260927-T3SCORE-001。
+
+- 2026-09-28 T3-ROUND2 n1stack：新1：高分v0048与v0046顺序叠加，单组件/平均融合/反向次序消融；配置与kill-test对照已冻结，完整执行；未提交/未评分。设计 reports/T3_ROUND2_DESIGN_20260928.md。
+
+- 2026-09-28 T3-ROUND2 n2orth：新2：类型空间混杂交叉拟合后学习正交残差响应；配置与kill-test对照已冻结，完整执行；未提交/未评分。设计 reports/T3_ROUND2_DESIGN_20260928.md。
+
+- 2026-09-28 T3-ROUND2 n3occup：新3：合规来源检测率与阳性强度的联合迁移；配置与kill-test对照已冻结，完整执行；未提交/未评分。设计 reports/T3_ROUND2_DESIGN_20260928.md。
+
+- 2026-09-28 T3-ROUND2 o1logit：优化v0048：Bernoulli logistic替换裁剪线性概率；配置与kill-test对照已冻结，完整执行；未提交/未评分。设计 reports/T3_ROUND2_DESIGN_20260928.md。
+
+- 2026-09-28 T3-ROUND2 o2geneshrink：优化v0046：训练内部OOF估计输出基因收缩权重；配置与kill-test对照已冻结，完整执行；未提交/未评分。设计 reports/T3_ROUND2_DESIGN_20260928.md。
+
+- 2026-09-28 T3-ROUND2 n1stack 新候选 v0049，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/n1stack/RESULT.json。
+
+- 2026-09-28 T3-ROUND2 n2orth 新候选 v0050，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/n2orth/RESULT.json。
+
+- 2026-09-28 T3-ROUND2 n3occup 新候选 v0051，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/n3occup/RESULT.json。
+
+- 2026-09-28 T3-ROUND2 o1logit 新候选 v0052，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/o1logit/RESULT.json。
+
+- 2026-09-28 T3-ROUND2 o2geneshrink 新候选 v0053，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/o2geneshrink/RESULT.json。
+
+- 2026-09-28 ROUND2收口：三新n1stack=v0049（高分v0048+v0046叠加）、n2orth=v0050、n3occup=v0051；两优化o1logit=v0052、o2geneshrink=v0053。全部全量执行/contract/独立模型重放PASS，13测试。KIR经验落实为精确组件复现、六臂组合诊断、强均值/置乱对照及固定模型出现率/强度消融；局部多数弱或负，不调参救门。未提交/未评分，best v0048保持；reports/t3_round2_20260928/REPORT.md；D-20260928-T3R2-001。
