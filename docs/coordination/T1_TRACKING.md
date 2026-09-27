@@ -167,3 +167,25 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-27 T1-NEXT-R3 诊断关闭（无候选）：对角≈strict 持平（de +0.018 系噪声）；低秩不胜对角（dir −0.05、energy +21%），触发 §6 停止条。结论：D2 之败不止于病态 det 目标——良态有界线性映射同样不胜位移，弱环是两点线性步本身。证据 `artifacts/g0/T1-NEXT-R3-LIN-20260921-v1/RESULT.md`。
 
 - 2026-09-27 T1-NEXT-R4 诊断关闭（无候选）：模块运输双崩——energy 6.79（13 倍）、library 0.476（裁剪吃掉一半）；A/B 四位小数一致（权重无分化），训练运输误差本身已差，Sinkhorn 逐类型数值警告。§7 双停止条全中。模块限制救不了 OT，失败从耦合搬到了映射。证据 `artifacts/g0/T1-NEXT-R4-MODOT-20260921-v1/RESULT.md`。
+
+- 2026-09-27 T1-FIVE n1density：新路线：类型内阶段密度比，完整细胞重加权；配置先冻结，完整32285列/5118最终行；未提交/未评分，设计 reports/T1_FIVE_DESIGN_20260927.md。
+
+- 2026-09-27 T1-FIVE n2param：新路线：零质量+阳性log-normal参数化运输；配置先冻结，完整32285列/5118最终行；未提交/未评分，设计 reports/T1_FIVE_DESIGN_20260927.md。
+
+- 2026-09-27 T1-FIVE n3borrow：新路线：共同类型变化迁移到晚期特有类型；配置先冻结，完整32285列/5118最终行；未提交/未评分，设计 reports/T1_FIVE_DESIGN_20260927.md。
+
+- 2026-09-27 T1-FIVE o1mass：优化R1：显式零质量与阳性分位数外推；配置先冻结，完整32285列/5118最终行；未提交/未评分，设计 reports/T1_FIVE_DESIGN_20260927.md。
+
+- 2026-09-27 T1-FIVE o2rate：优化R2：原强度倍率空间低秩残差decoder；配置先冻结，完整32285列/5118最终行；未提交/未评分，设计 reports/T1_FIVE_DESIGN_20260927.md。
+
+- 2026-09-27 T1-FIVE n1density 新候选 v0024：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/n1density/RESULT.json。
+
+- 2026-09-27 T1-FIVE n2param 新候选 v0025：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/n2param/RESULT.json。
+
+- 2026-09-27 T1-FIVE n3borrow 新候选 v0026：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/n3borrow/RESULT.json。
+
+- 2026-09-27 T1-FIVE o1mass 新候选 v0027：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/o1mass/RESULT.json。
+
+- 2026-09-27 T1-FIVE o2rate 新候选 v0028：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/o2rate/RESULT.json。
+
+- 2026-09-27 T1-FIVE 收口：n1density=v0024、n2param=v0025、n3borrow=v0026、o1mass=v0027、o2rate=v0028，三新+两优化全部全量拟合/目标推断与完整panel官方scorer执行；9测试及五模型独立逐值重放PASS。n3borrow本地五主项均优，但类型特异机制未确证；o1/o2未胜基线。全部未提交/未评分，best v0023保持。reports/t1_five_20260927/REPORT.md；D-20260927-T1FIVE-001。

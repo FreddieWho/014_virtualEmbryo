@@ -1,0 +1,7 @@
+{
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q tests/t1_five/test_ops.py",
+  "exit_code": 0,
+  "result": "9 passed in 0.67s",
+  "evidence": "exec session 55292 completion, 2026-09-27",
+  "scope": "whole-cell/type-preserving resampling, bounded raw-intensity decoder and exact zero-rate identity, donor exclusion, response factor reconstruction, legacy transport equivalence, explicit zero mass, saved parametric model isolation; not scientific efficacy; explicit unchanged-distribution identity for both mixture models"
+}

@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "lane": "n1density",
+      "run": "artifacts/t1_five/T1-FIVE-20260927-v1/n1density",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "c3d99020f6b7ac9ce474390309925fea24f1c0725a38f1b4cbe28f9df0d2744e",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0024",
+      "contract": "PASS",
+      "expression_sha256": "e753379b995e2eb047e53011bb435ab6f94e797df4f305d35d507e7326054f8e",
+      "changed_entries": 14452827,
+      "changed_cells": 2354,
+      "changed_genes": 24615
+    },
+    {
+      "lane": "n2param",
+      "run": "artifacts/t1_five/T1-FIVE-20260927-v1/n2param",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "eb7e980f1d70c917324d9a201b5b4efbc465dc40106d800172be93f57adbc8da",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0025",
+      "contract": "PASS",
+      "expression_sha256": "d8c12f9de142e7a9dd0d66e705b07812a7d26bd0d65d8f7f301c538a52047a5d",
+      "changed_entries": 10655925,
+      "changed_cells": 2664,
+      "changed_genes": 17674
+    },
+    {
+      "lane": "n3borrow",
+      "run": "artifacts/t1_five/T1-FIVE-20260927-v1/n3borrow",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "53b7287bfeaa9fed85101bfe0bb57b5fcacb9c3b5514a5b489c0b18025c48d2b",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0026",
+      "contract": "PASS",
+      "expression_sha256": "204139909c674f49736213178b2e3677e8dd72539ee34901422b30d07d6089fc",
+      "changed_entries": 9812574,
+      "changed_cells": 2454,
+      "changed_genes": 22564
+    },
+    {
+      "lane": "o1mass",
+      "run": "artifacts/t1_five/T1-FIVE-20260927-v1/o1mass",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "b7e24817f7963747b7fa44a8edd4f41b7dea5ca0e729e22deee8f6f7202e966b",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0027",
+      "contract": "PASS",
+      "expression_sha256": "f8768a3da70fa6ecd95886ada4afa48a858080ef4adf29de39f6d07c7121f441",
+      "changed_entries": 10832504,
+      "changed_cells": 2664,
+      "changed_genes": 17676
+    },
+    {
+      "lane": "o2rate",
+      "run": "artifacts/t1_five/T1-FIVE-20260927-v1/o2rate",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "85cb54f532b1096a0b0d62096c3ccc683a2fa8b3256ee34e1a461d3dbc846ed6",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0028",
+      "contract": "PASS",
+      "expression_sha256": "2089dfcfb337a767202517d2ccd4f6a547197078d5dc331d04faa7c2e102b7d3",
+      "changed_entries": 13691952,
+      "changed_cells": 2664,
+      "changed_genes": 25375
+    }
+  ],
+  "routes_executed": 5,
+  "new_routes": 3,
+  "existing_optimizations": 2,
+  "full_panel_scorers": 5,
+  "package_candidates": 5,
+  "server_scored": false
+}

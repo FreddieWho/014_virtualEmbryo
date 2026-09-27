@@ -1,0 +1,172 @@
+{
+  "baseline": {
+    "de_score": 0.6296,
+    "de_direction": 0.5515,
+    "energy_distance": 0.18142,
+    "mmd_u": 0.01276,
+    "variogram": 0.000484,
+    "pb_rel_err": 0.058,
+    "library_size_ratio": 1.0,
+    "variance_ratio": 1.043,
+    "composition_JSD": 0.083,
+    "pseudobulk_pearson": 0.998,
+    "_de_raw": 0.6429,
+    "_de_chance": 0.0357,
+    "_de_chance_unif": 0.0017,
+    "_n_up": 30,
+    "_n_dn": 26
+  },
+  "routes": {
+    "n1density": {
+      "candidate": "v0024",
+      "metrics": {
+        "de_score": 0.6111,
+        "de_direction": 0.5486,
+        "energy_distance": 0.17453,
+        "mmd_u": 0.01181,
+        "variogram": 0.000461,
+        "pb_rel_err": 0.0563,
+        "library_size_ratio": 1.0,
+        "variance_ratio": 1.05,
+        "composition_JSD": 0.0814,
+        "pseudobulk_pearson": 0.9982,
+        "_de_raw": 0.625,
+        "_de_chance": 0.0357,
+        "_de_chance_unif": 0.0017,
+        "_n_up": 30,
+        "_n_dn": 26
+      },
+      "checks": {
+        "status": "PASS",
+        "library_ratio_q01": 0.8128370571136475,
+        "library_ratio_q99": 1.262411524057388,
+        "variance_ratio": 1.0171430110931396,
+        "changed_entries": 14452827,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8611899575772948,
+        "full_genes": 32285
+      }
+    },
+    "n2param": {
+      "candidate": "v0025",
+      "metrics": {
+        "de_score": 0.6296,
+        "de_direction": 0.5513,
+        "energy_distance": 0.17672,
+        "mmd_u": 0.01274,
+        "variogram": 0.000471,
+        "pb_rel_err": 0.0576,
+        "library_size_ratio": 1.0,
+        "variance_ratio": 1.033,
+        "composition_JSD": 0.0842,
+        "pseudobulk_pearson": 0.9981,
+        "_de_raw": 0.6429,
+        "_de_chance": 0.0357,
+        "_de_chance_unif": 0.0017,
+        "_n_up": 30,
+        "_n_dn": 26
+      },
+      "checks": {
+        "status": "PASS",
+        "library_ratio_q01": 0.9517144906520844,
+        "library_ratio_q99": 1.0605320942401886,
+        "variance_ratio": 0.9908291101455688,
+        "changed_entries": 10655925,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8638065398276378,
+        "full_genes": 32285
+      }
+    },
+    "n3borrow": {
+      "candidate": "v0026",
+      "metrics": {
+        "de_score": 0.6481,
+        "de_direction": 0.5711,
+        "energy_distance": 0.15726,
+        "mmd_u": 0.01253,
+        "variogram": 0.000461,
+        "pb_rel_err": 0.0544,
+        "library_size_ratio": 1.001,
+        "variance_ratio": 1.043,
+        "composition_JSD": 0.0846,
+        "pseudobulk_pearson": 0.9983,
+        "_de_raw": 0.6607,
+        "_de_chance": 0.0357,
+        "_de_chance_unif": 0.0017,
+        "_n_up": 30,
+        "_n_dn": 26
+      },
+      "checks": {
+        "status": "PASS",
+        "library_ratio_q01": 0.9970058047771454,
+        "library_ratio_q99": 1.0415153658390046,
+        "variance_ratio": 1.006744146347046,
+        "changed_entries": 9812574,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8607906587136123,
+        "full_genes": 32285
+      }
+    },
+    "o1mass": {
+      "candidate": "v0027",
+      "metrics": {
+        "de_score": 0.6111,
+        "de_direction": 0.5512,
+        "energy_distance": 0.17928,
+        "mmd_u": 0.0132,
+        "variogram": 0.000478,
+        "pb_rel_err": 0.0583,
+        "library_size_ratio": 1.0,
+        "variance_ratio": 1.021,
+        "composition_JSD": 0.0833,
+        "pseudobulk_pearson": 0.998,
+        "_de_raw": 0.625,
+        "_de_chance": 0.0357,
+        "_de_chance_unif": 0.0017,
+        "_n_up": 30,
+        "_n_dn": 26
+      },
+      "checks": {
+        "status": "PASS",
+        "library_ratio_q01": 0.8988733053207397,
+        "library_ratio_q99": 1.0119900727272033,
+        "variance_ratio": 0.9695559740066528,
+        "changed_entries": 10832504,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8629233593466454,
+        "full_genes": 32285
+      }
+    },
+    "o2rate": {
+      "candidate": "v0028",
+      "metrics": {
+        "de_score": 0.463,
+        "de_direction": 0.5164,
+        "energy_distance": 0.24492,
+        "mmd_u": 0.01551,
+        "variogram": 0.000729,
+        "pb_rel_err": 0.0687,
+        "library_size_ratio": 1.0,
+        "variance_ratio": 0.994,
+        "composition_JSD": 0.0646,
+        "pseudobulk_pearson": 0.9972,
+        "_de_raw": 0.4821,
+        "_de_chance": 0.0357,
+        "_de_chance_unif": 0.0017,
+        "_n_up": 30,
+        "_n_dn": 26
+      },
+      "checks": {
+        "status": "PASS",
+        "library_ratio_q01": 0.7603290742635727,
+        "library_ratio_q99": 1.0463035237789153,
+        "variance_ratio": 0.9345226883888245,
+        "changed_entries": 13691952,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8782683932538838,
+        "full_genes": 32285
+      }
+    }
+  },
+  "scope": "official local report-scenario metrics, not server scores"
+}

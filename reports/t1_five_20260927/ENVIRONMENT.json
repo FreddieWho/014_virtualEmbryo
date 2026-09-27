@@ -1,0 +1,13 @@
+{
+  "python": "3.11.5",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.3.3",
+    "anndata": "0.12.19",
+    "scikit-learn": "1.5.1"
+  },
+  "execution_threads": 8,
+  "seed": 20260921,
+  "scorer_lock": "artifacts/tool_integration/P0-LOCK/locks/SCORER_LOCK.json"
+}

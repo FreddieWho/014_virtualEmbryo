@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_LOCAL_DELIVERY_NOT_SUBMITTED",
+  "root": "artifacts/t1_five/T1-FIVE-20260927-v1",
+  "process_receipt": "artifacts/t1_five/T1-FIVE-20260927-v1/PROCESS.json",
+  "routes": [
+    "n1density",
+    "n2param",
+    "n3borrow",
+    "o1mass",
+    "o2rate"
+  ],
+  "completed_baseline_audit": "artifacts/t1_five/T1-FIVE-20260927-v1/shared/READY.json",
+  "test_receipt": "reports/t1_five_20260927/TESTS.json",
+  "resume_rule": "Revalidate live exec session with write_stdin before inferring termination. Never restart from state/log age alone. Pipeline runs all five serially. On terminal failure inspect FAILURE before new immutable run.",
+  "remaining": [],
+  "data_boundary": "No E10.5/E12.5 truth; no external download; full32285 genes; 5118final cells",
+  "completed_exec_session_id": 81001,
+  "delivery_exec_session_id": 68463,
+  "delivery": "deliveries/t1five__t1__upload__20260927.zip",
+  "validation": "reports/t1_five_20260927/VALIDATION.json",
+  "completion_audit": "reports/t1_five_20260927/COMPLETION_AUDIT.json"
+}

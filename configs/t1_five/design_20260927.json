@@ -1,0 +1,66 @@
+{
+  "schema": "ve.t1.five.v1",
+  "date": "2026-09-27",
+  "seed": 20260921,
+  "task": "T1:val",
+  "parent_version": "v0023",
+  "n_genes": 32285,
+  "n_cells": 5118,
+  "min_type_cells": 30,
+  "quantile_grid": 101,
+  "baseline_quantile_grid": 41,
+  "block_genes": 256,
+  "threads": 8,
+  "max_hours_per_route": 6,
+  "embedding_components": 32,
+  "n1": {
+    "weight_log_cap": 0.6931471805599453,
+    "minimum_ess_fraction": 0.5,
+    "logistic_C": 1.0,
+    "weight_center": "subtract recipient-type median log density before fixed clipping; before n1 first fit"
+  },
+  "n2": {
+    "log_positive_sd_floor": 0.05,
+    "log_positive_sd_ratio_bound": [
+      0.5,
+      2.0
+    ],
+    "probability_floor": 1e-05,
+    "output_log_expression_cap": "late-type observed gene maximum + log(2), fixed before first run"
+  },
+  "n3": {
+    "neighbors": 3,
+    "rate_bound": 0.6931471805599453,
+    "strength": 0.5,
+    "phenotype_features": "source-stage full-panel type centroids, cosine distance; outcome rates excluded from neighbor search",
+    "neighbor_temperature": 0.1
+  },
+  "o1": {
+    "zero_logit_step_bound": 2.0,
+    "positive_quantile_increment_bound": 0.6931471805599453,
+    "minimum_positive_count": 5
+  },
+  "o2": {
+    "rate_bound": 0.6931471805599453,
+    "intensity_mean_floor": 0.001,
+    "response_rank": 8,
+    "representation": "SVD of train-type raw-mean log ratios, not exponentiated old expression-space delta"
+  },
+  "validation": {
+    "split": "same 60/20/20 stratified cell split as R1; reserved inner cells unused",
+    "full_panel_official_scorer": true,
+    "scorer_seed": 20260921,
+    "independent_embryo_validation": false,
+    "hidden_E105_truth_access": false
+  },
+  "engineering_gate": {
+    "library_ratio_q01_min": 0.25,
+    "library_ratio_q99_max": 4.0,
+    "variance_ratio_min": 0.1,
+    "variance_ratio_max": 10.0,
+    "negative_clip_fraction_max": 0.0
+  },
+  "candidate_policy": "All non-NO_OP full-size candidates passing frozen engineering/official contract gates may ship for server arbitration; scientific proxy comparisons do not block compliant submissions",
+  "data_policy": "Only official E8.5/E9.5 RNA, existing v0023 and v0004, no external data or pretrained checkpoints",
+  "blocks_submission": false
+}

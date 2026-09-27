@@ -1,0 +1,96 @@
+{
+  "objective": "T1: design 3 new routes and 2 optimizations based on existing results, implement and fully execute all 5",
+  "status": "PASS",
+  "checked_against": "current files, terminal execution/scorer receipts, independently replayed models, candidate registry and verified package",
+  "checks": [
+    {
+      "requirement": "new_route:n1density",
+      "status": "PASS",
+      "design": "reports/T1_FIVE_DESIGN_20260927.md",
+      "implementation": "scripts/t1_five/models.py",
+      "full_run": "artifacts/t1_five/T1-FIVE-20260927-v1/n1density/RESULT.json",
+      "full_panel_scorer": "artifacts/t1_five/T1-FIVE-20260927-v1/n1density/SCORER.json",
+      "model_replay": "reports/t1_five_20260927/VALIDATION.json",
+      "candidate_version": "v0024",
+      "contract": "artifacts/t1_five/T1-FIVE-20260927-v1/n1density/CONTRACT.json"
+    },
+    {
+      "requirement": "new_route:n2param",
+      "status": "PASS",
+      "design": "reports/T1_FIVE_DESIGN_20260927.md",
+      "implementation": "scripts/t1_five/models.py",
+      "full_run": "artifacts/t1_five/T1-FIVE-20260927-v1/n2param/RESULT.json",
+      "full_panel_scorer": "artifacts/t1_five/T1-FIVE-20260927-v1/n2param/SCORER.json",
+      "model_replay": "reports/t1_five_20260927/VALIDATION.json",
+      "candidate_version": "v0025",
+      "contract": "artifacts/t1_five/T1-FIVE-20260927-v1/n2param/CONTRACT.json"
+    },
+    {
+      "requirement": "new_route:n3borrow",
+      "status": "PASS",
+      "design": "reports/T1_FIVE_DESIGN_20260927.md",
+      "implementation": "scripts/t1_five/models.py",
+      "full_run": "artifacts/t1_five/T1-FIVE-20260927-v1/n3borrow/RESULT.json",
+      "full_panel_scorer": "artifacts/t1_five/T1-FIVE-20260927-v1/n3borrow/SCORER.json",
+      "model_replay": "reports/t1_five_20260927/VALIDATION.json",
+      "candidate_version": "v0026",
+      "contract": "artifacts/t1_five/T1-FIVE-20260927-v1/n3borrow/CONTRACT.json"
+    },
+    {
+      "requirement": "existing_route_optimization:o1mass",
+      "status": "PASS",
+      "design": "reports/T1_FIVE_DESIGN_20260927.md",
+      "implementation": "scripts/t1_five/models.py",
+      "full_run": "artifacts/t1_five/T1-FIVE-20260927-v1/o1mass/RESULT.json",
+      "full_panel_scorer": "artifacts/t1_five/T1-FIVE-20260927-v1/o1mass/SCORER.json",
+      "model_replay": "reports/t1_five_20260927/VALIDATION.json",
+      "candidate_version": "v0027",
+      "contract": "artifacts/t1_five/T1-FIVE-20260927-v1/o1mass/CONTRACT.json"
+    },
+    {
+      "requirement": "existing_route_optimization:o2rate",
+      "status": "PASS",
+      "design": "reports/T1_FIVE_DESIGN_20260927.md",
+      "implementation": "scripts/t1_five/models.py",
+      "full_run": "artifacts/t1_five/T1-FIVE-20260927-v1/o2rate/RESULT.json",
+      "full_panel_scorer": "artifacts/t1_five/T1-FIVE-20260927-v1/o2rate/SCORER.json",
+      "model_replay": "reports/t1_five_20260927/VALIDATION.json",
+      "candidate_version": "v0028",
+      "contract": "artifacts/t1_five/T1-FIVE-20260927-v1/o2rate/CONTRACT.json"
+    },
+    {
+      "requirement": "all five full-size distinct candidates and verified manual upload package",
+      "status": "PASS",
+      "evidence": [
+        "submissions/INDEX.tsv",
+        "reports/t1_five_20260927/VALIDATION.json",
+        "deliveries/t1five__t1__upload__20260927.receipt.json"
+      ]
+    },
+    {
+      "requirement": "tests, code/data locks and transparent scientific limits",
+      "status": "PASS",
+      "evidence": [
+        "reports/t1_five_20260927/TESTS.json",
+        "reports/t1_five_20260927/REPORT.md",
+        "reports/t1_five_20260927/ENVIRONMENT.json"
+      ]
+    },
+    {
+      "requirement": "tracking, paired decisions and audit entry",
+      "status": "PASS",
+      "evidence": [
+        "docs/coordination/T1_TRACKING.md",
+        "DECISIONS.md",
+        "docs/coordination/DECISIONS.md",
+        "reports/LANE_VERDICTS.tsv",
+        "AUDIT.md"
+      ]
+    }
+  ],
+  "not_claimed": [
+    "server submission or server improvement",
+    "E10.5/E12.5 truth validation",
+    "independent embryo or causal validation"
+  ]
+}
