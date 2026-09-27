@@ -80,9 +80,14 @@ T1:val	v0022	g0_t1_d3_otcfm	45.30	scored	传输+生成器
 T3:gata4	v0034	next_r6meanfix	47.53	scored	非负修复
 T3:gata4	v0035	next_r6graphfix	47.03	scored	非负修复
 T3:gata4	v0036	next_r3linfix	46.98	scored	非负修复
-T1:val	v0023	t1_next_r1_qshape	50.82	scored	零率与分位数
+T1:val	v0023	t1_next_r1_qshape	50.82	scored	分位数形状
 T3:gata4	v0042	next_n1quant	46.95	scored	五路线新方法
 T3:gata4	v0044	next_n3latent	47.47	scored	五路线新方法
 T3:gata4	v0046	next_o2shrink	47.65	scored	五路线新方法
 T3:gata4	v0047	next_o1stable	46.97	scored	五路线新方法
 T3:gata4	v0048	next_n2hurdle	47.93	scored	五路线新方法
+T1:val	v0024	five_n1density	51.92	scored	密度比重采样
+T1:val	v0025	five_n2param	51.23	scored	参数化分布运输
+T1:val	v0026	five_n3borrow	50.44	scored	类型变化借用
+T1:val	v0027	five_o1mass	51.38	scored	显式零质量外推
+T1:val	v0028	five_o2rate	49.19	scored	对数倍率残差

@@ -821,3 +821,23 @@ Decision and limits:
 - Skill-level read (descriptive, not causal): v0048's gain concentrates in de_score (39.2→42.6, +3.4) with direction at 50.0; its variogram (49.3) trails v0046/v0034 (51.3). severity_slope reads 50.0 on all eight returns — floor-anchored, carries no discriminative signal in this batch.
 - No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260927-T3SCORE-001.
+
+<a id="t1-five-score-return-20260928"></a>
+## T1 FIVE score return — 2026-09-28
+
+Source / raw evidence: user transcribed five portal Model names, board totals and four skills each in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills (T1 weights 0.25/0.25/0.30/0.20 give 51.93/51.21/50.455/51.41/49.215 versus reported 51.92/51.23/50.44/51.38/49.19; differences are rounding). Local artifact identities match submissions/INDEX.tsv; artifacts immutable. Parent v0023 and contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| t1_val__n1density__v0024.h5ad | 51.92 | 45.5 | 58.5 | 54.3 | 48.2 |
+| t1_val__n2param__v0025.h5ad | 51.23 | 44.4 | 57.0 | 53.6 | 48.9 |
+| t1_val__n3borrow__v0026.h5ad | 50.44 | 43.9 | 56.8 | 53.0 | 46.9 |
+| t1_val__o1mass__v0027.h5ad | 51.38 | 44.0 | 57.6 | 53.7 | 49.5 |
+| t1_val__o2rate__v0028.h5ad | 49.19 | 42.1 | 55.2 | 50.7 | 48.4 |
+
+Decision and limits:
+- v0024 51.92 vs parent/incumbent v0023 50.82: +1.10, outside the ±0.1 TIE band. PROMOTED: new T1 selection and highest observed. Server Total updates 157.04 → 158.14 (51.92 + 58.29 + 47.93; T2/T3 components unchanged; heart_extrap 50.64-vs-50.53 OPEN item unaffected).
+- v0027 +0.56 and v0025 +0.41 also beat v0023 but trail v0024; scored backups, not co-promoted. v0026 −0.38 and v0028 −1.63 REJECT versus the parent.
+- Skill-level read versus v0023 (44.0/57.4/53.1/47.8), descriptive not causal: v0024 improves all four skills, largest on de_score +1.5. v0027's gain is mostly variogram +1.7 with de unchanged. v0028 loses de/dir/mmd and only variogram rises. This does not identify a biological mechanism.
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260928-T1FIVESCORE-001.

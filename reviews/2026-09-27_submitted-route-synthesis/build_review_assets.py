@@ -49,7 +49,12 @@ FAMILIES = [
     ("T1:val", "质量残差", ["v0005", "v0006"]),
     ("T1:val", "传输+生成器", ["v0007", "v0008", "v0022"]),
     ("T1:val", "神经动力/成熟度", ["v0015", "v0016", "v0017"]),
-    ("T1:val", "零率与分位数", ["v0023"]),
+    ("T1:val", "分位数形状", ["v0023"]),
+    ("T1:val", "密度比重采样", ["v0024"]),
+    ("T1:val", "参数化分布运输", ["v0025"]),
+    ("T1:val", "类型变化借用", ["v0026"]),
+    ("T1:val", "显式零质量外推", ["v0027"]),
+    ("T1:val", "对数倍率残差", ["v0028"]),
     ("T2:embryo:val_interp", "简单位移", ["v0001"]),
     ("T2:embryo:val_interp", "组织尺度", ["v0002", "v0003"]),
     ("T2:embryo:val_interp", "表达-坐标配对", ["v0004", "v0005"]),
@@ -154,7 +159,12 @@ def main() -> None:
 
     # highlighted submetric comparisons: winner vs a meaningful parent/baseline that has skills
     comparisons = [
-        ("T1:val", "v0023", "v0004", "零率分位数 vs 严格均值位移"),
+        ("T1:val", "v0024", "v0023", "密度比重采样 vs 分位数父版本"),
+        ("T1:val", "v0025", "v0023", "参数化运输 vs 分位数父版本"),
+        ("T1:val", "v0026", "v0023", "类型借用 vs 分位数父版本"),
+        ("T1:val", "v0027", "v0023", "显式零质量 vs 分位数父版本"),
+        ("T1:val", "v0028", "v0023", "对数倍率 vs 分位数父版本"),
+        ("T1:val", "v0023", "v0004", "分位数形状 vs 严格均值位移"),
         ("T1:val", "v0019", "v0004", "收缩微调 vs 严格均值位移"),
         ("T1:val", "v0022", "v0004", "全基因流匹配 vs 严格均值位移"),
         ("T2:embryo:val_interp", "v0010", "v0002", "表达桥 vs 组织尺度"),
@@ -213,7 +223,7 @@ def main() -> None:
         best = max(r["score"] for r in have)
         fam_rows.append((best - base, f"{BOARD_SHORT[board]} · {fam}", best))
     fam_rows.sort()
-    fig, ax = plt.subplots(figsize=(10.2, 8.2))
+    fig, ax = plt.subplots(figsize=(10.2, 9.6))
     ys = range(len(fam_rows))
     colors = ["#a33b3b" if d < -0.1 else "#2f6f4e" if d > 0.1 else "#8d93a0" for d, _, _ in fam_rows]
     ax.barh(list(ys), [d for d, _, _ in fam_rows], color=colors)
@@ -228,7 +238,7 @@ def main() -> None:
 
     # submetric small multiples for the three confirmed wins + extrap non-win
     panels = [
-        ("T1 零率分位数\n相对严格位移", "T1:val", "v0023", "v0004",
+        ("T1 密度比重采样\n相对分位数父版本", "T1:val", "v0024", "v0023",
          ["de_score", "de_direction", "mmd_u", "variogram"]),
         ("T2心脏插值 表达桥\n相对配对", "T2:heart:val_interp", "v0013", "v0009",
          ["de_score", "de_direction", "mmd_u", "scale_log_ratio", "variogram", "neighborhood_mmd"]),

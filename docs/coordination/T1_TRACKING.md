@@ -189,3 +189,5 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-27 T1-FIVE o2rate 新候选 v0028：完整5118×32285，parent=v0023，contract PASS，未提交/未评分；证据 artifacts/t1_five/T1-FIVE-20260927-v1/o2rate/RESULT.json。
 
 - 2026-09-27 T1-FIVE 收口：n1density=v0024、n2param=v0025、n3borrow=v0026、o1mass=v0027、o2rate=v0028，三新+两优化全部全量拟合/目标推断与完整panel官方scorer执行；9测试及五模型独立逐值重放PASS。n3borrow本地五主项均优，但类型特异机制未确证；o1/o2未胜基线。全部未提交/未评分，best v0023保持。reports/t1_five_20260927/REPORT.md；D-20260927-T1FIVE-001。
+
+- 2026-09-28 T1-FIVE 五分回填（D-20260928-T1FIVESCORE-001）：用户转录 v0024 51.92（+1.10，PROMOTED 新 T1 best；de 45.5/dir 58.5/mmd 54.3/vario 48.2）、v0027 51.38、v0025 51.23（超 v0023 但低于 v0024）、v0026 50.44、v0028 49.19（低于父版本）。Total 157.04→158.14。INDEX 五行 scored、submetrics＋20、verdicts 五行 SHIPPED。submission ID/时间戳未提供。

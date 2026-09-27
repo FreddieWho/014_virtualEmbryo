@@ -3,19 +3,19 @@
 Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDICTS.tsv + TODO.md.
 
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
-- T1:val: **50.82** (v0023 t1_next_r1_qshape)
+- T1:val: **51.92** (v0024 five_n1density)
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T3:gata4: **47.93** (v0048 next_n2hurdle)
 
-Score-pending rows: 17 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix, v0024/five_n1density, v0025/five_n2param, v0026/five_n3borrow, v0027/five_o1mass, v0028/five_o2rate)
+Score-pending rows: 12 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (64 rows in LANE_VERDICTS.tsv)
-- SHIPPED: 33
-- FAIL: 11
+## Lane verdicts (65 rows in LANE_VERDICTS.tsv)
+- SHIPPED: 38
+- FAIL: 12
 - VOID: 2
 - PARKED: 2
-- PENDING_SERVER: 7
+- PENDING_SERVER: 2
 - GATE_ONLY: 9
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -31,6 +31,7 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T1-NEXT-R2: decoder damage confirmed (A energy 32x + var collapse) but residual repair only ties strict; no promotion path
   - T1-NEXT-R3: diagonal ties strict; lowrank loses (dir -0.05, energy +21%); two-point linear step is weak link
   - T1-NEXT-R4: module transport collapses (energy 6.79, lib 0.476); A/B identical; train fit already poor
+  - T2-E-N1-SBL: pre-declared negation criterion fired: nmmd 0.395969 (L1 gated 127/498 genes) / 0.324687 (L2 ungated) vs do-no
 
 ## Current branch (from TODO.md)
 - **当前执行分支**：T2 九路线 M0 已冻结（5% 判据 + 父版本 SHA 实核 + 已耗尽轴清单），M1 researcher 检索与设计定稿待启动；T3 八分回填完（v0048 47.93 新 best，Total 157.04；v0037/v0040/v0041 仍待分）；T1-NEXT 全收口（R1 v0023 50.82 selection 在位，R2/R3/R4/R5 诊断关闭，R6 PARKED）。分支详情见“T2 九路线”节与 DECISIONS D-20260927-T2M0FREEZE-001。
