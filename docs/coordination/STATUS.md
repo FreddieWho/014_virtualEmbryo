@@ -61,14 +61,14 @@ leaderboard:
 
 tasks:
   T1:
-    status: proposed_not_run
+    status: score_pending
     dependencies: []
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0004_strict_pseudobulk_shift"
-    current_best_score: 48.47
-    next_action: "六路线方案已发布，建议R2→R1→R5→R3→R4→R6；全部NOT_RUN。D5b已失败无候选，D2旧调参未重开。见 reports/T1_NEXT_ROUTES_20260921.md；selection v0004保持。"
+    current_best: "candidate/T1_val/v0024_five_n1density (scored density resampling, parent v0023)"
+    current_best_score: 51.92
+    next_action: "ROUND2 v0029–v0033三新两优化完整执行和独立验收完成，单包待按需上传回分；优先v0030，其次v0029，best v0024=51.92保持。见reports/t1_round2_20260928/REPORT.md。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -561,3 +561,11 @@ R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contra
 ### 2026-09-21 T1新六路线提案
 
 结合全部已登记技术家族及D5b最终失败receipt，发布 `reports/T1_NEXT_ROUTES_20260921.md`；仅metadata检查与方法文献检索，没有训练/候选/下载。T1现行选择不变；T3六个修复候选仍待上传回分，不受本次提案影响。
+
+### 2026-09-28 T1 第二轮执行lease
+
+coordinator独占 scripts/t1_round2、configs/t1_round2、tests/t1_round2、artifacts/t1_round2、reports/t1_round2_20260928；复用旧代码只读，候选串行登记。三新两优化含v0024+v0027实际组合；设计 reports/T1_ROUND2_DESIGN_20260928.md。当前权威best=v0024 51.92，上方旧T1摘要待本批收口同步。blocks_submission:false。
+
+### 2026-09-28 T1 ROUND2完成
+
+v0029–v0033三新两优化均完成全量计算与完整panel本地评分，含v0024+v0027真实组合。16测试、五模型独立重放/拟合参数核对、contract、ZIP校验PASS。v0030本地最有利但未提交/未评分；best v0024=51.92保持。reports/t1_round2_20260928/REPORT.md；lease释放。E10.5/E12.5真值NOT_RUN，blocks_submission:false。

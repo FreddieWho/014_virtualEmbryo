@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q --import-mode=importlib tests/t1_round2/test_ops.py tests/t1_five",
+  "result": "16 passed in 0.89s",
+  "exit_code": 0,
+  "initial_collection_issue": "same test_ops basename; importlib collection fixed without product code change"
+}

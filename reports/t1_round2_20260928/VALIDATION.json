@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "lane": "n1stack",
+      "fitted_parameter_audit": {
+        "density_component_parameters": "PASS",
+        "mass_component_parameters": "PASS"
+      },
+      "run": "artifacts/t1_round2/T1-ROUND2-20260928-v1/n1stack",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "96f1c924d2d26bb4d3dd8043e9f2da1eec7277dde3fac528064ae2dc026245e7",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0029",
+      "contract": "PASS",
+      "expression_sha256": "f53a0ab5a644c570530abff3d9b9d984490210e0258257f2f351ecb33720ce42",
+      "changed_entries": 10760636,
+      "changed_cells": 2664,
+      "changed_genes": 17660
+    },
+    {
+      "lane": "n2composition",
+      "fitted_parameter_audit": {
+        "density_component_parameters": "PASS",
+        "full_stage_counts_and_rates": "PASS"
+      },
+      "run": "artifacts/t1_round2/T1-ROUND2-20260928-v1/n2composition",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "47c0b0e20d2ab75445ed74befdd7273af8ab52ee11bce39de952b7f321987817",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0030",
+      "contract": "PASS",
+      "expression_sha256": "45baf95d37c2e9886959a8feffe717d27d7e03ff69805f9ec677ae9073d92054",
+      "changed_entries": 32500488,
+      "changed_cells": 4730,
+      "changed_genes": 25889
+    },
+    {
+      "lane": "n3states",
+      "fitted_parameter_audit": {
+        "density_component_parameters": "PASS",
+        "full_training_states": "PASS"
+      },
+      "run": "artifacts/t1_round2/T1-ROUND2-20260928-v1/n3states",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "03131b2b60072471ec62924c7ed51f92f0a4c395900d106a843cb042b167d3a9",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0031",
+      "contract": "PASS",
+      "expression_sha256": "4f5066cb77af05026cc3c8287da91fe9884a92a677662038d1e3acc539e6ca4a",
+      "changed_entries": 14415173,
+      "changed_cells": 2357,
+      "changed_genes": 24611
+    },
+    {
+      "lane": "o1caldensity",
+      "fitted_parameter_audit": {
+        "density_component_parameters": "PASS",
+        "full_OOF_predictions_and_disjoint_folds": "PASS"
+      },
+      "run": "artifacts/t1_round2/T1-ROUND2-20260928-v1/o1caldensity",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "490da695df214d3c299d5b0754cf23284f6d1f364e18e413591787f9ae6af198",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0032",
+      "contract": "PASS",
+      "expression_sha256": "c36fa2164e9739758b98b7fc3bf10dbf3877bef96edc6a3da745a4e848b11b86",
+      "changed_entries": 5058144,
+      "changed_cells": 834,
+      "changed_genes": 24356
+    },
+    {
+      "lane": "o2shrinkmass",
+      "fitted_parameter_audit": {
+        "density_component_parameters": "PASS",
+        "full_unshrunk_fit_identity_and_monotone_shrink": {
+          "status": "PASS",
+          "type_gene_models": 148683
+        }
+      },
+      "run": "artifacts/t1_round2/T1-ROUND2-20260928-v1/o2shrinkmass",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "1ca19d9c8dd45652cf15ae75f5d827fb87929baf87578345ce28f3e9250a6494",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0033",
+      "contract": "PASS",
+      "expression_sha256": "1e3e8447f84f952ad2441714e47253ca1c8c37de194adf60df690ce0df2b6acc",
+      "changed_entries": 15471970,
+      "changed_cells": 2664,
+      "changed_genes": 24616
+    }
+  ],
+  "routes_executed": 5,
+  "new_routes": 3,
+  "existing_optimizations": 2,
+  "full_panel_scorers": 5,
+  "high_scoring_combination_executed": true,
+  "package_candidates": 5,
+  "server_scored": false
+}

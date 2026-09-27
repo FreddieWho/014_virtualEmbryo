@@ -88,3 +88,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260927-T2PROBED-001：T2 探针 D（只读）——表达桥的基因间协方差损失**归因于 mean bridge 本身**而非 mass 臂（embryo 父→L1 已 2.440×；L2 vs L1 差在 4.2% 噪声内不可分辨），并**部分推翻探针 C 的「免费拿回」建议**（破坏最重的两臂恰是服务器 board best）；另发现 `mmd_u` 在 B4-T2-R2 族**与服务器反向**，构成第三个本地门失效族，对 M0 §3.2 会签规则有影响（建议追加新决策，未回改 M0）。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260927-T3SCORE-001：T3 八分回填，v0048 47.93（+0.98）晋级新 best，Total 157.04；FIVE＋R6 转 SHIPPED，R3 部分回填。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T1R2-001：T1三新两优化完整执行，v0029–v0033未提交/未评分；含v0024+v0027实际组合，优先v0030本地信号，best不变。详见 docs/coordination/DECISIONS.md 与 reports/t1_round2_20260928/REPORT.md。

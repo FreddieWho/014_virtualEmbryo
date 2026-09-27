@@ -1,0 +1,1521 @@
+{
+  "routes": {
+    "n1stack": {
+      "result": {
+        "status": "CANDIDATES_READY",
+        "candidates": [
+          {
+            "lane": "n1stack",
+            "version": "v0029",
+            "parent": "v0024",
+            "path": "submissions/candidates/T1_val/v0029_round2_n1stack/submission.h5ad",
+            "sha256": "2fe75b009e8aad0004f1b268a986dd126eb771e8341c0f8882b39ebcaa662612",
+            "portal_file": "t1_val__n1stack__v0029.h5ad"
+          }
+        ],
+        "wall_s": 247.73263788223267,
+        "server_submission": "NOT_RUN",
+        "future_validation": "NOT_RUN_NO_E105_TRUTH",
+        "scientific_status": "EXPLORATORY_REPORT_SCENARIO",
+        "blocks_submission": false,
+        "route": "n1stack",
+        "report_scorer": "EXECUTED",
+        "model_replay": "PASS",
+        "metrics": {
+          "de_score": 0.5926,
+          "de_direction": 0.5489,
+          "energy_distance": 0.17172,
+          "mmd_u": 0.01227,
+          "variogram": 0.000458,
+          "pb_rel_err": 0.0567,
+          "library_size_ratio": 1.0,
+          "variance_ratio": 1.027,
+          "composition_JSD": 0.0817,
+          "pseudobulk_pearson": 0.9981,
+          "_de_raw": 0.6071,
+          "_de_chance": 0.0357,
+          "_de_chance_unif": 0.0017,
+          "_n_up": 30,
+          "_n_dn": 26
+        },
+        "full_source_shapes": [
+          [
+            16787,
+            32285
+          ],
+          [
+            17057,
+            32285
+          ]
+        ]
+      },
+      "engineering": {
+        "status": "PASS",
+        "library_ratio_q01": 0.8971823811531067,
+        "library_ratio_q99": 1.0127725625038146,
+        "variance_ratio": 0.9680784344673157,
+        "changed_entries": 10760636,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.863090594265863,
+        "full_genes": 32285
+      },
+      "models": {
+        "report": {
+          "rows": 3357,
+          "unique_row_indices": 2776
+        },
+        "final": {
+          "rows": 5118,
+          "unique_row_indices": 4361
+        }
+      }
+    },
+    "n2composition": {
+      "result": {
+        "status": "CANDIDATES_READY",
+        "candidates": [
+          {
+            "lane": "n2composition",
+            "version": "v0030",
+            "parent": "v0024",
+            "path": "submissions/candidates/T1_val/v0030_round2_n2composition/submission.h5ad",
+            "sha256": "9ccfe8dc28500e1aaf47d3bd3276c5c1e759bbc9a3b4aeb6923ce8c1ff23a503",
+            "portal_file": "t1_val__n2composition__v0030.h5ad"
+          }
+        ],
+        "wall_s": 193.77305126190186,
+        "server_submission": "NOT_RUN",
+        "future_validation": "NOT_RUN_NO_E105_TRUTH",
+        "scientific_status": "EXPLORATORY_REPORT_SCENARIO",
+        "blocks_submission": false,
+        "route": "n2composition",
+        "report_scorer": "EXECUTED",
+        "model_replay": "PASS",
+        "metrics": {
+          "de_score": 0.6111,
+          "de_direction": 0.5828,
+          "energy_distance": 0.14775,
+          "mmd_u": 0.00912,
+          "variogram": 0.000408,
+          "pb_rel_err": 0.0503,
+          "library_size_ratio": 1.0,
+          "variance_ratio": 1.06,
+          "composition_JSD": 0.0806,
+          "pseudobulk_pearson": 0.9985,
+          "_de_raw": 0.625,
+          "_de_chance": 0.0357,
+          "_de_chance_unif": 0.0017,
+          "_n_up": 30,
+          "_n_dn": 26
+        },
+        "full_source_shapes": [
+          [
+            16787,
+            32285
+          ],
+          [
+            17057,
+            32285
+          ]
+        ]
+      },
+      "engineering": {
+        "status": "PASS",
+        "library_ratio_q01": 0.7394855397939682,
+        "library_ratio_q99": 1.3021352076530457,
+        "variance_ratio": 0.9677871465682983,
+        "changed_entries": 32500488,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8636538539167001,
+        "full_genes": 32285
+      },
+      "models": {
+        "report": {
+          "rows": 3357,
+          "unique_row_indices": 2880,
+          "steps": {
+            "AVC-CM": -0.3099929933958425,
+            "BEC": 0.6931471805599453,
+            "Blood": -0.1191496395873478,
+            "EXEM": -0.6931471805599453,
+            "Endocardium": 0.6931471805599453,
+            "Endothelium": -0.6931471805599453,
+            "Epithelium": 0.6931471805599453,
+            "Foregut": -0.5160676281019616,
+            "Hepatocyte": 0.6931471805599453,
+            "IFT-CM": -0.1668100246258933,
+            "JCF": -0.6931471805599453,
+            "LV-CM": -0.6931471805599453,
+            "NCC": -0.6931471805599453,
+            "NCC-derived": 0.6931471805599453,
+            "Neural Tube": -0.6931471805599453,
+            "OFT/RV-CM": 0.2127217243800916,
+            "Paraxial Mesoderm": -0.6931471805599453,
+            "Pericardium": 0.08458835897081678,
+            "Proepicardium": 0.6931471805599453,
+            "RV-CM": -0.6931471805599453,
+            "ST": 0.6931471805599453,
+            "SV-CM": 0.6931471805599453,
+            "Surface Ectoderm": -0.4799054416998181,
+            "V-CM": 0.6931471805599453,
+            "aPHM": 0.6931471805599453,
+            "aSHF": 0.11452802779576919,
+            "pPHM": 0.6931471805599453,
+            "pSHF": -0.34793310090074175
+          },
+          "training_labels": [
+            "AVC-CM",
+            "BEC",
+            "Blood",
+            "EXEM",
+            "Endocardium",
+            "Endothelium",
+            "Epithelium",
+            "Foregut",
+            "Hepatocyte",
+            "IFT-CM",
+            "JCF",
+            "LV-CM",
+            "NCC",
+            "NCC-derived",
+            "Neural Tube",
+            "OFT/RV-CM",
+            "Paraxial Mesoderm",
+            "Pericardium",
+            "Proepicardium",
+            "RV-CM",
+            "ST",
+            "SV-CM",
+            "Surface Ectoderm",
+            "V-CM",
+            "aPHM",
+            "aSHF",
+            "pPHM",
+            "pSHF"
+          ],
+          "counts_early": [
+            359,
+            0,
+            160,
+            518,
+            0,
+            683,
+            0,
+            1443,
+            0,
+            569,
+            671,
+            207,
+            172,
+            0,
+            464,
+            706,
+            560,
+            447,
+            0,
+            265,
+            0,
+            186,
+            854,
+            0,
+            0,
+            493,
+            0,
+            1315
+          ],
+          "counts_late": [
+            196,
+            163,
+            128,
+            0,
+            933,
+            0,
+            140,
+            522,
+            714,
+            414,
+            0,
+            0,
+            28,
+            373,
+            0,
+            1098,
+            0,
+            538,
+            530,
+            0,
+            527,
+            764,
+            332,
+            686,
+            136,
+            630,
+            716,
+            666
+          ],
+          "predicted_counts": {
+            "AVC-CM": 123,
+            "Blood": 67,
+            "EXEM": 128,
+            "Endothelium": 163,
+            "Foregut": 396,
+            "IFT-CM": 221,
+            "JCF": 152,
+            "LV-CM": 46,
+            "NCC": 46,
+            "Neural Tube": 113,
+            "OFT/RV-CM": 396,
+            "Paraxial Mesoderm": 133,
+            "Pericardium": 217,
+            "RV-CM": 68,
+            "SV-CM": 171,
+            "Surface Ectoderm": 238,
+            "aSHF": 255,
+            "pSHF": 424
+          },
+          "recipient_counts": {
+            "AVC-CM": 120,
+            "Blood": 53,
+            "EXEM": 172,
+            "Endothelium": 228,
+            "Foregut": 481,
+            "IFT-CM": 190,
+            "JCF": 224,
+            "LV-CM": 69,
+            "NCC": 58,
+            "Neural Tube": 154,
+            "OFT/RV-CM": 235,
+            "Paraxial Mesoderm": 187,
+            "Pericardium": 149,
+            "RV-CM": 89,
+            "SV-CM": 62,
+            "Surface Ectoderm": 284,
+            "aSHF": 164,
+            "pSHF": 438
+          },
+          "unique_effective_source_rows": 2369
+        },
+        "final": {
+          "rows": 5118,
+          "unique_row_indices": 4244,
+          "steps": {
+            "AVC-CM": -0.3109696426164463,
+            "BEC": 0.6931471805599453,
+            "Blood": -0.11884005994428519,
+            "EXEM": -0.6931471805599453,
+            "Endocardium": 0.6931471805599453,
+            "Endothelium": -0.6931471805599453,
+            "Epithelium": 0.6931471805599453,
+            "Foregut": -0.5156199525653915,
+            "Hepatocyte": 0.6931471805599453,
+            "IFT-CM": -0.1672311331771721,
+            "JCF": -0.6931471805599453,
+            "LV-CM": -0.6931471805599453,
+            "NCC": -0.6931471805599453,
+            "NCC-derived": 0.6931471805599453,
+            "Neural Tube": -0.6931471805599453,
+            "OFT/RV-CM": 0.2130512577207616,
+            "Paraxial Mesoderm": -0.6931471805599453,
+            "Pericardium": 0.08480763860314522,
+            "Proepicardium": 0.6931471805599453,
+            "RV-CM": -0.6931471805599453,
+            "ST": 0.6931471805599453,
+            "SV-CM": 0.6931471805599453,
+            "Surface Ectoderm": -0.4793749044395105,
+            "V-CM": 0.6931471805599453,
+            "aPHM": 0.6931471805599453,
+            "aSHF": 0.1143651643470889,
+            "pPHM": 0.6931471805599453,
+            "pSHF": -0.3480873949316032
+          },
+          "training_labels": [
+            "AVC-CM",
+            "BEC",
+            "Blood",
+            "EXEM",
+            "Endocardium",
+            "Endothelium",
+            "Epithelium",
+            "Foregut",
+            "Hepatocyte",
+            "IFT-CM",
+            "JCF",
+            "LV-CM",
+            "NCC",
+            "NCC-derived",
+            "Neural Tube",
+            "OFT/RV-CM",
+            "Paraxial Mesoderm",
+            "Pericardium",
+            "Proepicardium",
+            "RV-CM",
+            "ST",
+            "SV-CM",
+            "Surface Ectoderm",
+            "V-CM",
+            "aPHM",
+            "aSHF",
+            "pPHM",
+            "pSHF"
+          ],
+          "counts_early": [
+            598,
+            0,
+            266,
+            863,
+            0,
+            1139,
+            0,
+            2405,
+            0,
+            949,
+            1119,
+            344,
+            287,
+            0,
+            773,
+            1176,
+            934,
+            745,
+            0,
+            442,
+            0,
+            310,
+            1423,
+            0,
+            0,
+            822,
+            0,
+            2192
+          ],
+          "counts_late": [
+            326,
+            271,
+            213,
+            0,
+            1555,
+            0,
+            233,
+            871,
+            1190,
+            690,
+            0,
+            0,
+            47,
+            621,
+            0,
+            1830,
+            0,
+            897,
+            883,
+            0,
+            879,
+            1273,
+            554,
+            1144,
+            226,
+            1050,
+            1194,
+            1110
+          ],
+          "predicted_counts": {
+            "AVC-CM": 41,
+            "BEC": 106,
+            "Blood": 40,
+            "Endocardium": 607,
+            "Epithelium": 91,
+            "Foregut": 109,
+            "Hepatocyte": 464,
+            "IFT-CM": 105,
+            "NCC": 3,
+            "NCC-derived": 243,
+            "OFT/RV-CM": 441,
+            "Pericardium": 184,
+            "Proepicardium": 350,
+            "ST": 352,
+            "SV-CM": 522,
+            "Surface Ectoderm": 72,
+            "V-CM": 437,
+            "aPHM": 90,
+            "aSHF": 232,
+            "pPHM": 456,
+            "pSHF": 173
+          },
+          "recipient_counts": {
+            "AVC-CM": 97,
+            "BEC": 81,
+            "Blood": 63,
+            "Endocardium": 466,
+            "Epithelium": 69,
+            "Foregut": 261,
+            "Hepatocyte": 357,
+            "IFT-CM": 207,
+            "NCC": 14,
+            "NCC-derived": 186,
+            "OFT/RV-CM": 549,
+            "Pericardium": 269,
+            "Proepicardium": 264,
+            "ST": 263,
+            "SV-CM": 390,
+            "Surface Ectoderm": 166,
+            "V-CM": 343,
+            "aPHM": 67,
+            "aSHF": 315,
+            "pPHM": 358,
+            "pSHF": 333
+          },
+          "unique_effective_source_rows": 3882
+        }
+      }
+    },
+    "n3states": {
+      "result": {
+        "status": "CANDIDATES_READY",
+        "candidates": [
+          {
+            "lane": "n3states",
+            "version": "v0031",
+            "parent": "v0024",
+            "path": "submissions/candidates/T1_val/v0031_round2_n3states/submission.h5ad",
+            "sha256": "2c415aa710c79cb00e90263a83bfb92f5eb7797c64e183abeafd55204d097662",
+            "portal_file": "t1_val__n3states__v0031.h5ad"
+          }
+        ],
+        "wall_s": 168.49221205711365,
+        "server_submission": "NOT_RUN",
+        "future_validation": "NOT_RUN_NO_E105_TRUTH",
+        "scientific_status": "EXPLORATORY_REPORT_SCENARIO",
+        "blocks_submission": false,
+        "route": "n3states",
+        "report_scorer": "EXECUTED",
+        "model_replay": "PASS",
+        "metrics": {
+          "de_score": 0.5926,
+          "de_direction": 0.5399,
+          "energy_distance": 0.19083,
+          "mmd_u": 0.01221,
+          "variogram": 0.000495,
+          "pb_rel_err": 0.0587,
+          "library_size_ratio": 1.0,
+          "variance_ratio": 1.051,
+          "composition_JSD": 0.0881,
+          "pseudobulk_pearson": 0.998,
+          "_de_raw": 0.6071,
+          "_de_chance": 0.0357,
+          "_de_chance_unif": 0.0017,
+          "_n_up": 30,
+          "_n_dn": 26
+        },
+        "full_source_shapes": [
+          [
+            16787,
+            32285
+          ],
+          [
+            17057,
+            32285
+          ]
+        ]
+      },
+      "engineering": {
+        "status": "PASS",
+        "library_ratio_q01": 0.7917486441135406,
+        "library_ratio_q99": 1.2161753273010252,
+        "variance_ratio": 0.9833661913871765,
+        "changed_entries": 14415173,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8610949230194663,
+        "full_genes": 32285
+      },
+      "models": {
+        "report": {
+          "rows": 3357,
+          "unique_row_indices": 2992,
+          "groups": {
+            "AVC-CM": {
+              "states": 8,
+              "early_counts": [
+                55,
+                1,
+                94,
+                33,
+                71,
+                0,
+                1,
+                104
+              ],
+              "late_counts": [
+                0,
+                51,
+                2,
+                18,
+                0,
+                94,
+                30,
+                1
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.0023107609700723417,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "Blood": {
+              "states": 5,
+              "early_counts": [
+                28,
+                92,
+                5,
+                4,
+                31
+              ],
+              "late_counts": [
+                16,
+                2,
+                35,
+                51,
+                24
+              ],
+              "log_weights": [
+                -0.3272389313610258,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.03200965327386188
+              ]
+            },
+            "Foregut": {
+              "states": 8,
+              "early_counts": [
+                99,
+                428,
+                215,
+                159,
+                84,
+                158,
+                68,
+                232
+              ],
+              "late_counts": [
+                160,
+                21,
+                40,
+                8,
+                96,
+                63,
+                125,
+                9
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6597124215375351,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.09723182647508466,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "IFT-CM": {
+              "states": 8,
+              "early_counts": [
+                3,
+                2,
+                115,
+                2,
+                92,
+                142,
+                102,
+                111
+              ],
+              "late_counts": [
+                97,
+                112,
+                5,
+                162,
+                17,
+                14,
+                0,
+                7
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "OFT/RV-CM": {
+              "states": 8,
+              "early_counts": [
+                7,
+                250,
+                243,
+                7,
+                7,
+                10,
+                138,
+                44
+              ],
+              "late_counts": [
+                207,
+                7,
+                22,
+                144,
+                301,
+                175,
+                29,
+                213
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "Pericardium": {
+              "states": 8,
+              "early_counts": [
+                9,
+                103,
+                154,
+                162,
+                5,
+                10,
+                4,
+                0
+              ],
+              "late_counts": [
+                99,
+                3,
+                0,
+                5,
+                151,
+                86,
+                105,
+                89
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "SV-CM": {
+              "states": 8,
+              "early_counts": [
+                69,
+                0,
+                109,
+                0,
+                7,
+                0,
+                0,
+                1
+              ],
+              "late_counts": [
+                3,
+                80,
+                1,
+                79,
+                188,
+                144,
+                119,
+                150
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "Surface Ectoderm": {
+              "states": 8,
+              "early_counts": [
+                119,
+                225,
+                31,
+                152,
+                49,
+                119,
+                9,
+                150
+              ],
+              "late_counts": [
+                33,
+                19,
+                55,
+                8,
+                33,
+                37,
+                131,
+                16
+              ],
+              "log_weights": [
+                -0.33427799301578653,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.5470657087811341,
+                -0.22148249887044216,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "aSHF": {
+              "states": 8,
+              "early_counts": [
+                162,
+                1,
+                145,
+                120,
+                0,
+                58,
+                7,
+                0
+              ],
+              "late_counts": [
+                6,
+                149,
+                11,
+                11,
+                136,
+                57,
+                156,
+                104
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.2607007347751032,
+                0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "pSHF": {
+              "states": 8,
+              "early_counts": [
+                345,
+                26,
+                55,
+                214,
+                201,
+                12,
+                193,
+                269
+              ],
+              "late_counts": [
+                4,
+                279,
+                99,
+                34,
+                0,
+                229,
+                11,
+                10
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            }
+          }
+        },
+        "final": {
+          "rows": 5118,
+          "unique_row_indices": 4984,
+          "groups": {
+            "AVC-CM": {
+              "states": 8,
+              "early_counts": [
+                0,
+                125,
+                182,
+                0,
+                7,
+                16,
+                147,
+                121
+              ],
+              "late_counts": [
+                59,
+                1,
+                0,
+                86,
+                87,
+                93,
+                0,
+                0
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "Blood": {
+              "states": 8,
+              "early_counts": [
+                6,
+                71,
+                0,
+                17,
+                42,
+                5,
+                70,
+                55
+              ],
+              "late_counts": [
+                5,
+                2,
+                41,
+                23,
+                51,
+                77,
+                2,
+                12
+              ],
+              "log_weights": [
+                0.05147052079474909,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.5133241456785601,
+                0.4106023371972345,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "Foregut": {
+              "states": 8,
+              "early_counts": [
+                332,
+                714,
+                427,
+                102,
+                206,
+                268,
+                94,
+                262
+              ],
+              "late_counts": [
+                72,
+                39,
+                16,
+                193,
+                225,
+                106,
+                209,
+                11
+              ],
+              "log_weights": [
+                -0.5103101819780228,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.08803718745781736,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "IFT-CM": {
+              "states": 8,
+              "early_counts": [
+                15,
+                1,
+                254,
+                12,
+                6,
+                246,
+                238,
+                177
+              ],
+              "late_counts": [
+                147,
+                161,
+                8,
+                183,
+                173,
+                2,
+                3,
+                13
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "NCC": {
+              "states": 6,
+              "early_counts": [
+                69,
+                76,
+                77,
+                0,
+                10,
+                55
+              ],
+              "late_counts": [
+                0,
+                1,
+                5,
+                39,
+                0,
+                2
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "OFT/RV-CM": {
+              "states": 8,
+              "early_counts": [
+                250,
+                11,
+                400,
+                443,
+                10,
+                7,
+                43,
+                12
+              ],
+              "late_counts": [
+                19,
+                541,
+                15,
+                8,
+                256,
+                272,
+                384,
+                335
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "Pericardium": {
+              "states": 8,
+              "early_counts": [
+                1,
+                226,
+                3,
+                17,
+                19,
+                232,
+                10,
+                237
+              ],
+              "late_counts": [
+                174,
+                3,
+                270,
+                146,
+                152,
+                0,
+                148,
+                4
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "SV-CM": {
+              "states": 8,
+              "early_counts": [
+                0,
+                0,
+                169,
+                12,
+                0,
+                1,
+                122,
+                6
+              ],
+              "late_counts": [
+                191,
+                194,
+                2,
+                245,
+                173,
+                219,
+                5,
+                244
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453
+              ]
+            },
+            "Surface Ectoderm": {
+              "states": 8,
+              "early_counts": [
+                234,
+                21,
+                189,
+                260,
+                45,
+                126,
+                369,
+                179
+              ],
+              "late_counts": [
+                17,
+                61,
+                67,
+                14,
+                226,
+                121,
+                33,
+                15
+              ],
+              "log_weights": [
+                -0.6931471805599453,
+                0.6931471805599453,
+                -0.09329077154847146,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "aSHF": {
+              "states": 8,
+              "early_counts": [
+                5,
+                102,
+                1,
+                237,
+                194,
+                3,
+                0,
+                280
+              ],
+              "late_counts": [
+                151,
+                74,
+                241,
+                12,
+                16,
+                262,
+                289,
+                5
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                -0.5628166287732786,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453
+              ]
+            },
+            "pSHF": {
+              "states": 8,
+              "early_counts": [
+                8,
+                48,
+                87,
+                309,
+                354,
+                601,
+                442,
+                343
+              ],
+              "late_counts": [
+                350,
+                280,
+                393,
+                0,
+                15,
+                5,
+                13,
+                54
+              ],
+              "log_weights": [
+                0.6931471805599453,
+                0.6931471805599453,
+                0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453,
+                -0.6931471805599453
+              ]
+            }
+          }
+        }
+      }
+    },
+    "o1caldensity": {
+      "result": {
+        "status": "CANDIDATES_READY",
+        "candidates": [
+          {
+            "lane": "o1caldensity",
+            "version": "v0032",
+            "parent": "v0024",
+            "path": "submissions/candidates/T1_val/v0032_round2_o1caldensity/submission.h5ad",
+            "sha256": "c818dfbc6805bcd8511dab5e2ce8baa4775b6f164fad8f933671ea544d9113d1",
+            "portal_file": "t1_val__o1caldensity__v0032.h5ad"
+          }
+        ],
+        "wall_s": 177.15789198875427,
+        "server_submission": "NOT_RUN",
+        "future_validation": "NOT_RUN_NO_E105_TRUTH",
+        "scientific_status": "EXPLORATORY_REPORT_SCENARIO",
+        "blocks_submission": false,
+        "route": "o1caldensity",
+        "report_scorer": "EXECUTED",
+        "model_replay": "PASS",
+        "metrics": {
+          "de_score": 0.6111,
+          "de_direction": 0.5461,
+          "energy_distance": 0.18134,
+          "mmd_u": 0.01193,
+          "variogram": 0.000473,
+          "pb_rel_err": 0.0568,
+          "library_size_ratio": 1.0,
+          "variance_ratio": 1.047,
+          "composition_JSD": 0.0808,
+          "pseudobulk_pearson": 0.9981,
+          "_de_raw": 0.625,
+          "_de_chance": 0.0357,
+          "_de_chance_unif": 0.0017,
+          "_n_up": 30,
+          "_n_dn": 26
+        },
+        "full_source_shapes": [
+          [
+            16787,
+            32285
+          ],
+          [
+            17057,
+            32285
+          ]
+        ]
+      },
+      "engineering": {
+        "status": "PASS",
+        "library_ratio_q01": 0.8903336775302887,
+        "library_ratio_q99": 1.1183193004131318,
+        "variance_ratio": 1.0001169443130493,
+        "changed_entries": 5058144,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8612558638585628,
+        "full_genes": 32285
+      },
+      "models": {
+        "report": {
+          "rows": 3357,
+          "unique_row_indices": 2728,
+          "groups": {
+            "AVC-CM": {
+              "uncalibrated_brier": 0.0013072617578248852,
+              "calibrated_brier": 0.0009059999754330544,
+              "rows": 222,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.790404804912733
+            },
+            "Blood": {
+              "uncalibrated_brier": 0.025882701846858418,
+              "calibrated_brier": 0.027437729386490587,
+              "rows": 114,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.298591606089119
+            },
+            "Foregut": {
+              "uncalibrated_brier": 0.006207577502355924,
+              "calibrated_brier": 0.007067864995180673,
+              "rows": 786,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.5080109136529694
+            },
+            "IFT-CM": {
+              "uncalibrated_brier": 0.003282831765318546,
+              "calibrated_brier": 0.002462493399875606,
+              "rows": 392,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 2.063777210585494
+            },
+            "OFT/RV-CM": {
+              "uncalibrated_brier": 0.0014669891841314362,
+              "calibrated_brier": 0.0012594360510094665,
+              "rows": 721,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 2.0221530731450708
+            },
+            "Pericardium": {
+              "uncalibrated_brier": 0.0033529347477701623,
+              "calibrated_brier": 0.005022571049721135,
+              "rows": 394,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.4367730006680182
+            },
+            "SV-CM": {
+              "uncalibrated_brier": 0.00230051689872444,
+              "calibrated_brier": 0.0022451841232831926,
+              "rows": 380,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.882188998938517
+            },
+            "Surface Ectoderm": {
+              "uncalibrated_brier": 0.014966943716048559,
+              "calibrated_brier": 0.015506814578874624,
+              "rows": 474,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.3601314974479068
+            },
+            "aSHF": {
+              "uncalibrated_brier": 0.0036576046763658688,
+              "calibrated_brier": 0.002653559845255311,
+              "rows": 448,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.7203352059403876
+            },
+            "pSHF": {
+              "uncalibrated_brier": 0.0048429258959965344,
+              "calibrated_brier": 0.00533418266770977,
+              "rows": 792,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.562963473506058
+            }
+          }
+        },
+        "final": {
+          "rows": 5118,
+          "unique_row_indices": 4337,
+          "groups": {
+            "AVC-CM": {
+              "uncalibrated_brier": 0.0023396224268866497,
+              "calibrated_brier": 0.002020828618957883,
+              "rows": 369,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.5816670650065539
+            },
+            "Blood": {
+              "uncalibrated_brier": 0.017406717861838134,
+              "calibrated_brier": 0.017931705860054326,
+              "rows": 191,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.0191069357547844
+            },
+            "Foregut": {
+              "uncalibrated_brier": 0.010470837459811401,
+              "calibrated_brier": 0.010160518016590472,
+              "rows": 1310,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.2483819414374664
+            },
+            "IFT-CM": {
+              "uncalibrated_brier": 0.0013404244685521788,
+              "calibrated_brier": 0.0009676279938964619,
+              "rows": 655,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 2.1248601132056626
+            },
+            "NCC": {
+              "uncalibrated_brier": 0.000935475643898585,
+              "calibrated_brier": 0.0017657181924616255,
+              "rows": 133,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.8268102131293227
+            },
+            "OFT/RV-CM": {
+              "uncalibrated_brier": 0.001631294811829629,
+              "calibrated_brier": 0.0019357841677564943,
+              "rows": 1202,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.7276447950514355
+            },
+            "Pericardium": {
+              "uncalibrated_brier": 0.0022124107770429067,
+              "calibrated_brier": 0.0019536782389801637,
+              "rows": 656,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.6264544259567069
+            },
+            "SV-CM": {
+              "uncalibrated_brier": 0.001122549462432656,
+              "calibrated_brier": 0.0006178596818945721,
+              "rows": 632,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.9965368058857038
+            },
+            "Surface Ectoderm": {
+              "uncalibrated_brier": 0.009366673859389156,
+              "calibrated_brier": 0.010191631517916347,
+              "rows": 790,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.5335159741362143
+            },
+            "aSHF": {
+              "uncalibrated_brier": 0.002097168769506282,
+              "calibrated_brier": 0.0029186424471695912,
+              "rows": 748,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.680455349168361
+            },
+            "pSHF": {
+              "uncalibrated_brier": 0.001731789134692962,
+              "calibrated_brier": 0.0012041789078959437,
+              "rows": 1320,
+              "scope": "supervised OOF; unsupervised SVD shared within fit region; not independent embryos",
+              "final_slope": 1.7004695232387093
+            }
+          }
+        }
+      }
+    },
+    "o2shrinkmass": {
+      "result": {
+        "status": "CANDIDATES_READY",
+        "candidates": [
+          {
+            "lane": "o2shrinkmass",
+            "version": "v0033",
+            "parent": "v0024",
+            "path": "submissions/candidates/T1_val/v0033_round2_o2shrinkmass/submission.h5ad",
+            "sha256": "9800f0314d4442a6e7225b6175c2668b109101f80923186c0666f0671bd467c0",
+            "portal_file": "t1_val__o2shrinkmass__v0033.h5ad"
+          }
+        ],
+        "wall_s": 642.6150095462799,
+        "server_submission": "NOT_RUN",
+        "future_validation": "NOT_RUN_NO_E105_TRUTH",
+        "scientific_status": "EXPLORATORY_REPORT_SCENARIO",
+        "blocks_submission": false,
+        "route": "o2shrinkmass",
+        "report_scorer": "EXECUTED",
+        "model_replay": "PASS",
+        "metrics": {
+          "de_score": 0.6111,
+          "de_direction": 0.5375,
+          "energy_distance": 0.18692,
+          "mmd_u": 0.01354,
+          "variogram": 0.000495,
+          "pb_rel_err": 0.0597,
+          "library_size_ratio": 1.0,
+          "variance_ratio": 1.011,
+          "composition_JSD": 0.0808,
+          "pseudobulk_pearson": 0.9979,
+          "_de_raw": 0.625,
+          "_de_chance": 0.0357,
+          "_de_chance_unif": 0.0017,
+          "_n_up": 30,
+          "_n_dn": 26
+        },
+        "full_source_shapes": [
+          [
+            16787,
+            32285
+          ],
+          [
+            17057,
+            32285
+          ]
+        ]
+      },
+      "engineering": {
+        "status": "PASS",
+        "library_ratio_q01": 0.7602349501848221,
+        "library_ratio_q99": 1.188734904527664,
+        "variance_ratio": 0.9438636302947998,
+        "changed_entries": 15471970,
+        "negative_clip_fraction": 0.0,
+        "zero_rate": 0.8629743898116272,
+        "full_genes": 32285
+      },
+      "models": {
+        "report": {
+          "rows": 3357,
+          "unique_row_indices": 3357,
+          "type_gene_models": 128880,
+          "identity_models": 0
+        },
+        "final": {
+          "rows": 5118,
+          "unique_row_indices": 5118,
+          "type_gene_models": 148683,
+          "identity_models": 0
+        }
+      }
+    }
+  },
+  "scope": "read-only frozen fit diagnostics; no candidate changes or parameter selection",
+  "future_validation": "NOT_RUN_NO_E105_TRUTH"
+}

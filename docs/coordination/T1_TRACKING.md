@@ -191,3 +191,25 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-27 T1-FIVE 收口：n1density=v0024、n2param=v0025、n3borrow=v0026、o1mass=v0027、o2rate=v0028，三新+两优化全部全量拟合/目标推断与完整panel官方scorer执行；9测试及五模型独立逐值重放PASS。n3borrow本地五主项均优，但类型特异机制未确证；o1/o2未胜基线。全部未提交/未评分，best v0023保持。reports/t1_five_20260927/REPORT.md；D-20260927-T1FIVE-001。
 
 - 2026-09-28 T1-FIVE 五分回填（D-20260928-T1FIVESCORE-001）：用户转录 v0024 51.92（+1.10，PROMOTED 新 T1 best；de 45.5/dir 58.5/mmd 54.3/vario 48.2）、v0027 51.38、v0025 51.23（超 v0023 但低于 v0024）、v0026 50.44、v0028 49.19（低于父版本）。Total 157.04→158.14。INDEX 五行 scored、submetrics＋20、verdicts 五行 SHIPPED。submission ID/时间戳未提供。
+
+- 2026-09-28 T1-ROUND2 n1stack 新分支/优化冻结：见 reports/T1_ROUND2_DESIGN_20260928.md；完整panel拟合与本地scorer计划执行，未提交/未评分。
+
+- 2026-09-28 T1-ROUND2 n2composition 新分支/优化冻结：见 reports/T1_ROUND2_DESIGN_20260928.md；完整panel拟合与本地scorer计划执行，未提交/未评分。
+
+- 2026-09-28 T1-ROUND2 n3states 新分支/优化冻结：见 reports/T1_ROUND2_DESIGN_20260928.md；完整panel拟合与本地scorer计划执行，未提交/未评分。
+
+- 2026-09-28 T1-ROUND2 o1caldensity 新分支/优化冻结：见 reports/T1_ROUND2_DESIGN_20260928.md；完整panel拟合与本地scorer计划执行，未提交/未评分。
+
+- 2026-09-28 T1-ROUND2 o2shrinkmass 新分支/优化冻结：见 reports/T1_ROUND2_DESIGN_20260928.md；完整panel拟合与本地scorer计划执行，未提交/未评分。
+
+- 2026-09-28 T1-ROUND2 n1stack 新候选 v0029：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/n1stack/RESULT.json。
+
+- 2026-09-28 T1-ROUND2 n2composition 新候选 v0030：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/n2composition/RESULT.json。
+
+- 2026-09-28 T1-ROUND2 n3states 新候选 v0031：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/n3states/RESULT.json。
+
+- 2026-09-28 T1-ROUND2 o1caldensity 新候选 v0032：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/o1caldensity/RESULT.json。
+
+- 2026-09-28 T1-ROUND2 o2shrinkmass 新候选 v0033：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/o2shrinkmass/RESULT.json。
+
+- 2026-09-28 T1-ROUND2 收口：v0029–v0033五路线全量执行、五次完整panel官方本地评分，16测试和五模型独立重放/拟合参数核查PASS，单包校验PASS。v0030本地四主项改善/DE持平；v0029取舍；三条其余路线负结果。best仍v0024=51.92，新五项未提交/未评分。reports/t1_round2_20260928/REPORT.md；D-20260928-T1R2-001。

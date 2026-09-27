@@ -888,3 +888,7 @@ reuse_promoted
 - decision: v0048 47.93（+0.98）PROMOTED 为新 T3 selection；Total 记 157.04；FIVE 五 lane＋REPAIR-R6 转 SHIPPED，REPAIR-R3 部分回填（v0037 待分）；v0046/v0034/v0044 记 scored backup。
 - evidence: reports/SERVER_SCORE_REGISTRY.md#t3-five-repair-score-return-20260927；INDEX 八行 scored；SUBMETRIC＋40 行；用户转录原文（ID/时间戳未提供）。
 - boundary: 分数未从舍入子项重构；severity 全 50.0 无判别信号；本次无新拟合/候选；v0037/v0040/v0041 不在此轮；blocks_submission: false。
+
+### D-20260928-T1R2-001 — T1 第二轮三新两优化完成
+
+用户授权三条新路线、两条优化，要求高分合并计入新路线预算。实际完成n1stack(v0029：v0024+v0027组合)、n2composition(v0030)、n3states(v0031)、o1caldensity(v0032)、o2shrinkmass(v0033)。完整官方32285列scorer五次、16定向测试、五模型独立重放及拟合参数审查、contract和ZIP SHA/CRC全部PASS。v0030本地DE持平、其他四主项改善；v0029有取舍；另外三条未胜各自原模型。未提交/未评分；best v0024=51.92不变。优先v0030，次选v0029；不把cell holdout当未来/独立胚胎验证。证据 reports/t1_round2_20260928/REPORT.md；deliveries/t1r2__t1__upload__20260928.zip；blocks_submission:false。

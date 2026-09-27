@@ -287,3 +287,7 @@ boundary         适用范围或不可推断边界
 ### 2026-09-28 T3：组合与可恢复空间
 
 成熟度：工程复现CONFIRMED，科学INCONCLUSIVE_NEEDS_INDEPENDENT_TRUTH。证据 reports/t3_round2_20260928/REPORT.md 与所指完整run。高分H/G输出变化余弦0.1263不能替代真实错误相关性；正反次序差249982条目，说明算子不交换而非一方更准。WT正交模型不胜混杂基线，logistic当前C=.01较旧hurdle差；基因收缩只在一个源样本迁移方向改善。固定源模型消融说明收益主要来自强度，出现率贡献不稳定。不能由此声称真实KO信息受限、dropout可恢复比例或因果机制否定。v0049组合合法可仲裁；blocks_submission: false。
+
+### 2026-09-28 T1：比例趋势与高分模型组合
+
+成熟度：工程CONFIRMED，预测EXPLORATORY_LOCAL。证据 reports/t1_round2_20260928/REPORT.md 及固定模型诊断。v0024密度索引作用于v0027整行分布输出，组件双场景精确复现但组合仍有DE/MMD代价；粗类型比例趋势在已发布阶段report中四主项改善、DE持平，不能推断E10.5准确性。细胞状态离散混合、密度OOF校准及按采样方差收缩均无整体收益。计数反映取样/标注差异的可能性未排除；同阶段细胞留出、重复用split、无独立胚胎ID是明确限制。重复采样不是独立重复；blocks_submission:false。

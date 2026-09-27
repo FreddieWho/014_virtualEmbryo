@@ -1,3 +1,5 @@
+最新 T1 事件（2026-09-28）：第二轮三新两优化全量完成，v0029–v0033未提交/未评分；16测试、五模型独立重放与包校验PASS。包含v0024+v0027实际合并。best **v0024=51.92**保持；优先仲裁v0030，次选v0029。报告 [reports/t1_round2_20260928/REPORT.md](reports/t1_round2_20260928/REPORT.md)；[上传包](deliveries/t1r2__t1__upload__20260928.zip)。
+
 # Virtual Embryo 项目状态
 最新事件（2026-09-21）：T1新六路线方案已准备，全部PROPOSED/NOT_RUN；建议先R2残差decoder，再R1分布与R5依赖结构。见 reports/T1_NEXT_ROUTES_20260921.md。T1 selection不变；T3修复包仍待回分。
 最新事件（2026-09-21）：R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。 上传包 deliveries/r634fix__t3__upload__20260921.zip；报告 reports/t3_repairs_20260921/REPORT.md。以下为历史阶段摘要。
@@ -44,8 +46,8 @@ ROADMAP  [#######-] 7/8 节点（N8 batch4 已启动，P0 完成）
 ## 总体状态
 
 - 比赛优先；starter_pack 已关闭为 `CLOSED_FOR_COMPETITION_BASELINE`。
-- 当前 aggregate best：**151.2（服务器返回值，2026-09-04 页面确认）**。
-- 当前任务分数：T1 **48.5**，T2 **55.7（服务器当前返回值）**，T3 **45.3（服务器当前返回值；board best 已升至 45.5）**。
+- 当前aggregate：**158.14**（2026-09-28用户回分登记，51.92+58.29+47.93；见SERVER_SCORE_REGISTRY.md，非本轮新成绩）。
+- 任务分数摘要（T1已更新；其他分项历史快照，以registry为准）：T1 **51.92**（v0024，2026-09-28），T2 **58.29**（derived，与 156.06 自洽；board 62.29 / 62.04 / 50.53），T3 **46.95**（v0009/v0010 并列）。
 - 科学 promotion 仍开放，但 `blocks_submission: false`。
 - 仓库已于 2026-09-02 完成首次推送：`github.com/FreddieWho/014_virtualEmbryo` main 分支（commit `cde3c9c`，251 个代码/文档/配置文件；`data/`、`artifacts/`、`outputs/` 等大文件按 `.gitignore` 排除）。
 
@@ -69,11 +71,11 @@ ROADMAP  [#######-] 7/8 节点（N8 batch4 已启动，P0 完成）
 
 ### T1 — single-cell temporal
 
-1. `v0004_strict_pseudobulk_shift`：**48.5**，已评分，当前 best。
-2. B1-A3 `L2_E95_EXPRESSION_PROBE`：**47.7**，已评分，B1-A3 lane winner。
-3. B1-A3 `L1_SHARED_UNRESOLVED`：**47.5**，已评分，scored backup。
+1. `v0024_five_n1density`：**51.92**，已评分，当前best。
+2. `v0027_five_o1mass`：**51.38**，已评分备选。
+3. `v0025_five_n2param`：**51.23**，已评分备选。
 
-详情：[T1_TRACKING.md](docs/coordination/T1_TRACKING.md)
+v0029–v0033未提交/未评分，不进入已验证Top 3。旧v0023=50.82是组合算子基底；历史路线见[T1_TRACKING.md](docs/coordination/T1_TRACKING.md)。
 
 ### T2 — spatial-temporal
 
@@ -107,7 +109,7 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | B4-T1-R1 四 lane 服务器 47.58/47.77/47.85/46.90，均低于 best 48.47（排序 L3>L2>L1>L4）；v0004 留任，保守族晋级路线关闭 | 16 子项已入库；Wave 2 或封板待授权 |
+| T1 | best v0024=51.92；ROUND2三新两优化v0029–v0033完整执行并独立验收，未提交/未评分 | 优先v0030本地信号，其次v0029组合；未来真值NOT_RUN；blocks_submission:false |
 | T2 | B4-T2-R2 四 lane：embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1。T2-R3 三 lane 按用户决定关闭不评分 | selection：embryo v0010 + heart v0013 + extrap baseline；Total 153.7 已确认 |
 | T3 | B4-T3-R2 双 lane v0011=**46.45**/v0012=**46.47**，均低于 floor 46.8 → **ARCHITECTURE_RESET_REQUIRED**；selection 保持 v0009/v0010（46.95）；科学 gate 仍收口 | Total 153.7 已确认 |
 
