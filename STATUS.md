@@ -1,3 +1,5 @@
+最新 T1 事件（2026-09-29）：v0034–v0036三个新路线完整运行并独立验收，提交包含三个可上传h5ad；13测试通过，未提交/未评分。best仍v0029=52.50，优先v0035本地信号。[报告](reports/t1_three_20260929/REPORT.md)；[提交包](deliveries/t1three__t1__upload__20260929.zip)。
+
 最新 T3 事件（2026-09-29）：v0054–v0056三个新路线h5ad已完成独立重放/contract/打包，12测试通过；未提交/未评分，best仍v0048=47.93。[报告](reports/t3_three_20260929/REPORT.md)；[三文件上传包](deliveries/t3three__t3__upload__20260929.zip)。
 
 最新 T1 事件（2026-09-28）：第二轮三新两优化全量完成，v0029–v0033未提交/未评分；16测试、五模型独立重放与包校验PASS。包含v0024+v0027实际合并。best **v0024=51.92**保持；优先仲裁v0030，次选v0029。报告 [reports/t1_round2_20260928/REPORT.md](reports/t1_round2_20260928/REPORT.md)；[上传包](deliveries/t1r2__t1__upload__20260928.zip)。
@@ -111,7 +113,7 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | best v0024=51.92；ROUND2三新两优化v0029–v0033完整执行并独立验收，未提交/未评分 | 优先v0030本地信号，其次v0029组合；未来真值NOT_RUN；blocks_submission:false |
+| T1 | best v0029=52.50；三路线v0034–v0036完整推断、全panel本地评分与独立验收，单包三个h5ad | 未提交/未评分，优先v0035；未来真值NOT_RUN；blocks_submission:false |
 | T2 | B4-T2-R2 四 lane：embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1。T2-R3 三 lane 按用户决定关闭不评分 | selection：embryo v0010 + heart v0013 + extrap baseline；Total 153.7 已确认 |
 | T3 | best v0048=47.93；三路线v0054–v0056完整运行、独立校验并交付三个h5ad，未提交/未评分 | 旧v0049–v0053仍待分；匹配KO评分NOT_RUN；blocks_submission:false |
 

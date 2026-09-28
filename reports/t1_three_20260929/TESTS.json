@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q --import-mode=importlib tests/t1_three/test_ops.py tests/t1_five/test_ops.py",
+  "result": "13 passed in 3.35s",
+  "exit_code": 0,
+  "red_phase": "new module absent before implementation; collection failed as expected"
+}

@@ -92,3 +92,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260928-T1R2-001：T1三新两优化完整执行，v0029–v0033未提交/未评分；含v0024+v0027实际组合，优先v0030本地信号，best不变。详见 docs/coordination/DECISIONS.md 与 reports/t1_round2_20260928/REPORT.md。
 
 - D-20260929-T3THREE-001：T3三路线v0054–v0056实际执行并独立验收，交付3个短名h5ad与单ZIP；未提交/未评分，best不变。详见docs/coordination/DECISIONS.md及reports/t3_three_20260929/REPORT.md。
+
+- D-20260929-T1THREE-001：T1三路线v0034–v0036完整执行并通过独立验收，单ZIP含三个h5ad；优先v0035本地信号，未提交/未评分，best保持。详见docs/coordination/DECISIONS.md及reports/t1_three_20260929/REPORT.md。

@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "lane": "r1compose",
+      "whole_row_operator_identity": "PASS",
+      "run": "artifacts/t1_three/T1-THREE-20260929-v1/r1compose",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "5826e9e5b7ae49996b2d2d12f44049b156465fc0340be6eea72048bd7c5acd8e",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0034",
+      "contract": "PASS",
+      "expression_sha256": "6972066bd804787d5750c4be748357f3310ffe8d81534ce59a837550e5ab4434",
+      "changed_entries": 32234636,
+      "changed_cells": 4730,
+      "changed_genes": 25887
+    },
+    {
+      "lane": "r2joint",
+      "whole_row_operator_identity": "PASS",
+      "run": "artifacts/t1_three/T1-THREE-20260929-v1/r2joint",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "adadb73cf23f87a4258814f68e5329a2e8255c81eb93dfc6ac816a26663caa1d",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0035",
+      "contract": "PASS",
+      "expression_sha256": "94e3949b1a536ead5b2058502f70db1d2b1b853fd81395394027249a1886b3d6",
+      "changed_entries": 33934092,
+      "changed_cells": 5007,
+      "changed_genes": 25906
+    },
+    {
+      "lane": "r3mix",
+      "whole_row_operator_identity": "PASS",
+      "run": "artifacts/t1_three/T1-THREE-20260929-v1/r3mix",
+      "scorer_full_panel": "PASS",
+      "disjoint_complete_splits": "PASS",
+      "input_and_code_hashes": "PASS",
+      "model_sha256": "03c121777b27a2aaa329a147bf3e1b0b6b77272f5e010c24137a242e0379feea",
+      "full_model_replay": "PASS",
+      "shape": [
+        5118,
+        32285
+      ],
+      "candidates": 1,
+      "version": "v0036",
+      "contract": "PASS",
+      "expression_sha256": "27b059ad314704326ae67c8684fd8422b0891dea18cb18c9006906f24ef5d15e",
+      "changed_entries": 35035767,
+      "changed_cells": 5116,
+      "changed_genes": 25912
+    }
+  ],
+  "routes_executed": 3,
+  "designed_routes": 3,
+  "frozen_components_reused": true,
+  "full_panel_scorers": 3,
+  "high_scoring_combination_executed": true,
+  "package_candidates": 3,
+  "server_scored": false
+}

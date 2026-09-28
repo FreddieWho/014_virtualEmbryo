@@ -896,3 +896,7 @@ reuse_promoted
 ### D-20260929-T3THREE-001 — T3 三个响应候选完成
 
 用户要求三路线并交付三个可提交h5ad。实际执行r1agree=v0054（高分H/G同向门控叠加）、r2damp=v0055（概率分量减弱）、r3diffuse=v0056（类型/活跃细胞内响应扩散）；完整7449×500推断、四块WT重新拟合及条件诊断完成，12测试、三模型独立重放、contract、旧候选去重、direct export和ZIP校验PASS。局部r1胜H但不胜无门叠加，r2弱于H，r3仅极小变化；不据此宣称KO准确率提高。best v0048=47.93保持，三项未提交/未评分。交付deliveries/t3three_20260929/与deliveries/t3three__t3__upload__20260929.zip；证据reports/t3_three_20260929/REPORT.md。匹配KO官方scorer NOT_RUN，blocks_submission:false。
+
+### D-20260929-T1THREE-001 — T1 三路线提交包完成
+
+用户授权设计/实现三路线并交付含三个可提交h5ad的包。r1compose=v0034、r2joint=v0035、r3mix=v0036均实际执行，完整5118×32285、三次32285列官方本地scorer、13测试、独立模型重放/整行身份/contract与ZIP SHA/CRC通过。v0035相对v0029本地DE持平其余四主项改善，并在同类型人数下胜r1；与v0030仍有DE/MMD取舍。r1/r3有DE代价，r3五主项弱于v0030，不追调参数。三个未提交/未评分，best仍v0029=52.50。证据reports/t1_three_20260929/REPORT.md；deliveries/t1three__t1__upload__20260929.zip。隐藏未来真值未运行，基础模型按设计复用冻结组件；blocks_submission:false。

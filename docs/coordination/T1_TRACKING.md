@@ -213,3 +213,17 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-28 T1-ROUND2 o2shrinkmass 新候选 v0033：完整5118×32285，parent=v0024，contract PASS，未提交/未评分；证据 artifacts/t1_round2/T1-ROUND2-20260928-v1/o2shrinkmass/RESULT.json。
 
 - 2026-09-28 T1-ROUND2 收口：v0029–v0033五路线全量执行、五次完整panel官方本地评分，16测试和五模型独立重放/拟合参数核查PASS，单包校验PASS。v0030本地四主项改善/DE持平；v0029取舍；三条其余路线负结果。best仍v0024=51.92，新五项未提交/未评分。reports/t1_round2_20260928/REPORT.md；D-20260928-T1R2-001。
+
+- 2026-09-29 T1-THREE r1compose：比例趋势叠加到高分分布组合；执行前冻结参数，完整panel推断/scorer；未提交/未评分。reports/T1_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T1-THREE r2joint：相同类型人数的一次加权整行采样；执行前冻结参数，完整panel推断/scorer；未提交/未评分。reports/T1_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T1-THREE r3mix：两高分模型50/50分层整行混合；执行前冻结参数，完整panel推断/scorer；未提交/未评分。reports/T1_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T1-THREE r1compose 新候选 v0034：完整5118×32285，parent=v0029，contract PASS，未提交/未评分；证据 artifacts/t1_three/T1-THREE-20260929-v1/r1compose/RESULT.json。
+
+- 2026-09-29 T1-THREE r2joint 新候选 v0035：完整5118×32285，parent=v0029，contract PASS，未提交/未评分；证据 artifacts/t1_three/T1-THREE-20260929-v1/r2joint/RESULT.json。
+
+- 2026-09-29 T1-THREE r3mix 新候选 v0036：完整5118×32285，parent=v0029，contract PASS，未提交/未评分；证据 artifacts/t1_three/T1-THREE-20260929-v1/r3mix/RESULT.json。
+
+- 2026-09-29 T1-THREE收口：r1compose=v0034、r2joint=v0035、r3mix=v0036；完整推断/三次full-panel官方scorer、13测试、独立重放/整行身份/contract/ZIP通过。v0035本地最有利，r1/r3有取舍；全部未提交/未评分，best v0029=52.50保持。reports/t1_three_20260929/REPORT.md；D-20260929-T1THREE-001。

@@ -66,9 +66,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0024_five_n1density (scored density resampling, parent v0023)"
-    current_best_score: 51.92
-    next_action: "ROUND2 v0029–v0033三新两优化完整执行和独立验收完成，单包待按需上传回分；优先v0030，其次v0029，best v0024=51.92保持。见reports/t1_round2_20260928/REPORT.md。"
+    current_best: "candidate/T1_val/v0029_round2_n1stack (scored stack combo, parent v0024)"
+    current_best_score: 52.5
+    next_action: "三路线v0034–v0036完整执行/独立验收完成，提交包含三个h5ad；未提交/未评分，优先v0035本地信号，best v0029=52.50保持。见reports/t1_three_20260929/REPORT.md。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -577,3 +577,11 @@ coordinator独占scripts/t3_three、configs/t3_three、tests/t3_three、artifact
 ### 2026-09-29 T3 三候选完成
 
 v0054–v0056完整推断及四块WT条件诊断完成，12测试、独立重放、contract、旧候选去重、三个直接h5ad与ZIP校验PASS；reports/t3_three_20260929/REPORT.md。未提交/未评分；best v0048=47.93保持。科学INCONCLUSIVE，匹配KO评分NOT_RUN，lease释放，blocks_submission:false。
+
+### 2026-09-29 T1 三候选执行lease
+
+coordinator独占scripts/t1_three、configs/t1_three、tests/t1_three、artifacts/t1_three、reports/t1_three_20260929；设计reports/T1_THREE_DESIGN_20260929.md。用户授权本轮三路线，复用已评分v0029/v0030实际组合；best v0029=52.50保持。磁盘已恢复，原项目执行；blocks_submission:false。
+
+### 2026-09-29 T1 三候选完成
+
+v0034–v0036全量推断和完整panel本地scorer完成，13测试、独立重放/整行身份/contract/ZIP通过。提交包deliveries/t1three__t1__upload__20260929.zip；reports/t1_three_20260929/REPORT.md。优先v0035本地信号，三个未提交/未评分；best v0029=52.50保持。磁盘恢复后全部在正式项目执行，lease释放，blocks_submission:false。
