@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "lane": "r1agree",
+      "version": "v0054",
+      "shape": [
+        7449,
+        500
+      ],
+      "full_replay": "PASS",
+      "scored_components_replayed": "PASS",
+      "input_snapshots": "PASS",
+      "contract": "PASS",
+      "expression_sha256": "2e916fc5b0e53272b0f2bb988241b9125888e27e7bd6078fba10751e571dcf95",
+      "operator": {
+        "agreement_entries": 134978
+      }
+    },
+    {
+      "lane": "r2damp",
+      "version": "v0055",
+      "shape": [
+        7449,
+        500
+      ],
+      "full_replay": "PASS",
+      "scored_components_replayed": "PASS",
+      "input_snapshots": "PASS",
+      "contract": "PASS",
+      "expression_sha256": "faba0fc88cc6d4d460c37e01e4b552c5743486fe6e216eae5a5ab86a36f6ca84",
+      "operator": {
+        "probability_norm": 337.1657789224418,
+        "positive_norm": 66.4630359842134,
+        "cancellation_entries": 456771
+      }
+    },
+    {
+      "lane": "r3diffuse",
+      "version": "v0056",
+      "shape": [
+        7449,
+        500
+      ],
+      "full_replay": "PASS",
+      "scored_components_replayed": "PASS",
+      "input_snapshots": "PASS",
+      "contract": "PASS",
+      "expression_sha256": "1f45d1b2a851ca5e8b0abe2bfdeec564ab8f6e7ff37f7d6f0523077860ae40e4",
+      "operator": {
+        "groups": [
+          {
+            "type": "Allantois",
+            "cells": 4,
+            "edges_with_self": 16,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "EXE-Endoderm",
+            "cells": 6,
+            "edges_with_self": 36,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "Endo",
+            "cells": 205,
+            "edges_with_self": 2205,
+            "predecode_mean_maxabs": 1.1102230246251565e-15
+          },
+          {
+            "type": "ExEM-1",
+            "cells": 33,
+            "edges_with_self": 407,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "ExEM-2",
+            "cells": 13,
+            "edges_with_self": 143,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "Gut Endoderm",
+            "cells": 16,
+            "edges_with_self": 184,
+            "predecode_mean_maxabs": 6.661338147750939e-16
+          },
+          {
+            "type": "HEM-Endoth",
+            "cells": 4,
+            "edges_with_self": 16,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "IFT-CM",
+            "cells": 294,
+            "edges_with_self": 3132,
+            "predecode_mean_maxabs": 1.9984014443252818e-15
+          },
+          {
+            "type": "Intra-Endoth-1",
+            "cells": 10,
+            "edges_with_self": 98,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "Intra-Endoth-2",
+            "cells": 10,
+            "edges_with_self": 98,
+            "predecode_mean_maxabs": 1.1102230246251565e-16
+          },
+          {
+            "type": "JCF",
+            "cells": 80,
+            "edges_with_self": 870,
+            "predecode_mean_maxabs": 8.881784197001252e-16
+          },
+          {
+            "type": "LPM",
+            "cells": 1,
+            "edges_with_self": 1,
+            "predecode_mean_maxabs": 0.0
+          },
+          {
+            "type": "Lateral FG",
+            "cells": 6,
+            "edges_with_self": 36,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "NCC",
+            "cells": 5,
+            "edges_with_self": 25,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "Neural Tube",
+            "cells": 5,
+            "edges_with_self": 25,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "PAM-1",
+            "cells": 1,
+            "edges_with_self": 1,
+            "predecode_mean_maxabs": 0.0
+          },
+          {
+            "type": "PAM-3",
+            "cells": 5,
+            "edges_with_self": 25,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "Peri",
+            "cells": 24,
+            "edges_with_self": 252,
+            "predecode_mean_maxabs": 1.6653345369377348e-16
+          },
+          {
+            "type": "Unknown",
+            "cells": 143,
+            "edges_with_self": 1567,
+            "predecode_mean_maxabs": 2.6645352591003757e-15
+          },
+          {
+            "type": "V-CM",
+            "cells": 402,
+            "edges_with_self": 4294,
+            "predecode_mean_maxabs": 1.3322676295501878e-15
+          },
+          {
+            "type": "V-CSE",
+            "cells": 2,
+            "edges_with_self": 4,
+            "predecode_mean_maxabs": 0.0
+          },
+          {
+            "type": "a-FG",
+            "cells": 7,
+            "edges_with_self": 49,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "aPHM",
+            "cells": 30,
+            "edges_with_self": 302,
+            "predecode_mean_maxabs": 4.440892098500626e-16
+          },
+          {
+            "type": "d-CSE",
+            "cells": 5,
+            "edges_with_self": 25,
+            "predecode_mean_maxabs": 2.220446049250313e-16
+          },
+          {
+            "type": "pPHM",
+            "cells": 43,
+            "edges_with_self": 457,
+            "predecode_mean_maxabs": 6.661338147750939e-16
+          }
+        ],
+        "inactive_response_maxabs": 0.0
+      }
+    }
+  ],
+  "older_full_shape_artifacts_compared": 53,
+  "four_factual_fold_replays": "PASS",
+  "direct_export": "deliveries/t3three_20260929",
+  "full_WT_cells": 24826,
+  "matched_KO_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET"
+}

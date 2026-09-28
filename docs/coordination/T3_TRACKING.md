@@ -216,3 +216,17 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-28 T3-ROUND2 o2geneshrink 新候选 v0053，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_round2/T3-ROUND2-20260928-v1/o2geneshrink/RESULT.json。
 
 - 2026-09-28 ROUND2收口：三新n1stack=v0049（高分v0048+v0046叠加）、n2orth=v0050、n3occup=v0051；两优化o1logit=v0052、o2geneshrink=v0053。全部全量执行/contract/独立模型重放PASS，13测试。KIR经验落实为精确组件复现、六臂组合诊断、强均值/置乱对照及固定模型出现率/强度消融；局部多数弱或负，不调参救门。未提交/未评分，best v0048保持；reports/t3_round2_20260928/REPORT.md；D-20260928-T3R2-001。
+
+- 2026-09-29 T3-THREE r1agree：高分响应方向一致门控叠加；参数执行前冻结，计划完整7449×500推断和四块WT诊断；未提交/未评分。reports/T3_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T3-THREE r2damp：hurdle概率分量减弱/阳性强度保留；参数执行前冻结，计划完整7449×500推断和四块WT诊断；未提交/未评分。reports/T3_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T3-THREE r3diffuse：同类型活跃细胞内预测响应图扩散；参数执行前冻结，计划完整7449×500推断和四块WT诊断；未提交/未评分。reports/T3_THREE_DESIGN_20260929.md。
+
+- 2026-09-29 T3-THREE r1agree 新候选 v0054，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_three/T3-THREE-20260929-v1/r1agree/RESULT.json。
+
+- 2026-09-29 T3-THREE r2damp 新候选 v0055，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_three/T3-THREE-20260929-v1/r2damp/RESULT.json。
+
+- 2026-09-29 T3-THREE r3diffuse 新候选 v0056，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_three/T3-THREE-20260929-v1/r3diffuse/RESULT.json。
+
+- 2026-09-29 T3-THREE收口：r1agree=v0054、r2damp=v0055、r3diffuse=v0056；三个完整7449×500 h5ad，四块WT拟合/条件诊断、12测试、独立重放/contract/包校验通过。三个未提交/未评分，best v0048=47.93保持；旧v0049–v0053仍待分。reports/t3_three_20260929/REPORT.md；D-20260929-T3THREE-001。

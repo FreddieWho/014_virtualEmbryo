@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "command": "LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=8 python -m pytest -q --import-mode=importlib tests/t3_three/test_ops.py tests/t3_next/test_five.py",
+  "result": "12 passed in 5.96s",
+  "exit_code": 0
+}

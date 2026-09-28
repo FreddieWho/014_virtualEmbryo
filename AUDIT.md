@@ -3,20 +3,21 @@
 Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDICTS.tsv + TODO.md.
 
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
-- T1:val: **51.92** (v0024 five_n1density)
+- T1:val: **52.5** (v0029 round2_n1stack)
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
+- T2:heart:val_interp: **61.52** (v0014 h_n2_lowamp_shared)
 - T3:gata4: **47.93** (v0048 next_n2hurdle)
 
-Score-pending rows: 22 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0037/next_r3splfix, v0040/next_r4panelfix, v0041/next_r4medfix, v0049/round2_n1stack, v0050/round2_n2orth, v0051/round2_n3occup, v0052/round2_o1logit, v0053/round2_o2geneshrink, v0029/round2_n1stack, v0030/round2_n2composition, v0031/round2_n3states, v0032/round2_o1caldensity, v0033/round2_o2shrinkmass)
+Score-pending rows: 17 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0049/round2_n1stack, v0050/round2_n2orth, v0051/round2_n3occup, v0052/round2_o1logit, v0053/round2_o2geneshrink, v0054/three_r1agree, v0055/three_r2damp, v0056/three_r3diffuse)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (78 rows in LANE_VERDICTS.tsv)
-- SHIPPED: 38
+## Lane verdicts (83 rows in LANE_VERDICTS.tsv)
+- SHIPPED: 46
 - FAIL: 14
 - VOID: 2
 - PARKED: 2
-- PENDING_SERVER: 12
-- GATE_ONLY: 10
+- PENDING_SERVER: 8
+- GATE_ONLY: 11
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only
@@ -36,6 +37,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T2-E-I1-TCI: confidence-weighted intra-layer borrowing degrades nmmd 0.970091/0.901227 vs incumbent 0.036362 (+2567.9%/+237
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T2 九路线 M0 已冻结（5% 判据 + 父版本 SHA 实核 + 已耗尽轴清单），M1 researcher 检索与设计定稿待启动；T3 八分回填完（v0048 47.93 新 best，Total 157.04；v0037/v0040/v0041 仍待分）；T1 selection 改为 v0024 51.92（2026-09-28 五路线回填；v0025/v0027 超旧线但未晋级，v0026/v0028 低于父版本）。分支详情见“T2 九路线”节与 DECISIONS D-20260927-T2M0FREEZE-001。
+- **当前执行分支**：等 T3 v0049–v0053 的服务器分数，优先 v0049。T1 选择已是 v0029=52.5，第二轮队列关闭。T2 没有未跑的已规划路线；低幅度空间项已评分且不晋级。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

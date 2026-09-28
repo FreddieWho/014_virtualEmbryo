@@ -90,3 +90,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260927-T3SCORE-001：T3 八分回填，v0048 47.93（+0.98）晋级新 best，Total 157.04；FIVE＋R6 转 SHIPPED，R3 部分回填。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260928-T1R2-001：T1三新两优化完整执行，v0029–v0033未提交/未评分；含v0024+v0027实际组合，优先v0030本地信号，best不变。详见 docs/coordination/DECISIONS.md 与 reports/t1_round2_20260928/REPORT.md。
+
+- D-20260929-T3THREE-001：T3三路线v0054–v0056实际执行并独立验收，交付3个短名h5ad与单ZIP；未提交/未评分，best不变。详见docs/coordination/DECISIONS.md及reports/t3_three_20260929/REPORT.md。

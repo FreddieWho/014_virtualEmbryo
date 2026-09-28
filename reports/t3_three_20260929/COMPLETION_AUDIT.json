@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": {
+    "three_designed_routes": "PASS",
+    "actual_execution_complete": "PASS",
+    "r1agree_full_model_and_contract": "PASS",
+    "r1agree_one_complete_candidate": "PASS",
+    "r1agree_authority": "PASS",
+    "r1agree_direct_upload_file": "PASS",
+    "r1agree_audit_and_tracking": "PASS",
+    "r2damp_full_model_and_contract": "PASS",
+    "r2damp_one_complete_candidate": "PASS",
+    "r2damp_authority": "PASS",
+    "r2damp_direct_upload_file": "PASS",
+    "r2damp_audit_and_tracking": "PASS",
+    "r3diffuse_full_model_and_contract": "PASS",
+    "r3diffuse_one_complete_candidate": "PASS",
+    "r3diffuse_authority": "PASS",
+    "r3diffuse_direct_upload_file": "PASS",
+    "r3diffuse_audit_and_tracking": "PASS",
+    "full_WT_fold_computation_and_coverage": "PASS",
+    "source_eligibility_and_reuse": "PASS",
+    "targeted_tests": "PASS",
+    "zip_identity_three_members": "PASS",
+    "zip_manifests_and_direct_files": "PASS",
+    "paired_decision_indices": "PASS",
+    "report_delivered": "PASS",
+    "not_old_candidate_copy": "PASS"
+  },
+  "unrun": {
+    "matched_KO_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+    "portal_upload": "NOT_RUN",
+    "new_server_scores": "NOT_RUN",
+    "new_full_H_and_GCN_training": "NOT_RUN_FROZEN_SCORED_COMPONENTS_REUSED_BY_DESIGN"
+  },
+  "scientific_status": "INCONCLUSIVE",
+  "blocks_submission": false,
+  "external_data_added": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "current_source_lock": "artifacts/t3_three/T3-THREE-20260929-v1/shared/SOURCE_LOCK.json",
+  "trained_G_source_lock": "artifacts/t3_next/T3-FIVE-20260927-v1/o2shrink/SOURCE_LOCK.json",
+  "same_manifest_hash_files_conditions": true,
+  "new_external_data": false,
+  "new_GCN_training": "NOT_RUN_FROZEN_SCORED_COMPONENT_REUSED"
+}

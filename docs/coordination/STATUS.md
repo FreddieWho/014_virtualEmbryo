@@ -101,10 +101,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "B4-T3-R1 v0009 L1 + v0010 L2 tied 46.95 (new board best; supersedes v0008 floor 46.79)"
-    current_best_score: 46.95
+    current_best: "candidate/T3_gata4/v0048_next_n2hurdle; server 47.93, promoted D-20260927-T3SCORE-001"
+    current_best_score: 47.93
     active_atom: null
-    next_action: "6个修复候选已打包，等待上传回分；R6图优势未成立，R3/R4通过WT评估但KO效果未验证。见 reports/t3_repairs_20260921/REPORT.md。selection保持；R5扩链后续。"
+    next_action: "三路线v0054–v0056已完整实施、独立验证并交付3个短名h5ad，未提交/未评分；见reports/t3_three_20260929/REPORT.md。旧v0049–v0053仍待分，上传前核对；best v0048=47.93保持。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -569,3 +569,11 @@ coordinator独占 scripts/t1_round2、configs/t1_round2、tests/t1_round2、arti
 ### 2026-09-28 T1 ROUND2完成
 
 v0029–v0033三新两优化均完成全量计算与完整panel本地评分，含v0024+v0027真实组合。16测试、五模型独立重放/拟合参数核对、contract、ZIP校验PASS。v0030本地最有利但未提交/未评分；best v0024=51.92保持。reports/t1_round2_20260928/REPORT.md；lease释放。E10.5/E12.5真值NOT_RUN，blocks_submission:false。
+
+### 2026-09-29 T3 三候选执行lease
+
+coordinator独占scripts/t3_three、configs/t3_three、tests/t3_three、artifacts/t3_three、reports/t3_three_20260929，共享候选登记串行；消费冻结高分H/G，三条响应算子实际执行。设计reports/T3_THREE_DESIGN_20260929.md；v0049–v0053仍未回分，best v0048保持；blocks_submission:false。
+
+### 2026-09-29 T3 三候选完成
+
+v0054–v0056完整推断及四块WT条件诊断完成，12测试、独立重放、contract、旧候选去重、三个直接h5ad与ZIP校验PASS；reports/t3_three_20260929/REPORT.md。未提交/未评分；best v0048=47.93保持。科学INCONCLUSIVE，匹配KO评分NOT_RUN，lease释放，blocks_submission:false。

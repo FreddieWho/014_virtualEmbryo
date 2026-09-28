@@ -892,3 +892,7 @@ reuse_promoted
 ### D-20260928-T1R2-001 — T1 第二轮三新两优化完成
 
 用户授权三条新路线、两条优化，要求高分合并计入新路线预算。实际完成n1stack(v0029：v0024+v0027组合)、n2composition(v0030)、n3states(v0031)、o1caldensity(v0032)、o2shrinkmass(v0033)。完整官方32285列scorer五次、16定向测试、五模型独立重放及拟合参数审查、contract和ZIP SHA/CRC全部PASS。v0030本地DE持平、其他四主项改善；v0029有取舍；另外三条未胜各自原模型。未提交/未评分；best v0024=51.92不变。优先v0030，次选v0029；不把cell holdout当未来/独立胚胎验证。证据 reports/t1_round2_20260928/REPORT.md；deliveries/t1r2__t1__upload__20260928.zip；blocks_submission:false。
+
+### D-20260929-T3THREE-001 — T3 三个响应候选完成
+
+用户要求三路线并交付三个可提交h5ad。实际执行r1agree=v0054（高分H/G同向门控叠加）、r2damp=v0055（概率分量减弱）、r3diffuse=v0056（类型/活跃细胞内响应扩散）；完整7449×500推断、四块WT重新拟合及条件诊断完成，12测试、三模型独立重放、contract、旧候选去重、direct export和ZIP校验PASS。局部r1胜H但不胜无门叠加，r2弱于H，r3仅极小变化；不据此宣称KO准确率提高。best v0048=47.93保持，三项未提交/未评分。交付deliveries/t3three_20260929/与deliveries/t3three__t3__upload__20260929.zip；证据reports/t3_three_20260929/REPORT.md。匹配KO官方scorer NOT_RUN，blocks_submission:false。
