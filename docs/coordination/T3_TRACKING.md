@@ -230,3 +230,17 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-29 T3-THREE r3diffuse 新候选 v0056，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_three/T3-THREE-20260929-v1/r3diffuse/RESULT.json。
 
 - 2026-09-29 T3-THREE收口：r1agree=v0054、r2damp=v0055、r3diffuse=v0056；三个完整7449×500 h5ad，四块WT拟合/条件诊断、12测试、独立重放/contract/包校验通过。三个未提交/未评分，best v0048=47.93保持；旧v0049–v0053仍待分。reports/t3_three_20260929/REPORT.md；D-20260929-T3THREE-001。
+
+- 2026-09-29 T3-FIVE-SELECT r1active 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+- 2026-09-29 T3-FIVE-SELECT r2gene 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+- 2026-09-29 T3-FIVE-SELECT r3bag 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+- 2026-09-29 T3-FIVE-SELECT r4spline 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+- 2026-09-29 T3-FIVE-SELECT r5local 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+- 2026-09-29 T3-FIVE-SELECT r2gene 新候选 v0057，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r2gene/registered/RESULT.json。
+- 2026-09-29 T3-FIVE-SELECT r4spline 新候选 v0058，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r4spline/registered/RESULT.json。
+- 2026-09-29 T3-FIVE-SELECT r3bag 新候选 v0059，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r3bag/registered/RESULT.json。
+- 2026-09-29 T3-FIVE-SELECT r1active 收口：完整推断/contract/独立进程重放PASS；同族开发排名未选，PARKED研究输出。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+- 2026-09-29 T3-FIVE-SELECT r2gene 收口：完整推断/contract/独立进程重放PASS；v0057入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+- 2026-09-29 T3-FIVE-SELECT r3bag 收口：完整推断/contract/独立进程重放PASS；v0059入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+- 2026-09-29 T3-FIVE-SELECT r4spline 收口：完整推断/contract/独立进程重放PASS；v0058入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+- 2026-09-29 T3-FIVE-SELECT r5local 收口：完整推断/contract/独立进程重放PASS；同族开发排名未选，PARKED研究输出。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。

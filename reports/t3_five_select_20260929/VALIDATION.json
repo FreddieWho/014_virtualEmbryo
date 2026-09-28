@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": [
+    "selection locked before audit and unchanged",
+    "development ranking independently recomputed",
+    "input and executed-code hashes",
+    "r1active local training boundary and full-data fit identity",
+    "r1active persisted-model replay, values, axes and spatial identity",
+    "r2gene local training boundary and full-data fit identity",
+    "r2gene persisted-model replay, values, axes and spatial identity",
+    "r3bag local training boundary and full-data fit identity",
+    "r3bag persisted-model replay, values, axes and spatial identity",
+    "r4spline local training boundary and full-data fit identity",
+    "r4spline persisted-model replay, values, axes and spatial identity",
+    "r5local local training boundary and full-data fit identity",
+    "r5local persisted-model replay, values, axes and spatial identity",
+    "exactly three registered candidates match full route predictions"
+  ],
+  "check_count": 14,
+  "validator_sha256": "f529905cbb84b2aeb15fbf18b821ef88d91c17334c79d9915fe107b529aec272",
+  "limits": "engineering and split integrity only; no matched KO target; no server score"
+}

@@ -1,0 +1,20 @@
+bootstrap fitted local_models 20260929
+bootstrap fitted local_models 20260930
+bootstrap fitted local_models 20260931
+bootstrap fitted local_models 20260932
+spline fitted local_models
+selection locked ['r2gene', 'r4spline', 'r3bag']
+bootstrap fitted full_models 20260929
+bootstrap fitted full_models 20260930
+bootstrap fitted full_models 20260931
+bootstrap fitted full_models 20260932
+spline fitted full_models
+full inference complete r1active
+full inference complete r2gene
+full inference complete r3bag
+full inference complete r4spline
+full inference complete r5local
+{"run": "/home/huyudi/014_virtualEmbryo/artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r2gene/registered", "status": "CANDIDATE_READY", "candidates": 1, "wall_s": 3.4}
+{"run": "/home/huyudi/014_virtualEmbryo/artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r4spline/registered", "status": "CANDIDATE_READY", "candidates": 1, "wall_s": 3.5}
+{"run": "/home/huyudi/014_virtualEmbryo/artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r3bag/registered", "status": "CANDIDATE_READY", "candidates": 1, "wall_s": 3.5}
+{"run": "/home/huyudi/014_virtualEmbryo/artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1", "status": "FIVE_EXECUTED_THREE_READY", "candidates": 3, "wall_s": 113.7}

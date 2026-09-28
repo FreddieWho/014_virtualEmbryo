@@ -104,7 +104,7 @@ tasks:
     current_best: "candidate/T3_gata4/v0048_next_n2hurdle; server 47.93, promoted D-20260927-T3SCORE-001"
     current_best_score: 47.93
     active_atom: null
-    next_action: "三路线v0054–v0056已完整实施、独立验证并交付3个短名h5ad，未提交/未评分；见reports/t3_three_20260929/REPORT.md。旧v0049–v0053仍待分，上传前核对；best v0048=47.93保持。"
+    next_action: "五路线完整运行，开发规则选v0057–v0059三个h5ad，审计未改名单；6测试/14项独立进程验收通过，未提交/未评分。上传前核对旧v0049–v0056原始评分证据；best v0048保持。reports/t3_five_select_20260929/REPORT.md。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -585,3 +585,9 @@ coordinator独占scripts/t1_three、configs/t1_three、tests/t1_three、artifact
 ### 2026-09-29 T1 三候选完成
 
 v0034–v0036全量推断和完整panel本地scorer完成，13测试、独立重放/整行身份/contract/ZIP通过。提交包deliveries/t1three__t1__upload__20260929.zip；reports/t1_three_20260929/REPORT.md。优先v0035本地信号，三个未提交/未评分；best v0029=52.50保持。磁盘恢复后全部在正式项目执行，lease释放，blocks_submission:false。
+
+### 2026-09-29 T3 五路线选三执行 lease
+coordinator 独占 scripts/t3_five_select、configs/t3_five_select、tests/t3_five_select、artifacts/t3_five_select、reports/t3_five_select_20260929；共享登记串行。五条实际运行，开发块固定选一条来源组合及两条新模型，名单锁定后审计；仅三条登记入包。设计 reports/T3_FIVE_SELECT_DESIGN_20260929.md。旧 v0049–v0056 未回分，best v0048 保持；blocks_submission:false。
+
+### 2026-09-29 T3 五路线选三完成
+五条全量运行，事前开发块选中v0057–v0059三件，审计未改名单；五条contract/重放/去重、6测试与独立进程14项验收通过。单包deliveries/t3five3__t3__upload__20260929.zip；reports/t3_five_select_20260929/REPORT.md。三个未提交/未评分，best v0048=47.93保持。仅WT少量组诊断，匹配KO scorer NOT_RUN，科学NOT_IDENTIFIABLE；lease释放，blocks_submission:false。

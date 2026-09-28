@@ -1,0 +1,67 @@
+{
+  "schema": "ve.t3.five_select.v1",
+  "date": "2026-09-29",
+  "seed": 20260929,
+  "lanes": [
+    "r1active",
+    "r2gene",
+    "r3bag",
+    "r4spline",
+    "r5local"
+  ],
+  "train_blocks": [
+    0,
+    1
+  ],
+  "development_block": 2,
+  "audit_block": 3,
+  "ridge_alpha": 100,
+  "hurdle_strength": 0.25,
+  "source_strength": 0.5,
+  "activity_quantiles": [
+    0.25,
+    0.75
+  ],
+  "min_train_type": 80,
+  "min_test_group": 10,
+  "effect_epsilon": 1e-08,
+  "bootstrap_seeds": [
+    20260929,
+    20260930,
+    20260931,
+    20260932
+  ],
+  "spline_quantiles": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "neighbors": 64,
+  "residual_weight": 0.4,
+  "selection": {
+    "source_family": [
+      "r1active",
+      "r2gene"
+    ],
+    "learned_family": [
+      "r3bag",
+      "r4spline",
+      "r5local"
+    ],
+    "source_count": 1,
+    "learned_count": 2,
+    "criterion": "development high-cell-weighted group-mean MSE ascending; family order breaks ties",
+    "no_eligible_groups": "fixed family order, NOT_TESTABLE; never scientific promotion",
+    "audit": "computed after SELECTED.json lock; cannot alter selection"
+  },
+  "disaster_bounds": {
+    "cell_library_ratio_q01_min": 0.5,
+    "cell_library_ratio_q99_max": 2.0,
+    "variance_ratio_min": 0.25,
+    "variance_ratio_max": 4.0,
+    "negative_clip_fraction_max": 0.01
+  },
+  "five": {
+    "rate_bound": 0.6931471805599453
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "selected": [
+    "r2gene",
+    "r4spline",
+    "r3bag"
+  ],
+  "rankings": {
+    "source": [
+      "r2gene",
+      "r1active"
+    ],
+    "learned": [
+      "r4spline",
+      "r3bag",
+      "r5local"
+    ]
+  },
+  "design_sha256": "d148e0b805deb4bdee78d61f359da8d9a9b10234f3bed385f246d217be24e37b",
+  "development_sha256": "d5694eb7ec52fd8b1551159d378a71089a89e4ad8ab42e3b5adc8d746e90a775",
+  "audit_opened": false,
+  "criterion": "development high-cell-weighted group-mean MSE ascending; family order breaks ties",
+  "development_status": "EXECUTED"
+}

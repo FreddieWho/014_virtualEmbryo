@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "H_exact": true,
+  "G_exact": true,
+  "model_files": {
+    "artifacts/t3_next/T3-FIVE-20260927-v2/n2hurdle/hurdle_model.pkl": "f6037b5caf4d44f38c4210b80916f1a9387e386301fbc313746bf38e44860e23",
+    "artifacts/t3_next/T3-FIVE-20260927-v1/o2shrink/target_rate.npy": "b3c1fbd191bc73d51d579b52c556f0c3fff9b2b94bcd38e704d5d76a9b103839"
+  },
+  "source_review": "SOURCE_LOCK.json"
+}

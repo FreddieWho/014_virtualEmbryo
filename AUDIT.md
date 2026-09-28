@@ -8,15 +8,15 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_interp: **61.52** (v0014 h_n2_lowamp_shared)
 - T3:gata4: **47.93** (v0048 next_n2hurdle)
 
-Score-pending rows: 20 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0049/round2_n1stack, v0050/round2_n2orth, v0051/round2_n3occup, v0052/round2_o1logit, v0053/round2_o2geneshrink, v0054/three_r1agree, v0055/three_r2damp, v0056/three_r3diffuse, v0034/three_r1compose, v0035/three_r2joint, v0036/three_r3mix)
+Score-pending rows: 38 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0049/round2_n1stack, v0050/round2_n2orth, v0051/round2_n3occup, v0052/round2_o1logit, v0053/round2_o2geneshrink, v0054/three_r1agree, v0055/three_r2damp, v0056/three_r3diffuse, v0034/three_r1compose, v0035/three_r2joint, v0036/three_r3mix, v0011/e_n1_qbridge, v0012/e_n2_trend3, v0013/e_n3_substate2, v0014/e_o1_shrinkmerge, v0015/e_o2_scalmass, v0017/x_n1_lineage, v0018/x_n2_trend3, v0019/x_n3_compmix, v0020/x_o1_trendshrink, v0021/x_o2_shrinkcomp, v0016/h_n1_qbridge, v0017/h_n2_curve95, v0018/h_n3_cmjoin, v0019/h_o1_shrinkmerge, v0020/h_o2_libnorm, v0057/five_select_r2gene, v0058/five_select_r4spline, v0059/five_select_r3bag)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (86 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (106 rows in LANE_VERDICTS.tsv)
 - SHIPPED: 46
 - FAIL: 14
 - VOID: 2
-- PARKED: 2
-- PENDING_SERVER: 11
+- PARKED: 4
+- PENDING_SERVER: 29
 - GATE_ONLY: 11
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse

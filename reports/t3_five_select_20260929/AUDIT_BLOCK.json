@@ -1,0 +1,187 @@
+{
+  "status": "EXECUTED",
+  "block": 3,
+  "train_cells": 12015,
+  "test_cells": 6256,
+  "eligible_groups": [
+    {
+      "type": "Unknown",
+      "train_cells": 658,
+      "high_cells": 60,
+      "low_cells": 267,
+      "responses": 499,
+      "intervention": 0.0,
+      "mse": {
+        "identity": 0.8198158740997314,
+        "H": 0.65850430727005,
+        "r1active": 0.6421439051628113,
+        "r2gene": 0.6417065262794495,
+        "r3bag": 0.6579223871231079,
+        "r4spline": 0.6539967060089111,
+        "r5local": 0.6658830642700195
+      }
+    },
+    {
+      "type": "V-CM",
+      "train_cells": 1056,
+      "high_cells": 31,
+      "low_cells": 30,
+      "responses": 499,
+      "intervention": 0.0,
+      "mse": {
+        "identity": 0.13821031153202057,
+        "H": 0.11778844892978668,
+        "r1active": 0.11382923275232315,
+        "r2gene": 0.11272551119327545,
+        "r3bag": 0.1180906593799591,
+        "r4spline": 0.1216270923614502,
+        "r5local": 0.11964061111211777
+      }
+    }
+  ],
+  "excluded_groups": [
+    {
+      "type": "Allantois",
+      "reason": "train_type_below_80",
+      "test_cells": 48
+    },
+    {
+      "type": "Caudal Epiblast",
+      "reason": "train_type_below_80",
+      "test_cells": 6
+    },
+    {
+      "type": "D-FG",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 247
+    },
+    {
+      "type": "EXE-Endoderm",
+      "reason": "train_type_below_80",
+      "test_cells": 20
+    },
+    {
+      "type": "Endo",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 69
+    },
+    {
+      "type": "ExEM-1",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 61
+    },
+    {
+      "type": "ExEM-2",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 23
+    },
+    {
+      "type": "Forebrain",
+      "reason": "train_type_below_80",
+      "test_cells": 5
+    },
+    {
+      "type": "HEM-Endoth",
+      "reason": "train_type_below_80",
+      "test_cells": 31
+    },
+    {
+      "type": "Intra-Endoth-1",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 254
+    },
+    {
+      "type": "Intra-Endoth-2",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 85
+    },
+    {
+      "type": "JCF",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 72
+    },
+    {
+      "type": "Lateral FG",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 17
+    },
+    {
+      "type": "NCC",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 1598
+    },
+    {
+      "type": "Neural Tube",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 878
+    },
+    {
+      "type": "PAM-1",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 15
+    },
+    {
+      "type": "PAM-2",
+      "reason": "train_type_below_80",
+      "test_cells": 320
+    },
+    {
+      "type": "PAM-4",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 158
+    },
+    {
+      "type": "Peri",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 58
+    },
+    {
+      "type": "SOM",
+      "reason": "train_type_below_80",
+      "test_cells": 3
+    },
+    {
+      "type": "V-CSE",
+      "reason": "train_type_below_80",
+      "test_cells": 856
+    },
+    {
+      "type": "a-FG",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 280
+    },
+    {
+      "type": "aPHM",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 241
+    },
+    {
+      "type": "d-CSE",
+      "reason": "no_activity_separation_or_small_test_group",
+      "test_cells": 437
+    },
+    {
+      "type": "pSE",
+      "reason": "train_type_below_80",
+      "test_cells": 5
+    }
+  ],
+  "weighted_mean_group_mse": {
+    "identity": 0.5876205725656761,
+    "H": 0.4743043994838065,
+    "r1active": 0.46216857719879884,
+    "r2gene": 0.4615042024588847,
+    "r3bag": 0.4740236666831341,
+    "r4spline": 0.47264002443669917,
+    "r5local": 0.47980047033710793
+  },
+  "factual_mse": {
+    "r3bag": 1.5110041329728436,
+    "r4spline": 1.4959018367115426,
+    "r5local": 1.4869407887169082
+  },
+  "denominator": "group means weighted by high-group cells times 499 response genes",
+  "limit": "observational single-specimen WT; not matched KO accuracy",
+  "target_KO_scorer": "NOT_RUN_NO_MATCHED_GATA4_TARGET",
+  "selection_sha256_before_open": "ded5350b081cfa0c9e5f2f54e5951c38861a1572a88e6ee2da470cf31b239fc6"
+}

@@ -1,0 +1,21 @@
+{
+  "selected": [
+    "r2gene",
+    "r4spline",
+    "r3bag"
+  ],
+  "preaudit_selection": [
+    "r2gene",
+    "r4spline",
+    "r3bag"
+  ],
+  "selection_sha256": "ded5350b081cfa0c9e5f2f54e5951c38861a1572a88e6ee2da470cf31b239fc6",
+  "engineering_eligibility": {
+    "r1active": true,
+    "r2gene": true,
+    "r3bag": true,
+    "r4spline": true,
+    "r5local": true
+  },
+  "audit_did_not_change_selection": true
+}
