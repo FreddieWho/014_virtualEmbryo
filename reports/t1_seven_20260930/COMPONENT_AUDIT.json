@@ -1,0 +1,60 @@
+{
+  "paths": {
+    "baseline": {
+      "path": "artifacts/g0/T1-NEXT-R1-QUANT-20260921-v1/intermediates/arm_B_qpos_zero.h5ad",
+      "sha256": "485c69aaf5a47b65d028fd4ac7934e01428873960004a222d36b1d8ee0a4c667"
+    },
+    "target": {
+      "path": "artifacts/g0/T1-NEXT-R1-QUANT-20260921-v1/intermediates/pseudo_target_e95_outer.h5ad",
+      "sha256": "c9034236f0c2fa673a5e92e8e766b829de9c8414b302f9450717377d863ca436"
+    },
+    "reference": {
+      "path": "artifacts/g0/T1-NEXT-R1-QUANT-20260921-v1/intermediates/reference_e85_train.h5ad",
+      "sha256": "b5f1e65185297d2c479707d20514c4350280fa42a4460043e4c2f3c231c5e6e9"
+    },
+    "baseline_scores": {
+      "path": "artifacts/t1_round2/T1-ROUND2-20260928-v1/n1stack/SCORER.json",
+      "sha256": "dc5b4ef7d12a41b0ed8cf7d077a19a06276bb636657e93b4f4c89d5e279f5529"
+    }
+  },
+  "current_best": "v0035",
+  "component_audit": [
+    {
+      "version": "v0035",
+      "scope": "report",
+      "exact": true,
+      "shape": [
+        3357,
+        32285
+      ]
+    },
+    {
+      "version": "v0036",
+      "scope": "report",
+      "exact": true,
+      "shape": [
+        3357,
+        32285
+      ]
+    },
+    {
+      "version": "v0035",
+      "scope": "final",
+      "exact": true,
+      "shape": [
+        5118,
+        32285
+      ]
+    },
+    {
+      "version": "v0036",
+      "scope": "final",
+      "exact": true,
+      "shape": [
+        5118,
+        32285
+      ]
+    }
+  ],
+  "science": "same released-stage report; no hidden future truth"
+}

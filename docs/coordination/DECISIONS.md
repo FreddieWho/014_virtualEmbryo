@@ -904,3 +904,14 @@ reuse_promoted
 ### D-20260929-T3FIVESELECT-001 — T3 五路线完整运行、固定选三
 
 用户授权实现五条T3路线并交付三件。活动量门控来源组合、基因同号来源组合、四次bootstrap hurdle、非线性hurdle、局部残差校正均完整7449×500实际执行。训练块0/1、开发2按族选1+2、名单锁定后审计3；选中v0057/r2gene、v0058/r4spline、v0059/r3bag，另两条PARKED保留研究输出，无工程失败、不调参挽救。6测试及独立进程14项验收、五条contract/重放/去重与ZIP SHA/CRC通过。bootstrap开发略差H、审计略好；仅3/2个WT组，不构成KO或服务器改进。三个未提交/未评分，best v0048=47.93保持，匹配KO scorer NOT_RUN，科学NOT_IDENTIFIABLE；blocks_submission:false。证据 reports/t3_five_select_20260929/REPORT.md；deliveries/t3five3__t3__upload__20260929.zip。
+
+## D-20260929-T1THREESCORE-001 — T1三路线回分（v0035 晋级新 best）
+
+- authorization: 用户供给分数表（2026-09-28 18:57–19:08 三条 T1 总分及各四子项），按既定回填链登记。
+- decision: v0035 53.43（+0.93 vs v0029）PROMOTED 为新 T1 selection；v0036 53.36 距新 best −0.07，按不并列晋级规则记 scored backup；v0034 53.24（−0.19 vs 新 best）REJECT，但仍高于旧线，记 scored。三条相对 v0029 四个子项同涨，最大的是方向（+1.0 到 +1.7），属描述不属机制。
+- evidence: reports/SERVER_SCORE_REGISTRY.md#t1-three-score-return-20260929；INDEX 三行 scored（SHA 实核通过：v0034 `dbe266bd…`、v0035 `d5cce857…`、v0036 `89891ef9…`）；SUBMETRIC＋12 行；verdicts T1-THREE 三行 SHIPPED。
+- boundary: 总分未从舍入子项重构；三条 exploration-only（报告场景分、无 E10.5 真值），不作机制推断；本次无新拟合/候选；blocks_submission: false.
+
+### D-20260930-T1SEVEN-001 — T1 七路线完整执行
+
+用户授权3新＋2失败优化＋2成功优化。七条完整report/future拟合推断，七次32285列官方本地scorer，8测试和14矩阵独立重放/模型参数与训练边界检查通过；4父矩阵精确复现，ZIP SHA/CRC通过。候选v0037、v0038、v0039、v0040、v0042、v0041、v0043均未提交/未评分；best v0035=53.43保持。失败优化追溯v0031/v0033，成功优化基于v0035/v0036；局部取舍与负结果见reports/t1_seven_20260930/REPORT.md，不追调参数救援。未来真值NOT_RUN、科学EXPLORATORY_LOCAL，blocks_submission:false。包deliveries/t1seven__t1__upload__20260930.zip。

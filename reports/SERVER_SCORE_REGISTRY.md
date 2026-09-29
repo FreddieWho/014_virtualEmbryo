@@ -841,3 +841,22 @@ Decision and limits:
 - Skill-level read versus v0023 (44.0/57.4/53.1/47.8), descriptive not causal: v0024 improves all four skills, largest on de_score +1.5. v0027's gain is mostly variogram +1.7 with de unchanged. v0028 loses de/dir/mmd and only variogram rises. This does not identify a biological mechanism.
 - No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260928-T1FIVESCORE-001.
+
+<a id="t1-three-score-return-20260929"></a>
+## T1 THREE score return — 2026-09-29
+
+Source / raw evidence: user-supplied score table (datetimes 2026-09-28 18:57–19:08, portal filenames, file sizes 632 MB, board totals and four skills). Submission IDs not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills (T1 weights 0.25/0.25/0.30/0.20 give 53.23/53.445/53.35 versus reported 53.24/53.43/53.36; differences are rounding). Local artifact SHA256 values match submissions/INDEX.tsv (v0034 `dbe266bd…`, v0035 `d5cce857…`, v0036 `89891ef9…`); artifacts immutable. Parent v0029 and contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| t1_val__r1compose__v0034.h5ad | 53.24 | 46.0 | 60.0 | 55.4 | 50.6 |
+| t1_val__r2joint__v0035.h5ad | 53.43 | 46.8 | 60.2 | 55.1 | 50.8 |
+| t1_val__r3mix__v0036.h5ad | 53.36 | 47.0 | 59.5 | 55.1 | 51.0 |
+
+Decision and limits:
+- v0035 53.43 vs parent/incumbent v0029 52.5: +0.93, far outside the ±0.1 TIE band. PROMOTED: new T1 selection and highest observed.
+- v0036 53.36 trails the new best by 0.07 → TIE with v0035; incumbent v0035 stays per the standing no-co-promotion rule. Scored backup, not co-promoted.
+- v0034 53.24 trails the new best by 0.19 → outside TIE → REJECT as improvement (still +0.74 vs old best; recorded as scored above the old line).
+- Skill-level read versus v0029 (45.8/58.5/54.9/49.7), descriptive not causal: all three improve de/dir/mmd/vario together; the largest move is direction (+1.0 to +1.7). v0036 carries de (47.0) but gives back direction versus v0035. This does not identify a biological mechanism.
+- No new Total supplied with this batch. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260929-T1THREESCORE-001.

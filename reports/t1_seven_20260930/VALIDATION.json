@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "requirements": {
+    "three_new": 3,
+    "two_failed_optimizations": 2,
+    "two_successful_optimizations": 2,
+    "routes_executed": 7,
+    "full_panel_scorers": 7
+  },
+  "routes": [
+    {
+      "lane": "n1moment",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "n2covot",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "n3graph",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "f1soft",
+      "category": "failed_optimization",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "f2stable",
+      "category": "failed_optimization",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "s1growth",
+      "category": "successful_optimization",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "s2mix",
+      "category": "successful_optimization",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    }
+  ],
+  "scored_parents_exact_reproductions": 4,
+  "archive_members": 7,
+  "archive_crc_sha": "PASS",
+  "validator_sha256": "16fb5a33ea8112f85b693bfd6eebcef0248a656a3ccea37cd54ca69d3f5b8a60",
+  "future_truth": "NOT_RUN_NO_E105_TRUTH"
+}

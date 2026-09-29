@@ -1,0 +1,8 @@
+{"lane": "n1moment", "pid": 9, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "n2covot", "pid": 10, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "n3graph", "pid": 222, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "f1soft", "pid": 239, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "s1growth", "pid": 453, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "f2stable", "pid": 436, "exit_code": 0, "status": "COMPLETED"}
+{"lane": "s2mix", "pid": 642, "exit_code": 0, "status": "COMPLETED"}
+{"status": "COMPLETED", "routes": [{"lane": "n1moment", "pid": 9, "exit_code": 0, "status": "COMPLETED"}, {"lane": "n2covot", "pid": 10, "exit_code": 0, "status": "COMPLETED"}, {"lane": "n3graph", "pid": 222, "exit_code": 0, "status": "COMPLETED"}, {"lane": "f1soft", "pid": 239, "exit_code": 0, "status": "COMPLETED"}, {"lane": "s1growth", "pid": 453, "exit_code": 0, "status": "COMPLETED"}, {"lane": "f2stable", "pid": 436, "exit_code": 0, "status": "COMPLETED"}, {"lane": "s2mix", "pid": 642, "exit_code": 0, "status": "COMPLETED"}], "wall_s": 835.6685192584991}

@@ -325,3 +325,15 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	de_direction	55.2
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	mmd_u	50.7
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	variogram	48.4
+2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	de_score	46.0
+2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	de_direction	60.0
+2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	mmd_u	55.4
+2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	variogram	50.6
+2026-09-29	T1:val	v0035	three_r2joint	t1_val__r2joint__v0035.h5ad	2026-09-28 19:01	53.43	de_score	46.8
+2026-09-29	T1:val	v0035	three_r2joint	t1_val__r2joint__v0035.h5ad	2026-09-28 19:01	53.43	de_direction	60.2
+2026-09-29	T1:val	v0035	three_r2joint	t1_val__r2joint__v0035.h5ad	2026-09-28 19:01	53.43	mmd_u	55.1
+2026-09-29	T1:val	v0035	three_r2joint	t1_val__r2joint__v0035.h5ad	2026-09-28 19:01	53.43	variogram	50.8
+2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	de_score	47.0
+2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	de_direction	59.5
+2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	mmd_u	55.1
+2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	variogram	51.0

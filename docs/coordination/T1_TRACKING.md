@@ -227,3 +227,25 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-29 T1-THREE r3mix 新候选 v0036：完整5118×32285，parent=v0029，contract PASS，未提交/未评分；证据 artifacts/t1_three/T1-THREE-20260929-v1/r3mix/RESULT.json。
 
 - 2026-09-29 T1-THREE收口：r1compose=v0034、r2joint=v0035、r3mix=v0036；完整推断/三次full-panel官方scorer、13测试、独立重放/整行身份/contract/ZIP通过。v0035本地最有利，r1/r3有取舍；全部未提交/未评分，best v0029=52.50保持。reports/t1_three_20260929/REPORT.md；D-20260929-T1THREE-001。
+- 2026-09-29｜T1-THREE 三 lane 回分｜v0035 53.43（+0.93）PROMOTED 新 T1 best；v0036 53.36（距新 best −0.07，不并列晋级）；v0034 53.24（距新 best −0.19）不晋级。三条四子项相对 v0029 同涨，方向涨得最多。推导合计见 registry。D-20260929-T1THREESCORE-001。
+- 2026-09-30 T1-SEVEN n1moment 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN n2covot 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN n3graph 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN f1soft 路线冻结（failed_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN f2stable 路线冻结（failed_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN s1growth 路线冻结（successful_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN s2mix 路线冻结（successful_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+- 2026-09-30 T1-SEVEN n1moment 新候选 v0037：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n1moment/RESULT.json。
+- 2026-09-30 T1-SEVEN n2covot 新候选 v0038：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n2covot/RESULT.json。
+- 2026-09-30 T1-SEVEN n3graph 新候选 v0039：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n3graph/RESULT.json。
+- 2026-09-30 T1-SEVEN f1soft 新候选 v0040：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/f1soft/RESULT.json。
+- 2026-09-30 T1-SEVEN s1growth 新候选 v0041：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/s1growth/RESULT.json。
+- 2026-09-30 T1-SEVEN f2stable 新候选 v0042：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/f2stable/RESULT.json。
+- 2026-09-30 T1-SEVEN s2mix 新候选 v0043：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/s2mix/RESULT.json。
+- 2026-09-30 T1-SEVEN n1moment收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0037，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN n2covot收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0038，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN n3graph收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0039，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN f1soft收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0040，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN f2stable收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0042，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN s1growth收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0041，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+- 2026-09-30 T1-SEVEN s2mix收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0043，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。

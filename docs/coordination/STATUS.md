@@ -66,9 +66,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0029_round2_n1stack (scored stack combo, parent v0024)"
-    current_best_score: 52.5
-    next_action: "三路线v0034–v0036完整执行/独立验收完成，提交包含三个h5ad；未提交/未评分，优先v0035本地信号，best v0029=52.50保持。见reports/t1_three_20260929/REPORT.md。"
+    current_best: "candidate/T1_val/v0035_three_r2joint (scored, parent v0029)"
+    current_best_score: 53.43
+    next_action: "七路线3新/2失败优化/2成功优化已完整运行和独立验收；本轮候选未提交/未评分，回分前best v0035=53.43不变。reports/t1_seven_20260930/REPORT.md。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -591,3 +591,9 @@ coordinator 独占 scripts/t3_five_select、configs/t3_five_select、tests/t3_fi
 
 ### 2026-09-29 T3 五路线选三完成
 五条全量运行，事前开发块选中v0057–v0059三件，审计未改名单；五条contract/重放/去重、6测试与独立进程14项验收通过。单包deliveries/t3five3__t3__upload__20260929.zip；reports/t3_five_select_20260929/REPORT.md。三个未提交/未评分，best v0048=47.93保持。仅WT少量组诊断，匹配KO scorer NOT_RUN，科学NOT_IDENTIFIABLE；lease释放，blocks_submission:false。
+
+### 2026-09-30 T1 七路线执行 lease
+coordinator独占scripts/t1_seven、configs/t1_seven、tests/t1_seven、artifacts/t1_seven、reports/t1_seven_20260930；共享登记串行。按用户要求3新＋2失败优化＋2成功优化，设计reports/T1_SEVEN_DESIGN_20260930.md。当前best v0035=53.43，T1旧项已全部回分。完整32285列实际推断及本地scorer，科学限制blocks_submission:false。
+
+### 2026-09-30 T1 七路线完成
+3新＋2失败优化＋2成功优化全部全量执行，七次完整panel本地scorer与14矩阵独立重放通过，8测试通过。候选v0037、v0038、v0039、v0040、v0042、v0041、v0043未提交/未评分，best v0035=53.43保持；reports/t1_seven_20260930/REPORT.md；deliveries/t1seven__t1__upload__20260930.zip。未来真值NOT_RUN，科学EXPLORATORY_LOCAL；lease释放，blocks_submission:false。

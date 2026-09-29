@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "objective": "T1 3 new + 2 failed-route optimizations + 2 successful-route optimizations",
+  "requirements": {
+    "three_new": 3,
+    "two_failed_optimizations": 2,
+    "two_successful_optimizations": 2,
+    "routes_executed": 7,
+    "full_panel_scorers": 7
+  },
+  "candidate_versions": [
+    "v0037",
+    "v0038",
+    "v0039",
+    "v0040",
+    "v0042",
+    "v0041",
+    "v0043"
+  ],
+  "evidence": [
+    "VALIDATION.json",
+    "METRICS.json",
+    "TESTS.json",
+    "BATCH_RESULT.json"
+  ],
+  "no_future_or_server_claim": true
+}

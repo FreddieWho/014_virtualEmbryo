@@ -1,0 +1,7 @@
+{
+  "command": "env LD_LIBRARY_PATH=/opt/anaconda3/lib python -m pytest -q tests/t1_seven",
+  "status": "PASS",
+  "passed": 8,
+  "evidence": "tests.log",
+  "scope": "new mathematical operators and identity boundaries, not scientific validation"
+}
