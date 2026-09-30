@@ -337,3 +337,47 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	de_direction	59.5
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	mmd_u	55.1
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	variogram	51.0
+2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	de_score	45.0
+2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	de_direction	59.6
+2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	mmd_u	54.6
+2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	variogram	50.7
+2026-09-30	T1:val	v0038	seven_n2covot	t1_val__n2covot__v0038.h5ad		53.55	de_score	46.5
+2026-09-30	T1:val	v0038	seven_n2covot	t1_val__n2covot__v0038.h5ad		53.55	de_direction	60.3
+2026-09-30	T1:val	v0038	seven_n2covot	t1_val__n2covot__v0038.h5ad		53.55	mmd_u	55.7
+2026-09-30	T1:val	v0038	seven_n2covot	t1_val__n2covot__v0038.h5ad		53.55	variogram	50.8
+2026-09-30	T1:val	v0039	seven_n3graph	t1_val__n3graph__v0039.h5ad		53.23	de_score	46.4
+2026-09-30	T1:val	v0039	seven_n3graph	t1_val__n3graph__v0039.h5ad		53.23	de_direction	60.0
+2026-09-30	T1:val	v0039	seven_n3graph	t1_val__n3graph__v0039.h5ad		53.23	mmd_u	55.1
+2026-09-30	T1:val	v0039	seven_n3graph	t1_val__n3graph__v0039.h5ad		53.23	variogram	50.6
+2026-09-30	T1:val	v0040	seven_f1soft	t1_val__f1soft__v0040.h5ad		53.02	de_score	46.0
+2026-09-30	T1:val	v0040	seven_f1soft	t1_val__f1soft__v0040.h5ad		53.02	de_direction	59.9
+2026-09-30	T1:val	v0040	seven_f1soft	t1_val__f1soft__v0040.h5ad		53.02	mmd_u	54.8
+2026-09-30	T1:val	v0040	seven_f1soft	t1_val__f1soft__v0040.h5ad		53.02	variogram	50.6
+2026-09-30	T1:val	v0041	seven_s1growth	t1_val__s1growth__v0041.h5ad		52.91	de_score	45.7
+2026-09-30	T1:val	v0041	seven_s1growth	t1_val__s1growth__v0041.h5ad		52.91	de_direction	59.6
+2026-09-30	T1:val	v0041	seven_s1growth	t1_val__s1growth__v0041.h5ad		52.91	mmd_u	55.3
+2026-09-30	T1:val	v0041	seven_s1growth	t1_val__s1growth__v0041.h5ad		52.91	variogram	49.9
+2026-09-30	T1:val	v0042	seven_f2stable	t1_val__f2stable__v0042.h5ad		53.31	de_score	46.5
+2026-09-30	T1:val	v0042	seven_f2stable	t1_val__f2stable__v0042.h5ad		53.31	de_direction	60.1
+2026-09-30	T1:val	v0042	seven_f2stable	t1_val__f2stable__v0042.h5ad		53.31	mmd_u	55.0
+2026-09-30	T1:val	v0042	seven_f2stable	t1_val__f2stable__v0042.h5ad		53.31	variogram	50.7
+2026-09-30	T1:val	v0043	seven_s2mix	t1_val__s2mix__v0043.h5ad		53.55	de_score	46.5
+2026-09-30	T1:val	v0043	seven_s2mix	t1_val__s2mix__v0043.h5ad		53.55	de_direction	59.7
+2026-09-30	T1:val	v0043	seven_s2mix	t1_val__s2mix__v0043.h5ad		53.55	mmd_u	56.0
+2026-09-30	T1:val	v0043	seven_s2mix	t1_val__s2mix__v0043.h5ad		53.55	variogram	50.9
+2026-09-30	T1:val	v0044	pbmean_pba05	t1_val__pba05__v0044.h5ad		48.75	de_score	42.3
+2026-09-30	T1:val	v0044	pbmean_pba05	t1_val__pba05__v0044.h5ad		48.75	de_direction	58.2
+2026-09-30	T1:val	v0044	pbmean_pba05	t1_val__pba05__v0044.h5ad		48.75	mmd_u	52.4
+2026-09-30	T1:val	v0044	pbmean_pba05	t1_val__pba05__v0044.h5ad		48.75	variogram	39.4
+2026-09-30	T1:val	v0045	pbmean_pba10	t1_val__pba10__v0045.h5ad		47.92	de_score	43.5
+2026-09-30	T1:val	v0045	pbmean_pba10	t1_val__pba10__v0045.h5ad		47.92	de_direction	58.1
+2026-09-30	T1:val	v0045	pbmean_pba10	t1_val__pba10__v0045.h5ad		47.92	mmd_u	52.2
+2026-09-30	T1:val	v0045	pbmean_pba10	t1_val__pba10__v0045.h5ad		47.92	variogram	34.4
+2026-09-30	T1:val	v0046	pbmean_pbb05	t1_val__pbb05__v0046.h5ad		49.10	de_score	41.2
+2026-09-30	T1:val	v0046	pbmean_pbb05	t1_val__pbb05__v0046.h5ad		49.10	de_direction	58.8
+2026-09-30	T1:val	v0046	pbmean_pbb05	t1_val__pbb05__v0046.h5ad		49.10	mmd_u	52.5
+2026-09-30	T1:val	v0046	pbmean_pbb05	t1_val__pbb05__v0046.h5ad		49.10	variogram	41.8
+2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	de_score	43.5
+2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	de_direction	58.8
+2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	mmd_u	53.2
+2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	variogram	42.1

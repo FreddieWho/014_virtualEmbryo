@@ -860,3 +860,31 @@ Decision and limits:
 - Skill-level read versus v0029 (45.8/58.5/54.9/49.7), descriptive not causal: all three improve de/dir/mmd/vario together; the largest move is direction (+1.0 to +1.7). v0036 carries de (47.0) but gives back direction versus v0035. This does not identify a biological mechanism.
 - No new Total supplied with this batch. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260929-T1THREESCORE-001.
+
+<a id="t1-seven-pbmean-score-return-20260930"></a>
+## T1 seven routes and mean extrapolation score return — 2026-09-30
+
+Source / raw evidence: user-supplied filenames, 11 board scores and all 44 submetric skills in this conversation on 2026-09-30. Submission IDs, upload timestamps and portal Total were not supplied; no independent portal query was performed. Preserve supplied totals; do not reconstruct them from rounded skills. All 11 local artifact SHA256 values were checked against submissions/INDEX.tsv; all indexed contracts are pass. Files remain immutable.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| t1_val__n1moment__v0037.h5ad | 52.65 | 45.0 | 59.6 | 54.6 | 50.7 |
+| t1_val__n2covot__v0038.h5ad | 53.55 | 46.5 | 60.3 | 55.7 | 50.8 |
+| t1_val__n3graph__v0039.h5ad | 53.23 | 46.4 | 60.0 | 55.1 | 50.6 |
+| t1_val__f1soft__v0040.h5ad | 53.02 | 46.0 | 59.9 | 54.8 | 50.6 |
+| t1_val__s1growth__v0041.h5ad | 52.91 | 45.7 | 59.6 | 55.3 | 49.9 |
+| t1_val__f2stable__v0042.h5ad | 53.31 | 46.5 | 60.1 | 55.0 | 50.7 |
+| t1_val__s2mix__v0043.h5ad | 53.55 | 46.5 | 59.7 | 56.0 | 50.9 |
+| t1_val__pba05__v0044.h5ad | 48.75 | 42.3 | 58.2 | 52.4 | 39.4 |
+| t1_val__pba10__v0045.h5ad | 47.92 | 43.5 | 58.1 | 52.2 | 34.4 |
+| t1_val__pbb05__v0046.h5ad | 49.10 | 41.2 | 58.8 | 52.5 | 41.8 |
+| t1_val__pbb10__v0047.h5ad | 49.97 | 43.5 | 58.8 | 53.2 | 42.1 |
+
+Decision and limits:
+- v0038 and v0043 both score 53.55, +0.12 versus incumbent v0035=53.43, outside the standing ±0.1 tie band. Register v0038 as selection and v0043 as exact-score backup. This administrative tie-break follows the order of this single user-supplied list, NOT an inferred upload/score timestamp; no co-promotion or claim that v0038 is scientifically better.
+- Top 3 by reported score: v0038=53.55, v0043=53.55, v0035=53.43. v0035 is retained as a historical reference, outside the new head's ±0.1 band.
+- v0037/v0039/v0040/v0041/v0042 do not improve the old incumbent; all are below the new selection. v0044–v0047 mean-shift candidates lose 3.46–5.51 versus their v0035 parent; reject this submitted family as an improvement, no further alpha sweep in this score-registration task.
+- Versus v0035 skills 46.8/60.2/55.1/50.8, v0038 changes are −0.3/+0.1/+0.6/0.0; v0043 changes are −0.3/−0.5/+0.9/+0.1. Shared gain is distribution skill; different submetric tradeoffs, not uniform improvement or mechanism identification.
+- Mean-shift variogram skills fall by 11.4/16.4/9.0/8.7 respectively; de, direction and MMD also fall in every arm. Global alpha 1 is worse than 0.5; type-based alpha 1 is better than 0.5 but still far below parent. Do not generalize a universal monotone amplitude rule.
+- T1 pending queue is empty after these 11 returns. New derived sum 53.55+58.59+47.93=160.07 uses current local selection bookkeeping only; it is NOT a newly returned portal Total. Last recorded portal Total remains 156.06 and the heart_extrap 50.64/50.53 discrepancy stays open.
+- No new training, candidate, portal selection operation or scientific validation was performed. Decision: D-20260930-T1SCORE-001. Review: reports/t1_score_review_20260930/REPORT.md. blocks_submission: false.

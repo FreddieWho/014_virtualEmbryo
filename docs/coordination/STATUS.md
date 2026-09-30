@@ -52,23 +52,26 @@ data:
   auxiliary_model_input: false
 
 leaderboard:
-  total: 153.7
-  T1: 48.47
-  T2: 58.29
-  T3: 46.95
-  aggregate_basis: "153.7 is the server-returned Total (2026-09-15 user confirm; derived 153.71, 0.01 rounding); boards 48.47/62.29/62.04/50.53/46.95; per-metric skills: reports/SERVER_SUBMETRIC_REGISTRY.tsv"
+  total: 156.06
+  total_status: portal_confirmed_2026-09-26
+  derived_total: 160.07
+  derived_total_status: not_portal_confirmed
+  T1: 53.55
+  T2: 58.59
+  T3: 47.93
+  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0038 53.55 (v0043 exact-score backup), T2 boards 62.89/62.36/50.53 (task mean 58.59), T3 v0048 47.93. Their sum 160.07 is a derived figure only (D-20260930-T1SCORE-001) and must not be cited as a portal Total. OPEN: heart_extrap v0011 scored 50.64 but the aggregate still uses 50.53; re-read the portal before any promotion claim."
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
   T1:
-    status: score_pending
+    status: scored
     dependencies: []
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0035_three_r2joint (scored, parent v0029)"
-    current_best_score: 53.43
-    next_action: "七路线3新/2失败优化/2成功优化已完整运行和独立验收；本轮候选未提交/未评分，回分前best v0035=53.43不变。reports/t1_seven_20260930/REPORT.md。"
+    current_best: "candidate/T1_val/v0038_seven_n2covot (scored; v0043 exact-score backup)"
+    current_best_score: 53.55
+    next_action: "十一条已回分、T1无待分；v0038现役，v0043同分备份。平均数平移四臂不晋级，不继续alpha扫描；确认门户选集与Total。reports/t1_score_review_20260930/REPORT.md。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -597,3 +600,6 @@ coordinator独占scripts/t1_seven、configs/t1_seven、tests/t1_seven、artifact
 
 ### 2026-09-30 T1 七路线完成
 3新＋2失败优化＋2成功优化全部全量执行，七次完整panel本地scorer与14矩阵独立重放通过，8测试通过。候选v0037、v0038、v0039、v0040、v0042、v0041、v0043未提交/未评分，best v0035=53.43保持；reports/t1_seven_20260930/REPORT.md；deliveries/t1seven__t1__upload__20260930.zip。未来真值NOT_RUN，科学EXPLORATORY_LOCAL；lease释放，blocks_submission:false。
+
+### 2026-09-30 T1十一条回分完成
+v0037–v0047回填完成，v0038晋级53.55，v0043同分备份；11身份哈希通过，44子项齐全，T1待分清零。均值平移家族不再推荐，未重训/未生成候选/未操作portal。D-20260930-T1SCORE-001；reports/t1_score_review_20260930/REPORT.md；blocks_submission:false。

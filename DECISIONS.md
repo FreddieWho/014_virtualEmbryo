@@ -98,3 +98,5 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20260929-T3FIVESELECT-001：T3五路线全量执行，事前开发规则选v0057–v0059三个h5ad入单包；另两条保留研究输出。6测试/14项独立进程验收通过，未提交/未评分。详见docs/coordination/DECISIONS.md及reports/t3_five_select_20260929/REPORT.md。
 - D-20260929-T1THREESCORE-001：T1三路线回分，v0035 53.43（+0.93）晋级新 best；v0036 平局备份；v0034 不晋级。见 [协调决策](docs/coordination/DECISIONS.md)。
 - D-20260930-T1SEVEN-001：T1按3新/2失败优化/2成功优化完成七路线全量计算，七次完整panel评分与独立验收通过，候选v0037、v0038、v0039、v0040、v0042、v0041、v0043未提交/未评分；best保持。详见docs/coordination/DECISIONS.md及reports/t1_seven_20260930/REPORT.md。
+
+- D-20260930-T1SCORE-001：T1十一条回分；v0038/v0043同为53.55（+0.12），按本批列表顺序v0038晋级、v0043备份；平均数平移四臂均失败，T1待分清零。详见docs/coordination/DECISIONS.md及reports/t1_score_review_20260930/REPORT.md。

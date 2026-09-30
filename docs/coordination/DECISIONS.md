@@ -915,3 +915,10 @@ reuse_promoted
 ### D-20260930-T1SEVEN-001 — T1 七路线完整执行
 
 用户授权3新＋2失败优化＋2成功优化。七条完整report/future拟合推断，七次32285列官方本地scorer，8测试和14矩阵独立重放/模型参数与训练边界检查通过；4父矩阵精确复现，ZIP SHA/CRC通过。候选v0037、v0038、v0039、v0040、v0042、v0041、v0043均未提交/未评分；best v0035=53.43保持。失败优化追溯v0031/v0033，成功优化基于v0035/v0036；局部取舍与负结果见reports/t1_seven_20260930/REPORT.md，不追调参数救援。未来真值NOT_RUN、科学EXPLORATORY_LOCAL，blocks_submission:false。包deliveries/t1seven__t1__upload__20260930.zip。
+
+## D-20260930-T1SCORE-001 — T1十一条回分，v0038晋级、v0043精确同分备份
+
+- authorization/evidence：用户本轮提供11个文件总分与44子项；reports/SERVER_SCORE_REGISTRY.md#t1-seven-pbmean-score-return-20260930。11个本地SHA与INDEX一致；submission ID、时间、门户Total未提供，不补造。
+- decision：v0038/v0043均53.55，较v0035+0.12，超过±0.1带；同批按供给列表顺序登记v0038为selection，v0043备份，不推断上传时间、不并列晋级。Top3为v0038、v0043、v0035。其他九条不晋级，T1待分清零。
+- review：新路线并非全失败，协方差路线胜出；双模型混合亦胜出，二者本地局部五项不能完整预示服务器结果。两条失败优化未胜旧best。平均数平移四臂均大幅损失，尤其variogram；局部均值向量的高分不是截断后提交矩阵的完整评估，不能证明泛化。终止本批平均数平移家族的提分推荐，不追加alpha扫描。
+- limits：子项归因为描述，不识别因果机制；+0.12是登记规则上的晋级，不是重复测量统计显著性。推导合计160.07，不是门户新Total；现役选集仅本地登记，未操作portal。blocks_submission:false。报告reports/t1_score_review_20260930/REPORT.md。

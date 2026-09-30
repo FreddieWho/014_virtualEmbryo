@@ -3,21 +3,22 @@
 Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDICTS.tsv + TODO.md.
 
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
-- T1:val: **53.43** (v0035 three_r2joint)
+- T1:val: **53.55** (v0038 seven_n2covot)
 - T2:embryo:val_interp: **62.89** (v0014 e_o1_shrinkmerge)
 - T2:heart:val_extrap: **50.64** (v0011 g0_t2_r2_shrink)
 - T2:heart:val_interp: **62.36** (v0019 h_o1_shrinkmerge)
 - T3:gata4: **47.95** (v0058 five_select_r4spline)
 
-Score-pending rows: 17 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0017/x_n1_lineage, v0037/seven_n1moment, v0038/seven_n2covot, v0039/seven_n3graph, v0040/seven_f1soft, v0041/seven_s1growth, v0042/seven_f2stable, v0043/seven_s2mix)
+Score-pending rows: 10 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0008/b4_t2_r3_l1_damp050, v0009/b4_t2_r3_l2_time1333, v0010/b4_t2_r3_l3_popmix050, v0017/x_n1_lineage)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (113 rows in LANE_VERDICTS.tsv)
-- SHIPPED: 74
+## Lane verdicts (117 rows in LANE_VERDICTS.tsv)
+- PASS: 1
+- SHIPPED: 84
 - FAIL: 14
 - VOID: 2
 - PARKED: 4
-- PENDING_SERVER: 8
+- PENDING_SERVER: 1
 - GATE_ONLY: 11
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse

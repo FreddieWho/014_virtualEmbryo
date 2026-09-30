@@ -249,3 +249,5 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-30 T1-SEVEN f2stable收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0042，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
 - 2026-09-30 T1-SEVEN s1growth收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0041，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
 - 2026-09-30 T1-SEVEN s2mix收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0043，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
+- 2026-09-30｜T1十一条回分｜v0037–v0047均scored，44子项齐全、11个SHA一致；v0038/v0043同为53.55，v0038现役、v0043精确同分备份，旧v0035退为参照；均值平移四臂不晋级，T1待分清零。D-20260930-T1SCORE-001；reports/t1_score_review_20260930/REPORT.md。

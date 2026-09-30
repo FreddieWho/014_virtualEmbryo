@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "candidate_SHA_checks": 11,
+  "totals_registered": 11,
+  "submetrics_registered": 44,
+  "T1_score_pending": 0,
+  "selection": "v0038",
+  "exact_score_backup": "v0043",
+  "source": "user transcription; no independent portal query",
+  "new_training_or_scoring": "NOT_RUN_NOT_REQUIRED"
+}
