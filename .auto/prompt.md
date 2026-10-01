@@ -16,7 +16,8 @@ Prediction input stages allowed: `data/E8.25_late.h5ad`, `data/E8.75.h5ad`,
 proxy_ref_e875_cardiac) — read-only.
 
 ## Metrics
-- **Primary**: `de_score` (0..1, higher is better) — the optimization target.
+- REPO POLICY OVERRIDE (2026-10-01): root .gitignore excludes `artifacts/` and `*.h5ad` from git (large binaries, keep locally). So KEEP = persist candidate + DIAG.json on DISK under `artifacts/autoresearch/...` (gitignored, survives locally) + record path+sha in `.auto/log.jsonl` (committed). NEVER `git add -f` binaries against the exclusion.
+- **Primary (Route A, iters 0–9, closed)**: `de_score` (higher better), baseline 0.2466.
   Baseline (parent `submissions/scored/baseline-001/T2_heart_val_extrap/submission.h5ad`): **0.2466**.
   Best local to date: x_o2_shrinkcomp 0.2603 (+0.0137). Best server-numeric lane x_r1_lateref
   (v0022, 50.74) had local de 0.2466-holder range — local/server can disagree; keep both in ASI.
