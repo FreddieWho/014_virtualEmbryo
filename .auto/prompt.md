@@ -87,6 +87,13 @@ and do NOT imply leaderboard gains.
 - T1-8 pair 36×38 f0.7 (median = baseline): RECORDED s20261026 (mmd −4.4% spike, dir cost).
   Pair square complete. Diversity set: 3 materials in artifacts/autoresearch/t1-20261002-v1/
   (DIVERSITY_SET.md) + negatives ledger. Conversion to FINAL-row mixes = lane scope.
+- T1-9 density temperature {0.5, 2.0}: 55% donors swapped, de pinned, secondaries ≤0.012;
+  T=1.0 control reproduces v0035 EXACTLY (triple check). Density-SHAPE closed locally.
+- T1-10 shuffle control (99% donors changed, 3 seeds): de+dir EXACTLY pinned all seeds —
+  proxy headlines are composition-only; density work must target counts, never
+  within-type choice. In-loop cheap axes EXHAUSTED (10 iters: 3 materials + bounds).
+  Remaining (reserved enrichment / borrow-weak / full scIMF) = model-integration lane
+  scope. A/B/C 70-30 FINAL-row mixes proposed for coordinator lane (server arbitrates).
 - (Append T1-1, T1-2, ... here as the loop runs.)
 
 ---
