@@ -45,10 +45,10 @@ runner-up x_n3_compmix +0.931; frozen baseline 0.000.
 
 ## 3. Champion (pending nothing local)
 
-- artifact: `artifacts/autoresearch/t2-extrap-20261001-v1/submission.iter20-qte-time-compmix.h5ad`
-  (median seed 20261008; 3-seed composites {3.913, 4.0088, 3.6058}, **all beat the previous
-  champion**, all guardrails pass)
-- sha256: `dc811606fafdbbec69665d936bebefafae3121096f69dae0de4e58a09753a1af`
+- artifact: `artifacts/autoresearch/t2-extrap-20261001-v1/submission.iter20-qte-time-compmix.seed20260929.h5ad`
+  (the median-VALUE seed of the 3-seed set {20260929: 3.913, 20261007: 4.0088, 20261008: 3.6058};
+  **all three seeds beat the previous champion**, all guardrails pass)
+- sha256: `8bb6e470…` (full value in the log; the lowest seed is also kept as `…seed20261008.h5ad` sha `dc811606…`, and the max seed 20261007 was deliberately NOT persisted)
 - mechanism: per-gene, per-state quantile-function extrapolation of the E9.5 marginal by
   4/3 × (Q9 − Q8), cells mapped through their own within-state rank probability; then the
   x_n3 composition plan resamples rows to the log-ratio-extrapolated E10.5 shares.

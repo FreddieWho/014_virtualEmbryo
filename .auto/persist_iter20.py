@@ -101,7 +101,7 @@ def main():
                          provenance={"atom_id": "AUTORESEARCH-T2-EXTRAP-C", "iter": 20,
                                      "method": "qte_time_normalized_4over3_x_compmix", "seed": sd,
                                      "target_used": False})
-        p = REPO / "artifacts" / "autoresearch" / "t2-extrap-20261001-v1" / "submission.iter20-qte-time-compmix.h5ad"
+        p = REPO / "artifacts" / "autoresearch" / "t2-extrap-20261001-v1" / "submission.iter20-qte-time-compmix.seed20260929.h5ad"
         if p.exists():
             p.unlink()
         common.write_candidate(out_a, p)
