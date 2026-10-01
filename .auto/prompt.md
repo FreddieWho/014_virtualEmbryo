@@ -38,9 +38,12 @@ and do NOT imply leaderboard gains.
   0.000398), + `variance_ratio`, `library_size_ratio`, `composition_JSD`, `wall_s`.
 - **Guardrails** (any violation = discard regardless of de): energy ≤ 0.20,
   mmd ≤ 0.013, variogram ≤ 0.00055, variance_ratio ∈ [0.5, 2.0], finite/nonneg X.
-- **Keep bar** (pre-committed): deterministic → de > 0.5926 + guardrails;
-  resampling → 3-seed median de > 0.5926 AND min ≥ 0.5926 + all seeds guardrail-clean.
-  |Δde| < 0.005 on deterministic = noise (replicate before keep).
+- **Keep bar** (LOOSENED 2026-10-02 per user: server arbitrates, local only generates):
+  deterministic → de ≥ 0.5926 + guardrails = record as candidate material;
+  resampling/scans → 3-seed (or curve) median de ≥ 0.5926 + all seeds guardrail-clean.
+  min ≥ baseline requirement DROPPED. Nothing is eliminated locally — server alone
+  eliminates. Anti-overfit rhetoric retired to one line: proxy Goodhart + server TIE
+  noise are the only real surfaces (see log `policy` entry).
 - **Process rules** (shared-worktree safety, 2026-09-27 lesson): log appends to
   `.auto/log.jsonl` are MANUAL (no auto git ops — would sweep/revert other
   sessions' files); keeps persist under `artifacts/autoresearch/t1-<date>-vN/`
