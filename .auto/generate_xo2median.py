@@ -88,13 +88,20 @@ def main():
             p.unlink()
         common.write_candidate(out_a, p)
         m = score(p)
-        de, dd = float(m["de_score"]), float(m["de_direction"])
-        results.append({"seed": sd, "de": de, "dir": dd,
-                        "nmmd": float(m["neighborhood_mmd"])})
-        print(f"seed {sd}: de={de} dir={dd}", flush=True)
+        rec = {"seed": sd, "de": float(m["de_score"]), "dir": float(m["de_direction"]),
+               "nmmd": float(m["neighborhood_mmd"]), "vario": float(m["variogram"]),
+               "mmd_u": float(m["mmd_u"]), "energy": float(m["energy_distance"])}
+        results.append(rec)
+        print(f"seed {sd}: " + " ".join(f"{k}={v}" for k, v in rec.items() if k != "seed"), flush=True)
     des = sorted(r["de"] for r in results)
     med, mn = float(np.median(des)), des[0]
     print(f"MEDIAN de={med} MIN de={mn} BASELINE={BASELINE_DE}", flush=True)
+    vs = sorted(r["vario"] for r in results)
+    vmed, vmn = float(np.median(vs)), vs[0]
+    print(f"MEDIAN vario={vmed} MIN vario={vmn} BASELINE=0.074261", flush=True)
+    guards = [(r["seed"], r["de"] >= 0.22 and r["nmmd"] <= 0.22 and r["energy"] <= 4.0)
+              for r in results]
+    print(f"GUARDS(de>=0.22,nmmd<=0.22,energy<=4.0)={guards} ALL={all(g[1] for g in guards)}", flush=True)
     print(f"METRIC de_seed20260929={results[0]['de']}")
     print(f"METRIC de_seed20261004={results[1]['de']}")
     print(f"METRIC de_seed20261005={results[2]['de']}")
