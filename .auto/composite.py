@@ -60,7 +60,9 @@ def composite(metrics: dict, cfg: dict | None = None) -> dict:
         guard["variance_ratio_range"] = bool(lo <= vr <= hi)
     if isinstance(pbe, (int, float)):
         guard["pb_rel_err_max"] = bool(pbe <= gr["pb_rel_err_max"])
-    return {"composite": comp, "gains": gains, "worst_channel": worst,
+    expr = [gains[k] for k in ("de", "dir", "mmd_u", "vario", "nmmd") if gains.get(k) is not None]
+    expr_comp = 100.0 * sum(expr) / len(expr) if expr else None
+    return {"composite": comp, "expr_composite": expr_comp, "gains": gains, "worst_channel": worst,
             "guardrails": guard, "guardrails_pass": all(guard.values()) if guard else None}
 
 
@@ -75,6 +77,7 @@ def main() -> int:
         n = metrics.get("scale_log_ratio") if ch == "scale" else None
         print(f"GAIN {ch}={g if g is None else round(g, 5)}")
     print(f"COMPOSITE={r['composite'] if r['composite'] is None else round(r['composite'], 4)}")
+    print(f"EXPR_COMPOSITE={r['expr_composite'] if r['expr_composite'] is None else round(r['expr_composite'], 4)}")
     print(f"WORST_CHANNEL={r['worst_channel']}")
     print(f"GUARDRAILS_PASS={r['guardrails_pass']}")
     for k, v in r["guardrails"].items():

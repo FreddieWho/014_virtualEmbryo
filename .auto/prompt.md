@@ -17,8 +17,13 @@ proxy_ref_e875_cardiac) — read-only.
 
 ## Metrics
 - REPO POLICY OVERRIDE (2026-10-01): root .gitignore excludes `artifacts/` and `*.h5ad` from git (large binaries, keep locally). So KEEP = persist candidate + DIAG.json on DISK under `artifacts/autoresearch/...` (gitignored, survives locally) + record path+sha in `.auto/log.jsonl` (committed). NEVER `git add -f` binaries against the exclusion.
-- **Primary (Route A, iters 0–9, closed)**: `de_score` (higher better), baseline 0.2466.
-  Baseline (parent `submissions/scored/baseline-001/T2_heart_val_extrap/submission.h5ad`): **0.2466**.
+## Metrics
+- **ROUTE C PRIMARY (2026-10-01, current)**: `COMPOSITE` — equal-weight mean of winsorized (±30%) relative gains across the **8 channels the portal actually returns for heart-extrap** (de, dir, mmd_u, vario, d2, occ, scale, nmmd). Frozen definition + source-verified directions in `.auto/composite_config.json`. Baseline = **0.0** by construction. Local champion to beat = **x_o2_shrinkcomp +1.709** (server 50.52); runner-up x_n3_compmix +0.931 (server 50.38).
+  Keep bar: deterministic design composite **> +1.709** + guardrails; resampling design **3-seed median > +1.709** + all seeds guardrail-clean. Guardrails: de≥0.22, library_size_ratio≤2.0, variance_ratio∈[0.8,1.6], pb_rel_err≤0.65. Any violation = discard regardless of composite.
+  Proxy validity (measured 2026-10-01 on 12 already-server-scored lanes): **Spearman(composite, server board) = 0.538**. Extremes rank correctly; mid-band noisy (v0011 has top server score but only +0.03). Local-only — never a promotion claim.
+  Geometry caveat: d2/occ/scale are untouched by expression-only algorithms (3 of 8 channels ≈ 0 contribution), and scale_log_ratio against the proxy target is a subset artifact → tuning geometry to the proxy would be leakage. Only trend-extrapolated growth rules would be defensible; deferred.
+- **DIRECTION CORRECTION (2026-10-01)**: the earlier Route-B header had `variogram` inverted. Scorer source (`core_metrics.py:326`) says **"Lower is better; 0 for a perfect match"**. Consequences: Route B "keep" (comp-only, vario 0.0832 vs baseline 0.0743) is a **degradation**, WITHDRAWN as an optimization result (artifact remains on disk as a research record, and is NOT a candidate for upload); iter11 flips — shrink moves variogram back toward baseline. All directions now verified from source docstrings (see log `correction_scan`).
+- **Route A/B legacy primaries (closed)**: de_score (baseline 0.2466, higher) — exhausted, 0 standing keeps; variogram-as-primary — void (inverted).
   Best local to date: x_o2_shrinkcomp 0.2603 (+0.0137). Best server-numeric lane x_r1_lateref
   (v0022, 50.74) had local de 0.2466-holder range — local/server can disagree; keep both in ASI.
 - **Secondary** (independent tradeoff monitors, log every run): `de_direction` (higher better,
@@ -77,8 +82,7 @@ Scorer command (frozen, do not change flags):
   which states moved, why you think it helped/failed, and what to try next. Failures need heavy
   ASI — reverted code is gone, log is the only record.
 
-## What's Been Tried
-- Baseline parent v0001 (locked): de 0.2466 / dir 0.4221 / nmmd 0.20513 / morans 0.8044 /
+## What's Been Tried- Baseline parent v0001 (locked): de 0.2466 / dir 0.4221 / nmmd 0.20513 / morans 0.8044 /
   variogram 0.074261. Server 50.53 (aggregate) — local/server link unproven.
 - v0011 t-shrink C=2 (g0): local 0.2466/0.4183 (pinned-negative vs baseline) BUT server 50.64
   (+0.11, board best at the time). Lesson: local proxy INVERTED on shrink family — local loss can
@@ -112,4 +116,5 @@ Scorer command (frozen, do not change flags):
 - NOISE DISCIPLINE (binding): resampling designs must report median of 3 seeds before keep; |Δde|<0.005 on deterministic designs = noise, re-run before keep; never add a knob to rescue a no-op axis.
 - iter11 x_o2-analog full-metrics (Route B): vario {0.074691, 0.074481, 0.073566} → median 0.074481 (<0.078 bar), min < baseline → DISCARD. HEADLINE-2: shrink-expression ERASES comp variogram gain (same rows: 0.083 with baseline expression vs 0.0745 shrunk) — variogram rewards state separation, shrinkage removes it; server rewards the opposite (v0011/x_r1). Shrink-expression CLOSED under both primaries. de bimodality reproduced exactly (deterministic machinery ×2).
 - ROUTE B STATUS (12 iters total, 1 standing keep): keep = comp-only log-linear (median vario 0.083151, on disk + DIAG). No disciplined follow-up remains — trend-form scan refused, damp/amplify server-rejected, negative control valueless. RECOMMEND PAUSE: propose comp-only for a future frozen lane only if user wants a dir/nmmd/vario non-DE design; never auto-submit.
+- **ROUTE C (2026-10-01, ACTIVE)**: objective = beat local composite champion +1.709 by trying many different algorithms/combinations (user-authorized broad sweep). Calibration table (all 12 server-scored lanes, local composite): x_o2 +1.709, x_n3 +0.931, v0011 +0.030, baseline 0.000, v0012 -0.035, v0016 -0.367, v0013 -0.534, x_r2 -0.769, x_o1 -1.274, x_n2 -1.523, x_r1 -3.183, x_n1 -7.971.
 - (Update this section as experiments accumulate: wins, insights, discards + why + revisit bar.)
