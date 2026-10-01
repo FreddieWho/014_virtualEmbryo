@@ -75,9 +75,18 @@ and do NOT imply leaderboard gains.
   T1-2's dir gain was itself off-manifold artifact. Marginal family CLOSED. DISCARDED.
 - T1-4 winner-ensemble v0035×v0038 (50/50 whole-row, 3 seeds): median de EQUALS
   baseline, secondaries wash — winners don't compose at report level. DISCARDED.
-- TERMINAL (2026-10-02, 5 iters, 0 keeps): no live report-level axes; loop PAUSED for
-  user pivot (see log `terminal` entry: H1–H5, closed-axes ledger, L-T1-1..3 leads).
-  Do NOT run T1-5+ without user pivot — thrash. DE quantum 0.0185; bar stands.
+- TERMINAL-hard-stop retracted 2026-10-02 by user (server-is-king; hidden test untouchable).
+  New policy (log `policy`): local = disaster filter + diversity generator; keep bar LOOSENED
+  to median ≥ baseline + guardrails; report-level scans allowed; server alone eliminates.
+- T1-5 winner-pair 35×36 mix, fractions {0.5,0.7,0.85} + 4-seed f0.7: de pinned everywhere
+  (4th seed +1q luck); s20261018 energy −2.9% + vario −1.8% jointly better → RECORDED.
+- T1-6 mild comptilt (halfway→train95, 3 seeds): CLEAR NEGATIVE all seeds (de −2..−4q,
+  JSD itself worsens — train95≠outer95 composition). Composition axis closed both strengths.
+- T1-7 pair 35×38 f0.7 (3 seeds {+1q,−1q,+2q}, median +1q): RECORDED median seed s20261023.
+  Mix rolls quantum dice; full-pipeline 70/30 analogue is a concrete cheap lane.
+- T1-8 pair 36×38 f0.7 (median = baseline): RECORDED s20261026 (mmd −4.4% spike, dir cost).
+  Pair square complete. Diversity set: 3 materials in artifacts/autoresearch/t1-20261002-v1/
+  (DIVERSITY_SET.md) + negatives ledger. Conversion to FINAL-row mixes = lane scope.
 - (Append T1-1, T1-2, ... here as the loop runs.)
 
 ---
