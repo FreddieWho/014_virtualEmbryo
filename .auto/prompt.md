@@ -98,4 +98,5 @@ Scorer command (frozen, do not change flags):
 - FGW ε 0.005→0.002 (L-002, non-grid): objective lower both holdouts, NFS only H2 better —
   frozen objective misaligned with metric in ε direction. "Better solve of same objective" is a
   dead axis on T2. Prefer structural mechanism changes over solver tuning.
+- iter1 late-anchor blend α=0.5 (2026-10-01): de 0.2329 (-0.0137 vs baseline) → DISCARD. dir/variogram/morans ticked up (+0.014/+0.004/+0.003) but nmmd/energy/pb worsened; interior blend adds magnitude without DE discrimination. Revisit bar: magnitude-capped blend or α=0.25 before closing anchor axis.
 - (Update this section as experiments accumulate: wins, insights, discards + why + revisit bar.)
