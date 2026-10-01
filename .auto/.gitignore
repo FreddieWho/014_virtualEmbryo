@@ -1,0 +1,4 @@
+*.h5ad
+candidate*.h5ad
+*.json
+!config.json
