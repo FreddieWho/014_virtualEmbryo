@@ -45,4 +45,6 @@ for k in secondaries:
     if v is not None: print(f"METRIC {k}={v}")
 print(f"METRIC wall_s={wall}")
 EOF
+echo "--- composite (frozen 8-channel, portal-skill mirror) ---"
+python3 "$REPO/.auto/composite.py" "$TMP"
 echo "scored $CAND wall=${WALL}s (see METRIC lines above)" >&2
