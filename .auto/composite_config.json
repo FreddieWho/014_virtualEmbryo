@@ -1,0 +1,29 @@
+{
+  "schema": "autoresearch.t2extrap.composite.v1",
+  "frozen_at": "2026-10-01",
+  "rationale": "Composite mirrors the 8 skill channels the portal actually returns for Heart extrap (registry header: de, dir, mmd_u, vario, d2, occ, scale, nmmd). Equal weights. Directions verified from scorer source docstrings (third_party/veckit/common/{core_metrics,shape_metrics}.py, third_party/veckit/T2/metrics.py), NOT from portal ordering.",
+  "formula": "gain_c = dir_c * (value_c - baseline_c)/baseline_c, winsorized to +/-winsor; COMPOSITE = 100 * mean(gain_c over 8 channels). Baseline composite = 0.0 by construction.",
+  "winsor": 0.30,
+  "channels": [
+    {"channel": "de",    "metric": "de_score",          "baseline": 0.2466,  "dir": 1,  "source": "core_metrics.de_score (score, higher better)"},
+    {"channel": "dir",   "metric": "de_direction",      "baseline": 0.4221,  "dir": 1,  "source": "core_metrics.de_direction (higher better)"},
+    {"channel": "mmd_u", "metric": "mmd_u",             "baseline": 0.10468, "dir": -1, "source": "core_metrics.mmd_unbiased (distance, lower better)"},
+    {"channel": "vario", "metric": "variogram",         "baseline": 0.074261,"dir": -1, "source": "core_metrics.variogram_score docstring: 'Lower is better; 0 for a perfect match' -> CORRECTED 2026-10-01 (Route B had this inverted)"},
+    {"channel": "d2",    "metric": "d2_shape",          "baseline": 0.0153,  "dir": -1, "source": "shape_metrics.d2_distance docstring: 'lower is better'"},
+    {"channel": "occ",   "metric": "occupancy_dice",    "baseline": 0.8207,  "dir": 1,  "source": "shape_metrics.occupancy_dice docstring: 'higher is better, 1 = same occupied region'"},
+    {"channel": "scale", "metric": "abs(scale_log_ratio)", "baseline": 0.2155, "dir": -1, "source": "shape_metrics.scale_log_ratio (signed; 0 = right size) -> abs() used, lower better"},
+    {"channel": "nmmd",  "metric": "neighborhood_mmd",  "baseline": 0.20513, "dir": -1, "source": "T2/metrics.neighborhood_mmd (MMD distance, lower better)"}
+  ],
+  "guardrails": {
+    "de_score_min": 0.22,
+    "library_size_ratio_max": 2.0,
+    "variance_ratio_range": [0.8, 1.6],
+    "pb_rel_err_max": 0.65,
+    "note": "any violation => discard regardless of composite (anti-Goodhart)"
+  },
+  "keep_bar": {
+    "deterministic": "COMPOSITE > +1.00 (i.e. > +1% mean relative gain across the 8 portal channels) AND guardrails pass",
+    "resampling": "median of 3 seeds COMPOSITE > +1.00 AND all 3 seeds guardrail-clean",
+    "noise_note": "deterministic designs have zero scorer noise; resampling designs inherit row-luck (measured DE band +/-0.03 in Route A) so the 3-seed rule applies"
+  }
+}

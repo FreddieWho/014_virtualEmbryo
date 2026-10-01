@@ -2,3 +2,5 @@
 candidate*.h5ad
 *.json
 !config.json
+!composite_config.json
+!calibration/calibration_proxy_validity.json
