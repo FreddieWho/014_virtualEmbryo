@@ -1,3 +1,84 @@
+# Autoresearch: T1 report-proxy (local optimization) — CURRENT PHASE (2026-10-02, user-directed Task1 focus)
+
+> T1 PHASE header. The T2 heart-extrap session below (Routes A/B/C, 2026-10-01..02) is
+> CLOSED history — preserved, not resumed. T1 loop state lives in this header +
+> `.auto/log.jsonl` entries with `"phase":"T1"`. T1 files use the `t1_` prefix
+> (`measure_t1.sh`, `t1_common.py`, `generate_t1_*.py`, `t1_candidate.h5ad` temp).
+> The T2 `measure.sh`/composite/generators are untouched.
+
+## T1 Objective
+Optimize T1 REPORT-scope predictions (3357 E8.5-outer recipient rows, 32285 genes,
+seed 20260921) against the **frozen report proxy scorer only**
+(`./.auto/measure_t1.sh`; task=T1, target=pseudo_target_e95_outer (3411 cells),
+reference=reference_e85_train, all under
+`artifacts/g0/T1-NEXT-R1-QUANT-20260921-v1/intermediates/` — read-only).
+Server board score is NOT available in the loop; local improvements are record-only
+and do NOT imply leaderboard gains.
+
+## T1 Proxy-validity warning (pre-committed, read before every iteration)
+- The local report proxy DOES NOT rank the server champions: v0038 (server 53.55,
+  current best) scores locally de **0.5926 = baseline**, dir worse, energy worse,
+  mmd better, vario worse (1/1/3 vs v0035); v0043 (server 53.55, backup) scores
+  0/1/4 locally. A de-primary loop would NOT have kept either champion.
+- s1growth had the best local mmd (0.00896, -4.4%) yet server -0.52. No single
+  local channel selects the winners. Review verdict (2026-09-30): "no evidence for
+  using raw local metrics to fabricate server totals or hard淘汰 gates".
+- THEREFORE: no local composite mirroring server weights (would fabricate a total);
+  primary = raw `de_score` only; every keep is local-record, promotion needs a
+  separate frozen full-pipeline design + contract + coordinator + server read.
+- Report split (60/20/20, seed 20260921) is repeatedly reused across all T1 rounds —
+  NOT independent validation. No knob scans; each mechanism single-shot data-frozen.
+
+## T1 Metrics
+- **PRIMARY**: `de_score` (HIGHER better; note the session tool defaulted direction to
+  lower — ignore it, higher wins). Baseline = **0.5926** (v0035 report, re-measured
+  2026-10-02 exact: 0.5926/0.5852/0.14221/0.00937/0.000398).
+- **Secondaries** (log every run): `de_direction` (higher, 0.5852),
+  `energy_distance` (lower, 0.14221), `mmd_u` (lower, 0.00937), `variogram` (lower,
+  0.000398), + `variance_ratio`, `library_size_ratio`, `composition_JSD`, `wall_s`.
+- **Guardrails** (any violation = discard regardless of de): energy ≤ 0.20,
+  mmd ≤ 0.013, variogram ≤ 0.00055, variance_ratio ∈ [0.5, 2.0], finite/nonneg X.
+- **Keep bar** (pre-committed): deterministic → de > 0.5926 + guardrails;
+  resampling → 3-seed median de > 0.5926 AND min ≥ 0.5926 + all seeds guardrail-clean.
+  |Δde| < 0.005 on deterministic = noise (replicate before keep).
+- **Process rules** (shared-worktree safety, 2026-09-27 lesson): log appends to
+  `.auto/log.jsonl` are MANUAL (no auto git ops — would sweep/revert other
+  sessions' files); keeps persist under `artifacts/autoresearch/t1-<date>-vN/`
+  (gitignored) + path+sha in log; NEVER touch submissions/, INDEX, registry,
+  coordination docs, root TODO/DECISIONS/STATUS (coordinator-owned / shared).
+  target_used=false always; never read E10.5 truth.
+
+## T1 What's Been Tried (this phase; T1 scored-route knowledge distilled from registry+reports)
+- Server path: v0004 48.47 (strict shift) → v0023 50.82 (+2.35 R1 quantile-shape) →
+  v0024 51.92 (+1.10 whole-row density resample) → v0029 52.50 (+0.58 density-rows
+  on distribution-rows stack) → v0035 53.43 (+0.93 single joint within-type draw)
+  → v0038/v0043 53.55 (+0.12 cov-OT whole-row projection / 70-30 stratified mix).
+  Whole-row/donor preservation wins; per-value surgeries lose (n2param/o1mass/pbmean
+  all reject; D3 OT-CFM field 45.3 catastrophic; diffusion D5/D5b/D5c closed).
+- Composition strength up (s1growth 0.5→0.75) LOST (-0.52). Mean-shrink sweep closed
+  (C=1 TIE best). Graph smoothing, moment balancing, soft-state, stable-shrink all
+  ≤ v0035 on server. Mean-shift family closed on T1 like T2.
+- T1-0 baseline (2026-10-02): harness reproduces v0035 report EXACTLY (see log).
+- T1-1 bootstrap noise probe: pure row-identity resampling spans de 0.5741–0.6111;
+  one noise seed beats baseline with guardrails passing → resampling wins need 3-seed
+  median+min bar; DE quantum = 0.0185 (one-gene flip ladder 0.5741/0.5926/0.6111/…);
+  deterministic keep needs ≥ +1 quantum + guardrails. DISCARDED (median < baseline).
+- T1-2 plain QTE marginal: de +1 quantum BUT energy 2.4× collapse (0.348, veto) with
+  dir +0.072 (record local dir gain) — D3 cosine-vs-energy split reproduced locally.
+  Per-gene synthesis breaks coexpression; whole-row preservation is mandatory on T1.
+  DISCARDED (guardrail). Next: QTE-steered whole-row donor projection.
+- T1-3 QTE-steered donor projection: CATASTROPHIC all channels (de -0.20, dir 0.25,
+  energy 17×) — extrapolated targets off-manifold, nearest-donor anti-informative;
+  T1-2's dir gain was itself off-manifold artifact. Marginal family CLOSED. DISCARDED.
+- T1-4 winner-ensemble v0035×v0038 (50/50 whole-row, 3 seeds): median de EQUALS
+  baseline, secondaries wash — winners don't compose at report level. DISCARDED.
+- TERMINAL (2026-10-02, 5 iters, 0 keeps): no live report-level axes; loop PAUSED for
+  user pivot (see log `terminal` entry: H1–H5, closed-axes ledger, L-T1-1..3 leads).
+  Do NOT run T1-5+ without user pivot — thrash. DE quantum 0.0185; bar stands.
+- (Append T1-1, T1-2, ... here as the loop runs.)
+
+---
+
 # Autoresearch: T2 heart extrapolation (local proxy optimization)
 
 ## Objective
