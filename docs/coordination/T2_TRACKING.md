@@ -1,20 +1,24 @@
 # T2 任务追踪：spatial-temporal
 
-更新时间：2026-09-03
+更新时间：2026-09-29
 
 T2 有多个 board；不同 board 的分数不能直接当作同一个指标比较。服务器分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。
 
-## 当前状态
+## 当前状态（2026-09-29）
 
-- 当前最高 aggregate：**149.5（服务器当前返回值）**
-- 当前最佳分叉：按 board 选择 B1-A1 L1（embryo interpolation）+ T2-S3 L1 pycpd（heart interpolation）+ baseline（heart extrapolation）
-- 当前 T2 task 分数：**55.7（服务器当前返回值）**；heart_interp 晋级 56.7 后推导 T2≈55.8、Total≈149.6（derived，待服务器页面确认）
-- 当前最佳 board：embryo interpolation **60.1**、heart interpolation **56.7**、heart extrapolation **50.5**；raw score/ID 以 `reports/SERVER_SCORE_REGISTRY.md` 为准
-- 下一步：T2-S3 两条 READY 候选已评分（embryo 59.7 未提升、heart_interp 56.7 +0.4 晋级）；T2-J1-PROXY gate `J1_PROXY_PASS`（2026-09-03），FGW soft-assignment objective 值得重启 J1 路线，授权 assignment candidate 前需审视 heart 参考构建质量
+- 选择没变：胚胎插值 v0010 **62.29**，心脏插值 v0013 **62.04**，心脏外推合计里仍用 **50.53**。三个榜平均是 58.29。
+- 2026-09-28 交的低幅度位置变化 v0014、v0015 都是 **61.52**，低于心脏插值现役 0.52，不晋级。
+- 心脏外推单独最高仍是 v0011 **50.64**，但确认过的合计没有用它。差 0.11，要重读门户，不能在这里宣布晋级。
+- 没有未跑的已规划路线。不要再交“在赢家上再加位置变化”。决策 `D-20260928-T2LOWAMP-002`。
 
-## Top 3 路线
+## 历史状态（2026-09-03，不是当前选择）
 
-排序依据是“当前 aggregate 保留优先级 + 已有 board 分数”；不同 T2 board 不做未经说明的跨 board 横比。
+- 当时记录的合计是 149.5，T2 任务分是 55.7。后来已被表达桥加组成取代。下面保留原文。
+- 当时最佳 board：embryo interpolation **60.1**、heart interpolation **56.7**、heart extrapolation **50.5**。
+
+## 历史 Top 3（2026-09-03，不是当前选择）
+
+下面这张表停在合计 149.5。当前选择看本文件开头。不同 T2 board 不做未经说明的跨 board 横比。
 
 | 位次 | 路线 | 通俗说明 | 服务器证据 | 状态 |
 |---|---|---|---|---|
@@ -22,7 +26,7 @@ T2 有多个 board；不同 board 的分数不能直接当作同一个指标比�
 | 2 | B1-A1 `L1_FORMAL_LOG_RMS` | 只做 source-only 的统一 G1 空间尺度校准 | raw board scores **60.1/56.3/50.2** | embryo/interp 胜出；heart extrap 低于 baseline 50.5 |
 | 3 | B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS` | 用全部训练阶段的 log-RMS OLS 校准统一尺度 | raw board scores **59.9/55.3/49.8** | 已评分；各 board scored backup |
 
-raw server scores、submission ID 和证据只在 `reports/SERVER_SCORE_REGISTRY.md` 维护；当前 T2=55.7、Total=149.5 是服务器返回值，不用显示的一位小数自行反推。
+raw server scores、submission ID 和证据只在 `reports/SERVER_SCORE_REGISTRY.md` 维护。上面 55.7 和 149.5 是 2026-09-03 的记录，不是现在的选择。
 
 B1-A1 双 lane 最终集已完成服务器评分；L1 在三个 B1-A1 lane 中均优于 L2，但 heart extrapolation 的 baseline 50.5 高于两条新 lane，因此当前按 board 回退 baseline。
 
@@ -108,3 +112,35 @@ J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 bo
 2026-09-14（batch4 Wave 2）：`B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL` 完成，三 lane 待上传评分——v0008（L1 damp0.5，clip 0%）、v0009（L2 time1.333，clip 21.6% 已披露）、v0010（L3 popmix，clip 2.4%）；仅 5/22 states 有位移；backtest 偏好小 damp（仅记录）；contract 全 PASS，字节一致。单包 `deliveries/b4t2r3__t2__upload__20260914.zip`（一批一包新规首用）。产物 `artifacts/batch4/B4-T2-R3-HEART-EXTRAP-EXPRESSION-CAL-20260914-v1/`。结论待服务器仲裁。
 
 2026-09-16（G0 15 轮目标）：`G1-T2-R2..R5` 六 lane 服务器仲裁——v0011（收缩）=**50.64**（+0.11）**新 board best**、v0012=**50.26**/v0013=**50.32**/v0014=**50.26**/v0015=**50.28**/v0016=**50.25**（空间族五 lane 全低于 baseline 50.53）；selection 更新为 v0011。本地/服务器方向反转：本地判收缩钉死、空间胜，服务器反之——proxy 教训已记。详见 registry §G1-T2 与 DECISIONS D-20260916-G0T2-001。
+
+## 2026-09-27 两条线索闭环（L-001 / L-002）
+
+- L-001（embryo v0008 同靶 parent 参照）**关闭**：对 parent v0002（SHA `392c470e…`）跑锁定 scorer（`score_h5ad.py` SHA `52034554…`，与 P0-LOCK 一致），同 pseudo-target E7.25／同 reference E6.75／同 seed 20260830，只改 `--input`/`--out`。结果：`neighborhood_mmd` 0.03124→0.03445、`morans_I_agreement` 0.9722→0.9555，**两个独立耦合指标同向变差**；`energy_distance` 改善 −0.01544 属混合信号；其余 14 项置换/几何不变、逐位一致。同靶同 seed 排除了“度量偏祥 parent”解释。附带：parent 臂官方 scorer 0.03124 与 J1 镜像 nfs_parent 0.031240 **逐位吻合**，代理当时无偏差。→ v0008 保持 `HOLD_AS_COMPONENT`（确证拒绝），不上传、不删、不改名。证据 `artifacts/tool_integration/T2-L001-EMBRYO-PARENT-REF-20260927-v1/RESULT.md`。
+- L-002（FGW ε 两值敏感性，**非网格搜索**）**关闭为已放弃**：proxy 尺度、ε∈{0.005 冻结, 0.002}、其余逐位复用冻结 J1-PROXY（代价矩阵按 SHA、prepared、alpha/迭代/容差/损失/求解器/离散规则、64 次随机包络）。复现对照通过（相对偏差 ≤7.5e-6，容差 1e-4，未主张位级一致）。结果：分散度大幅下降（有效来源数 64.15→11.46、59.84→12.20；冲突率 0.610→0.395、0.620→0.409；mass capture 0.771→0.854、0.773→0.850）——**Q1 成立**；但 NFS-like 只在 H2 变好（0.015221→0.010517），H1 反而略差（0.011681→0.011805）——**Q2/Q3 未在两 holdout 同时成立**，预声明升级判据未达成，脚本 fail closed。与全尺度 B4-T2-R1（heart ε=0.002 服务器 57.31 vs 57.3 TIE）一致。附带：objective 在两 holdout 都更低而 NFS 只 H2 降，**冻结 objective 与官方度量在 ε 方向不对齐**。证据 `artifacts/tool_integration/T2-L002-FGW-EPS-SENSITIVITY-20260927-v1/RESULT.md`。
+- 两者均为**预算外诊断**：零候选、零 h5ad、零 submission、`submissions/INDEX.tsv` 未改、零上传、未消耗提交配额。J1-PROXY / J1-FGW-ASSIGNMENT / B4-T2-R1 只读未改。决策 `D-20260927-T2LEADS-001`；收口报告 `reports/T2_LEADS_CLOSURE_20260927.md`。
+- **T2 现状**：三个 board selection 为 embryo v0010（62.29）／heart_interp v0013（62.04）／heart_extrap baseline v0001（50.53），derived T2 58.29；**本项目内已无未跑的已规划 T2 路线**。唯一未闭合的账是 heart_extrap v0011 已评分 50.64 但未反映在 Total 156.06 的组合里（差 0.11），需重读门户页面。
+
+- 2026-09-27（atom B 补正，`D-20260927-T2LEADS-003`）：L-002 首次执行的复现门（绝对 1e-9）未通过且**原样保留**——根因是参照 TSV 仅 8 位小数，绝对 1e-9 构造上不可达；按用户指示立 atom B 改为**跑前声明**的相对 1e-4 并通过（相对偏差 2.4e-08~7.5e-06）。atom B 与首次执行数字逐位相同（差值 0.000e+00），**非独立复现**，引用须成对。新增落点诊断：两 ε 臂仅 46.05%/45.80% 位置重合，**推翻「落到相同行」的原解读**；正确机制为**冻结目标面在 ε 方向近退化**（两解不同但 objective 差 2.4e-03/4.6e-03），即 `B4-T2-R1` heart 双 TIE 的成因。结论：L-002 仍关闭为已放弃，但「把同一目标解得更好」这条轴在 T2 判为死路。零候选零上传，`submissions/INDEX.tsv` 未改。证据 `artifacts/tool_integration/T2-L002B-FGW-EPS-SENSITIVITY-20260927-v1/`。
+
+- 2026-09-27（`E-N1 SBL` 执行与关闭，`D-20260927-T2EN1-002`）：设计冻结后完整执行，22.1s CPU，**预声明否定判据触发、路线立即关闭**。L1 gated（127/498 基因过 cos≥0.5 门）`nmmd` 0.395969、L2 ungated 0.324687，对 do-nothing 0.031240 **差 10.4–12.7 倍**；预测表达均值比基线高 53–54%。根因是**两条通道间无幅度控制**（回归在 z-score 化表达上做，场项带标准差量级动态范围，加到均值上抬高总质量）——非过平滑、非图案复制。稳定性门几乎无效（开门更少反而更差）。两项自我订正如实记录：设计所写「softplus」实为 `log1p(expm1(x))` 恒等式，**我的首次诊断因此错误**；设计 τ=0.5 与目标 stage E7.5 算术不一致，正确为 0.6。两项均非结果导向调参。**不补救**（不扩参数/不改 K/不调 ridge）；复活须作新 lane 预声明跑前幅度控制。零候选零上传，`submissions/INDEX.tsv` 未改。
+
+- 2026-09-28｜低幅度空间项回分｜心脏插值 v0014、v0015 都是 61.52，比现役 v0013 的 62.04 低 0.52，不晋级。几何三项和现役相同，亏在表达，主要是协变下降。小幅劣化没有在服务器上反过来。选择不变。`D-20260928-T2LOWAMP-002`。
+
+- 2026-09-29｜T2-ROUND2 三新两优化 × 三 board｜15 候选建成（embryo v0011–v0015、heart v0016–v0020、extrap v0017–v0021）：新路线=分位数桥（T1 机制移植）、三阶段趋势/曲率（E6.75、E8.25、E9.5 首次入相应 board）、组成粒度（子状态 / cm 联合状态 / 组成趋势外推）、谱系映射 delta（17 个零位移类型）；优化=v0010/v0013×t 收缩、v0010×G1 尺度回锁、v0013+文库重标定、趋势×收缩、v0011×组成趋势。contract 10 PASS + 5 FAIL_BY_DESIGN_ACCEPTED（R2 同四类）、工程门 15/15、字节重放 15/15、v0011 组件逐值复现、质量计划逐名复现。heart 无 5% nmmd 旗帜（h_n1 本地 nmmd −45%、de +0.36 最强）；x_o2 唯一过历史 R1 局部双门。15 件未提交/未评分，交付 `deliveries/t2r2__t2__upload__20260929.zip`，报告 `reports/t2_round2_20260929/REPORT.md`，决策 `D-20260929-T2ROUND2-001`。选择不变。
+
+- 2026-09-29｜T2-ROUND2 回分（14 条）｜胚胎 v0014 62.89（+0.60）晋级新 board best；心脏插值 v0019 62.36（+0.32，先返回）晋级，v0016 62.35（−0.01）平局备份；v0020 心脏插值 57.74 属表达侧塌。外推 v0019 50.38、v0021 50.52（baseline 平局）都不进合计。另记一次外推文件误投胚胎榜拒收（细胞数对不上，只记 registry）。x_n1_lineage 本次没回分。推导合计 159.95（待门户确认）。`D-20260929-T2R2SCORE-001`。
+
+- 2026-09-30｜T2-ROUND2 收尾：x_n1_lineage v0017 回分 48.17（-2.36 vs baseline 50.53），REJECT。17个零位移类型的谱系映射delta在外推榜不动，variogram 33.3最弱。外推选择不变，第二轮15/15全部回分，队列关闭。`D-20260930-T2XN1SCORE-001`。
+
+- 2026-09-30｜B4-T2-R3迟到回分（三条）｜v0008 48.40（-2.13）REJECT；v0009 50.51（-0.02 vs baseline，平局带内）TIE但不及board-best 50.64，不晋级；v0010 48.87（-1.66）REJECT。v0009的de 50.4是外推尝试中最强的差异表达读数，但总分不动，仅描述。外推选择不变，B4的closed_unscored状态就此结清。`D-20260930-T2R3SCORE-001`。
+
+- 2026-10-01｜goal mupdz021-pfttwg启动：三board×两轮（R1新路线+R2旧优化），设计冻结reports/T2_GOAL_DESIGN_20261001.md + configs/t2_goal/design_20261001.json；R1=embryo v0016趋势份额×现役表达/interp v0021同机制/extrap v0022 E8.25late锚定基线；R2=三board收缩C=1单冻结变体（v0017/v0022/v0023）；6 lane构建中，未提交/未评分。
+
+- 2026-10-01｜goal mupdz021-pfttwg R1三条建成｜embryo v0016趋势份额×现役表达（pass_with_deviation预声明）、interp v0021同机制（pass_with_deviation）、extrap v0022 E8.25late锚定基线（pass）；6/6重放字节一致；轻微问题（embryo var门分母 artifact、h_r2 clip 0.58）如实记录，无严重落后、不重开。未提交/未评分。
+- 2026-10-01｜goal mupdz021-pfttwg R2三条建成｜embryo v0017 / interp v0022收缩C=1（行计划与现役逐名一致，pass）、extrap v0023基线收缩C=1（pass）。6候选INDEX登记score_pending，合打一包deliveries/t2goal__t2__upload__20261001.zip（6成员+四件套，receipt READY_NOT_SUBMITTED）。未评分，best不变。
+
+- 2026-10-01｜goal mupdz021-pfttwg回分（6条，队列清零）｜胚胎 v0016 61.65（-1.24）/ v0017 62.55（-0.34）均不敌现役62.89；心脏插值 v0021 62.22（-0.14）/ v0022 62.21（-0.15）均不敌现役62.36；外推 v0023 50.03（-0.50）REJECT，v0022 50.74（+0.21 vs基线/+0.10 vs原最高50.64）恰落平局带上沿，按不并列规则记TIE最高数备份、不晋级。选择不变，推导合计160.07不变（非门户值），门户确认合计仍156.06。外推OPEN项更新为50.74-vs-50.53，待重读门户。`D-20261001-T2GOALSCORE-001`。
+
+- 2026-10-02｜Route C 探索轮打包上传待仲裁（5 件）｜自动研究轮把外推板当算法试验场扫了 10 种做法：胜出机制是「逐基因逐状态的分位数边缘外推」（时间按 4/3 归一）×「组成重采样」，本地冻结 8 通道综合分 3.913，是此前本地最强 lane（x_o2 1.709）的两倍多；同族另外三条（3.464 / 2.608 / 3.606）一并打包。其中 v0027 是诊断探针（library 12 倍，本地护栏不过，不建议占名额），v0028 是同一设计换种子（测服务器侧抽签方差）。五件 contract 均 pass 或既有质量豁免，已登记 INDEX score_pending，未上传。另：本轮纠正了一个旧错误——variogram 本地指标是「越低越好」，Route B 当时方向写反，其 keep 已撤回（详见 `.auto/ROUTE_C_SUMMARY.md`）。`D-20261002-ARROUTEC-001`。
+
+- 2026-10-02｜Route C 五件回分，全部不敌现役｜外推榜：v0025 50.17（最好的一件）、v0024 50.09、v0028 50.08、v0026 50.03，四条都低于基线 50.53；探针 v0027 39.60（崩在 d2 23.6 / mmd_u 37.3 / nmmd 37.6，与本地护栏预警一致）。选择不变（外推 aggregate 仍 50.53，50.74-vs-50.53 OPEN 未动）。三点硬结论：① 本地冻结综合分对新机制「失灵」——17 条合并看相关只剩 0.122（旧 12 条上是 0.539），冠军本地 +3.913 换来 -0.44，说明它不能再用作提交依据；② 唯一确证可迁移的通道是 variogram：本轮把该技能打到 49.5–50.1，是全榜最好（旧 lane 47.4–48.5），与本地（已纠正方向）的排序一致；③ 服务器侧「换种子」几乎无方差——v0024 vs v0028 同设计不同行只差 0.01，而本地综合差 0.31，即本地种子波动是代理噪声不是真方差。`D-20261002-ARROUTCESCORE-001`。

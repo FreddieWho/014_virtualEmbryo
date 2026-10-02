@@ -305,3 +305,15 @@ boundary         适用范围或不可推断边界
 - v0038/v0043在本地均未全面胜过v0035，服务器却同获53.55；v0039本地五项全差但服务器降幅较小。不得把反复使用的同阶段holdout作为淘汰潜在赢家的可靠硬门；也不能反过来忽略本地诊断。
 - 平均数平移四臂全部服务器退步；其本地高DE是截断前均值向量的指标，提交产物为截断后的细胞矩阵且未执行完整本地官方评分，验证对象不一致。支持否定这四臂的提分主张，不能据此证明所有均值建模无效，或把全部损失唯一归因于截断。
 - 全局平移强度增加更差，类型方案增加强度反而回升但仍差；不存在本批证据支持的统一强度单调律。科学限制blocks_submission:false。
+
+### 2026-10-01 T3：评分空间与跨域转换的验证对象
+- 成熟度：USER_REPORTED_SERVER_DESCRIPTIVE；转换算术IMPLEMENTATION_AUDIT_CONFIRMED；掉分因果分解NOT_IDENTIFIED。证据reports/t3_score_review_20261001/REPORT.md、OUTPUT_AUDIT.json、TRANSFER_AUDIT.json；分数权威reports/SERVER_SCORE_REGISTRY.md#t3-priority-six-score-return-20261001。
+- 状态count均值保持不等于评分的log表达均值保持。此共同decoder改变活动模型64/316个非微小预测方向；未转换版本未上服务器，不能唯一归因全部掉分或保证去decoder涨分。
+- 来源control近零时，小预测绝对增量经pseudocount ratio可成为大倍数；Stmn2为0/220control阳性、预测增量0.02842→约29.83倍。来源全零既不证明生物学不表达，也不支持可靠目标域fold-change估计；0.1为本次诊断阈值而非官方或已验证规则。
+- 六件全不晋级；原生CellOracle适配修复未胜旧adapter，不能由此普遍否定CellOracle/Scouter/GEARS或神经网络。Scouter为GO表示变体，来源/上下文/reference/decoder同时存在迁移限制。severity skill50不是幅度准确。blocks_submission:false。
+
+### 2026-10-01 T3：新架构方向亮点与组成预测的失败边界
+- 成熟度：USER_REPORTED_SERVER_DESCRIPTIVE；因果机制NOT_IDENTIFIED。权威证据reports/SERVER_SCORE_REGISTRY.md#t3-architecture-two-score-return-20261001；复盘reports/t3_arch_two_score_review_20261001/REPORT.md。
+- v0066方向53.5是已登记方向子项的最高显示值，但不是方向准确率或显著性；DE recovery及分布损失更大，整体REJECT。该flow没有使用旧count-ratio/检测率decoder，仍退步，说明仅凭修decoder不足以支持提分主张；多变量同时变化，不能唯一归因。
+- v0068确有约3%预测状态质量转移，发射已修复且仅需替换223个WT行；当前组成预测不胜Gata4-zero载体。实际全为E8.75供体，没有预测出需要早期供体的阻断状态。本结果不能否定组成通道或所有发育动力学，弱功能代理/时序覆盖与来源条件限制仍在。
+- 两个当前架构配置关闭，不能由模型复杂度、完整训练或单项方向读数推导科学机制或60–70分能力。blocks_submission:false。

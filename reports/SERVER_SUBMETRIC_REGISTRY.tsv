@@ -325,6 +325,82 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	de_direction	55.2
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	mmd_u	50.7
 2026-09-28	T1:val	v0028	five_o2rate	t1_val__o2rate__v0028.h5ad	2026-09-28	49.19	variogram	48.4
+2026-09-28	T3:gata4	v0037	next_r3splfix	t3_gata4__r3splfix__v0037.h5ad	2026-09-28	46.98	de_score	39.2
+2026-09-28	T3:gata4	v0037	next_r3splfix	t3_gata4__r3splfix__v0037.h5ad	2026-09-28	46.98	de_direction	49.8
+2026-09-28	T3:gata4	v0037	next_r3splfix	t3_gata4__r3splfix__v0037.h5ad	2026-09-28	46.98	severity_slope	50.0
+2026-09-28	T3:gata4	v0037	next_r3splfix	t3_gata4__r3splfix__v0037.h5ad	2026-09-28	46.98	mmd_u	51.5
+2026-09-28	T3:gata4	v0037	next_r3splfix	t3_gata4__r3splfix__v0037.h5ad	2026-09-28	46.98	variogram	51.0
+2026-09-28	T3:gata4	v0040	next_r4panelfix	t3_gata4__r4panelfix__v0040.h5ad	2026-09-28	47.08	de_score	39.6
+2026-09-28	T3:gata4	v0040	next_r4panelfix	t3_gata4__r4panelfix__v0040.h5ad	2026-09-28	47.08	de_direction	49.7
+2026-09-28	T3:gata4	v0040	next_r4panelfix	t3_gata4__r4panelfix__v0040.h5ad	2026-09-28	47.08	severity_slope	50.0
+2026-09-28	T3:gata4	v0040	next_r4panelfix	t3_gata4__r4panelfix__v0040.h5ad	2026-09-28	47.08	mmd_u	51.5
+2026-09-28	T3:gata4	v0040	next_r4panelfix	t3_gata4__r4panelfix__v0040.h5ad	2026-09-28	47.08	variogram	51.0
+2026-09-28	T3:gata4	v0041	next_r4medfix	t3_gata4__r4medfix__v0041.h5ad	2026-09-28	47.09	de_score	39.6
+2026-09-28	T3:gata4	v0041	next_r4medfix	t3_gata4__r4medfix__v0041.h5ad	2026-09-28	47.09	de_direction	49.8
+2026-09-28	T3:gata4	v0041	next_r4medfix	t3_gata4__r4medfix__v0041.h5ad	2026-09-28	47.09	severity_slope	50.0
+2026-09-28	T3:gata4	v0041	next_r4medfix	t3_gata4__r4medfix__v0041.h5ad	2026-09-28	47.09	mmd_u	51.5
+2026-09-28	T3:gata4	v0041	next_r4medfix	t3_gata4__r4medfix__v0041.h5ad	2026-09-28	47.09	variogram	51.0
+2026-09-28	T1:val	v0029	round2_n1stack	t1_val__n1stack__v0029.h5ad	2026-09-28	52.5	de_score	45.8
+2026-09-28	T1:val	v0029	round2_n1stack	t1_val__n1stack__v0029.h5ad	2026-09-28	52.5	de_direction	58.5
+2026-09-28	T1:val	v0029	round2_n1stack	t1_val__n1stack__v0029.h5ad	2026-09-28	52.5	mmd_u	54.9
+2026-09-28	T1:val	v0029	round2_n1stack	t1_val__n1stack__v0029.h5ad	2026-09-28	52.5	variogram	49.7
+2026-09-28	T1:val	v0030	round2_n2composition	t1_val__n2composition__v0030.h5ad	2026-09-28	52.49	de_score	45.6
+2026-09-28	T1:val	v0030	round2_n2composition	t1_val__n2composition__v0030.h5ad	2026-09-28	52.49	de_direction	59.5
+2026-09-28	T1:val	v0030	round2_n2composition	t1_val__n2composition__v0030.h5ad	2026-09-28	52.49	mmd_u	54.7
+2026-09-28	T1:val	v0030	round2_n2composition	t1_val__n2composition__v0030.h5ad	2026-09-28	52.49	variogram	49.0
+2026-09-28	T1:val	v0031	round2_n3states	t1_val__n3states__v0031.h5ad	2026-09-28	50.51	de_score	43.7
+2026-09-28	T1:val	v0031	round2_n3states	t1_val__n3states__v0031.h5ad	2026-09-28	50.51	de_direction	57.0
+2026-09-28	T1:val	v0031	round2_n3states	t1_val__n3states__v0031.h5ad	2026-09-28	50.51	mmd_u	52.7
+2026-09-28	T1:val	v0031	round2_n3states	t1_val__n3states__v0031.h5ad	2026-09-28	50.51	variogram	47.5
+2026-09-28	T1:val	v0032	round2_o1caldensity	t1_val__o1caldensity__v0032.h5ad	2026-09-28	51.97	de_score	45.7
+2026-09-28	T1:val	v0032	round2_o1caldensity	t1_val__o1caldensity__v0032.h5ad	2026-09-28	51.97	de_direction	58.3
+2026-09-28	T1:val	v0032	round2_o1caldensity	t1_val__o1caldensity__v0032.h5ad	2026-09-28	51.97	mmd_u	54.4
+2026-09-28	T1:val	v0032	round2_o1caldensity	t1_val__o1caldensity__v0032.h5ad	2026-09-28	51.97	variogram	48.1
+2026-09-28	T1:val	v0033	round2_o2shrinkmass	t1_val__o2shrinkmass__v0033.h5ad	2026-09-28	51.10	de_score	43.5
+2026-09-28	T1:val	v0033	round2_o2shrinkmass	t1_val__o2shrinkmass__v0033.h5ad	2026-09-28	51.10	de_direction	57.4
+2026-09-28	T1:val	v0033	round2_o2shrinkmass	t1_val__o2shrinkmass__v0033.h5ad	2026-09-28	51.10	mmd_u	53.2
+2026-09-28	T1:val	v0033	round2_o2shrinkmass	t1_val__o2shrinkmass__v0033.h5ad	2026-09-28	51.10	variogram	49.4
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	de_score	61.2
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	de_direction	66.0
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	mmd_u	62.6
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	variogram	25.4
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	d2_shape	65.4
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	occupancy_dice	47.8
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	scale_log_ratio	97.9
+2026-09-28	T2:heart:val_interp	v0014	h_n2_lowamp_shared	t2_hrt_int__l1__v0014.h5ad	2026-09-28	61.52	neighborhood_mmd	64.5
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	de_score	60.6
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	de_direction	66.0
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	mmd_u	62.6
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	variogram	25.4
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	d2_shape	65.4
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	occupancy_dice	47.8
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	scale_log_ratio	97.9
+2026-09-28	T2:heart:val_interp	v0015	h_n2_lowamp_perstage	t2_hrt_int__l2__v0015.h5ad	2026-09-28	61.52	neighborhood_mmd	64.7
+2026-09-29	T3:gata4	v0049	round2_n1stack	t3_gata4__n1stack__v0049.h5ad	2026-09-28 07:30	47.86	de_score	41.7
+2026-09-29	T3:gata4	v0049	round2_n1stack	t3_gata4__n1stack__v0049.h5ad	2026-09-28 07:30	47.86	de_direction	50.4
+2026-09-29	T3:gata4	v0049	round2_n1stack	t3_gata4__n1stack__v0049.h5ad	2026-09-28 07:30	47.86	severity_slope	50.0
+2026-09-29	T3:gata4	v0049	round2_n1stack	t3_gata4__n1stack__v0049.h5ad	2026-09-28 07:30	47.86	mmd_u	52.3
+2026-09-29	T3:gata4	v0049	round2_n1stack	t3_gata4__n1stack__v0049.h5ad	2026-09-28 07:30	47.86	variogram	49.8
+2026-09-29	T3:gata4	v0050	round2_n2orth	t3_gata4__n2orth__v0050.h5ad	2026-09-28 07:31	47.40	de_score	40.8
+2026-09-29	T3:gata4	v0050	round2_n2orth	t3_gata4__n2orth__v0050.h5ad	2026-09-28 07:31	47.40	de_direction	49.9
+2026-09-29	T3:gata4	v0050	round2_n2orth	t3_gata4__n2orth__v0050.h5ad	2026-09-28 07:31	47.40	severity_slope	50.0
+2026-09-29	T3:gata4	v0050	round2_n2orth	t3_gata4__n2orth__v0050.h5ad	2026-09-28 07:31	47.40	mmd_u	51.8
+2026-09-29	T3:gata4	v0050	round2_n2orth	t3_gata4__n2orth__v0050.h5ad	2026-09-28 07:31	47.40	variogram	49.4
+2026-09-29	T3:gata4	v0051	round2_n3occup	t3_gata4__n3occup__v0051.h5ad	2026-09-28 07:32	46.07	de_score	37.4
+2026-09-29	T3:gata4	v0051	round2_n3occup	t3_gata4__n3occup__v0051.h5ad	2026-09-28 07:32	46.07	de_direction	48.5
+2026-09-29	T3:gata4	v0051	round2_n3occup	t3_gata4__n3occup__v0051.h5ad	2026-09-28 07:32	46.07	severity_slope	50.0
+2026-09-29	T3:gata4	v0051	round2_n3occup	t3_gata4__n3occup__v0051.h5ad	2026-09-28 07:32	46.07	mmd_u	51.4
+2026-09-29	T3:gata4	v0051	round2_n3occup	t3_gata4__n3occup__v0051.h5ad	2026-09-28 07:32	46.07	variogram	50.7
+2026-09-29	T3:gata4	v0052	round2_o1logit	t3_gata4__o1logit__v0052.h5ad	2026-09-28 07:33	47.62	de_score	41.7
+2026-09-29	T3:gata4	v0052	round2_o1logit	t3_gata4__o1logit__v0052.h5ad	2026-09-28 07:33	47.62	de_direction	50.1
+2026-09-29	T3:gata4	v0052	round2_o1logit	t3_gata4__o1logit__v0052.h5ad	2026-09-28 07:33	47.62	severity_slope	50.0
+2026-09-29	T3:gata4	v0052	round2_o1logit	t3_gata4__o1logit__v0052.h5ad	2026-09-28 07:33	47.62	mmd_u	51.8
+2026-09-29	T3:gata4	v0052	round2_o1logit	t3_gata4__o1logit__v0052.h5ad	2026-09-28 07:33	47.62	variogram	48.6
+2026-09-29	T3:gata4	v0053	round2_o2geneshrink	t3_gata4__o2geneshrink__v0053.h5ad	2026-09-28 07:33	47.66	de_score	41.2
+2026-09-29	T3:gata4	v0053	round2_o2geneshrink	t3_gata4__o2geneshrink__v0053.h5ad	2026-09-28 07:33	47.66	de_direction	49.7
+2026-09-29	T3:gata4	v0053	round2_o2geneshrink	t3_gata4__o2geneshrink__v0053.h5ad	2026-09-28 07:33	47.66	severity_slope	50.0
+2026-09-29	T3:gata4	v0053	round2_o2geneshrink	t3_gata4__o2geneshrink__v0053.h5ad	2026-09-28 07:33	47.66	mmd_u	52.1
+2026-09-29	T3:gata4	v0053	round2_o2geneshrink	t3_gata4__o2geneshrink__v0053.h5ad	2026-09-28 07:33	47.66	variogram	51.3
 2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	de_score	46.0
 2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	de_direction	60.0
 2026-09-29	T1:val	v0034	three_r1compose	t1_val__r1compose__v0034.h5ad	2026-09-28 18:57	53.24	mmd_u	55.4
@@ -337,6 +413,148 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	de_direction	59.5
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	mmd_u	55.1
 2026-09-29	T1:val	v0036	three_r3mix	t1_val__r3mix__v0036.h5ad	2026-09-28 19:08	53.36	variogram	51.0
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	de_score	53.5
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	de_direction	61.0
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	mmd_u	56.5
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	variogram	62.0
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	d2_shape	54.6
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	occupancy_dice	51.2
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	scale_log_ratio	90.8
+2026-09-29	T2:embryo:val_interp	v0011	e_n1_qbridge	t2_emb_int__e_n1_qbridge__v0011.h5ad	2026-09-29 04:39	61.31	neighborhood_mmd	63.7
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	de_score	54.1
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	de_direction	66.0
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	mmd_u	59.6
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	variogram	47.3
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	d2_shape	55.7
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	occupancy_dice	44.3
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	scale_log_ratio	88.5
+2026-09-29	T2:embryo:val_interp	v0012	e_n2_trend3	t2_emb_int__e_n2_trend3__v0012.h5ad	2026-09-29 04:38	60.51	neighborhood_mmd	64.5
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	de_score	51.5
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	de_direction	66.0
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	mmd_u	59.4
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	variogram	59.6
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	d2_shape	52.2
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	occupancy_dice	48.5
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	scale_log_ratio	87.5
+2026-09-29	T2:embryo:val_interp	v0013	e_n3_substate2	t2_emb_int__e_n3_substate2__v0013.h5ad	2026-09-29 04:37	61.66	neighborhood_mmd	65.6
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	de_score	55.2
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	de_direction	67.4
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	mmd_u	60.3
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	variogram	56.0
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	d2_shape	54.6
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	occupancy_dice	51.2
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	scale_log_ratio	90.8
+2026-09-29	T2:embryo:val_interp	v0014	e_o1_shrinkmerge	t2_emb_int__e_o1_shrinkmerge__v0014.h5ad	2026-09-29 04:36	62.89	neighborhood_mmd	66.1
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	de_score	54.1
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	de_direction	67.5
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	mmd_u	60.2
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	variogram	52.0
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	d2_shape	54.6
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	occupancy_dice	51.2
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	scale_log_ratio	91.9
+2026-09-29	T2:embryo:val_interp	v0015	e_o2_scalmass	t2_emb_int__e_o2_scalemass__v0015.h5ad	2026-09-29 04:36	62.38	neighborhood_mmd	65.9
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	de_score	47.4
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	de_direction	50.0
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	mmd_u	48.1
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	variogram	40.6
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	d2_shape	46.2
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	occupancy_dice	53.2
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	scale_log_ratio	49.7
+2026-09-29	T2:heart:val_extrap	v0018	x_n2_trend3	t2_hrt_ext__x_n2_trend3__v0018.h5ad	2026-09-29 07:35	48.40	neighborhood_mmd	50.1
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	de_score	48.9
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	de_direction	51.7
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	mmd_u	50.1
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	variogram	47.4
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	d2_shape	45.2
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	occupancy_dice	54.3
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	scale_log_ratio	49.5
+2026-09-29	T2:heart:val_extrap	v0019	x_n3_compmix	t2_hrt_ext__x_n3_compmix__v0019.h5ad	2026-09-29 07:34	50.38	neighborhood_mmd	52.5
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	de_score	47.4
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	de_direction	49.9
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	mmd_u	48.4
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	variogram	41.5
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	d2_shape	46.2
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	occupancy_dice	53.2
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	scale_log_ratio	49.7
+2026-09-29	T2:heart:val_extrap	v0020	x_o1_trendshrink	t2_hrt_ext__x_o1_trendshrink__v0020.h5ad	2026-09-29 07:33	48.59	neighborhood_mmd	50.3
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	de_score	49.2
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	de_direction	51.6
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	mmd_u	50.2
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	variogram	48.2
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	d2_shape	45.2
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	occupancy_dice	54.3
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	scale_log_ratio	49.5
+2026-09-29	T2:heart:val_extrap	v0021	x_o2_shrinkcomp	t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad	2026-09-28 19:08	50.52	neighborhood_mmd	52.6
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	de_score	60.0
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	de_direction	67.4
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	mmd_u	50.8
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	variogram	56.2
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	d2_shape	65.4
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	occupancy_dice	47.8
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	scale_log_ratio	97.9
+2026-09-29	T2:heart:val_interp	v0016	h_n1_qbridge	t2_hrt_int__h_n1_qbridge__v0016.h5ad	2026-09-28 19:07	62.35	neighborhood_mmd	62.4
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	de_score	60.0
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	de_direction	65.1
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	mmd_u	62.3
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	variogram	27.0
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	d2_shape	68.7
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	occupancy_dice	47.1
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	scale_log_ratio	97.5
+2026-09-29	T2:heart:val_interp	v0017	h_n2_curve95	t2_hrt_int__h_n2_curve95__v0017.h5ad	2026-09-28 19:06	61.81	neighborhood_mmd	65.4
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	de_score	60.6
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	de_direction	66.2
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	mmd_u	62.7
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	variogram	28.3
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	d2_shape	66.0
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	occupancy_dice	45.1
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	scale_log_ratio	98.4
+2026-09-29	T2:heart:val_interp	v0018	h_n3_cmjoin	t2_hrt_int__h_n3_cmjoin__v0018.h5ad	2026-09-28 19:06	62.14	neighborhood_mmd	66.4
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	de_score	61.2
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	de_direction	66.1
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	mmd_u	61.9
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	variogram	30.0
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	d2_shape	65.4
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	occupancy_dice	47.8
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	scale_log_ratio	97.9
+2026-09-29	T2:heart:val_interp	v0019	h_o1_shrinkmerge	t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad	2026-09-28 19:05	62.36	neighborhood_mmd	66.3
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	de_score	61.8
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	de_direction	66.8
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	mmd_u	36.8
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	variogram	38.6
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	d2_shape	65.4
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	occupancy_dice	47.8
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	scale_log_ratio	97.9
+2026-09-29	T2:heart:val_interp	v0020	h_o2_libnorm	t2_hrt_int__h_o2_libnorm__v0020.h5ad	2026-09-28 19:05	57.74	neighborhood_mmd	58.8
+2026-09-29	T3:gata4	v0054	three_r1agree	t3_gata4__r1agree__v0054.h5ad	2026-09-29	47.75	de_score	42.1
+2026-09-29	T3:gata4	v0054	three_r1agree	t3_gata4__r1agree__v0054.h5ad	2026-09-29	47.75	de_direction	49.8
+2026-09-29	T3:gata4	v0054	three_r1agree	t3_gata4__r1agree__v0054.h5ad	2026-09-29	47.75	severity_slope	50.0
+2026-09-29	T3:gata4	v0054	three_r1agree	t3_gata4__r1agree__v0054.h5ad	2026-09-29	47.75	mmd_u	51.8
+2026-09-29	T3:gata4	v0054	three_r1agree	t3_gata4__r1agree__v0054.h5ad	2026-09-29	47.75	variogram	49.4
+2026-09-29	T3:gata4	v0055	three_r2damp	t3_gata4__r2damp__v0055.h5ad	2026-09-29	47.25	de_score	40.4
+2026-09-29	T3:gata4	v0055	three_r2damp	t3_gata4__r2damp__v0055.h5ad	2026-09-29	47.25	de_direction	49.9
+2026-09-29	T3:gata4	v0055	three_r2damp	t3_gata4__r2damp__v0055.h5ad	2026-09-29	47.25	severity_slope	50.0
+2026-09-29	T3:gata4	v0055	three_r2damp	t3_gata4__r2damp__v0055.h5ad	2026-09-29	47.25	mmd_u	51.6
+2026-09-29	T3:gata4	v0055	three_r2damp	t3_gata4__r2damp__v0055.h5ad	2026-09-29	47.25	variogram	49.4
+2026-09-29	T3:gata4	v0056	three_r3diffuse	t3_gata4__r3diffuse__v0056.h5ad	2026-09-29	47.93	de_score	42.6
+2026-09-29	T3:gata4	v0056	three_r3diffuse	t3_gata4__r3diffuse__v0056.h5ad	2026-09-29	47.93	de_direction	50.0
+2026-09-29	T3:gata4	v0056	three_r3diffuse	t3_gata4__r3diffuse__v0056.h5ad	2026-09-29	47.93	severity_slope	50.0
+2026-09-29	T3:gata4	v0056	three_r3diffuse	t3_gata4__r3diffuse__v0056.h5ad	2026-09-29	47.93	mmd_u	51.8
+2026-09-29	T3:gata4	v0056	three_r3diffuse	t3_gata4__r3diffuse__v0056.h5ad	2026-09-29	47.93	variogram	49.3
+2026-09-29	T3:gata4	v0057	five_select_r2gene	t3_gata4__r2gene__v0057.h5ad	2026-09-29	47.37	de_score	40.8
+2026-09-29	T3:gata4	v0057	five_select_r2gene	t3_gata4__r2gene__v0057.h5ad	2026-09-29	47.37	de_direction	49.7
+2026-09-29	T3:gata4	v0057	five_select_r2gene	t3_gata4__r2gene__v0057.h5ad	2026-09-29	47.37	severity_slope	50.0
+2026-09-29	T3:gata4	v0057	five_select_r2gene	t3_gata4__r2gene__v0057.h5ad	2026-09-29	47.37	mmd_u	52.0
+2026-09-29	T3:gata4	v0057	five_select_r2gene	t3_gata4__r2gene__v0057.h5ad	2026-09-29	47.37	variogram	49.5
+2026-09-29	T3:gata4	v0058	five_select_r4spline	t3_gata4__r4spline__v0058.h5ad	2026-09-29	47.95	de_score	42.6
+2026-09-29	T3:gata4	v0058	five_select_r4spline	t3_gata4__r4spline__v0058.h5ad	2026-09-29	47.95	de_direction	50.0
+2026-09-29	T3:gata4	v0058	five_select_r4spline	t3_gata4__r4spline__v0058.h5ad	2026-09-29	47.95	severity_slope	50.0
+2026-09-29	T3:gata4	v0058	five_select_r4spline	t3_gata4__r4spline__v0058.h5ad	2026-09-29	47.95	mmd_u	51.8
+2026-09-29	T3:gata4	v0058	five_select_r4spline	t3_gata4__r4spline__v0058.h5ad	2026-09-29	47.95	variogram	49.5
+2026-09-29	T3:gata4	v0059	five_select_r3bag	t3_gata4__r3bag__v0059.h5ad	2026-09-29	47.93	de_score	42.6
+2026-09-29	T3:gata4	v0059	five_select_r3bag	t3_gata4__r3bag__v0059.h5ad	2026-09-29	47.93	de_direction	50.0
+2026-09-29	T3:gata4	v0059	five_select_r3bag	t3_gata4__r3bag__v0059.h5ad	2026-09-29	47.93	severity_slope	50.0
+2026-09-29	T3:gata4	v0059	five_select_r3bag	t3_gata4__r3bag__v0059.h5ad	2026-09-29	47.93	mmd_u	51.8
+2026-09-29	T3:gata4	v0059	five_select_r3bag	t3_gata4__r3bag__v0059.h5ad	2026-09-29	47.93	variogram	49.3
 2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	de_score	45.0
 2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	de_direction	59.6
 2026-09-30	T1:val	v0037	seven_n1moment	t1_val__n1moment__v0037.h5ad		52.65	mmd_u	54.6
@@ -381,3 +599,163 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	de_direction	58.8
 2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	mmd_u	53.2
 2026-09-30	T1:val	v0047	pbmean_pbb10	t1_val__pbb10__v0047.h5ad		49.97	variogram	42.1
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	de_score	50.8
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	de_direction	52.5
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	mmd_u	45.9
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	variogram	33.3
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	d2_shape	46.2
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	occupancy_dice	53.2
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	scale_log_ratio	49.7
+2026-09-30	T2:heart:val_extrap	v0017	x_n1_lineage	t2_hrt_ext__x_n1_lineage__v0017.h5ad		48.17	neighborhood_mmd	50.5
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	de_score	42.5
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	de_direction	51.1
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	mmd_u	48.4
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	variogram	41.6
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	d2_shape	46.2
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	occupancy_dice	53.2
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	scale_log_ratio	49.7
+2026-09-30	T2:heart:val_extrap	v0008	b4_t2_r3_l1_damp050	t2_hrt_ext__l1damp050__v0008.h5ad		48.40	neighborhood_mmd	51.4
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	de_score	50.4
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	de_direction	52.5
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	mmd_u	49.9
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	variogram	47.1
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	d2_shape	46.2
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	occupancy_dice	53.2
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	scale_log_ratio	49.7
+2026-09-30	T2:heart:val_extrap	v0009	b4_t2_r3_l2_time1333	t2_hrt_ext__l2time1333__v0009.h5ad		50.51	neighborhood_mmd	52.1
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	de_score	43.6
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	de_direction	52.6
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	mmd_u	48.1
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	variogram	43.6
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	d2_shape	46.2
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	occupancy_dice	53.2
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	scale_log_ratio	49.7
+2026-09-30	T2:heart:val_extrap	v0010	b4_t2_r3_l3_popmix050	t2_hrt_ext__l3popmix050__v0010.h5ad		48.87	neighborhood_mmd	51.3
+2026-10-01	T3:gata4	v0060	priority_six_r1_celloracle	t3_gata4__r1_celloracle__v0060.h5ad	not supplied	46.91	de_score	39.2
+2026-10-01	T3:gata4	v0060	priority_six_r1_celloracle	t3_gata4__r1_celloracle__v0060.h5ad	not supplied	46.91	de_direction	49.6
+2026-10-01	T3:gata4	v0060	priority_six_r1_celloracle	t3_gata4__r1_celloracle__v0060.h5ad	not supplied	46.91	severity_slope	50.0
+2026-10-01	T3:gata4	v0060	priority_six_r1_celloracle	t3_gata4__r1_celloracle__v0060.h5ad	not supplied	46.91	mmd_u	51.5
+2026-10-01	T3:gata4	v0060	priority_six_r1_celloracle	t3_gata4__r1_celloracle__v0060.h5ad	not supplied	46.91	variogram	50.8
+2026-10-01	T3:gata4	v0061	priority_six_r3_activity	t3_gata4__r3_activity__v0061.h5ad	not supplied	45.51	de_score	39.6
+2026-10-01	T3:gata4	v0061	priority_six_r3_activity	t3_gata4__r3_activity__v0061.h5ad	not supplied	45.51	de_direction	51.2
+2026-10-01	T3:gata4	v0061	priority_six_r3_activity	t3_gata4__r3_activity__v0061.h5ad	not supplied	45.51	severity_slope	50.0
+2026-10-01	T3:gata4	v0061	priority_six_r3_activity	t3_gata4__r3_activity__v0061.h5ad	not supplied	45.51	mmd_u	42.6
+2026-10-01	T3:gata4	v0061	priority_six_r3_activity	t3_gata4__r3_activity__v0061.h5ad	not supplied	45.51	variogram	40.0
+2026-10-01	T3:gata4	v0062	priority_six_r4_functional	t3_gata4__r4_functional__v0062.h5ad	not supplied	44.42	de_score	39.2
+2026-10-01	T3:gata4	v0062	priority_six_r4_functional	t3_gata4__r4_functional__v0062.h5ad	not supplied	44.42	de_direction	48.7
+2026-10-01	T3:gata4	v0062	priority_six_r4_functional	t3_gata4__r4_functional__v0062.h5ad	not supplied	44.42	severity_slope	50.0
+2026-10-01	T3:gata4	v0062	priority_six_r4_functional	t3_gata4__r4_functional__v0062.h5ad	not supplied	44.42	mmd_u	42.6
+2026-10-01	T3:gata4	v0062	priority_six_r4_functional	t3_gata4__r4_functional__v0062.h5ad	not supplied	44.42	variogram	35.8
+2026-10-01	T3:gata4	v0063	priority_six_r4_bilinear	t3_gata4__r4_bilinear__v0063.h5ad	not supplied	44.27	de_score	38.8
+2026-10-01	T3:gata4	v0063	priority_six_r4_bilinear	t3_gata4__r4_bilinear__v0063.h5ad	not supplied	44.27	de_direction	48.7
+2026-10-01	T3:gata4	v0063	priority_six_r4_bilinear	t3_gata4__r4_bilinear__v0063.h5ad	not supplied	44.27	severity_slope	50.0
+2026-10-01	T3:gata4	v0063	priority_six_r4_bilinear	t3_gata4__r4_bilinear__v0063.h5ad	not supplied	44.27	mmd_u	42.7
+2026-10-01	T3:gata4	v0063	priority_six_r4_bilinear	t3_gata4__r4_bilinear__v0063.h5ad	not supplied	44.27	variogram	35.4
+2026-10-01	T3:gata4	v0064	priority_six_r5_scouter	t3_gata4__r5_scouter__v0064.h5ad	not supplied	44.14	de_score	41.7
+2026-10-01	T3:gata4	v0064	priority_six_r5_scouter	t3_gata4__r5_scouter__v0064.h5ad	not supplied	44.14	de_direction	50.3
+2026-10-01	T3:gata4	v0064	priority_six_r5_scouter	t3_gata4__r5_scouter__v0064.h5ad	not supplied	44.14	severity_slope	50.0
+2026-10-01	T3:gata4	v0064	priority_six_r5_scouter	t3_gata4__r5_scouter__v0064.h5ad	not supplied	44.14	mmd_u	36.8
+2026-10-01	T3:gata4	v0064	priority_six_r5_scouter	t3_gata4__r5_scouter__v0064.h5ad	not supplied	44.14	variogram	26.8
+2026-10-01	T3:gata4	v0065	priority_six_r6_gears	t3_gata4__r6_gears__v0065.h5ad	not supplied	42.38	de_score	38.1
+2026-10-01	T3:gata4	v0065	priority_six_r6_gears	t3_gata4__r6_gears__v0065.h5ad	not supplied	42.38	de_direction	48.7
+2026-10-01	T3:gata4	v0065	priority_six_r6_gears	t3_gata4__r6_gears__v0065.h5ad	not supplied	42.38	severity_slope	50.0
+2026-10-01	T3:gata4	v0065	priority_six_r6_gears	t3_gata4__r6_gears__v0065.h5ad	not supplied	42.38	mmd_u	34.4
+2026-10-01	T3:gata4	v0065	priority_six_r6_gears	t3_gata4__r6_gears__v0065.h5ad	not supplied	42.38	variogram	26.8
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	de_score	54.6
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	de_direction	64.8
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	mmd_u	60.3
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	variogram	56.3
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	d2_shape	54.7
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	occupancy_dice	40.4
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	scale_log_ratio	87.1
+2026-10-01	T2:embryo:val_interp	v0016	e_r1_compotrend	t2_emb_int__e_r1compotrend__v0016.h5ad	not supplied	61.65	neighborhood_mmd	67.4
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	de_score	54.1
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	de_direction	67.4
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	mmd_u	60.3
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	variogram	54.5
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	d2_shape	54.6
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	occupancy_dice	51.2
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	scale_log_ratio	90.8
+2026-10-01	T2:embryo:val_interp	v0017	e_r2_shrinkc1	t2_emb_int__e_r2shrinkc1__v0017.h5ad	not supplied	62.55	neighborhood_mmd	66.0
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	de_score	58.3
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	de_direction	65.3
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	mmd_u	63.4
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	variogram	29.6
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	d2_shape	67.7
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	occupancy_dice	47.1
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	scale_log_ratio	98.0
+2026-10-01	T2:heart:val_interp	v0021	h_r1_compotrend	t2_hrt_int__h_r1compotrend__v0021.h5ad	not supplied	62.22	neighborhood_mmd	66.3
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	de_score	60.6
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	de_direction	66.0
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	mmd_u	62.2
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	variogram	29.5
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	d2_shape	65.4
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	occupancy_dice	47.8
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	scale_log_ratio	97.9
+2026-10-01	T2:heart:val_interp	v0022	h_r2_shrinkc1	t2_hrt_int__h_r2shrinkc1__v0022.h5ad	not supplied	62.21	neighborhood_mmd	66.1
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	de_score	53.7
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	de_direction	53.8
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	mmd_u	48.7
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	variogram	47.7
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	d2_shape	46.2
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	occupancy_dice	53.2
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	scale_log_ratio	49.7
+2026-10-01	T2:heart:val_extrap	v0022	x_r1_lateref	t2_hrt_ext__x_r1lateref__v0022.h5ad	not supplied	50.74	neighborhood_mmd	51.1
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	de_score	50.4
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	de_direction	52.5
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	mmd_u	48.9
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	variogram	46.3
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	d2_shape	46.2
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	occupancy_dice	53.2
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	scale_log_ratio	49.7
+2026-10-01	T2:heart:val_extrap	v0023	x_r2_shrinkc1	t2_hrt_ext__x_r2shrinkc1__v0023.h5ad	not supplied	50.03	neighborhood_mmd	51.0
+2026-10-01	T3:gata4	v0066	arch_a_residual_flow	t3_gata4__a_flow__v0066.h5ad	not supplied	43.21	de_score	37.0
+2026-10-01	T3:gata4	v0066	arch_a_residual_flow	t3_gata4__a_flow__v0066.h5ad	not supplied	43.21	de_direction	53.5
+2026-10-01	T3:gata4	v0066	arch_a_residual_flow	t3_gata4__a_flow__v0066.h5ad	not supplied	43.21	severity_slope	50.0
+2026-10-01	T3:gata4	v0066	arch_a_residual_flow	t3_gata4__a_flow__v0066.h5ad	not supplied	43.21	mmd_u	41.3
+2026-10-01	T3:gata4	v0066	arch_a_residual_flow	t3_gata4__a_flow__v0066.h5ad	not supplied	43.21	variogram	15.7
+2026-10-01	T3:gata4	v0068	arch_b_fate_mass_emit2	t3_gata4__b_fate__v0068.h5ad	not supplied	46.37	de_score	38.8
+2026-10-01	T3:gata4	v0068	arch_b_fate_mass_emit2	t3_gata4__b_fate__v0068.h5ad	not supplied	46.37	de_direction	49.9
+2026-10-01	T3:gata4	v0068	arch_b_fate_mass_emit2	t3_gata4__b_fate__v0068.h5ad	not supplied	46.37	severity_slope	50.0
+2026-10-01	T3:gata4	v0068	arch_b_fate_mass_emit2	t3_gata4__b_fate__v0068.h5ad	not supplied	46.37	mmd_u	50.1
+2026-10-01	T3:gata4	v0068	arch_b_fate_mass_emit2	t3_gata4__b_fate__v0068.h5ad	not supplied	46.37	variogram	46.9
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	de_score	46.8
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	de_direction	52.1
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	mmd_u	50.1
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	variogram	50.1
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	d2_shape	45.2
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	occupancy_dice	54.3
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	scale_log_ratio	49.5
+2026-10-02	T2:heart:val_extrap	v0024	qte_time_compmix_seed929	t2_hrt_ext__qte_tc_s929__v0024.h5ad	2026-10-02	50.09	neighborhood_mmd	51.1
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	de_score	45.8
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	de_direction	51.2
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	mmd_u	50.9
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	variogram	49.7
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	d2_shape	49.5
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	occupancy_dice	52.1
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	scale_log_ratio	50.0
+2026-10-02	T2:heart:val_extrap	v0025	qte_compmix_seed20261008	t2_hrt_ext__qte_compmix__v0025.h5ad	2026-10-02	50.17	neighborhood_mmd	51.2
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	de_score	46.4
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	de_direction	52.4
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	mmd_u	49.8
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	variogram	50.1
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	d2_shape	46.2
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	occupancy_dice	53.2
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	scale_log_ratio	49.7
+2026-10-02	T2:heart:val_extrap	v0026	qte_time_normalized_4over3	t2_hrt_ext__qte_time__v0026.h5ad	2026-10-02	50.03	neighborhood_mmd	51.1
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	de_score	47.1
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	de_direction	52.9
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	mmd_u	37.3
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	variogram	42.2
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	d2_shape	23.6
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	occupancy_dice	47.9
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	scale_log_ratio	54.4
+2026-10-02	T2:heart:val_extrap	v0027	share_lin_trend_x_qte_time	t2_hrt_ext__sharetrend_qte__v0027.h5ad	2026-10-02	39.60	neighborhood_mmd	37.6
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	de_score	46.1
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	de_direction	51.6
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	mmd_u	50.7
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	variogram	49.5
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	d2_shape	49.5
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	occupancy_dice	52.1
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	scale_log_ratio	50.0
+2026-10-02	T2:heart:val_extrap	v0028	qte_time_compmix_seed20261008	t2_hrt_ext__qte_tc_s008__v0028.h5ad	2026-10-02	50.08	neighborhood_mmd	50.7

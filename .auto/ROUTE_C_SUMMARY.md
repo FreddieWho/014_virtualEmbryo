@@ -100,3 +100,30 @@ with a validated proxy ordering (ρ=0.54). Options for the user:
 2. **Hold** the artifact as a research record and spend the next round on the
    geometry-preserving composition lead, which could plausibly reach expr +11 at champion-level
    companion channels.
+
+---
+
+## 7. SCORE RETURN ADDENDUM (2026-10-02) — the round failed on the server
+
+All five candidates were rejected: **v0025 50.17** (best), v0024 50.09, v0028 50.08, v0026 50.03
+against incumbent **50.53** (board-best v0011 50.64; numeric-high v0022 50.74); probe v0027 39.60.
+The extrap selection and aggregate are unchanged.
+
+1. **The frozen composite is falsified as a submission predictor.** It ranked these five at
+   +0.9…+3.9 and every one scored at or below baseline; over all 17 lanes Spearman is now **0.122**
+   (0.539 over the older 12 lanes only). Local composite may order candidates *within* a family
+   already anchored to the server, never justify a new family.
+2. **First confirmed channel transfer — `variogram`:** these designs scored 49.5–50.1, the best on
+   this board (previous lanes 47.4–48.5), matching the corrected lower-is-better local ordering.
+   This is the round's one transferable technical asset.
+3. **`de_score` inverted:** 45.8–46.8 versus 48.9–50.0 for the older shrink/compmix lanes, despite
+   higher local de. Optimising the local DE readout costs server DE here.
+4. **Server-side row luck ≈ 0.01** (v0024 vs v0028, same design, different rows) while the local
+   composite differed by 0.31 → the local seed spread is proxy noise, and the 3-seed-median rule is
+   conservative rather than necessary.
+5. **The guardrails were the only correct component**: v0027's library 11.98× / variance 1.74 flags
+   matched its collapse (d2 23.6, mmd_u 37.3, nmmd 37.6).
+
+Evidence: `reports/SERVER_SCORE_REGISTRY.md#route-c-extrap-score-return--2026-10-02`,
+`reports/SERVER_SUBMETRIC_REGISTRY.tsv` (40 rows), `submissions/INDEX.tsv` v0024–v0028 (scored),
+`reports/LANE_VERDICTS.tsv`, decision `D-20261002-ARROUTCESCORE-001`.

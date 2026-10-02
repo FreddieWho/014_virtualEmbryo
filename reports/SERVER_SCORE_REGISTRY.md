@@ -783,6 +783,44 @@ Decision and limits:
 - No overall server Total supplied. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260921-T3R5SCORE-001.
 
+## T2 H-N2 LOWAMP score return — 2026-09-28
+
+Source / raw evidence: user transcribed the two portal board totals and their eight
+per-metric skills in the current conversation. Submission IDs and timestamps were not
+supplied; no independent portal query was performed. Values are recorded exactly as
+supplied and are not reconstructed from the rounded skills.
+
+| Candidate | Submission ID | Submission file / SHA-256 | Server score | Reference points | Decision |
+|---|---|---|---:|---|---|
+| `T2-H-N2-LOWAMP v0014 L1_SHARED` | not supplied | `submissions/candidates/T2_heart_val_interp/v0014_h_n2_lowamp_shared/submission.h5ad` / `23a0488260abf799...` | **61.52** | vs incumbent v0013 62.04 | **not promoted** (-0.52) |
+| `T2-H-N2-LOWAMP v0015 L2_PERSTAGE` | not supplied | `submissions/candidates/T2_heart_val_interp/v0015_h_n2_lowamp_perstage/submission.h5ad` / `203bbcb68712e247...` | **61.52** | vs incumbent v0013 62.04 | **not promoted** (-0.52) |
+
+Per-metric skills (rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`):
+
+| Lane | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd | board |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| incumbent v0013 (B4-T2-R2 L2) | 60.6 | 65.8 | 62.5 | 28.4 | 65.4 | 47.8 | 97.9 | 65.8 | **62.04** |
+| `H-N2-LOWAMP v0014 L1` | 61.2 | 66.0 | 62.6 | **25.4** | 65.4 | 47.8 | 97.9 | **64.5** | **61.52** |
+| `H-N2-LOWAMP v0015 L2` | 60.6 | 66.0 | 62.6 | **25.4** | 65.4 | 47.8 | 97.9 | **64.7** | **61.52** |
+| delta v0014 | +0.6 | +0.2 | +0.1 | **-3.0** | 0.0 | 0.0 | 0.0 | **-1.3** | **-0.52** |
+| delta v0015 | 0.0 | +0.2 | +0.1 | **-3.0** | 0.0 | 0.0 | 0.0 | **-1.1** | **-0.52** |
+
+Decision and limits:
+- **Selection UNCHANGED.** Both lanes score 61.52, below the incumbent 62.04 by 0.52,
+  which is well outside the standing +/-0.1 TIE band. `T2:heart:val_interp` stays on
+  v0013. **No Total changes as a result of this scoring round** (the Total is the sum
+  over the registered per-board selection, which is untouched).
+- **The three geometry submetrics are bit-identical to the incumbent**
+  (d2_shape 65.4, occupancy_dice 47.8, scale_log_ratio 97.9). This is a **positive
+  control** confirming the byte-identity claim: the submission really differs from
+  v0013 only in the expression matrix.
+- **The whole loss is on the expression side**, and `variogram` (-3.0) is the single
+  largest contributor, followed by `neighborhood_mmd` (-1.3 / -1.1).
+- **L1 and L2 are exactly tied at 61.52 with 6 of 8 submetrics identical.** The
+  cross-stage coefficient-sharing constraint -- the route's core hypothesis and the
+  reason the second arm existed -- is **empirically null**.
+- Both artifacts stay immutable and are retained as evidence. No new candidate.
+
 <a id="t1-next-r1-score-return-20260926"></a>
 ## T1 NEXT R1 score return — 2026-09-26
 
@@ -842,6 +880,67 @@ Decision and limits:
 - No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260928-T1FIVESCORE-001.
 
+<a id="t3-repair-r3r4-score-return-20260928"></a>
+## T3 REPAIR R3/R4 remaining lanes score return — 2026-09-28
+
+Source / raw evidence: user transcribed three portal Model names, board totals and five skills each in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv (v0037 `9b82a600…`, v0040 `7bc782fb…`, v0041 `879acc88…`); artifacts immutable. Parent v0009, contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__r3splfix__v0037.h5ad | 46.98 | 39.2 | 49.8 | 50.0 | 51.5 | 51.0 |
+| t3_gata4__r4panelfix__v0040.h5ad | 47.08 | 39.6 | 49.7 | 50.0 | 51.5 | 51.0 |
+| t3_gata4__r4medfix__v0041.h5ad | 47.09 | 39.6 | 49.8 | 50.0 | 51.5 | 51.0 |
+
+Decision and limits:
+- v0037 46.98 vs parent v0009 46.95: +0.03, inside the ±0.1 TIE band; vs incumbent v0048 47.93: -0.95 REJECT as improvement. Five skills identical to sibling v0036 (39.2/49.8/50.0/51.5/51.0) to the supplied precision.
+- v0040 47.08 vs parent 46.95: +0.13, outside TIE as a parent comparison; vs incumbent 47.93: -0.85 REJECT as improvement. de_score 39.6 (+0.4 vs pinned 39.2) matches the graph/signmax level seen on v0022/v0023, but variogram stays 51.0 with no net gain.
+- v0041 47.09 vs parent 46.95: +0.14; vs incumbent 47.93: -0.84 REJECT as improvement. Differs from v0040 only on de_direction (+0.1) at the supplied precision.
+- Selection stays v0048 (47.93). No new Total supplied; last confirmed Total remains 158.14 as derived (51.92 + 58.29 + 47.93; T2 heart_extrap 50.64-vs-50.53 OPEN item unaffected). severity_slope reads 50.0 on all three returns — floor-anchored, carries no discriminative signal, consistent with all prior T3 returns.
+- Repair queue is now closed on scores: v0034/v0035/v0036/v0037/v0040/v0041 all scored; v0038/v0039 stay invalidated_unsubmitted (withdrawn). No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260928-T3REPAIR2-001.
+
+<a id="t1-round2-score-return-20260928"></a>
+## T1 ROUND2 score return — 2026-09-28
+
+Source / raw evidence: user transcribed five portal Model names, board totals and four skills each in the current conversation. Submission IDs, timestamps and screenshots were not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills (T1 weights 0.25/0.25/0.30/0.20 give 52.485/52.485/50.485/51.94/51.065 versus reported 52.5/52.49/50.51/51.97/51.10; differences are rounding). Local artifact SHA256 values match submissions/INDEX.tsv; artifacts immutable. Parent v0024 and contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| t1_val__n1stack__v0029.h5ad | 52.5 | 45.8 | 58.5 | 54.9 | 49.7 |
+| t1_val__n2composition__v0030.h5ad | 52.49 | 45.6 | 59.5 | 54.7 | 49.0 |
+| t1_val__n3states__v0031.h5ad | 50.51 | 43.7 | 57.0 | 52.7 | 47.5 |
+| t1_val__o1caldensity__v0032.h5ad | 51.97 | 45.7 | 58.3 | 54.4 | 48.1 |
+| t1_val__o2shrinkmass__v0033.h5ad | 51.10 | 43.5 | 57.4 | 53.2 | 49.4 |
+
+Decision and limits:
+- v0029 52.5 vs parent/incumbent v0024 51.92: +0.58, outside the ±0.1 TIE band. PROMOTED: new T1 selection and highest observed. Server Total updates 158.14 → 158.72 (52.5 + 58.29 + 47.93; T2/T3 components unchanged; heart_extrap 50.64-vs-50.53 OPEN item unaffected).
+- v0030 52.49 (+0.57 vs old best) trails the new best by 0.01 → TIE with v0029; incumbent v0029 stays per the standing no-co-promotion rule. Scored backup, not co-promoted.
+- v0032 51.97 (+0.05 vs old best, inside TIE) trails the new best by 0.53 → REJECT as improvement.
+- v0031 −1.41 and v0033 −0.82 vs parent → REJECT.
+- Skill-level read versus v0024 (45.5/58.5/54.3/48.2), descriptive not causal: v0029 improves de/mmd/vario (+0.3/+0.6/+1.5) with dir flat; v0030 trades de for direction (+1.0 dir, +0.8 vario). The two leaders are 0.01 apart with mirrored profiles — direction carries v0030, distribution carries v0029. v0033 loses de/dir/mmd (−2.0/−1.1/−1.1) while variogram rises (+1.2); v0031 loses on all four. Local rank partially inverted at the top (report scenario preferred v0030 over v0029); this bounds the T1 proxy rather than validating it. This does not identify a biological mechanism.
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260928-T1R2SCORE-001.
+
+<a id="t3-round2-score-return-20260929"></a>
+## T3 ROUND2 score return — 2026-09-29
+
+Source / raw evidence: user-supplied score table (datetimes 2026-09-28 07:30–07:33, board, portal filenames, file sizes 35 MB, board totals and five skills). Submission IDs not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv (v0049 `19094705…`, v0050 `4a0ca825…`, v0051 `bc88b624…`, v0052 `652d3b0a…`, v0053 `ed4e82fe…`); artifacts immutable. Parent v0048, contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__n1stack__v0049.h5ad | 47.86 | 41.7 | 50.4 | 50.0 | 52.3 | 49.8 |
+| t3_gata4__n2orth__v0050.h5ad | 47.40 | 40.8 | 49.9 | 50.0 | 51.8 | 49.4 |
+| t3_gata4__n3occup__v0051.h5ad | 46.07 | 37.4 | 48.5 | 50.0 | 51.4 | 50.7 |
+| t3_gata4__o1logit__v0052.h5ad | 47.62 | 41.7 | 50.1 | 50.0 | 51.8 | 48.6 |
+| t3_gata4__o2geneshrink__v0053.h5ad | 47.66 | 41.2 | 49.7 | 50.0 | 52.1 | 51.3 |
+
+Decision and limits:
+- v0049 47.86 vs parent/incumbent v0048 47.93: −0.07, inside the ±0.1 TIE band. Not promoted; recorded as scored TIE backup. The high-score stack (v0048+v0046) does not beat v0048 alone.
+- v0053 −0.27, v0052 −0.31, v0050 −0.53, v0051 −1.86 vs incumbent → REJECT as improvement.
+- Selection stays v0048 (47.93). severity_slope reads 50.0 on all five returns — floor-anchored, carries no discriminative signal, consistent with all prior T3 returns.
+- No new Total supplied with this batch. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260929-T3R2SCORE-001.
+
 <a id="t1-three-score-return-20260929"></a>
 ## T1 THREE score return — 2026-09-29
 
@@ -860,6 +959,72 @@ Decision and limits:
 - Skill-level read versus v0029 (45.8/58.5/54.9/49.7), descriptive not causal: all three improve de/dir/mmd/vario together; the largest move is direction (+1.0 to +1.7). v0036 carries de (47.0) but gives back direction versus v0035. This does not identify a biological mechanism.
 - No new Total supplied with this batch. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
 - Decision: D-20260929-T1THREESCORE-001.
+
+<a id="t2-round2-score-return-20260929"></a>
+## T2 ROUND2 score return — 2026-09-29
+
+Source / raw evidence: user-supplied score table (datetimes 2026-09-28 19:05–19:08 and 2026-09-29 04:36–04:39 / 07:33–07:35, portal filenames, file sizes 21/29/113 MB, board totals and eight skills per lane, plus one board-mismatch rejection note). Submission IDs not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv for all 14 scored files; artifacts immutable. Parents (embryo v0010, interp v0013, extrap v0001) and contract states remain in that index.
+
+Embryo interp (incumbent v0010 62.29):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_emb_int__e_n1_qbridge__v0011.h5ad | 61.31 | 53.5 | 61.0 | 56.5 | 62.0 | 54.6 | 51.2 | 90.8 | 63.7 |
+| t2_emb_int__e_n2_trend3__v0012.h5ad | 60.51 | 54.1 | 66.0 | 59.6 | 47.3 | 55.7 | 44.3 | 88.5 | 64.5 |
+| t2_emb_int__e_n3_substate2__v0013.h5ad | 61.66 | 51.5 | 66.0 | 59.4 | 59.6 | 52.2 | 48.5 | 87.5 | 65.6 |
+| t2_emb_int__e_o1_shrinkmerge__v0014.h5ad | 62.89 | 55.2 | 67.4 | 60.3 | 56.0 | 54.6 | 51.2 | 90.8 | 66.1 |
+| t2_emb_int__e_o2_scalemass__v0015.h5ad | 62.38 | 54.1 | 67.5 | 60.2 | 52.0 | 54.6 | 51.2 | 91.9 | 65.9 |
+
+Heart interp (incumbent v0013 62.04):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_int__h_n1_qbridge__v0016.h5ad | 62.35 | 60.0 | 67.4 | 50.8 | 56.2 | 65.4 | 47.8 | 97.9 | 62.4 |
+| t2_hrt_int__h_n2_curve95__v0017.h5ad | 61.81 | 60.0 | 65.1 | 62.3 | 27.0 | 68.7 | 47.1 | 97.5 | 65.4 |
+| t2_hrt_int__h_n3_cmjoin__v0018.h5ad | 62.14 | 60.6 | 66.2 | 62.7 | 28.3 | 66.0 | 45.1 | 98.4 | 66.4 |
+| t2_hrt_int__h_o1_shrinkmerge__v0019.h5ad | 62.36 | 61.2 | 66.1 | 61.9 | 30.0 | 65.4 | 47.8 | 97.9 | 66.3 |
+| t2_hrt_int__h_o2_libnorm__v0020.h5ad | 57.74 | 61.8 | 66.8 | 36.8 | 38.6 | 65.4 | 47.8 | 97.9 | 58.8 |
+
+Heart extrap (aggregate uses baseline 50.53; board-best v0011 50.64):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_ext__x_n2_trend3__v0018.h5ad | 48.40 | 47.4 | 50.0 | 48.1 | 40.6 | 46.2 | 53.2 | 49.7 | 50.1 |
+| t2_hrt_ext__x_n3_compmix__v0019.h5ad | 50.38 | 48.9 | 51.7 | 50.1 | 47.4 | 45.2 | 54.3 | 49.5 | 52.5 |
+| t2_hrt_ext__x_o1_trendshrink__v0020.h5ad | 48.59 | 47.4 | 49.9 | 48.4 | 41.5 | 46.2 | 53.2 | 49.7 | 50.3 |
+| t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad | 50.52 | 49.2 | 51.6 | 50.2 | 48.2 | 45.2 | 54.3 | 49.5 | 52.6 |
+
+Board-mismatch attempt (recorded, not a score): at 2026-09-29 04:40 the extrap file `t2_hrt_ext__x_o1_trendshrink__v0020.h5ad` (25179 cells) was submitted to the embryo board and rejected — that board accepts 583–5000 cells. No INDEX change for this event; the file's extrap-board score (48.59) stands as registered above.
+
+Decision and limits:
+- Embryo: v0014 62.89 vs incumbent 62.29: +0.60, outside TIE. PROMOTED: new embryo board best. v0015 62.38 (+0.09 vs old best) trails the new best by 0.51 → REJECT as improvement. v0013/v0011/v0012 below the old best → REJECT.
+- Heart interp: v0019 62.36 was returned first (19:05) vs incumbent 62.04: +0.32 → PROMOTED: new board best. v0016 62.35 trails the new best by 0.01 → TIE; incumbent v0019 stays per the standing no-co-promotion rule. v0018 (+0.10 vs old best) trails the new best by 0.22 → REJECT. v0017 REJECT. v0020 57.74 (−4.30) → REJECT; library rank remap collapses mmd_u (36.8) and variogram (38.6) while geometry stays fixed — a clean expression-side disaster on this board.
+- Extrap: v0019 50.38 (−0.15 vs baseline 50.53; −0.26 vs board-best 50.64), v0021 50.52 (−0.01 vs baseline, inside TIE; −0.12 vs board-best) → neither enters the aggregate or takes the board best. v0020/v0018 REJECT. Extrap selection and the 50.64-vs-50.53 OPEN item are unchanged.
+- New derived Total: 159.95 (53.43 + 58.59 + 47.93, with T2 = (62.89+62.36+50.53)/3 = 58.59). Derived only — the last portal-confirmed Total remains 156.06 until re-read.
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260929-T2R2SCORE-001.
+
+<a id="t3-pending-score-return-20260929"></a>
+## T3 THREE + FIVE-SELECT score return — 2026-09-29
+
+Source / raw evidence: user-supplied score table (portal filenames, board totals and five skills each; per-lane datetimes not supplied). Submission IDs not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv (v0054 `dd4ff51f…`, v0055 `11076fed…`, v0056 `586fad56…`, v0057 `06a7dc29…`, v0058 `b671f35b…`, v0059 `914054b8…`); artifacts immutable. Parent v0048, contract PASS remain in that index.
+
+| Portal model | Board score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|---:|
+| t3_gata4__r1agree__v0054.h5ad | 47.75 | 42.1 | 49.8 | 50.0 | 51.8 | 49.4 |
+| t3_gata4__r2damp__v0055.h5ad | 47.25 | 40.4 | 49.9 | 50.0 | 51.6 | 49.4 |
+| t3_gata4__r3diffuse__v0056.h5ad | 47.93 | 42.6 | 50.0 | 50.0 | 51.8 | 49.3 |
+| t3_gata4__r2gene__v0057.h5ad | 47.37 | 40.8 | 49.7 | 50.0 | 52.0 | 49.5 |
+| t3_gata4__r4spline__v0058.h5ad | 47.95 | 42.6 | 50.0 | 50.0 | 51.8 | 49.5 |
+| t3_gata4__r3bag__v0059.h5ad | 47.93 | 42.6 | 50.0 | 50.0 | 51.8 | 49.3 |
+
+Decision and limits:
+- v0058 47.95 vs incumbent v0048 47.93: +0.02, inside the ±0.1 TIE band. Not promoted; recorded as scored TIE backup per the standing no-co-promotion rule.
+- v0056 and v0059 both 47.93, exact tie with the incumbent; not co-promoted. Their five skills match v0048 (42.6/50.0/50.0/51.8/49.3) to the supplied precision — same readout from different constructions, descriptive only.
+- v0054 −0.18, v0057 −0.56, v0055 −0.68 vs incumbent → REJECT as improvement. The damped/gene arms lose on de_score (40.4/40.8 vs 42.6).
+- Selection stays v0048 (47.93). T3 score queue is now closed: no score_pending T3 candidate remains. severity_slope reads 50.0 on all six returns — floor-anchored, carries no discriminative signal, consistent with all prior T3 returns.
+- No new Total supplied with this batch; T3 component unchanged so the derived Total stays 159.95. No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260929-T3SCORE-002.
 
 <a id="t1-seven-pbmean-score-return-20260930"></a>
 ## T1 seven routes and mean extrapolation score return — 2026-09-30
@@ -888,3 +1053,155 @@ Decision and limits:
 - Mean-shift variogram skills fall by 11.4/16.4/9.0/8.7 respectively; de, direction and MMD also fall in every arm. Global alpha 1 is worse than 0.5; type-based alpha 1 is better than 0.5 but still far below parent. Do not generalize a universal monotone amplitude rule.
 - T1 pending queue is empty after these 11 returns. New derived sum 53.55+58.59+47.93=160.07 uses current local selection bookkeeping only; it is NOT a newly returned portal Total. Last recorded portal Total remains 156.06 and the heart_extrap 50.64/50.53 discrepancy stays open.
 - No new training, candidate, portal selection operation or scientific validation was performed. Decision: D-20260930-T1SCORE-001. Review: reports/t1_score_review_20260930/REPORT.md. blocks_submission: false.
+
+<a id="t2-xn1-score-return-20260930"></a>
+## T2 x_n1_lineage score return — 2026-09-30
+
+Source / raw evidence: user-supplied board total and eight skills in this conversation on 2026-09-30 (portal model `t2_hrt_ext__x_n1_lineage__v0017.h5ad`). Submission ID, upload timestamp and portal Total not supplied; no independent portal query was performed. Local artifact SHA256 `7ffd3053…` matches submissions/INDEX.tsv; artifact immutable. Parent v0001, contract PASS remain in that index.
+
+Heart extrap (aggregate uses baseline 50.53; board-best v0011 50.64):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_ext__x_n1_lineage__v0017.h5ad | 48.17 | 50.8 | 52.5 | 45.9 | 33.3 | 46.2 | 53.2 | 49.7 | 50.5 |
+
+Decision and limits:
+- v0017 48.17 (−2.36 vs baseline 50.53; −2.47 vs board-best 50.64) → REJECT as improvement. Lineage-mapped deltas for the 17 zero-shift types do not move the extrap board; variogram 33.3 is the weakest skill, consistent with the extrap-board pattern that spatial autocorrelation is the headroom.
+- Extrap selection unchanged (aggregate still baseline 50.53; 50.64-vs-50.53 OPEN item unchanged). T2-ROUND2 score queue is now closed: 15/15 returned.
+- No new Total supplied; derived figures unchanged (160.07 stays a local derivation, NOT a portal Total; last portal-confirmed Total 156.06).
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260930-T2XN1SCORE-001.
+
+<a id="t2-r3-score-return-20260930"></a>
+## B4-T2-R3 score return — 2026-09-30
+
+Source / raw evidence: user-supplied board totals and eight skills per lane in this conversation on 2026-09-30 (portal models `t2_hrt_ext__l1damp050__v0008.h5ad`, `t2_hrt_ext__l2time1333__v0009.h5ad`, `t2_hrt_ext__l3popmix050__v0010.h5ad`; pack `deliveries/b4t2r3__t2__upload__20260914.zip`, no receipt — packed 2026-09-14, closed_unscored 2026-09-15 per D-20260915-B4CLOSE-001, scored now). Submission IDs, upload timestamps and portal Total not supplied; no independent portal query was performed. Local artifact SHA256 values match submissions/INDEX.tsv (v0008 `a58896c9…`, v0009 `f692fd8f…`, v0010 `4475b233…`); artifacts immutable. Parent baseline-001 v0001, contract PASS remain in that index.
+
+Heart extrap (aggregate uses baseline 50.53; board-best v0011 50.64):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_ext__l1damp050__v0008.h5ad | 48.40 | 42.5 | 51.1 | 48.4 | 41.6 | 46.2 | 53.2 | 49.7 | 51.4 |
+| t2_hrt_ext__l2time1333__v0009.h5ad | 50.51 | 50.4 | 52.5 | 49.9 | 47.1 | 46.2 | 53.2 | 49.7 | 52.1 |
+| t2_hrt_ext__l3popmix050__v0010.h5ad | 48.87 | 43.6 | 52.6 | 48.1 | 43.6 | 46.2 | 53.2 | 49.7 | 51.3 |
+
+Decision and limits:
+- v0009 50.51 (−0.02 vs baseline 50.53, inside ±0.1 TIE; −0.13 vs board-best 50.64) → TIE with baseline, no promotion. Time-normalized 1.333×Delta extrapolation matches the no-change baseline but does not beat the shrink lane; notably its de_score 50.4 is the strongest differential-expression readout among extrap attempts (baseline 49.6), yet the Total does not move — descriptive only.
+- v0008 48.40 (−2.13) and v0010 48.87 (−1.66) → REJECT. Damping toward E9.5 and half-copy-last grafting both lose on de_score (42.5/43.6 vs 49.6) and variogram (41.6/43.6 vs 47.7).
+- Extrap selection unchanged (aggregate still baseline 50.53; 50.64-vs-50.53 OPEN item unchanged). The B4-T2-R3 closed_unscored state is now resolved as scored; no future-batch scoring left for this run.
+- No new Total supplied; derived figures unchanged (160.07 stays a local derivation, NOT a portal Total; last portal-confirmed Total 156.06).
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20260930-T2R3SCORE-001.
+
+<a id="t3-priority-six-score-return-20261001"></a>
+## T3 priority six score return — 2026-10-01
+
+Evidence: user-transcribed six totals and all 30 displayed submetrics, preserved in `reports/t3_score_review_20261001/USER_SCORE_REPORT.md`; identities matched the uploaded `deliveries/t3six__t3__upload__20261001.zip`, member manifest, current INDEX and actual candidate bytes. No independent portal query. Submission IDs and actual submitted timestamps NOT_PROVIDED; record date is receipt date. Original member H5AD files unchanged.
+
+| Version / model | Total | Δ vs selection v0048 | de_score | de_direction | severity_slope | mmd_u | variogram (portal label) | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| v0060 t3_gata4__r1_celloracle__v0060.h5ad | 46.91 | -1.02 | 39.2 | 49.6 | 50.0 | 51.5 | 50.8 | REJECT |
+| v0061 t3_gata4__r3_activity__v0061.h5ad | 45.51 | -2.42 | 39.6 | 51.2 | 50.0 | 42.6 | 40.0 | REJECT |
+| v0062 t3_gata4__r4_functional__v0062.h5ad | 44.42 | -3.51 | 39.2 | 48.7 | 50.0 | 42.6 | 35.8 | REJECT |
+| v0063 t3_gata4__r4_bilinear__v0063.h5ad | 44.27 | -3.66 | 38.8 | 48.7 | 50.0 | 42.7 | 35.4 | REJECT |
+| v0064 t3_gata4__r5_scouter__v0064.h5ad | 44.14 | -3.79 | 41.7 | 50.3 | 50.0 | 36.8 | 26.8 | REJECT |
+| v0065 t3_gata4__r6_gears__v0065.h5ad | 42.38 | -5.55 | 38.1 | 48.7 | 50.0 | 34.4 | 26.8 | REJECT |
+
+All six are more than 0.1 below selection 47.93: no promotion, selection v0048 and tie backup v0058 unchanged. The exact-native CellOracle+decoder variant 46.91 is also within ±0.1 of the old CellOracle-derived v0018 46.94; broader cell/gene changes did not create a server gain. State-mass null route has no registered candidate and no returned score.
+
+No new aggregate Total supplied; last portal-confirmed 156.06 and locally derived 160.07 remain separate. T3 new pending count becomes zero. Old execution/package receipts are immutable historical records of READY_NOT_SUBMITTED at creation; current submission status is the canonical INDEX and this score section. User-provided totals remain authoritative: rounded submetric weighted sums are diagnostic, not replacements for totals. Scientific mechanisms remain unvalidated; blocks_submission: false. Decision D-20261001-T3SIXSCORE-001. Review: reports/t3_score_review_20261001/REPORT.md.
+
+<a id="t2-goal-score-return-20261001"></a>
+## T2 GOAL score return — 2026-10-01
+
+Source / raw evidence: user-supplied board totals and eight skills per lane in this conversation on 2026-10-01 (portal models `t2_hrt_ext__x_n1_lineage__v0017.h5ad`, `t2_hrt_ext__x_o2_shrinkcomp__v0021.h5ad`, `t1_val__pbb05__v0046.h5ad`, `t1_val__pba10__v0045.h5ad`, `t1_val__pba05__v0044.h5ad`, `t2_hrt_int__h_r2shrinkc1__v0022.h5ad`, `t2_hrt_int__h_r1compotrend__v0021.h5ad`, `t2_hrt_ext__x_r2shrinkc1__v0023.h5ad`, `t2_hrt_ext__x_r1lateref__v0022.h5ad`, `t2_emb_int__e_r2shrinkc1__v0017.h5ad`, `t2_emb_int__e_r1compotrend__v0016.h5ad`). Of these 11, five were already registered with identical values (x_n1_lineage v0017 48.17 in §t2-xn1-score-return-20260930; x_o2_shrinkcomp v0021 50.52 in §t2-round2-score-return-20260929; T1 v0044 48.75 / v0045 47.92 / v0046 49.10 in §t1-seven-pbmean-score-return-20260930) and are NOT re-registered here. This section registers only the six new T2-GOAL returns below. Submission IDs, upload timestamps and portal Total not supplied; no independent portal query was performed. Values preserve supplied precision; reported totals are not reconstructed from rounded skills. Local artifact SHA256 values match submissions/INDEX.tsv (e_r1 v0016 `c3250e9d…`, e_r2 v0017 `7f85be3c…`, h_r1 v0021 `e11aa83b…`, h_r2 v0022 `f94649df…`, x_r1 v0022 `f5cc7c59…`, x_r2 v0023 `c2d5063d…`); artifacts immutable. Parents (embryo v0014, interp v0019, extrap v0001) and contract states remain in that index. Per-metric rows also in `reports/SERVER_SUBMETRIC_REGISTRY.tsv`.
+
+Embryo interp (incumbent v0014 62.89):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_emb_int__e_r1compotrend__v0016.h5ad | 61.65 | 54.6 | 64.8 | 60.3 | 56.3 | 54.7 | 40.4 | 87.1 | 67.4 |
+| t2_emb_int__e_r2shrinkc1__v0017.h5ad | 62.55 | 54.1 | 67.4 | 60.3 | 54.5 | 54.6 | 51.2 | 90.8 | 66.0 |
+
+Heart interp (incumbent v0019 62.36):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_int__h_r1compotrend__v0021.h5ad | 62.22 | 58.3 | 65.3 | 63.4 | 29.6 | 67.7 | 47.1 | 98.0 | 66.3 |
+| t2_hrt_int__h_r2shrinkc1__v0022.h5ad | 62.21 | 60.6 | 66.0 | 62.2 | 29.5 | 65.4 | 47.8 | 97.9 | 66.1 |
+
+Heart extrap (aggregate uses baseline 50.53; prior board-best v0011 50.64):
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| t2_hrt_ext__x_r1lateref__v0022.h5ad | 50.74 | 53.7 | 53.8 | 48.7 | 47.7 | 46.2 | 53.2 | 49.7 | 51.1 |
+| t2_hrt_ext__x_r2shrinkc1__v0023.h5ad | 50.03 | 50.4 | 52.5 | 48.9 | 46.3 | 46.2 | 53.2 | 49.7 | 51.0 |
+
+Decision and limits:
+- Embryo: e_r2 62.55 (−0.34 vs 62.89) REJECT; e_r1 61.65 (−1.24) REJECT. Trend-share resample + incumbent expression does not beat the shrinkmerge incumbent; e_r1 additionally collapses occupancy_dice (40.4 vs 51.2).
+- Heart interp: h_r1 62.22 (−0.14 vs 62.36) and h_r2 62.21 (−0.15) both REJECT (outside the ±0.1 TIE band). Same pattern as embryo: neither the trend-share combo nor the C=1 shrink moves the board past the shrinkmerge incumbent. Variogram stays the weakest skill (29.5–29.6).
+- Extrap: x_r2 50.03 (−0.50 vs baseline 50.53; −0.61 vs prior best 50.64) REJECT. x_r1 50.74 (+0.21 vs baseline 50.53; +0.10 vs prior board-best v0011 50.64) lands exactly on the ±0.1 TIE boundary → recorded as TIE-highest-numeric backup, NO promotion per the standing no-co-promotion rule; incumbent v0011 stays. x_r1 is the numerically highest extrap return to date; its de_score 53.7 is also the strongest extrap de readout to date (baseline 49.6), yet the selection/aggregate rule keeps it out of the Total until a portal re-read promotes it — descriptive only.
+- Selections unchanged on all three T2 boards (embryo v0014 62.89 / interp v0019 62.36 / aggregate extrap 50.53). The extrap OPEN item is now 50.74-vs-50.53 (was 50.64-vs-50.53); still needs a portal re-read before any promotion claim.
+- T2-GOAL score queue is now closed: 6/6 returned. No new Total supplied; derived figures unchanged (160.07 stays a local derivation, NOT a portal Total; last portal-confirmed Total 156.06).
+- No new model fit or candidate generation in this score-registration task. Scientific status unchanged; blocks_submission: false.
+- Decision: D-20261001-T2GOALSCORE-001.
+
+<a id="t3-architecture-two-score-return-20261001"></a>
+## T3 architecture two score return — 2026-10-01
+
+Evidence: user-transcribed two totals and ten displayed submetrics; raw evidence reports/t3_arch_two_score_review_20261001/USER_SCORE_REPORT.md. Model filenames matched deliveries/arch2__t3__upload__20261001.zip, member manifest, canonical artifacts and INDEX SHA256. No independent portal query; submission IDs, actual submitted timestamps and new portal Total NOT_PROVIDED. All scored artifact bytes unchanged.
+
+| Version / model | Total | Δ vs selected v0048 | de_score | de_direction | severity_slope | mmd_u | variogram | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| v0066 t3_gata4__a_flow__v0066.h5ad | 43.21 | -4.72 | 37.0 | 53.5 | 50.0 | 41.3 | 15.7 | REJECT |
+| v0068 t3_gata4__b_fate__v0068.h5ad | 46.37 | -1.56 | 38.8 | 49.9 | 50.0 | 50.1 | 46.9 | REJECT |
+
+Both are >0.1 below selection: no promotion; v0048=47.93 and v0058=47.95 tie backup unchanged. A direction53.5 is the highest displayed T3 direction among registered submetrics so far (prior max51.2), descriptive only; DE and distribution losses dominate. B is also0.58 below its Gata4-zero carrier v0009=46.95; current composition prediction did not provide a server gain. v0067 remains withdrawn/unsubmitted with no score. T3 pending count becomes zero; this batch is closed.
+
+User totals are retained exactly, not replaced with rounded-submetric weighted estimates. No new aggregate Total: last portal-confirmed156.06 and local derived160.07 remain separate and unchanged. Historical creation-time READY_NOT_SUBMITTED receipts remain immutable; current status is INDEX and this score section. Scientific mechanisms remain unvalidated, blocks_submission:false. Decision D-20261001-T3ARCHSCORE-001; review reports/t3_arch_two_score_review_20261001/REPORT.md.
+
+## Route C extrap score return — 2026-10-02
+
+User-reported portal returns for the five Route C candidates (`deliveries/arcqte__t2__upload__20261002.zip`,
+run `AR-ROUTE-C-20261002-v1`). Submitted field is the user's return date; no portal Total was supplied.
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd | local composite |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `t2_hrt_ext__qte_tc_s929__v0024.h5ad` | 50.09 | 46.8 | 52.1 | 50.1 | 50.1 | 45.2 | 54.3 | 49.5 | 51.1 | +3.913 |
+| `t2_hrt_ext__qte_compmix__v0025.h5ad` | 50.17 | 45.8 | 51.2 | 50.9 | 49.7 | 49.5 | 52.1 | 50.0 | 51.2 | +3.464 |
+| `t2_hrt_ext__qte_time__v0026.h5ad` | 50.03 | 46.4 | 52.4 | 49.8 | 50.1 | 46.2 | 53.2 | 49.7 | 51.1 | +2.608 |
+| `t2_hrt_ext__sharetrend_qte__v0027.h5ad` | 39.60 | 47.1 | 52.9 | 37.3 | 42.2 | 23.6 | 47.9 | 54.4 | 37.6 | +0.855 |
+| `t2_hrt_ext__qte_tc_s008__v0028.h5ad` | 50.08 | 46.1 | 51.6 | 50.7 | 49.5 | 49.5 | 52.1 | 50.0 | 50.7 | +3.606 |
+
+Reference points: incumbent/aggregate baseline v0001 = **50.53**; board-best v0011 = **50.64**;
+numeric-high v0022 (unpromoted TIE-highest) = **50.74**.
+
+Deltas (vs 50.53 / vs 50.64 / vs 50.74):
+- v0024 **−0.44 / −0.55 / −0.65** → REJECT
+- v0025 **−0.36 / −0.47 / −0.57** → REJECT (best of the five)
+- v0026 **−0.50 / −0.61 / −0.71** → REJECT
+- v0027 **−10.93 / −11.04 / −11.14** → REJECT (catastrophic, as its local guardrail failure predicted)
+- v0028 **−0.45 / −0.56 / −0.66** → REJECT
+
+Decision and limits:
+- **No promotion.** All five sit below the incumbent; heart-extrap selection and the aggregate stay on baseline
+  50.53, and the 50.74-vs-50.53 OPEN item is unchanged (still needs a portal re-read).
+- **The frozen 8-channel local composite was falsified as a predictor for new designs.** It ranked these five
+  at +0.9…+3.9 (champion +3.913) and they all scored at-or-below baseline; over the full 17-lane set
+  Spearman(composite, board) is now **0.122** (it was 0.539 over the 12 pre-Route-C lanes only — the
+  correlation does not survive out-of-family candidates). The composite must not be used to justify a
+  submission again without a server-anchored calibration set that includes the candidate's own family.
+- **First confirmed channel transfer.** The Route C designs improved the `variogram` skill to **49.5–50.1**,
+  i.e. the best vario values on this board (previous lanes 47.4–48.5); this matches the (corrected,
+  lower-is-better) local variogram ordering, so the variogram channel is a genuine, transferable lever.
+- **The DE channel inverted.** Route C lanes score **45.8–46.8** on `de_score` versus 48.9–50.0 for the older
+  compmix/shrink lanes, despite *higher* local `de_score`. Optimising the local DE readout actively costs
+  server DE on this board.
+- **Server-side row-luck is negligible, unlike the local proxy.** v0024 and v0028 are the same design with
+  different resample rows: server 50.09 vs 50.08 (Δ0.01) while the local composite differed by 0.31 (8.5%
+  relative). The local 3-seed spread is therefore a proxy artifact, not model variance — the standing
+  3-seed-median rule is conservative rather than necessary for server purposes.
+- v0027's collapse (d2 23.6, mmd_u 37.3, nmmd 37.6) reproduces its known local defect (library_size_ratio
+  11.98, variance_ratio 1.74); the local guardrails were the only component that fired correctly.
+- No new Total supplied; derived figures unchanged. Submission IDs, timestamps and portal Total were not
+  supplied; no independent portal query was performed. Artifacts immutable; submetrics registered above.

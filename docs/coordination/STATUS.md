@@ -6,7 +6,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-09-20"
+updated_at: "2026-10-01"
 updated_by: coordinator
 
 policy:
@@ -88,10 +88,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: B4-T2-R2 v0010 embryo 62.29 + v0013 heart_interp 62.04 + baseline heart_extrap 50.53"
-    current_best_score: 58.29
-    current_best_score_basis: "board-mean derivation (62.29+62.04+50.53)/3=58.29; derived Total≈153.71 pending confirmation"
-    next_action: "B4-T2-R2 四 lane 服务器 embryo 61.79/62.29、heart 56.27/62.04 → embryo v0010 与 heart v0013 晋级新 best；L2>L1 双 board 一致；T2-R3（heart_extrap 校准）待独立 UTC 日；机械组合 run 许可待评估"
+    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0019 h_o1_shrinkmerge 62.36 + baseline heart_extrap 50.53"
+    current_best_score: 58.59
+    current_best_score_basis: "board-mean (62.89+62.36+50.53)/3=58.59. Promoted 2026-09-29 (D-20260929-T2R2SCORE-001). The portal-confirmed Total 156.06 still uses older components and extrap 50.53, not v0011 50.64."
+    next_action: "ROUND2 14 条已回分（x_n1_lineage 未回分）。外推四条无一进入合计；误投胚胎榜一次拒收已记录。OPEN: heart_extrap 50.64 vs aggregate 50.53 still needs a portal re-read."
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -99,7 +99,7 @@ tasks:
       - "outputs/t2_*"
 
   T3:
-    status: score_pending
+    status: scored
     dependencies: []
     owner: coordinator
     branch: master
@@ -107,7 +107,7 @@ tasks:
     current_best: "candidate/T3_gata4/v0048_next_n2hurdle; server 47.93, promoted D-20260927-T3SCORE-001"
     current_best_score: 47.93
     active_atom: null
-    next_action: "五路线完整运行，开发规则选v0057–v0059三个h5ad，审计未改名单；6测试/14项独立进程验收通过，未提交/未评分。上传前核对旧v0049–v0056原始评分证据；best v0048保持。reports/t3_five_select_20260929/REPORT.md。"
+    next_action: "两架构及10子项已回分入库，v0066/v0068均REJECT、当前配置关闭，T3待分0，现役不变；A方向读数最高但DE/共表达损失更大，B组成未获收益。后续需新增响应依据或适用背景，不自动重训/生成候选；reports/t3_arch_two_score_review_20261001/REPORT.md；D-20261001-T3ARCHSCORE-001。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"
@@ -565,6 +565,50 @@ R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contra
 
 结合全部已登记技术家族及D5b最终失败receipt，发布 `reports/T1_NEXT_ROUTES_20260921.md`；仅metadata检查与方法文献检索，没有训练/候选/下载。T1现行选择不变；T3六个修复候选仍待上传回分，不受本次提案影响。
 
+### 2026-09-27 T3 五路线执行 lease
+
+用户授权 3 条新路线和 2 条既有路线优化。coordinator 独占 scripts/t3_next/five*.py、configs/t3_next/five_20260927.json、tests/t3_next/test_five.py、artifacts/t3_next/T3-FIVE-20260927-* 及本轮共享候选登记/文档。设计见 reports/T3_FIVE_DESIGN_20260927.md；全部完整数据运行，不覆盖旧候选。未上传/未评分，best 不变；blocks_submission: false。
+
+### 2026-09-27 T3 五路线完成
+
+三条新路线和两条优化均实现并全量运行；五个最终候选未提交/未评分，contract与模型逐值重放PASS，11测试通过。v0043/v0045撤回保留。交付 deliveries/five27__t3__upload__20260927.zip；统一报告 reports/t3_five_20260927/REPORT.md。现best不变，旧六修复候选仍待回分；本轮lease释放，blocks_submission: false。
+
+### 2026-09-27 T1 三新两优化执行 lease
+
+用户授权本轮五路线完整实现/执行。coordinator独占 scripts/t1_five/、tests/t1_five/、configs/t1_five/、artifacts/t1_five/ 与 reports/t1_five_20260927/；共享候选登记串行。此前 R5/R3/R4 实际已按各RESULT关闭，旧摘要 in progress/NOT_RUN 滞后，不重开旧run。本轮以 v0023 为已评分基线，仅用已发布 E8.5/E9.5；设计 reports/T1_FIVE_DESIGN_20260927.md。未提交/未评分；blocks_submission: false。
+
+### 2026-09-27 T1 五路线完成
+
+3新+2优化全部全量执行，五候选v0024–v0028均contract PASS、完整模型独立逐值重放PASS，9测试通过。五条完整panel官方scorer已运行；局部n3borrow较有希望、两优化不胜基线，未做E10.5真值/服务器评分，best v0023=50.82保持。交付 deliveries/t1five__t1__upload__20260927.zip；报告 reports/t1_five_20260927/REPORT.md；本轮lease释放，blocks_submission: false。
+
+### 2026-09-27 T2 验证 V1 与 M0 附录 B
+
+全历史 31 条已评分 T2 候选的本地指标 vs 服务器分排名相关已实测（D-20260927-T2VALIDATE-001）：`neighborhood_mmd` 在 heart_interp（Spearman −0.559）与 extrap（−0.627）**有预测力**，在 **embryo 强反向（+0.833）**——M0 的 5% 规则把板最佳 v0010（62.29）判成 DEGRADE。embryo 板另有「表达字节相同、仅坐标 ×1.305 膨胀、服务器 +3.4 分而本地七项指标全零」的输入对，证明**服务器几何子分对绝对尺度敏感而本地镜像看不见**。`d2_shape` 在两个插值板均反向。
+
+据此按用户批准追加 **M0 附录 B（D-20260927-T2M0APPXB-001，未回改 §3/§4）**：`neighborhood_mmd`+5% 在 heart_interp/extrap 维持；**embryo 停用 5% 三分类**，本地读数只记录不否决，改服务器仲裁优先；`mmd_u` 会签在 embryo 零信号且族内成对反向；`d2_shape` 不得单独作失败签名。
+
+### 2026-09-27 T2 九路线裁决与 E-N1 SBL 关闭
+
+9 条候选逐条裁决（D-20260927-T2M1VERDICT-001，追加 M1 §7）：执行 `E-N1 SBL`/`E-I1 TCI`/`H-N2 A2C`；条件执行 `X-N2`（须重定义占据度，MacKenzie mark-recapture 前提不满足）；待澄清 `X-I1`；保留为验证实验但**本轮不执行** `E-N2`+`H-I1`（原始目的已被 V1 在 31 条候选上达成，且两者被预测量均已证伪）；否决 `H-N1`/`X-N1`。
+
+`E-N1 SBL` 已完整执行并**关闭**（D-20260927-T2EN1-002）：两臂 `nmmd` 0.396/0.325 对 do-nothing 0.031（差 10.4–12.7 倍），预声明否定判据触发，不补救。根因是**全局水平与场项间无幅度控制**，非过平滑、非图案复制。两项自我订正（`log1p(expm1)` 是恒等式而非 softplus，我首次诊断因此有误；设计 τ=0.5 与目标 stage E7.5 算术不一致，正确 0.6）均非结果导向调参。
+
+**下一批待执行**：`E-I1 TCI` 与 `H-N2 A2C` 的设计冻结文档（须训练前落盘）。evidence: `artifacts/tool_integration/T2-E-N1-SBL-20260927-v1/RESULT.md`、`artifacts/gate/T2_VALIDATE_V1_LOCAL_VS_SERVER-20260927-v1/RESULT.md`；blocks_submission: false。
+
+### 2026-09-28 T3 三新两优化（含高分叠加）执行lease
+
+用户要求读取009 KIR kill-test经验并至少尝试一个高分组合。coordinator独占 scripts/t3_round2、configs/t3_round2、tests/t3_round2、artifacts/t3_round2、reports/t3_round2_20260928；共享候选登记串行。根据当前评分，baseline为v0048=47.93，次高v0046=47.65，旧机器摘要46.95已滞后。先精确复现组件并做消融，再执行完整五路线；不读取目标KO真值，不更新旧评分artifact。设计 reports/T3_ROUND2_DESIGN_20260928.md；blocks_submission: false。
+
+### 2026-09-28 T3 ROUND2完成
+
+已按009 KIR kill-test经验完成精确高分基线复现、组件/顺序与强基线/置乱消融；五路线真实全量执行，v0049–v0053 contract及独立重放PASS，13测试通过，包SHA/CRC通过。旧best摘要订正为已登记v0048=47.93，不是本轮新晋级。科学判定INCONCLUSIVE_NEEDS_INDEPENDENT_TRUTH；不把负结果改阈值挽救。报告 reports/t3_round2_20260928/REPORT.md；deliveries/t3r2__t3__upload__20260928.zip；lease释放，blocks_submission: false。
+
+### 2026-09-27 T2 两条存活路线执行收口（不提交）
+
+`E-I1 TCI`（embryo）与 `H-N2 A2C`（heart_interp）已完整执行，**均失败**，裁决 `RECOMMEND_NO_SUBMISSION`（D-20260927-T2ROUTES-EXEC-001）。两条的几何/行序/组成重采样**逐字节复现**现役版本，恶化全部来自表达项：`neighborhood_mmd` 相对现役劣化 **+78~97%**（heart）与 **+2379~2568%**（embryo），四个分布侧指标同向变差；桥移植经校验精确（`bridge_only` 复现 v0013 到 1.5e-07）。候选作为不可变诊断物留在 `artifacts/`，**不进 submissions/INDEX、不打包、无上传**。
+
+**三次尝试的合并发现**：给已被服务器验证的低空间方差均值场叠加「学出来的空间对比度」会摧毁分布，劣化幅度与对比度相对全局水平的幅度同向；把对比度定标到 sd=1 本身即病灶（`E-N1 SBL` 改用层内 sd 亦未解决）。已登记 LEADS **L-008** 作为前置问题（对比度幅度须由数据决定），**未执行**；在解决它之前不应再开任何「均值场 + 加性空间项」的 lane。evidence: `reports/T2_ROUTES_EXEC_CLOSURE_20260927.md`；blocks_submission: false。
+
 ### 2026-09-28 T1 第二轮执行lease
 
 coordinator独占 scripts/t1_round2、configs/t1_round2、tests/t1_round2、artifacts/t1_round2、reports/t1_round2_20260928；复用旧代码只读，候选串行登记。三新两优化含v0024+v0027实际组合；设计 reports/T1_ROUND2_DESIGN_20260928.md。当前权威best=v0024 51.92，上方旧T1摘要待本批收口同步。blocks_submission:false。
@@ -572,6 +616,18 @@ coordinator独占 scripts/t1_round2、configs/t1_round2、tests/t1_round2、arti
 ### 2026-09-28 T1 ROUND2完成
 
 v0029–v0033三新两优化均完成全量计算与完整panel本地评分，含v0024+v0027真实组合。16测试、五模型独立重放/拟合参数核对、contract、ZIP校验PASS。v0030本地最有利但未提交/未评分；best v0024=51.92保持。reports/t1_round2_20260928/REPORT.md；lease释放。E10.5/E12.5真值NOT_RUN，blocks_submission:false。
+
+### 2026-09-29 状态同步
+
+上面几段是当时的交接，不是现在的选择。2026-09-28 三批分数已经回填：T1 v0029=52.5 晋级，v0030=52.49 不并列晋级；T3 修复 v0037/v0040/v0041 已评分且不晋级，best 仍是 v0048=47.93；T2 v0014/v0015=61.52，不晋级。门户确认合计仍是 156.06。158.72 只是现役相加，不得写成门户总分。当前待分只剩 T3 v0049–v0053。给人读的教训见根目录 REVIEW.md。
+
+### 2026-09-29 T2 三新两优化 × 三 board 执行 lease
+
+用户授权 T2 三个子任务各 5 候选（3 新路线 + 2 既有优化/合并，共 15 件）。coordinator 独占 scripts/t2_round2、configs/t2_round2、tests/t2_round2、artifacts/t2_round2、reports/t2_round2_20260929；共享候选登记串行。设计已跑前冻结：reports/T2_ROUND2_DESIGN_20260929.md + configs/t2_round2/design_20260929.json；版本 embryo v0011–v0015、heart v0016–v0020、extrap v0017–v0021。不开均值场+空间对比 lane（L-008 未解）；embryo 本地指标只记录不否决（M0 附录 B）。未提交/未评分，best 不变；blocks_submission: false。
+
+### 2026-09-29 T2 ROUND2 完成
+
+15 候选全部全量建成：新路线=分位数桥（T1 机制移植）、三阶段趋势/曲率（E6.75/E8.25/E9.5 首次入相应 board）、组成粒度（子状态/cm 联合/组成趋势外推）、谱系映射 delta（17 零位移类型）；优化=×t 收缩、×G1 尺度回锁、+文库重标定、趋势×收缩、v0011×组成趋势。15 测试、contract 10 PASS+5 FAIL_BY_DESIGN_ACCEPTED（R2 同四类）、工程门 15/15、字节重放 15/15、v0011 组件逐值复现、质量计划逐名复现、ZIP SHA/CRC PASS。heart 无 5% nmmd 旗帜（h_n1 本地最强）；x_o2 唯一过历史 R1 局部双门（已声明方向不可靠）。交付 deliveries/t2r2__t2__upload__20260929.zip；报告 reports/t2_round2_20260929/REPORT.md；决策 D-20260929-T2ROUND2-001；INDEX/LANE_VERDICTS/TRACKING 已登记。15 件未提交/未评分，三 board best 不变（62.29/62.04/50.53）；lease 释放，blocks_submission: false。
 
 ### 2026-09-29 T3 三候选执行lease
 

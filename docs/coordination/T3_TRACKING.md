@@ -1,12 +1,19 @@
 # T3 任务追踪：gene perturbation
 
-更新时间：2026-09-21
+更新时间：2026-09-29
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件明确区分已评分路线和待验证路线。
 
-## 当前状态（2026-09-21）
+## 当前状态（2026-09-29）
 
-- R6/R3/R4修复运行完成，6候选v0034/v0035/v0036/v0037/v0040/v0041均contract PASS、未提交/未评分；v0038/v0039已撤回。R6图模型未胜过平均响应等强对照；R3四块与R4二十组WT评价通过。selection保持，等待新候选回分。
+- selection 是 v0048，服务器 47.93。
+- 修复 v0037、v0040、v0041 已回分，分别是 46.98、47.08、47.09，都不晋级。修复队列关闭。
+- v0049–v0053 未提交、未评分。优先仲裁 v0049。科学结论仍不确定，`blocks_submission: false`。
+- 决策 `D-20260928-T3REPAIR2-001`。给人读的教训见根目录 `REVIEW.md`。
+
+## 历史状态（2026-09-21）
+
+- 当时六个修复候选还没回分。后来都已评分，不作为当前待办。
 - 新上传包 `deliveries/r634fix__t3__upload__20260921.zip`；父版本均v0009。R1叠加R6为NO_OP；R5扩链未执行。证据 `reports/t3_repairs_20260921/REPORT.md`。
 
 ## 历史状态（2026-09-04）
@@ -217,6 +224,8 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 
 - 2026-09-28 ROUND2收口：三新n1stack=v0049（高分v0048+v0046叠加）、n2orth=v0050、n3occup=v0051；两优化o1logit=v0052、o2geneshrink=v0053。全部全量执行/contract/独立模型重放PASS，13测试。KIR经验落实为精确组件复现、六臂组合诊断、强均值/置乱对照及固定模型出现率/强度消融；局部多数弱或负，不调参救门。未提交/未评分，best v0048保持；reports/t3_round2_20260928/REPORT.md；D-20260928-T3R2-001。
 
+- 2026-09-28｜修复剩余三 lane 回分｜v0037 46.98（+0.03 vs 父 46.95 TIE，与同胞 v0036 五子项完全相同）、v0040 47.08（+0.13）、v0041 47.09（+0.14），三条距现 best 47.93 均 -0.8 以上，不晋级；selection v0048 不变。修复队列分数关闭（v0034/v0035/v0036/v0037/v0040/v0041 全已评分，v0038/v0039 已撤回）。D-20260928-T3REPAIR2-001。
+
 - 2026-09-29 T3-THREE r1agree：高分响应方向一致门控叠加；参数执行前冻结，计划完整7449×500推断和四块WT诊断；未提交/未评分。reports/T3_THREE_DESIGN_20260929.md。
 
 - 2026-09-29 T3-THREE r2damp：hurdle概率分量减弱/阳性强度保留；参数执行前冻结，计划完整7449×500推断和四块WT诊断；未提交/未评分。reports/T3_THREE_DESIGN_20260929.md。
@@ -232,15 +241,83 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-09-29 T3-THREE收口：r1agree=v0054、r2damp=v0055、r3diffuse=v0056；三个完整7449×500 h5ad，四块WT拟合/条件诊断、12测试、独立重放/contract/包校验通过。三个未提交/未评分，best v0048=47.93保持；旧v0049–v0053仍待分。reports/t3_three_20260929/REPORT.md；D-20260929-T3THREE-001。
 
 - 2026-09-29 T3-FIVE-SELECT r1active 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+
 - 2026-09-29 T3-FIVE-SELECT r2gene 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+
 - 2026-09-29 T3-FIVE-SELECT r3bag 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+
 - 2026-09-29 T3-FIVE-SELECT r4spline 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+
 - 2026-09-29 T3-FIVE-SELECT r5local 新路线冻结：配置 configs/t3_five_select/design_20260929.json；训练块0/1、开发块2、锁定后审计块3，完整推断7449×500，仅三条入包。未提交/未评分。
+
 - 2026-09-29 T3-FIVE-SELECT r2gene 新候选 v0057，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r2gene/registered/RESULT.json。
+
 - 2026-09-29 T3-FIVE-SELECT r4spline 新候选 v0058，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r4spline/registered/RESULT.json。
+
 - 2026-09-29 T3-FIVE-SELECT r3bag 新候选 v0059，parent=v0048，完整7449×500，contract PASS，未提交/未评分。证据 artifacts/t3_five_select/T3-FIVE-SELECT-20260929-v1/r3bag/registered/RESULT.json。
+
 - 2026-09-29 T3-FIVE-SELECT r1active 收口：完整推断/contract/独立进程重放PASS；同族开发排名未选，PARKED研究输出。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+
 - 2026-09-29 T3-FIVE-SELECT r2gene 收口：完整推断/contract/独立进程重放PASS；v0057入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+
 - 2026-09-29 T3-FIVE-SELECT r3bag 收口：完整推断/contract/独立进程重放PASS；v0059入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+
 - 2026-09-29 T3-FIVE-SELECT r4spline 收口：完整推断/contract/独立进程重放PASS；v0058入三件包，未提交/未评分。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+
 - 2026-09-29 T3-FIVE-SELECT r5local 收口：完整推断/contract/独立进程重放PASS；同族开发排名未选，PARKED研究输出。证据 reports/t3_five_select_20260929/REPORT.md；D-20260929-T3FIVESELECT-001。
+
+- 2026-09-29｜T3-ROUND2 五 lane 回分｜v0049 47.86（−0.07 vs v0048，平局）不晋级，只作备份；v0053/v0052/v0050/v0051 依次更低，不晋级。selection v0048=47.93 不变。高分叠加没有超过 v0048 自己。D-20260929-T3R2SCORE-001。
+
+- 2026-09-29｜T3最后六 lane 回分｜v0058 47.95（+0.02）平局备份；v0056/v0059 精确打平 47.93；v0054/v0057/v0055 不晋级。selection v0048 不变。T3 分数队列关闭，无待分候选。D-20260929-T3SCORE-002。
+- 2026-09-30｜路线研究与虚拟敲除再审计｜只读核对53个已评分产物、15个代表表达矩阵及真实工具转换链；发现旧IQR幅度压零、状态响应平均抵消、RNA零检测无响应与缺少显式状态质量预测。在线检索后提出8个技术方向，建议优先状态化CellOracle、状态质量、活动因子、功能线性/Scouter及原版GEARS六项比较；均PROPOSED/NOT_RUN，无新候选、无上传、无新评分，selection v0048保持。报告 `reports/t3_research_audit_20260930/REPORT.md`；科学限制 `blocks_submission: false`。
+
+- 2026-09-30｜T3-PRIORITY-SIX-20260930｜父：v0009 WT 载体，现役 v0048；来源报告 t3_research_audit_20260930/REPORT.md｜L-010 已登记完整计划；用户授权开始原生 CellOracle、状态质量、独立活动、功能线性、Scouter、GEARS 六项，均执行中/未评分/未提交；证据 reports/t3_priority_six_20260930/；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX decoder｜新增报告要求的来源侧检测率校准：按固定整扰动拆分拟合，检测率与阳性值分别处理，各状态预测 count 均值保留；保留原始 count-ratio 输出为对照，六项共同使用同一 decoder。无目标 KO 参与；尚未评分。配置/证据 artifacts/t3_priority_six_20260930/DETECTION_CALIBRATION.json。
+
+- 2026-09-30｜T3-PRIORITY-SIX r2｜完整 native+状态质量推断的预测比例完全等于 WT（状态跨越 0/68910），判 NULL_STATE_MASS_RESPONSE，不登记质量单独/组合两件；修正无效应时随机采样制造假变化的问题，改整数配额采样且零变化精确保持原行。早期未登记随机研究输出隔离保留，不上传。科学 blocks_submission:false，其他六个独立表达候选继续。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0060 r1_celloracle｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0060_six_r1_celloracle/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0061 r3_activity｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0061_six_r3_activity/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0062 r4_functional｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0062_six_r4_functional/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0063 r4_bilinear｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0063_six_r4_bilinear/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0064 r5_scouter｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0064_six_r5_scouter/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-09-30｜T3-PRIORITY-SIX｜v0065 r6_gears｜父 v0009（质量路线另绑定可追溯重采样载体）｜完整目标 7449×500，contract PASS；未提交/未评分；submissions/candidates/T3_gata4/v0065_six_r6_gears/submission.h5ad；D-20260930-T3SIX-001。
+
+- 2026-10-01｜T3-PRIORITY-SIX交付｜六项核心计算及完整7449×500目标完成；v0060–v0065统一包，5测试/六件contract/包hash+CRC通过；未提交/未评分；状态质量NULL不登记，源侧功能基线小增量、Scouter/GEARS未胜平均扰动；父v0009，现役v0048不变；reports/t3_priority_six_20260930/REPORT.md；D-20261001-T3SIX-002。
+
+- 2026-10-01｜组成通道诊断（T3-COMP-DIAG-20261001-v1）｜纯数据诊断，无候选/评分/外部数据。真实 KO 组成重加权的方向偏相关 +0.325（通道真实）；但"目标高表达簇被削"朴素规则在 Mab21l2 上不成立（Spearman +0.208/Pearson −0.078）；Gata4 在 E8.75 集中于心脏谱系（IFT-CM 88% 检出）。证据 artifacts/t3_comp_diag/T3-COMP-DIAG-20261001-v1/REPORT.md。现役 v0048=47.93 不变。
+
+- 2026-10-01｜T3六项回分收口｜v0060–v0065及30子项已登记，全部REJECT；现役v0048不变，T3待分0；新CellOracle与旧adapter平局，强改动主要损伤分布；共同decoder在log评分空间改变响应，低来源基线的ratio放大已量化；reports/t3_score_review_20261001/REPORT.md；D-20261001-T3SIXSCORE-001。
+
+- 2026-10-01｜T3架构建议A｜从逐基因平均响应转向WT锚定、功能条件化的联合分布残差OT flow；文献启发的设计，NOT_RUN、未生成候选/未提交/未评分，父版本不适用；reports/t3_two_architectures_20261001/REPORT.md；L-012；D-20261001-T3ARCH-001。
+- 2026-10-01｜T3架构建议B｜多时间点软命运转移与相对群体份额联合建模，区别于旧硬状态迁移及逐基因occupancy；Gata4干预入口待落实；NOT_RUN、未生成候选/未提交/未评分，父版本不适用；同报告；L-012；D-20261001-T3ARCH-001。
+
+- 2026-10-01｜T3-ARCH-TWO启动｜用户授权逐次完成：A条件残差flow先行，B软命运/相对份额后行；两项各一个候选，不自动上传；CellFlow/WOT启发的自定义实现，非原论文复现；来源/预算/结构冻结在artifacts/t3_arch_two_20261001/CONFIG.json；D-20261001-T3ARCH-002。
+
+- 2026-10-01｜B发射抽样修复｜v0067未上传初版撤回，模型只需替换223行，整簇有放回抽样却丢掉1386个原有WT细胞；修复为同一预测配额下最大保留原有行，不重训、不改预测份额；旧artifact保留，新候选另登记；D-20261001-T3ARCH-003。
+
+- 2026-10-01｜两架构交付｜A→B完整执行与验收通过，最终v0066/a_flow、v0068/b_fate统一包arch2__t3__upload__20261001.zip；两件完整7449×500、未提交/未评分。A来源未胜强基线，B部分覆盖WT时间留出未整体胜线性插值；Gata4干预是假设。现役不变；reports/t3_arch_two_execution_20261001/REPORT.md；D-20261001-T3ARCH-004。
+
+- 2026-10-01｜两架构回分收口｜v0066/v0068总分与10子项登记，均REJECT，配置关闭，待分0；现役v0048不变。A方向显示值有亮点但DE/共表达损失主导，B当前组成预测无收益；v0067仍未提交撤回；reports/t3_arch_two_score_review_20261001/REPORT.md；D-20261001-T3ARCHSCORE-001。
+
+- 2026-10-01｜Scaling 程序启动（用户授权逐个完成）｜T3 侧两条按序排在 D5c 之后：方向四全转录组中介（v7 输入在盘，先修索引引用；CPU 约 8h）→方向六多扰动监督（metadata-first 数据任务先行，BLOCKED_DATA_NOT_READY 则停）。`D-20261001-SCALE-001`。
+
+- 2026-10-01｜T3-ARCH-TWO｜v0066 a_residual_flow｜父v0009，完整7449×500，contract PASS；未提交/未评分；新架构完整实跑、科学限制见执行报告；submissions/candidates/T3_gata4/v0066_arch_a_residual_flow/submission.h5ad；D-20261001-T3ARCH-002。
+
+- 2026-10-01｜方向四输入核验＋设计冻结完成｜v7 三文件实核（27669×68910，2.8 亿非零）与提案一致；bioinf 索引无 v5 引用，无需修复；parent v0009。冻结见 `artifacts/t3_direction4/T3-DIR4-20261001-v1/DESIGN.md`（配对比较/预留验证/四条停止条件跑前写死）。下一步：实现映射脚本。
+
+- 2026-10-01｜T3-ARCH-TWO｜v0067 b_fate_mass｜父v0009，完整7449×500，contract PASS；未提交/未评分；新架构完整实跑、科学限制见执行报告；submissions/candidates/T3_gata4/v0067_arch_b_fate_mass/submission.h5ad；D-20261001-T3ARCH-002。
+
+- 2026-10-01｜T3-ARCH-TWO｜v0068 b_fate_mass_emit2｜父v0009，完整7449×500，contract PASS；未提交/未评分；新架构完整实跑、科学限制见执行报告；submissions/candidates/T3_gata4/v0068_arch_b_fate_mass_emit2/submission.h5ad；D-20261001-T3ARCH-002。
+
+- 2026-10-02｜方向四脚本建成＋冒烟过＋全量开跑｜新文件 `scripts/t3_direction4/dir4_map_response.py`（相关kNN映射50验证基因硬隔离/配对AB臂/log1p加性响应/Gata4列锁定；门G1留出MAE<G2同粗谱系≥80%/G3中介可识别/增量非零，任一不过即STOP）。CPU冒烟机制过（小样本G1/G2不过，仅作全量参考，不改门）。全量后台开跑（8h cap），回包仲裁。候选号预留v0069（T3最大v0068）。
+
+- 2026-10-02｜方向四双挂关闭｜全量（68910 RNA，wall 22 秒）G1 留出 MAE 0.552 vs 基线 0.518（33 类仅 7 类胜，最差 NCC/Forebrain/Hindgut；16 样本组 9 组胜）；G2 同谱系权重 0.612 vs 门 0.80（426 Unknown 细胞已排除）。按冻结 STOP：跨模态 kNN 映射精度过不了"同类型均值"这一关——RNA 邻居平均在 MERFISH 尺度上不如本类型均值，中介传播无从谈起。未建 v0069，未进 INDEX。`D-20261002-T3DIR4-001`。
+
+- 2026-10-02｜方向六数据任务元数据屏蔽通过｜GSE261783 26 扰动基因逐一比对黑名单 31 项（GATA/WNT/cardiac/SMAD），显式命中 0/26，组合无；数量足够 gene-held-out。功能性 phenocopy 人工复核仍 open（Smarca4/Rest/Yy1 列复核提示，不扩黑名单）；许可仍 QUARANTINE（model_input=false），放行待合规决议。训练继续 BLOCKED_DATA_NOT_READY。证据 `reports/t3_dir6_datascreen_20261002/REPORT.md`。

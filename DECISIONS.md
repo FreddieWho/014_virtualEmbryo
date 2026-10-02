@@ -89,14 +89,96 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 
 - D-20260927-T3SCORE-001：T3 八分回填，v0048 47.93（+0.98）晋级新 best，Total 157.04；FIVE＋R6 转 SHIPPED，R3 部分回填。见 [协调决策](docs/coordination/DECISIONS.md)。
 
+- D-20260927-T2VALIDATE-001：T2 验证 V1（只读，31 条已评分候选）——**本地判据逐板方向不同**：`neighborhood_mmd` 在 heart_interp（−0.559）与 extrap（−0.627）有预测力，但在 **embryo 强反向（+0.833）**，M0 的 5% 规则把板最佳 v0010（62.29）判成 DEGRADE；另发现 embryo 板「表达字节相同、仅坐标 ×1.305 膨胀、服务器 +3.4 分而本地七项指标全零」的输入对，证明**服务器几何子分对绝对尺度敏感而本地镜像看不见**；`d2_shape` 在两个插值板均反向。原设计的「方向一致率」统计量无效已作废。M0 需追加决策（未回改）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T1FIVE-001：T1三新+两优化全量完成，v0024–v0028待服务器仲裁；五contract/模型重放与9测试通过，best v0023不变。见 [报告](reports/t1_five_20260927/REPORT.md) 与 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2M0APPXB-001：T2 M0 附录 B（追加，未回改 §3/§4）——**逐板校准主指标**：`neighborhood_mmd`+5% 在 heart_interp/extrap 维持，**embryo 停用 5% 三分类**（Spearman +0.833 反向，M0 规则把板最佳 v0010 判成 DEGRADE），该板改服务器仲裁优先、本地只记录不否决；`mmd_u` 会签在 embryo 零信号且族内成对反向；**`d2_shape` 不得单独作失败签名**（两插值板均反向）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2M1VERDICT-001：T2 九路线 M1 逐条裁决（追加，不回改 §1/§2）——**执行** `E-N1 SBL`（前提未证伪、锚点须标自拟）、`E-I1 TCI`、`H-N2 A2C`；**条件执行** `X-N2`（须重定义占据度）；**待澄清** `X-I1`；**保留为验证实验但本轮不执行** `E-N2`+`H-I1`（其原始目的已被 V1 在 31 条候选上完成，且两者被预测量均已证伪）；**否决** `H-N1`、`X-N1`。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2EN1-002：T2 `E-N1 SBL` **执行失败、路线立即关闭**（预声明否定判据触发）——两臂 `neighborhood_mmd` 0.396/0.325 对基线 0.031，差 10–13 倍。根因：**全局水平与场项之间无幅度控制**，回归在 z-score 化表达上做导致场项带标准差量级动态范围，把总质量抬高 53%+，分布整体推高。两项自我订正（`log1p(expm1)` 恒等而非 softplus，我的首次诊断因此有误；设计 τ=0.5 与目标 stage E7.5 算术不一致，正确为 0.6）均非结果导向调参。复活须作新 lane 预声明幅度控制。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2EXTRAPAGG-001：T2 heart_extrap 的 0.11 聚合差异**定案**——服务器 Total 按**已登记的 per-board 选集**聚合，不是每板历史最高之和。决定性证据是第二个 Total **157.04**（09-27，距 v0011 评分已 11 天）T2 仍为 58.29 ⇒ extrap=50.53，据此排除舍入／最新提交／自动取最高三种解释。`registry` 中「selection updates to v0011」不成立（已订正、不追溯改写）；**`INDEX.tsv` 无需改**，此前判为矛盾是误读。剩余两项待用户：换选集、TIE 边界口径裁决。（初稿所称「v0011 子项未回填」经实测**不成立、已撤回**：该板 v0011 有完整 8 行；真正缺子项的是 32 条 2026-09-04 规则固化**之前**的历史候选。）见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2DESIGN-001：T2 `E-I1 TCI` 与 `H-N2 A2C` 设计冻结落盘（训练前）。**训练前 bracket 核对抓出一处会导致 target 泄漏的设计错误**——检索简报写「E8.5/E8.75 中点」，而 `BOARD_REGISTRY.yaml`、`t2_s3_shape_field.py`、`t2_j1_pairing.py` 三处一致显示 bracket 为 **[E8.25, E8.75]**、目标为 E8.5，原设计会拿目标 stage 当源阶段；已修正并新增泄漏断言。`E-I1` 所在 embryo 板 5% 规则已停用（只记录不否决），`H-N2` 所在 heart_interp 维持 5%（三档判定）。**待用户裁决**：`PLAN.md` 写「heart 插值 E9.0」与三处权威来源的 E8.5 冲突。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T1FIVESCORE-001：T1 五分回填，v0024 51.92（+1.10）晋级新 best，Total 158.14；v0026/v0028 低于父版本。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2CITE-002：T2 第二批承重引用核验（原文级，arXiv + Europe PMC `resultType=core`）——`E-I1` 的 **CPD 核心锚点成立**（概率软对应 + EM + 非刚性位移场均在原文），但「正反一致性自诊断」子主张**不成立**、已改标为本项目自定；`H-N2` 的 Aviñó-Esteban 2025 *Development* 152(4):dev204313 **核心思想成立但锚点降级**——该文是 **limb/2D/ISH**，与本路线 heart/3D/MERFISH **三项均不匹配**，不得声称其支撑 3D 心脏构造。累计 5 条已核验（3 撑不住 / 1 部分不成立 / 1 核心成立）。两条路线均不阻塞执行。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T3R2-001：T3三新+两优化完整交付，含高分v0048+v0046叠加，v0049–v0053未评分；13测试及五模型独立重放PASS，科学不确定，best不变。见 [报告](reports/t3_round2_20260928/REPORT.md)、[协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2ROUTES-EXEC-001：T2 `E-I1 TCI` 与 `H-N2 A2C` 均已执行并**失败，裁决不提交、本轮不产生上传包**（几何/行序/组成重采样逐字节复现现役版本,恶化全在表达项；相对现役分别劣化 +78~97% 与 +2379~2568%,四个分布侧指标同向变差）。**三次尝试收敛到同一失败模式**：给已被服务器验证的低空间方差均值场叠加"学出来的空间对比度"会摧毁分布,且劣化幅度与对比度幅度同向；`SBL` 事前把定标改成层内 sd **也没用**——sd=1 这个定标本身是病灶。**T2 九路线的共同前提已被三重独立证据否定**,新增 LEADS **L-008** 作为前置问题（对比度幅度须由数据决定）,未执行。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260927-T2L008-001：T2 **L-008 前置探针**——幅度是唯一被扫的变量。损伤随幅度单调递增，**两板可接受带均只到 `a ≤ 0.05`**（首个出带 `a = 0.10`），而**真值自身空间对比度幅度为 1.20 / 1.55，比上限大 24–31 倍** ⇒ **「均值场 + 加性空间对比度」机制族关闭**，L-008 改判已放弃。**定量交叉验证**：曲线在 `a = 1.0` 的 heart 劣化 +79.9%，与 `H-N2 A2C`（`ALPHA = 1.0`）实测 +77.8~96.9% 几乎重合 ⇒ 前三次失败**幅度驱动而非内容驱动**。T2 搜索空间收窄到**唯一方向：作用在边际分布上的机制**（与 +4.79 组成重采样、+0.11 收缩两个服务器正例一致）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
 - D-20260928-T1R2-001：T1三新两优化完整执行，v0029–v0033未提交/未评分；含v0024+v0027实际组合，优先v0030本地信号，best不变。详见 docs/coordination/DECISIONS.md 与 reports/t1_round2_20260928/REPORT.md。
+
+- D-20260927-T2MARGINAL-001：T2 **边际分布响应面探针**（只读）——现役版本在 `composition-intensity` 与 `shrinkage` **两条阶梯上均为局部最优**：从现役单调向外，服务器已确认有效的子分全部变差（heart `de_score` −32%、`de_direction` −17%、`neighborhood_mmd` +55%、`mmd_u` +55%），而唯一变好的 `occupancy_dice`/`d2_shape` 恰是**已证实与服务器反向**的那两个。**`B4-T2-R2` 的 +4.79 是「回到现役」而非「继续往前」，该方向已走完一次。** 附带机制事实：**收缩对 DE 类指标完全无感**（`de_score`/`de_direction` 恒定），因收缩只改型内幅度、每型均值不变 ⇒ 想不动 DE 而改分布必须改**每型均值**。另：`de_score` 在 embryo pseudo-target 上恒 `UNDEF`，该板本地不可用作筛选判据。LEADS 新增 **L-009** 记录唯一剩余入口，**不授权任何新 lane**。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T3REPAIR2-001：T3修复剩余三 lane 回分，v0037 46.98（TIE 父版本）、v0040 47.08、v0041 47.09（均低于现 best 47.93，不晋级）；修复队列分数关闭。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T1R2SCORE-001：T1第二轮五 lane 回分，v0029 52.5（+0.58）晋级新 best，Total 158.72；v0030 52.49 距新 best -0.01 不并列晋级；v0031/v0032/v0033 不晋级。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T2LOWAMP-001：T2 **低幅度可提交包已产出**（`deliveries/t2hn2lo__t2__upload__20260928.zip`，heart_interp v0014/v0015）——采纳用户「小幅劣化可试提交、可能存在反转」的判断：该判断有先例支持（`G1-T2-R2` 本地 NOT promoted 而服务器 +0.11 成板最佳；`neighborhood_mmd` 在 embryo 与服务器强反向 +0.833），但**幅度决定其是否可迁移**：`ALPHA=1.0` 的候选劣化 +78~97% 不属「小幅」，而 **L-008 预声明的独立幅度探针**给出 `a=0.05` 时损伤仅 +3.2~3.7%，故取 `ALPHA=0.05`（**幅度由独立测量决定，非从本路线结果倒推**）。结果：nmmd **+1.08% / +0.99%**、mmd_u **优于现役**、几何与行序 **byte-identity**、contract 全 PASS。**如实标注：这是探针候选不是提分候选**，预期持平或略降。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260928-T2LOWAMP-002：T2 低幅度两条**均已评分 61.52（现役 62.04，−0.52）→ 不晋级，selection 与 Total 不变**。子项分解极干净：`d2_shape`/`occupancy_dice`/`scale_log_ratio` **三项与现役逐位相同**（byte-identity 正面对照），损失全在表达侧且 **`variogram` −3.0 为最大单项**、`neighborhood_mmd` −1.3/−1.1。**两条结论**：① 用户「小幅劣化或可反转」的假设在此板此族**被实证否定**（本地 +1.0% → 服务器 −0.52，方向一致约 1:1）；② **L1/L2 完全并列、8 项中 6 项相同 ⇒ 跨阶段系数共享约束经验为 null**，H-N2 设第二臂的理由被证伪。`H-N2 A2C` 核心假设**由服务器证伪**（不再只是本地）。见 [协调决策](docs/coordination/DECISIONS.md)。
 
 - D-20260929-T3THREE-001：T3三路线v0054–v0056实际执行并独立验收，交付3个短名h5ad与单ZIP；未提交/未评分，best不变。详见docs/coordination/DECISIONS.md及reports/t3_three_20260929/REPORT.md。
 
 - D-20260929-T1THREE-001：T1三路线v0034–v0036完整执行并通过独立验收，单ZIP含三个h5ad；优先v0035本地信号，未提交/未评分，best保持。详见docs/coordination/DECISIONS.md及reports/t1_three_20260929/REPORT.md。
 
+- D-20260929-T2ROUND2-001：T2三新两优化×三board共15候选（v0011–v0015/v0016–v0020/v0017–v0021）实际执行并通过全部本地检查，单ZIP含15个短名h5ad；未提交/未评分，三board best不变。详见docs/coordination/DECISIONS.md及reports/t2_round2_20260929/REPORT.md。
+
 - D-20260929-T3FIVESELECT-001：T3五路线全量执行，事前开发规则选v0057–v0059三个h5ad入单包；另两条保留研究输出。6测试/14项独立进程验收通过，未提交/未评分。详见docs/coordination/DECISIONS.md及reports/t3_five_select_20260929/REPORT.md。
+
+- D-20260929-T3R2SCORE-001：T3第二轮五 lane 回分，v0049 47.86（−0.07）平局不晋级，其余不晋级；selection v0048 不变。见 [协调决策](docs/coordination/DECISIONS.md)。
+
 - D-20260929-T1THREESCORE-001：T1三路线回分，v0035 53.43（+0.93）晋级新 best；v0036 平局备份；v0034 不晋级。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260929-T2R2SCORE-001：T2第二轮回分，胚胎 v0014 62.89（+0.60）与心脏插值 v0019 62.36（+0.32）双双晋级；外推不动；另记一次误投胚胎榜拒收。推导合计 159.95（待门户确认）。见 [协调决策](docs/coordination/DECISIONS.md)。
+
+- D-20260929-T3SCORE-002：T3最后六 lane 回分，v0058 47.95（+0.02）平局不晋级；v0056/v0059 精确打平；其余不晋级。selection v0048 不变，T3 队列关闭。见 [协调决策](docs/coordination/DECISIONS.md)。
+
 - D-20260930-T1SEVEN-001：T1按3新/2失败优化/2成功优化完成七路线全量计算，七次完整panel评分与独立验收通过，候选v0037、v0038、v0039、v0040、v0042、v0041、v0043未提交/未评分；best保持。详见docs/coordination/DECISIONS.md及reports/t1_seven_20260930/REPORT.md。
 
 - D-20260930-T1SCORE-001：T1十一条回分；v0038/v0043同为53.55（+0.12），按本批列表顺序v0038晋级、v0043备份；平均数平移四臂均失败，T1待分清零。详见docs/coordination/DECISIONS.md及reports/t1_score_review_20260930/REPORT.md。
+
+- D-20260930-T2XN1SCORE-001：T2第二轮收尾，x_n1_lineage v0017回分48.17（-2.36），REJECT；外推选择不变，15/15回分完毕队列关闭。详见docs/coordination/DECISIONS.md及reports/SERVER_SCORE_REGISTRY.md#t2-xn1-score-return-20260930。
+
+- D-20260930-T2R3SCORE-001：B4-T2-R3三条迟到回分；v0009 50.51（-0.02）判TIE但不及board-best，不晋级；v0008/v0010 REJECT；外推选择不变，closed_unscored结清。详见docs/coordination/DECISIONS.md及reports/SERVER_SCORE_REGISTRY.md#t2-r3-score-return-20260930。
+
+- D-20260930-T3SIX-001：L-010 登记 T3 审计报告完整八方向计划；按用户授权执行六项优先路线，原工具/全推断/整扰动留出，不自动上传，旧评分产物只读。详见 docs/coordination/DECISIONS.md。
+
+- D-20261001-T3SIX-002：T3六项核心实跑完成，v0060–v0065合为一包、contract PASS、未提交/未评分；状态质量零效应不登记；源侧神经网络未胜强基线，保留变体与跨域限制。详见docs/coordination/DECISIONS.md及reports/t3_priority_six_20260930/REPORT.md。
+
+- D-20261001-T2GOAL-001：T2三board×两轮建成（R1新路线v0016/v0021/v0022 + R2旧优化v0017/v0022/v0023），6/6重放一致，合打一包t2goal__t2__upload__20261001.zip待上传回分。详见docs/coordination/DECISIONS.md及reports/t2_goal_20261001/REPORT.md。
+
+- D-20261001-T3SIXSCORE-001：T3 v0060–v0065六件回分全部REJECT，现役不变/待分清零；复盘定位count/log评分空间与近零来源ratio风险，保留具体实现边界，不改已评分文件。详见docs/coordination/DECISIONS.md及reports/t3_score_review_20261001/REPORT.md。
+
+- D-20261001-T2GOALSCORE-001：T2-GOAL六件回分，五REJECT + 外推x_r1 50.74记TIE最高数备份不晋级；三榜选择不变，待分清零，推导合计160.07不变。详见docs/coordination/DECISIONS.md及reports/SERVER_SCORE_REGISTRY.md#t2-goal-score-return-20261001。
+
+- D-20261001-T1D2R3-001：D2 调参 R3 单轮启动（用户授权）：dz=20 冻结，max_checks 40→120 单参单轮，门不变（de>0.8868/dir>0.8895），过则建 v0048 不过则关 D2。详见 docs/coordination/DECISIONS.md。
+
+- D-20261001-T1D2R3-002：D2-R3 1210 步足额仍挂门（de/dir 与 R2 逐位相同），按预声明关闭 D2，patience 轴判死路；v0048 不进 INDEX。详见 docs/coordination/DECISIONS.md。
+
+- D-20261001-T3ARCH-001：T3剩余两次额度建议分给WT锚定条件残差flow与发育分支/相对群体份额模型；研究设计完成，两条NOT_RUN、未生成候选/未提交/未评分；L-012及reports/t3_two_architectures_20261001/REPORT.md。
+
+- D-20261001-T3ARCH-002：用户授权顺序完整执行两架构，A先行/B后行，每项一件、统一包、不自动上传；配置artifacts/t3_arch_two_20261001/CONFIG.json。
+
+- D-20261001-T3ARCH-003：v0067未上传初版撤回；同一B模型/状态配额下修复整簇重抽噪声，最大保留WT原有行，新候选另登记；两次预算用于A和修正版B。
+
+- D-20261001-T3ARCH-004：两架构顺序实跑/完整目标/验收完成，最终v0066、v0068统一包，未提交/未评分；来源/WT基线未胜，保留科学负结果，现役不变；见reports/t3_arch_two_execution_20261001/REPORT.md。
+
+- D-20261001-T3ARCHSCORE-001：v0066/v0068回分与10子项入库，两件REJECT、配置关闭、T3待分清零；A方向显示值最高但整体退步，B组成未获收益，现役不变；reports/t3_arch_two_score_review_20261001/REPORT.md。
+
+- D-20261001-SCALE-001：Scaling 四条路线程序建立（用户授权逐个完成）：①T1-D5c ②T3 方向四 ③T3 方向六 ④T1 外部预训练，一次一条，跑前冻结、触发停止即停。详见 docs/coordination/DECISIONS.md。
+
+- D-20261001-T1D5C-001：D5c 200 epochs 足额仍挂门（14.7×/7.9×），按冻结关闭，扩散线三振出局，不提 D5d。详见 docs/coordination/DECISIONS.md。
+
+- D-20261002-ARROUTEC-001：T2 外推板 Route C 自动研究轮打包 5 候选（v0024-v0028）待服务器仲裁；本地综合分冠军 3.913（时间归一化分位数边缘外推 × 组成重采样），并把 variogram 方向纠正与 Route B keep 撤回一并记录。详见 docs/coordination/DECISIONS.md。
+
+- D-20261002-T3DIR4-001：T3 方向四全量双挂（留出 0.552 vs 0.518、谱系 0.612 vs 0.80），按冻结关闭，跨模态映射轴判死路。详见 docs/coordination/DECISIONS.md。
+
+- D-20261002-ARROUTCESCORE-001：T2 外推 Route C 五件回分全部 REJECT（最好 50.17 vs 基线 50.53），外推选择与合计不变；本地综合分被证伪（17 条 ρ=0.122），但 variogram 通道确证可迁移（49.5–50.1 为该榜最好），服务器侧换种子方差仅 0.01。详见 docs/coordination/DECISIONS.md。

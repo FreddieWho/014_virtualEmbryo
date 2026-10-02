@@ -1,12 +1,19 @@
 # T1 任务追踪：single-cell temporal
 
-更新时间：2026-09-21
+更新时间：2026-09-29
 
 分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。本文件只做简短解释和路线选择。
 
-## 当前状态（2026-09-21）
+## 当前状态（2026-09-29）
 
-- selection保持v0004 strict pseudobulk shift；v0019最高观测值按原TIE规则未晋级。精确分数以SERVER_SCORE_REGISTRY为准。
+- selection 是 v0029，服务器 52.5（比 v0024 的 51.92 高 0.58）。v0030 是 52.49，不并列晋级。v0031、v0032、v0033 不晋级。
+- 没有待回分的 T1 候选。不自动开新路线。
+- 158.72 是现役相加的推导值，不是门户已确认的合计。门户确认过的合计仍是 2026-09-26 的 156.06。
+- 决策 `D-20260928-T1R2SCORE-001`。给人读的教训见根目录 `REVIEW.md`。
+
+## 历史状态（2026-09-21）
+
+- 当时 selection 仍是 v0004。后来已被 v0023、v0024、v0029 依次取代。下面保留原文，不当作当前选择。
 - D1/D3/D4/D6及D5b已完成并未晋级；D2稳定版未过门，原调参分支保留为待决定，未自动启动。D5b最终RESULT明确失败、未生成v0026，订正本页旧尾部“训练完成、本地建门中”的滞后摘要。
 - 新六路线方案已准备：`reports/T1_NEXT_ROUTES_20260921.md`。建议R2残差decoder→R1分布形状→R5依赖结构→R3稳定动力学→R4模块运输→R6早期时间数据；全部PROPOSED / NOT_RUN。
 - 官方E7.75未发布；官方RNA仅有celltype元数据，不能宣称独立胚胎留出。无新候选，无训练，无上传。
@@ -214,6 +221,8 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 
 - 2026-09-28 T1-ROUND2 收口：v0029–v0033五路线全量执行、五次完整panel官方本地评分，16测试和五模型独立重放/拟合参数核查PASS，单包校验PASS。v0030本地四主项改善/DE持平；v0029取舍；三条其余路线负结果。best仍v0024=51.92，新五项未提交/未评分。reports/t1_round2_20260928/REPORT.md；D-20260928-T1R2-001。
 
+- 2026-09-28｜T1-ROUND2 五 lane 回分｜v0029 52.5（+0.58）PROMOTED 新 T1 best；v0030 52.49（距新 best -0.01，不并列晋级）；v0032 51.97（-0.53 vs 新 best）、v0031 50.51、v0033 51.10 不晋级。Total 158.72（推导）。双雄子项画像镜像，本地曾更看好 v0030，头部排序反转。D-20260928-T1R2SCORE-001。
+
 - 2026-09-29 T1-THREE r1compose：比例趋势叠加到高分分布组合；执行前冻结参数，完整panel推断/scorer；未提交/未评分。reports/T1_THREE_DESIGN_20260929.md。
 
 - 2026-09-29 T1-THREE r2joint：相同类型人数的一次加权整行采样；执行前冻结参数，完整panel推断/scorer；未提交/未评分。reports/T1_THREE_DESIGN_20260929.md。
@@ -227,27 +236,73 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-09-29 T1-THREE r3mix 新候选 v0036：完整5118×32285，parent=v0029，contract PASS，未提交/未评分；证据 artifacts/t1_three/T1-THREE-20260929-v1/r3mix/RESULT.json。
 
 - 2026-09-29 T1-THREE收口：r1compose=v0034、r2joint=v0035、r3mix=v0036；完整推断/三次full-panel官方scorer、13测试、独立重放/整行身份/contract/ZIP通过。v0035本地最有利，r1/r3有取舍；全部未提交/未评分，best v0029=52.50保持。reports/t1_three_20260929/REPORT.md；D-20260929-T1THREE-001。
+
 - 2026-09-29｜T1-THREE 三 lane 回分｜v0035 53.43（+0.93）PROMOTED 新 T1 best；v0036 53.36（距新 best −0.07，不并列晋级）；v0034 53.24（距新 best −0.19）不晋级。三条四子项相对 v0029 同涨，方向涨得最多。推导合计见 registry。D-20260929-T1THREESCORE-001。
+
 - 2026-09-30 T1-SEVEN n1moment 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN n2covot 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN n3graph 路线冻结（new）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN f1soft 路线冻结（failed_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN f2stable 路线冻结（failed_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN s1growth 路线冻结（successful_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN s2mix 路线冻结（successful_optimization）：configs/t1_seven/design_20260930.json；parent=v0035，计划完整5118×32285和全panel官方本地scorer，未提交/未评分。
+
 - 2026-09-30 T1-SEVEN n1moment 新候选 v0037：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n1moment/RESULT.json。
+
 - 2026-09-30 T1-SEVEN n2covot 新候选 v0038：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n2covot/RESULT.json。
+
 - 2026-09-30 T1-SEVEN n3graph 新候选 v0039：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/n3graph/RESULT.json。
+
 - 2026-09-30 T1-SEVEN f1soft 新候选 v0040：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/f1soft/RESULT.json。
+
 - 2026-09-30 T1-SEVEN s1growth 新候选 v0041：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/s1growth/RESULT.json。
+
 - 2026-09-30 T1-SEVEN f2stable 新候选 v0042：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/f2stable/RESULT.json。
+
 - 2026-09-30 T1-SEVEN s2mix 新候选 v0043：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_seven/T1-SEVEN-20260930-v1/s2mix/RESULT.json。
+
 - 2026-09-30 T1-SEVEN n1moment收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0037，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN n2covot收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0038，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN n3graph收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0039，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN f1soft收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0040，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN f2stable收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0042，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN s1growth收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0041，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
+
 - 2026-09-30 T1-SEVEN s2mix收口：report/future全量执行，32285列官方本地scorer、独立重放和参数检查通过；v0043，未提交/未评分。reports/t1_seven_20260930/REPORT.md；D-20260930-T1SEVEN-001。
 
+- 2026-09-29 T1-PBMEAN pba05 新候选 v0044：在 v0035 上按冻结平均数外推平移，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_pbmean/T1-PBMEAN-20260929-v1/RESULT.json。
+
+- 2026-09-29 T1-PBMEAN pba10 新候选 v0045：在 v0035 上按冻结平均数外推平移，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_pbmean/T1-PBMEAN-20260929-v1/RESULT.json。
+
+- 2026-09-29 T1-PBMEAN pbb05 新候选 v0046：在 v0035 上按冻结平均数外推平移，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_pbmean/T1-PBMEAN-20260929-v1/RESULT.json。
+
+- 2026-09-29 T1-PBMEAN pbb10 新候选 v0047：在 v0035 上按冻结平均数外推平移，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_pbmean/T1-PBMEAN-20260929-v1/RESULT.json。
+
 - 2026-09-30｜T1十一条回分｜v0037–v0047均scored，44子项齐全、11个SHA一致；v0038/v0043同为53.55，v0038现役、v0043精确同分备份，旧v0035退为参照；均值平移四臂不晋级，T1待分清零。D-20260930-T1SCORE-001；reports/t1_score_review_20260930/REPORT.md。
+
+- 2026-10-01｜D2 调参 R3 启动（用户授权）｜dz20 的 410 步是 patience 耗尽停（非时间 cap），故单轮只加 patience（max_checks 40→120，约 1200 步/CPU 20 分钟级），种子/LR/损失/门全冻结；候选号 v0048（v0022 已被 D3 用）。过 standing 双门才建候选进 INDEX，不过 D2 关闭。`D-20261001-T1D2R3-001`。
+
+- 2026-10-01｜D2-R3 挂门，D2 关闭｜1210 步足额（max_checks 120 耗尽停，wall 457s）：best_val_mmd 0.0137632 与 R2 逐位相同——最优检查点仍在前 410 步内，加 patience 零收益；本地 de 0.8113/dir 0.8652 与 R2 逐位相同，双低于 standing 门；contract PASS，enrichment 6.23（机制 claim 数值同 R2，但 proxy 挂则无上传）。按 `D-20261001-T1D2R3-001` 预声明关闭 D2，patience 轴判为死路。v0048 目录仅留 run 内诊断物，未进 INDEX/未上传/未打包。过程注记：首跑因系统 libstdc++ 旧失败（与方案无关），补 `LD_LIBRARY_PATH=/opt/anaconda3/lib` 重跑，种子/方案/门全不变。`D-20261001-T1D2R3-002`。
+
+- 2026-10-01｜Scaling 程序启动（用户授权逐个完成）｜T1 侧两条按序：①D5c 长训（D5b 欠拟合→约 10× 量新假设，设计冻结先行，GPU 获批前不训练）②外部时序预训练（先找合规数据，无数据则停）。`D-20261001-SCALE-001`。
+
+- 2026-10-01｜D5c 代码备齐（用户指令，未训练）｜新文件 `scripts/g0/t1_d5c_diff.py`（D5b 配方：EPOCHS 20→200＋`--epochs` 透传，候选号 v0049，lane/uns/checkpoint 标签全换 D5C，种子与门冻结不变）。附带修一个 D5b 遗留 bug：checkpoint 硬编码写 RUNDIR 常量、无视 `--run-dir`（D5b 因目录恰好存在而没爆），已改写 RUN。CPU smoke 通过（stage_sensitivity 0.74，门 1e-6）。设计冻结文档与 GPU 训练待后续。
+
+- 2026-10-01｜D5c 代码复核通过（用户指令）｜与已审计 D5b 的 diff 仅 37 行，全是预期改动（身份重命名/EPOCHS 200/`--epochs`/diag/run-dir 修）。复核发现并已修：RUNDIR 死常量已删。关键发现：**代码纯 CPU，无 CUDA 路径**——docstring 已据实改写；在 V100 上原样跑仍吃 CPU，故 GPU 租赁非必需（本机 CPU 约 2–3 小时可跑完；要上卡须先加 device 支持，另议）。种子/门/veto/基线断言/字节重放/contract-scorer 链与 D5b 一致；v0049 无占用；smoke 已过。
+
+- 2026-10-01｜D5c 设计冻结＋开跑（用户授权，CPU）｜冻结见 `artifacts/g0/G1-T1-D5C-DIFF-20261001-v1/DESIGN.md`：假设＝量不够非机制死；配方只动 epochs（200）；门＝G-return 分布双腿＋坍缩 veto→standing 双门；单轮不 sweep；GPU 项注销（代码无 CUDA 路径）。训练后台开跑，回包再定是否 `--build-only`。
+
+- 2026-10-01｜T1 排名讨论（五条：53.43/53.36/53.24/52.5/52.49，不含涨幅三步）｜three 家族相对 round2 双亲贵约 +0.8，全贵在方向（59.5–60.2 vs 58.5）和分布（mmd 55.1–55.4 vs 54.7–54.9、vario 50.6–51.0 vs 49.0–49.7）；de_score 全程 45.6–47.0 拉不开名次。族内 v0036 de 最高（47.0）仍输 v0035 0.07，输在方向（59.5 vs 60.2）；v0029/v0030 差 0.01，方向与分布互抵，无胜者。结论：T1 顶部分数段由方向＋分布定序，de 是门槛项；现役 v0038（53.55，mmd 55.7 最高）故事一致。本讨论不产生新 lane。
+
+- 2026-10-01｜D5c 挂门，D5c 关闭，扩散线三振出局｜200 epochs/6800 步足额（wall 16min，CPU，无 NaN），基线精确复现；场 overall 3.88 vs 0.265（14.7×）、pertype 4.99 vs 0.63（7.9×），相对 D5b 好转但仍远败；无坍缩 veto。按冻结关闭：足量仍败＝不是量不够，不提 D5d；未建候选，未进 INDEX。`D-20261001-T1D5C-001`。
