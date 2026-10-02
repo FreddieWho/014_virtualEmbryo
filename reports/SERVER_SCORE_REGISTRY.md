@@ -1205,3 +1205,45 @@ Decision and limits:
   11.98, variance_ratio 1.74); the local guardrails were the only component that fired correctly.
 - No new Total supplied; derived figures unchanged. Submission IDs, timestamps and portal Total were not
   supplied; no independent portal query was performed. Artifacts immutable; submetrics registered above.
+
+<a id="t1-armix-score-return-20261002"></a>
+## T1 AR-MIX score return — 2026-10-02
+
+User-transcribed portal returns for the three AR-MIX lanes
+(`deliveries/art1mix__t1__upload__20261002.DRAFT-PENDING-INDEX.zip`, run
+`AR-T1-MIX-20261002-v1`; staged sha `4d5bb215…` / `6e8d89f7…` / `9615510f…`,
+pack integrity verified at packing time). Submission IDs, upload timestamps and
+portal Total NOT supplied; no independent portal query. Values preserve supplied
+precision; reported totals are not reconstructed from rounded skills (T1 weights
+0.25/0.25/0.30/0.20 give 53.70/53.315/53.93 versus reported 53.72/53.32/53.92;
+differences are rounding). Versions v0049–v0051 are PROPOSED (v0048 skipped: touched
+by closed D2R3, never registered); INDEX rows + canonical placement pending coordinator.
+
+| Version / portal model | Total | de | dir | mmd_u | vario | Verdict |
+|---|---:|---:|---:|---:|---:|---|
+| v0049 `t1_val__mix35x38a__v0049.h5ad` (70/30 v0035×v0038, seed 20260921) | 53.72 | 46.7 | 59.9 | 56.3 | 50.8 | HIGH BACKUP (see below) |
+| v0050 `t1_val__mix35x38b__v0050.h5ad` (70/30 v0035×v0038, seed 20261023) | 53.32 | 47.0 | 59.9 | 55.1 | 50.3 | REJECT |
+| v0051 `t1_val__mix36x38a__v0051.h5ad` (70/30 v0036×v0038, seed 20260921) | 53.92 | 47.2 | 60.0 | 56.7 | 50.6 | PROMOTED new T1 best |
+
+Deltas vs prior best v0038/v0043 = 53.55: v0049 **+0.17**, v0050 **−0.23**, v0051 **+0.37**.
+v0051 is outside the ±0.1 TIE band → new T1 selection and highest observed; v0049 beats
+the old best but trails the new best by 0.20 → high backup, no co-promotion (standing
+precedent); v0050 below old best → REJECT. New derived sum 53.92+58.59+47.93=**160.44**
+(derived only, NOT a portal Total; last portal-confirmed Total remains 156.06).
+
+Submetric read vs v0038 (46.5/60.3/55.7/50.8), descriptive not causal: v0051 gains de
+(+0.7) and mmd (+1.0) with dir −0.3 and vario flat — the second-ever server DE move on
+T1 (after v0035 46.8 / v0036 47.0) and the top mmd skill on this board (56.7 > 56.0).
+v0049 is the same profile smaller (+0.2/+0.6/−0.4/flat). v0050 gains de (+0.5) but loses
+mmd (−0.6) and vario (−0.5).
+
+Seed-luck finding (headline): L1 and L2 are the SAME design with different mixture seeds
+yet score 53.72 vs 53.32 (Δ0.40) — server-side row selection matters on T1, the opposite
+of the same-day T2-extrap result (identical-design reseed 50.09 vs 50.08, Δ0.01). The
+report-level quantum lottery replicates on the server. Consequence: future T1 lanes should
+either ship 2 seeds of a mix design or prefer deterministic (seed-insensitive) constructions;
+single-seed server reads of resampling designs are lottery tickets.
+
+T1 pending queue is empty after these 3 returns. Decision: D-20261002-T1MIXSCORE-001.
+blocks_submission: false. Pending coordinator: INDEX rows (v0049–v0051, staged paths +
+SHAs in the AR-T1-MIX handoff), T1_TRACKING line, DECISIONS entry, STATUS/TODO sync.
