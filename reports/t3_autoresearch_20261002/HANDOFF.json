@@ -1,0 +1,21 @@
+{
+  "task": "T3 source-domain local response optimization",
+  "candidate_id": null,
+  "parent_candidate": null,
+  "parent_model": "GO128 Ridge(alpha=10), baseline commit a57721915b8a84b907f22fd2f6a463e41872b907",
+  "artifact": "artifacts/autoresearch/t3-20261002-v1/model.py",
+  "artifact_role": "retained source-response model code, not upload H5AD",
+  "sha256": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+  "contract_result": "NOT_APPLICABLE_NO_H5AD_CANDIDATE",
+  "checks": "fixed17-fold500-gene evaluation target passed; frozen-input/pure-model/determinism guard PASS; final source val/test checked once after model lock",
+  "risks": [
+    "adaptive development selection after48 trials",
+    "six historical test genes and two samples, not independent animals",
+    "test paired bootstrap interval crosses zero",
+    "adult fibroblast source to embryo Gata4 transfer unvalidated"
+  ],
+  "proposed_decision": "retain local method; do not promote server incumbent from source-only evidence",
+  "blocker": "target-domain generalization is unvalidated; blocks_submission:false",
+  "candidate_generated": false,
+  "server_status": "NOT_RUN; no submission"
+}

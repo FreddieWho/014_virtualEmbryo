@@ -1,0 +1,17 @@
+{
+  "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.1",
+    "anndata": "0.12.19",
+    "pandas": "2.3.3",
+    "h5py": "3.11.0"
+  },
+  "verify_environment": {
+    "LD_LIBRARY_PATH": "/opt/anaconda3/lib",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

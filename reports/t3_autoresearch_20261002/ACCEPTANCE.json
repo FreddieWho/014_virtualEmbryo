@@ -1,0 +1,14 @@
+{
+  "control_completed_and_git_consistent": true,
+  "frozen_code_hashes": true,
+  "target_mse_reduction_pct": 20.31122949635895,
+  "five_derived_inputs_registered_with_matching_hashes": true,
+  "decision_and_root_index_present": true,
+  "final_holdout_check_bound_to_retained_model": true,
+  "candidate_generated": false,
+  "server_submission": "NOT_RUN",
+  "root_existing_changes": "preserved; no root-wide commit or reset; experiment commits live in isolated Git",
+  "status": "PASS_LOCAL_DELIVERY_WITH_STATED_LIMITATIONS",
+  "portable_model_copy_sha256": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+  "portable_model_is_byte_identical": true
+}

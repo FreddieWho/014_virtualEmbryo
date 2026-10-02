@@ -1,0 +1,13 @@
+{
+  "artifacts/autoresearch/t3-20261002-v1/model.py": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+  "artifacts/autoresearch/t3-20261002-v1/evaluate.py": "51a9576a99743b2fc78cb2015760bcfa990164e2d5d752bf621458b59e3de183",
+  "artifacts/autoresearch/t3-20261002-v1/guard.py": "f43f1af60fa494d1ab4af7b7424701d476e53580c7e7ba9d0c47726289b4ebe9",
+  "artifacts/autoresearch/t3-20261002-v1/FROZEN.json": "70f438677f50710bc8b84d7708d6944a3a08f2a1aa82d95b92d1928d9a7fadd6",
+  "artifacts/autoresearch/t3-20261002-v1/PROVENANCE.json": "caaf67f00e8688cde8f78e06b494eb7e1073fe0b9a968de108aab1ea49aaa4a9",
+  "scripts/t3_autoresearch/final_check.py": "ad3a6ac7025dec7bedcffd885ad0629b64031172be753c28d8a36f11544ac24a",
+  "scripts/t3_autoresearch/prepare.py": "e7a02621008bc95cbeb91d90a083a4faae26f85ea9b88d0f44f46f9f926be15c",
+  "scripts/t3_autoresearch/prepare_source_control.py": "b91dd9418961302fd92415f77fed69caf5e1b92a338e6bdf253fb7af79b83613",
+  "scripts/t3_autoresearch/prepare_wt_correlations.py": "d7f603539ea9591e48c9e1b01b9d6ddf48075f4fa9879e855b9a8edb04b55475",
+  "scripts/t3_autoresearch/prepare_wt_features.py": "993aedfec26327b6b906a9711abc00f01f115ec9bd0d6e588addc228f6049662",
+  "scripts/t3_autoresearch/retained_model.py": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157"
+}

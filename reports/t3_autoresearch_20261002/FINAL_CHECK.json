@@ -1,0 +1,163 @@
+{
+  "schema": "t3.autoresearch.post-selection.v1",
+  "task": "T3 source-domain response prediction",
+  "run_id": "2da224cca360437983d20f16b8492be8",
+  "model_commit": "1b9847b0472d9b893face74f564e80eff29500b4",
+  "model_sha256": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+  "experiments": 48,
+  "development_improvement_pct": 20.31122949635895,
+  "fixed_training_genes": [
+    "Yy1",
+    "Arid2",
+    "Setd1b",
+    "Brd9",
+    "Znhit1",
+    "Kansl1",
+    "Pbrm1",
+    "Tfpt",
+    "Setdb1",
+    "Chd4",
+    "Srcap",
+    "Smarcd1",
+    "Rest",
+    "Dmap1",
+    "Kmt2a",
+    "Egr2",
+    "Rnf40"
+  ],
+  "target_Gata4_truth_used": false,
+  "no_more_model_selection_after_this_check": true,
+  "holdout_limitations": [
+    "source domain only",
+    "historical test was evaluated in earlier project runs; not pristine",
+    "two samples, independent animals unestablished",
+    "17-condition development score selected after48 adaptive trials"
+  ],
+  "val": {
+    "genes": [
+      "Brd7",
+      "Kat8",
+      "Kat5"
+    ],
+    "retained_model": {
+      "mse": 0.004895494203768958,
+      "per_perturbation_mse": [
+        0.0018299712484707766,
+        0.00162762506429328,
+        0.011228886298542818
+      ],
+      "mean_cosine": 0.6370585764936928
+    },
+    "GO128_ridge10": {
+      "mse": 0.005930776175873787,
+      "per_perturbation_mse": [
+        0.0016658094774011202,
+        0.0033501327195088523,
+        0.012776386330711391
+      ],
+      "mean_cosine": 0.4630995409956884
+    },
+    "training_mean": {
+      "mse": 0.006058529375253037,
+      "per_perturbation_mse": [
+        0.001938058935808038,
+        0.0033984452606805335,
+        0.01283908392927054
+      ],
+      "mean_cosine": 0.42678016591340945
+    },
+    "identity": {
+      "mse": 0.007178379476436126,
+      "per_perturbation_mse": [
+        0.001740323475771829,
+        0.005199057085334117,
+        0.014595757868202433
+      ],
+      "mean_cosine": 0.0
+    },
+    "improvement_vs_GO_ridge_pct": 17.456095819571217
+  },
+  "test": {
+    "genes": [
+      "Ino80",
+      "Wdr82",
+      "Smarca4",
+      "Paxip1",
+      "Hcfc1",
+      "Yeats4"
+    ],
+    "retained_model": {
+      "mse": 0.006237683971842667,
+      "per_perturbation_mse": [
+        0.0018094564723590031,
+        0.0135365974208979,
+        0.008411291758639184,
+        0.006627767443801635,
+        0.006279269715896847,
+        0.0007617210194614341
+      ],
+      "mean_cosine": 0.5518782854542043
+    },
+    "GO128_ridge10": {
+      "mse": 0.006644631904362937,
+      "per_perturbation_mse": [
+        0.0035193317246009015,
+        0.011989922025504059,
+        0.0072073619859254175,
+        0.006839028401766609,
+        0.00794747129988544,
+        0.002364675988495192
+      ],
+      "mean_cosine": 0.47609302132330744
+    },
+    "training_mean": {
+      "mse": 0.006725575885141028,
+      "per_perturbation_mse": [
+        0.0037411677632242135,
+        0.011975239692782169,
+        0.007220918185166161,
+        0.0068417976825591465,
+        0.008117139124242695,
+        0.0024571928628717857
+      ],
+      "mean_cosine": 0.46017503605754645
+    },
+    "identity": {
+      "mse": 0.008508141261511117,
+      "per_perturbation_mse": [
+        0.006343106476777592,
+        0.016950525758819536,
+        0.009924918034927106,
+        0.006800468610907964,
+        0.008721754102179145,
+        0.002308074585455363
+      ],
+      "mean_cosine": 0.0
+    },
+    "improvement_vs_GO_ridge_pct": 6.124461646296209
+  },
+  "test_uncertainty": {
+    "unit": "perturbation gene",
+    "wins": 4,
+    "n": 6,
+    "paired_mean_mse_reduction": 0.00040694793252026934,
+    "descriptive_bootstrap_95pct": [
+      -0.0007178731732702999,
+      0.0014283949332432862
+    ],
+    "not_independent_animal_confidence_interval": true
+  },
+  "gata4_applicability": {
+    "refit_conditions": 26,
+    "specific_complex_max_similarity": 0.52661611,
+    "specific_complex_support_count": 1,
+    "GO128_max_similarity": 0.42442670464515686,
+    "high_confidence_GO_gate_active": false,
+    "prediction_l2": 0.7494820878281911,
+    "role": "source-scale research prediction only; not an embryo candidate or validation",
+    "candidate_generated": false,
+    "uploaded": false,
+    "server_score": "NOT_RUN"
+  },
+  "arrays_sha256": "c40c47111f0b7835e8b67d772d257ff9491face8db01a0cd1b530bf50fd99721"
+}

@@ -12,13 +12,13 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (146 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (147 rows in LANE_VERDICTS.tsv)
 - PASS: 1
 - SHIPPED: 112
 - FAIL: 15
 - VOID: 3
 - PARKED: 4
-- GATE_ONLY: 11
+- GATE_ONLY: 12
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
   - G1-T1-D2: void step41 NaN; warmup NaN step88; null-gate concept only
