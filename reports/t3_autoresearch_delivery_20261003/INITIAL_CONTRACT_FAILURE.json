@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_UNREGISTERED_DRAFT",
+  "artifact_version": "v0069",
+  "contract_report": "submissions/candidates/T3_gata4/v0069_ar_complex/contract.json",
+  "errors": [
+    "candidate layers keys do not exactly match the locked parent",
+    "candidate raw content changed relative to the locked parent"
+  ],
+  "repair": "preserve parent reference layers/raw; X prediction unchanged",
+  "registered": false,
+  "uploaded": false
+}

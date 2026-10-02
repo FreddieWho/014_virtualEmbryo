@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "shape": [
+    7449,
+    500
+  ],
+  "locked_model_response_replay": "PASS atol1e-12",
+  "serialized_prediction_exact": "PASS",
+  "metadata_repair_did_not_change_X": "PASS",
+  "parent_reference_layers_and_raw": "PASS via contract",
+  "spatial_3D_exact": "PASS",
+  "Gata4_zero": "PASS",
+  "canonical_delivery_zip_hash_consistency": "PASS",
+  "INDEX_registered": true,
+  "portal_upload": "NOT_RUN",
+  "target_local_score": "NOT_RUN_NO_LEGAL_TARGET_TRUTH"
+}

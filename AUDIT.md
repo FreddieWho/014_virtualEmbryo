@@ -9,15 +9,16 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_interp: **62.36** (v0019 h_o1_shrinkmerge)
 - T3:gata4: **47.95** (v0058 five_select_r4spline)
 
-Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
+Score-pending rows: 8 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0070/ar_specific_complex_log_residual, v0029/qte_compmix_scale09)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (147 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (150 rows in LANE_VERDICTS.tsv)
 - PASS: 1
 - SHIPPED: 112
-- FAIL: 15
+- FAIL: 16
 - VOID: 3
-- PARKED: 4
+- PARKED: 5
+- PENDING_SERVER: 1
 - GATE_ONLY: 12
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -38,6 +39,7 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T2-E-I1-TCI: confidence-weighted intra-layer borrowing degrades nmmd 0.970091/0.901227 vs incumbent 0.036362 (+2567.9%/+237
   - T3-SIX-20260930-r2: NULL_STATE_MASS_RESPONSE; identity mass, no random pseudo-effect
   - T3-ARCH-B-EMIT1-20261001: withdrawn before upload: extra within-state sampling noise; model unchanged in repair
+  - T3-AR-DELIVERY-DRAFT-v0069: Unregistered serialization draft: parent layers/raw missing; X valid and unchanged in repaired delivery
 
 ## Current branch (from TODO.md)
 - **当前执行分支**：三个任务分数全部回填完毕。T1 选择 v0038=53.55（v0043 精确同分备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推合计仍用 50.53；T3 选择 v0048=47.93。待办：重读门户确认合计（推导 160.07）与外推 50.74-vs-50.53 差额；另记一条暂不展开的 T1 排名讨论。

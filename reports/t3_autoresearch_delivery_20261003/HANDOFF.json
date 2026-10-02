@@ -1,0 +1,24 @@
+{
+  "task": "T3:gata4",
+  "status": "READY_NOT_SUBMITTED",
+  "candidate_id": "candidate/T3_gata4/v0070_ar_complex",
+  "parent_candidate": "candidate/T3_gata4/v0009_b4_t3_r1_l1_gata4_zero_all",
+  "index": "submissions/INDEX.tsv",
+  "version": "v0070",
+  "artifact": "submissions/candidates/T3_gata4/v0070_ar_complex/submission.h5ad",
+  "sha256": "61d07e294771263e8c0763af1defc55e5436d10d63d21b2b4a206fd41805ec8d",
+  "contract_result": "PASS",
+  "contract_report": "submissions/candidates/T3_gata4/v0070_ar_complex/contract.json",
+  "download_h5ad": "deliveries/t3_gata4__ar_complex__v0070.h5ad",
+  "zip": "deliveries/t3ar__t3__upload__20261003.zip",
+  "zip_sha256": "32e0a18b5eb495322dfbf74ceb31ce90867a3e85e33f768977ea9a90a5c5242a",
+  "core_check": "complete locked-model inference replay PASS",
+  "risks": [
+    "cross-domain additive log-scale transfer unvalidated",
+    "clipping changes negative mean effects; positive shifts activate zeros",
+    "source development improvement is not this H5AD target score"
+  ],
+  "proposed_decision": "manual upload exploratory candidate; incumbent unchanged until server return",
+  "blocker": "target-domain generalization unvalidated; blocks_submission:false",
+  "portal_upload": "NOT_RUN"
+}
