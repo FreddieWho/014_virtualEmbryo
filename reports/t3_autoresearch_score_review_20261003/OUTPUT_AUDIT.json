@@ -1,0 +1,26 @@
+{
+  "candidate": "v0070",
+  "parent": "v0009",
+  "incumbent": "v0048",
+  "identity_matches_index": true,
+  "exact_emission_replay": true,
+  "obs_order_preserved": true,
+  "var_order_preserved": true,
+  "coordinates_preserved": true,
+  "parent_density": 0.10462988320579944,
+  "output_density": 0.6220308766277353,
+  "activated_entries": 1927060,
+  "negative_preclip_entries": 1385559,
+  "largest_emitted_mean_delta_error": 0.24172504727087174,
+  "largest_error_gene": "Col15a1",
+  "specific_complex_donors": [
+    {
+      "gene": "Chd4",
+      "similarity": 0.52661611,
+      "weight": 0.5724607903102511
+    }
+  ],
+  "total_weight_on_zero_overlap_donors": 0.42753920968974884,
+  "target_truth_used": false,
+  "interpretation": "Emission diagnostics, not target metrics or causal attribution."
+}

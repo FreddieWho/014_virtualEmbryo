@@ -18,3 +18,6 @@
 建议：作为锁定模型的探索候选手动上传，并回传总分、各子项、submission ID/截图。服务器现役在回分前保持不变。目标域效果未知，科学限制 `blocks_submission:false`。
 
 决策：D-20261003-T3ARDEL-001。
+
+
+2026-10-03 回分更新：v0070已评分、REJECT，现役不变；历史本地结果/交付回执保持原状。[本轮复盘](../t3_autoresearch_score_review_20261003/REPORT.md)。

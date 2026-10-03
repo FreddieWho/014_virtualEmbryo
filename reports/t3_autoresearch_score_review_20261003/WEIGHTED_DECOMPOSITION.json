@@ -1,0 +1,20 @@
+{
+  "baseline": "v0048",
+  "weight_source": "reports/t3_score_review_20261001/WEIGHTED_DECOMPOSITION.json",
+  "weights": {
+    "de_score": 0.3,
+    "de_direction": 0.25,
+    "severity_slope": 0.25,
+    "mmd_u": 0.12,
+    "variogram": 0.08
+  },
+  "contributions": {
+    "de_score": -1.35,
+    "de_direction": 0.125,
+    "severity_slope": 0.0,
+    "mmd_u": -0.132,
+    "variogram": -0.776
+  },
+  "sum_from_rounded_submetrics": -2.133,
+  "limitation": "Approximate decomposition only; authoritative reported total remains in SERVER_SCORE_REGISTRY.md."
+}
