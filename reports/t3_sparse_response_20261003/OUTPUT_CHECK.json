@@ -1,0 +1,23 @@
+{
+  "shape": [
+    7449,
+    500
+  ],
+  "parent": "v0048",
+  "strength": 1.0,
+  "parent_density": 0.16216673378977045,
+  "output_density": 0.16216673378977045,
+  "zero_to_positive_entries": 0,
+  "positive_to_zero_entries": 0,
+  "changed_entries": 427880,
+  "changed_genes": 308,
+  "mean_absolute_change": 0.020859016105532646,
+  "intensity_ratio_min": 0.5000000000003153,
+  "intensity_ratio_max": 1.999999999998739,
+  "coordinates_preserved": true,
+  "Gata4_zero": true,
+  "source_inference_replay": "PASS",
+  "roundtrip": "PASS",
+  "target_score": "NOT_RUN_NO_LEGAL_TARGET_TRUTH",
+  "blocks_submission": false
+}

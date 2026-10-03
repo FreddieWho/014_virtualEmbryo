@@ -1,0 +1,20 @@
+{
+  "selection": {
+    "method": "s100",
+    "strength": 1.0,
+    "mean_weighted_rank": {
+      "identity": 4.52078431372549,
+      "additive": 2.382156862745098,
+      "s025": 2.8547058823529414,
+      "s050": 2.733137254901961,
+      "s100": 2.5092156862745094
+    },
+    "better_than_both_controls": false,
+    "selected_before_test": true,
+    "target_truth_used": false,
+    "design_sha256": "a4e763efd3e5d15208c3ffffc1c2d3ac63e059d2893294875cdc5ddc4bc1ad36"
+  },
+  "multiplier_sha256": "f7653ca82851e331f7c3d5990da46107a803aa7fe2ff827a63fde3bdb70f9717",
+  "metrics_sha256": "154cc11b529d2a636e098a195f6096d8aee7998f9285e88789e18898cfc7ff26",
+  "status": "COMPLETE"
+}
