@@ -1,0 +1,13 @@
+{
+  "selection": {
+    "method": "s050",
+    "strength": 0.5,
+    "basis": "one predeclared half step after v0071 server return; not local winner",
+    "selected_before_test": true,
+    "target_truth_used": false,
+    "design_sha256": "1ac456ed083391b94b6b3d83b385455749c3948b66b4daac20a63ff0dc1ffffd"
+  },
+  "multiplier_sha256": "f7653ca82851e331f7c3d5990da46107a803aa7fe2ff827a63fde3bdb70f9717",
+  "metrics_sha256": "4b93a519c7874c2ce67c103dabb5a6b87ca2ceb9ff071e9082a881f0cae40e99",
+  "status": "COMPLETE"
+}

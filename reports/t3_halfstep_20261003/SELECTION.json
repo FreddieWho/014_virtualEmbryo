@@ -1,0 +1,8 @@
+{
+  "method": "s050",
+  "strength": 0.5,
+  "basis": "one predeclared half step after v0071 server return; not local winner",
+  "selected_before_test": true,
+  "target_truth_used": false,
+  "design_sha256": "1ac456ed083391b94b6b3d83b385455749c3948b66b4daac20a63ff0dc1ffffd"
+}

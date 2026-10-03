@@ -1,0 +1,20 @@
+{
+  "task": "T3:gata4",
+  "version": "v0072",
+  "candidate_id": "candidate/T3_gata4/v0072_half_scale",
+  "parent_version": "v0048",
+  "artifact": "submissions/candidates/T3_gata4/v0072_half_scale/submission.h5ad",
+  "sha256": "08f2159733c516aa21354516cb8c7b57a07ba0c4a45cfc463b608013b7e2fdc9",
+  "contract": "PASS",
+  "download_h5ad": "deliveries/t3_gata4__half_scale__v0072.h5ad",
+  "zip": "deliveries/t3half__t3__upload__20261003.zip",
+  "zip_sha256": "ddfc929a06cfaa5de4c29a5fdc8e8e87391cc43b1d44c80f69eac1bd3aaf9235",
+  "status": "READY_NOT_SUBMITTED",
+  "proposed_decision": "exploratory upload; incumbent unchanged until server return",
+  "risks": [
+    "source domain transfer unvalidated",
+    "source data reused; not a new independent holdout",
+    "unchanged detection support cannot model newly activated genes"
+  ],
+  "blocker": "no legal target truth; blocks_submission:false"
+}

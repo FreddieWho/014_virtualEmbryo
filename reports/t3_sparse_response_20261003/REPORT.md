@@ -42,3 +42,5 @@
 任务T3:gata4；candidate v0071；父v0048；artifact和SHA见INDEX及HANDOFF。建议作为下一件探索提交，等待总分和五子项，不晋级现役。风险：跨域迁移未验证、来源数据重复使用、固定support限制新激活响应。blocker为无合法目标truth；`blocks_submission:false`。没有新增外部数据或自动上传。决策D-20261003-T3SPARSE-001。
 
 复现脚本：`scripts/t3_sparse_response/evaluate.py`和`build.py`；使用 `/opt/anaconda3/bin/python`，环境 `LD_LIBRARY_PATH=/opt/anaconda3/lib OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1`。脚本拒绝覆盖既有选择/交付。设计在评估前写入DESIGN.md；完整分项、选择记录及文件检查位于本目录。
+
+2026-10-03回分更新：v0071已登记、未晋级，现役不变；[回分及半步后续](../t3_halfstep_20261003/REPORT.md)。
