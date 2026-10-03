@@ -38,3 +38,5 @@ v0070到v0071同时改变母本和转换，不能把2.05的回升全部归因零
 candidate v0072；母本v0048；路线前件v0071；artifact/SHA256/contract权威为submissions/INDEX.tsv，交接见HANDOFF.json。建议探索提交、回传总分及五项；现役保持。风险为来源迁移未验证、来源数据重复使用、不能预测新激活基因；blocker为无合法目标truth，blocks_submission:false。没有读取目标truth、没有新外部数据、没有自动上传。
 
 决策D-20261003-T3HALF-001。复现脚本scripts/t3_sparse_response/halfstep.py与build_halfstep.py；环境同上一轮（LD_LIBRARY_PATH=/opt/anaconda3/lib，OPENBLAS_NUM_THREADS=1，OMP_NUM_THREADS=1，/opt/anaconda3/bin/python）。DESIGN.md先于本次检查写入；SELECTION.json明确记录server-informed而非local winner。
+
+2026-10-03回分更新：v0072已评分、REJECT，减半试验关闭，现役不变；[评分复盘](SCORE_REVIEW.md)。历史交付回执保持原状。

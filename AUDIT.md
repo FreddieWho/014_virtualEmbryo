@@ -9,16 +9,15 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_interp: **62.36** (v0019 h_o1_shrinkmerge)
 - T3:gata4: **47.95** (v0058 five_select_r4spline)
 
-Score-pending rows: 7 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0072/incumbent_sparse_half_scale)
+Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
 ## Lane verdicts (152 rows in LANE_VERDICTS.tsv)
 - PASS: 1
-- SHIPPED: 115
+- SHIPPED: 116
 - FAIL: 16
 - VOID: 3
 - PARKED: 4
-- PENDING_SERVER: 1
 - GATE_ONLY: 12
 - Closed lanes (one-line cause):
   - G1-T1-D1: return de 0.3585/dir 0.6243; var 0.086 collapse
@@ -42,6 +41,6 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-AR-DELIVERY-DRAFT-v0069: Unregistered serialization draft: parent layers/raw missing; X valid and unchanged in repaired delivery
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX，D-20261002-T1MIXSCORE-001，+0.37；⚠️ INDEX/coordination STATUS/T1_TRACKING 回填缺口，handoff 与 staged 件齐备，见下）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推合计仍用 50.53（Route C 全 REJECT，v0029 scale 探针 REJECT）；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填（T1 v0049–51 需 staged 落盘＋SHA＋contract，T3 v0070／T2 v0024–29 canonical 已在盘）；② 重读门户确认合计与外推差额；③ organizer 答复；④ T1 新用途批准。零待上传（v0070 与 AR-MIX 包均已交已评）。
+- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX，D-20261002-T1MIXSCORE-001，+0.37；⚠️ INDEX/coordination STATUS/T1_TRACKING 回填缺口，handoff 与 staged 件齐备，见下）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推合计仍用 50.53（Route C 全 REJECT，v0029 scale 探针 REJECT）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填（T1 v0049–51 需 staged 落盘＋SHA＋contract，T3 v0070／T2 v0024–29 canonical 已在盘）；② 重读门户确认合计与外推差额；③ organizer 答复；④ T1 新用途批准。零待上传（v0070 与 AR-MIX 包均已交已评）。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).
