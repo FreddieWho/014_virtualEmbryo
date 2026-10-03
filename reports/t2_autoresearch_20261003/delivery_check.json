@@ -1,0 +1,12 @@
+{
+  "candidate": "T2:heart:val_extrap/v0029_ar_scale09",
+  "parent": "v0024_qte_tc_s929",
+  "sha256": "ef2f4786819950701286df0fc557cf41fa2f6065a1749dc74e26c137f4b27a47",
+  "seed": 20260929,
+  "local_composite": 7.523743443749656,
+  "contract_status": "PASS",
+  "errors": [],
+  "expression_exact": true,
+  "rows_exact": true,
+  "spatial_transform_exact": true
+}

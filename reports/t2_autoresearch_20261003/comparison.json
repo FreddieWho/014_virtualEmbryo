@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 20260929,
+    "before": 3.9129545806406067,
+    "after": 7.523743443749656,
+    "changed_metrics": {
+      "scale_log_ratio": [
+        0.2131,
+        0.1078
+      ]
+    },
+    "guard_pass": true
+  },
+  {
+    "seed": 20261007,
+    "before": 4.008803956227265,
+    "after": 7.7007993158560355,
+    "changed_metrics": {
+      "scale_log_ratio": [
+        0.2145,
+        0.1092
+      ]
+    },
+    "guard_pass": true
+  },
+  {
+    "seed": 20261008,
+    "before": 3.605816389711827,
+    "after": 7.4950275266027795,
+    "changed_metrics": {
+      "scale_log_ratio": [
+        0.2179,
+        0.1125
+      ]
+    },
+    "guard_pass": true
+  }
+]

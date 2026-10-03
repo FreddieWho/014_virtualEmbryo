@@ -1247,3 +1247,38 @@ single-seed server reads of resampling designs are lottery tickets.
 T1 pending queue is empty after these 3 returns. Decision: D-20261002-T1MIXSCORE-001.
 blocks_submission: false. Pending coordinator: INDEX rows (v0049–v0051, staged paths +
 SHAs in the AR-T1-MIX handoff), T1_TRACKING line, DECISIONS entry, STATUS/TODO sync.
+
+## T2 scale09 score return — 2026-10-03
+
+Source / raw evidence: user transcribed `t2_hrt_ext__ar_scale09__v0029.h5ad:49.40` followed by the eight values below in this conversation. Evidence class: SERVER_SCORED_USER_REPORTED. Portal submission ID and submission timestamp were not supplied; no independent portal lookup. Date is the score-recording date, not an inferred submission date. The canonical artifact SHA and ZIP-member SHA match the v0029 INDEX row; no artifact was modified.
+
+| Portal model | Board score | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `t2_hrt_ext__ar_scale09__v0029.h5ad` | 49.40 | 46.8 | 52.1 | 50.1 | 50.1 | 45.2 | 54.3 | 41.3 | 51.1 |
+
+Decision: **REJECT**, no promotion. Delta vs direct parent v0024 50.09: **−0.69**; vs incumbent baseline 50.53: **−1.13**; vs unpromoted numeric-high v0022 50.74: **−1.34**. Selection and aggregate remain unchanged; the old 50.74-vs-50.53 portal-selection OPEN item is unaffected. The reported board score is authoritative, not recomputed from rounded skill values.
+
+All seven non-scale skill values equal the parent v0024 values. Only scale skill changes: **49.5→41.3 (−8.2)**. The same coordinate shrink gave the opposite local conclusion (raw absolute scale error 0.2131→0.1078; frozen three-seed median composite 3.912955→7.523743, all improvement from this channel). Thus the local development objective succeeded while this submitted configuration failed transfer. The composite is not a calibrated prediction of official score.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, eight rows. Review: `reports/t2_scale_score_review_20261003/REPORT.md`. Decision `D-20261003-T2SCALE-SCORE-001` closes current scale0.9 configuration; this proxy cannot justify promotion. No new candidate/training/scorer change; blocks_submission:false.
+
+
+<a id="t3-autoresearch-score-return-20261003"></a>
+## T3 autoresearch v0070 回分（2026-10-03）
+
+证据：用户本轮原文；文件名绑定本地交付与 INDEX SHA256，二者实测一致。未独立查询门户；submission ID、上传时间、截图未提供，不推断。
+
+```text
+登记分数，t3_gata4__ar_complex__v0070.h5ad :45.80
+de_score 38.1
+de_direction 50.5
+severity_slope 50.0
+mmd_u 50.7
+variogram 39.6
+```
+
+| board | version | portal file | reported total | decision |
+|---|---|---|---:|---|
+| T3:gata4 | v0070 | t3_gata4__ar_complex__v0070.h5ad | 45.80 | REJECT；较现役 v0048 低2.13，较母本 v0009 低1.15 |
+
+五项显示值已原样写入 SERVER_SUBMETRIC_REGISTRY.tsv；不由四舍五入子项重算/替换总分。现役 v0048 不变，当前配置关闭。复盘：`reports/t3_autoresearch_score_review_20261003/REPORT.md`；D-20261003-T3ARSCORE-001。候选身份/contract以 INDEX 为准；blocks_submission:false。

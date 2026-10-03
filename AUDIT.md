@@ -9,15 +9,15 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:heart:val_interp: **62.36** (v0019 h_o1_shrinkmerge)
 - T3:gata4: **47.95** (v0058 five_select_r4spline)
 
-Score-pending rows: 8 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0070/ar_specific_complex_log_residual, v0029/qte_compmix_scale09)
+Score-pending rows: 7 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0070/ar_specific_complex_log_residual)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
 ## Lane verdicts (150 rows in LANE_VERDICTS.tsv)
 - PASS: 1
-- SHIPPED: 112
+- SHIPPED: 113
 - FAIL: 16
 - VOID: 3
-- PARKED: 5
+- PARKED: 4
 - PENDING_SERVER: 1
 - GATE_ONLY: 12
 - Closed lanes (one-line cause):

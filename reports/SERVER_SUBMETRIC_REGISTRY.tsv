@@ -771,3 +771,16 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-02	T1:val	v0051	mix36x38a	t1_val__mix36x38a__v0051.h5ad	2026-10-02	53.92	de_direction	60.0
 2026-10-02	T1:val	v0051	mix36x38a	t1_val__mix36x38a__v0051.h5ad	2026-10-02	53.92	mmd_u	56.7
 2026-10-02	T1:val	v0051	mix36x38a	t1_val__mix36x38a__v0051.h5ad	2026-10-02	53.92	variogram	50.6
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	de_score	46.8
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	de_direction	52.1
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	mmd_u	50.1
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	variogram	50.1
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	d2_shape	45.2
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	occupancy_dice	54.3
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	scale_log_ratio	41.3
+2026-10-03	T2:heart:val_extrap	v0029	qte_compmix_scale09	t2_hrt_ext__ar_scale09__v0029.h5ad	not_supplied	49.40	neighborhood_mmd	51.1
+2026-10-03	T3:gata4	v0070	ar_specific_complex_log_residual	t3_gata4__ar_complex__v0070.h5ad	NOT_PROVIDED	45.80	de_score	38.1
+2026-10-03	T3:gata4	v0070	ar_specific_complex_log_residual	t3_gata4__ar_complex__v0070.h5ad	NOT_PROVIDED	45.80	de_direction	50.5
+2026-10-03	T3:gata4	v0070	ar_specific_complex_log_residual	t3_gata4__ar_complex__v0070.h5ad	NOT_PROVIDED	45.80	severity_slope	50.0
+2026-10-03	T3:gata4	v0070	ar_specific_complex_log_residual	t3_gata4__ar_complex__v0070.h5ad	NOT_PROVIDED	45.80	mmd_u	50.7
+2026-10-03	T3:gata4	v0070	ar_specific_complex_log_residual	t3_gata4__ar_complex__v0070.h5ad	NOT_PROVIDED	45.80	variogram	39.6
