@@ -3,19 +3,19 @@
 Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDICTS.tsv + TODO.md.
 
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
-- T1:val: **53.55** (v0038 seven_n2covot)
+- T1:val: **53.98** (v0054 mix3638even)
 - T2:embryo:val_interp: **62.89** (v0014 e_o1_shrinkmerge)
-- T2:heart:val_extrap: **50.74** (v0022 x_r1)
+- T2:heart:val_extrap: **51.14** (v0032 x_r5_tshrink09)
 - T2:heart:val_interp: **62.36** (v0019 h_o1_shrinkmerge)
 - T3:gata4: **47.95** (v0058 five_select_r4spline)
 
 Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (152 rows in LANE_VERDICTS.tsv)
+## Lane verdicts (167 rows in LANE_VERDICTS.tsv)
 - PASS: 1
-- SHIPPED: 116
-- FAIL: 16
+- SHIPPED: 129
+- FAIL: 18
 - VOID: 3
 - PARKED: 4
 - GATE_ONLY: 12
@@ -39,8 +39,10 @@ Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REG
   - T3-SIX-20260930-r2: NULL_STATE_MASS_RESPONSE; identity mass, no random pseudo-effect
   - T3-ARCH-B-EMIT1-20261001: withdrawn before upload: extra within-state sampling noise; model unchanged in repair
   - T3-AR-DELIVERY-DRAFT-v0069: Unregistered serialization draft: parent layers/raw missing; X valid and unchanged in repaired delivery
+  - T3-DIR6-RIDGE-GEARS-20261002: GEARS mse 0.05747 vs no-change 0.05545 vs ridge 0.05729; dual-gate fail, upgrade closed
+  - T1-EXTPRE-20261003: G-return de 0.0189/dir 0.1412 vs standing 0.8868/0.8895; no E10.5 candidate
 
 ## Current branch (from TODO.md)
-- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX，D-20261002-T1MIXSCORE-001，+0.37；⚠️ INDEX/coordination STATUS/T1_TRACKING 回填缺口，handoff 与 staged 件齐备，见下）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推合计仍用 50.53（Route C 全 REJECT，v0029 scale 探针 REJECT）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填（T1 v0049–51 需 staged 落盘＋SHA＋contract，T3 v0070／T2 v0024–29 canonical 已在盘）；② 重读门户确认合计与外推差额；③ organizer 答复；④ T1 新用途批准。零待上传（v0070 与 AR-MIX 包均已交已评）。
+- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX/AR-MIX2 八 lane INDEX 补登记完成；v0054 53.98 TIE 备份，v0049 53.72 高备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推 v0030=51.12（HOLDOUT10 新 best，D-20261003-T2H10SCORE-001；Route C 全 REJECT，v0029 scale 探针 REJECT，v0031 crosswalk REJECT 关闭）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；第一轮 15 运行收敛封存，最佳 run10＝0.92868（差 0.029）；HOLDOUT10 五 lane 全部回分：v0030=51.12 现役，v0032 51.14/v0034 51.02 TIE 备份，v0031/v0033 REJECT；T2 待分清零；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填缺口清零（T1 v0049–v0056 canonical 落盘＋SHA＋contract 全齐）；② 重读门户确认合计（推导 160.64，确认仍 156.06）；③ organizer 答复；④ T1 新用途批准。T2 待分 0（五 lane 全结）。
 
 Full evidence: reports/LANE_VERDICTS.tsv (per-lane) → run RESULT.md → submissions/INDEX.tsv (scores).

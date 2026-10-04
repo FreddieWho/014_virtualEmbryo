@@ -1,5 +1,7 @@
 # Autoresearch: T1 report-proxy (local optimization) — CURRENT PHASE (2026-10-02, user-directed Task1 focus)
 
+> 2026-10-05 structure note: scored upload zips under `deliveries/` were deleted after INDEX registration. Canonical h5ad remains in `submissions/candidates/`. Do not treat a missing zip as a lost candidate. This note does not change the loop rules below.
+
 > T1 PHASE header. The T2 heart-extrap session below (Routes A/B/C, 2026-10-01..02) is
 > CLOSED history — preserved, not resumed. T1 loop state lives in this header +
 > `.auto/log.jsonl` entries with `"phase":"T1"`. T1 files use the `t1_` prefix

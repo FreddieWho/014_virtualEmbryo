@@ -8,12 +8,13 @@
 ## 先看什么
 
 ```text
-根目录 STATUS.md
+docs/00_START_HERE.md
+→ docs/ATOM_MAP.md
+→ reports/SYNTHESIS_T1.md / SYNTHESIS_T2.md / SYNTHESIS_T3.md
+→ 根目录 STATUS.md
 → docs/coordination/T1_TRACKING.md / T2_TRACKING.md / T3_TRACKING.md
-→ docs/coordination/STATUS.md
-→ docs/starter_pack/config/task_contracts.yaml
 → submissions/INDEX.tsv
-→ 相关脚本、实验 registry 和报告
+→ reports/SERVER_SCORE_REGISTRY.md
 ```
 
 ## 项目规则
@@ -30,7 +31,8 @@
 
 | 内容 | 权威来源 |
 |---|---|
-| 官方任务、数据和契约 | `docs/starter_pack/`、官方 starter kit |
+| 接手地图（现役、已关路线、文件放哪） | `docs/ATOM_MAP.md`、`reports/README.md`；不是第二份分数表 |
+| 官方任务、数据和契约 | `docs/_starter_pack/`（`docs/starter_pack` 是兼容链接）、官方 starter kit |
 | 当前任务、agent、lease、阻塞 | `docs/coordination/STATUS.md` |
 | 候选路径、哈希、格式状态 | `submissions/INDEX.tsv` |
 | 服务器分数、差值、submission ID、证据 | `reports/SERVER_SCORE_REGISTRY.md` |

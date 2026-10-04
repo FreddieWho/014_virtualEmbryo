@@ -1,22 +1,36 @@
+最新 T1 事件（2026-10-03 INDEX 补登记）：AR-MIX/AR-MIX2 八 lane（v0049–v0056）早先已回分，今日补 canonical 落盘＋INDEX 登记；v0051=53.92 现役（v0054 53.98 TIE 备份，v0049 53.72 高备份），T1 待分仍为零。
+
+最新 T3 回分（2026-10-03）：v0072已登记、REJECT，较现役低0.42；分布小幅改善未抵消DE损失，当前半步试验关闭，现役v0048不变。[复盘](reports/t3_halfstep_20261003/SCORE_REVIEW.md)。
+
+最新 T3 事件（2026-10-03）：v0071回分已登记，不晋级；现役v0048保持。新v0072仅将新增响应强度减半，contract PASS，未提交/未评分；来源诊断不是本地晋级。[下载与复盘](reports/t3_halfstep_20261003/REPORT.md)。
+
+最新 T3 交付（2026-10-03）：v0071 sparse_scale，以现役v0048为母本；来源完整矩阵筛选有界表达强度转换，保留母本零值结构、contract PASS。未提交/未评分，现役不变。[下载与检查](reports/t3_sparse_response_20261003/REPORT.md)。
+
+最新 T3 回分（2026-10-03）：v0070 已登记、REJECT，较现役低2.13；现役v0048不变，当前配置关闭。来源均值MSE优化未转化为目标H5AD收益；统一残差使非零比例10.46%→62.20%。[复盘](reports/t3_autoresearch_score_review_20261003/REPORT.md)。
+
+最新 T2 回分（2026-10-03）：v0030＝51.12（+0.59 vs 基线）晋级新外推 board best（该榜 2026-09-16 后首次易主），v0031＝49.91 REJECT、crosswalk 轴关闭；16 子项已入库。外推现役切到 v0030，T2 待分清零。dev 目标未达成（0.92868 vs 0.90），reserve 仍 NOT_RUN。[复盘](reports/t2_holdout10_score_review_20261003/REPORT.md)。
+
+最新 T3 本地优化（2026-10-02）：48次实验完成确认目标，固定来源域开发MSE降低20.31%；锁定后原test降低6.12%（区间跨零）。保留预测模块，服务器现役不变，无新候选、未提交/未评分。[报告](reports/t3_autoresearch_20261002/REPORT.md)。
+
 最新 T1 事件（2026-09-30）：十一条回分已登记；v0038/v0043同为53.55（较旧best+0.12），v0038现役、v0043同分备份；T1待分清零，均值平移四臂不晋级。[复盘](reports/t1_score_review_20260930/REPORT.md)。
 
-最新 T3 事件（2026-09-29）：五路线完整运行，事前规则选v0057–v0059三个h5ad入包；6测试和独立进程14项验收通过，未提交/未评分，best仍v0048=47.93。[报告](reports/t3_five_select_20260929/REPORT.md)；[三文件上传包](deliveries/t3five3__t3__upload__20260929.zip)。
+最新 T3 事件（2026-10-01架构回分）：v0066/v0068及10子项已登记，两件REJECT、当前配置关闭、待分清零；A方向最高显示值未抵消DE/共表达损失，B组成未获收益，现役v0048不变。[回分复盘](reports/t3_arch_two_score_review_20261001/REPORT.md)。
 
 # Virtual Embryo 项目状态
 
-更新时间：2026-09-30
+更新时间：2026-10-05（只更新导航；选集仍是上面 2026-10-03 的事件，不是新分数）。
 
-最新事件（2026-09-30 T1回分）：T1 v0038登记为现役53.55，v0043精确同分备份；其余九件不晋级。完整分数见[权威登记](reports/SERVER_SCORE_REGISTRY.md#t1-seven-pbmean-score-return-20260930)。推导合计160.07，尚未获得门户新Total。
+上面的日期条目是事件日志，不是现在的选集。现在的选手和文件地图看 [docs/ATOM_MAP.md](docs/ATOM_MAP.md)。
 
 ## 第一部分：给人读的进展
 
-**已完成什么。** T1十一件回分全部入库。协方差输运和双模型混合各比旧best高0.12；两条失败优化未超过共同骨架，平均数平移四臂均明显退步。
+**已完成什么。** 三个任务的当前选手都已经回分：T1 是 53.92，心脏往后推是 51.12，T3 是 47.93。混合、外推配方和响应强度扫描都进了平台或已经证明没用。结构入口在 [docs/ATOM_MAP.md](docs/ATOM_MAP.md)。
 
-**正在做什么。** T1待分已清零，复盘已完成。下一步核对门户选集及Total，其他任务队列以各自权威登记为准。
+**正在做什么。** 没有新的提交在跑。下一步要么是新机制，要么等主办方回信和门户合计重读。不要按旧的 batch 提示再开一轮。
 
-**卡在哪里。** 网页上一次确认的三个任务合计仍是 **156.06**。按现在各榜现役相加是 160.07，但这不是网页已经返回的合计，不能当成官方总分。心脏往后推的那一项，单独最高是 50.64，合计里用的仍是 50.53，差 0.11，还没对上。另外，我们自己交的“什么都不做”复制件并不是 50 分，所以不能把“超过 50”直接说成已经稳定超过官方的什么都不做。
+**卡在哪里。** 网页上一次确认的三个任务合计仍是 **156.06**。按现在各榜现役相加是 160.64，但这不是网页已经返回的合计，不能当成官方总分。心脏往后推的那一项，新现役是 51.12（v0030，今日刚回分），门户合计待重读确认。另外，我们自己交的“什么都不做”复制件并不是 50 分，所以不能把“超过 50”直接说成已经稳定超过官方的什么都不做。
 
-**准备怎么解决。** 重读一次门户网页，把确认过的合计从 156.06 更新到现在。不再交已经更差的阻尼和基因臂。心脏外推那 0.11 的差额，需要在网页上对，不能在这里猜。
+**准备怎么解决。** 重读一次门户合计。主办方回信之前，同基因的扰动数据继续隔离。没有新机制授权时，不再交混合权重、外推剂量或响应倍率的小变体。
 
 ```
 
@@ -27,17 +41,17 @@ ROADMAP  [##############-] 14/15 节点（N8 仍未正式裁决）
 偏离程度  中
 偏离位置  原定“先选方向或封板”的节点一直没有正式裁决，后面的工作是直接做上去的。
          160.07 只是现役相加，不是网页确认的合计。
-建议      重读网页上的合计（推导值 160.07 待确认）；在此之前不要开新的大路线。
+建议      门户合计仍待确认；用户已单独授权 T3 六项新路线，不以合计对账阻止该执行。
 ```
 
 ## 第二部分：给 agent 的接手信息
 
-- 活跃事项：T1本批十一件已回分并复盘；待门户选集和Total确认。
-- 当前选择：T1 v0038=53.55（v0043同分备份）；T2 62.89 / 62.36 / 合计仍用外推 50.53；T3 v0048=47.93。
-- 核心文件：`submissions/INDEX.tsv`、`reports/SERVER_SCORE_REGISTRY.md`、`REVIEW.md`。
-- 最近T1决策：`D-20260930-T1SCORE-001`。其他任务见各自追踪和决策记录。
-- 下一步：用户重读门户网页，确认合计与外推选集。不自动开新路线。
-- 未闭合：门户合计仍是 156.06；160.07 只是推导值。外推 50.64 与合计里的 50.53 差 0.11，需重读门户。外推 v0017 本次没回分。
+- 先读 `docs/00_START_HERE.md`、`docs/ATOM_MAP.md`、`reports/SYNTHESIS_T1.md` / `T2` / `T3`。不要从 `docs/batch*` 提示开工。
+- 当前选择：T1 v0051=53.92（v0054 53.98 TIE 备份，v0049 53.72 高备份）；T2 62.89 / 62.36 / 外推 v0030=51.12；T3 v0048=47.93。
+- 核心文件：`submissions/INDEX.tsv`、`reports/SERVER_SCORE_REGISTRY.md`、`docs/ATOM_MAP.md`。
+- 最近决策：`D-20261005-STRUCT-001`（只改导航，不改选集）；科学决策仍看各任务追踪。
+- 下一步：三任务待分为 0。没有新机制授权就不生成候选。T3 重开仍须新增响应依据。
+- 未闭合：门户合计仍是 156.06；160.64 只是推导值（53.92+58.79+47.93）。门户 Total 重读后确认。
 
 ---
 
@@ -48,8 +62,10 @@ ROADMAP  [##############-] 14/15 节点（N8 仍未正式裁决）
 ## 总体状态
 
 - 比赛优先；starter_pack 已关闭为 `CLOSED_FOR_COMPETITION_BASELINE`。
-- 当前aggregate：**158.14**（2026-09-28用户回分登记，51.92+58.29+47.93；见SERVER_SCORE_REGISTRY.md，非本轮新成绩）。
-- 任务分数摘要（T1已更新；其他分项历史快照，以registry为准）：T1 **51.92**（v0024，2026-09-28），T2 **58.29**（derived，与 156.06 自洽；board 62.29 / 62.04 / 50.53），T3 **46.95**（v0009/v0010 并列）。
+- 门户确认过的合计仍是 **156.06**（2026-09-26 转录）。按现在各榜现役相加的推导值是 **160.64**（53.92+58.79+47.93）。160.64 不是门户已返回的合计。
+- 任务分数：T1 **53.92**（v0051，2026-10-02），T2 **58.79**（62.89 / 62.36 / 外推 v0030 51.12），T3 **47.93**（v0048）。
+- **未闭合的账**：门户确认过的合计仍是 156.06；推导合计 160.64（53.92+58.79+47.93）待门户页面确认。在此之前不引用推导值为服务器值。
+- T3待分已关闭：本轮六件全部回分、无晋级；T1/T2队列以各自权威账本为准。
 - 科学 promotion 仍开放，但 `blocks_submission: false`。
 - 仓库已于 2026-09-02 完成首次推送：`github.com/FreddieWho/014_virtualEmbryo` main 分支（commit `cde3c9c`，251 个代码/文档/配置文件；`data/`、`artifacts/`、`outputs/` 等大文件按 `.gitignore` 排除）。
 
@@ -73,17 +89,19 @@ ROADMAP  [##############-] 14/15 节点（N8 仍未正式裁决）
 
 ### T1 — single-cell temporal
 
-1. `v0038_seven_n2covot`：**53.55**，现役；较旧best +0.12。
-2. `v0043_seven_s2mix`：**53.55**，精确同分备份，不并列晋级。
-3. `v0035_three_r2joint`：**53.43**，保留为历史高分参照。
+1. `v0051_mix36x38a`：**53.92**，现役（2026-10-02）；混合族 8 条 scored 全入库。
+2. `v0054_mix3638even`：**53.98**，TIE 数值最高备份（±0.1 带内，不晋级）。
+3. `v0049_mix35x38a`：**53.72**，高备份（超旧 best 0.17，落后现役 0.20，不并列晋级）。
 
 同批精确同分按用户供给列表顺序登记，非上传先后证据。历史见[T1_TRACKING.md](docs/coordination/T1_TRACKING.md)，复盘见[报告](reports/t1_score_review_20260930/REPORT.md)。
 
 ### T2 — spatial-temporal
 
-1. 当前 per-board selection：B1-A1 L1 embryo 60.15 + T2-J1 v0009 `j1_fgw_assignment` heart_interp **57.25** + baseline heart extrap 50.53；T2 board 均值 55.98、Total **151.2**（均为 2026-09-04 服务器确认；子项见 SUBMETRIC_REGISTRY）。
-2. B1-A1 `L1_FORMAL_LOG_RMS`：raw scores 60.1/56.3/50.2；heart extrap 低于 baseline 50.5。
-3. B1-A1 `L2_ALL_STAGE_LOG_RMS_OLS`：raw scores 59.9/55.3/49.8，已评分 backup。
+1. 当前 per-board selection：`v0014` embryo **62.89** + `v0019` heart_interp **62.36** + `v0030` heart_extrap **51.12**（2026-10-03 新 best；上一任 baseline 50.53）。
+2. 前任 `v0011 L1_SHRINK` heart_extrap **50.64** 已被 v0030（51.12）取代；更早的未晋级最高 50.74（v0022，未并列）一并退为参照。
+3. T2-J1 v0009 heart_interp **57.25** 已被 v0013 取代。
+
+T2 三条 board 的现役机制不同：embryo/heart_interp 是"均值+组成桥"（几何沿用 pycpd 插值结果），heart_extrap 是中位数位移＋library 守恒（v0030，5 共享态）。
 
 Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1`：heart_interp v0009 服务器 **57.3（+0.6 vs v0007 56.7）** 晋级 board best（2026-09-04 回填）；embryo_interp v0008 未上传，保持 `HOLD_AS_COMPONENT` 不可变。
 
@@ -91,13 +109,13 @@ Batch3 `T2-J1-FGW-ASSIGNMENT-20260903-v1`：heart_interp v0009 服务器 **57.3�
 
 ### T3 — gene perturbation
 
-1. B2-T3-A1 `L1_STRICT_WT_DIRECT`（v0006）：**45.5**，已评分，并列当前 best（2026-09-04 回填）。
-2. B2-T3-A1 `L2_GATA4_GATA6_CONDITION_AWARE`（v0007）：**45.5**，已评分，并列当前 best。
-3. `wt_identity`（v0001）：**45.3**，已评分，历史 best（被并列超越 0.2）。
+1. v0048 n2hurdle：**47.93**，已评分，当前best。
+2. v0046 o2shrink：**47.65**，已评分备选。
+3. v0034 r6meanfix：**47.53**，已评分备选。
 
-两条新候选是其五次尝试（v0002–v0005 及 baseline 之后）里首次超过 `wt_identity` 的结果；并列说明服务器无法区分 lane，不声称偏好。derived T3=45.5、derived Total≈149.7 待服务器页面确认。
+v0049–v0059 十一条已全部回分：最高 v0058 47.95（平局），v0056/v0059 精确打平 47.93，都不晋级。以下为历史研究记录。
 
-Batch2 `B2-T3-A1` 已生成两条未评分候选：L1 `v0006`（49 个下游基因 + Gata4）和 L2 `v0007`（73 个下游基因 + Gata4/Gata6 half-dose）。二者 contract/protected 均 PASS；本地 Mab21l2 source-only 诊断不等于 Gata4 或服务器分数，状态保持 `score_pending`、结论 `HOLD_AS_COMPONENT`，不自动上传。
+Batch2 `B2-T3-A1` 的 v0006/v0007 后来已评分 45.5，并被后续版本超过。这里不再把它们写成待评分。
 
 Batch3 `T3-S1-PRIOR` 已形成 prior/gate bundle：31,458 条 state×gene 记录，L1/L2 非零分别为 2,050/5,125；用户授权后的本地方法部署与 CollecTRI/OmniPath panel-scoped 内容审计均为 `PASS`。正式分析前的 5 个 current parent contract/registry SHA256、protected-field/round-trip 复核和实际 22 项接口测试均已闭合；directed-evidence 组件为 `COMPONENT_PASS`，但 candidate admission 仍 `HOLD`，这些预检不等于 state-specific activity validation。β-catenin 相关 prior 仍显式为 `sign=0/EXTERNAL_KNOWLEDGE_AUDITED_NOT_INTEGRATED`，S1 prior 未消费 state-joined evidence。prior/gate 仍为 `HOLD_AS_COMPONENT`，原因是 stability sensitivity；不进入 H5AD 或候选生成。
 
@@ -111,9 +129,9 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | v0038=53.55现役，v0043同分备份；Top3第三为v0035 | 十一件全部scored，T1待分清零；均值平移四臂不晋级 |
-| T2 | B4-T2-R2 四 lane：embryo v0009=**61.79**（+1.64）晋级、v0010=**62.29**（+2.14）新 best；heart v0013=**62.04**（+4.79）新 best、v0012=56.27（-0.98）淘汰；两 board 均 L2>L1。T2-R3 三 lane 按用户决定关闭不评分 | selection：embryo v0010 + heart v0013 + extrap baseline；Total 153.7 已确认 |
-| T3 | best v0048=47.93；五路线全量完成，选v0057–v0059三件入包，未提交/未评分 | 旧v0049–v0056待分；匹配KO评分NOT_RUN；blocks_submission:false |
+| T1 | v0051=53.92现役，v0054 TIE 备份（53.98）；混合族饱和 ~53.7 | 八 lane 全部scored，T1待分清零；混合族内调参无服务器意义 |
+| T2 | 胚胎 62.89、心插 62.36 双晋级。外推 v0030=51.12 现役 | 门户 Total 待重读（推导 160.64 待确认）；同族调参已入平台期 |
+| T3 | best v0048=47.93，v0058 平局备份不变 | 两架构已评分REJECT、待分0；科学增量未确立，blocks_submission: false |
 
 ## 更新规则
 
@@ -126,3 +144,9 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 - 2026-09-20 T3 R5/R6：已补第二次隔离过滤与用途门；尚未获准训练。下一步为剩余扰动/信号链审查、书面用途确认及shape版完整集成，见 [准备报告](reports/t3_r56_readiness_20260920/REPORT.md)。既有best与待评分队列不变。
 
 - 2026-09-20 T3更新：R5已补齐最小信号链并生成v0032/v0033，合约PASS，未提交/未评分；[交付包](deliveries/r5sig__t3__upload__20260920.zip)。R6仍待审查，书面确认/shape-only为项目内部约束。见[本轮报告](reports/t3_r5_completion_20260920/REPORT.md)。下一步收集服务器分数，best不变。
+
+- 2026-09-29：按已回填分数同步当前选择。T1 best 改为 v0029=52.5；T3 修复三条改为已评分不晋级；T2 低幅度两条改为已评分不晋级。158.72 只记为推导值。旧的“最新事件”横幅不再放在文首，避免和当前选择矛盾。
+
+- 2026-09-29：三批回分。T1 best 改为 v0035=53.43；T2 改为胚胎 62.89 / 心插 62.36；T3 第二轮关闭。推导合计记 159.95（待门户确认）。待分只剩 T3 六条。
+
+最新 T2 回分（2026-10-03 第二轮）：v0032＝51.14（+0.02，TIE 带内不晋级）、v0033＝50.89（REJECT，半剂量削弱 de）、v0034＝51.02（TIE 不晋级）；现役 v0030=51.12 不变，T2 待分清零。服务器确认 de 剂量最优 0.9（与 dev 一致）；recipe 家族进入 ~51.1 平台期，下一波需行集合/几何级新机制或封存。[复盘](reports/t2_holdout10_score_review_20261003/REPORT.md)。

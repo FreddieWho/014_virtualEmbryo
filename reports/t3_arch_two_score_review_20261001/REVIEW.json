@@ -1,0 +1,45 @@
+{
+  "record_date": "2026-10-01",
+  "score_evidence": "USER_SCORE_REPORT.md",
+  "source": "user_reported_portal_values",
+  "independent_portal_query": false,
+  "submission_ids": null,
+  "submitted_timestamps": null,
+  "new_portal_Total": null,
+  "selection_unchanged": "v0048",
+  "historical_max_registered_direction_before": 51.2,
+  "new_direction_readout": "53.5",
+  "scientific_maturity": "USER_REPORTED_SERVER_DESCRIPTIVE; mechanism NOT_IDENTIFIED",
+  "weighted_breakdown_is_approximate": true,
+  "candidates": [
+    {
+      "version": "v0066",
+      "identity_check": "canonical/package/INDEX SHA256 match; existing contract PASS",
+      "verdict": "REJECT",
+      "delta_vs_selection": -4.72,
+      "weighted_submetric_contributions_vs_selection": {
+        "de_score": -1.68,
+        "de_direction": 0.875,
+        "severity_slope": 0.0,
+        "mmd_u": -1.26,
+        "variogram": -2.688
+      },
+      "approximate_weighted_delta": -4.753
+    },
+    {
+      "version": "v0068",
+      "identity_check": "canonical/package/INDEX SHA256 match; existing contract PASS",
+      "verdict": "REJECT",
+      "delta_vs_selection": -1.56,
+      "weighted_submetric_contributions_vs_selection": {
+        "de_score": -1.14,
+        "de_direction": -0.025,
+        "severity_slope": 0.0,
+        "mmd_u": -0.204,
+        "variogram": -0.192
+      },
+      "approximate_weighted_delta": -1.561
+    }
+  ],
+  "T3_pending_after": 0
+}

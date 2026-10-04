@@ -1,0 +1,691 @@
+{
+  "scope": "Existing artifacts only; no target truth, retraining, candidate or portal scoring.",
+  "index_t3_rows": 59,
+  "score_status_counts": {
+    "registered": 12,
+    "scored": 41,
+    "invalidated_unsubmitted": 6
+  },
+  "input_hashes": {
+    "submissions/candidates/T3_gata4/v0008_b4p0_l0_exact_floor/submission.h5ad": "478786034343cc3ed1a604cd494ab2134751f4a1f4696204f9d105e404bdbef3",
+    "submissions/candidates/T3_gata4/v0009_b4_t3_r1_l1_gata4_zero_all/submission.h5ad": "c6be65ec7d8c8a4b94bce936ff0cad985ac26f78c77ea3e4f68643f07076b088",
+    "submissions/candidates/T3_gata4/v0018_g0_t3_r6_cipher/submission.h5ad": "a82b16e008eb9158097b356322db455604117fee0edd7fbd13112768765aab3f",
+    "submissions/candidates/T3_gata4/v0019_g0_t3_r7_split/submission.h5ad": "4b6c5b4541219d3726d8f85100aedd16b6e5cb02a4e2bb4c7c5a4a2c0b0e133d",
+    "submissions/candidates/T3_gata4/v0020_g0_t3_r8_knk/submission.h5ad": "d8b50dd9721ca3a9a821401d9603d7ce1ecec4408a73f03bbbe49246aeb2f717",
+    "submissions/candidates/T3_gata4/v0022_g0_t3_r10_graph/submission.h5ad": "5423dc569723ef87c1af4d06d7826df2708e45f87bb1dbc491a96116735821d6",
+    "submissions/candidates/T3_gata4/v0034_next_r6meanfix/submission.h5ad": "4e32ae02d1ea520ee6bf8497ff659d1357227acdc47303da5c4fdeba02b57429",
+    "submissions/candidates/T3_gata4/v0035_next_r6graphfix/submission.h5ad": "f27ca0bdd9a15fa7fd239a5d7919e5dec341575f883d634d6a12e3b094846280",
+    "submissions/candidates/T3_gata4/v0036_next_r3linfix/submission.h5ad": "b15c50fddda5d02220a3a8a2ca0fdf2420a42787267eb7b341f441fc6d04a2d7",
+    "submissions/candidates/T3_gata4/v0037_next_r3splfix/submission.h5ad": "9b82a6006876e1462c02144254402ef786897df398a8c1037f0d22b03d5ed374",
+    "submissions/candidates/T3_gata4/v0040_next_r4panelfix/submission.h5ad": "7bc782fbb46f958cf58837bd2f07b8a5da7ff15e3980f4733f376d50fac0a7ca",
+    "submissions/candidates/T3_gata4/v0041_next_r4medfix/submission.h5ad": "879acc882f291f32dd774e10d63d42dd1b30d335712d8ad3a882fb9150527c3b",
+    "submissions/candidates/T3_gata4/v0046_next_o2shrink/submission.h5ad": "924c33703d2fc1aa0393072cafa91f1ba8d6825704eddfd45ce01b3b05aaf909",
+    "submissions/candidates/T3_gata4/v0048_next_n2hurdle/submission.h5ad": "6f4b7096ca83407d942b36671523263ec21a5e554cde668daee644ad9eaeda29",
+    "submissions/candidates/T3_gata4/v0058_five_select_r4spline/submission.h5ad": "b671f35b7808baff1743f927e1c9c82bfa79c59a9ce831357a6cf5d884982db2",
+    "artifacts/tool_integration/T3-S1A-STATE-JOIN-20260901-v7/celloracle/Gata4_state_response.tsv": "36588d3912264256469acbd868af8631af9595286d8d56460a92ea60884f56a2",
+    "submissions/INDEX.tsv": "c5000eb50c66e9d32f0ab3e7a1deda8667612c1affb3500bc70677d4bc60a235",
+    "reports/SERVER_SUBMETRIC_REGISTRY.tsv": "9cd1e6077e7da455f94d5a3c7a6258602e41963ce1983c578d01fa39e77fd58c",
+    "scripts/g0/t3_r6_cipher.py": "b02d9a068b3640684d713948e504b5232c7c338bb4e92723115f94f69f2b13a0",
+    "scripts/g0/_t3_util.py": "0944bea881c1c6ccb623d9e03c548fc205eacfbfbd2db4536f0012d33c315308",
+    "scripts/g0/t3_r8_knk.py": "d280b502d83adec43e427747d887959c00cb4fa77ae330b62edccc52aa11b5f8",
+    "scripts/t3_s1a_state_join.py": "fa60a2b73d4ef6b9ab22f574f2b4aa3df7296bb555b756a176c40dbb7874f422",
+    "scripts/t3_next/five.py": "3b8bbc88fb52970d10ec41b859f55463f9133d28bc36489ed200debe79f64db4",
+    "scripts/t3_next/five_ops.py": "42791d3197402abe871b81ebf98e844ff7ee5fc777dff125b8133912c85bc3a9",
+    "third_party/veckit/common/core_metrics.py": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31"
+  },
+  "wt": {
+    "full_cells": 24826,
+    "carrier_cells": 7449,
+    "carrier_zero_fraction": 0.8953701167942005,
+    "carrier_gata4_positive_cells": 1354,
+    "carrier_gata4_zero_cells": 6095,
+    "full_gata4_positive_cells": 4724,
+    "full_obs_columns": [
+      "celltype",
+      "cm_celltype"
+    ],
+    "carrier_original_types": {
+      "NCC": 561,
+      "Unknown": 426,
+      "V-CSE": 330,
+      "Allantois": 30,
+      "a-FG": 226,
+      "PAM-4": 209,
+      "aPHM": 355,
+      "Neural Tube": 1155,
+      "D-FG": 209,
+      "Intra-Endoth-1": 290,
+      "PAM-2": 134,
+      "d-CSE": 498,
+      "EXE-Endoderm": 31,
+      "HEM-Endoth": 47,
+      "ExEM-2": 45,
+      "Intra-Endoth-2": 122,
+      "Forebrain": 3,
+      "Endo": 288,
+      "ExEM-1": 239,
+      "Lateral FG": 132,
+      "SOM": 13,
+      "Peri": 130,
+      "V-CM": 639,
+      "JCF": 137,
+      "Caudal Epiblast": 14,
+      "pSE": 26,
+      "PAM-1": 219,
+      "LPM": 12,
+      "Hindgut": 6,
+      "pPHM": 275,
+      "IFT-CM": 343,
+      "PAM-3": 283,
+      "Gut Endoderm": 22
+    }
+  },
+  "scored_artifact_geometry": [
+    {
+      "version": "v0001",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0002",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0003",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0004",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0005",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0006",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0007",
+      "cells": 7449,
+      "same_rows_and_order_v0009": false,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": false
+    },
+    {
+      "version": "v0008",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0009",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0010",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0011",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0012",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0013",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0014",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0015",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0016",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0017",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0018",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0019",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0020",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0021",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0022",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0023",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0024",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0025",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0026",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0027",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0030",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0031",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0032",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0033",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0034",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0035",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0036",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0037",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0040",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0041",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0042",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0044",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0046",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0047",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0048",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0049",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0050",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0051",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0052",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0053",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0054",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0055",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0056",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0057",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0058",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    },
+    {
+      "version": "v0059",
+      "cells": 7449,
+      "same_rows_and_order_v0009": true,
+      "same_genes_and_order_v0009": true,
+      "same_coordinates_v0009": true
+    }
+  ],
+  "representative_expression": [
+    {
+      "version": "v0008",
+      "downstream_changed_cells": 0,
+      "downstream_changed_genes": 0,
+      "downstream_changed_entries": 0,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8950065780641697,
+      "downstream_mean_delta_l2": 0.0,
+      "downstream_mean_delta_maxabs": 0.0,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0009",
+      "downstream_changed_cells": 0,
+      "downstream_changed_genes": 0,
+      "downstream_changed_entries": 0,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.0,
+      "downstream_mean_delta_maxabs": 0.0,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0018",
+      "downstream_changed_cells": 7449,
+      "downstream_changed_genes": 119,
+      "downstream_changed_entries": 351854,
+      "downstream_changes_in_gata4_zero_cells": 277408,
+      "activated_zero_entries": 150103,
+      "zero_fraction": 0.8550685998120553,
+      "downstream_mean_delta_l2": 0.006740452623707292,
+      "downstream_mean_delta_maxabs": 0.0040209032190071685,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0019",
+      "downstream_changed_cells": 1546,
+      "downstream_changed_genes": 119,
+      "downstream_changed_entries": 83080,
+      "downstream_changes_in_gata4_zero_cells": 37642,
+      "activated_zero_entries": 31385,
+      "zero_fraction": 0.8869434823466237,
+      "downstream_mean_delta_l2": 0.0025601507368049224,
+      "downstream_mean_delta_maxabs": 0.0011757242389934498,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0020",
+      "downstream_changed_cells": 7449,
+      "downstream_changed_genes": 115,
+      "downstream_changed_entries": 366842,
+      "downstream_changes_in_gata4_zero_cells": 292840,
+      "activated_zero_entries": 168056,
+      "zero_fraction": 0.8502483554839576,
+      "downstream_mean_delta_l2": 0.39363440994633636,
+      "downstream_mean_delta_maxabs": 0.12826860297892875,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0022",
+      "downstream_changed_cells": 7449,
+      "downstream_changed_genes": 53,
+      "downstream_changed_entries": 204720,
+      "downstream_changes_in_gata4_zero_cells": 160150,
+      "activated_zero_entries": 87472,
+      "zero_fraction": 0.8718845482615116,
+      "downstream_mean_delta_l2": 0.14514729224232734,
+      "downstream_mean_delta_maxabs": 0.07095402851250687,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0034",
+      "downstream_changed_cells": 7447,
+      "downstream_changed_genes": 308,
+      "downstream_changed_entries": 303912,
+      "downstream_changes_in_gata4_zero_cells": 237924,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.6148572663918497,
+      "downstream_mean_delta_maxabs": 0.16335152568297348,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0035",
+      "downstream_changed_cells": 7449,
+      "downstream_changed_genes": 499,
+      "downstream_changed_entries": 389694,
+      "downstream_changes_in_gata4_zero_cells": 302508,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.7770435516167804,
+      "downstream_mean_delta_maxabs": 0.23172019244616648,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0036",
+      "downstream_changed_cells": 1184,
+      "downstream_changed_genes": 318,
+      "downstream_changed_entries": 8986,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.06468793763243058,
+      "downstream_mean_delta_maxabs": 0.04329752890051315,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0037",
+      "downstream_changed_cells": 1184,
+      "downstream_changed_genes": 318,
+      "downstream_changed_entries": 8987,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.06598145617709972,
+      "downstream_mean_delta_maxabs": 0.043460889220445775,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0040",
+      "downstream_changed_cells": 1535,
+      "downstream_changed_genes": 238,
+      "downstream_changed_entries": 10829,
+      "downstream_changes_in_gata4_zero_cells": 4825,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.017189306331919372,
+      "downstream_mean_delta_maxabs": 0.016944127077063484,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0041",
+      "downstream_changed_cells": 1880,
+      "downstream_changed_genes": 360,
+      "downstream_changed_entries": 61879,
+      "downstream_changes_in_gata4_zero_cells": 25408,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.0214700158324662,
+      "downstream_mean_delta_maxabs": 0.016944127077063484,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0046",
+      "downstream_changed_cells": 7449,
+      "downstream_changed_genes": 498,
+      "downstream_changed_entries": 389020,
+      "downstream_changes_in_gata4_zero_cells": 301905,
+      "activated_zero_entries": 0,
+      "zero_fraction": 0.8953701167942005,
+      "downstream_mean_delta_l2": 0.6178254346753286,
+      "downstream_mean_delta_maxabs": 0.1635356047022565,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0048",
+      "downstream_changed_cells": 1354,
+      "downstream_changed_genes": 499,
+      "downstream_changed_entries": 301307,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 214296,
+      "zero_fraction": 0.8378332662102296,
+      "downstream_mean_delta_l2": 0.1811455075798185,
+      "downstream_mean_delta_maxabs": 0.04877872046955647,
+      "downstream_mean_delta_ge_025": 0
+    },
+    {
+      "version": "v0058",
+      "downstream_changed_cells": 1354,
+      "downstream_changed_genes": 499,
+      "downstream_changed_entries": 281864,
+      "downstream_changes_in_gata4_zero_cells": 0,
+      "activated_zero_entries": 194810,
+      "zero_fraction": 0.8430651094106592,
+      "downstream_mean_delta_l2": 0.20015614036655596,
+      "downstream_mean_delta_maxabs": 0.0512280508291723,
+      "downstream_mean_delta_ge_025": 0
+    }
+  ],
+  "celloracle_summary": {
+    "rows": 37924,
+    "states": 76,
+    "genes": 499,
+    "zero_state_gene_medians": 30337,
+    "zero_state_gene_median_fraction": 0.7999419892416412,
+    "genes_with_nonzero_mean_effect": 488,
+    "genes_with_opposite_sign_states": 394,
+    "genes_mean_absolute_over_absolute_mean_gt5": 76,
+    "effect_extraction": "median within state; equal-weight mean across states in R6 adapter"
+  },
+  "wt_dispersion_cap": {
+    "source_cells": 17057,
+    "examined_downstream_genes": 499,
+    "zero_iqr_genes": 378,
+    "celloracle_nonzero_effect_genes_suppressed_by_zero_iqr": 369,
+    "suppressed_gene_examples": [
+      "A2m",
+      "AI646519",
+      "Abca6",
+      "Abca8a",
+      "Abcc9",
+      "Abi3bp",
+      "Ablim3",
+      "Acer2",
+      "Ackr3",
+      "Acvr1c",
+      "Adamts12",
+      "Adamts8",
+      "Adcy2",
+      "Adgrf5",
+      "Adgrg6",
+      "Adgrl4",
+      "Adm",
+      "Afp",
+      "Ahsg",
+      "Akr1c19",
+      "Aldh1a2",
+      "Aldob",
+      "Alox5ap",
+      "Alx1",
+      "Angptl6"
+    ]
+  },
+  "server_submetric_summary": {
+    "t3_rows": 200,
+    "versions": 40,
+    "severity_observations": 40,
+    "severity_distinct_skills": [
+      50.0
+    ],
+    "source": "reports/SERVER_SUBMETRIC_REGISTRY.tsv; user-reported server skills; not recomputed scores"
+  }
+}

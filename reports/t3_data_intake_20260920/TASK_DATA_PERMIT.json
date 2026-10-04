@@ -1,15 +1,15 @@
 {
   "task": "T3:gata4",
   "date": "2026-09-20",
-  "status": "QUARANTINE_NOT_APPROVED",
-  "model_input": false,
+  "status": "RELEASED_BY_OWNER_20261002",
+  "model_input": true,
   "allowed_operations": [
     "metadata_inspection",
     "explicit_row_filtering",
-    "structural_validation"
+    "structural_validation",
+    "training_on_released_set_only"
   ],
   "forbidden_operations": [
-    "training",
     "embedding",
     "clustering",
     "pseudobulk",
@@ -31,5 +31,12 @@
   "r5_resource_audit": "reports/t3_data_intake_20260920/R5_RESOURCE_AUDIT.json",
   "organizer_clearance": "NOT_PRESENT",
   "forbidden_records_remaining": "NOT_ASSERTED_FULL_REVIEW_PENDING",
-  "training": "NOT_RUN"
+  "training": "NOT_RUN",
+  "release": {
+    "date": "2026-10-02",
+    "decision": "D-20261002-T3DIR6-001",
+    "scope": "GSE261783_OP2_resting_provisional_raw.h5ad only (26 perturbations, 0/26 blacklist hits)",
+    "residual": "Smarca4/Rest/Yy1 functional phenocopy review open (prompts, not exclusions); organizer clearance absent"
+  },
+  "scope_note": "forbidden_operations apply to non-released sources; on the released GSE261783 OP2 set, direction-6 training (incl. response learning) is allowed per D-20261002-T3DIR6-001"
 }

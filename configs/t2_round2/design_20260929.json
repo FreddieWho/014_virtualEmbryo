@@ -1,0 +1,98 @@
+{
+  "schema": "ve.t2.round2.v1",
+  "date": "2026-09-29",
+  "seed": 20260929,
+  "task": "T2",
+  "authorization": "User: focus on T2's three subtasks; per subtask 5 submittable h5ad (3 new-route explorations + 2 improvements/merges of existing routes); may read REVIEW.md history and use web search for inspiration",
+  "ownership": [
+    "scripts/t2_round2",
+    "configs/t2_round2",
+    "tests/t2_round2",
+    "artifacts/t2_round2",
+    "reports/t2_round2_20260929"
+  ],
+  "blocks_submission": false,
+  "target_used": false,
+  "no_parameter_search": true,
+  "threads": 8,
+  "memory_gb": 64,
+  "max_hours_per_lane": 4,
+  "boards": {
+    "embryo": {
+      "key": "T2:embryo:val_interp",
+      "parent": "submissions/candidates/T2_embryo_val_interp/v0010_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad",
+      "parent_sha256": "34caae70aff220b6a754dedea54bd27a5c4d0962305341994dd239f60f14364e",
+      "bridge_parent": "submissions/candidates/T2_embryo_val_interp/v0002_g1_formal_log_rms/submission.h5ad",
+      "bridge_parent_sha256": "392c470e4af35797ad27c100e773c1a7695c989baed95c911fceb0b5d7965fd4",
+      "panel": "data/gene_panel/T2__embryo__val_interp.genes.txt",
+      "stages": {"e675": "data/E6.75.h5ad", "left": "data/E7.25.h5ad", "right": "data/E8.0.h5ad"},
+      "stage_times": {"e675": 6.75, "left": 7.25, "right": 8.0, "target": 7.5},
+      "lam": 0.3333333333333333,
+      "n_obs": 5000,
+      "versions": {"e_n1_qbridge": "v0011", "e_n2_trend3": "v0012", "e_n3_substate2": "v0013", "e_o1_shrinkmerge": "v0014", "e_o2_scalmass": "v0015"},
+      "local_eval": {"mode": "record_only", "pseudo_target": "data/E7.25.h5ad", "reference": "data/E6.75.h5ad", "scorer_seed": 20260830}
+    },
+    "heart": {
+      "key": "T2:heart:val_interp",
+      "parent": "submissions/candidates/T2_heart_val_interp/v0013_b4_t2_r2_l2_mean_mass_bridge/submission.h5ad",
+      "parent_sha256": "9080cfc3adbed773ad57a601548e15427b25696461b68d083a45c522b85daf08",
+      "bridge_parent": "submissions/candidates/T2_heart_val_interp/v0009_j1_fgw_assignment/submission.h5ad",
+      "bridge_parent_sha256": "4f2e7552a4ff5a11191f8cf6f1e94393882d131aa76855e5da34faef3f43ac43",
+      "panel": "data/gene_panel/T2__heart__val_interp.genes.txt",
+      "stages": {"left": "data/E8.25_late.h5ad", "right": "data/E8.75.h5ad", "e95": "data/E9.5.h5ad"},
+      "stage_times": {"left": 8.25, "right": 8.75, "e95": 9.5, "target": 8.5},
+      "lam": 0.5,
+      "n_obs": 5872,
+      "versions": {"h_n1_qbridge": "v0016", "h_n2_curve95": "v0017", "h_n3_cmjoin": "v0018", "h_o1_shrinkmerge": "v0019", "h_o2_libnorm": "v0020"},
+      "local_eval": {"mode": "flag_5pct_nmmd", "pseudo_target": "data/E8.75.h5ad", "reference": "data/E8.25_late.h5ad", "scorer_seed": 20260830}
+    },
+    "extrap": {
+      "key": "T2:heart:val_extrap",
+      "parent": "submissions/scored/baseline-001/T2_heart_val_extrap/submission.h5ad",
+      "parent_sha256": "f30beba62da673bb4c980d92eec2bc9ea03696e5c2b65414307c2e0402bd7504",
+      "shrink_parent": "submissions/candidates/T2_heart_val_extrap/v0011_g0_t2_r2_shrink/submission.h5ad",
+      "shrink_parent_sha256": "38edc52e3a9af7cdf87085c0f87d12d630dcfec8d5bb55735b383e62017d44e9",
+      "panel": "data/gene_panel/T2__heart__val_extrap.genes.txt",
+      "stages": {"e825": "data/E8.25_late.h5ad", "left": "data/E8.75.h5ad", "right": "data/E9.5.h5ad"},
+      "stage_times": {"e825": 8.25, "left": 8.75, "right": 9.5, "target": 10.5},
+      "n_obs": 25179,
+      "versions": {"x_n1_lineage": "v0017", "x_n2_trend3": "v0018", "x_n3_compmix": "v0019", "x_o1_trendshrink": "v0020", "x_o2_shrinkcomp": "v0021"},
+      "local_eval": {"mode": "record_plus_nmmd_flag", "proxy": "R1_E95_CARDIAC", "scorer_seed": 20260916}
+    }
+  },
+  "mechanisms": {
+    "qbridge": {"min_cells_per_bracket_type": 30, "fallback": "mean_shift", "clip_negative_zero": true},
+    "trend3": {"fit": "least_squares_linear_in_time", "share_space": "log_ratio", "share_clip_nonnegative": true},
+    "substate2": {"kmeans_k": 2, "pca_dim": 10, "min_type_cells_to_split": 120, "min_substate_cells_per_bracket": 30, "fallback": "coarse_type"},
+    "shrink": {"C": 2.0, "weight": "abs_t_over_abs_t_plus_C"},
+    "scalmass": {"rule": "uniform_rescale_coords_so_resampled_cloud_RMS_equals_parent_v0002_formal_log_rms_target"},
+    "curve95": {"lagrange_weights_at_8p5": [0.4, 0.6666666666666667, -0.06666666666666667], "share_space": "log_ratio"},
+    "cmjoin": {"cm_group_table": {"CC/CM": "CM", "vCM1": "CM", "vCM2": "CM", "aCM1": "CM", "aCM2": "CM", "FHF/JCF1": "FHFJCF", "FHF/JCF2": "FHFJCF", "FHF/JCF": "FHFJCF", "aSHF1": "aSHF", "aSHF2": "aSHF", "aSHF": "aSHF", "pSHF": "pSHF"}, "unknown_label": "Unknown", "min_joint_cells_per_bracket": 30, "fallback": "coarse_type"},
+    "libnorm": {"rule": "rank_preserving_library_remap_to_lambda_interpolated_empirical_library_distribution_per_type"},
+    "lineage": {"ancestor_rule": "argmax_cosine_pseudobulk_logpanel_over_shared_E875_E9.5_types_with_n875>=30", "damp": 1.0, "map_frozen_at": "INPUT_LOCK"},
+    "xtrend3": {"accel_damp": 0.5, "u1_per_day": 0.5, "u2_per_day": 0.75, "fallback": "baseline_delta_v2"},
+    "compmix": {"share_space": "log_ratio_linear_per_day", "max_fold_change_per_type": 2.0, "clip_nonnegative": true, "renormalize": true}
+  },
+  "engineering_gate": {
+    "library_ratio_q01_min": 0.25,
+    "library_ratio_q99_max": 4.0,
+    "variance_ratio_min": 0.1,
+    "variance_ratio_max": 10.0,
+    "clip_fraction": "disclose_only",
+    "deterministic_replay": "byte_identical"
+  },
+  "contract": {
+    "mass_lane_exemption_classes": [
+      "obs_names/order does not exactly match",
+      "obs DataFrame does not exactly match",
+      "layers content hash mismatch",
+      "row composition change"
+    ],
+    "normalization_marker": "as_parent_bridge_script"
+  },
+  "validation": {
+    "hidden_truth_access": false,
+    "server_upload": false,
+    "score_claim_before_backfill": false
+  }
+}

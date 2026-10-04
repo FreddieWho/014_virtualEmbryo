@@ -1,0 +1,90 @@
+{
+  "baseline": "v0048 registered submetrics",
+  "weights": {
+    "de_score": 0.3,
+    "de_direction": 0.25,
+    "severity_slope": 0.25,
+    "mmd_u": 0.12,
+    "variogram": 0.08
+  },
+  "records": [
+    {
+      "version": "v0060",
+      "reported_total_delta": -1.02,
+      "weighted_rounded_submetric_delta": -1.036,
+      "contribution": {
+        "de_score": -1.02,
+        "de_direction": -0.1,
+        "severity_slope": 0.0,
+        "mmd_u": -0.036,
+        "variogram": 0.12
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    },
+    {
+      "version": "v0061",
+      "reported_total_delta": -2.42,
+      "weighted_rounded_submetric_delta": -2.448,
+      "contribution": {
+        "de_score": -0.9,
+        "de_direction": 0.3,
+        "severity_slope": 0.0,
+        "mmd_u": -1.104,
+        "variogram": -0.744
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    },
+    {
+      "version": "v0062",
+      "reported_total_delta": -3.51,
+      "weighted_rounded_submetric_delta": -3.529,
+      "contribution": {
+        "de_score": -1.02,
+        "de_direction": -0.325,
+        "severity_slope": 0.0,
+        "mmd_u": -1.104,
+        "variogram": -1.08
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    },
+    {
+      "version": "v0063",
+      "reported_total_delta": -3.66,
+      "weighted_rounded_submetric_delta": -3.669,
+      "contribution": {
+        "de_score": -1.14,
+        "de_direction": -0.325,
+        "severity_slope": 0.0,
+        "mmd_u": -1.092,
+        "variogram": -1.112
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    },
+    {
+      "version": "v0064",
+      "reported_total_delta": -3.79,
+      "weighted_rounded_submetric_delta": -3.795,
+      "contribution": {
+        "de_score": -0.27,
+        "de_direction": 0.075,
+        "severity_slope": 0.0,
+        "mmd_u": -1.8,
+        "variogram": -1.8
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    },
+    {
+      "version": "v0065",
+      "reported_total_delta": -5.55,
+      "weighted_rounded_submetric_delta": -5.563,
+      "contribution": {
+        "de_score": -1.35,
+        "de_direction": -0.325,
+        "severity_slope": 0.0,
+        "mmd_u": -2.088,
+        "variogram": -1.8
+      },
+      "limit": "rounded user skills; diagnostic decomposition only, not an exact total or causal attribution"
+    }
+  ]
+}

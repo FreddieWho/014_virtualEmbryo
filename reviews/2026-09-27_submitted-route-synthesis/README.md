@@ -1,6 +1,6 @@
 # 2026-09-27 已评分路线综述
 
-给人读的正文是 `REPORT.md`。图在 `figures/`，可复核的表在 `tables/`。
+给人读的正文是 `REPORT.md`。图在 `figures/`，可复核的表在 `tables/`。当前教训以根目录 [`REVIEW.md`](../../REVIEW.md) 为准；本目录停在 T1 五路线，不覆盖。
 
 这次评估不改候选、不改分数、不改选择。分数仍以 `submissions/INDEX.tsv` 和 `reports/SERVER_SCORE_REGISTRY.md` 为准。
 

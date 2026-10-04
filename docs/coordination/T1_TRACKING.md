@@ -306,3 +306,10 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-10-01｜T1 排名讨论（五条：53.43/53.36/53.24/52.5/52.49，不含涨幅三步）｜three 家族相对 round2 双亲贵约 +0.8，全贵在方向（59.5–60.2 vs 58.5）和分布（mmd 55.1–55.4 vs 54.7–54.9、vario 50.6–51.0 vs 49.0–49.7）；de_score 全程 45.6–47.0 拉不开名次。族内 v0036 de 最高（47.0）仍输 v0035 0.07，输在方向（59.5 vs 60.2）；v0029/v0030 差 0.01，方向与分布互抵，无胜者。结论：T1 顶部分数段由方向＋分布定序，de 是门槛项；现役 v0038（53.55，mmd 55.7 最高）故事一致。本讨论不产生新 lane。
 
 - 2026-10-01｜D5c 挂门，D5c 关闭，扩散线三振出局｜200 epochs/6800 步足额（wall 16min，CPU，无 NaN），基线精确复现；场 overall 3.88 vs 0.265（14.7×）、pertype 4.99 vs 0.63（7.9×），相对 D5b 好转但仍远败；无坍缩 veto。按冻结关闭：足量仍败＝不是量不够，不提 D5d；未建候选，未进 INDEX。`D-20261001-T1D5C-001`。
+
+- 2026-10-03｜T1 外部预训练 lane 冻结＋步骤 A 开工｜冻结见 `artifacts/t1_extpretrain/T1-EXTPRE-20261003-v1/DESIGN.md`（假设＝外部时序表示迁移超 v0051=53.92；配方＝8 档相邻对预训练→E8.5→E9.5 微调→v0051 同配方出候选；门＝本地 standing 双门→服务器超 best；单轮不 sweep）。步骤 A 脚本 `scripts/t1_extpretrain/build_cache.py`（只读 atlas→8 档 log1p 缓存，禁区硬否决）已就绪，冒烟过（stage 直方图与元数据一致）。
+
+- 2026-10-03｜T1 外部预训练步骤 B 挂门，lane 关闭｜G-return（2000 留出 E8.5 细胞，交集 25824 基因预报、其余继承官方 E8.5）de 0.0189 / dir 0.1412，远低于 standing 双门 0.8868/0.8895；energy 12.60、variance_ratio 0.193。按冻结 STOP，不建 E10.5、不进 INDEX。PCA 解释仅 26.4%；预训练目标是每阶段×粗谱系的均值位移，迁到官方 E8.5→E9.5 后分布被毁。`D-20261003-T1EXTPRE-001`。
+
+- 2026-10-02｜AR-T1-MIX 三 lane 服务器回分（INDEX 补登记）｜v0049=53.72（HIGH BACKUP）/v0050=53.32（REJECT）/v0051=53.92（+0.37 PROMOTED 新 T1 best）；canonical 已落盘 `submissions/candidates/T1_val/v0049_mix35x38a|v0050_mix35x38b|v0051_mix36x38a/`，SHA 与 staged MANIFEST 一致；submetric 12 行此前已在库。D-20261002-T1MIXSCORE-001（registry；DECISIONS 条目仍缺）。
+- 2026-10-03｜AR-T1-MIX2 五 lane 服务器回分（INDEX 补登记）｜v0052=53.67（backup）/v0053=53.36（REJECT）/v0054=53.98（TIE 备份）/v0055=53.48（marginal）/v0056=53.76（backup），v0051=53.92 留任；canonical 已落盘，SHA 与 MANIFEST 一致；verdicts/DECISIONS/submetric 此前已在库。D-20261003-T1MIX2SCORE-001。

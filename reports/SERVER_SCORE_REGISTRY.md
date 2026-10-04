@@ -1,5 +1,7 @@
 # Server leaderboard score registry
 
+导航：[`README.md`](README.md)、[`SYNTHESIS_T1.md`](SYNTHESIS_T1.md) / [`SYNTHESIS_T2.md`](SYNTHESIS_T2.md) / [`SYNTHESIS_T3.md`](SYNTHESIS_T3.md)。那三份不是分数账。
+
 本文件只登记比赛服务器返回的分数。`local pseudo-score`、公开 target 上的
 scorer smoke 和格式检查不得填入这里，也不得当作官方榜单分数。
 
@@ -1282,3 +1284,205 @@ variogram 39.6
 | T3:gata4 | v0070 | t3_gata4__ar_complex__v0070.h5ad | 45.80 | REJECT；较现役 v0048 低2.13，较母本 v0009 低1.15 |
 
 五项显示值已原样写入 SERVER_SUBMETRIC_REGISTRY.tsv；不由四舍五入子项重算/替换总分。现役 v0048 不变，当前配置关闭。复盘：`reports/t3_autoresearch_score_review_20261003/REPORT.md`；D-20261003-T3ARSCORE-001。候选身份/contract以 INDEX 为准；blocks_submission:false。
+
+
+<a id="t3-sparse-scale-score-return-20261003"></a>
+## T3 v0071 回分（2026-10-03）
+
+来源：用户本轮直接提供；canonical与交付文件SHA匹配INDEX。未查询门户，submission ID/上传时间/截图未提供。
+
+```text
+t3_gata4__sparse_scale__v0071.h5ad：47.85
+de_score 41.7
+de_direction 51.4
+severity_slope 50.0
+mmd_u 51.0
+variogram 48.4
+```
+
+原样登记总分47.85及五项；较现役v0048低0.08，较v0070高2.05。NOT_PROMOTED，现役不变；差距很小且无重复评分，不能宣称显著差异。有效权重下相对现役贡献约DE −0.270、方向+0.350、severity 0、MMD −0.096、variogram −0.072，净−0.088；不替换用户总分。用户已授权进一步优化，下一分叉固定只减半新增响应。D-20261003-T3HALF-001；reports/t3_halfstep_20261003/REPORT.md。
+
+
+<a id="t3-half-scale-score-return-20261003"></a>
+## T3 v0072 回分（2026-10-03）
+
+用户原文如下。canonical与交付H5AD的SHA均匹配INDEX；未查询门户，submission ID/上传时间/截图未提供，不推断。
+
+```text
+t3_gata4__half_scale__v0072.h5ad :47.51
+de_score 40.4
+de_direction 51.2
+severity_slope 50.0
+mmd_u 51.5
+variogram 48.8
+```
+
+总分47.51和五项显示值原样登记，较v0071低0.34、较现役v0048低0.42。REJECT，现役保持。分布小幅回升未抵消DE退步，减半响应未获总分收益，关闭当前强度减半试验、不继续细分步长。无重复评分，不主张统计显著性或机制结论。详见 reports/t3_halfstep_20261003/SCORE_REVIEW.md；D-20261003-T3HALFSCORE-001。blocks_submission:false。
+
+
+<a id="t2-holdout10-xr3xr4-score-return-20261003"></a>
+## T2 HOLDOUT10 x_r3/x_r4 score return — 2026-10-03
+
+Source / raw evidence: user-transcribed portal returns in this conversation for the two
+HOLDOUT10 board lanes (`deliveries/t2h10__t2__upload__20261003.zip`,
+`deliveries/t2h10x4__t2__upload__20261003.zip`; run `T2-HOLDOUT10-20261003-v1`).
+Evidence class: SERVER_SCORED_USER_REPORTED. No independent portal lookup; portal
+submission ID and submission timestamp were not supplied; no Total was returned.
+Candidate identity verified by ZIP-member filename bound to INDEX SHA256
+(v0030 `71f587ed…`, v0031 `86fec27f…`); no artifact was modified.
+Date is the score-recording date, not an inferred submission date.
+
+```text
+t2_hrt_ext__x_r3medlib09__v0030.h5ad: 51.12
+de_score 52.0 / de_direction 50.9 / mmd_u 49.4 / variogram 50.4
+(metric, value) pairs per user text: d2_shape 46.2 / occupancy_dice 53.2 /
+scale_log_ratio 49.7 / neighborhood_mmd 53.5
+
+t2_hrt_ext__x_r4xwalk09__v0031.h5ad: 49.91
+de_score 52.4 / de_direction 51.8 / mmd_u 44.3 / variogram 49.0
+d2_shape 46.2 / occupancy_dice 53.2 / scale_log_ratio 49.7
+neighborhood_mmd 51.6
+```
+
+Skill mapping (per user text: each metric name followed by its value; total first).
+Values recorded exactly as transcribed.
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `t2_hrt_ext__x_r3medlib09__v0030.h5ad` | 51.12 | 52.0 | 50.9 | 49.4 | 50.4 | 46.2 | 53.2 | 49.7 | 53.5 |
+| `t2_hrt_ext__x_r4xwalk09__v0031.h5ad` | 49.91 | 52.4 | 51.8 | 44.3 | 49.0 | 46.2 | 53.2 | 49.7 | 51.6 |
+
+Baseline board (v0001): 50.53 (49.6/52.2/49.9/47.7/46.2/53.2/49.7/52.4).
+Board-best reference: v0011 50.64; unpromoted numeric-high v0022 50.74.
+
+Deltas:
+- v0030 **+0.59 vs baseline 50.53; +0.48 vs board-best 50.64; +0.38 vs 50.74** → **PROMOTED new board best**.
+- v0031 **−0.62 vs baseline 50.53** → REJECT.
+
+Decision and limits:
+- **v0030 PROMOTED to heart-extrap selection** (first board-best change on this board
+  since v0011 2026-09-16). Per-metric drivers vs baseline v0001 (49.6/52.2/49.9/47.7/
+  46.2/53.2/49.7/52.4): de 52.0 (+2.4) and vario 50.4 (+2.7) and nmmd 53.5 (+1.1)
+  are the gains; dir 50.9 (−1.3) and mmd 49.4 (−0.5) give back; d2/occ/scale are
+  flat at the pinned 46.2/53.2/49.7. The de gain mirrors the holdout finding
+  (library preservation unblocked the DE channel); nmmd 53.5 is the highest nmmd
+  on this board. No causal claim beyond this board.
+- **v0031 REJECT.** Broad crosswalk coverage (67% rows) lost to the narrow shared-state
+  lane: mmd_u collapses to 44.3 (−5.6 vs baseline) and nmmd to 51.6 (−0.8), wiping out
+  even better de 52.4 (+2.8) and dir 51.8. Coverage expansion moved mass in the wrong
+  distributional direction; the crosswalk axis is closed (no threshold retuning — the
+  thresholds were frozen pre-build and the mmd failure is structural).
+- Derived (not server-returned): T2 = (62.89 + 62.36 + 51.12)/3 = 58.79; derived sum
+  with T1/T3 selections = 53.55 + 58.79 + 47.93 = 160.27 (derived only, NOT a portal
+  Total; last portal-confirmed Total remains 156.06).
+- blocks_submission: false.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, sixteen rows. Review:
+`reports/t2_holdout10_score_review_20261003/REPORT.md`. Decision D-20261003-T2H10SCORE-001.
+
+
+<a id="t2-holdout10-x567-score-return-20261003"></a>
+## T2 HOLDOUT10 x_r5/x_r6/x_r7 score return — 2026-10-03
+
+Source / raw evidence: user-transcribed portal returns in this conversation for the three
+HOLDOUT10 board lanes (`deliveries/t2h10x5__t2__upload__20261003.zip`,
+`deliveries/t2h10x67__t2__upload__20261003.zip`; run `T2-HOLDOUT10-20261003-v1`).
+Evidence class: SERVER_SCORED_USER_REPORTED. No independent portal lookup; portal
+submission ID and timestamp not supplied; no Total returned. Candidate identity verified
+by ZIP-member filename bound to INDEX SHA256 (v0032 `079cc775…`, v0033 `32b3fd6e…`,
+v0034 `bcc90053…`); no artifact was modified. Date is the score-recording date.
+
+```text
+t2_hrt_ext__x_r5tshk09__v0032.h5ad:   51.12 -> 51.14 (de 52.0 / dir 51.2 / mmd 49.8 / vario 49.8 / d2 46.2 / occ 53.2 / scale 49.7 / nmmd 53.4)
+t2_hrt_ext__x_r6medlib05__v0033.h5ad: 50.89 (de 50.8 / dir 51.3 / mmd 50.0 / vario 49.1 / d2 46.2 / occ 53.2 / scale 49.7 / nmmd 53.2)
+t2_hrt_ext__x_r7typeadapt__v0034.h5ad: 51.02 (de 51.6 / dir 51.1 / mmd 49.9 / vario 49.5 / d2 46.2 / occ 53.2 / scale 49.7 / nmmd 53.3)
+```
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| `t2_hrt_ext__x_r5tshk09__v0032.h5ad` | 51.14 | 52.0 | 51.2 | 49.8 | 49.8 | 46.2 | 53.2 | 49.7 | 53.4 | **TIE (+0.02 vs 51.12, within ±0.1 band); no promotion; tied numeric-high backup** |
+| `t2_hrt_ext__x_r6medlib05__v0033.h5ad` | 50.89 | 50.8 | 51.3 | 50.0 | 49.1 | 46.2 | 53.2 | 49.7 | 53.2 | REJECT (−0.23) |
+| `t2_hrt_ext__x_r7typeadapt__v0034.h5ad` | 51.02 | 51.6 | 51.1 | 49.9 | 49.5 | 46.2 | 53.2 | 49.7 | 53.3 | TIE (−0.10, band edge); no promotion |
+
+Incumbent: v0030 = **51.12** (52.0/50.9/49.4/50.4/46.2/53.2/49.7/53.5). Baseline v0001 = 50.53.
+
+Decision and limits:
+- **No promotion; v0030 stays the heart-extrap selection.** v0032's +0.02 is inside the
+  pre-declared ±0.1 TIE band (B4-T2-R1 precedent); its per-metric read vs v0030
+  (dir +0.3, mmd +0.4, vario −0.6, nmmd −0.1) is a wash. v0034 sits at the band edge.
+  Derived values unchanged: T2 = (62.89+62.36+51.12)/3 = 58.79; derived sum 160.27
+  (both derived only; portal-confirmed Total remains 156.06).
+- **Server-side dose-response on de, monotone**: damp 0.5 → de 50.8 (v0033);
+  per-type adaptive ≈0.73 mean dose → 51.6 (v0034); damp 0.9 (±t-shrink) → 52.0
+  (v0030, v0032). The dev dose bracket (optimum 0.9) reproduces on the server; the
+  dose axis is CLOSED with a server-consistent optimum at 0.9. The dev "purest DE
+  direction" read on the half-dose lane did NOT transfer (50.8 < 52.0).
+- **Within-family dev ranking reproduced perfectly.** dev medians 0.9194 / 0.9347 /
+  0.9376 (run18 / run09 / run04 recipes) map to server 51.14 / 51.02 / 50.89 —
+  Spearman 1.0 across the three-lane family. The Route-C-era "local DE readout is
+  broken on this board" conclusion is family-specific: within one recipe family the
+  frozen dev evaluator is a reliable ranker; cross-family transfer is where it fails.
+- **d2/occ/scale pinned at 46.2/53.2/49.7 across all three lanes** (as in v0030/v0031):
+  expected — parent-anchored expression-only construction cannot move the
+  geometry/occupancy/scale channels.
+- blocks_submission: false.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, 24 rows. Review:
+`reports/t2_holdout10_score_review_20261003/REPORT.md`. Decision D-20261003-T2H10X567SCORE-001.
+
+<a id="t1-ar-mix2-score-return-20261003"></a>
+## T1 AR-MIX2 score return — 2026-10-03
+
+User-transcribed portal returns for the five AR-MIX2 lanes
+(`deliveries/art1mix2__t1__upload__20261003.zip`, run `AR-T1-MIX2-20261003-v1`;
+zip sha `e8b60cd8d87172db…`; staged member shas verified at packing time).
+Submission IDs, upload timestamps and portal Total NOT supplied; no independent
+portal query. Values preserve supplied precision. Versions v0052–v0056 are
+PROPOSED (INDEX rows pending coordinator). Version-number note: the closed
+T1-EXTPRE lane referenced "v0052" as a would-have-been number ("不建 v0052",
+no artifact was ever built); this batch's v0052 is the mix3538even member below —
+no artifact conflict, identity is bound by SHA256.
+
+| Version / portal model | Total | de | dir | mmd_u | vario | Verdict |
+|---|---:|---:|---:|---:|---:|---|
+| v0052 `t1_val__mix3538even__v0052.h5ad` (50/50 v0035×v0038, seed 20260921) | 53.67 | 46.9 | 60.0 | 56.1 | 50.5 | scored backup (−0.25 vs v0051; beats both parents 53.43/53.55) |
+| v0053 `t1_val__mix3538evenb__v0053.h5ad` (50/50 v0035×v0038, seed 20261023) | 53.36 | 46.7 | 59.9 | 55.4 | 50.4 | REJECT (−0.56 vs v0051; below both parents) |
+| v0054 `t1_val__mix3638even__v0054.h5ad` (50/50 v0036×v0038, seed 20260921) | 53.98 | 47.0 | 60.4 | 56.5 | 51.0 | TIE (+0.06 vs v0051 53.92, inside ±0.1 band; no promotion; tied numeric-high backup) |
+| v0055 `t1_val__mix3way__v0055.h5ad` (equal thirds v0035/36/38, seed 20260921) | 53.48 | 46.4 | 59.4 | 56.3 | 50.7 | scored backup, marginal (−0.44 vs v0051; beats v0035 53.43 / v0036 53.36, trails v0038 53.55) |
+| v0056 `t1_val__mix3538f030__v0056.h5ad` (30/70 v0035×v0038, seed 20260921) | 53.76 | 46.9 | 60.3 | 56.1 | 50.6 | scored backup (−0.16 vs v0051; beats both parents) |
+
+Incumbent: v0051 = 53.92 (47.2/60.0/56.7/50.6). No promotion: v0054's +0.06 is
+inside the pre-declared ±0.1 TIE band (precedent D-20260917-G0T1-001; tie goes to
+the incumbent); v0051 stays the T1 selection and v0054 is the tied numeric-high
+backup. Derived sum unchanged at 160.44 (counting v0054 instead would give 160.50 —
+derived only, NOT a portal Total; last portal-confirmed Total remains 156.06).
+Submetric read vs v0051, descriptive not causal: v0054 trades de (−0.2) and mmd
+(−0.2) for dir (+0.4) and vario (+0.4) — a textbook TIE-band swap.
+
+Headline findings:
+1. **Seed-pair luck replicates a third time**: v0052 vs v0053 = 53.67 vs 53.36
+   (Δ0.31) for the identical 50/50 35×38 design with different draws (batch-1
+   Δ0.40). T1 mix server row-luck is ±0.3–0.4 — larger than the ±0.1 TIE band.
+   "Ship 2 seeds or go deterministic" stands; single-seed reads of resampling
+   designs are lottery tickets.
+2. **Pair axis confirmed by controlled comparison**: v0054 (36×38 even) 53.98 vs
+   v0052 (35×38 even) 53.67 = +0.31 at the SAME weight and seed (20260921).
+   36-containing mixes lead for the third time (36×38@70/30 53.92 → 36×38@50/50
+   53.98); the 35×38 pair plateaus at 53.36–53.76 regardless of weight.
+3. **Weight axis is dead for 35×38**: f0.3 53.76 ≈ f0.5 53.67 ≈ f0.7 53.72/53.32 —
+   all inside row-luck. No server dose-response on the fraction knob.
+4. **Three pools do not stack**: v0055 (53.48) lands below both of its pair-mix
+   components (53.67 / 53.98) — dilution, not synergy. Three-pool mixing is closed
+   as a promotion axis on T1.
+5. **The mix family looks saturated**: all eight scored mix lanes sit in
+   53.32–53.98 (plateau mean ≈ 53.7); incremental movement is now in ±0.1 lottery
+   units. The next real move needs a new mechanism family, not more winner-pair
+   arithmetic.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, +20 rows. Decision:
+D-20261003-T1MIX2SCORE-001. blocks_submission: false.
+Pending coordinator: INDEX rows (v0052–v0056; staged paths + SHAs in
+`artifacts/autoresearch/t1-20261003-v1/stage_art1mix2/UPLOAD_MANIFEST.tsv`),
+T1_TRACKING line, STATUS/TODO sync. (Still pending from 2026-10-02: INDEX rows
+v0049–v0051 — that batch's submetric rows and LANE_VERDICTS rows were also never
+added.)

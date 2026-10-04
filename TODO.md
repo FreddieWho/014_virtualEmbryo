@@ -6,13 +6,13 @@
 
 - [x] ① T1-D5c 长训（2026-10-01 关闭）：200 epochs 足额（6800 步，wall 16min，本机 CPU 零费用），G 门挂（overall 3.88 vs 基线 0.265、pertype 4.99 vs 0.63，无坍缩）；按冻结关闭，扩散线三振出局（D5 测试无效、D5b 欠拟合、D5c 足量仍败）。足量仍败＝不是量不够，不提 D5d。
 - [x] ② T3 方向四全转录组中介映射（2026-10-02 关闭）：脚本建成＋冒烟过＋全量 22 秒跑完（BLAS 快，8h cap 远未用满），G1 留出 MAE 0.552 vs 基线 0.518（差 6.6%，33 类中仅 7 类胜）、G2 同谱系权重 0.612 vs 门 0.80，双挂；按冻结 STOP，未建候选，未进 INDEX。跨模态映射精度过不了同类型均值这一关。
-- [ ] ③ T3 方向六多扰动监督训练：metadata-first 合规审查 → source/过滤/mask/同源映射冻结 → 线性基线 vs 神经模型 gene-held-out 比较；无合规数据则 BLOCKED 停。用户动作：边界邮件（影响 source  eligibility）、可能的登录下载。
-- [ ] ④ T1 外部时序预训练：找合规外部时序数据 → 合规审查 → lane 设计冻结 → 执行；无合规数据则停。用户动作：同③（数据侧）。
+- [x] ③ T3 方向六多扰动监督训练（2026-10-03 关闭，D-20261003-T3DIR6CLOSE-001）：ridge 5 折全败 no-change；GEARS 5 折×20 epochs mse 0.05747 双挂双 bar；升级关闭。附 cosine 口径 bug 修（MSE/verdict 不变，见 TRACKING）。放行集保留作他用。
+- [x] ④ T1 外部时序预训练（2026-10-03 关闭，D-20261003-T1EXTPRE-001）：8 档合规子集预训练后 G-return de 0.0189/dir 0.1412，远低于 standing 双门；按冻结不建 v0052。
 
 ## T3 后续修复与数据收集（2026-09-20 用户授权）
 
 （原“路线 5 准入”待办 2026-10-01 并入暂缓分支 R5 行：receptor–target 链补齐与扩链同属一个许可门，不再单列。）
-- [ ] 向主办方发送边界问题邮件（**agent 无发件能力，需用户自己发**，地址 virtual.embryo.moonshot@gmail.com；草稿见 `reports/T3_BOUNDARY_MAIL_DRAFT_20261001.md`（2026-10-01 落盘待审））：① Gata4@E9.5/E14.5 他阶段扰动数据是否属 comparable stage；② 通路成员敲除数据是否可用；③ GATA4 ChIP WT 结合数据确认。答复前同基因扰动数据保持隔离。
+- [x] 向主办方发送边界问题邮件（2026-10-03 用户已发）：三问已出（草稿 `reports/T3_BOUNDARY_MAIL_DRAFT_20261001.md`），**等 organizer 答复**。答复前同基因扰动数据保持隔离；答复后按答复更新 source 口径（方向六补源与 R5 扩链均受影响）。
 
 ### T2 线索闭环（2026-09-27，用户授权执行）
 
@@ -28,7 +28,7 @@
 
 ## 分支记录
 
-- **当前执行分支**：三个任务分数全部回填完毕。T1 选择 v0038=53.55（v0043 精确同分备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推合计仍用 50.53；T3 选择 v0048=47.93。待办：重读门户确认合计（推导 160.07）与外推 50.74-vs-50.53 差额；另记一条暂不展开的 T1 排名讨论。
+- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX/AR-MIX2 八 lane INDEX 补登记完成；v0054 53.98 TIE 备份，v0049 53.72 高备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推 v0030=51.12（HOLDOUT10 新 best，D-20261003-T2H10SCORE-001；Route C 全 REJECT，v0029 scale 探针 REJECT，v0031 crosswalk REJECT 关闭）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；第一轮 15 运行收敛封存，最佳 run10＝0.92868（差 0.029）；HOLDOUT10 五 lane 全部回分：v0030=51.12 现役，v0032 51.14/v0034 51.02 TIE 备份，v0031/v0033 REJECT；T2 待分清零；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填缺口清零（T1 v0049–v0056 canonical 落盘＋SHA＋contract 全齐）；② 重读门户确认合计（推导 160.64，确认仍 156.06）；③ organizer 答复；④ T1 新用途批准。T2 待分 0（五 lane 全结）。
 - **并行分支**：无。
 - **暂缓分支**：
   - T1-D7 E7.75 对齐：CLOSED（2026-09-17）。官网实抓：E7.75 not released，不向任何任务分发，前提不存在；此前 PARKED 及下载触发条件一并作废。
@@ -93,7 +93,7 @@
 
 ### T3 R5/R6 补充准备（2026-09-20）
 
-- [ ] R5逐边补全target链和物种/实验背景/数据许可审查；当前批准链0。
+- [x] R5逐边补全target链审查（2026-10-03 关闭为过时）：本项写于 09-20（“当前批准链0”），次日 09-21 最小链 4 条已审核批准并执行（v0032/v0033 已回分，与父同分）；剩余扩链工作仍在暂缓分支 R5 行，不另立项。
 - 已替代（2026-09-21）：旧的普遍书面确认与shape-only要求取消；本次26个条件按实际来源上下文重新审查通过。未取得确认函，也不伪称已取得。
 - 可选方法：shape-only后继不再是准入前提；当前准备启动原signed R6，shape版完整集成未执行。
 - 证据：`reports/t3_r56_readiness_20260920/REPORT.md`。R3/R4已有修复TODO保留。
@@ -106,7 +106,7 @@
 
 ### T3全路线复核后的整合建议（2026-09-21，未执行新分支）
 
-- [ ] P2 整合R1结构保护、R5有效信号链及旧图/rank先验；不原样重跑R2整细胞替换或全表达平滑。
+- [x] P2整合建议（2026-10-03 关闭未执行）：09-21 提案后从未执行，后续路线（SIX/方向四/方向六/自研包）走了别的路；不复活，相关思路以后如需重提须新立项。
 
 - [x] 上传 `deliveries/r634fix__t3__upload__20260921.zip` 六个修复候选并回填。v0034–v0037、v0040、v0041 均已评分，不晋级；v0038/v0039 已撤回。修复队列关闭。
 
@@ -200,6 +200,11 @@ D5b已按最终RESULT失败关闭，不以旧追踪“建门中”状态重启�
 - 2026-10-01：**T1 排名讨论完成**——五条定序因素为方向＋分布（de 为门槛项），结论记 T1_TRACKING；D5c 冻结＋CPU 开跑（启动即带 LD_LIBRARY_PATH，D2-R3 的环境教训已前置）。待办变化：讨论项勾选；D5c 进入执行。
 - 2026-10-01：**D5c 挂门关闭（预声明执行）**——200 epochs 足额，基线精确复现（可比成立）；场 overall 3.88 vs 0.265（14.7×）、pertype 4.99 vs 0.63（7.9×），相对 D5b（27×/19×）好转但仍远败。待办变化：scaling ①勾选关闭，GPU 项注销；②T3 方向四接棒。
 - 2026-10-02：**T3 方向四双挂关闭（预声明执行）**——全量 G1/G2 同败，未建 v0069。待办变化：scaling ②勾选关闭；③方向六接棒（数据任务先行，边界邮件仍待用户发）。
+- 2026-10-03：**方向六阶段一完成**——ridge 5 折 MSE 0.05729 vs no-change 0.05545（5 折全败，cos≈0.05）；bar 已立，阶段二锁定 GEARS（vendored＋ve-t3-six）。待办变化：③转阶段二实现。
+- 2026-10-03：**方向六阶段二挂门关闭（预声明执行）**——GEARS mse 0.05747 双挂；cosine 口径 bug 查清并修正（pooled 点积/范数对 constant-per-gene 不是合法 cosine；已用 saved 模型重算回填，MSE 不变）；方向六升级关闭。待办变化：③勾选关闭；④T1 外部预训练接棒（已批准）。
+- 2026-10-03：**T1 外部预训练挂门关闭**——G-return de 0.0189/dir 0.1412，不建 v0052。待办变化：④勾选关闭；scaling 四条全部关闭。
+- 2026-10-02：**researcher 检索完成**——T1 首选本地 ExtendedMouseAtlas 合规子集（217,553 细胞／8 档，零下载）；备选 2、否决 3（含 Axin WNT 黑名单排除）；方向六补源 PerturbSeq.db 超时记 PENDING。索引＋4（211 行）、报告 `reports/t1_ext_pretrain_retrieval_20261002/REPORT.md`。待办变化：④等新用途批准；③以 26 扰动集推进。
+- 2026-10-03：**方向六补检索＋source/lane 双冻结（程序内执行）**——sc-pert 全表过筛：GSE92872 0 命中但暂缓集成，GSE157977 记 PENDING，Axin 排除；D-20261002-T3DIR6SRC-001 冻结 source v1；lane DESIGN 落盘（比较轮不建候选）。待办变化：③转阶段一实现；PerturbSeq.db 改为已通（sc-pert 表即其内容覆盖）。
 
 ### 2026-10-01 T3 两架构回分收口
 
@@ -208,3 +213,29 @@ D5b已按最终RESULT失败关闭，不以旧追踪“建门中”状态重启�
 - 2026-10-02：T2 外推板 Route C 探索轮（自动研究）打包 5 候选 v0024–v0028 交用户上传（`deliveries/arcqte__t2__upload__20261002.zip`），INDEX 登记 score_pending；同时纠正 variogram 本地指标方向并把 Route B 的 keep 撤回。待办变化：新增「用户上传 5 件并回填门户分数/子项」一项；分支记录不变（外推 aggregate 仍为 50.53，50.74-vs-50.53 OPEN）。
 
 - 2026-10-02：T2 外推 Route C 五件已上传并回分（用户报告）：**全部 REJECT、零晋级**——v0025 50.17 / v0024 50.09 / v0028 50.08 / v0026 50.03（基线 50.53），探针 v0027 39.60。外推 selection 与合计不变，50.74-vs-50.53 OPEN 仍在。待办变化：移除"用户上传 5 件并回填门户分数"（已完成）；新增一条"若重启该轴，先解决代理锚点问题"的说明——本地综合分不再作为提交依据（17 条 ρ=0.122，但 variogram 通道可迁移 49.5–50.1 为该榜最好）。登记：SERVER_SCORE_REGISTRY 新节 + SERVER_SUBMETRIC_REGISTRY 40 行 + INDEX 五行回填 + LANE_VERDICTS 五行 + D-20261002-ARROUTCESCORE-001。
+
+- 2026-10-03：**TODO 整理＋边界邮件已发（用户指令）**——① 邮件勾选，转等答复；② R5 逐边补全／P2 整合两条 stale 关闭（前者被 09-21 最小链批准执行替代，后者提案后未执行）；③ 当前执行分支同步最新实况（T1 v0051=53.92 新 best、v0070／Route C／v0029 均已评、零待上传）；④ 核出 INDEX 回填缺口 10 行（T1 v0049–51 无 canonical 目录、需 staged 落盘；T3 v0070／T2 v0024–29 canonical 在盘）列为下一项工作。待办变化：开项只剩方向六③、外部预训练④、INDEX 回填；等答复／等批准两项挂用户。
+
+- 2026-10-03：**T2 留阶段 10% 目标确认＋评估冻结（用户指令）**——用户选 10%（归一中位数 ≤0.90）；独立仓库 `artifacts/t2_holdout_10pct_20261003-v1/` 落盘（DESIGN/EVAL_FREEZE/eval_normalized.py/RUN_LOG），evaluator 自检 SETUP_REPRODUCED；初轮冻结坐标+行集合只优化表达，reserve NOT_RUN。待办变化：新增 T2 留阶段 10% 迭代一项；未新增候选/提交，现役不变。
+
+- 2026-10-03：**T2 留阶段 10% 第一轮收敛封存**——15 次运行（run01–run15）探尽表达位移族：剂量最优 0.9、中位数胜均值、library 守恒是关键一跃（de 翻正过线）、方差匹配/供体匹配/t 掩膜皆拒、类型自适应打平、组分按标签不可识别（未立新冻结、未碰 dev 组分）。最佳 run10＝0.92868，差目标 0.029；reserve 仍 NOT_RUN（达标前不跑）；未新增候选/提交，现役不变。待办变化：T2 留阶段迭代转"等用户定夺"（接受最佳／授权新信息源／暂停）。
+
+- 2026-10-03：**T2 留阶段 run10 榜单交付 v0030**——用户要可提交 h5ad：x_r3_medlib09（中位数delta×0.9＋library守恒，5共享态 NCC/Peri/V-CM/aPHM/pPHM 共 8123/25179 行，orphan 保持母本），contract strict PASS、replay 字节一致（SHA `71f587ed…`），INDEX 登记 score_pending，交付包 `deliveries/t2h10__t2__upload__20261003.zip`（成员 `t2_hrt_ext__x_r3medlib09__v0030.h5ad`，receipt READY_NOT_SUBMITTED）。待办变化：新增"用户上传 v0030 并回填分数"一项；dev 估计部分迁移预期（弱-中置信），现役不变。
+
+- 2026-10-03：**T2 crosswalk v0031 交付**——x_r4_xwalk09（12 映射态/16889 行，contract PASS＋replay 一致，SHA `86fec27f…`），INDEX 登记 score_pending，交付包 `deliveries/t2h10x4__t2__upload__20261003.zip`（receipt READY_NOT_SUBMITTED）。待办变化：待上传队列增至两件（v0030＋v0031，同一外推榜，传哪件/传几件由用户定）；run16 判 INVALID 不作为依据；现役不变。
+
+- 2026-10-03：**T2 HOLDOUT10 双 lane 回分登记（用户回分）**——v0030＝51.12（+0.59）**晋级新外推 board best**（2026-09-16 后首次易主），v0031＝49.91 REJECT、crosswalk 轴关闭。登记：registry 新节＋submetric 16 行＋INDEX 两行 scored＋verdicts 两行＋AUDIT 重跑＋DECISIONS（coord＋根索引）＋T2_TRACKING＋双层 STATUS（T2 58.59→58.79，推导合计 160.07→160.27，门户确认仍 156.06）。待办变化：T2 待分清零；移除"上传 v0030/v0031"两项；新增"门户 Total 重读"（推导 160.27 待确认）；dev 目标未达成、reserve 仍 NOT_RUN。
+
+- 2026-10-03：**T2 run18 配方榜单交付 v0032**——用户指令"继续+给可提交包"：x_r5_tshrink09（软收缩中位数delta×0.9＋library守恒，5共享态，contract PASS＋replay 一致，SHA `079cc775…`），INDEX 登记 score_pending，交付包 `deliveries/t2h10x5__t2__upload__20261003.zip`（成员 `t2_hrt_ext__x_r5tshk09__v0032.h5ad`，receipt READY_NOT_SUBMITTED）。待办变化：新增"用户上传 v0032 并回填分数"；现役 v0030=51.12 不变。
+
+- 2026-10-03：**T2 异路线双 lane 交付（一批一包）**——v0033 x_r6_medlib05（半剂量，SHA `32b3fd6e…`）＋v0034 x_r7_typeadapt（逐类型自适应剂量，SHA `bcc90053…`），2/2 contract PASS＋replay 一致，INDEX 登记 score_pending，合包 `deliveries/t2h10x67__t2__upload__20261003.zip`。待办变化：待上传队列 v0032＋v0033/34 合包，回分后按 D-20261003-T2H10SCORE-001 同款流程登记；现役 v0030 不变。
+
+- 2026-10-03：**T2 HOLDOUT10 三 lane 回分登记（用户回分）**——v0032＝51.14 TIE 不晋级（数值最高平局备份）、v0033＝50.89 REJECT、v0034＝51.02 TIE 不晋级；现役 v0030=51.12 不变。登记：registry 新节＋submetric 24 行＋INDEX 三行＋verdicts 三行＋AUDIT（158 lanes）＋DECISIONS 双层＋T2_TRACKING＋双层 STATUS＋复盘报告二轮节。硬发现：服务器 de 剂量响应单调确认最优 0.9；同族 dev↔服务器排序 Spearman 1.0（dev 失灵是族特异现象）；家族 ~51.1 平台期。待办变化：T2 待分清零（五 lane 全结）；dev 目标未达成 reserve 仍 NOT_RUN；外推下一波需行集合/几何级新机制授权或封存。
+
+- 2026-10-03：**T1 AR-MIX/AR-MIX2 INDEX 补登记（用户授权全局审计后）**——v0049–v0056 八 lane canonical 落盘（SHA 与 staged MANIFEST 一致）＋INDEX scored 行；T1_TRACKING 补两行；双层 STATUS 现役改 v0051=53.92，推导合计 160.27→160.64（门户确认仍 156.06）；verdicts 中 AR-MIX2 五行此前已在库，registry 补 AR-MIX2 节锚点（修 verdicts 悬空指针）；AUDIT 重跑。待办变化：INDEX 回填缺口清零；仍缺 D-20261002-T1MIXSCORE-001 的 DECISIONS 条目（registry 有引用， coordinatior 侧待补）。
+
+## 结构整理（2026-10-05）
+
+- [x] 已评分上传包删除，报告和文档加索引，不搬动被引用的目录（D-20261005-STRUCT-001）
+
+- 2026-10-05：**结构整理（用户要求目录变简单，且不丢迭代知识）**——已评分 deliveries 包/散落 h5ad 删除（75 文件，约 9.45 GB；正本与 SHA 仍在 submissions/candidates；VOID 包和留阶段 inspect 包保留）。reports、submissions、docs/batch3 不搬：路径被大量引用，搬走更难懂。新增 docs/00_START_HERE.md、docs/ATOM_MAP.md、reports/README.md、reports/INDEX.md、reports/SYNTHESIS_T{1,2,3}.md、deliveries/README.md、outputs/README.md。INDEX 回填 T3 v0026/v0027/v0030–v0033 的空白 server_score（数字本来就在 registry）。待办变化：无新科学待办；选集不变。

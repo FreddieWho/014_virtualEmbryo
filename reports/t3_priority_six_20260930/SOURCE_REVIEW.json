@@ -1,0 +1,21 @@
+{
+  "task": "T3:gata4",
+  "policy_version": "T3_EXTERNAL_DATA_20260921",
+  "review_status": "COMPLETED",
+  "classification": "ALLOWED",
+  "scope": "existing mouse GO ontology/module membership transformed to fixed functional embeddings and custom mouse GO graph; no KO expression or trained perturbation weights",
+  "source_manifest": "infra/external_data/sanitized/T3/B2-T3-A1/GO/source_manifest.json",
+  "source_manifest_sha256": "233bc5b4235f474b0def6a45a3487f643c9c1c80728c0bdece8c582e0492e22b",
+  "protected_records_in_selected_inputs": 0,
+  "response_matrix": "existing hash-bound GSE261783 approved source; conditions unchanged",
+  "embedding_fit": "WT/ontology only; no response vectors used",
+  "files": {
+    "artifacts/t3_priority_six_20260930/GO_EMBEDDING.npz": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+    "artifacts/t3_priority_six_20260930/gene2go.pkl": "75c6ed3615416cd8e340dea100873b8f7fbaa19d74ecd1cdd131a71998b0cbb9"
+  },
+  "tool_sources": "TOOL_SOURCES.json; two MIT licensed author repositories",
+  "scientific_limitations": [
+    "Scouter original code with custom GO128 representation, not GenePT paper reproduction",
+    "GEARS original code on full 500-gene panel and all26 perturbations plus unseen Gata4; custom mouse GO graph replaces incompatible default human graph"
+  ]
+}

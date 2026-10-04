@@ -182,3 +182,32 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20261002-T3DIR4-001：T3 方向四全量双挂（留出 0.552 vs 0.518、谱系 0.612 vs 0.80），按冻结关闭，跨模态映射轴判死路。详见 docs/coordination/DECISIONS.md。
 
 - D-20261002-ARROUTCESCORE-001：T2 外推 Route C 五件回分全部 REJECT（最好 50.17 vs 基线 50.53），外推选择与合计不变；本地综合分被证伪（17 条 ρ=0.122），但 variogram 通道确证可迁移（49.5–50.1 为该榜最好），服务器侧换种子方差仅 0.01。详见 docs/coordination/DECISIONS.md。
+- D-20261002-T3AR-001：T3本地48次实验完成20.3112%开发MSE降低目标；末次来源test降低6.1245%但区间跨零，保留模块，不晋级服务器、无新候选。详见 reports/t3_autoresearch_20261002/REPORT.md。
+
+- 2026-10-03 `D-20261003-T2LOCAL-001`：T2 heart外推本地中位数3.913→7.524达到目标；仅尺度项改善、v0029 HOLD_LOCAL_ONLY、服务器不晋级；[报告](reports/t2_autoresearch_20261003/REPORT.md)。
+- D-20261003-T3ARDEL-001：补齐T3 autoresearch H5AD v0070，7449×500、contract PASS，上传包就绪，未提交/未评分；初始v0069参考元数据失败草稿保留，修复后X不变。详见 reports/t3_autoresearch_delivery_20261003/REPORT.md。
+
+- D-20261002-T3DIR6-001：T3 方向六放行（用户授权）：GSE261783 26 扰动 0/26 黑名单命中，许可转 RELEASED_BY_OWNER_20261002（仅此集）；Smarca4/Rest/Yy1 复核提示保留，organizer 答复缺席。详见 docs/coordination/DECISIONS.md。
+
+- 2026-10-03 `D-20261003-T2SCALE-SCORE-001`：T2 v0029回分REJECT，当前scale0.9配置关闭；本地尺度收益与服务器相反，现役不变；[复盘](reports/t2_scale_score_review_20261003/REPORT.md)。
+
+- D-20261003-T3ARSCORE-001：v0070回分REJECT、现役不变；来源均值目标与全细胞残差转换脱节，当前配置关闭；详见 reports/t3_autoresearch_score_review_20261003/REPORT.md。
+
+- D-20261003-T3SPARSE-001：v0071以现役v0048为母本，采用来源完整矩阵筛选的有界强度转换；保留零结构、contract PASS、未提交/未评分；详见 reports/t3_sparse_response_20261003/REPORT.md。
+
+- D-20261002-T3DIR6SRC-001：方向六 source v1 冻结为 GSE261783（26 扰动）；GSE92872 屏蔽过但暂缓集成，GSE157977 基因表未取到记 PENDING，Axin 系排除。详见 docs/coordination/DECISIONS.md。
+
+- D-20261003-T3HALF-001：v0071回分不晋级，现役保持；预设减半响应生成v0072，contract PASS、未提交/未评分；来源诊断不支持本地晋级。详见 reports/t3_halfstep_20261003/REPORT.md。
+
+- D-20261003-T3HALFSCORE-001：v0072回分REJECT，现役保持；分布改善不足以抵消DE损失，关闭半步试验、不继续倍率扫描；详见 reports/t3_halfstep_20261003/SCORE_REVIEW.md。
+
+- D-20261003-T3DIR6CLOSE-001：方向六 GEARS 5 折 mse 0.05747，双挂 no-change/ridge 双 bar，升级关闭；附 cosine 口径 bug 修（MSE/verdict 不变）。详见 docs/coordination/DECISIONS.md。
+
+- D-20261003-T2H10SCORE-001：v0030 51.12 晋级新外推 board best（+0.59 vs 基线），v0031 49.91 REJECT、crosswalk 轴关闭；dev–server 方向一致但刻度差远，dev 目标未达成 reserve 仍 NOT_RUN；详见 reports/t2_holdout10_score_review_20261003/REPORT.md。
+
+- D-20261003-T2H10X567SCORE-001：v0032 51.14 TIE 不晋级、v0033 50.89 REJECT、v0034 51.02 TIE 不晋级，现役 v0030=51.12 不变；服务器 de 剂量响应单调确认最优 0.9、同族 dev↔服务器排序完全复现；详见 reports/t2_holdout10_score_review_20261003/REPORT.md。
+
+- D-20261003-T1EXTPRE-001：T1 外部预训练 G-return 挂门（de 0.0189/dir 0.1412），按冻结关闭，不建 v0052。详见 docs/coordination/DECISIONS.md。
+- D-20261003-T1MIX2SCORE-001：T1 AR-MIX2 五 lane 回分——v0054 53.98（+0.06）落 ±0.1 TIE 带不晋级、v0051=53.92 留任；v0052/v0056 scored backup、v0053 REJECT、v0055 marginal backup；种子彩票第三次复现（Δ0.31）、36 系配对受控比较第三次领先（+0.31）、权重轴死、三池=稀释、混合族饱和 ~53.7。详见 docs/coordination/DECISIONS.md。
+
+- D-20261005-STRUCT-001：结构整理。已评分 deliveries 包删除（正本仍在 submissions/candidates，见 reports/DELETION_MANIFEST.tsv）；reports/submissions/docs/batch3 不搬动。新入口 docs/00_START_HERE.md、docs/ATOM_MAP.md、reports/README.md。INDEX 回填 T3 v0026/v0027/v0030–v0033 空白 server_score。

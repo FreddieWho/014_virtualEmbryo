@@ -68,3 +68,15 @@ S1D v3 的描述性效应为：GSE5298 Gata4 `+0.02084`（linear-expression log2
 - 2026-09-20 R5最小SIGNOR来源：新增27个注册文件（原始文献/网络/映射缓存及3个净化包文件）；只批准1条LRT的T3通用拓扑用途，4条来源边人工审核，全部原始缓存继续隔离。R5实际运行生成v0032/v0033，未评分。见 `reports/t3_r5_completion_20260920/REPORT.md`；R6许可不变。
 
 - 2026-09-21：新增R6已批准派生三件套（表达5454×500、WT特征27×80、图27×27），输入来自GSE261783选定26条件及原有净化E8.75 WT全68910细胞。SOURCE_MANIFEST在 `reports/t3_r56_launch_20260921/`；新规则允许合规源signed学习，未使用源响应构图；训练NOT_RUN。原隔离输入不覆盖，不将新旧派生集加总为独立N。
+
+- 2026-09-30 T3 六项执行：复用已批准 5454×500 来源及完整 WT atlas；新增两个 cached GO 派生输入（526×128 功能 embedding、526 基因 ontology sets）已索引，未下载新 KO 表达或扰动训练权重。Scouter 使用作者支持的自定义 GO 表示，不能称 GenePT 配置完整复现；GEARS 使用作者原版及自定义小鼠 GO 输入。审查见 reports/t3_priority_six_20260930/SOURCE_REVIEW.json。
+
+- 2026-10-02 T3 autoresearch：新增5个既有源派生输入索引，含冻结17扰动开发集、完整68910细胞WT状态/相关性特征、同一已批准220对照的全基因特征、35640小鼠基因GO背景频率。未下载新数据、未新增KO条件，不把重用细胞加总为独立样本。原始OP2文件虽保留隔离路径，但只读取当前ALLOWED审查明确绑定的原文件中、与已批准表达文件完全一致的220个ctrl身份；不扩展任何其他记录。来源/细胞/哈希绑定见 artifacts/t3_autoresearch_features_20261002/*PROVENANCE.json；结果与边界见 reports/t3_autoresearch_20261002/REPORT.md。
+
+## 2026-10-02 — Researcher 外部数据检索（T1 时序预训练＋方向六补源）
+
+T1 短名单：本地 ExtendedMouseAtlas 为首选（217,553 合规细胞／8 档，无需下载；新用途待 lane 冻结，model_input=false）；E-MTAB-6967 与 GSE278981 为备选（仅元数据，未下载）；Cambridge 2016 与 TOME 否决（量小／窗口污染）；Axin 数据集因 WNT 黑名单排除。方向六补源：PerturbSeq.db 抓取超时记 PENDING。零下载。详见 `reports/t1_ext_pretrain_retrieval_20261002/REPORT.md`。
+
+## 2026-10-03 — T1 外部预训练关闭
+
+ExtendedMouseAtlas 合规子集新用途已执行并关闭（T1-EXTPRE-20261003-v1，G-return 挂门）。未新增外部文件；索引行 211 状态从 pending lane freeze 改为已关闭。详见 `artifacts/t1_extpretrain/T1-EXTPRE-20261003-v1/RESULT_B.json`。

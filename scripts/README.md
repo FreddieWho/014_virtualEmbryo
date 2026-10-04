@@ -184,3 +184,36 @@ env LD_LIBRARY_PATH=/opt/anaconda3/lib python3 scripts/t2_pseudo_holdout.py \
 The script records the training stages, carrier stage, signed damp, limitation, board limits, sampling strategy, seed, and an exact offline `veckit` command in `score_slice/manifest.json`. It uses fixed-seed `celltype`-stratified sampling by default; pass `--sampling-strategy first` only for legacy comparison. The `copy_last` floor can be generated with `--method copy_last` in the same command. `pseudobulk_shift_row_norm` is intended to diagnose scale mismatch in extrapolation; it is not an official baseline.
 
 For post-hoc geometry attribution, `t2_geometry_attribution.py` replaces only `spatial_3D` and marks the result as oracle geometry. Such variants are diagnostic only and must not be used as predictions.
+
+## FGW epsilon sensitivity (LEADS L-002, 2026-09-27)
+
+`t2_l2_eps_sensitivity.py` re-solves the **frozen** `T2-J1-PROXY-20260903-v1`
+`fgw_full` problem at exactly **two** entropic regularisation values — the frozen
+`0.005` and one alternative `0.002` — and reports, per holdout: plan dispersion
+(effective sources, conflict rate under the pre-declared
+`column_argmax_margin_greedy_v1` rule, mean rank depth, mass-capture ratio), the
+soft-readout NFS-like/nbhd_pearson, and the FGW objective of both the soft plan
+and the hard placement. It reuses the frozen cost matrices, prepared bundles and
+the 64-draw random envelope by SHA instead of recomputing them, and re-solves
+nothing else.
+
+This is a **two-value sensitivity analysis, not a grid search**: no third value is
+tried, the value is not chosen per holdout, and the escalation criterion is
+declared in the module docstring before any solve. The `epsilon=0.005` arm
+doubles as a reproduction control against the frozen proxy record and the script
+exits non-zero when the pre-declared escalation criterion is not met.
+
+```bash
+cd /home/huyudi/014_virtualEmbryo
+env LD_LIBRARY_PATH=/opt/anaconda3/lib OMP_NUM_THREADS=8 \
+  /opt/anaconda3/bin/python scripts/t2_l2_eps_sensitivity.py
+```
+
+`LD_LIBRARY_PATH=/opt/anaconda3/lib` is **required**: the script imports the
+frozen atoms, which pull in `sklearn`/`scipy`, and without it the import dies
+with a misleading `ImportError: ... GLIBCXX_3.4.29 not found`. Outputs land in
+`artifacts/tool_integration/T2-L002-FGW-EPS-SENSITIVITY-20260927-v1/`
+(`metrics/sensitivity_results.json`, `metrics/sensitivity_table.tsv`,
+`intermediates/<holdout>__eps{005,002}.json`). The runner builds no candidate, no
+h5ad and no submission; `submissions/INDEX.tsv` is deliberately untouched. Read
+the tracked summary at `reports/T2_LEADS_CLOSURE_20260927.md`.

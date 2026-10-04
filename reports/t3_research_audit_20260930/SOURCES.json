@@ -1,0 +1,537 @@
+{
+  "retrieved_at": "2026-09-30",
+  "primary_sources": [
+    {
+      "key": "CellOracle",
+      "title": "Dissecting cell identity via network inference and in silico gene perturbation",
+      "id": "10.1038/s41586-022-05688-9",
+      "url": "https://www.nature.com/articles/s41586-022-05688-9",
+      "scope": "peer-reviewed; WT GRN and TF perturbation; original paper and official documentation"
+    },
+    {
+      "key": "scTenifoldKnk",
+      "title": "scTenifoldKnk: An efficient virtual knockout tool for gene function predictions via single-cell gene regulatory network perturbation",
+      "id": "10.1016/j.patter.2022.100434",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35510185/",
+      "scope": "peer-reviewed; WT network perturbation and gene DR ranking, not signed calibrated cell expression"
+    },
+    {
+      "key": "GEARS",
+      "title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+      "id": "10.1038/s41587-023-01905-6",
+      "url": "https://www.nature.com/articles/s41587-023-01905-6",
+      "scope": "peer-reviewed; unseen perturbation prediction with expression and GO graphs"
+    },
+    {
+      "key": "Scouter",
+      "title": "Scouter predicts transcriptional responses to genetic perturbations with large language model embeddings",
+      "id": "10.1038/s43588-025-00912-8",
+      "url": "https://www.nature.com/articles/s43588-025-00912-8",
+      "scope": "peer-reviewed; online 2025, volume 2026; functional gene embeddings plus lightweight neural model"
+    },
+    {
+      "key": "CellOT",
+      "title": "Learning single-cell perturbation responses using neural optimal transport",
+      "id": "10.1038/s41592-023-01969-x",
+      "url": "https://www.nature.com/articles/s41592-023-01969-x",
+      "scope": "peer-reviewed; unpaired distributions; unseen contexts are not automatically unseen perturbation genes"
+    },
+    {
+      "key": "moscot",
+      "title": "Mapping cells through time and space with moscot",
+      "id": "10.1038/s41586-024-08453-2",
+      "url": "https://www.nature.com/articles/s41586-024-08453-2",
+      "scope": "peer-reviewed; multimodal and unbalanced OT; population growth and sampling caveats"
+    },
+    {
+      "key": "PerturbNet",
+      "title": "PerturbNet predicts single-cell responses to unseen chemical and genetic perturbations",
+      "id": "10.1038/s44320-025-00131-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40640612/",
+      "scope": "peer-reviewed; functional perturbation representation and conditional generative model"
+    },
+    {
+      "key": "CellFlow",
+      "title": "CellFlow enables generative single-cell phenotype modeling with flow matching",
+      "id": "10.1101/2025.04.11.648220",
+      "url": "https://github.com/theislab/CellFlow",
+      "scope": "2025 preprint; authors repository and institutional record inspected; full preprint fetch returned 403"
+    },
+    {
+      "key": "SCENIC+",
+      "title": "SCENIC+: single-cell multiomic inference of enhancers and gene regulatory networks",
+      "id": "10.1038/s41592-023-01938-4",
+      "url": "https://www.nature.com/articles/s41592-023-01938-4",
+      "scope": "peer-reviewed; enhancer GRN; ATAC needed for full reproduction"
+    },
+    {
+      "key": "dynamo",
+      "title": "Mapping transcriptomic vector fields of single cells",
+      "id": "10.1016/j.cell.2021.12.045",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0092867421015774",
+      "scope": "peer-reviewed; vector fields; velocity information and model assumptions required"
+    },
+    {
+      "key": "linear_benchmark",
+      "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines",
+      "id": "10.1038/s41592-025-02772-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40759747/",
+      "scope": "peer-reviewed; meaningful linear and mean controls; perturbation pretraining benefit within assessed datasets"
+    },
+    {
+      "key": "GGRN",
+      "title": "A comparison of computational methods for expression forecasting",
+      "id": "10.1186/s13059-025-03840-y",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12621394/",
+      "scope": "peer-reviewed; modular regression, network and iteration evaluation"
+    },
+    {
+      "key": "Replogle",
+      "title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+      "id": "10.1016/j.cell.2022.05.013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35688146/",
+      "scope": "peer-reviewed; potential data source only, NOT_DOWNLOADED_NOT_REVIEWED_FOR_TASK"
+    },
+    {
+      "key": "Flow_Matching",
+      "title": "Flow Matching for Generative Modeling",
+      "id": "arXiv:2210.02747",
+      "url": "https://arxiv.org/abs/2210.02747",
+      "scope": "ICLR 2023; method for distribution transport, no embryo-performance guarantee"
+    },
+    {
+      "key": "neural_causal",
+      "title": "Learning Neural Causal Models from Unknown Interventions",
+      "id": "arXiv:1910.01075",
+      "url": "https://arxiv.org/abs/1910.01075",
+      "scope": "preprint; combining observational and intervention data; not WT-only causality guarantee"
+    },
+    {
+      "key": "CisTransCell",
+      "title": "CisTransCell: Single-Cell Perturbation Prediction via Gene Function, Regulatory Control, and Cellular Context",
+      "id": "arXiv:2606.13713",
+      "url": "https://arxiv.org/abs/2606.13713",
+      "scope": "2026 preprint; secondary hypothesis inspiration; abstract-level evidence only"
+    }
+  ],
+  "official_sources": [
+    "https://virtualembryo.ai/challenge/tasks/perturbation",
+    "https://virtualembryo.ai/challenge/evaluation?section=scoring&task=3",
+    "https://virtualembryo.ai/challenge/panels/index.json",
+    "https://virtualembryo.ai/challenge/rules",
+    "https://raw.githubusercontent.com/aristoteleo/veckit/main/common/core_metrics.py"
+  ],
+  "limitations": [
+    "Leaderboard team rows were not available in text rendering; direct public-page HTTP request returned 403. User-supplied 60+/70+ prevalence is not independently counted.",
+    "Several publisher full-text opens failed authentication; primary abstracts, author repositories or official method documentation used where indicated.",
+    "New experimental datasets and pretrained weights NOT_DOWNLOADED; no new external biological model inputs."
+  ],
+  "structured_searches": [
+    {
+      "works": [
+        {
+          "work_id": "work:doi:10.1038/s41587-023-01905-6",
+          "title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+          "identifiers": {
+            "doi": "10.1038/s41587-023-01905-6",
+            "openalex": "W4385955324",
+            "pmid": "37592036"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1016/j.csbj.2024.04.058",
+          "title": "A mini-review on perturbation modelling across single-cell omic modalities",
+          "identifiers": {
+            "doi": "10.1016/j.csbj.2024.04.058",
+            "openalex": "W4395482102",
+            "pmid": "38721585"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1093/bioinformatics/btae244",
+          "title": "AttentionPert: accurately modeling multiplexed genetic perturbations with multi-scale effects",
+          "identifiers": {
+            "doi": "10.1093/bioinformatics/btae244",
+            "openalex": "W4400140744",
+            "pmid": "38940174"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1093/bioinformatics/btaf603",
+          "title": "Decoding cell fate: integrated experimental and computational analysis at the single-cell level",
+          "identifiers": {
+            "doi": "10.1093/bioinformatics/btaf603",
+            "openalex": "W4416731799",
+            "pmid": "41206131"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2025.11.21.689655",
+          "title": "PertAdapt: Unlocking Single-Cell Foundation Models for Genetic Perturbation Prediction via Condition-Sensitive Adaptation",
+          "identifiers": {
+            "doi": "10.1101/2025.11.21.689655"
+          }
+        },
+        {
+          "work_id": "work:doi:10.21203/rs.3.rs-9955756/v1",
+          "title": "A Metric-Calibrated Replay Framework for Single-Cell Genetic Perturbation Prediction",
+          "identifiers": {
+            "doi": "10.21203/rs.3.rs-9955756/v1"
+          }
+        },
+        {
+          "work_id": "work:doi:10.64898/2026.08.20.746112",
+          "title": "MultiFlow: coupled flow matching for predicting single-cell multiomic perturbation responses in unseen cellular contexts",
+          "identifiers": {
+            "doi": "10.64898/2026.08.20.746112"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1186/s13059-025-03840-y",
+          "title": "A comparison of computational methods for expression forecasting",
+          "identifiers": {
+            "doi": "10.1186/s13059-025-03840-y",
+            "openalex": "W4416298139",
+            "pmid": "41250104"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2022.07.20.500854",
+          "title": "PerturbNet predicts single-cell responses to unseen chemical and genetic perturbations",
+          "identifiers": {
+            "doi": "10.1101/2022.07.20.500854"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2020.02.17.947416",
+          "title": "CellOracle: Dissecting cell identity via network inference and in silico gene perturbation",
+          "identifiers": {
+            "doi": "10.1101/2020.02.17.947416"
+          }
+        },
+        {
+          "work_id": "work:doi:10.21203/rs.3.rs-6623551/v1",
+          "title": "Inference of heterogeneous effects in single-cell genetic perturbation screens",
+          "identifiers": {
+            "doi": "10.21203/rs.3.rs-6623551/v1"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1109/icdh72779.2026.00041",
+          "title": "GRN-GEARS: Interpretable Gene Regulatory Modelling for Single-Cell Perturbation Response Prediction in Precision Oncology",
+          "identifiers": {
+            "doi": "10.1109/icdh72779.2026.00041"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2024.05.28.596224",
+          "title": "Inference of heterogeneous effects in single-cell genetic perturbation screens",
+          "identifiers": {
+            "doi": "10.1101/2024.05.28.596224"
+          }
+        },
+        {
+          "work_id": "work:doi:10.48550/arxiv.2602.04901",
+          "title": "Beyond Independent Genes: Learning Module-Inductive Representations for Single-Cell Gene Perturbation Prediction",
+          "identifiers": {
+            "doi": "10.48550/arxiv.2602.04901",
+            "openalex": "W7128074008"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1360/csb-2025-0682",
+          "title": "Advances in single-cell perturbation modeling",
+          "identifiers": {
+            "doi": "10.1360/csb-2025-0682",
+            "openalex": "W4414257997"
+          }
+        },
+        {
+          "work_id": "work:doi:10.64898/2026.07.30.741892",
+          "title": "A structured study of cross-condition prediction of transcriptional responses to gene perturbations",
+          "identifiers": {
+            "doi": "10.64898/2026.07.30.741892",
+            "openalex": "W7172512139"
+          }
+        }
+      ],
+      "warnings": [],
+      "data_warnings": [],
+      "trace": {
+        "query": "single cell unseen genetic perturbation prediction CellOracle GEARS GRN",
+        "filters": {
+          "year": null,
+          "year_from": null,
+          "year_to": null,
+          "venue": null,
+          "fields_of_study": [],
+          "publication_types": [],
+          "min_citation_count": null,
+          "open_access_only": false,
+          "limit": 8,
+          "sort": "relevance",
+          "source_modes": {
+            "pubmed": "optional",
+            "crossref": "optional",
+            "openalex": "optional"
+          }
+        },
+        "sources_requested": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_succeeded": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_degraded": [],
+        "sources_failed": [],
+        "source_errors": [],
+        "source_result_counts": [
+          {
+            "source": "pubmed",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 0,
+            "merged_count": 0
+          },
+          {
+            "source": "crossref",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 8,
+            "merged_count": 0
+          },
+          {
+            "source": "openalex",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 8,
+            "merged_count": 0
+          }
+        ],
+        "retrieved_at": "2026-09-30T11:11:06.259809Z",
+        "cache_policy": "default",
+        "merge_strategy_version": "0.2.0",
+        "ranking_strategy_version": "0.2.0",
+        "result_count": 16,
+        "merged_count": 16
+      }
+    },
+    {
+      "works": [
+        {
+          "work_id": "work:doi:10.1038/s41467-019-09670-4",
+          "title": "Single-cell trajectories reconstruction, exploration and mapping of omics data with STREAM",
+          "identifiers": {
+            "doi": "10.1038/s41467-019-09670-4",
+            "openalex": "W2941910667",
+            "pmid": "31015418"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s41592-023-01969-x",
+          "title": "Learning single-cell perturbation responses using neural optimal transport",
+          "identifiers": {
+            "doi": "10.1038/s41592-023-01969-x",
+            "openalex": "W4387130479",
+            "pmid": "37770709"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s41575-020-0310-z",
+          "title": "Cholangiocarcinoma 2020: the next horizon in mechanisms and management",
+          "identifiers": {
+            "doi": "10.1038/s41575-020-0310-z",
+            "openalex": "W3039360174",
+            "pmid": "32606456"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s41586-024-08453-2",
+          "title": "Mapping cells through time and space with moscot",
+          "identifiers": {
+            "doi": "10.1038/s41586-024-08453-2",
+            "openalex": "W4406715779",
+            "pmid": "39843746"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s42256-023-00763-w",
+          "title": "Reconstructing growth and dynamic trajectories from single-cell transcriptomics data",
+          "identifiers": {
+            "doi": "10.1038/s42256-023-00763-w",
+            "openalex": "W4389166577",
+            "pmid": "38274364"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s41467-021-23518-w",
+          "title": "Generative modeling of single-cell time series with PRESCIENT enables prediction of cell trajectories with interventions",
+          "identifiers": {
+            "doi": "10.1038/s41467-021-23518-w",
+            "openalex": "W3164448939",
+            "pmid": "34050150"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1088/1748-9326/ab6d7d",
+          "title": "The physical oceanography of the transport of floating marine debris",
+          "identifiers": {
+            "doi": "10.1088/1748-9326/ab6d7d",
+            "openalex": "W3002696674"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1038/s41587-023-01657-3",
+          "title": "TACCO unifies annotation transfer and decomposition of cell identities for single-cell and spatial omics",
+          "identifiers": {
+            "doi": "10.1038/s41587-023-01657-3",
+            "openalex": "W4321077501",
+            "pmid": "36797494"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1126/sciadv.aeb4205",
+          "title": "Learning stochastic dynamics and cell-fate landscapes from single-cell snapshots via optimal transport",
+          "identifiers": {
+            "doi": "10.1126/sciadv.aeb4205"
+          }
+        },
+        {
+          "work_id": "work:doi:10.21203/rs.3.rs-1805107/v1",
+          "title": "Learning Single-Cell Perturbation Responses using Neural Optimal Transport",
+          "identifiers": {
+            "doi": "10.21203/rs.3.rs-1805107/v1"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2021.12.15.472775",
+          "title": "Learning Single-Cell Perturbation Responses using Neural Optimal Transport",
+          "identifiers": {
+            "doi": "10.1101/2021.12.15.472775"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1101/2021.03.19.436159",
+          "title": "Optimal Transport improves cell-cell similarity inference in single-cell omics data",
+          "identifiers": {
+            "doi": "10.1101/2021.03.19.436159"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1145/3745034.3745069",
+          "title": "scSNOT: Single-cell multi-omics clustering method based on minibatch unbalanced optimal transport and study-specific adaptive normalization",
+          "identifiers": {
+            "doi": "10.1145/3745034.3745069"
+          }
+        },
+        {
+          "work_id": "work:doi:10.1007/s11704-024-31014-9",
+          "title": "SCREEN: predicting single-cell gene expression perturbation responses via optimal transport",
+          "identifiers": {
+            "doi": "10.1007/s11704-024-31014-9"
+          }
+        },
+        {
+          "work_id": "work:doi:10.32657/10356/138344",
+          "title": "Single-cell analyses to decipher cell fate reprogramming",
+          "identifiers": {
+            "doi": "10.32657/10356/138344"
+          }
+        },
+        {
+          "work_id": "work:doi:10.14711/thesis-991013106354503412",
+          "title": "Single cell methodologies for studying development and cell fate",
+          "identifiers": {
+            "doi": "10.14711/thesis-991013106354503412"
+          }
+        }
+      ],
+      "warnings": [],
+      "data_warnings": [],
+      "trace": {
+        "query": "single cell unbalanced optimal transport perturbation cell fate",
+        "filters": {
+          "year": null,
+          "year_from": null,
+          "year_to": null,
+          "venue": null,
+          "fields_of_study": [],
+          "publication_types": [],
+          "min_citation_count": null,
+          "open_access_only": false,
+          "limit": 8,
+          "sort": "relevance",
+          "source_modes": {
+            "pubmed": "optional",
+            "crossref": "optional",
+            "openalex": "optional"
+          }
+        },
+        "sources_requested": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_succeeded": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_degraded": [],
+        "sources_failed": [],
+        "source_errors": [],
+        "source_result_counts": [
+          {
+            "source": "pubmed",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 0,
+            "merged_count": 0
+          },
+          {
+            "source": "crossref",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 8,
+            "merged_count": 0
+          },
+          {
+            "source": "openalex",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 8,
+            "merged_count": 0
+          }
+        ],
+        "retrieved_at": "2026-09-30T11:11:20.056111Z",
+        "cache_policy": "default",
+        "merge_strategy_version": "0.2.0",
+        "ranking_strategy_version": "0.2.0",
+        "result_count": 16,
+        "merged_count": 16
+      }
+    }
+  ]
+}

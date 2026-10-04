@@ -1,12 +1,22 @@
 # 当前并行状态
 
+接手先看 [`../ATOM_MAP.md`](../ATOM_MAP.md) 和 [`../../reports/README.md`](../../reports/README.md)。本文件是并行状态摘要，不是入门读物。2026-10-05 只加了这句导航，没有改下面的选集。
+
+### 2026-10-03 T2 新留阶段评价准备
+
+两基础对照×三固定评分种子已完成；仅用E8.25/E8.75构建预测，E9.5留作评价。归一表达误差复制末阶段1.0优于时间均值位移1.16833。新前台循环目标10%或5%待用户确认，未初始化、未新增候选；详见 `reports/t2_holdout_setup_20261003/REPORT.md`；blocks_submission:false。
+
+### 2026-10-03 T2 heart 外推本地优化
+
+独立实验仓库 `artifacts/autoresearch/t2-extrap-20261003-v1/` 已完成目标并释放执行lease；1次实验，固定三种子本地中位数3.913→7.524≥6.0，全部护栏通过。仅尺度项改善且已饱和，表达与其他七项不变。v0029已回分并登记8项、REJECT，当前scale0.9配置关闭；仅尺度项比父版本恶化，局部目标完成不代表服务器改善。contract PASS、artifact不变，服务器现役不变。复盘 `reports/t2_scale_score_review_20261003/REPORT.md`；blocks_submission:false。
+
 本文件是实时摘要。详细候选索引、服务器分数和科学/技术知识分别见权威文件，不在此重复维护完整历史。
 人类快速入口是根目录 [`STATUS.md`](../../STATUS.md)；任务路线变更分别见 [`T1_TRACKING.md`](T1_TRACKING.md)、[`T2_TRACKING.md`](T2_TRACKING.md)、[`T3_TRACKING.md`](T3_TRACKING.md)。
 
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-10-01"
+updated_at: "2026-10-03"
 updated_by: coordinator
 
 policy:
@@ -54,12 +64,12 @@ data:
 leaderboard:
   total: 156.06
   total_status: portal_confirmed_2026-09-26
-  derived_total: 160.07
+  derived_total: 160.64
   derived_total_status: not_portal_confirmed
-  T1: 53.55
-  T2: 58.59
+  T1: 53.92
+  T2: 58.79
   T3: 47.93
-  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0038 53.55 (v0043 exact-score backup), T2 boards 62.89/62.36/50.53 (task mean 58.59), T3 v0048 47.93. Their sum 160.07 is a derived figure only (D-20260930-T1SCORE-001) and must not be cited as a portal Total. OPEN: heart_extrap v0011 scored 50.64 but the aggregate still uses 50.53; re-read the portal before any promotion claim."
+  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0051 53.92 (v0054 53.98 TIE numeric-high backup, v0049 53.72 high backup), T2 boards 62.89/62.36/51.12 (task mean 58.79), T3 v0048 47.93. Their sum 160.64 is a derived figure only (D-20261003-T2H10SCORE-001 + D-20261002-T1MIXSCORE-001/D-20261003-T1MIX2SCORE-001) and must not be cited as a portal Total. OPEN: portal Total re-read."
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -69,9 +79,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0038_seven_n2covot (scored; v0043 exact-score backup)"
-    current_best_score: 53.55
-    next_action: "十一条已回分、T1无待分；v0038现役，v0043同分备份。平均数平移四臂不晋级，不继续alpha扫描；确认门户选集与Total。reports/t1_score_review_20260930/REPORT.md。"
+    current_best: "candidate/T1_val/v0051_mix36x38a (scored 53.92; v0054 53.98 TIE numeric-high backup; v0049 53.72 high backup)"
+    current_best_score: 53.92
+    next_action: "AR-MIX/AR-MIX2 八 lane 全回分、INDEX 补登记完成；v0051现役，v0054 TIE 备份；混合族饱和 ~53.7，新机制才值得烧名额；确认门户选集与Total。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -88,10 +98,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0019 h_o1_shrinkmerge 62.36 + baseline heart_extrap 50.53"
-    current_best_score: 58.59
-    current_best_score_basis: "board-mean (62.89+62.36+50.53)/3=58.59. Promoted 2026-09-29 (D-20260929-T2R2SCORE-001). The portal-confirmed Total 156.06 still uses older components and extrap 50.53, not v0011 50.64."
-    next_action: "ROUND2 14 条已回分（x_n1_lineage 未回分）。外推四条无一进入合计；误投胚胎榜一次拒收已记录。OPEN: heart_extrap 50.64 vs aggregate 50.53 still needs a portal re-read."
+    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0019 h_o1_shrinkmerge 62.36 + heart_extrap v0030 x_r3_medlib09 51.12"
+    current_best_score: 58.79
+    current_best_score_basis: "board-mean (62.89+62.36+51.12)/3=58.79. Promoted 2026-10-03 (D-20261003-T2H10SCORE-001; v0030 +0.59 vs baseline, +0.48 vs v0011 50.64). The portal-confirmed Total 156.06 still uses older components; 160.27 derived only."
+    next_action: "HOLDOUT10 五 lane 全回分：v0030=51.12 现役（v0032 51.14/v0034 51.02 TIE 不晋级，v0031/v0033 REJECT）；recipe 家族 ~51.1 平台期，同族调参无服务器意义；T2 待分清零。OPEN: portal Total 重读（推导合计 160.27 待确认；确认合计仍 156.06）；下一波需行集合/几何级新机制（新冻结授权）或封存。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -107,7 +117,7 @@ tasks:
     current_best: "candidate/T3_gata4/v0048_next_n2hurdle; server 47.93, promoted D-20260927-T3SCORE-001"
     current_best_score: 47.93
     active_atom: null
-    next_action: "两架构及10子项已回分入库，v0066/v0068均REJECT、当前配置关闭，T3待分0，现役不变；A方向读数最高但DE/共表达损失更大，B组成未获收益。后续需新增响应依据或适用背景，不自动重训/生成候选；reports/t3_arch_two_score_review_20261001/REPORT.md；D-20261001-T3ARCHSCORE-001。"
+    next_action: "v0072已登记REJECT，半步试验关闭，现役v0048保持；不继续倍率扫描，后续需新响应依据或结构证据。reports/t3_halfstep_20261003/SCORE_REVIEW.md；D-20261003-T3HALFSCORE-001。"
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

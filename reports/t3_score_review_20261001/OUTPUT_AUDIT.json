@@ -1,0 +1,944 @@
+{
+  "analysis_role": "read-only comparisons of model outputs, WT departures and common decoder; no matched KO truth, no official scoring or new fitting",
+  "source_low_control_threshold": 0.1,
+  "input_binding": "existing INDEX, input locks and approved source permit",
+  "lanes": [
+    {
+      "lane": "r1_celloracle",
+      "changed_genes": 489,
+      "raw_mean_abs_delta_to_WT": 0.0003631467989180237,
+      "final_mean_abs_delta_to_WT": 0.0010699632111936808,
+      "raw_max_population_log_mean_delta": 0.019617080688476562,
+      "final_max_population_log_mean_delta": 0.0503772497177124,
+      "decoder_population_delta_cosine": 0.9791811448258676,
+      "decoder_sign_changes": 0,
+      "decoder_sign_compared_genes": 26,
+      "decoder_max_state_count_mean_relative_difference": 8.28300414923433e-07,
+      "decoder_max_state_log_mean_absolute_difference": 0.3079957962036133,
+      "top20_genes_source_control_count_mean_below_01": 16,
+      "top20_population_shifts": [
+        {
+          "gene": "Fbxo32",
+          "raw_log_mean_delta": -0.019617080688476562,
+          "final_log_mean_delta": -0.0503772497177124,
+          "source_control_mean_intensity": 0.07394145429134369,
+          "target_WT_mean_intensity": 12.148016929626465
+        },
+        {
+          "gene": "Foxc1",
+          "raw_log_mean_delta": 0.01599109172821045,
+          "final_log_mean_delta": 0.045867323875427246,
+          "source_control_mean_intensity": 0.0887843668460846,
+          "target_WT_mean_intensity": 93.85164642333984
+        },
+        {
+          "gene": "Ntn1",
+          "raw_log_mean_delta": 0.009508132934570312,
+          "final_log_mean_delta": 0.032341718673706055,
+          "source_control_mean_intensity": 0.014433660544455051,
+          "target_WT_mean_intensity": 140.07872009277344
+        },
+        {
+          "gene": "Cpa1",
+          "raw_log_mean_delta": 0.0022367388010025024,
+          "final_log_mean_delta": 0.016447782516479492,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 3.8342232704162598
+        },
+        {
+          "gene": "Slc7a3",
+          "raw_log_mean_delta": 0.004194170236587524,
+          "final_log_mean_delta": 0.014048054814338684,
+          "source_control_mean_intensity": 0.004982784856110811,
+          "target_WT_mean_intensity": 2.720679759979248
+        },
+        {
+          "gene": "Adamts12",
+          "raw_log_mean_delta": 0.003381073474884033,
+          "final_log_mean_delta": 0.01382380723953247,
+          "source_control_mean_intensity": 0.19631145894527435,
+          "target_WT_mean_intensity": 12.026662826538086
+        },
+        {
+          "gene": "Foxd3",
+          "raw_log_mean_delta": 0.0029816925525665283,
+          "final_log_mean_delta": 0.012305080890655518,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 15.015459060668945
+        },
+        {
+          "gene": "Svep1",
+          "raw_log_mean_delta": -0.0039000511169433594,
+          "final_log_mean_delta": -0.009617805480957031,
+          "source_control_mean_intensity": 0.1405281275510788,
+          "target_WT_mean_intensity": 40.17539596557617
+        },
+        {
+          "gene": "Trp63",
+          "raw_log_mean_delta": 0.00240914523601532,
+          "final_log_mean_delta": 0.008893318474292755,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 2.119486093521118
+        },
+        {
+          "gene": "Nfatc1",
+          "raw_log_mean_delta": 0.001211792230606079,
+          "final_log_mean_delta": 0.008741915225982666,
+          "source_control_mean_intensity": 0.05884240195155144,
+          "target_WT_mean_intensity": 4.9828596115112305
+        },
+        {
+          "gene": "Kitl",
+          "raw_log_mean_delta": -0.002890348434448242,
+          "final_log_mean_delta": -0.00855371356010437,
+          "source_control_mean_intensity": 0.32224172353744507,
+          "target_WT_mean_intensity": 6.293698310852051
+        },
+        {
+          "gene": "Cd93",
+          "raw_log_mean_delta": 0.0037886202335357666,
+          "final_log_mean_delta": 0.008285582065582275,
+          "source_control_mean_intensity": 0.0515994057059288,
+          "target_WT_mean_intensity": 14.573297500610352
+        },
+        {
+          "gene": "Phactr1",
+          "raw_log_mean_delta": 0.0016149282455444336,
+          "final_log_mean_delta": 0.008119940757751465,
+          "source_control_mean_intensity": 0.1434744894504547,
+          "target_WT_mean_intensity": 7.226818084716797
+        },
+        {
+          "gene": "Thsd4",
+          "raw_log_mean_delta": 0.003401517868041992,
+          "final_log_mean_delta": 0.007044792175292969,
+          "source_control_mean_intensity": 0.00360187073238194,
+          "target_WT_mean_intensity": 102.76403045654297
+        },
+        {
+          "gene": "Abca6",
+          "raw_log_mean_delta": 0.001504749059677124,
+          "final_log_mean_delta": 0.005615934729576111,
+          "source_control_mean_intensity": 0.0071469321846961975,
+          "target_WT_mean_intensity": 3.502936601638794
+        },
+        {
+          "gene": "Nppa",
+          "raw_log_mean_delta": 0.001228615641593933,
+          "final_log_mean_delta": 0.005002692341804504,
+          "source_control_mean_intensity": 0.00360559718683362,
+          "target_WT_mean_intensity": 8.081424713134766
+        },
+        {
+          "gene": "Tbx1",
+          "raw_log_mean_delta": 0.0017036199569702148,
+          "final_log_mean_delta": 0.004574179649353027,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 44.07425308227539
+        },
+        {
+          "gene": "Smoc1",
+          "raw_log_mean_delta": 0.0013840198516845703,
+          "final_log_mean_delta": 0.004499197006225586,
+          "source_control_mean_intensity": 0.002141620498150587,
+          "target_WT_mean_intensity": 131.43927001953125
+        },
+        {
+          "gene": "Dach1",
+          "raw_log_mean_delta": 0.0014011859893798828,
+          "final_log_mean_delta": 0.0040395259857177734,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 93.29747772216797
+        },
+        {
+          "gene": "Nrxn3",
+          "raw_log_mean_delta": 0.0007618367671966553,
+          "final_log_mean_delta": 0.003803536295890808,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 2.919361114501953
+        }
+      ]
+    },
+    {
+      "lane": "r3_activity",
+      "changed_genes": 499,
+      "raw_mean_abs_delta_to_WT": 0.054779283702373505,
+      "final_mean_abs_delta_to_WT": 0.1250017136335373,
+      "raw_max_population_log_mean_delta": 0.28957271575927734,
+      "final_max_population_log_mean_delta": 0.7473757266998291,
+      "decoder_population_delta_cosine": 0.4794009085888544,
+      "decoder_sign_changes": 64,
+      "decoder_sign_compared_genes": 316,
+      "decoder_max_state_count_mean_relative_difference": 1.4081485915085068e-06,
+      "decoder_max_state_log_mean_absolute_difference": 3.7488393783569336,
+      "top20_genes_source_control_count_mean_below_01": 9,
+      "top20_population_shifts": [
+        {
+          "gene": "Tnc",
+          "raw_log_mean_delta": 0.10624194145202637,
+          "final_log_mean_delta": 0.7473757266998291,
+          "source_control_mean_intensity": 1.381308913230896,
+          "target_WT_mean_intensity": 130.06430053710938
+        },
+        {
+          "gene": "Irx5",
+          "raw_log_mean_delta": 0.03212165832519531,
+          "final_log_mean_delta": 0.638573408126831,
+          "source_control_mean_intensity": 0.002604696899652481,
+          "target_WT_mean_intensity": 84.45035552978516
+        },
+        {
+          "gene": "Crabp1",
+          "raw_log_mean_delta": 0.05305814743041992,
+          "final_log_mean_delta": 0.5958483219146729,
+          "source_control_mean_intensity": 1.9859205484390259,
+          "target_WT_mean_intensity": 359.6603698730469
+        },
+        {
+          "gene": "Irx3",
+          "raw_log_mean_delta": 0.011366128921508789,
+          "final_log_mean_delta": 0.5871186256408691,
+          "source_control_mean_intensity": 0.007839905098080635,
+          "target_WT_mean_intensity": 115.5232925415039
+        },
+        {
+          "gene": "Gja1",
+          "raw_log_mean_delta": 0.0482175350189209,
+          "final_log_mean_delta": 0.5818285942077637,
+          "source_control_mean_intensity": 1.601028561592102,
+          "target_WT_mean_intensity": 123.77581787109375
+        },
+        {
+          "gene": "Pdgfrb",
+          "raw_log_mean_delta": 0.022691965103149414,
+          "final_log_mean_delta": 0.5553262233734131,
+          "source_control_mean_intensity": 0.4925261437892914,
+          "target_WT_mean_intensity": 105.4521255493164
+        },
+        {
+          "gene": "Dach1",
+          "raw_log_mean_delta": 0.010499715805053711,
+          "final_log_mean_delta": 0.5183145999908447,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 93.29747772216797
+        },
+        {
+          "gene": "Bex3",
+          "raw_log_mean_delta": -0.011150836944580078,
+          "final_log_mean_delta": 0.5086159706115723,
+          "source_control_mean_intensity": 0.8734311461448669,
+          "target_WT_mean_intensity": 109.48424530029297
+        },
+        {
+          "gene": "Meg3",
+          "raw_log_mean_delta": 0.077178955078125,
+          "final_log_mean_delta": 0.5075899362564087,
+          "source_control_mean_intensity": 6.3453369140625,
+          "target_WT_mean_intensity": 53.469051361083984
+        },
+        {
+          "gene": "Bmp4",
+          "raw_log_mean_delta": 0.04850661754608154,
+          "final_log_mean_delta": 0.5049471259117126,
+          "source_control_mean_intensity": 0.1941010057926178,
+          "target_WT_mean_intensity": 26.375059127807617
+        },
+        {
+          "gene": "Actg1",
+          "raw_log_mean_delta": 0.0194704532623291,
+          "final_log_mean_delta": 0.4762094020843506,
+          "source_control_mean_intensity": 22.059049606323242,
+          "target_WT_mean_intensity": 85.10762023925781
+        },
+        {
+          "gene": "Prrx2",
+          "raw_log_mean_delta": -0.09092020988464355,
+          "final_log_mean_delta": 0.46004271507263184,
+          "source_control_mean_intensity": 0.05157788097858429,
+          "target_WT_mean_intensity": 88.62947845458984
+        },
+        {
+          "gene": "Twist1",
+          "raw_log_mean_delta": 0.026016712188720703,
+          "final_log_mean_delta": 0.4209468364715576,
+          "source_control_mean_intensity": 0.5586757659912109,
+          "target_WT_mean_intensity": 261.71160888671875
+        },
+        {
+          "gene": "Top2a",
+          "raw_log_mean_delta": -0.008520722389221191,
+          "final_log_mean_delta": 0.4025285243988037,
+          "source_control_mean_intensity": 0.5896258354187012,
+          "target_WT_mean_intensity": 48.49109649658203
+        },
+        {
+          "gene": "Tal1",
+          "raw_log_mean_delta": 0.06938576698303223,
+          "final_log_mean_delta": 0.3900160789489746,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 17.01531410217285
+        },
+        {
+          "gene": "Myl7",
+          "raw_log_mean_delta": -0.28957271575927734,
+          "final_log_mean_delta": -0.38821375370025635,
+          "source_control_mean_intensity": 0.0016083272639662027,
+          "target_WT_mean_intensity": 198.02047729492188
+        },
+        {
+          "gene": "Etv2",
+          "raw_log_mean_delta": 0.04003763198852539,
+          "final_log_mean_delta": 0.3677937984466553,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 7.628758907318115
+        },
+        {
+          "gene": "Smoc1",
+          "raw_log_mean_delta": -0.007771968841552734,
+          "final_log_mean_delta": 0.349804162979126,
+          "source_control_mean_intensity": 0.002141620498150587,
+          "target_WT_mean_intensity": 131.43927001953125
+        },
+        {
+          "gene": "Hand2",
+          "raw_log_mean_delta": 0.002893209457397461,
+          "final_log_mean_delta": 0.34307098388671875,
+          "source_control_mean_intensity": 0.7098847031593323,
+          "target_WT_mean_intensity": 33.802345275878906
+        },
+        {
+          "gene": "Tlx1",
+          "raw_log_mean_delta": 0.03450554609298706,
+          "final_log_mean_delta": 0.34037500619888306,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 10.48192310333252
+        }
+      ]
+    },
+    {
+      "lane": "r4_functional",
+      "changed_genes": 438,
+      "raw_mean_abs_delta_to_WT": 0.020333848893642426,
+      "final_mean_abs_delta_to_WT": 0.07954870164394379,
+      "raw_max_population_log_mean_delta": 1.6117191314697266,
+      "final_max_population_log_mean_delta": 3.0478243827819824,
+      "decoder_population_delta_cosine": 0.7768408058121389,
+      "decoder_sign_changes": 0,
+      "decoder_sign_compared_genes": 317,
+      "decoder_max_state_count_mean_relative_difference": 2.0433815279830014e-06,
+      "decoder_max_state_log_mean_absolute_difference": 3.8950159549713135,
+      "top20_genes_source_control_count_mean_below_01": 20,
+      "top20_population_shifts": [
+        {
+          "gene": "Stmn2",
+          "raw_log_mean_delta": 0.29754191637039185,
+          "final_log_mean_delta": 3.0478243827819824,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 8.967774391174316
+        },
+        {
+          "gene": "Podxl",
+          "raw_log_mean_delta": 1.6117191314697266,
+          "final_log_mean_delta": 2.3638834953308105,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 414.79986572265625
+        },
+        {
+          "gene": "Slc39a4",
+          "raw_log_mean_delta": 0.13124960660934448,
+          "final_log_mean_delta": 1.1312133073806763,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 6.388941764831543
+        },
+        {
+          "gene": "Agtr2",
+          "raw_log_mean_delta": 0.2595099210739136,
+          "final_log_mean_delta": 1.0430471897125244,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 25.346513748168945
+        },
+        {
+          "gene": "Nppb",
+          "raw_log_mean_delta": 0.09583400189876556,
+          "final_log_mean_delta": 0.9649847149848938,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 2.3606698513031006
+        },
+        {
+          "gene": "Cdh4",
+          "raw_log_mean_delta": 0.24234414100646973,
+          "final_log_mean_delta": 0.9435901641845703,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 40.791473388671875
+        },
+        {
+          "gene": "Bnc1",
+          "raw_log_mean_delta": 0.17700731754302979,
+          "final_log_mean_delta": 0.7908878922462463,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 24.141071319580078
+        },
+        {
+          "gene": "Arg1",
+          "raw_log_mean_delta": 0.20984524488449097,
+          "final_log_mean_delta": 0.778546154499054,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 24.380699157714844
+        },
+        {
+          "gene": "Rgs5",
+          "raw_log_mean_delta": 0.09525775909423828,
+          "final_log_mean_delta": 0.7548009157180786,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 5.737800598144531
+        },
+        {
+          "gene": "Reln",
+          "raw_log_mean_delta": 0.1273009479045868,
+          "final_log_mean_delta": 0.746589183807373,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 11.698403358459473
+        },
+        {
+          "gene": "Ano1",
+          "raw_log_mean_delta": 0.12623456120491028,
+          "final_log_mean_delta": 0.7158011198043823,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 11.255197525024414
+        },
+        {
+          "gene": "Cdh5",
+          "raw_log_mean_delta": 0.1825411319732666,
+          "final_log_mean_delta": 0.6883471012115479,
+          "source_control_mean_intensity": 0.006803032010793686,
+          "target_WT_mean_intensity": 56.22206497192383
+        },
+        {
+          "gene": "Dach1",
+          "raw_log_mean_delta": 0.2435896396636963,
+          "final_log_mean_delta": 0.659965991973877,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 93.29747772216797
+        },
+        {
+          "gene": "Myh11",
+          "raw_log_mean_delta": 0.04570209980010986,
+          "final_log_mean_delta": 0.571664571762085,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 1.7364052534103394
+        },
+        {
+          "gene": "Homer2",
+          "raw_log_mean_delta": 0.1439303159713745,
+          "final_log_mean_delta": 0.530113935470581,
+          "source_control_mean_intensity": 0.0033319222275167704,
+          "target_WT_mean_intensity": 30.864986419677734
+        },
+        {
+          "gene": "Dll1",
+          "raw_log_mean_delta": 0.12663143873214722,
+          "final_log_mean_delta": 0.517751932144165,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 31.148216247558594
+        },
+        {
+          "gene": "Hoxa1",
+          "raw_log_mean_delta": 0.12881922721862793,
+          "final_log_mean_delta": 0.5046907663345337,
+          "source_control_mean_intensity": 0.0012558585731312633,
+          "target_WT_mean_intensity": 31.070085525512695
+        },
+        {
+          "gene": "Tal1",
+          "raw_log_mean_delta": 0.09447520971298218,
+          "final_log_mean_delta": 0.4398522973060608,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 17.01531410217285
+        },
+        {
+          "gene": "Ednrb",
+          "raw_log_mean_delta": 0.08375424146652222,
+          "final_log_mean_delta": 0.40788698196411133,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 10.610180854797363
+        },
+        {
+          "gene": "Casq1",
+          "raw_log_mean_delta": 0.07302930951118469,
+          "final_log_mean_delta": 0.38774561882019043,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 4.232189655303955
+        }
+      ]
+    },
+    {
+      "lane": "r4_bilinear",
+      "changed_genes": 438,
+      "raw_mean_abs_delta_to_WT": 0.02049371972680092,
+      "final_mean_abs_delta_to_WT": 0.08034524321556091,
+      "raw_max_population_log_mean_delta": 1.6104869842529297,
+      "final_max_population_log_mean_delta": 3.195101499557495,
+      "decoder_population_delta_cosine": 0.7727872472171192,
+      "decoder_sign_changes": 0,
+      "decoder_sign_compared_genes": 321,
+      "decoder_max_state_count_mean_relative_difference": 1.976796283997828e-06,
+      "decoder_max_state_log_mean_absolute_difference": 4.084453582763672,
+      "top20_genes_source_control_count_mean_below_01": 20,
+      "top20_population_shifts": [
+        {
+          "gene": "Stmn2",
+          "raw_log_mean_delta": 0.3118184804916382,
+          "final_log_mean_delta": 3.195101499557495,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 8.967774391174316
+        },
+        {
+          "gene": "Podxl",
+          "raw_log_mean_delta": 1.6104869842529297,
+          "final_log_mean_delta": 2.3625712394714355,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 414.79986572265625
+        },
+        {
+          "gene": "Slc39a4",
+          "raw_log_mean_delta": 0.12971025705337524,
+          "final_log_mean_delta": 1.1118788719177246,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 6.388941764831543
+        },
+        {
+          "gene": "Agtr2",
+          "raw_log_mean_delta": 0.2643057107925415,
+          "final_log_mean_delta": 1.0668472051620483,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 25.346513748168945
+        },
+        {
+          "gene": "Nppb",
+          "raw_log_mean_delta": 0.09776680171489716,
+          "final_log_mean_delta": 0.9999291300773621,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 2.3606698513031006
+        },
+        {
+          "gene": "Cdh4",
+          "raw_log_mean_delta": 0.24268090724945068,
+          "final_log_mean_delta": 0.9457573890686035,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 40.791473388671875
+        },
+        {
+          "gene": "Reln",
+          "raw_log_mean_delta": 0.13517621159553528,
+          "final_log_mean_delta": 0.8064501285552979,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 11.698403358459473
+        },
+        {
+          "gene": "Bnc1",
+          "raw_log_mean_delta": 0.17740583419799805,
+          "final_log_mean_delta": 0.7941510081291199,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 24.141071319580078
+        },
+        {
+          "gene": "Rgs5",
+          "raw_log_mean_delta": 0.09816479682922363,
+          "final_log_mean_delta": 0.7916266918182373,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 5.737800598144531
+        },
+        {
+          "gene": "Arg1",
+          "raw_log_mean_delta": 0.2105044722557068,
+          "final_log_mean_delta": 0.7819996476173401,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 24.380699157714844
+        },
+        {
+          "gene": "Ano1",
+          "raw_log_mean_delta": 0.12616756558418274,
+          "final_log_mean_delta": 0.7152793407440186,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 11.255197525024414
+        },
+        {
+          "gene": "Cdh5",
+          "raw_log_mean_delta": 0.18067282438278198,
+          "final_log_mean_delta": 0.6791187524795532,
+          "source_control_mean_intensity": 0.006803032010793686,
+          "target_WT_mean_intensity": 56.22206497192383
+        },
+        {
+          "gene": "Dach1",
+          "raw_log_mean_delta": 0.25063014030456543,
+          "final_log_mean_delta": 0.6787934303283691,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 93.29747772216797
+        },
+        {
+          "gene": "Myh11",
+          "raw_log_mean_delta": 0.045285776257514954,
+          "final_log_mean_delta": 0.5583974719047546,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 1.7364052534103394
+        },
+        {
+          "gene": "Homer2",
+          "raw_log_mean_delta": 0.14400577545166016,
+          "final_log_mean_delta": 0.5306409597396851,
+          "source_control_mean_intensity": 0.0033319222275167704,
+          "target_WT_mean_intensity": 30.864986419677734
+        },
+        {
+          "gene": "Dll1",
+          "raw_log_mean_delta": 0.12836623191833496,
+          "final_log_mean_delta": 0.5277538299560547,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 31.148216247558594
+        },
+        {
+          "gene": "Hoxa1",
+          "raw_log_mean_delta": 0.1185157299041748,
+          "final_log_mean_delta": 0.4616967439651489,
+          "source_control_mean_intensity": 0.0012558585731312633,
+          "target_WT_mean_intensity": 31.070085525512695
+        },
+        {
+          "gene": "Tal1",
+          "raw_log_mean_delta": 0.09459221363067627,
+          "final_log_mean_delta": 0.44048458337783813,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 17.01531410217285
+        },
+        {
+          "gene": "Ednrb",
+          "raw_log_mean_delta": 0.08592784404754639,
+          "final_log_mean_delta": 0.4188276529312134,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 10.610180854797363
+        },
+        {
+          "gene": "Smoc1",
+          "raw_log_mean_delta": 0.1424703598022461,
+          "final_log_mean_delta": 0.3704872131347656,
+          "source_control_mean_intensity": 0.002141620498150587,
+          "target_WT_mean_intensity": 131.43927001953125
+        }
+      ]
+    },
+    {
+      "lane": "r5_scouter",
+      "changed_genes": 498,
+      "raw_mean_abs_delta_to_WT": 0.04326075315475464,
+      "final_mean_abs_delta_to_WT": 0.19657257199287415,
+      "raw_max_population_log_mean_delta": 0.7546794414520264,
+      "final_max_population_log_mean_delta": 2.778078556060791,
+      "decoder_population_delta_cosine": 0.8193248845367498,
+      "decoder_sign_changes": 1,
+      "decoder_sign_compared_genes": 440,
+      "decoder_max_state_count_mean_relative_difference": 2.034500994341215e-06,
+      "decoder_max_state_log_mean_absolute_difference": 4.428635597229004,
+      "top20_genes_source_control_count_mean_below_01": 10,
+      "top20_population_shifts": [
+        {
+          "gene": "Top2a",
+          "raw_log_mean_delta": 0.7153635025024414,
+          "final_log_mean_delta": 2.778078556060791,
+          "source_control_mean_intensity": 0.5896258354187012,
+          "target_WT_mean_intensity": 48.49109649658203
+        },
+        {
+          "gene": "Crabp1",
+          "raw_log_mean_delta": 0.6439914703369141,
+          "final_log_mean_delta": 2.4003031253814697,
+          "source_control_mean_intensity": 1.9859205484390259,
+          "target_WT_mean_intensity": 359.6603698730469
+        },
+        {
+          "gene": "Fbxl22",
+          "raw_log_mean_delta": 0.22127306461334229,
+          "final_log_mean_delta": 1.7334991693496704,
+          "source_control_mean_intensity": 0.06916484981775284,
+          "target_WT_mean_intensity": 22.317384719848633
+        },
+        {
+          "gene": "Meg3",
+          "raw_log_mean_delta": 0.18884849548339844,
+          "final_log_mean_delta": 1.613352656364441,
+          "source_control_mean_intensity": 6.3453369140625,
+          "target_WT_mean_intensity": 53.469051361083984
+        },
+        {
+          "gene": "Bambi",
+          "raw_log_mean_delta": 0.17179405689239502,
+          "final_log_mean_delta": 1.5880317687988281,
+          "source_control_mean_intensity": 0.09057529270648956,
+          "target_WT_mean_intensity": 21.153553009033203
+        },
+        {
+          "gene": "Gdf10",
+          "raw_log_mean_delta": 0.11382651329040527,
+          "final_log_mean_delta": 1.5736050605773926,
+          "source_control_mean_intensity": 0.03499818593263626,
+          "target_WT_mean_intensity": 4.639727592468262
+        },
+        {
+          "gene": "Ecscr",
+          "raw_log_mean_delta": 0.1264083981513977,
+          "final_log_mean_delta": 1.5599260330200195,
+          "source_control_mean_intensity": 0.36346733570098877,
+          "target_WT_mean_intensity": 8.583719253540039
+        },
+        {
+          "gene": "Pmp22",
+          "raw_log_mean_delta": 0.22882390022277832,
+          "final_log_mean_delta": 1.3245518207550049,
+          "source_control_mean_intensity": 0.4050285220146179,
+          "target_WT_mean_intensity": 114.2627182006836
+        },
+        {
+          "gene": "Sox10",
+          "raw_log_mean_delta": 0.2041553258895874,
+          "final_log_mean_delta": 1.2936773300170898,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 52.84431457519531
+        },
+        {
+          "gene": "Ccdc80",
+          "raw_log_mean_delta": 0.16307735443115234,
+          "final_log_mean_delta": 1.2921754121780396,
+          "source_control_mean_intensity": 1.3403589725494385,
+          "target_WT_mean_intensity": 43.74718475341797
+        },
+        {
+          "gene": "Smoc1",
+          "raw_log_mean_delta": 0.3296816349029541,
+          "final_log_mean_delta": 1.2911388874053955,
+          "source_control_mean_intensity": 0.002141620498150587,
+          "target_WT_mean_intensity": 131.43927001953125
+        },
+        {
+          "gene": "Plvap",
+          "raw_log_mean_delta": 0.24011999368667603,
+          "final_log_mean_delta": 1.274170160293579,
+          "source_control_mean_intensity": 0.003297240938991308,
+          "target_WT_mean_intensity": 60.328556060791016
+        },
+        {
+          "gene": "Apoe",
+          "raw_log_mean_delta": -0.7546794414520264,
+          "final_log_mean_delta": -1.2572497129440308,
+          "source_control_mean_intensity": 0.6715142130851746,
+          "target_WT_mean_intensity": 116.33506774902344
+        },
+        {
+          "gene": "Mef2c",
+          "raw_log_mean_delta": 0.15137892961502075,
+          "final_log_mean_delta": 1.2014050483703613,
+          "source_control_mean_intensity": 0.1422813981771469,
+          "target_WT_mean_intensity": 11.075671195983887
+        },
+        {
+          "gene": "Mab21l2",
+          "raw_log_mean_delta": 0.15835583209991455,
+          "final_log_mean_delta": 1.144210696220398,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 20.41019058227539
+        },
+        {
+          "gene": "Cdh4",
+          "raw_log_mean_delta": 0.16289031505584717,
+          "final_log_mean_delta": 1.1434438228607178,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 40.791473388671875
+        },
+        {
+          "gene": "Mpz",
+          "raw_log_mean_delta": 0.07335430383682251,
+          "final_log_mean_delta": 1.110215425491333,
+          "source_control_mean_intensity": 0.0018149149836972356,
+          "target_WT_mean_intensity": 6.849499702453613
+        },
+        {
+          "gene": "Slc2a1",
+          "raw_log_mean_delta": 0.11117488145828247,
+          "final_log_mean_delta": 1.0867266654968262,
+          "source_control_mean_intensity": 0.18416614830493927,
+          "target_WT_mean_intensity": 11.831311225891113
+        },
+        {
+          "gene": "Ezr",
+          "raw_log_mean_delta": 0.5360236167907715,
+          "final_log_mean_delta": 1.0846314430236816,
+          "source_control_mean_intensity": 0.15299369394779205,
+          "target_WT_mean_intensity": 471.9727783203125
+        },
+        {
+          "gene": "Cldn4",
+          "raw_log_mean_delta": 0.18392372131347656,
+          "final_log_mean_delta": 1.073088526725769,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 74.62284088134766
+        }
+      ]
+    },
+    {
+      "lane": "r6_gears",
+      "changed_genes": 441,
+      "raw_mean_abs_delta_to_WT": 0.03792878985404968,
+      "final_mean_abs_delta_to_WT": 0.1146160215139389,
+      "raw_max_population_log_mean_delta": 1.25624418258667,
+      "final_max_population_log_mean_delta": 2.8819832801818848,
+      "decoder_population_delta_cosine": 0.9066514439605762,
+      "decoder_sign_changes": 0,
+      "decoder_sign_compared_genes": 314,
+      "decoder_max_state_count_mean_relative_difference": 1.2913703812955646e-06,
+      "decoder_max_state_log_mean_absolute_difference": 3.186295509338379,
+      "top20_genes_source_control_count_mean_below_01": 20,
+      "top20_population_shifts": [
+        {
+          "gene": "Cdh4",
+          "raw_log_mean_delta": 0.743849515914917,
+          "final_log_mean_delta": 2.8819832801818848,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 40.791473388671875
+        },
+        {
+          "gene": "Dach1",
+          "raw_log_mean_delta": 1.0476200580596924,
+          "final_log_mean_delta": 2.592561721801758,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 93.29747772216797
+        },
+        {
+          "gene": "Bnc1",
+          "raw_log_mean_delta": 0.43050140142440796,
+          "final_log_mean_delta": 2.409224271774292,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 24.141071319580078
+        },
+        {
+          "gene": "Irx5",
+          "raw_log_mean_delta": 0.82185959815979,
+          "final_log_mean_delta": 2.3183279037475586,
+          "source_control_mean_intensity": 0.002604696899652481,
+          "target_WT_mean_intensity": 84.45035552978516
+        },
+        {
+          "gene": "Reln",
+          "raw_log_mean_delta": 0.2856127917766571,
+          "final_log_mean_delta": 2.2082717418670654,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 11.698403358459473
+        },
+        {
+          "gene": "Ttn",
+          "raw_log_mean_delta": 0.3341681957244873,
+          "final_log_mean_delta": 2.0035557746887207,
+          "source_control_mean_intensity": 0.0042989193461835384,
+          "target_WT_mean_intensity": 153.18612670898438
+        },
+        {
+          "gene": "Podxl",
+          "raw_log_mean_delta": 1.25624418258667,
+          "final_log_mean_delta": 1.9088058471679688,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 414.79986572265625
+        },
+        {
+          "gene": "Ngfr",
+          "raw_log_mean_delta": 0.4112834930419922,
+          "final_log_mean_delta": 1.8024019002914429,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 49.92609786987305
+        },
+        {
+          "gene": "Irx3",
+          "raw_log_mean_delta": 0.6855969429016113,
+          "final_log_mean_delta": 1.744685173034668,
+          "source_control_mean_intensity": 0.007839905098080635,
+          "target_WT_mean_intensity": 115.5232925415039
+        },
+        {
+          "gene": "Myl7",
+          "raw_log_mean_delta": 0.3700075149536133,
+          "final_log_mean_delta": 1.67713463306427,
+          "source_control_mean_intensity": 0.0016083272639662027,
+          "target_WT_mean_intensity": 198.02047729492188
+        },
+        {
+          "gene": "Thsd4",
+          "raw_log_mean_delta": 0.48356103897094727,
+          "final_log_mean_delta": 1.4063642024993896,
+          "source_control_mean_intensity": 0.00360187073238194,
+          "target_WT_mean_intensity": 102.76403045654297
+        },
+        {
+          "gene": "Wipf3",
+          "raw_log_mean_delta": 0.29963916540145874,
+          "final_log_mean_delta": 1.3908276557922363,
+          "source_control_mean_intensity": 0.004417460411787033,
+          "target_WT_mean_intensity": 18.987319946289062
+        },
+        {
+          "gene": "Dll1",
+          "raw_log_mean_delta": 0.29746508598327637,
+          "final_log_mean_delta": 1.3758625984191895,
+          "source_control_mean_intensity": 0.0,
+          "target_WT_mean_intensity": 31.148216247558594
+        },
+        {
+          "gene": "H19",
+          "raw_log_mean_delta": 0.7983484268188477,
+          "final_log_mean_delta": 1.2666983604431152,
+          "source_control_mean_intensity": 0.017304474487900734,
+          "target_WT_mean_intensity": 457.9158935546875
+        },
+        {
+          "gene": "Tfap2a",
+          "raw_log_mean_delta": 0.33369898796081543,
+          "final_log_mean_delta": 1.112114429473877,
+          "source_control_mean_intensity": 0.0009893683018162847,
+          "target_WT_mean_intensity": 61.144859313964844
+        },
+        {
+          "gene": "Pax3",
+          "raw_log_mean_delta": 0.1962428092956543,
+          "final_log_mean_delta": 1.0118393898010254,
+          "source_control_mean_intensity": 0.004695245996117592,
+          "target_WT_mean_intensity": 17.066856384277344
+        },
+        {
+          "gene": "Irx1",
+          "raw_log_mean_delta": 0.2818796634674072,
+          "final_log_mean_delta": 0.9598010778427124,
+          "source_control_mean_intensity": 0.002032850868999958,
+          "target_WT_mean_intensity": 43.4138298034668
+        },
+        {
+          "gene": "Ntn1",
+          "raw_log_mean_delta": 0.27226972579956055,
+          "final_log_mean_delta": 0.7508823871612549,
+          "source_control_mean_intensity": 0.014433660544455051,
+          "target_WT_mean_intensity": 140.07872009277344
+        },
+        {
+          "gene": "Smoc1",
+          "raw_log_mean_delta": 0.273390531539917,
+          "final_log_mean_delta": 0.7210812568664551,
+          "source_control_mean_intensity": 0.002141620498150587,
+          "target_WT_mean_intensity": 131.43927001953125
+        },
+        {
+          "gene": "Sncaip",
+          "raw_log_mean_delta": 0.1393103003501892,
+          "final_log_mean_delta": 0.6183972954750061,
+          "source_control_mean_intensity": 0.0032306001521646976,
+          "target_WT_mean_intensity": 13.588264465332031
+        }
+      ]
+    }
+  ],
+  "layers_and_raw": "inherited WT layers/raw retained; actual modeled output is X. This audit examines X. Server data-reader version not independently verified."
+}

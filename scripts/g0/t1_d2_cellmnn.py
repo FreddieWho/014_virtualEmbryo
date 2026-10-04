@@ -9,6 +9,8 @@ Paper: arXiv:2510.02903 (ICLR 2026). Implemented from paper spec, no external co
   Loss L = MMD_Laplacian(s=1,e=1e-8) + 0.1*Lkin + 1.0*Linv, gamma=0.1 (single pair).
   AdamW lr 2e-4/wd 1e-5, batch 200/timepoint, validate every 10 steps (fixed held-out
   2000 E9.5 cells, MMD), patience 40 checks, 90-min CPU cap. torch CPU, 16 threads.
+R3 tuning (D-20261001-T1D2R3-001, disclosed): single run with --max-checks 120
+(default 40 = frozen behavior unchanged); candidate dir v0048 (v0022 taken by D3).
 T1 adaptation: train E8.5(t=0)->E9.5(t=1) heart; forecast E9.5->E10.5 dt=1 on v0004 bank.
 Gates: proxy (standing: de>0.8868 & dir>0.8895 -> PROMOTED/upload pick);
   enrichment (CollecTRI existence Enrichment@500>1.0 -> mechanism claim, else
@@ -79,6 +81,7 @@ def main() -> int:
     ap.add_argument("--run-dir", required=True)
     ap.add_argument("--smoke", action="store_true")
     ap.add_argument("--dz", type=int, default=0)
+    ap.add_argument("--max-checks", type=int, default=40)
     args = ap.parse_args()
     import torch
     import torch.nn as nn
@@ -87,7 +90,7 @@ def main() -> int:
     np.random.seed(RUN_SEED)
 
     dz = args.dz or (10 if args.smoke else DZ)
-    max_checks = 5 if args.smoke else 40
+    max_checks = 5 if args.smoke else args.max_checks
     bs = 64 if args.smoke else BATCH
     cap_s = 300 if args.smoke else TRAIN_CAP_S
 
@@ -95,7 +98,8 @@ def main() -> int:
     (RUN / "candidates" / "T1_val").mkdir(parents=True, exist_ok=True)
     (RUN / "intermediates").mkdir(parents=True, exist_ok=True)
     (RUN / "metrics").mkdir(parents=True, exist_ok=True)
-    diag: dict = {"task": TASK_ID, "seed": RUN_SEED, "dz": dz, "smoke": bool(args.smoke)}
+    diag: dict = {"task": TASK_ID, "seed": RUN_SEED, "dz": dz, "smoke": bool(args.smoke),
+                "max_checks": max_checks}
     t00 = time.time()
 
     assert sha256(V0004) == V0004_SHA, "BLOCKED_INPUT: v0004 hash drift"
@@ -282,13 +286,13 @@ def main() -> int:
         (RUN / "RESULT.json").write_text(json.dumps(diag, indent=1))
         print(json.dumps({"diverged": True}, indent=1), flush=True)
         return 0
-    cand_dir = RUN / "candidates" / "T1_val" / "v0022_g0_t1_d2_cellmnn"
+    cand_dir = RUN / "candidates" / "T1_val" / "v0048_g0_t1_d2r3_patience120"
     cand_dir.mkdir(parents=True, exist_ok=True)
     out = cand_dir / "submission.h5ad"
     a = ad.AnnData(X=np.ascontiguousarray(Xout), obs=v4.obs.copy(),
                    var=pd.DataFrame(index=panel))
     a.uns["ve_contract"] = {"schema": "ve.contract.v1", "normalization": "log1p_normalized"}
-    a.uns["ve_g0_t1_d2"] = json.dumps({"atom_id": TASK_ID, "lane": "L1_CELLMNN",
+    a.uns["ve_g0_t1_d2"] = json.dumps({"atom_id": TASK_ID, "lane": "R3_PATIENCE120",
         "method": "cellmnn_port_single_mlp_lineage_cond", "parent": "v0004 recipe",
         "seed": RUN_SEED, "dz": dz, "target_used": False}, sort_keys=True)
     a.write_h5ad(out)

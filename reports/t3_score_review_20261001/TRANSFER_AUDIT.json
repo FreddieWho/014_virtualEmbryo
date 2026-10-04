@@ -1,0 +1,31 @@
+{
+  "Stmn2": {
+    "predicted_source_delta_log": 0.028421603589089302,
+    "source_control_positive_cells": 0,
+    "source_control_cells": 220,
+    "count_ratio_inferred_with_0001_pseudocount": 29.829345479607582
+  },
+  "nearest_Gata4_training_GO_genes": [
+    {
+      "gene": "Yy1",
+      "cosine": 0.42442670464515686
+    },
+    {
+      "gene": "Pbrm1",
+      "cosine": 0.4098623991012573
+    },
+    {
+      "gene": "Znhit1",
+      "cosine": 0.40557295083999634
+    },
+    {
+      "gene": "Setdb1",
+      "cosine": 0.4025244116783142
+    },
+    {
+      "gene": "Rest",
+      "cosine": 0.37883931398391724
+    }
+  ],
+  "interpretation": "source predictions mapped through ratio with near-zero denominator; output audit quantifies target consequences, not KO truth"
+}

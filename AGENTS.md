@@ -6,9 +6,10 @@
 
 开始任何 T1/T2/T3 工作前，先阅读：
 
-1. `docs/coordination/README.md`
-2. `docs/coordination/STATUS.md`
-3. 对应任务契约和现有权威索引
+1. `docs/00_START_HERE.md` 和 `docs/ATOM_MAP.md`（现役、已关路线、文件放哪；不要先扫 `docs/batch*` 或 `reports/`）
+2. `docs/coordination/README.md`
+3. `docs/coordination/STATUS.md`
+4. 对应任务契约和现有权威索引
 
 ## Concise update rules
 

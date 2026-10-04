@@ -1,0 +1,146 @@
+{
+  "evidence": "USER_SCORE_REPORT.md",
+  "portal_verification": "NOT_RUN",
+  "submission_id": "NOT_PROVIDED",
+  "submitted_at": "NOT_PROVIDED",
+  "records": [
+    {
+      "portal_file": "t3_gata4__r1_celloracle__v0060.h5ad",
+      "board": "T3:gata4",
+      "version": "v0060",
+      "method": "priority_six_r1_celloracle",
+      "board_score": 46.91,
+      "metrics": {
+        "de_score": 39.2,
+        "de_direction": 49.6,
+        "severity_slope": 50.0,
+        "mmd_u": 51.5,
+        "variogram": 50.8
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0060_six_r1_celloracle/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -1.02,
+      "weighted_skill_sum_diagnostic": 46.904
+    },
+    {
+      "portal_file": "t3_gata4__r3_activity__v0061.h5ad",
+      "board": "T3:gata4",
+      "version": "v0061",
+      "method": "priority_six_r3_activity",
+      "board_score": 45.51,
+      "metrics": {
+        "de_score": 39.6,
+        "de_direction": 51.2,
+        "severity_slope": 50.0,
+        "mmd_u": 42.6,
+        "variogram": 40.0
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0061_six_r3_activity/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -2.42,
+      "weighted_skill_sum_diagnostic": 45.492
+    },
+    {
+      "portal_file": "t3_gata4__r4_functional__v0062.h5ad",
+      "board": "T3:gata4",
+      "version": "v0062",
+      "method": "priority_six_r4_functional",
+      "board_score": 44.42,
+      "metrics": {
+        "de_score": 39.2,
+        "de_direction": 48.7,
+        "severity_slope": 50.0,
+        "mmd_u": 42.6,
+        "variogram": 35.8
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0062_six_r4_functional/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -3.51,
+      "weighted_skill_sum_diagnostic": 44.411
+    },
+    {
+      "portal_file": "t3_gata4__r4_bilinear__v0063.h5ad",
+      "board": "T3:gata4",
+      "version": "v0063",
+      "method": "priority_six_r4_bilinear",
+      "board_score": 44.27,
+      "metrics": {
+        "de_score": 38.8,
+        "de_direction": 48.7,
+        "severity_slope": 50.0,
+        "mmd_u": 42.7,
+        "variogram": 35.4
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0063_six_r4_bilinear/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -3.66,
+      "weighted_skill_sum_diagnostic": 44.271
+    },
+    {
+      "portal_file": "t3_gata4__r5_scouter__v0064.h5ad",
+      "board": "T3:gata4",
+      "version": "v0064",
+      "method": "priority_six_r5_scouter",
+      "board_score": 44.14,
+      "metrics": {
+        "de_score": 41.7,
+        "de_direction": 50.3,
+        "severity_slope": 50.0,
+        "mmd_u": 36.8,
+        "variogram": 26.8
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0064_six_r5_scouter/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -3.79,
+      "weighted_skill_sum_diagnostic": 44.145
+    },
+    {
+      "portal_file": "t3_gata4__r6_gears__v0065.h5ad",
+      "board": "T3:gata4",
+      "version": "v0065",
+      "method": "priority_six_r6_gears",
+      "board_score": 42.38,
+      "metrics": {
+        "de_score": 38.1,
+        "de_direction": 48.7,
+        "severity_slope": 50.0,
+        "mmd_u": 34.4,
+        "variogram": 26.8
+      },
+      "candidate_path": "submissions/candidates/T3_gata4/v0065_six_r6_gears/submission.h5ad",
+      "sha256_binding": "submissions/INDEX.tsv and upload MANIFEST.tsv",
+      "identity_check": "PASS",
+      "submission_id": "NOT_PROVIDED",
+      "submitted_at": "NOT_PROVIDED",
+      "source": "user message transcribed scores, received 2026-10-01",
+      "decision": "REJECT",
+      "delta_to_selection": -5.55,
+      "weighted_skill_sum_diagnostic": 42.377
+    }
+  ]
+}

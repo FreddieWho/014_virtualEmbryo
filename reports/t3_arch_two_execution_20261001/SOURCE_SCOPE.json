@@ -1,0 +1,15 @@
+{
+  "task": "T3:gata4",
+  "classification": "ALLOWED_EXISTING_INPUT_REUSE",
+  "policy_version": "T3_EXTERNAL_DATA_20260921",
+  "scope": "Only hash-locked official WT E8.0/E8.75/E9.5, already approved GSE26178326 perturbations+ctrl, GO and WT promoter topology",
+  "source_response_review": "reports/t3_r56_launch_20260921/SOURCE_REVIEW.json",
+  "GO_review": "reports/t3_priority_six_20260930/SOURCE_REVIEW.json",
+  "WT_and_topology_input_lock": "artifacts/t3_arch_two_20261001/B_INPUT_LOCK.json",
+  "new_external_bio_data": false,
+  "protected_KO_records_used": 0,
+  "trained_public_perturbation_weights_used": false,
+  "scientific_validity": "NOT_ESTABLISHED; source context transfer and TF activity hypothesis explicitly limited",
+  "capture_scope": "WT stage coverage differences handled with lineage-qualified temporal teachers; no absolute census claim",
+  "blocks_submission": false
+}

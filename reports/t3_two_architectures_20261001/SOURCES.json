@@ -1,0 +1,62 @@
+{
+  "checked_date": "2026-10-01",
+  "evidence_policy": "Primary papers, author repositories and documentation. Architecture inspiration is not reproduction or target validation.",
+  "sources": [
+    {
+      "id": "cellflow",
+      "doi": "10.1101/2025.04.11.648220",
+      "paper": "https://doi.org/10.1101/2025.04.11.648220",
+      "code": "https://github.com/theislab/CellFlow",
+      "protocol": "https://cellflow.readthedocs.io/en/latest/notebooks/200_zebrafish.html",
+      "status": "PREPRINT; author code available; notebook holds out one combination-time condition, not an entire target gene."
+    },
+    {
+      "id": "perturbnet",
+      "doi": "10.1038/s44320-025-00131-3",
+      "pmid": "40640612",
+      "pmcid": "PMC12322087",
+      "paper": "https://link.springer.com/article/10.1038/s44320-025-00131-3",
+      "code": "https://github.com/welch-lab/PerturbNet",
+      "status": "PUBLISHED; GO GenotypeVAE, cell VAE and conditional normalizing flow; unseen-gene evaluation. No evidence for our adult-to-embryo transfer."
+    },
+    {
+      "id": "genegeoflow",
+      "arxiv": "2608.06824v1",
+      "paper": "https://arxiv.org/html/2608.06824v1",
+      "status": "PREPRINT; strict gene holdout stated; some external comparisons transcribed from other work; author runnable implementation not confirmed."
+    },
+    {
+      "id": "wot",
+      "doi": "10.1016/j.cell.2019.01.006",
+      "tutorial": "https://broadinstitute.github.io/wot/tutorial/",
+      "status": "PUBLISHED; temporal coupling and relative fate/growth inference; not automatically a Gata4 intervention predictor."
+    },
+    {
+      "id": "moscot",
+      "doi": "10.1038/s41586-024-08453-2",
+      "paper": "https://doi.org/10.1038/s41586-024-08453-2",
+      "status": "PUBLISHED; multiview scalable temporal/spatial OT, not a validated unseen-Gata4 response model."
+    },
+    {
+      "id": "deepruot",
+      "arxiv": "2410.00844v2",
+      "openreview": "gQlxd3Mtru",
+      "paper": "https://arxiv.org/html/2410.00844v2",
+      "code": "https://github.com/zhenyiizhang/DeepRUOT",
+      "code_v2": "https://github.com/zhenyiizhang/DeepRUOTv2",
+      "status": "ICLR2025; learns stochastic dynamics and mass changes; no target-Gata4 intervention result; absolute growth requires meaningful census/measurement assumptions."
+    },
+    {
+      "id": "cellrank_realtime",
+      "documentation": "https://cellrank.readthedocs.io/en/latest/notebooks/tutorials/kernels/500_real_time.html",
+      "status": "RealTimeKernel uses experimental time and moscot; RNA velocity not required."
+    },
+    {
+      "id": "perturbode",
+      "arxiv": "2501.02409v6",
+      "paper": "https://arxiv.org/abs/2501.02409",
+      "code": "https://github.com/daklab/PerturbODE",
+      "status": "ICML2026 per author repository; code release still pending as checked 2026-10-01. Distinct from similarly named challenge baseline templates."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "totals_registered": 6,
+  "submetrics_registered": 30,
+  "candidate_identity_hash_binding": "PASS",
+  "supplied_fields_exact": "PASS",
+  "no_invented_submission_id_or_time": true,
+  "pending_T3": 0,
+  "selection": "v0048 unchanged",
+  "all_new_verdicts": "REJECT",
+  "scored_artifacts_and_zip_unchanged": true,
+  "models_fitted_or_candidates_generated": false,
+  "portal_query": "NOT_RUN",
+  "scientific_limits": "no raw server beta/R2 or uncalibrated-output server ablation; blocks_submission:false"
+}

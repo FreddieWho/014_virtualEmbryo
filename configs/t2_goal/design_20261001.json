@@ -1,0 +1,83 @@
+{
+ "schema": "t2-goal-design.v1",
+ "date": "2026-10-01",
+ "seed": 20261001,
+ "task": "T2",
+ "target_used": false,
+ "no_parameter_search": true,
+ "max_hours_per_lane": 4,
+ "boards": {
+  "embryo": {
+   "key": "T2:embryo:val_interp",
+   "parent": "submissions/candidates/T2_embryo_val_interp/v0014_e_o1_shrinkmerge/submission.h5ad",
+   "parent_sha256": "1ea0c69631d59ae5d9909a9b1878f820c74c50c4a89dc009fd1bcf349c71677d",
+   "bridge_parent": "submissions/candidates/T2_embryo_val_interp/v0002_g1_formal_log_rms/submission.h5ad",
+   "bridge_parent_sha256": "392c470e4af35797ad27c100e773c1a7695c989baed95c911fceb0b5d7965fd4",
+   "panel": "data/gene_panel/T2__embryo__val_interp.genes.txt",
+   "stages": {
+    "e675": "data/E6.75.h5ad",
+    "left": "data/E7.25.h5ad",
+    "right": "data/E8.0.h5ad"
+   },
+   "stage_times": {
+    "e675": 6.75,
+    "left": 7.25,
+    "right": 8.0,
+    "target": 7.5
+   },
+   "lam": 0.3333333333333333,
+   "n_obs": 5000,
+   "versions": {
+    "e_r1_compotrend": "v0016",
+    "e_r2_shrinkc1": "v0017"
+   }
+  },
+  "heart": {
+   "key": "T2:heart:val_interp",
+   "parent": "submissions/candidates/T2_heart_val_interp/v0019_h_o1_shrinkmerge/submission.h5ad",
+   "parent_sha256": "d84de17486a6685cd0e82cec926c9710dbbd60d08900854e8f91dfd561012a92",
+   "bridge_parent": "submissions/candidates/T2_heart_val_interp/v0009_j1_fgw_assignment/submission.h5ad",
+   "bridge_parent_sha256": "4f2e7552a4ff5a11191f8cf6f1e94393882d131aa76855e5da34faef3f43ac43",
+   "panel": "data/gene_panel/T2__heart__val_interp.genes.txt",
+   "stages": {
+    "left": "data/E8.25_late.h5ad",
+    "right": "data/E8.75.h5ad",
+    "e95": "data/E9.5.h5ad"
+   },
+   "stage_times": {
+    "left": 8.25,
+    "right": 8.75,
+    "e95": 9.5,
+    "target": 8.5
+   },
+   "lam": 0.5,
+   "n_obs": 5872,
+   "versions": {
+    "h_r1_compotrend": "v0021",
+    "h_r2_shrinkc1": "v0022"
+   }
+  },
+  "extrap": {
+   "key": "T2:heart:val_extrap",
+   "parent": "submissions/scored/baseline-001/T2_heart_val_extrap/submission.h5ad",
+   "parent_sha256": "f30beba62da673bb4c980d92eec2bc9ea03696e5c2b65414307c2e0402bd7504",
+   "panel": "data/gene_panel/T2__heart__val_extrap.genes.txt",
+   "stages": {
+    "e825": "data/E8.25_late.h5ad",
+    "left": "data/E8.75.h5ad",
+    "right": "data/E9.5.h5ad"
+   },
+   "stage_times": {
+    "e825": 8.25,
+    "left": 8.75,
+    "right": 9.5,
+    "target": 10.5
+   },
+   "n_obs": 25179,
+   "versions": {
+    "x_r1_lateref": "v0022",
+    "x_r2_shrinkc1": "v0023"
+   }
+  }
+ }
+}

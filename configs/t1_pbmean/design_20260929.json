@@ -1,0 +1,14 @@
+{
+  "seed": 20260929,
+  "parent": "v0035",
+  "alphas": [0.5, 1.0],
+  "schemes": ["A_global", "B_type"],
+  "type_mix": "e95_full_fraction",
+  "split_source": "artifacts/t1_three/T1-THREE-20260929-v1/r2joint/SPLITS.npz",
+  "local_weaker_than_head_allowed": true,
+  "disaster": {
+    "min_delta_std_ratio": 0.01,
+    "min_spearman_vs_observed_stage_delta": 0.0
+  },
+  "note": "Alphas and mix were frozen before any result. Local DE/direction may be slightly below v0035 and still package. Only a no-change delta or a sign flip against the observed E8.5 to E9.5 delta blocks packaging. E10.5 truth is not used."
+}

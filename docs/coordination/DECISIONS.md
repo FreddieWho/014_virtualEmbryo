@@ -1237,3 +1237,141 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
   evidence: "reports/SERVER_SCORE_REGISTRY.md#route-c-extrap-score-return--2026-10-02；reports/SERVER_SUBMETRIC_REGISTRY.tsv（40 行 = 5 件 × 8 技能）；submissions/INDEX.tsv v0024-v0028 已回填 score+scored；reports/LANE_VERDICTS.tsv 五行；交付 deliveries/arcqte__t2__upload__20261002.zip（sha f51e79a3…）；本地过程 .auto/log.jsonl + .auto/ROUTE_C_SUMMARY.md（含 variogram 方向纠正与失败轴台账）"
   boundary: "用户报告的分数与八项技能，无 submission ID、无时间戳、无门户 Total；未做独立门户查询。artifact 冻结不可变。无 Total 变化，无晋级声明。blocks_submission: false"
   review_trigger: "需要新证据才能重启该轴：或（a）拿到该板 variogram 通道的服务器锚点族，或（b）用户重读门户（50.74-vs-50.53）。"
+
+- id: D-20261002-T3AR-001
+  date: 2026-10-02
+  task: T3
+  kind: local_research_target_complete
+  decision: "用户确认的前台autoresearch本地目标完成：48次实测，13保留/35回滚；固定17原训练扰动LOPO、500输出基因，MSE 0.004258208→0.003393314，降低20.3112%。控制器达到20%后停止；保留具体复合物响应迁移与幅度收缩模块，不据此晋级服务器现役。"
+  evidence: "reports/t3_autoresearch_20261002/REPORT.md；FINAL_CHECK.json；EXPERIMENTS.tsv；artifacts/autoresearch/t3-20261002-v1/autoresearch-results/events.jsonl；保留commit 1b9847b0472d9b893face74f564e80eff29500b4。"
+  final_check: "模型锁定后一次检查：原val3扰动MSE降低17.4561%；原test6扰动降低6.1245%（4改善/2变差），配对扰动bootstrap区间跨零。历史test早前已被评估，不能称全新独立外部验证。检查后无调参。"
+  boundary: "48次自适应开发选择；成人成纤维细胞来源、两sample独立动物未确认；Gata4仅1个具体复合物供体，未触发高可信GO供体分支。无目标真值、无H5AD候选、未提交/未评分，服务器现役不变。科学限制blocks_submission:false。"
+  review_trigger: "新的Gata4响应依据或目标域迁移方案；后续不得把已检查test当作未使用的选择集。"
+
+## D-20261003-T2LOCAL-001 — T2 heart外推本地尺度优化达到确认目标
+
+- 用户确认codex-autoresearch前台目标≥6.0；独立仓库run `4c13e854a96e450b834647507385bfe5`，一次实验完成，控制器complete。
+- 冻结三种子中位数3.912955→7.523743，三次完整panel评分与全部护栏通过；baseline同时完整复测。表达/行序/组成不变，仅围绕质心坐标乘0.9。
+- 原始通道比较仅scale_log_ratio改变，且已达到冻结公式的+30%截断；其余七通道不变。E9.5子集proxy存在几何偏倚，历史跨机制排序已失效；不作表达或服务器提升宣称。
+- 候选v0029，父v0024；contract相对直接父PASS，身份见submissions/INDEX.tsv。祖先组成偏离保留披露，未提交/未评分，score_pending。
+- 决策：HOLD_LOCAL_ONLY；保留本地模型与结果，服务器选择不变。不继续已饱和尺度轴；后续路线先固定留阶段外推评估。
+- 证据：reports/t2_autoresearch_20261003/REPORT.md；comparison.json；独立仓库autoresearch-results/events.jsonl。
+- blocker: none；blocks_submission: false；独立外推验证NOT_RUN。
+
+- id: D-20261003-T3ARDEL-001
+  date: 2026-10-03
+  task: T3
+  kind: candidate_delivery
+  decision: "补齐上一轮缺失的H5AD交付：v0070 ar_complex，父v0009，完整7449×500，contract PASS，登记score_pending，单件H5AD与完整ZIP已生成；未提交/未评分。"
+  evidence: "reports/t3_autoresearch_delivery_20261003/REPORT.md；HANDOFF.json；ACCEPTANCE.json；候选路径、SHA256、contract以submissions/INDEX.tsv对应行为准。"
+  execution: "锁定模型全部26条件重放通过；log残差直接加入WT母本、截负、Gata4置零；保留细胞/基因/空间及内部保护的layers/raw。v0069未登记草稿仅参考元数据保护检查失败，v0070修复，X逐值一致。"
+  boundary: "来源开发20.31%不是H5AD目标评分；正残差激活原零条目，截负改变负响应幅度，目标迁移尚未验证。服务器现役不变。blocks_submission:false。"
+  next_action: "用户上传v0070，回传总分、各子项和submission ID/截图后入库；不伪造上传或评分。"
+
+### D-20261002-T3DIR6-001 — T3 方向六放行（用户授权）
+- scope: 方向六多扰动监督训练数据门（GSE261783 OP2 resting 集，26 扰动基因）
+- decision: "用户放行：GSE261783 26 扰动已过显式黑名单 31 项（0/26 命中，`reports/t3_dir6_datascreen_20261002/REPORT.md`），许可由 QUARANTINE_NOT_APPROVED 转 RELEASED_BY_OWNER_20261002，model_input=true（仅此集）。残留如实保留：Smarca4/Rest/Yy1 功能性 phenocopy 人工复核仍 open（列复核提示，不扩黑名单）；organizer clearance 缺席（边界邮件未发）；其余来源仍需逐源审查。"
+- evidence: "用户原话（2026-10-02 方向6放行）；26/26 屏蔽报告；本地文件 58MB SHA 见 intake receipt。"
+- boundary: "放行仅覆盖 GSE261783 OP2 resting 集；训练仍走方向六设计（线性基线 vs 神经模型 gene-held-out）；blocks_submission: false。"
+- review_trigger: "organizer 答复若收紧 phenocopy 口径，重新冻结 source 集。"
+
+## D-20261003-T2SCALE-SCORE-001 — T2 v0029回分：尺度代理方向错误，当前配置关闭
+
+用户回填总分与8项子分已登记权威server registry，身份按INDEX和ZIP成员SHA核对通过；submission ID/时间未提供，记录为unknown，不伪造。v0029 REJECT；与父v0024的七个非尺度子项完全相同，仅尺度恶化。本地综合增益完全来自尺度代理，因此本轮是局部目标达成、服务器迁移失败。原冻结实验事件保持不变，不能改写为模型成功。当前scale0.9配置关闭；现役、最高分和合计选择不变。下一步应先建立真正留阶段外推评价（NOT_RUN），不自动开启放大坐标或调参。本次不训练、不新增候选。证据：reports/t2_scale_score_review_20261003/REPORT.md；reports/SERVER_SCORE_REGISTRY.md#t2-scale09-score-return--2026-10-03。blocks_submission:false。
+
+- id: D-20261003-T3ARSCORE-001
+  date: 2026-10-03
+  task: T3
+  kind: server_score_return
+  decision: "v0070用户回分与五子项原样登记，REJECT；当前统一残差配置关闭，现役v0048不变。"
+  evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-autoresearch-score-return-20261003；reports/t3_autoresearch_score_review_20261003/REPORT.md；OUTPUT_AUDIT.json。"
+  finding: "身份与表达公式重放PASS；来源均值MSE目标未覆盖最终单细胞矩阵，统一残差激活大量零值并扭曲负效应；Gata4只有一个特异复合物供体，高置信分支未启用。"
+  boundary: "一次回分不能唯一归因来源模型或转换；保留来源域结果但不作目标晋级证据。未自动开始新实验；blocks_submission:false。"
+  next_action: "后续先建立最终矩阵留扰动评估及输出失配诊断，再判断是否重开；不覆盖已评分文件。"
+
+- id: D-20261003-T3SPARSE-001
+  date: 2026-10-03
+  task: T3
+  kind: candidate_delivery
+  decision: "按用户进一步优化并交付指令，生成v0071 sparse_scale，父v0048；完整7449×500、contract PASS、score_pending，未提交/未评分；现役不变。"
+  evidence: "reports/t3_sparse_response_20261003/REPORT.md；DESIGN.md；FULL_MATRIX_METRICS.tsv；SELECTION.json；OUTPUT_CHECK.json；HANDOFF.json。候选身份以submissions/INDEX.tsv为准。"
+  finding: "三个预设强度在来源17扰动LOPO实际矩阵五分项比较，选1.0；历史test基因对结构误差与均值MSE较旧加法改善，方向略退步。新方法开发平均秩未胜旧加法。输出保留v0048零结构，无激活/截负。"
+  boundary: "来源重复使用、迁移未验证；换母本与换转换为联合候选，不是单因素服务器消融。blocks_submission:false。"
+  next_action: "用户上传新H5AD/ZIP，回填总分和五子项；无分数前不晋级。"
+
+### D-20261002-T3DIR6SRC-001 — 方向六 source v1 冻结（researcher 补检索后）
+- scope: 方向六训练 source 集 v1（gene-held-out 的留出单位即 perturbation gene）
+- decision: "冻结 source=GSE261783 OP2 resting（26 扰动＋220 对照，panel 500/500，已放行）。GSE92872（Datlinger CROP-seq，20 非黑名单基因）屏蔽通过但暂缓集成：单细胞小鼠成分仅一组 Drop-seq 混样， bulk/Jurkat 为主，集成成本大于当前收益；26 扰动不够时再议。GSE157977（Jin 脑，35 扰动）基因表未取到（Table S1 在 supplement 内，主文无），黑名单屏蔽未完成，且 P7 脑 readout 上下文远，记 GENE_LIST_PENDING 不下载。Axin 系维持排除。"
+- evidence: "本会话 eutils 元数据（GSE92872 100 样本题录、GSE157977 38 样本确认）、sc-pert 23 行全表、黑名单 31 项比对（GSE92872 20 基因 0 命中）。"
+- boundary: "gene-held-out 以 26 扰动为留出池；跨 cell context 无支持则只报同域；E10.5 真值不用；blocks_submission: false。"
+- review_trigger: "organizer 答复放宽口径，或新合规源出现。"
+
+- id: D-20261003-T3HALF-001
+  date: 2026-10-03
+  task: T3
+  kind: score_return_and_candidate_delivery
+  decision: "v0071总分与五项原样入库，NOT_PROMOTED，现役v0048保持；用户授权后续优化，生成仅强度减半的v0072，contract PASS，未提交/未评分。"
+  evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-sparse-scale-score-return-20261003；reports/t3_halfstep_20261003/REPORT.md；HANDOFF.json；候选身份以INDEX为准。"
+  finding: "方向收益被DE和分布损失抵消，分差小且无重复评分；预设strength=0.5检验折中。历史test大多弱于strength1，不是本地晋级，不按本次诊断再次选参。"
+  boundary: "只改变强度，母本、模型和倍率不变；目标收益未知，不将服务器端点线性插值当预测。blocks_submission:false。"
+  next_action: "用户上传v0072后回填总分和五项，未回分不晋级。"
+
+- id: D-20261003-T3HALFSCORE-001
+  date: 2026-10-03
+  task: T3
+  kind: server_score_return
+  decision: "v0072用户总分及五项原样登记，REJECT，现役v0048不变；关闭当前半步响应试验，不继续细分倍率。"
+  evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-half-scale-score-return-20261003；reports/t3_halfstep_20261003/SCORE_REVIEW.md；SCORE_DECOMPOSITION.json。"
+  finding: "半步对分布项的小幅改善未抵消DE/方向损失；目标分数不随已测强度单调变化，来源代理不能代替服务器验证。"
+  boundary: "无重复评分，不主张显著差异或生物机制；blocks_submission:false。"
+  next_action: "保留现役与已评分记录；后续需新响应依据或模型结构证据，不自动新建候选。"
+
+### D-20261003-T3DIR6CLOSE-001 — 方向六阶段二挂门，升级关闭（预声明执行）
+- scope: T3-DIR6 GEARS vs 双 bar（同折同中心化 macro MSE）
+- decision: "mse_neural 0.05747 双低于 no-change 0.05545 与 ridge 0.05729，按冻结 STOP：不升级图模型，方向六关闭。26 扰动集上，线性与图模型皆不能胜过预测零响应——响应本身在该表示下不可学。GSE261783 放行集保留作他用，不删除。"
+- evidence: "`artifacts/t3_dir6/T3-DIR6-20261002-v1/stage2/RESULT.json`（5 折明细；bar_check 1e-6 通过；cos 已修正）；阶段一 RESULT.json（ridge 5 折全败）。"
+- boundary: "比较轮未建候选，INDEX/submissions 零改动；blocks_submission: false。"
+- review_trigger: "无（关闭）；新 source 或新表示需新 lane 立项。"
+
+- id: D-20261003-T2H10SCORE-001
+  date: 2026-10-03
+  task: T2
+  kind: server_score_return
+  decision: "v0030 51.12 PROMOTED 新外推 board best（+0.59 vs 基线；+0.48 vs 50.64），selection 由 baseline v0001 切到 v0030；v0031 49.91 REJECT（−0.62），crosswalk 轴关闭不调阈。"
+  evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-holdout10-xr3xr4-score-return-20261003；reports/SERVER_SUBMETRIC_REGISTRY.tsv（16 行）；INDEX 两行 scored；reports/t2_holdout10_score_review_20261003/REPORT.md。"
+  finding: "library 守恒解开 DE 通道（de 52.0 全榜第二）；dev–server 方向一致但刻度差远（dev −7% vs 服务器 +1.2%），dev 达标≠服务器晋级；v0031 的 mmd 44.3 说明覆盖扩张方向错。"
+  boundary: "推导 T2=58.79/合计 160.27 均为推导值，门户确认合计仍 156.06；无重复评分，不作机制因果声明；blocks_submission:false。"
+  next_action: "更新 STATUS/TODO/T2_TRACKING 选择；门户 Total 重读后确认；外推下一步需新冻结。"
+
+- id: D-20261003-T2H10X567SCORE-001
+  date: 2026-10-03
+  task: T2
+  kind: server_score_return
+  decision: "v0032 51.14 TIE 不晋级（+0.02 vs v0030 51.12，±0.1 带内；记数值最高平局备份）；v0033 50.89 REJECT（−0.23）；v0034 51.02 TIE 不晋级（−0.10 带边缘）；现役 v0030=51.12 不变，T2 待分清零。"
+  evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-holdout10-x567-score-return-20261003；submetric 24 行；INDEX 三行 scored；verdicts 三行；reports/t2_holdout10_score_review_20261003/REPORT.md。"
+  finding: "服务器 de 随剂量单调（0.5→50.8 / 自适应0.73→51.6 / 0.9→52.0），dev 剂量括号（最优 0.9）在服务器复现，剂量轴以双端一致关闭；同族三 lane dev↔服务器排序完全复现（Spearman 1.0）——dev 失灵是 Route C 族特异现象，同族内 dev 是可靠排序器；v0033 的 dev '方向票最纯' 读数未兑现（服务器 de 50.8）。"
+  boundary: "推导 T2=58.79/合计 160.27 不变（推导值，门户确认仍 156.06）；无重复评分不作显著性声明；blocks_submission:false。"
+  next_action: "外推 recipe 家族在 ~51.1 进入平台期；下一波要么行集合/几何级新机制（需新冻结授权），要么封存。dev 留阶段 10% 目标仍未达成（0.91944 vs 0.90），reserve 仍 NOT_RUN。"
+
+### D-20261003-T1EXTPRE-001 — T1 外部预训练 G-return 挂门，lane 关闭
+- scope: T1-EXTPRE-20261003-v1 步骤 B（ExtendedMouseAtlas 8 档合规子集预训练 → 官方 E8.5→E9.5 回报门）
+- decision: "G-return 双门挂即关闭：de 0.0189 / dir 0.1412，远低于 0.8868/0.8895；不建 v0052，不上传。外部时序均值位移算子迁到官方面板后摧毁分布，不构成对 v0051=53.92 的挑战。"
+- evidence: "`artifacts/t1_extpretrain/T1-EXTPRE-20261003-v1/RESULT_B.json`（verdict STOP_gate1；n_G 25824；pca_explained 0.264；wall 562s）。"
+- boundary: "未建候选，INDEX/submissions 零改动；atlas 新用途仅限本 lane 且已关闭；blocks_submission: false。"
+- review_trigger: "无（关闭）；换表示或换迁移头需新 lane。"
+
+### D-20261003-T1MIX2SCORE-001 — T1 AR-MIX2 五 lane 回分：v0054 53.98 落 ±0.1 TIE 带不晋级，v0051=53.92 留任
+- scope: AR-T1-MIX2-20261003-v1（5 lane winner-pair 整行混合：50/50 v0035×v0038 双种子、50/50 v0036×v0038、三等分 v0035/36/38、30/70 v0035×v0038；contract parent 全 v0035；zip deliveries/art1mix2__t1__upload__20261003.zip sha e8b60cd8…）
+- decision: "服务器 v0054=53.98（+0.06 vs v0051=53.92）落 ±0.1 TIE 带 → 不晋级、tie 归现任，v0051 留任 T1 selection，v0054 记 tied numeric-high backup（D-20260917-G0T1-001 口径）；v0052=53.67（−0.25）/v0056=53.76（−0.16）超双父版本（53.43/53.55）记 scored backup；v0053=53.36（−0.56，低于双父）REJECT、v0055=53.48（−0.44，超 v0035/v0036 父、低于 v0038 父）记 marginal scored backup。derived sum 不变 160.44（换 v0054 计为 160.50，仅推导；portal 确认 Total 仍 156.06）。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t1-ar-mix2-score-return-20261003；reports/SERVER_SUBMETRIC_REGISTRY.tsv +20 行；reports/LANE_VERDICTS.tsv +5 行；artifacts/autoresearch/t1-20261003-v1/FINAL_BUILD_v2.json；用户转录分数（submission ID/时间戳未提供）。"
+- knowledge: "(1) 种子彩票第三次复现：同设计 v0052 vs v0053 Δ0.31（首报 Δ0.40）→ T1 混合类服务器行运气 ±0.3-0.4，大于 TIE 带；后续 lane 须发 2 种子或确定性构造，单次读数是彩票。(2) 受控配对比较（同权重同种子）：36×38 比 35×38 高 +0.31，36 系配对第三次领先（53.92→53.98）。(3) 35×38 权重轴死：f0.3/0.5/0.7 全在行运气内。(4) 三池混合是稀释不是叠加（53.48 低于两个组分 53.67/53.98），该轴关闭。(5) 混合族八 lane 饱和于 53.32–53.98（均值≈53.7），下一个真动作需要新机制族而非更多 winner-pair 算术。"
+- boundary: "版本 v0052–v0056 为 PROPOSED，INDEX 行与 canonical 落位待 coordinator（2026-10-02 批 v0049–v0051 的 INDEX 行、子项行与 LANE_VERDICTS 行亦仍欠，一并请 coordinator 补）。v0052 编号曾被已关闭 T1-EXTPRE（D-20261003-T1EXTPRE-001）以「不建 v0052」形式引用、无产物，本批 v0052 为 mix3538even（sha 7a6be221…），无产物冲突，身份以 SHA256 为准。blocks_submission: false；target_used=false；未晋级不作模型进步声明。"
+- review_trigger: "portal Total 刷新（仍记 156.06）；或用户决定按惯例不换 tied backup 之外的选集；混合族若再出一轮无超出 ±0.1 的结果则整族转为维持模式。"
+
+### D-20261005-STRUCT-001 — 结构整理：删已评分上传包，不搬被引用的目录
+- date: 2026-10-05
+- scope: navigation only; no candidate, no score, no science claim
+- decision: "已评分且 SHA 对上 INDEX、正本仍在 submissions/candidates 的 deliveries 包和散落 h5ad 删除（75 个文件，约 9.45 GB），记录在 reports/DELETION_MANIFEST.tsv。reports/、submissions/、docs/batch3 不搬动：路径被脚本和决策引用，搬走会增加断链。新入口是 docs/00_START_HERE.md、docs/ATOM_MAP.md、reports/README.md 和三份 SYNTHESIS。outputs/ 保留并写明它只是早期冒烟。submissions 不与 artifacts 或 deliveries 合并。"
+- evidence: "deliveries/README.md；reports/DELETION_MANIFEST.tsv 2026-10-05 行；INDEX 回填 T3 v0026=46.93、v0027=46.95、v0030=46.6、v0031=46.12、v0032=46.95、v0033=46.95（数字已在 reports/SERVER_SCORE_REGISTRY.md，此前 server_score 单元格空白）。"
+- boundary: "未改任何已评分 h5ad，未改选集。历史文档里的 zip 链接会失效，身份仍以 INDEX SHA 为准。VOID 包和 t2holdout inspect 包保留。blocks_submission: false。"
+- review_trigger: "若有脚本在运行时必须读取已删 zip，而不是 receipt 或 canonical h5ad，再从 candidates 按短名规则重打，不要恢复成第二份身份库。"

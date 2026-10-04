@@ -1,0 +1,705 @@
+{
+  "retrieval_date": "2026-10-01",
+  "tool": "mcp__paperSearch__search_literature",
+  "scope": "Bibliographic records and source IDs; unrelated hits preserved but not used as evidence.",
+  "searches": [
+    {
+      "trace": {
+        "query": "CellFlow enables generative single cell phenotype modeling flow matching",
+        "filters": {
+          "year": null,
+          "year_from": null,
+          "year_to": null,
+          "venue": null,
+          "fields_of_study": [],
+          "publication_types": [],
+          "min_citation_count": null,
+          "open_access_only": false,
+          "limit": 5,
+          "sort": "relevance",
+          "source_modes": {
+            "pubmed": "optional",
+            "crossref": "optional",
+            "openalex": "optional"
+          }
+        },
+        "sources_requested": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_succeeded": [
+          "pubmed",
+          "crossref"
+        ],
+        "sources_degraded": [],
+        "sources_failed": [
+          "openalex"
+        ],
+        "source_errors": [
+          {
+            "source": "openalex",
+            "operation": "search",
+            "failure_class": "unknown_error",
+            "message": "'NoneType' object has no attribute 'get'",
+            "timestamp": "2026-10-01T11:54:02.218033Z",
+            "retry_count": 0,
+            "fallback_used": false,
+            "query_or_identifier": null
+          }
+        ],
+        "source_result_counts": [
+          {
+            "source": "pubmed",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 0,
+            "merged_count": 0
+          },
+          {
+            "source": "crossref",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 5,
+            "merged_count": 0
+          }
+        ],
+        "retrieved_at": "2026-10-01T11:54:02.218033Z",
+        "cache_policy": "default",
+        "merge_strategy_version": "0.2.0",
+        "ranking_strategy_version": "0.2.0",
+        "result_count": 5,
+        "merged_count": 5
+      },
+      "warnings": [
+        "Some sources failed: openalex"
+      ],
+      "works": [
+        {
+          "work_id": "work:doi:10.1101/2025.04.11.648220",
+          "title": "CellFlow enables generative single-cell phenotype modeling with flow matching",
+          "identifiers": {
+            "doi": "10.1101/2025.04.11.648220"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1101/2025.04.11.648220"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.1101/2025.04.11.648220",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.22541/au.175382408.89466370/v4",
+          "title": "Flow matching for generative modeling in bioinformatics and computational biology",
+          "identifiers": {
+            "doi": "10.22541/au.175382408.89466370/v4"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.22541/au.175382408.89466370/v4"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.22541/au.175382408.89466370/v4",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.52202/085713-5363",
+          "title": "Joint Velocity-Growth Flow Matching for Single-Cell Dynamics Modeling",
+          "identifiers": {
+            "doi": "10.52202/085713-5363"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.52202/085713-5363"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.52202/085713-5363",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.52202/085713-0291",
+          "title": "Energy Matching: Unifying Flow Matching and Energy-Based Models for Generative Modeling",
+          "identifiers": {
+            "doi": "10.52202/085713-0291"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.52202/085713-0291"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.52202/085713-0291",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1109/isvlsi59464.2023.10238584",
+          "title": "CellFlow: Automated Standard Cell Design Flow",
+          "identifiers": {
+            "doi": "10.1109/isvlsi59464.2023.10238584"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1109/isvlsi59464.2023.10238584"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.1109/isvlsi59464.2023.10238584",
+              "source": "crossref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trace": {
+        "query": "DeepRUOT unbalanced optimal transport cell fate dynamics",
+        "filters": {
+          "year": null,
+          "year_from": null,
+          "year_to": null,
+          "venue": null,
+          "fields_of_study": [],
+          "publication_types": [],
+          "min_citation_count": null,
+          "open_access_only": false,
+          "limit": 5,
+          "sort": "relevance",
+          "source_modes": {
+            "pubmed": "optional",
+            "crossref": "optional",
+            "openalex": "optional"
+          }
+        },
+        "sources_requested": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_succeeded": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_degraded": [],
+        "sources_failed": [],
+        "source_errors": [],
+        "source_result_counts": [
+          {
+            "source": "pubmed",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 2,
+            "merged_count": 0
+          },
+          {
+            "source": "crossref",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 5,
+            "merged_count": 0
+          },
+          {
+            "source": "openalex",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 5,
+            "merged_count": 0
+          }
+        ],
+        "retrieved_at": "2026-10-01T11:54:11.047179Z",
+        "cache_policy": "default",
+        "merge_strategy_version": "0.2.0",
+        "ranking_strategy_version": "0.2.0",
+        "result_count": 12,
+        "merged_count": 12
+      },
+      "warnings": [],
+      "works": [
+        {
+          "work_id": "work:doi:10.1016/j.xinn.2025.101010",
+          "title": "FatePredictor: Cell fate decision-making prediction with an ensemble deep learning model.",
+          "identifiers": {
+            "pmid": "41268507",
+            "pmcid": "PMC12628168",
+            "doi": "10.1016/j.xinn.2025.101010"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1016/j.xinn.2025.101010",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41268507/",
+            "pmc": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12628168/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "41268507",
+              "source": "pubmed"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1126/sciadv.aeb4205",
+          "title": "Learning stochastic dynamics and cell-fate landscapes from single-cell snapshots via optimal transport",
+          "identifiers": {
+            "doi": "10.1126/sciadv.aeb4205",
+            "openalex": "W7211988907",
+            "pmid": "42715336"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1126/sciadv.aeb4205",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42715336/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W7211988907",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1038/s42256-023-00763-w",
+          "title": "Reconstructing growth and dynamic trajectories from single-cell transcriptomics data.",
+          "identifiers": {
+            "pmid": "38274364",
+            "pmcid": "PMC10805654",
+            "doi": "10.1038/s42256-023-00763-w"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1038/s42256-023-00763-w",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38274364/",
+            "pmc": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10805654/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "38274364",
+              "source": "pubmed"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1038/s41540-025-00624-9",
+          "title": "Deciphering cell-fate trajectories using spatiotemporal single-cell transcriptomic data",
+          "identifiers": {
+            "doi": "10.1038/s41540-025-00624-9",
+            "openalex": "W4416976589",
+            "pmid": "41345106"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1038/s41540-025-00624-9",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41345106/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W4416976589",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1021/jacsau.5c00620",
+          "title": "Quantifying Landscape and Flux from Single-Cell Omics: Unraveling the Physical Mechanisms of Cell Function",
+          "identifiers": {
+            "doi": "10.1021/jacsau.5c00620",
+            "openalex": "W4413038166",
+            "pmid": "40881418"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1021/jacsau.5c00620",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40881418/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W4413038166",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.48550/arxiv.2605.16529",
+          "title": "Multiscale Supervised Unbalanced Optimal Transport Flow Matching",
+          "identifiers": {
+            "doi": "10.48550/arxiv.2605.16529",
+            "openalex": "W7161736886"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.48550/arxiv.2605.16529"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W7161736886",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.5715/jnlp.32.1299",
+          "title": "Quantifying Lexical Semantic Shift via Unbalanced Optimal Transport",
+          "identifiers": {
+            "doi": "10.5715/jnlp.32.1299"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.5715/jnlp.32.1299"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.5715/jnlp.32.1299",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.64898/2026.03.31.715478",
+          "title": "Generating and navigating single cell dynamics via a geodesic bridge between nonlinear transcriptional and linear latent manifolds",
+          "identifiers": {
+            "doi": "10.64898/2026.03.31.715478",
+            "openalex": "W7148324108"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.64898/2026.03.31.715478"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W7148324108",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.70675/f395dbd2z6531z4abazb4dcz6f7826c9f9c8",
+          "title": "Unbalanced Optimal Transport : Models, Numerical Methods, Applications",
+          "identifiers": {
+            "doi": "10.70675/f395dbd2z6531z4abazb4dcz6f7826c9f9c8"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.70675/f395dbd2z6531z4abazb4dcz6f7826c9f9c8"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.70675/f395dbd2z6531z4abazb4dcz6f7826c9f9c8",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.70675/25a1b629zb022z426czb39cz9d26602db0cf",
+          "title": "Semi-unbalanced optimal transport for referenced-based image restoration and synthesis",
+          "identifiers": {
+            "doi": "10.70675/25a1b629zb022z426czb39cz9d26602db0cf"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.70675/25a1b629zb022z426czb39cz9d26602db0cf"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.70675/25a1b629zb022z426czb39cz9d26602db0cf",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.53846/goediss-12053",
+          "title": "Unbalanced optimal transport for Point processes",
+          "identifiers": {
+            "doi": "10.53846/goediss-12053"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.53846/goediss-12053"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.53846/goediss-12053",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.53846/goediss-9488",
+          "title": "Statistical and Structural Aspects of Unbalanced Optimal Transport Barycenters",
+          "identifiers": {
+            "doi": "10.53846/goediss-9488"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.53846/goediss-9488"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.53846/goediss-9488",
+              "source": "crossref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trace": {
+        "query": "Interpretable Neural ODEs Gene Regulatory Network Discovery Perturbations",
+        "filters": {
+          "year": null,
+          "year_from": null,
+          "year_to": null,
+          "venue": null,
+          "fields_of_study": [],
+          "publication_types": [],
+          "min_citation_count": null,
+          "open_access_only": false,
+          "limit": 5,
+          "sort": "relevance",
+          "source_modes": {
+            "pubmed": "optional",
+            "crossref": "optional",
+            "openalex": "optional"
+          }
+        },
+        "sources_requested": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_succeeded": [
+          "pubmed",
+          "crossref",
+          "openalex"
+        ],
+        "sources_degraded": [],
+        "sources_failed": [],
+        "source_errors": [],
+        "source_result_counts": [
+          {
+            "source": "pubmed",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 0,
+            "merged_count": 0
+          },
+          {
+            "source": "crossref",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 5,
+            "merged_count": 0
+          },
+          {
+            "source": "openalex",
+            "requested": true,
+            "succeeded": true,
+            "degraded": false,
+            "failed": false,
+            "from_cache": false,
+            "returned_count": 5,
+            "merged_count": 0
+          }
+        ],
+        "retrieved_at": "2026-10-01T11:53:54.261189Z",
+        "cache_policy": "default",
+        "merge_strategy_version": "0.2.0",
+        "ranking_strategy_version": "0.2.0",
+        "result_count": 10,
+        "merged_count": 10
+      },
+      "warnings": [],
+      "works": [
+        {
+          "work_id": "work:doi:10.1186/s12859-018-2217-z",
+          "title": "Evaluating methods of inferring gene regulatory networks highlights their lack of performance for single cell gene expression data",
+          "identifiers": {
+            "doi": "10.1186/s12859-018-2217-z",
+            "openalex": "W2808743742",
+            "pmid": "29914350"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1186/s12859-018-2217-z",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29914350/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W2808743742",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1016/j.neunet.2012.11.014",
+          "title": "Dynamic evolving spiking neural networks for on-line spatio- and spectro-temporal pattern recognition",
+          "identifiers": {
+            "doi": "10.1016/j.neunet.2012.11.014",
+            "openalex": "W2039573396",
+            "pmid": "23340243"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1016/j.neunet.2012.11.014",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/23340243/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W2039573396",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1093/bib/bbp028",
+          "title": "Computational methods for discovering gene networks from expression data",
+          "identifiers": {
+            "doi": "10.1093/bib/bbp028",
+            "openalex": "W2169950095",
+            "pmid": "19505889"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1093/bib/bbp028",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19505889/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W2169950095",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1371/journal.pgen.1010942",
+          "title": "Inferring gene regulatory network from single-cell transcriptomes with graph autoencoder model",
+          "identifiers": {
+            "doi": "10.1371/journal.pgen.1010942",
+            "openalex": "W4386699707",
+            "pmid": "37703293"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1371/journal.pgen.1010942",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37703293/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W4386699707",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1371/journal.pcbi.1003290",
+          "title": "Perturbation Biology: Inferring Signaling Networks in Cellular Systems",
+          "identifiers": {
+            "doi": "10.1371/journal.pcbi.1003290",
+            "openalex": "W1986050428",
+            "pmid": "24367245"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1371/journal.pcbi.1003290",
+            "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24367245/"
+          },
+          "source_records": [
+            {
+              "source_record_id": "W1986050428",
+              "source": "openalex"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.20944/preprints202603.0191.v1",
+          "title": "OncoReasoner: An Interpretable Regulatory Network Inference Framework for HPV E6/E7-Induced Transcriptomic Perturbations Leveraging Large Language Models",
+          "identifiers": {
+            "doi": "10.20944/preprints202603.0191.v1"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.20944/preprints202603.0191.v1"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.20944/preprints202603.0191.v1",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1101/2025.09.19.676870",
+          "title": "Dynamic Gene Regulatory Network Inference with Interpretable, Biophysically-Motivated Neural ODEs",
+          "identifiers": {
+            "doi": "10.1101/2025.09.19.676870"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1101/2025.09.19.676870"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.1101/2025.09.19.676870",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.64898/2026.03.26.714651",
+          "title": "Simplex-Constrained Neural Topic VAEs with Flow Refinement for Interpretable Single-Cell Gene-Program Discovery",
+          "identifiers": {
+            "doi": "10.64898/2026.03.26.714651"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.64898/2026.03.26.714651"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.64898/2026.03.26.714651",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1101/2022.09.07.506959",
+          "title": "SCING: Single Cell INtegrative Gene regulatory network inference elucidates robust, interpretable gene regulatory networks",
+          "identifiers": {
+            "doi": "10.1101/2022.09.07.506959"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1101/2022.09.07.506959"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.1101/2022.09.07.506959",
+              "source": "crossref"
+            }
+          ]
+        },
+        {
+          "work_id": "work:doi:10.1021/acs.jcim.5c02924.s001",
+          "title": "Toward Generalizable Data-Driven Pharmacokinetics with Interpretable Neural ODEs",
+          "identifiers": {
+            "doi": "10.1021/acs.jcim.5c02924.s001"
+          },
+          "urls": {
+            "doi": "https://doi.org/10.1021/acs.jcim.5c02924.s001"
+          },
+          "source_records": [
+            {
+              "source_record_id": "10.1021/acs.jcim.5c02924.s001",
+              "source": "crossref"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

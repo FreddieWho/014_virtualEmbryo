@@ -34,3 +34,14 @@
 - Winner-ensemble 50/50 probe: DONE (T1-4, wash).
 - All refused items above stand refused. Remaining leads: L-T1-1 full-scIMF lane, L-T1-2 full-pipeline on-manifold ensemble, L-T1-3 energy-veto doctrine. All need user authorization; none are loop-continuable.
 - Web note (2026-10-02): 2 searches attempted (temporal OT/pseudobulk; scTimeBench/scIMF); backends flaky, nothing beyond P0-2 retrieval. In-repo 30+ lanes dominate evidence. No further web planned.
+
+## T1 session 2026-10-03 (user-directed local push, iters T1-11..T1-15)
+- DONE: 3-way equal-thirds (median pin, M4); 35x38 fraction curve f0.3/0.5 +1q, f0.7/0.85 pin + mmd monotonic (M5 f0.5 median +1q, vario beats baseline; M6 f0.3 alternate best-mmd +1q); additive recenter vario-vetoed; ratio recenter clean-pin (mean family CLOSED both arithmetics); pure-pool map 34:-1q/35:pin/36:-1q/38:pin; lottery bound ±1q at fixed design (no seed-mining, Goodhart refusal).
+- CEILING: best single 0.6111 (history 0.6296 unbeaten), best median 0.6111 (tied). Report-level winner-mixing EXHAUSTED.
+- OPEN (lane scope, needs authorization): 50/50 v0035-final x v0038-final stratified full-pipeline mix (M5 analogue, differs from shipped 70/30 L1/L2); equal-thirds 35/36/38 FINAL mix (M4 analogue, no server precedent). Staging = build finals + contract + draft pack + PROPOSED versions, no INDEX touch (same pattern as AR-T1-MIX-20261002-v1).
+- PRIOR terminal note (2026-10-02 "PAUSED, 0 keeps") is SUPERSEDED: loosened policy produced M4/M5/M6 + server PROMOTION v0051 53.92 (36x38 70/30) with HIGH_BACKUP v0049 53.72.
+- DONE (2026-10-03): M4/M5/M6 lane conversions -> batch AR-T1-MIX2-20261003-v1, packaged
+  deliveries/art1mix2__t1__upload__20261003.zip (5 lanes v0052-v0056 PROPOSED, contract 5/5 PASS).
+  M7 f0.3 35x38 also included. Next open axes if server returns positive: 36x38 seed pair,
+  50/50 pair seed pairs, 2-of-3 ensemble of winner reports, deterministic systematic-selection
+  mixes (no row-luck). CLOSED locally: mean translation family (additive vetoed / multiplicative pinned).

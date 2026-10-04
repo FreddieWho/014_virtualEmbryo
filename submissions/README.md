@@ -3,6 +3,12 @@
 `submissions/INDEX.tsv` is the canonical lookup table. Do not place `.h5ad` files
 directly under `submissions/` and do not overwrite an existing version.
 
+Do not merge this directory into `artifacts/`, `deliveries/` or `reports/`.
+`candidates/` is the identity store even after a score is registered (rule 4 below).
+`scored/baseline-001/` is hash-locked by loaders such as `scripts/t2_round2/common.py`.
+`deliveries/` is disposable upload packaging; scored zips are deleted after registration.
+See `deliveries/README.md`.
+
 ## Lifecycle
 
 ```text

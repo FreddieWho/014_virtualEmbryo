@@ -290,3 +290,31 @@ veckit 上游 HEAD 经 git ls-remote 核对为 `46d41e6`（与本地 pin 一致�
 - 2026-09-20 R5/R6规则复核：重新获取 https://virtualembryo.ai/challenge/rules ，§10正文与前次缓存一致；缓存 `infra/external_data/quarantine/T3-R5-COMPLETION-20260920/official_rules.html`，哈希见 `reports/t3_r5_completion_20260920/FETCH_RECEIPT.json`。纠正归因：统一书面确认和shape-only为项目内部保守约束，不是官网逐字要求；官方为边界不确定时提交前询问。
 
 - 2026-09-20内部规则适度性评审：再次在线核对 https://virtualembryo.ai/challenge/rules §10，相关规定仍为许可与披露、禁止held-out/phenocopy、边界不确定时提交前询问；没有找到统一书面预审批或shape-only条款。与此前缓存的相关规定一致；建议见 reports/T3_INTERNAL_RULE_REVIEW_20260920.md，尚未生效。
+
+## 2026-09-30 — 应用户要求重核规则页（T3 外部先验问题）
+
+来源：https://virtualembryo.ai/challenge/rules（本轮在线读取，索引标签 ve-official-rules-20260930）。§10 与既往缓存一致，三点原文对本轮决策直接相关：
+
+1. "The held-out stages and genotypes are: … and the Gata4 and β-catenin knockouts at E8.75 for Task 3. **Everything else is fair game.**"
+2. "The same applies to genotype. Data from the held-out knockouts, from **another allele of the same gene at a comparable stage**, or from a perturbation that **phenocopies** them, is treated as the held-out condition."——stage 有 midpoint 数值边界，但 genotype 的 "comparable stage" 无数值定义，E9.5 心脏 Gata4 数据落在模糊带上。
+3. "A general-purpose resource that happens to span a held-out stage is not banned outright: the cells inside the window must be removed before training."
+
+结论：同基因他阶段扰动数据（GSE5298/GSE9652 Gata4@E9.5 心脏）处于规则模糊带，需问主办方；通路成员基因的扰动数据（Tbx5/Nkx2-5/Gata6 等）不属同基因条款，是否 phenocopy 须逐案审查而非默认禁止；WT-only 结合数据（GSE52123 GATA4 ChIP，已审计 model_input=true）不含扰动响应，不在 genotype 条款范围。未据此放宽任何隔离；邮件草稿待用户发送。
+
+## 2026-09-30：T3 路线研究定向刷新
+
+用户明确要求在线检索；先读现有缓存，再读取 [T3 任务页](https://virtualembryo.ai/challenge/tasks/perturbation)、[T3 评分页](https://virtualembryo.ai/challenge/evaluation?section=scoring&task=3)、[panel index](https://virtualembryo.ai/challenge/panels/index.json)、[官方规则](https://virtualembryo.ai/challenge/rules) 与 [公开 scorer 源码](https://raw.githubusercontent.com/aristoteleo/veckit/main/common/core_metrics.py)。读取记录见 `reports/t3_research_audit_20260930/OFFICIAL_READ.json` 和 `SOURCES.json`。
+
+- 任务 split、T3 四组权重及 shape 不参与 ranking 与现有任务缓存一致；没有改任务契约。当前网页还列出 perturb_ode/dynode_flow 参考方法，不能据页面列名声称本地已运行或取得其 checkpoint。
+- 评分页公布 T3 校准锚点；本次仅核对评分语义，不从返回分数恢复受保护目标属性或构造预测，也未更改既有服务器分数。
+- 幅度失败的网页描述使用 undefined，公开源码与本地锁定版本相关分支则返回有限 worst floor；这是文档/实现语义差异。未独立核验服务器可执行版本，不能将其解释为服务器 bug；已有 40 个版本的 severity skill=50.0 也不代表幅度准确。
+- 排行榜文本仍为 Loading，直接公开页面读取返回 HTTP 403；没有独立核对用户所述 60+/70+ 队伍占比，没有获取他队方法。
+- 现行 T3 外部准入继续以 `docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md` 为准；本次无新生信矩阵或权重下载，无新增 model-input 数据许可。
+
+研究与数值审计报告：`reports/t3_research_audit_20260930/REPORT.md`。新路线仅为 PROPOSED / NOT_RUN；现 selection、候选索引与评分账本不变。
+
+## 2026-10-01：规则 §14（s14）Generality Award 在线核对
+
+用户明确要求确认 https://virtualembryo.ai/challenge/rules#s14 是否有统一架构模型奖项；本次为 cache-miss 后的重新抓取（本地缓存只有奖金数额，无 §14 全文）。页面规则版本 Version 2026-08-26；§14 标题 "Finalists, Winners and Prizes"，奖项相关原文已逐字提取存档于本次问答（来源：curl 全页 163050 字节 + 本地 HTML 转文本）。
+- 有：单个 Generality Award，跨两 track 只颁一次，奖金 $8,000（与一等奖同额，可与名次奖叠加）。条件：至少进入两个 task 且用同一共享架构回答；允许按 task 分开训练、允许 task-specific 输入/预测头；每 task 用互不相干的模型则不符合。评审看 method summary（需主动声明并描述共享架构、差异与边界），符合者中按 final standing 排；floor 条件同样适用；无人符合则奖金并入 Community Contribution Award 池。
+- 与既有缓存一致：此前 OFFICIAL_SYNC 登记的 generality $8K 数额与本次原文一致，无版本变化迹象。

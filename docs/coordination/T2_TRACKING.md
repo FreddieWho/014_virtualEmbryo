@@ -1,5 +1,9 @@
 # T2 任务追踪：spatial-temporal
 
+- 2026-10-03｜本地实验1：空间尺度校准｜从冻结QTE×组成基线起步，表达和细胞组成保持，围绕中心将坐标尺度乘0.9；固定三种子完整评分，检验本地尺度失配。属于开发集代理优化，不作发育生长或服务器获益解释。
+
+- 2026-10-03｜T2 heart 外推前台 autoresearch 启动｜用户确认本地综合分目标≥6.0；独立仓库 `artifacts/autoresearch/t2-extrap-20261003-v1`，冻结三种子中位数及8通道评分/护栏，从QTE×组成历史本地最好方案起步。只作本地开发优化，未新增提交，服务器现役不变；旧代理的跨路线预测失效限制保留。
+
 更新时间：2026-09-29
 
 T2 有多个 board；不同 board 的分数不能直接当作同一个指标比较。服务器分数以 [`reports/SERVER_SCORE_REGISTRY.md`](../../reports/SERVER_SCORE_REGISTRY.md) 为准，候选文件以 [`submissions/INDEX.tsv`](../../submissions/INDEX.tsv) 为准。
@@ -144,3 +148,25 @@ J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 bo
 - 2026-10-02｜Route C 探索轮打包上传待仲裁（5 件）｜自动研究轮把外推板当算法试验场扫了 10 种做法：胜出机制是「逐基因逐状态的分位数边缘外推」（时间按 4/3 归一）×「组成重采样」，本地冻结 8 通道综合分 3.913，是此前本地最强 lane（x_o2 1.709）的两倍多；同族另外三条（3.464 / 2.608 / 3.606）一并打包。其中 v0027 是诊断探针（library 12 倍，本地护栏不过，不建议占名额），v0028 是同一设计换种子（测服务器侧抽签方差）。五件 contract 均 pass 或既有质量豁免，已登记 INDEX score_pending，未上传。另：本轮纠正了一个旧错误——variogram 本地指标是「越低越好」，Route B 当时方向写反，其 keep 已撤回（详见 `.auto/ROUTE_C_SUMMARY.md`）。`D-20261002-ARROUTEC-001`。
 
 - 2026-10-02｜Route C 五件回分，全部不敌现役｜外推榜：v0025 50.17（最好的一件）、v0024 50.09、v0028 50.08、v0026 50.03，四条都低于基线 50.53；探针 v0027 39.60（崩在 d2 23.6 / mmd_u 37.3 / nmmd 37.6，与本地护栏预警一致）。选择不变（外推 aggregate 仍 50.53，50.74-vs-50.53 OPEN 未动）。三点硬结论：① 本地冻结综合分对新机制「失灵」——17 条合并看相关只剩 0.122（旧 12 条上是 0.539），冠军本地 +3.913 换来 -0.44，说明它不能再用作提交依据；② 唯一确证可迁移的通道是 variogram：本轮把该技能打到 49.5–50.1，是全榜最好（旧 lane 47.4–48.5），与本地（已纠正方向）的排序一致；③ 服务器侧「换种子」几乎无方差——v0024 vs v0028 同设计不同行只差 0.01，而本地综合差 0.31，即本地种子波动是代理噪声不是真方差。`D-20261002-ARROUTCESCORE-001`。
+
+- 2026-10-03｜本地实验1保留、前台目标完成｜坐标中心缩放0.9使固定三种子综合分中位数3.912955→7.523743，3/3护栏通过；全部增益来自尺度项，其他七项不变。v0029（父v0024）已生成且contract PASS，未提交/未评分，HOLD_LOCAL_ONLY；服务器选择不变。D-20261003-T2LOCAL-001；reports/t2_autoresearch_20261003/REPORT.md。
+
+- 2026-10-03｜v0029服务器回分、配置关闭｜总分和8项已入库，v0029 REJECT；仅尺度技能分下降，其余7项与父v0024相同，本地7.524不能解释为服务器收益。当前scale0.9配置关闭，现役不变；先重建留阶段外推评估（NOT_RUN）。D-20261003-T2SCALE-SCORE-001；reports/t2_scale_score_review_20261003/REPORT.md。
+
+- 2026-10-03｜继续优化前重建留阶段评价｜仅用E8.25/E8.75预测E9.5，完整500基因×2基础对照×3评分种子完成；归一误差复制末阶段1.0优于均值位移1.1683，后续以强基线起步并固定几何。新目标10%/5%待确认，新循环未初始化；reports/t2_holdout_setup_20261003/REPORT.md。未新增候选/提交。
+
+- 2026-10-03｜留阶段外推 10% 目标确认＋评估冻结｜用户选 10%（归一中位数 ≤0.90，5% 备选放弃）；独立仓库 `artifacts/t2_holdout_10pct_20261003-v1/`（DESIGN/EVAL_FREEZE/eval_normalized.py/RUN_LOG），evaluator 自检 SETUP_REPRODUCED（复制臂 1.0，位移臂中位数 1.16833）；初轮冻结坐标+行集合只优化表达，reserve NOT_RUN；未新增候选/提交，现役不变。reports/t2_holdout_setup_20261003/REPORT.md。
+
+- 2026-10-03｜留阶段 10% 第一轮收敛封存｜15 次运行（run01–15）：damp 0.25–1.5（最优 0.9）、均值/中位数（中位数胜）、library 守恒（关键）、方差匹配（拒）、类型自适应（平）、剂量括号（闭合 0.9）、供体匹配（拒）、t 掩膜（拒）；组分按标签不可识别（标签域几乎不重叠＋scope 差）。最佳 run10＝0.92868，差目标 0.029；reserve 仍 NOT_RUN，未新增候选/提交，现役不变。仓库 `artifacts/t2_holdout_10pct_20261003-v1/`（RUN_LOG 15 行）。
+
+- 2026-10-03｜留阶段 run10 配方榜单交付｜x_r3_medlib09 v0030（中位数delta×0.9＋library守恒，5共享态/8123行，orphan 保持母本），contract strict PASS、replay 字节一致，SHA `71f587ed…`，INDEX 登记 score_pending，交付包 `deliveries/t2h10__t2__upload__20261003.zip`（receipt READY_NOT_SUBMITTED）；dev 估计 0.9287 系 100% 行基础，榜单部分迁移预期，弱-中置信，未上传/未评分，现役不变。
+
+- 2026-10-03｜crosswalk 榜单交付｜x_r4_xwalk09 v0031（12 映射态/16889 行，10 orphan 保持母本，映射阈值冻结 train-only），contract strict PASS、replay 字节一致，SHA `86fec27f…`，INDEX 登记 score_pending，交付包 `deliveries/t2h10x4__t2__upload__20261003.zip`（receipt READY_NOT_SUBMITTED）；run16 dev 门判 INVALID（行身份泄漏），按 G1 先例直送服务器仲裁，弱置信，未上传/未评分，现役不变。
+
+- 2026-10-03｜HOLDOUT10 双 lane 服务器仲裁｜v0030＝**51.12**（+0.59 vs 基线 50.53，+0.48 vs 原 best 50.64）**晋级新外推 board best**（该榜 2026-09-16 后首次易主）；v0031＝49.91（−0.62）REJECT，mmd 44.3 塌，crosswalk 轴关闭不调阈。16 子项已入库，推导 T2＝58.79（待门户确认）。dev 目标未达成（0.92868 vs 0.90），reserve 仍 NOT_RUN。`D-20261003-T2H10SCORE-001`；reports/t2_holdout10_score_review_20261003/REPORT.md。
+
+- 2026-10-03｜run18 配方榜单交付 v0032｜x_r5_tshrink09（软收缩 w=|t|/(\|t\|+2) 中位数delta×0.9＋library守恒，5共享态/8123行，orphan 保持母本），contract strict PASS、replay 字节一致，SHA `079cc775…`，INDEX 登记 score_pending，交付包 `deliveries/t2h10x5__t2__upload__20261003.zip`（成员 `t2_hrt_ext__x_r5tshk09__v0032.h5ad`，receipt READY_NOT_SUBMITTED）；dev 估计 0.91944（本地最佳，−0.009 vs run10 配方 v0030 服务器 51.12），弱-中置信，未上传/未评分，现役 v0030 不变。
+
+- 2026-10-03｜异路线双 lane 榜单交付（一批一包）｜v0033 x_r6_medlib05（run04 半剂量 0.5＋library守恒，dev 0.93755，DE 方向票最纯）＋v0034 x_r7_typeadapt（run09 逐类型 cos 自适应剂量，dev 0.93470，机制与 v0030/v0032 不同族），2/2 contract strict PASS、replay 字节一致，SHA `32b3fd6e…`/`bcc90053…`，INDEX 登记 score_pending，合包 `deliveries/t2h10x67__t2__upload__20261003.zip`（receipt READY_NOT_SUBMITTED）；现役 v0030=51.12 不变，未上传/未评分。
+
+- 2026-10-03｜HOLDOUT10 三 lane 服务器仲裁｜v0032＝51.14（+0.02，±0.1 带内）**TIE 不晋级**（记数值最高平局备份）；v0033＝50.89（−0.23）REJECT，半剂量削弱服务器 de（50.8 vs 52.0），dev"方向票最纯"读数未兑现；v0034＝51.02（−0.10 带边缘）TIE 不晋级，逐类型自适应剂量无信号关闭。服务器 de 剂量响应单调（0.5→50.8/0.73→51.6/0.9→52.0），dev 剂量括号双端复现；同族三 lane dev↔服务器排序 Spearman 1.0。24 子项入库，现役 v0030=51.12 不变，T2 待分清零。`D-20261003-T2H10X567SCORE-001`；reports/t2_holdout10_score_review_20261003/REPORT.md。
