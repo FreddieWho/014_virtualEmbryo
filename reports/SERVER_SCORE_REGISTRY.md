@@ -1651,3 +1651,38 @@ All five submetrics are the portal SKILL values, not locally computed scores. v0
 Identity/reconstruction: reports/t3_backlog_20261008/RECONSTRUCTION_RECEIPT.json and REPORT.md. Decision reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008.
 
 Portal leaderboard observation at 2026-10-08T06:46:14Z: displayed Total 163.2, Human rank 83, task values T1 54.0 / T2 59.7 / T3 49.6. Before these three uploads the observed Total was 161.6, rank 85. The independent T2 heart-interpolation 65.0 submission was not produced by this run; no T1/T2 candidate identities or selections are reassigned here. These are rounded page displays, not inferred precise totals.
+
+<a id="t3-arank-v0086-score-return-20261008"></a>
+## T3 v0086 arank revision 2 score return — 2026-10-08
+
+Evidence class: SERVER_SCORED_PORTAL_VERIFIED. Official detail page observed
+2026-10-08T08:55:06Z. Submitted display is `2026-10-08 08:54`; its timezone is not
+labelled. Submission [7e5a259d47d84ce086ddc7c5e8bc9b0a](https://virtualembryo.ai/challenge/account/submissions/7e5a259d47d84ce086ddc7c5e8bc9b0a),
+file `t3_gata4__arank__v0086.h5ad`. Exact uploaded SHA256 is in INDEX; only revision 2
+was submitted. Earlier pre-submit drafts and unused temporary version labels are
+not registered as candidates or charged as submissions here.
+
+| Candidate | Detail score | de_score | de_direction | severity_slope | mmd_u | variogram | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---|
+| v0086 arank r2 | 49.34 | 46.5 | 48.4 | 50.0 | 54.5 | 53.1 | REJECT; -0.21 vs v0084 49.55 |
+
+The five submetrics are displayed SKILL values; raw metric values were not exposed
+and are not inferred. Current selection remains v0084's 2026-10-08 reconstructed
+q0.25 revision, score 49.55; this attempt does not cross the ±0.1 incumbent band.
+
+Algorithm and limits: domain-anchored response-rank transport, using pooled-control
+source-range correction and equally weighted sample-matched positive-quantile
+changes indexed by embryo positive ranks. Parent is v0084. Inputs remain the
+existing approved GSE261783 OP2/26 source and GO information, without target KO
+truth. Final zero mask, global positive-rank order, composed 0.5–2.0 carrier bounds,
+7449×500 contract and artifact/hash checks passed. The source-side evidence is
+historical and adaptively reused, not a pristine validation set. Source-proxy
+improvement did not transfer to the embryo leaderboard for this configuration;
+this negative result does not establish a causal mechanism or invalidate all
+possible domain-transfer methods. No parameter sweep or another submission is
+implied by this record.
+
+One of the user's two newly authorized attempts has been used; one remains
+reserved. Portal Total/rank observed at 2026-10-08T08:55:56Z remained 163.2/83
+(rounded display); other-board identities and selections are unchanged.
+blocks_submission:false. Five metric rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
