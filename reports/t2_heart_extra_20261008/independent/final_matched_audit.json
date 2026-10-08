@@ -1,0 +1,65 @@
+{
+  "split": "final",
+  "external_sha": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d",
+  "external_path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_cm_enriched_panel_raw.h5ad",
+  "n_endpoint_bins": 1079,
+  "common_genes": 483,
+  "checks": {
+    "endmatched": {
+      "finite": true,
+      "nonnegative": true,
+      "row_gene_identity": true,
+      "coordinates_exact": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "non_cm_exact": true,
+      "unmeasured_genes_exact": true,
+      "library_max_relative_error": 3.976916638226413e-07,
+      "common_library_max_relative_error": 4.0010149426894515e-07,
+      "diagnostics": {
+        "eligible_cm_rows": 7633,
+        "eligible_labels": [
+          "A-CM",
+          "OFT-CM",
+          "SV-CM",
+          "V-CM"
+        ],
+        "common_genes": 483,
+        "endpoint_coefficient": 0.10400000000000002,
+        "source_recipe_drift_unchanged": true,
+        "changed_fraction": 0.03336224631637476,
+        "mean_abs_diff_vs_recipe": 0.010749338194727898,
+        "non_cm_exact": true,
+        "missing_gene_exact": true
+      }
+    },
+    "endmatchedperm": {
+      "finite": true,
+      "nonnegative": true,
+      "row_gene_identity": true,
+      "coordinates_exact": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "non_cm_exact": true,
+      "unmeasured_genes_exact": true,
+      "library_max_relative_error": 3.649462387844693e-07,
+      "common_library_max_relative_error": 3.669946448958683e-07,
+      "diagnostics": {
+        "eligible_cm_rows": 7633,
+        "eligible_labels": [
+          "A-CM",
+          "OFT-CM",
+          "SV-CM",
+          "V-CM"
+        ],
+        "common_genes": 483,
+        "endpoint_coefficient": 0.10400000000000002,
+        "source_recipe_drift_unchanged": true,
+        "changed_fraction": 0.03763207434767068,
+        "mean_abs_diff_vs_recipe": 0.01344094518572092,
+        "non_cm_exact": true,
+        "missing_gene_exact": true
+      }
+    }
+  }
+}

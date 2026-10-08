@@ -1,0 +1,161 @@
+{
+  "split": "dev",
+  "input_build": {
+    "models": {
+      "pca": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/pca_model.pkl",
+        "sha256": "40bf06c4344d6d06b12108e982517d05811264105a8b32d9fe91a1851dfab89e"
+      },
+      "go": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/go_model.pkl",
+        "sha256": "00105c8a235fd8ba716e6ccad7c8647794b57af9ed9e026638f05e56d1bb87ba"
+      }
+    },
+    "artifacts": {
+      "pca": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/pca_flow.h5ad",
+        "sha256": "5af2c84724f9b44afc9ac3130d44ddec6e147d60f499b358dbc8ff7c3c1f45af",
+        "shape": [
+          24826,
+          500
+        ]
+      },
+      "incumbent_recipe": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/incumbent_recipe.h5ad",
+        "sha256": "c63b199fc87cff940747303656e84b12c3175778c453143a5ab8eadc84e63665",
+        "shape": [
+          24826,
+          500
+        ]
+      },
+      "copy": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/copy.h5ad",
+        "sha256": "cff9b8b14362049bc9779447accd885603c54e8ae90176389d9d0f0743ba1f28",
+        "shape": [
+          24826,
+          500
+        ]
+      },
+      "go": {
+        "path": "/workspace/shared/t2_heart_extra_20261008/dev/go_flow.h5ad",
+        "sha256": "1c7fa94b22100d44c345c92cb22e100c75875ffc14df626a5040903967beeac9",
+        "shape": [
+          24826,
+          500
+        ]
+      }
+    },
+    "input_hashes": {
+      "E8.25_late": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593",
+      "E8.75": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c"
+    },
+    "code_sha256": "58f289fffe49bcd3e180836536e090f816e003c7133eb0791bb082d5ff33ab10"
+  },
+  "checks": {
+    "pca": {
+      "finite": true,
+      "nonnegative": true,
+      "panel_exact": true,
+      "rows_exact": true,
+      "coordinates_equal": true,
+      "replay_exact": false,
+      "replay_max_abs": 2.3283064365386963e-10,
+      "replay_close": true,
+      "orphans_exact": true,
+      "library_max_relative_error": 4.584154140729879e-07,
+      "delta_from_recipe_rms": 0.03895759955048561,
+      "changed_rows": 24826,
+      "states": 33,
+      "row_mass_error_max": 1.1102230246251565e-16,
+      "realized_mean_correction_by_state": {
+        "Allantois": 1.2286717891693115,
+        "Caudal Epiblast": 0.5104352235794067,
+        "D-FG": 0.605125904083252,
+        "EXE-Endoderm": 0.8026630282402039,
+        "Endo": 0.3033348619937897,
+        "ExEM-1": 0.46923956274986267,
+        "ExEM-2": 0.6766841411590576,
+        "Forebrain": 0.3356780707836151,
+        "Gut Endoderm": 0.3200622797012329,
+        "HEM-Endoth": 0.3117319643497467,
+        "Hindgut": 1.2624849081039429,
+        "IFT-CM": 0.6495033502578735,
+        "Intra-Endoth-1": 0.36272671818733215,
+        "Intra-Endoth-2": 0.24149873852729797,
+        "JCF": 0.43125537037849426,
+        "LPM": 1.089585781097412,
+        "Lateral FG": 0.48010188341140747,
+        "NCC": 0.4350074529647827,
+        "Neural Tube": 0.18266834318637848,
+        "PAM-1": 0.1551700383424759,
+        "PAM-2": 0.33149072527885437,
+        "PAM-3": 0.210200697183609,
+        "PAM-4": 0.3669080436229706,
+        "Peri": 0.45942404866218567,
+        "SOM": 0.219804048538208,
+        "Unknown": 0.6034318208694458,
+        "V-CM": 0.27775099873542786,
+        "V-CSE": 0.18978241086006165,
+        "a-FG": 0.3119428753852844,
+        "aPHM": 0.4369930624961853,
+        "d-CSE": 0.5580394268035889,
+        "pPHM": 0.3334142565727234,
+        "pSE": 0.5857091546058655
+      },
+      "max_abs_value": 9.210366249084473
+    },
+    "go": {
+      "finite": true,
+      "nonnegative": true,
+      "panel_exact": true,
+      "rows_exact": true,
+      "coordinates_equal": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "replay_close": true,
+      "orphans_exact": true,
+      "library_max_relative_error": 4.6756441118844805e-07,
+      "delta_from_recipe_rms": 0.04473733529448509,
+      "changed_rows": 24826,
+      "states": 33,
+      "row_mass_error_max": 1.1102230246251565e-16,
+      "realized_mean_correction_by_state": {
+        "Allantois": 1.1162724494934082,
+        "Caudal Epiblast": 0.23716053366661072,
+        "D-FG": 0.815141499042511,
+        "EXE-Endoderm": 0.5324936509132385,
+        "Endo": 0.3030427396297455,
+        "ExEM-1": 0.5918809175491333,
+        "ExEM-2": 0.679421603679657,
+        "Forebrain": 1.0071371793746948,
+        "Gut Endoderm": 0.42015233635902405,
+        "HEM-Endoth": 0.3407387137413025,
+        "Hindgut": 0.39945128560066223,
+        "IFT-CM": 0.5571086406707764,
+        "Intra-Endoth-1": 0.441886305809021,
+        "Intra-Endoth-2": 0.7091887593269348,
+        "JCF": 0.28934770822525024,
+        "LPM": 0.15871691703796387,
+        "Lateral FG": 0.1801794171333313,
+        "NCC": 0.3725980222225189,
+        "Neural Tube": 0.1959039568901062,
+        "PAM-1": 0.15021173655986786,
+        "PAM-2": 0.2657410800457001,
+        "PAM-3": 0.2447631061077118,
+        "PAM-4": 0.38459312915802,
+        "Peri": 0.35571834444999695,
+        "SOM": 0.312069833278656,
+        "Unknown": 0.7386912703514099,
+        "V-CM": 0.2435414344072342,
+        "V-CSE": 0.2070990949869156,
+        "a-FG": 0.5032616257667542,
+        "aPHM": 0.2569650411605835,
+        "d-CSE": 0.4250243008136749,
+        "pPHM": 0.31200987100601196,
+        "pSE": 0.34772777557373047
+      },
+      "max_abs_value": 9.210232734680176
+    }
+  },
+  "no_target_read": true
+}

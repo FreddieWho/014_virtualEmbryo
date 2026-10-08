@@ -1,0 +1,65 @@
+{
+  "stage": "E14.5",
+  "sample": "E14.5_E1S3",
+  "source_shape": [
+    92928,
+    18582
+  ],
+  "heart_bins": 1079,
+  "cm_enriched_bins": 1079,
+  "present_panel_genes": 483,
+  "absent_panel_genes": [
+    "Bhlha9",
+    "Bpifc",
+    "Ccn5",
+    "Cemip2",
+    "Cxcl1",
+    "Cxcl17",
+    "Etv2",
+    "Foxi2",
+    "Hoxb1",
+    "Lefty2",
+    "Nodal",
+    "Noto",
+    "Nxf3",
+    "Olfr872",
+    "Sost",
+    "Tdo2",
+    "Trh"
+  ],
+  "markers": [
+    "Tnnt2",
+    "Tnni3",
+    "Actc1",
+    "Myh6",
+    "Myh7",
+    "Myl2",
+    "Myl7"
+  ],
+  "markers_present": [
+    "Tnnt2",
+    "Tnni3",
+    "Actc1",
+    "Myh6",
+    "Myh7",
+    "Myl2",
+    "Myl7"
+  ],
+  "cm_rule": ">=2 positive raw-count markers inside anatomical Heart",
+  "raw_layer": "layers/count",
+  "counts_integer_finite_nonnegative": true,
+  "source_sha256": "d1f06d1dea4985f9b484622441dcdd768040cddb07b7f65d5e913df0f25d8fdb",
+  "source_url": "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000058/stomics/E14.5_E1S3.MOSTA.h5ad",
+  "outputs": [
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_heart_panel_raw.h5ad",
+      "bytes": 193628,
+      "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+    },
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_cm_enriched_panel_raw.h5ad",
+      "bytes": 193628,
+      "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+    }
+  ]
+}

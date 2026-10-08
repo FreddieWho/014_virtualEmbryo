@@ -1,0 +1,93 @@
+{
+  "split": "final",
+  "external_sha": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d",
+  "external_path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_cm_enriched_panel_raw.h5ad",
+  "n_endpoint_bins": 1079,
+  "common_genes": 483,
+  "checks": {
+    "endpoint": {
+      "finite": true,
+      "nonnegative": true,
+      "row_gene_identity": true,
+      "coordinates_exact": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "non_cm_exact": true,
+      "unmeasured_genes_exact": true,
+      "library_max_relative_error": 3.451355226058439e-07,
+      "common_library_max_relative_error": 3.462161841660816e-07,
+      "diagnostics": {
+        "eligible_cm_rows": 7633,
+        "eligible_labels": [
+          "A-CM",
+          "OFT-CM",
+          "SV-CM",
+          "V-CM"
+        ],
+        "common_genes": 483,
+        "endpoint_weight": 0.10400000000000002,
+        "source_delta_coefficient": 0.8533333333333334,
+        "changed_value_fraction": 0.032845307597601174,
+        "mean_abs_delta_vs_recipe": 0.009543637745082378,
+        "external_gene_missing_not_changed": true,
+        "non_cm_recipe_exact": true
+      }
+    },
+    "endfree": {
+      "finite": true,
+      "nonnegative": true,
+      "row_gene_identity": true,
+      "coordinates_exact": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "non_cm_exact": true,
+      "unmeasured_genes_exact": true,
+      "library_max_relative_error": 3.709561385845106e-07,
+      "common_library_max_relative_error": 3.721562864544836e-07,
+      "diagnostics": {
+        "eligible_cm_rows": 7633,
+        "eligible_labels": [
+          "A-CM",
+          "OFT-CM",
+          "SV-CM",
+          "V-CM"
+        ],
+        "common_genes": 483,
+        "endpoint_weight": 0.10400000000000002,
+        "source_delta_coefficient": 0.8533333333333334,
+        "changed_value_fraction": 0.009277254855236507,
+        "mean_abs_delta_vs_recipe": 0.000883221160620451,
+        "external_gene_missing_not_changed": true,
+        "non_cm_recipe_exact": true
+      }
+    },
+    "endperm": {
+      "finite": true,
+      "nonnegative": true,
+      "row_gene_identity": true,
+      "coordinates_exact": true,
+      "replay_exact": true,
+      "replay_max_abs": 0.0,
+      "non_cm_exact": true,
+      "unmeasured_genes_exact": true,
+      "library_max_relative_error": 3.9566675835711607e-07,
+      "common_library_max_relative_error": 3.9566675780200455e-07,
+      "diagnostics": {
+        "eligible_cm_rows": 7633,
+        "eligible_labels": [
+          "A-CM",
+          "OFT-CM",
+          "SV-CM",
+          "V-CM"
+        ],
+        "common_genes": 483,
+        "endpoint_weight": 0.10400000000000002,
+        "source_delta_coefficient": 0.8533333333333334,
+        "changed_value_fraction": 0.03750244251161682,
+        "mean_abs_delta_vs_recipe": 0.012260417453944683,
+        "external_gene_missing_not_changed": true,
+        "non_cm_recipe_exact": true
+      }
+    }
+  }
+}

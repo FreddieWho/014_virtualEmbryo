@@ -1,0 +1,8 @@
+# Adaptive matched-drift endpoint ablation
+Frozen 2026-10-08 12:29 UTC before new output. This is an adaptive diagnostic after the Hermite3arm result, not preregistered independent validation.
+
+The Hermite operator changed source median drift from0.9 to1.134 in dev, and endpoint-free validation showed that rescaling harmed the recipe. Real E14.5 endpoint slightly improves NMMD/MMD/direction compared with both endpoint-free and gene-permuted Hermite controls, but the net operator is worse than recipe. Therefore isolate the external-information term without source-velocity rescaling.
+
+Use the existing frozen endpoint model and matching rule, no refit/no gene changes. Start from the already emitted/replayed median09-library recipe X. For CM cells on the483 measured genes add q*(rank-mapped E14.5 endpoint - raw current observed expression), with q=3u²-2u³ and u=forecast interval/(14.5-current stage). q remains the original fixed physical-time endpoint coefficient, no strength scan. Reproject only common genes to the recipe common-library mass; all17 unmeasured genes and all non-CM cells stay recipe-exact. Emit real and gene-permuted endpoint residual arms. Endpoint-free control is exactly the existing recipe.
+
+This is a short-horizon residual model, no longer a complete Hermite trajectory or a guarantee of hitting E14.5. Source velocity plus endpoint residual may partly double-count maturation; distant/batch-confounded mixed bins remain a limitation. Evaluate all metrics at the same3seeds, comparing recipe/copy/permutation. Reserve remains unused until shortlist selection; report adaptation honestly.

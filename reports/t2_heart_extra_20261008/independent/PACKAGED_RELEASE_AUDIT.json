@@ -1,0 +1,59 @@
+{
+  "status": "RELEASE_READY",
+  "path": "/workspace/shared/t2_heart_extra_20261008/deliveries/t2_hrt_ext__x_endrank__v0036.h5ad",
+  "sha256": "0b89c69adff3b5cb3d86f0d8b0dbfe667f289343b0d7ac8908ca9c70ed33fc03",
+  "checks": {
+    "size": 15353761,
+    "X_matches_audited": true,
+    "coords_match_audited": true,
+    "raw_E95_geometry_exact": true,
+    "raw_E95_obs_exact": true,
+    "source_layer_matches_raw_E95_X": true,
+    "canonical_alias_identical": true,
+    "portable_alias_identical": true,
+    "portable_replay_from_independent_raw_source_exact": true,
+    "max_abs_replay_error": 0.0,
+    "endpoint_sha_matches_model": true,
+    "permit_model_allowed": true,
+    "permit_source_hash_matches": true,
+    "permit_sha_matches_model": true,
+    "contract_uns": {
+      "normalization": "log_normalized",
+      "schema": "ve.contract.v1"
+    },
+    "uns_keys": [
+      "celltype_palette",
+      "cm_celltype_palette",
+      "log1p",
+      "t2_flow_provenance",
+      "ve_contract",
+      "ve_t2_endpoint_submission"
+    ],
+    "source_model_stage_times": {
+      "early_time": 8.75,
+      "late_time": 9.5,
+      "target_time": 10.5,
+      "endpoint_time": 14.5
+    }
+  },
+  "diagnostics": {
+    "eligible_cm_rows": 7633,
+    "eligible_labels": [
+      "A-CM",
+      "OFT-CM",
+      "SV-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_coefficient": 0.10400000000000002,
+    "source_recipe_drift_unchanged": true,
+    "changed_fraction": 0.03336224631637476,
+    "mean_abs_diff_vs_recipe": 0.010749338194727898,
+    "non_cm_exact": true,
+    "missing_gene_exact": true
+  },
+  "provenance": {
+    "t2_flow_provenance": "{\"code_sha\": \"0032e18601cd99adfbe0f6e845c624a094ce5b78d3bb5852f10da17f8cd19ac0\", \"endpoint_model_sha\": \"172185d1ca789b7ed0f724627c8bae80b1ce6beccf2861d5eb7fb6ecdd664b70\", \"endpoint_permuted\": false, \"external_E95_used\": false, \"method\": \"fixed_drift_endpoint_rank_residual\", \"model_selection\": \"adaptive ablation after Hermite confound; no held-stage data in fit\"}",
+    "ve_t2_endpoint_submission": "{\"atom\": \"T2-ENDPOINT-RANK-20261008-v1\", \"board\": \"T2:heart:val_extrap\", \"candidate_id\": \"candidate/T2_heart_val_extrap/v0036_x_endpoint_rank\", \"common_measured_genes\": 483, \"current_source_parent_sha\": \"c22f874faa606448a2e53335e51d37783eb12d4a75709ee7cb530c8f5bebd835\", \"eligible_cm_rows\": 7633, \"emitter_sha\": \"0032e18601cd99adfbe0f6e845c624a094ce5b78d3bb5852f10da17f8cd19ac0\", \"endpoint_weight\": 0.104, \"external_E95_used\": false, \"external_citation\": \"Chen et al. Cell2022 DOI10.1016/j.cell.2022.04.003\", \"external_raw_subset_sha\": \"72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d\", \"external_rule_permit\": \"ALLOW_E145_ONLY_RAW_SPATIAL_ENDPOINT\", \"external_source\": \"MOSTA STDS0000058 E14.5_E1S3 Stereo-seq raw Heart bins\", \"external_stage\": \"E14.5\", \"geometry_and_row_identity\": \"released E9.5 stratified25179 rows seed20260821, unchanged\", \"heldout_E105_E125_used\": false, \"historical_incumbent_parity\": \"NOT_CLAIMED; historicalv0030bytes/emitter unavailable\", \"input_stages\": [\"E8.75\", \"E9.5\"], \"method\": \"Fixed-drift cardiomyocyte endpoint-rank residual; median09-library source recipe plus physical-time smoothstep terminal-rank correction\", \"model_sha\": \"172185d1ca789b7ed0f724627c8bae80b1ce6beccf2861d5eb7fb6ecdd664b70\", \"nonmeasured_genes_exact_recipe\": 17, \"status\": \"READY_NOT_SUBMITTED\", \"target\": \"E10.5\", \"version\": \"v0036\"}"
+  }
+}

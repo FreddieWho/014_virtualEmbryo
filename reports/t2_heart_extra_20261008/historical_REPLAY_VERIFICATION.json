@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "exact_X": true,
+  "max_abs_X_error": 0.0,
+  "tolerance": 2e-06,
+  "source_input": "Unmodified released E9.5 carrier in candidate.layers[log1p], independently hash-verified; prediction.X used only as output comparator",
+  "candidate_sha": "0b89c69adff3b5cb3d86f0d8b0dbfe667f289343b0d7ac8908ca9c70ed33fc03",
+  "model_sha": "172185d1ca789b7ed0f724627c8bae80b1ce6beccf2861d5eb7fb6ecdd664b70",
+  "diagnostics": {
+    "eligible_cm_rows": 7633,
+    "eligible_labels": [
+      "A-CM",
+      "OFT-CM",
+      "SV-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_coefficient": 0.10400000000000002,
+    "source_recipe_drift_unchanged": true,
+    "changed_fraction": 0.03336224631637476,
+    "mean_abs_diff_vs_recipe": 0.010749338194727898,
+    "non_cm_exact": true,
+    "missing_gene_exact": true
+  }
+}

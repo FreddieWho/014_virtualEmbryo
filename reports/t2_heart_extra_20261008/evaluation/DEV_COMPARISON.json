@@ -1,0 +1,30 @@
+{
+  "pca": {
+    "mmd_relative_change": -0.0008312551953449931,
+    "nmmd_relative_change": -0.006928877114326437,
+    "variogram_relative_change": 0.06850707432102787,
+    "de_difference": 0.0,
+    "direction_difference": 0.006199999999999997
+  },
+  "go": {
+    "mmd_relative_change": 0.002327514546965892,
+    "nmmd_relative_change": -0.0029549622987569135,
+    "variogram_relative_change": 0.09334851195316318,
+    "de_difference": -0.0139,
+    "direction_difference": -0.008900000000000005
+  },
+  "graph": {
+    "mmd_relative_change": -0.006816292601828811,
+    "nmmd_relative_change": -0.003668229060525774,
+    "variogram_relative_change": 0.012380061798666464,
+    "de_difference": 0.0,
+    "direction_difference": -0.0030000000000000027
+  },
+  "perm": {
+    "mmd_relative_change": -0.006816292601828811,
+    "nmmd_relative_change": -0.003668229060525774,
+    "variogram_relative_change": 0.01544966661245728,
+    "de_difference": 0.0,
+    "direction_difference": -0.0008000000000000021
+  }
+}

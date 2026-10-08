@@ -1,0 +1,62 @@
+{
+  "task": "T2:heart:val_extrap",
+  "date": "2026-10-08",
+  "status": "ALLOW_E145_ONLY_RAW_SPATIAL_ENDPOINT",
+  "model_input_allowed": true,
+  "source_url": "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000058/stomics/E14.5_E1S3.MOSTA.h5ad",
+  "source_sha256": "d1f06d1dea4985f9b484622441dcdd768040cddb07b7f65d5e913df0f25d8fdb",
+  "stage_evidence": "Official MOSTA stage-separated E14.5_E1S3 listing and observed download URL; file contains one section, no pooled stage field. Stage assigned at file level, not inferred from expression.",
+  "stage": 14.5,
+  "source_shape": [
+    92928,
+    18582
+  ],
+  "genotype_context": "Normal C57BL/6 embryo organogenesis resource per official MOSTA home; no perturbation source",
+  "source_terms": "https://db.cngb.org/stomics/policy",
+  "attribution": "Chen et al. Cell 2022 DOI 10.1016/j.cell.2022.04.003; STDS0000058, STOmicsDB",
+  "official_rule": "https://virtualembryo.ai/challenge/rules section 10 explicitly permits external stages after E13.5 with licence and disclosure. Source is spatial Stereo-seq, not ambiguous external scRNA-only permission.",
+  "allowed_fields": [
+    "layers/count restricted to author anatomical Heart bins",
+    "exact panel gene identifiers and presence mask",
+    "fresh fixed marker count filter",
+    "full-transcriptome raw row totals only for new normalisation/audit"
+  ],
+  "excluded_fields": [
+    "All original normalised X",
+    "Every Regulon/Module column in obs/var",
+    "All spatial_leiden clusters",
+    "All embeddings, trajectories, cross-stage fits and original uns metadata",
+    "No E9.5 external data in dev model or dev selection"
+  ],
+  "selection_provenance": "Original MOSTA paper methods: spatially constrained clustering per section, markers plus anatomical annotation; only broad anatomical Heart label used. Fixed pre-inspection CM enrichment rule uses at least 2 positive raw genes among Tnnt2,Tnni3,Actc1,Myh6,Myh7,Myl2,Myl7. No integrated-stage reference label transfer used.",
+  "methods_source": "https://www.devo-evo.com/assets/PDFs/stereo_seq.pdf",
+  "heart_bins": 1079,
+  "cm_enriched_bins": 1079,
+  "measured_panel_genes": 483,
+  "model_artifacts": [
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_heart_panel_raw.h5ad",
+      "bytes": 193628,
+      "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+    },
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/e145_endpoint/E14.5_cm_enriched_panel_raw.h5ad",
+      "bytes": 193628,
+      "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+    }
+  ],
+  "limitations": [
+    "Mixed spatial bins, not pure cardiomyocyte single cells",
+    "Only one sagittal section from one late endpoint; dissection and cell-composition confounding",
+    "Full 500 columns include missing-gene placeholders; var.measured_in_source must be applied",
+    "Does not establish future target timing, effect sign, organ size or proportions",
+    "E14.5 may inform a hypothesis, not replace the E10.5/E12.5 target",
+    "17 genes absent by exact symbol; no alias inference applied"
+  ],
+  "validation": [
+    "1079 anatomical Heart bins; all satisfy frozen CM enrichment rule",
+    "All retained raw counts finite, nonnegative and integer",
+    "500 genes in exact T2 official order",
+    "No copied learned metadata or spatial coordinates in emitted h5ad"
+  ]
+}

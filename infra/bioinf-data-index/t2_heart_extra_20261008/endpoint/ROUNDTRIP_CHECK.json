@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "shape": [
+    1079,
+    500
+  ],
+  "panel_exact_order": true,
+  "unique_rows": true,
+  "all_E145": true,
+  "measured_genes": 483,
+  "missing_columns_zero_placeholders": true,
+  "raw_finite_integer_nonnegative": true,
+  "learned_fields_absent": true,
+  "coords_absent": true,
+  "library_sum_scope": "all 18582 genes retained in the original source section, not all possible genes",
+  "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+}

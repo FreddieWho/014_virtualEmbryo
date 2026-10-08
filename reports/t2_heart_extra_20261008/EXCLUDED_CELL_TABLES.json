@@ -1,0 +1,26 @@
+[
+  {
+    "path": "infra/bioinf-data-index/t2_heart_extra_20261008/endpoint/selected_rows.tsv",
+    "bytes": 50826,
+    "sha256": "9a602a34f4ae1419117dba8c829289c70a1c4ff3b44e874ba0f61dde7aa56c0b",
+    "reason": "Cell-level membership/row ledger excluded from public code/evidence release"
+  },
+  {
+    "path": "reports/t2_heart_extra_20261008/evaluation/dev_ids.json",
+    "bytes": 500481,
+    "sha256": "048015659db88cfc7d9bfe748889614efb19fc9e7ede009e4ea93671acd40d26",
+    "reason": "Cell-level membership/row ledger excluded from public code/evidence release"
+  },
+  {
+    "path": "reports/t2_heart_extra_20261008/evaluation/reserve_ids.json",
+    "bytes": 500403,
+    "sha256": "7f51e90032ce798bcc44ea520232102e674e2c42e93549b333d2242fd20e52c7",
+    "reason": "Cell-level membership/row ledger excluded from public code/evidence release"
+  },
+  {
+    "path": "final/source_row_ledger.tsv",
+    "sha256": "8f1880ba8f09dff0961f2a2bba848c2aee82b161a6c74e3cc82d3c85a6c69b22",
+    "bytes": 628920,
+    "reason": "Never included in public package; cell-level data excluded"
+  }
+]

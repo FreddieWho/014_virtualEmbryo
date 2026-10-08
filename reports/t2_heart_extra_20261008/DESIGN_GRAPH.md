@@ -1,0 +1,9 @@
+# Second mechanism: signed functional-network posterior velocity
+Frozen 2026-10-08 12:14 UTC before graph implementation/fit/evaluation. First microstate route had only tiny NMMD gains with covariance loss; it does not establish benefit of GO topology.
+
+## Scientific hypothesis
+Independent per-gene temporal differences can be noisy and incoherent with functional modules. Fit gene velocity jointly using a signed graph posterior. External sequence-derived GO defines possible gene connections only. All edge signs, weights, effect magnitudes and uncertainty derive from released WT observations, separately within each exact shared type. No orphan-state mapping, external expression, future target or coordinate transformation.
+
+For each type compute robust standardized median differences and an analytic median-estimation variance. Build a GO overlap graph, multiply by within-type observed expression correlation and keep each gene's ten strongest absolute correlations (symmetric union). Use normalized signed Laplacian L. Set regularization alpha from observed noise-to-signal ratio (capped at one for numerical stability, not a fitted dose). Posterior standardized velocity solves (I+alpha L) v = observed velocity. Existing median09 drift scale/library projection is held fixed. A fixed panel-gene permutation of GO connectivity is the negative control; it retains graph density but destroys functional gene identity. No target-driven hyperparameter selection.
+
+Evaluate both full500-gene emitted predictions through all official metrics at the same three seeds, same stage split and carrier as first route. Favor improvement in MMD/NMMD while reporting DE/direction/variogram. Graph arm must beat permuted topology on relevant metrics to claim value from external knowledge; otherwise external contribution is unsupported. No hidden-stage access. Reserve once for final shortlist only, after all design decisions.

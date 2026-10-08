@@ -1,0 +1,35 @@
+{
+  "candidate_sha": "0b89c69adff3b5cb3d86f0d8b0dbfe667f289343b0d7ac8908ca9c70ed33fc03",
+  "model_sha": "172185d1ca789b7ed0f724627c8bae80b1ce6beccf2861d5eb7fb6ecdd664b70",
+  "source_carrier_X_sha256": "862f9aa905b378aca8442f35229df97ed224cfcce0c5ca90e3ef1670be01061a",
+  "source_carrier_coordinates_sha256": "6031d426d9bf04365202c816a5bbd8160a74058cea47a8a2e3215cd286ea7797",
+  "source_carrier_origin": "Unmodified released E9.5 layers/log1p carried by actual submission; verified exact against original E9.5 selected rows",
+  "source_sampling": "25179 celltype-stratified rows seed20260821, no geometry transform",
+  "original_released_inputs": {
+    "E8.25_late": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593",
+    "E8.75": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+    "E9.5": "371ca6530e084de2b6cd6703b49d95f4bb59546c9291659809575382a630ee9a"
+  },
+  "external_input": {
+    "file": "inputs/endpoint/E14.5_cm_enriched_panel_raw.h5ad",
+    "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+  },
+  "distribution": "No H5AD or pickle binaries included. Model state is rebuilt by portable.py from explicitly supplied official inputs.",
+  "official_inputs_method": "https://virtualembryo.ai/challenge/data#download ; authenticated official Download UI for T2/E8.75.h5ad, T2/E9.5.h5ad, optional development T2/E8.25_late.h5ad. Authentication may be required; no public unauthenticated direct file URLs are asserted.",
+  "panel_url": "https://virtualembryo.ai/challenge/panels/T2__heart__val_extrap.genes.txt",
+  "external_source": {
+    "url": "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000058/stomics/E14.5_E1S3.MOSTA.h5ad",
+    "completed": true,
+    "bytes": 2159699936,
+    "sha256": "d1f06d1dea4985f9b484622441dcdd768040cddb07b7f65d5e913df0f25d8fdb",
+    "retained_prefix_bytes": 226492416,
+    "elapsed_seconds": 346.2099416255951,
+    "scope": "quarantine inspection only; no protected-stage source"
+  },
+  "original_sizes": {
+    "E8.25_late.h5ad": 225091568,
+    "E8.75.h5ad": 83750668,
+    "E9.5.h5ad": 163640212
+  },
+  "candidate_bytes": 15353761
+}

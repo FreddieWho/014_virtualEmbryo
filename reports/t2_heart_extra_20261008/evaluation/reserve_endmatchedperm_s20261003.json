@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "task": "T2",
+    "setting": "heart",
+    "target_source": "/workspace/shared/t2_heart_extra_20261008/evaluation/reserve_e95.h5ad",
+    "reference_defaulted_to_input": false,
+    "truth_cells": 26871,
+    "prediction_cells": 24826,
+    "genes": 500
+  },
+  "metrics": {
+    "de_score": 0.027,
+    "de_direction": 0.0462,
+    "energy_distance": 2.13359,
+    "mmd_u": 0.05487,
+    "variogram": 0.046515,
+    "d2_shape": 0.05166,
+    "sliced_wasserstein": 0.05459,
+    "occupancy_dice": 0.8119,
+    "scale_log_ratio": -0.4346,
+    "count_log_ratio": -0.0792,
+    "neighborhood_mmd": 0.0953,
+    "pb_rel_err": 0.5118,
+    "library_size_ratio": 1.0,
+    "variance_ratio": 0.829,
+    "composition_JSD": 0.1097,
+    "pseudobulk_pearson": 0.8095,
+    "morans_I_agreement": 0.6852,
+    "_de_raw": 0.4375,
+    "_de_chance": 0.4219,
+    "_n_up": 38,
+    "_n_dn": 90,
+    "_sw_flip_spread": 0.00581,
+    "_dice_voxel_over_nn": 11.9
+  },
+  "seed": 20261003,
+  "elapsed_seconds": 18.36013388633728,
+  "scorer_sha256": "52034554f03aec10193cb09baa2c78a1de04218ef678f327eb63acc58fa28add"
+}

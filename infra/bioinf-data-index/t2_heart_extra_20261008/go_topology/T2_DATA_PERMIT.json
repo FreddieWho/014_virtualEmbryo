@@ -1,0 +1,82 @@
+{
+  "task": "T2:heart:val_extrap",
+  "date": "2026-10-08",
+  "status": "ALLOW_GENERIC_SEQUENCE_ONTOLOGY_TOPOLOGY_ONLY",
+  "model_input_allowed": true,
+  "role": "Unsigned gene-module membership and function topology only; not expression, velocities, lineage probabilities, timing, target proportions, scale or perturbation effect weights",
+  "source_files": [
+    {
+      "path": "/workspace/shared/t3source/GO/go-basic.obo",
+      "sha256": "b08d45b268b8c24ccb2513dbbbc7d4df9f6521c099b413f79eb31e06e0fa3bcc",
+      "source_url": "https://current.geneontology.org/ontology/go-basic.obo"
+    },
+    {
+      "path": "/workspace/shared/t3source/GO/MOUSE-uniprot.gaf.gz",
+      "sha256": "ea07d1a19adad445da59b2d8c48e7f7678827b09c12cc056f3faf7a1f88068b8",
+      "source_url": "https://current.geneontology.org/annotations/MOUSE-uniprot.gaf.gz"
+    }
+  ],
+  "ontology_release": "2026-07-26",
+  "gaf_headers": [
+    "!gaf-version: 2.2",
+    "!generated-by: UniProt",
+    "!date-generated: 2026-07-28 19:46",
+    "!go-version: http://purl.obolibrary.org/obo/go/releases/2026-07-26/extensions/go-plus.ofn"
+  ],
+  "license": "CC BY 4.0",
+  "license_url": "https://geneontology.org/docs/go-citation-policy/",
+  "rules_url": "https://virtualembryo.ai/challenge/rules",
+  "rules_basis": "Section 10 external public data permitted with licensing/disclosure; artifact contains generic sequence-signature function assertions only, no measured held-out-stage records or pretrained checkpoints. This is a new T2-scoped audit, not reuse of the T3 permit.",
+  "filters": [
+    "Exact official 500-gene panel symbol only",
+    "mouse taxon:10090 only",
+    "IEA AND GO_REF:0000002 AND assigned_by InterPro AND InterPro signature",
+    "No NOT qualifier; no context extension; no obsolete/missing ontology terms",
+    "Only is_a and part_of ontology propagation; no sign/regulates relationship",
+    "Modules retain 2-100 panel genes; filtering uses panel membership only, no expression or target observations"
+  ],
+  "excluded": [
+    "All experimental/perturbation/expression-pattern GO evidence",
+    "All Ensembl orthology transfers, IBA, ARBA, UniRule and other non-InterPro inference",
+    "All T3 embeddings, learned weights, knockout-derived representations",
+    "All measured embryo data and all time-resolved priors"
+  ],
+  "limitations": [
+    "GO functions do not establish developmental direction or a future cell state",
+    "InterPro annotations are sequence-homology function knowledge, not proof of cardiac-stage-specific activity",
+    "This prior is not a full organism/heart lineage graph",
+    "Must disclose original resources, frozen versions, filters and derived artifact hashes in method summary"
+  ],
+  "rows_retained": 1156,
+  "direct_unique_gene_go_edges": 1156,
+  "genes_covered": 369,
+  "modules": 427,
+  "filtered_counts": {
+    "not_exact_panel_symbol": 685688,
+    "not_interpro_sequence_signature": 30067
+  },
+  "panel_source_path": "/workspace/shared/virtual_embryo_data/T2__heart__val_extrap.genes.txt",
+  "panel_sha256": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa",
+  "output_files": [
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/go_topology/module_membership.tsv",
+      "sha256": "9f37a1f7914038a8208744952867bfba935a6b824737eeba1afa17f0f3cec698",
+      "bytes": 58226
+    },
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/go_topology/panel_gene_go_interpro.json",
+      "sha256": "eaaddb430176b551b5b9a3f4582c3e9b49066f211b00e19575e80f4936cba645",
+      "bytes": 464417
+    },
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/go_topology/panel_gene_go_interpro_evidence.tsv",
+      "sha256": "58d37e58bd0cd8ba1d0893dc8a30d57f3603b472d5b6c9571b320b05471eaa81",
+      "bytes": 228793
+    },
+    {
+      "path": "/workspace/shared/t2_external_sources_20261008/go_topology/panel_genes.txt",
+      "sha256": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa",
+      "bytes": 3008
+    }
+  ]
+}

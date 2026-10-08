@@ -1,0 +1,26 @@
+{
+  "mode": "refit",
+  "max_abs_X_error": 0.0,
+  "exact_X": true,
+  "coordinate_exact": true,
+  "obs_names_exact": true,
+  "var_names_exact": true,
+  "tolerance": 2e-06,
+  "output": "/workspace/shared/t2_heart_extra_20261008/full_reproduction/refit.h5ad",
+  "diagnostics": {
+    "eligible_cm_rows": 7633,
+    "eligible_labels": [
+      "A-CM",
+      "OFT-CM",
+      "SV-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_coefficient": 0.10400000000000002,
+    "source_recipe_drift_unchanged": true,
+    "changed_fraction": 0.03336224631637476,
+    "mean_abs_diff_vs_recipe": 0.010749338194727898,
+    "non_cm_exact": true,
+    "missing_gene_exact": true
+  }
+}

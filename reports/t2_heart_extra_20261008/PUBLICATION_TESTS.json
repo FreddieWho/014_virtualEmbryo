@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "date": "2026-10-08",
+  "working_directory": "unrelated /tmp directory",
+  "interpreter": "Python 3.12, versions in historical_DEPENDENCIES.json",
+  "bounded_synthetic_tests": 5,
+  "new_score_runs": 0,
+  "new_model_selection_experiments": 0,
+  "replay": {
+    "status": "PASS",
+    "mode": "replay",
+    "shape": [
+      25179,
+      500
+    ],
+    "diagnostics": {
+      "eligible_cm_rows": 7633,
+      "eligible_labels": [
+        "A-CM",
+        "OFT-CM",
+        "SV-CM",
+        "V-CM"
+      ],
+      "common_genes": 483,
+      "endpoint_coefficient": 0.10400000000000002,
+      "source_recipe_drift_unchanged": true,
+      "changed_fraction": 0.03336224631637476,
+      "mean_abs_diff_vs_recipe": 0.010749338194727898,
+      "non_cm_exact": true,
+      "missing_gene_exact": true
+    },
+    "byte_identity_claimed": false,
+    "exact_X": true,
+    "max_abs_X_error": 0.0,
+    "coordinate_exact": true,
+    "obs_names_exact": true,
+    "var_names_exact": true
+  },
+  "refit": {
+    "status": "PASS",
+    "mode": "refit",
+    "shape": [
+      25179,
+      500
+    ],
+    "diagnostics": {
+      "eligible_cm_rows": 7633,
+      "eligible_labels": [
+        "A-CM",
+        "OFT-CM",
+        "SV-CM",
+        "V-CM"
+      ],
+      "common_genes": 483,
+      "endpoint_coefficient": 0.10400000000000002,
+      "source_recipe_drift_unchanged": true,
+      "changed_fraction": 0.03336224631637476,
+      "mean_abs_diff_vs_recipe": 0.010749338194727898,
+      "non_cm_exact": true,
+      "missing_gene_exact": true
+    },
+    "byte_identity_claimed": false,
+    "exact_X": true,
+    "max_abs_X_error": 0.0,
+    "coordinate_exact": true,
+    "obs_names_exact": true,
+    "var_names_exact": true
+  },
+  "endpoint_rebuild": {
+    "original_source_sha256": "d1f06d1dea4985f9b484622441dcdd768040cddb07b7f65d5e913df0f25d8fdb",
+    "exact_original_small_endpoint_bytes": true,
+    "bytes": 193628,
+    "sha256": "72ffc1fb3e42331355edc4e9c887e9ccaeb76f16b9457301c3b90b8bcb40e20d"
+  },
+  "local_score_run_count": 42,
+  "scorer_sha256": "52034554f03aec10193cb09baa2c78a1de04218ef678f327eb63acc58fa28add"
+}

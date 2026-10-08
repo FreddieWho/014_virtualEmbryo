@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-08",
+  "source": "MOSTA_STDS0000058_E95_heart",
+  "status": "PASS_RAW_COUNTS_E95_ONLY",
+  "model_input_allowed": true,
+  "allowed_download": [
+    "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000058/stomics/mouse_E9.5_heart.h5ad"
+  ],
+  "nominal_bytes": "35.8 MB",
+  "task": "T2:heart:val_extrap",
+  "rule_review": "E9.5 is explicitly permitted by current official rules \u00a710. The Data-page external scRNA ambiguity does not establish a prohibition on spatial Stereo-seq. Historical Batch2 blanket-email and shape-only gates do not govern this new route.",
+  "source_listing": "https://db.cngb.org/stomics/mosta/download/",
+  "secondary_author_listing": "https://spateodata.aristoteleo.com/",
+  "source_context": "https://db.cngb.org/stomics/mosta/",
+  "source_terms": "https://db.cngb.org/stomics/policy",
+  "attribution": "Chen et al. 2022, DOI 10.1016/j.cell.2022.04.003; STOmicsDB accession STDS0000058",
+  "post_download_requirements": [
+    "Record byte count and SHA256",
+    "Inspect stage/genotype and source annotation before numerical analysis",
+    "Determine whether expression/coordinates and preprocessing use E9.5 alone; do not reuse cross-stage embeddings, regulons or inferred future labels",
+    "Create a separate explicit T2 training permit only after these checks",
+    "Keep out of E9.5 pseudo-holdout training; admit only to final fit if eligible"
+  ],
+  "forbidden_downloads": [
+    "Mixed all-stage atlas",
+    "Any measured E10.5/E11.5/E12.5/E13.5 files",
+    "E11.5 3D heart",
+    "Derived mixed-stage embeddings or HVG-filtered multi-stage datasets"
+  ],
+  "download_executed": true,
+  "sha256": "b7e0620faa160257a6dec5cf422ed78047d581d4cd80b72cbd5636a871b61e4a",
+  "inspection_path": "FILE_INSPECTION.json",
+  "actual_bytes": 37576375,
+  "role": "Raw E9.5 count matrix only, independent platform comparison for final fit after source-only dev selection; no E9.5 pseudo-holdout fitting",
+  "excluded_fields": [
+    "All external cross-time morphogenesis vectors and trajectories",
+    "3D coordinates until separate alignment-provenance review",
+    "Any cross-time HVG/mapping results from tutorial"
+  ],
+  "provenance_support": "https://spateo-release.readthedocs.io/en/latest/tutorials/notebooks/7_morphogenesis/2_morphogenesis_mouse_heart.html",
+  "evidence": [
+    "Every obs stage is E9.5 (19780 rows)",
+    "X equals total layer exactly; nonnegative integer counts",
+    "No uns or var pretrained/learned fields",
+    "Raw file is loaded before cross-stage gene filtering/HVG/mapping in author tutorial",
+    "12,581 genes, 380 exact panel matches"
+  ]
+}

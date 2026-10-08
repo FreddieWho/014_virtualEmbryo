@@ -1,0 +1,83 @@
+{
+  "url": "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000058/stomics/E14.5_E1S3.MOSTA.h5ad",
+  "completed": true,
+  "bytes": 2159699936,
+  "sha256": "d1f06d1dea4985f9b484622441dcdd768040cddb07b7f65d5e913df0f25d8fdb",
+  "retained_prefix_bytes": 226492416,
+  "ranges": [
+    {
+      "range": [
+        226492416,
+        468143355
+      ],
+      "bytes": 241650940,
+      "sha256": "748156e18fab67c24ccf4137ae5adc00d8a7964183ac421ea25d75c555ae5764",
+      "seconds": 286.35233759880066
+    },
+    {
+      "range": [
+        468143356,
+        709794295
+      ],
+      "bytes": 241650940,
+      "sha256": "971ee1892f0f257c0671473ef44e153e636febb0095c26a78ac1549ace0c89bb",
+      "seconds": 336.89891958236694
+    },
+    {
+      "range": [
+        709794296,
+        951445235
+      ],
+      "bytes": 241650940,
+      "sha256": "b02be49352fb30a057f5045d0825aa8bd85935aac74fc1e942f0210b1060de8d",
+      "seconds": 338.67020988464355
+    },
+    {
+      "range": [
+        951445236,
+        1193096175
+      ],
+      "bytes": 241650940,
+      "sha256": "10f843891fdfcc9d14ca85f05d1f07a40884d21849b2dd38ac4df027528de7f3",
+      "seconds": 308.55458903312683
+    },
+    {
+      "range": [
+        1193096176,
+        1434747115
+      ],
+      "bytes": 241650940,
+      "sha256": "ef14b6c14ec4b5c07096ad47bdbc50f5969fdf9a800546426291d13f37647c1b",
+      "seconds": 344.598069190979
+    },
+    {
+      "range": [
+        1434747116,
+        1676398055
+      ],
+      "bytes": 241650940,
+      "sha256": "bdc5dc4996e7448c6990afde5cc854c8866ab14da9401f93f787c96034526696",
+      "seconds": 342.70106267929077
+    },
+    {
+      "range": [
+        1676398056,
+        1918048995
+      ],
+      "bytes": 241650940,
+      "sha256": "d78831592a5fd170a717acd63a7d559e7ba7e4bc51226943c7c727ec179c87dc",
+      "seconds": 220.73676109313965
+    },
+    {
+      "range": [
+        1918048996,
+        2159699935
+      ],
+      "bytes": 241650940,
+      "sha256": "34f56b3419a5f4e09839809eddbca6a22f8d6b38671a388228b103179664a6ad",
+      "seconds": 217.12672328948975
+    }
+  ],
+  "elapsed_seconds": 346.2099416255951,
+  "scope": "quarantine inspection only; no protected-stage source"
+}

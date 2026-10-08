@@ -1,0 +1,24 @@
+{
+  "artifact": {
+    "path": "/workspace/shared/t2_heart_extra_20261008/dev/endperm.h5ad",
+    "sha256": "858d91a4f953e8b1fd9b57a512c2fba60544e0766149acdd9d8b116d873e7e1d",
+    "shape": [
+      24826,
+      500
+    ]
+  },
+  "diagnostics": {
+    "eligible_cm_rows": 3401,
+    "eligible_labels": [
+      "IFT-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_weight": 0.046601462973617155,
+    "source_delta_coefficient": 1.1342155009451795,
+    "changed_value_fraction": 0.02519632643196649,
+    "mean_abs_delta_vs_recipe": 0.006369401700794697,
+    "external_gene_missing_not_changed": true,
+    "non_cm_recipe_exact": true
+  }
+}

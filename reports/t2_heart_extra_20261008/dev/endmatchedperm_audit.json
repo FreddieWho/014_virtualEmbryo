@@ -1,0 +1,24 @@
+{
+  "artifact": {
+    "path": "/workspace/shared/t2_heart_extra_20261008/dev/endmatchedperm.h5ad",
+    "sha256": "958bd946bd54cedb394af700a09c1ae9e915e27ece0eec99240bbf7ca8afca32",
+    "shape": [
+      24826,
+      500
+    ]
+  },
+  "diagnostics": {
+    "eligible_cm_rows": 3401,
+    "eligible_labels": [
+      "IFT-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_coefficient": 0.046601462973617155,
+    "source_recipe_drift_unchanged": true,
+    "changed_fraction": 0.025471602352372513,
+    "mean_abs_diff_vs_recipe": 0.003397373016923666,
+    "non_cm_exact": true,
+    "missing_gene_exact": true
+  }
+}

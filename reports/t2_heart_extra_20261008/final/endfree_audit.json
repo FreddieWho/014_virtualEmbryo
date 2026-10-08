@@ -1,0 +1,26 @@
+{
+  "artifact": {
+    "path": "/workspace/shared/t2_heart_extra_20261008/final/endfree.h5ad",
+    "sha256": "216b9dda57de7150b48f94d4bb284c64f763757b87e40612094523f46819d51c",
+    "shape": [
+      25179,
+      500
+    ]
+  },
+  "diagnostics": {
+    "eligible_cm_rows": 7633,
+    "eligible_labels": [
+      "A-CM",
+      "OFT-CM",
+      "SV-CM",
+      "V-CM"
+    ],
+    "common_genes": 483,
+    "endpoint_weight": 0.10400000000000002,
+    "source_delta_coefficient": 0.8533333333333334,
+    "changed_value_fraction": 0.009277254855236507,
+    "mean_abs_delta_vs_recipe": 0.000883221160620451,
+    "external_gene_missing_not_changed": true,
+    "non_cm_recipe_exact": true
+  }
+}

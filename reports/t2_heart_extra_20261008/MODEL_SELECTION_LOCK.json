@@ -1,0 +1,29 @@
+{
+  "selected_method": "endmatched",
+  "selected_at_utc": "2026-10-08T12:32:00Z",
+  "decision": "Lock fixed-drift E14.5-only CM rank-residual for one held-row diagnostic and final fit; no further tuning",
+  "dev_prediction_sha": "dfa9755e5d309c607ccca05579191a06f60dadf72c42187a80a833da93191820",
+  "model_sha": "5d0b5a6dadd1c4d1c971e1ce5c00cbad19eaa5654d28148105b6eeaf836f695e",
+  "emitter_sha": "0032e18601cd99adfbe0f6e845c624a094ce5b78d3bb5852f10da17f8cd19ac0",
+  "controls": [
+    "incumbent_recipe",
+    "copy",
+    "endmatchedperm",
+    "endpoint",
+    "endfree",
+    "endperm",
+    "pca",
+    "go",
+    "graph",
+    "perm"
+  ],
+  "evidence": "Actual endpoint improves MMD/NMMD/direction versus recipe and permuted endpoint; DE tied; gene-pair variogram0.51% worse than recipe. Small retrospective proxy evidence, not server forecast.",
+  "limits": [
+    "Adaptive method choice after prior33fullmetric runs",
+    "Reused E9.5 stage; held-row diagnostic is not unseen or biological independent validation",
+    "Historicalv0030 exactartifact unavailable; comparator reconstructed recipe only",
+    "External1section mixedbin,483measuredgenes,farE14.5endpoint",
+    "No externalE9.5 used"
+  ],
+  "reserve_policy": "One evaluation phase on fixed reserved rows after this lock; no hyperparameter change or endpoint source adjustment based on it"
+}
