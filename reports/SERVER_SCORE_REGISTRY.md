@@ -1731,3 +1731,46 @@ submission is implied. Other-board identities and selections are unchanged.
 blocks_submission:false. Five metric rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
 
 Portal leaderboard observation at 2026-10-08T10:49:25Z: displayed Total 167.1, Human rank 72, T1 54.0 / T2 59.7 / T3 53.4. These are rounded page displays; the submission detail provides the exact T3 score 53.42. No precise aggregate is inferred, and unrelated board candidate identities are not reassigned.
+
+<a id="t3-condhurdle-v0088-score-return-20261008"></a>
+## T3 v0088 conditional hurdle score return — 2026-10-08
+
+Evidence class: SERVER_SCORED_PORTAL_VERIFIED. Official detail page observed
+2026-10-08T11:57:10Z. Submitted display is `2026-10-08 11:56`; timezone is unlabelled.
+Submission [67faa8da3e0049d4a26a6fa64c2984b0](https://virtualembryo.ai/challenge/account/submissions/67faa8da3e0049d4a26a6fa64c2984b0),
+file `t3_gata4__condhurdle__v0088.h5ad`. Exact uploaded SHA256 is in INDEX.
+All previous candidate rows, artifacts, scores and hashes are preserved.
+
+| Candidate | Detail score | de_score | de_direction | severity_slope | mmd_u | variogram | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---|
+| v0088 condhurdle | 53.69 | 41.7 | 51.2 | 75.2 | 51.1 | 43.1 | PROMOTED; +0.27 vs v0087 53.42 |
+
+**Current T3 selection: v0088, 53.69.** The +0.27 gain is beyond the ±0.1 incumbent
+band; v0087 remains a historical fallback. Five submetrics are exact displayed
+SKILL values, not raw metrics. Raw metric values were not displayed and are not
+inferred. DE/direction are unchanged at displayed precision; severity improves
++0.2, MMD +1.4 and variogram +0.8 versus v0087. The improvement is concentrated in
+distribution/emission behavior; it does not establish a new target-specific causal
+response or imply that unchanged rounded submetrics are numerically identical.
+
+Method boundary: same seven-KO generic embryonic state-response hurdle as v0087,
+replacing random zero-activation ties with WT-only state-conditioned activation
+propensity. This arm was selected through the frozen four-family source comparison;
+no post-portal retuning is represented by this record. Sources remain the admitted
+GSE137337 embryonic KO conditions, GSE122187 WT and ontology information; no new
+source scope or hidden target outcomes. The source development remains adaptive,
+and cohort/chemistry/developmental confounding is not resolved by this score gain.
+Full condition-level source/implementation provenance is in the uploaded artifact.
+Final frozen-array, source/code, parent protected metadata/geometry and 7449×500
+contract checks independently passed before submission.
+
+This consumes the user's separately authorized final one-attempt budget. No further
+attempt remains authorized; the portal displayed daily T3 usage 8/8 after acceptance.
+Other-board candidate identities and selections are unchanged. blocks_submission:false.
+Five rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
+
+Portal leaderboard observed at 2026-10-08T11:58:09Z: displayed Total 171.4, Human
+rank 61, T1 58.0 / T2 59.7 / T3 53.7. Immediately before this final attempt the
+observed Total/rank was 171.1/62. These are rounded displays; only the detail-page
+T3 score is recorded precisely as 53.69. The separate T1 improvement is not credited
+to this T3 attempt, and no precise aggregate is inferred.
