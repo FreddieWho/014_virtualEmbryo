@@ -1,0 +1,129 @@
+{
+ "schema": "ve.t1.six.v1",
+ "date": "2026-10-07",
+ "seed": 20260921,
+ "task": "T1:val",
+ "parent_version": "v0035",
+ "n_genes": 32285,
+ "n_cells": 5118,
+ "min_type_cells": 30,
+ "threads": 8,
+ "max_hours_per_route": 6,
+ "skeleton": {
+  "parent_models": "artifacts/t1_three/T1-THREE-20260929-v1 r2joint/r3mix report/final models; v0035/v0036 byte-reproduced as audit",
+  "latent_dimensions": 32,
+  "common_types_only": true,
+  "report_split": "same 60/20/20 stratified cell split, seed 20260921"
+ },
+ "six": {
+  "lanes": [
+   "ocovstab",
+   "osoftcov",
+   "ostabmix",
+   "nwasser",
+   "nconf",
+   "nbidir"
+  ],
+  "categories": {
+   "optimization_combination": [
+    "ocovstab",
+    "osoftcov",
+    "ostabmix"
+   ],
+   "new": [
+    "nwasser",
+    "nconf",
+    "nbidir"
+   ]
+  },
+  "ocovstab": {
+   "basis": "n2covot upgrade (optimization of existing route)",
+   "knn_k": 8,
+   "strength_stable": 0.5,
+   "strength_unstable": 0.125,
+   "reliability_signal": "per-type projection_mean_distance from the frozen t1_seven n2covot operator records, PER SCOPE: report scope from REPORT_OPERATOR.json (10 common types, median 0.9491473417672116), final scope from FINAL_OPERATOR.json (11 common types incl. NCC, median 0.9498031672083602); amended 2026-10-07 pre-run: the first batch exposed that NCC lacks a report-scope distance (report split has no NCC train cells)",
+   "reliability_rule": "type stable if its own scope's distance <= that scope's median across common types, unstable otherwise",
+   "cov_shrink": 0.1,
+   "donor_sampling": "inverse-distance weighted systematic_indices among k nearest query cells in type pool; k=1 nearest fallback when type has fewer than knn_k cells"
+  },
+  "osoftcov": {
+   "basis": "f1soft soft responsibilities x n2covot covariance transport (combination of two existing routes)",
+   "soft_max_components": 8,
+   "soft_min_cells": 100,
+   "soft_prior": 10,
+   "soft_strength": 0.5,
+   "weight_formula": "logw = 0.5*log(density classifier weights) + 0.5*(gmm.predict_proba(q) @ step), bounded_weights cap log(2); f1soft frozen formula",
+   "cov_strength": 0.5,
+   "cov_shrink": 0.1,
+   "covot_knn_k": 1
+  },
+  "ostabmix": {
+   "basis": "f2stable stability evidence x s2mix mixture carrier (combination; per-type adaptive fractions replace the global fixed ratio)",
+   "stability_parts": 4,
+   "stability_required": 3,
+   "stability_seed": 20260921,
+   "stability_score_rule": "per type: fraction of genes with stable positive-mean direction (w1 == 1.0) from 4-part stability evidence on train cells",
+   "fraction_rule": "fraction_best = 0.7 if score >= 0.5 else 0.3 (0.7 is s2mix's frozen proven ratio; two-level rule, no ratio scan)",
+   "assignment": "per-type random permutation quota with frozen seed 20260921",
+   "non_common_types": "types without a frozen fraction (stage-specific types outside density['common'], e.g. EXEM) keep the original skeleton: side 0 with the slot's own best row (identity); amended 2026-10-07 pre-run after the first batch exposed the fraction-missing gap",
+   "plans_location": "plans.pkl per scope: shared/report/plans.pkl and shared/final/plans.pkl (locked in CACHE_LOCK.json)"
+  },
+  "nwasser": {
+   "basis": "new: Wasserstein geodesic displacement field (WFM lineage, non-parametric plan-based transport)",
+   "latent_dimensions": 32,
+   "knn_k": 8,
+   "knn_weight_floor": 0.001,
+   "plan": "per common type: exact discrete OT plan between early-train and late-train latents on standardized dims (see plan_solver)",
+   "displacement": "early-train cell i: d_i = barycentric row projection - z_i; late-train cell j: d_j = z_j - barycentric column projection",
+   "placement_report": "target = q + distance-weighted mean displacement of k nearest early-train cells (weights 1/(dist+1e-3)); donor = nearest query cell in type pool",
+   "placement_future": "target = q + distance-weighted mean forward displacement (z_j - source_j) of k nearest late-train cells; donor = nearest query cell in type pool",
+   "plan_solver": "POT ot.emd 0.9.7.post1 exact discrete LP, uniform masses both sides, on standardized dims; amended 2026-10-07 pre-run: numpy Sinkhorn with frozen epsilon=0.05 overflowed (diverged) on raw squared-distance scale and was too slow (LSE ~0.17s/iter); POT restored usable after the 2026-10-07 env repair (user-level h5py 3.16.0 + xarray 2026.9.0 fixed the numpy-2 ABI chain); ot.emd verified 2026-10-07: marginal residuals <=1e-16, ~0.9s on the largest common type (2405x871)",
+   "plans_location": "plans.pkl per scope: shared/<scope>/plans.pkl"
+  },
+  "nconf": {
+   "basis": "new: split-conformal donor radius calibration (distribution-free inference, untried in T1)",
+   "latent_dimensions": 8,
+   "conformal_alpha": 0.1,
+   "calibration_fraction": 0.5,
+   "calibration_seed": 20260921,
+   "cov_shrink": 0.1,
+   "cov_strength": 0.5,
+   "fit_rule": "per common type: covot Gaussian map fit on the fit half only; nonconformity scores on the calibration half = distance(mapped target, nearest late-train latent of that type)",
+   "radius_rule": "R = quantile(scores, ceil((n_cal+1)*(1-alpha))/n_cal), finite-sample split-conformal",
+   "query_rule": "donor candidates = query cells within R of the mapped target; distance-weighted systematic_indices among them; k=1 nearest fallback when none within R",
+   "plan_solver_note": "nconf calibrates the covot Gaussian map (closed-form), no OT plan needed"
+  },
+  "nbidir": {
+   "basis": "new: forward/backward plan consistency weights (CellRank bidirectional lineage applied to donor weighting)",
+   "latent_dimensions": 32,
+   "consistency_sigma_rule": "per type: sigma = median consistency distance over that type's train cells",
+   "weight_cap": 2,
+   "donor_weights": "replace density classifier weights with consistency logw = -d^2/(2 sigma^2); d = ||backward barycentric source of dominant plan target - cell latent|| (early side) or ||forward barycentric target of dominant plan source - cell latent|| (late side); joint_donors with these weights",
+   "plan_solver": "POT ot.emd 0.9.7.post1 exact discrete LP, uniform masses both sides, on standardized dims; amended 2026-10-07 pre-run: numpy Sinkhorn with frozen epsilon=0.05 overflowed (diverged) on raw squared-distance scale and was too slow (LSE ~0.17s/iter); POT restored usable after the 2026-10-07 env repair (user-level h5py 3.16.0 + xarray 2026.9.0 fixed the numpy-2 ABI chain); ot.emd verified 2026-10-07: marginal residuals <=1e-16, ~0.9s on the largest common type (2405x871)",
+   "plan": "per common type: exact discrete OT plan between early-train and late-train latents on standardized dims (see plan_solver)",
+   "plans_location": "plans.pkl per scope: shared/<scope>/plans.pkl"
+  }
+ },
+ "validation": {
+  "split": "same 60/20/20 stratified cell split as R1/t1_seven; reserved inner cells unused",
+  "full_panel_official_scorer": true,
+  "scorer_seed": 20260921,
+  "independent_embryo_validation": false,
+  "hidden_E105_truth_access": false
+ },
+ "engineering_gate": {
+  "library_ratio_q01_min": 0.25,
+  "library_ratio_q99_max": 4,
+  "variance_ratio_min": 0.1,
+  "variance_ratio_max": 10,
+  "negative_clip_fraction_max": 0
+ },
+ "candidate_policy": "All non-NO_OP full-size candidates passing frozen engineering/official contract gates ship in one zip for later user-driven server arbitration; scientific proxy comparisons do not block compliant submissions",
+ "data_policy": "Only official E8.5/E9.5 and frozen scored T1 components; no external data or hidden future truth",
+ "blocks_submission": false,
+ "environment_note": {
+  "repair_20261007": "user-level pip installs h5py 3.16.0 + xarray 2026.9.0 fixed the numpy-2.4.6 ABI clash (anndata 0.12.19 + veckit scorer import-verified after repair); POT ot.emd verified usable",
+  "frozen_parent_models_fit_under": "numpy 1.26.4 / sklearn 1.5.1 (2026-09 era); byte-exact reproduction of v0035/v0036 verified in prepare via array_equal; cross-version SVD latent drift 3.4e-05 (rel 5.3e-07) did not flip donors (0/3357) or mass (0.0) on the report scope; final-scope reproduction asserted the same way",
+  "scorer_references": "v0035/v0036/v0038 report predictions re-scored under the current env as same-env references in addition to frozen old-env SCORER.json"
+ }
+}

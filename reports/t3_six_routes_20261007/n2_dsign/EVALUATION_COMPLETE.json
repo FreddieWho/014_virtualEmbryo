@@ -1,0 +1,16 @@
+{
+  "selection": {
+    "method": "n2_dsign",
+    "best_params": "g0.5",
+    "mean_weighted_rank": {
+      "identity": 3.6237254901960787,
+      "g0.25": 2.1780392156862747,
+      "g0.5": 2.0080392156862747,
+      "g1.0": 2.1901960784313728
+    },
+    "diagnosis_only": false,
+    "target_truth_used": false,
+    "design_sha256": "033c803952cebcd50db1e382870c36c7fcd85b8a27c279087ce5075f7ff4fa5d"
+  },
+  "status": "COMPLETE"
+}

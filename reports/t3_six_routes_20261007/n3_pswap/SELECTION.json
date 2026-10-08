@@ -1,0 +1,13 @@
+{
+  "method": "n3_pswap",
+  "best_params": "identity",
+  "mean_weighted_rank": {
+    "identity": 2.282941176470589,
+    "p0.25": 2.3943137254901963,
+    "p0.5": 2.562450980392157,
+    "p1.0": 2.7602941176470592
+  },
+  "diagnosis_only": false,
+  "target_truth_used": false,
+  "design_sha256": "033c803952cebcd50db1e382870c36c7fcd85b8a27c279087ce5075f7ff4fa5d"
+}

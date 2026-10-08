@@ -1,0 +1,13 @@
+{
+  "selection": {
+    "method": "o3_psb",
+    "best_params": "psb",
+    "mean_weighted_rank": {
+      "psb": 1.0
+    },
+    "diagnosis_only": true,
+    "target_truth_used": false,
+    "design_sha256": "033c803952cebcd50db1e382870c36c7fcd85b8a27c279087ce5075f7ff4fa5d"
+  },
+  "status": "COMPLETE"
+}

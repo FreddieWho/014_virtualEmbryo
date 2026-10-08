@@ -211,3 +211,12 @@ D-20260917-T1D5B-002（2026-09-17）：D5b 27× 落败关闭；T1-P2 七死一�
 - D-20261003-T1MIX2SCORE-001：T1 AR-MIX2 五 lane 回分——v0054 53.98（+0.06）落 ±0.1 TIE 带不晋级、v0051=53.92 留任；v0052/v0056 scored backup、v0053 REJECT、v0055 marginal backup；种子彩票第三次复现（Δ0.31）、36 系配对受控比较第三次领先（+0.31）、权重轴死、三池=稀释、混合族饱和 ~53.7。详见 docs/coordination/DECISIONS.md。
 
 - D-20261005-STRUCT-001：结构整理。已评分 deliveries 包删除（正本仍在 submissions/candidates，见 reports/DELETION_MANIFEST.tsv）；reports/submissions/docs/batch3 不搬动。新入口 docs/00_START_HERE.md、docs/ATOM_MAP.md、reports/README.md。INDEX 回填 T3 v0026/v0027/v0030–v0033 空白 server_score。
+- 2026-10-06 `D-20261006-T3SIX-001`：T3 六新路线实现并交付 v0075–v0080；源侧 LOPO 选择，未提交/未评分；[报告](reports/t3_six_routes_20261006/REPORT.md)。
+- 2026-10-07 `D-20261007-T3SIXSCORE-001`：T3 六新路线回分，v0075–v0080 全部登记，v0078=47.93 同分现役留下，其余 NOT_PROMOTED，现役 v0048 不变；[registry](reports/SERVER_SCORE_REGISTRY.md#t3-six-score-return-20261007)。
+- 2026-10-07 `D-20261007-T3SIX2-001`：T3 第二波六新路线，v0081–v0085 交付、n3_pswap 源侧关闭；未提交/未评分；[报告](reports/t3_six_routes_20261007/REPORT.md)。
+- 2026-10-07 `D-20261007-T1SIX-001`：T1 六新路线（3 优化/结合＋3 全新），v0057–v0062 交付、score_pending，未提交/未评分；POT ot.emd 修订+环境修复内嵌；[报告](reports/t1_six_20261007/REPORT.md)。
+- 2026-10-07 `D-20261007-T2GEOM-001`：T2 几何新机制冻结为 RMS 锁定的各向异性插值，先诊断不建候选；[冻结](reports/T2_GEOM_ANISO_FREEZE_20261007.md)。
+- 2026-10-07 `D-20261007-T2GEOM-002`：各向异性诊断 HEART_ONLY_CONTINUE；胚胎线性族关闭；无候选。详见 artifacts/t2_geom_aniso_20261007-v1/RESULT.md。
+- 2026-10-07 `D-20261007-T2GEOM4-001`：T2 四件几何包交付、未评分；[报告](reports/t2_geom4_20261007/REPORT.md)。
+- 2026-10-07 `D-20261007-T2GEOM4SCORE-001`：v0023＝62.48 晋级心脏插值；其余三件 REJECT。分位数搬运和外推生长关闭。详见 reports/t2_geom4_20261007/SCORE_REVIEW.md。
+- 2026-10-07 `D-20261007-T1SIXSCORE-001`：T1-SIX 六路线回分，v0057–v0062 全部登记，v0058=53.85 带内 TIE 不晋级，其余五件 REJECT，现役 v0051=53.92 不变，T1 待分清零；[registry](reports/SERVER_SCORE_REGISTRY.md#t1-six-score-return-20261007)。

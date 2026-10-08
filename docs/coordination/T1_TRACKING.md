@@ -313,3 +313,19 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 
 - 2026-10-02｜AR-T1-MIX 三 lane 服务器回分（INDEX 补登记）｜v0049=53.72（HIGH BACKUP）/v0050=53.32（REJECT）/v0051=53.92（+0.37 PROMOTED 新 T1 best）；canonical 已落盘 `submissions/candidates/T1_val/v0049_mix35x38a|v0050_mix35x38b|v0051_mix36x38a/`，SHA 与 staged MANIFEST 一致；submetric 12 行此前已在库。D-20261002-T1MIXSCORE-001（registry；DECISIONS 条目仍缺）。
 - 2026-10-03｜AR-T1-MIX2 五 lane 服务器回分（INDEX 补登记）｜v0052=53.67（backup）/v0053=53.36（REJECT）/v0054=53.98（TIE 备份）/v0055=53.48（marginal）/v0056=53.76（backup），v0051=53.92 留任；canonical 已落盘，SHA 与 MANIFEST 一致；verdicts/DECISIONS/submetric 此前已在库。D-20261003-T1MIX2SCORE-001。
+
+- 2026-10-07 T1-SIX osoftcov 新候选 v0057：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/osoftcov/RESULT.json。
+
+- 2026-10-07 T1-SIX ostabmix 新候选 v0058：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/ostabmix/RESULT.json。
+
+- 2026-10-07 T1-SIX nconf 新候选 v0059：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/nconf/RESULT.json。
+
+- 2026-10-07 T1-SIX nbidir 新候选 v0060：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/nbidir/RESULT.json。
+
+- 2026-10-07 T1-SIX ocovstab 新候选 v0061：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/ocovstab/RESULT.json。
+
+- 2026-10-07 T1-SIX nwasser 新候选 v0062：完整5118×32285，parent=v0035，contract PASS，未提交/未评分；证据 artifacts/t1_six/T1-SIX-20261007-v1/nwasser/RESULT.json。
+- 2026-10-08｜T1-SIX 六路线回分｜v0057–v0062 全部登记：v0058（ostabmix，本地 de 冠军）53.85 落 ±0.1 平局带不晋级（−0.07 vs 现役 v0051 53.92；dir 60.4/vario 51.2 板面强被 de 46.7/mmd 56.1 抵消），其余 5 件 NOT_PROMOTED（v0060 52.07、v0059 51.13、v0062 51.02、v0061 49.42、v0057 49.28）；本地 de 最高未转化、nbidir 本地 dir 改善未兑现——本地信号再次未转化为服务器收益；INDEX score_pending 清零，现役 v0051 不变，本波关闭；D-20261007-T1SIXSCORE-001；reports/SERVER_SCORE_REGISTRY.md#t1-six-score-return-20261007。
+
+- 2026-10-07 T1-SIX 设计冻结：3 条既有路线优化/结合（ocovstab n2covot 升级、osoftcov f1soft×n2covot、ostabmix f2stable×s2mix per-type 自适应混合）＋3 条全新（nwasser 精确 OT 计划位移场、nconf split-conformal donor 校准、nbidir 前向/后向计划一致性权重）；用户两项裁决：混合只作载体带新组件、检索优先（2026-09-21 草案核实为已执行并关闭，未采用）；参数冻结 configs/t1_six/design_20261007.json；设计 reports/T1_SIX_DESIGN_20261007.md。运行前修订：环境修复（h5py 3.16+xarray 2026.9 用户级）、POT ot.emd 替代发散 Sinkhorn、ocovstab per-scope 可靠性、ostabmix 非 common 骨架回退。
+- 2026-10-07 T1-SIX 六路线完成：全部全量执行（report+final 双 scope）、完整 32285 列官方本地 scorer ×6、独立进程重放 PASS×6、13 单元测试、contract PASS×6；v0057–v0062 score_pending，未提交/未评分；zip deliveries/t1six__t1__upload__20261007.zip READY_NOT_SUBMITTED（6 成员+4 manifest）。本地信号：ostabmix v0058 de 0.6111（+0.0185 改善，其余持平）、nbidir v0060 dir/Energy/Vario 改善 de 取舍；ocovstab/osoftcov/nwasser/nconf 本地全劣。best v0051=53.92 保持；服务器对照 pending 用户回填。D-20261007-T1SIX-001；reports/t1_six_20261007/REPORT.md。

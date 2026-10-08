@@ -1,0 +1,16 @@
+{
+  "selection": {
+    "method": "n1_qtl",
+    "best_params": "q0.25",
+    "mean_weighted_rank": {
+      "identity": 3.284901960784314,
+      "q0.25": 2.1586274509803927,
+      "q0.5": 2.218235294117647,
+      "q1.0": 2.338235294117647
+    },
+    "diagnosis_only": false,
+    "target_truth_used": false,
+    "design_sha256": "033c803952cebcd50db1e382870c36c7fcd85b8a27c279087ce5075f7ff4fa5d"
+  },
+  "status": "COMPLETE"
+}

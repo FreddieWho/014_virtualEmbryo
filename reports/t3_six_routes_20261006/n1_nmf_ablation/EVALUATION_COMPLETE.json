@@ -1,0 +1,17 @@
+{
+  "selection": {
+    "method": "n1_nmf_ablation",
+    "best_params": "s0.25",
+    "mean_weighted_rank": {
+      "identity": 3.7115686274509803,
+      "s0.0": 3.699803921568627,
+      "s0.25": 3.1977450980392153,
+      "s0.5": 3.3044117647058826,
+      "s1.0": 3.409509803921568,
+      "s2.0": 3.6769607843137253
+    },
+    "target_truth_used": false,
+    "design_sha256": "9361a9b7eb84763c7493876c943a22326de21bb2f5ba1ba8af9895a86a790bbd"
+  },
+  "status": "COMPLETE"
+}

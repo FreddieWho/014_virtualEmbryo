@@ -1375,3 +1375,87 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "deliveries/README.md；reports/DELETION_MANIFEST.tsv 2026-10-05 行；INDEX 回填 T3 v0026=46.93、v0027=46.95、v0030=46.6、v0031=46.12、v0032=46.95、v0033=46.95（数字已在 reports/SERVER_SCORE_REGISTRY.md，此前 server_score 单元格空白）。"
 - boundary: "未改任何已评分 h5ad，未改选集。历史文档里的 zip 链接会失效，身份仍以 INDEX SHA 为准。VOID 包和 t2holdout inspect 包保留。blocks_submission: false。"
 - review_trigger: "若有脚本在运行时必须读取已删 zip，而不是 receipt 或 canonical h5ad，再从 candidates 按短名规则重打，不要恢复成第二份身份库。"
+
+### D-20261006-T3SIX-001 — T3: 六新路线一次性实现并源侧 LOPO 选择
+- date: 2026-10-06
+- scope: T3:gata4 candidate generation; no server submission
+- decision: "按既有冻结源侧协议实现 6 条新路线的 operator 与选择：O1 结合 v0070 加性残差 × v0071 乘法；O2 以 v0048 Hurdle 概率门控 v0071 乘法发射；O3 按跨扰动离散度收缩 v0071 beta；N1 WT 共表达程序 NMF 消融；N2 WT marker 谱系门 × 源模型发射；N3 源侧双向开关/零膨胀发射。选中 sm0.25_sa0.5 / s0.5 / k2.0 / s0.25 / s2.0 / s0.5，交付 v0075–v0080，contract PASS，score_pending。abort重试产生的 v0073/v0074 O1 副本标记 invalidated_unsubmitted。"
+- evidence: "reports/t3_six_routes_20261006/REPORT.md、DESIGN.md、各 route 的 SELECTION.json/EVALUATION_COMPLETE.json/FULL_MATRIX_METRICS.tsv；scripts/t3_six/{evaluate,deliver}.py；v0075–v0080 submissions/candidates/T3_gata4/。"
+- boundary: "源侧 LOPO 不等于服务器分；候选未评分不晋级。O2 源选择用密度 proxy 门，交付用 Hurdle probability；N3 的 交付开关率取自最 GO 相似供体条件（Gata4 不在来源条件表），记录在 reports/t3_six_routes_20261006/n3_donor.json。blocks_submission:false。"
+- review_trigger: "任一候选回分；若回分显示分布/DE 失衡，优先审视 O2 的源-胚胎门不等价与 N3 供体开关率的失配。"
+
+### D-20261007-T3SIXSCORE-001 — T3 六新路线回分：无一晋级，v0078 同分现役留下
+- date: 2026-10-07
+- scope: T3:gata4 score registration; incumbent unchanged
+- decision: "六新路线候选一次回分原样登记：v0075=46.73、v0076=47.31、v0077=47.43、v0078=47.93、v0079=47.40、v0080=46.82。对照现役 v0048=47.93：v0078（N1 NMF 程序消融）同分，按 ±0.1 平局带规则现役留下；其余 5 个 NOT_PROMOTED。六条源侧变换路线（加性×乘法、hurdle 概率门、可靠性收缩、NMF 消融、marker 门、开关发射）全部关闭，不再扫参数；INDEX score_pending 清零。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-six-score-return-20261007（用户原文五分项）；SERVER_SUBMETRIC_REGISTRY.tsv 2026-10-07 行（30 行）；INDEX.tsv v0075–v0080 已填 server_score=scored。"
+- boundary: "v0078 同分不构成晋级或 NMF 机制优势证据；单次评分无重复性。O2 源-胚胎门不等价与 N3 供体开关率失配仍未被服务器数据单独检验。blocks_submission:false。"
+- review_trigger: "若后续要重开 T3 机制线，需换信息：合规且覆盖更好的扰动监督、与胚胎状态对得上的背景，或来源侧最终矩阵确实获益的迁移；不得据此回分重扫 transform 参数。"
+
+### D-20261007-T3SIX2-001 — T3 第二波六新路线：5 交付 + n3_pswap 源侧关闭
+- date: 2026-10-07
+- scope: T3:gata4 candidate generation; no server submission
+- decision: "第二波 6 条路线：O1 现役⊕v0078 NMF 等权平均、O2 hurdle 概率门×NMF 消融、O3 门×收缩×乘法（参数沿用第一波冻结值，不重扫）；N1 分位数形状迁移（选中 q0.25）、N2 供体符号一致性门（选中 g0.5）、N3 程序置换/质量再分配（identity 秩最优、三强度单调更差，源侧关闭不交付）。交付 v0081–v0085，contract PASS，score_pending。"
+- evidence: "reports/t3_six_routes_20261007/REPORT.md、DESIGN.md、各 route 的 SELECTION.json/EVALUATION_COMPLETE.json/FULL_MATRIX_METRICS.tsv、n3_pswap/SOURCE_CLOSED.json；scripts/t3_six2/{evaluate,deliver,package}.py；deliveries/t3six2__t3__upload__20261007.zip。"
+- boundary: "源侧 LOPO 不等于服务器分；候选未评分不晋级。O1 源侧诊断的现役类似物是加性发射（hurdle 不可迁移），非等价声明。N1/N2 供体为 GO argmax（donor.json）。blocks_submission:false。"
+- review_trigger: "任一候选回分；若回分仍低于 48.03 门槛，第二波全部关闭，不再扫 transform 参数。"
+
+## D-20261007-T1SIX-001 — T1 六路线批次：设计、运行前修订与交付
+
+- date: 2026-10-07
+- scope: T1
+- type: route_batch_delivery
+- decision: "用户 /goal 授权 3 条既有路线优化/结合＋3 条全新路线；两项裁决：混合只作载体须带新组件（不重复 v0049–v0056 已试配比）、全新路线本轮检索优先（2026-09-21 T1-NEXT 草案核实为已执行并关闭，未采用）。运行前修订：POT ot.emd 精确 LP 替代发散且过慢的 numpy Sinkhorn（原冻结 ε=0.05 在原始平方距离尺度溢出）；ocovstab 可靠性距离改 per-scope 来源（report 10 类型中位 0.9491/final 11 类型中位 0.9498，NCC 仅在 final 侧）；ostabmix 无冻结比例的阶段特有类型保留原骨架 identity 行；环境修复（用户级 h5py 3.16.0+xarray 2026.9.0 修 numpy-2.4.6 ABI 链，anndata+scorer 导入验证）。交付 v0057–v0062（osoftcov/ostabmix/nconf/nbidir/ocovstab/nwasser），contract PASS，score_pending。"
+- evidence: "reports/t1_six_20261007/REPORT.md、VALIDATION.json、METRICS.json；configs/t1_six/design_20261007.json（修订内嵌）；reports/T1_SIX_DESIGN_20261007.md；tests/t1_six/test_ops.py 13 测试；artifacts/t1_six/T1-SIX-20261007-v1/（CACHE_LOCK 37 项、MODEL_REPLAY PASS×6、BATCH_RESULT_v4_partial.json 审计线索）；deliveries/t1six__t1__upload__20261007.zip（sha 22e99637f39afc2e…，READY_NOT_SUBMITTED）。"
+- boundary: "本地五项只作提交优先信号，不晋级现役；v0051=53.92 保持，服务器对照在用户回填前 pending。父版本 v0035 字节级复现（跨版本 SVD 漂移 3.4e-05 未翻转 donor）；环境修复后参照重评与旧环境数值一致。blocks_submission:false。"
+- review_trigger: "任一候选回分；若 ostabmix 回分不低于现役带则考虑 per-type 自适应比例进入下一轮组合；软 donor 重选家族（ocovstab/osoftcov/nconf/nwasser）若服务器也无意外即关闭。"
+
+## D-20261007-T2GEOM-001 — T2 几何新机制冻结：RMS 锁定的各向异性插值
+
+- date: 2026-10-07
+- scope: T2 heart interpolation，胚胎插值仅同代码复现读
+- type: design_freeze
+- decision: "用户选几何新机制。第一刀只改坐标形状：在现役自己的 PCA 轴上把各向异性谱拉到两个训练括号的日历中点，再把 RMS 锁回现役。不改表达、不做整体缩放、不做 FGW、不建候选。"
+- evidence: "reports/T2_GEOM_ANISO_FREEZE_20261007.md；scripts/t2_geom_aniso_diag.py。心脏插值现役 v0019 occupancy 47.8 / d2 65.4 / scale 97.9；尺度×0.9、加性空间对比度、FGW 均已关闭。"
+- boundary: "只覆盖椭球各向异性，不覆盖叶/管/空洞。对括号的 dice 不是服务器技能。CONTINUE 也不授权本回合建候选。不读 E7.5/E8.5/E10.5。心脏外推不在本刀。blocks_submission:false。"
+- review_trigger: "诊断按冻结判 STOP，或另行冻结一个能动高阶支撑的几何机制。不得用本次数字改 t 或升级非线性形变。"
+
+## D-20261007-T2GEOM-002 — 各向异性诊断：心脏源侧继续，胚胎线性族关闭
+
+- date: 2026-10-07
+- scope: T2 interpolation geometry
+- type: diagnostic_verdict
+- decision: "按冻结判 HEART_ONLY_CONTINUE。心脏插值线性各向异性未被源侧代理否定；胚胎谱差 0.030 < 0.05，INSUFFICIENT_ANISOTROPY，关闭该板的线性族。不建候选，不改现役。"
+- evidence: "artifacts/t2_geom_aniso_20261007-v1/RESULT.md 与 result.json。心脏 dice 0.7541→0.7689、0.7403→0.7589，d2 0.03854→0.03825、0.07761→0.07839（晚括号略差，仍在 1.10 内）。v0019 与 v0013 坐标一致。胚胎括号谱差 0.0300。实现锁通过：RMS、恒等形变、×0.9 再锁回均未漏进形状。"
+- boundary: "对训练括号的 dice 不是服务器 occupancy。幅度约 0.015，远小于官方 oracle 几何把 heart interp occupancy 从 0.7704 抬到 0.8223 的缺口。不得把 HEART_ONLY_CONTINUE 写成通用几何定律，不得用这次数字改 t 或升级非线性。blocks_submission:false。"
+- review_trigger: "若要消耗提交名额，须另写候选冻结：只改 v0019 坐标、表达字节不变、不调 t。否则本族停在诊断。"
+
+## D-20261007-T2GEOM4-001 — 三个新几何预算，四件可提交包
+
+- date: 2026-10-07
+- scope: T2
+- type: candidate_delivery
+- decision: "用户再给 3 个新路线预算，并要一份 4 件 h5ad 包。交付 v0023 主轴中点、v0024 心脏分位数搬运、v0035 外推生长、v0018 胚胎分位数搬运。四件 contract PASS，score_pending，未上传。现役不变。"
+- evidence: "reports/T2_GEOM4_FREEZE_20261007.md；reports/t2_geom4_20261007/REPORT.md；deliveries/t2geom__t2__upload__20261007.zip sha f864af3719f479ffe183297402a9e1a5fedf6bc9a0387c12b4354be8aa49a478。候选 SHA 以 submissions/INDEX.tsv 为准。"
+- boundary: "v0035 的尺度比是训练曲线外推的 0.890，落在预声明护栏内，但靠近已关闭的 ×0.9。不是服务器预测。未读验证期真值。blocks_submission:false。"
+- review_trigger: "四件任一件回分。无分数前不晋级，不用本地综合分补判。"
+
+## D-20261007-T2GEOM4SCORE-001 — 几何四件回分：心脏插值换人，另外三条关闭
+
+- date: 2026-10-07
+- scope: T2
+- type: server_score_return
+- decision: "v0023＝62.48 晋级心脏插值现役（+0.12，超出 ±0.1）。v0024＝60.61、v0035＝49.06、v0018＝62.50 均 REJECT。分位数搬运和外推生长关闭。门户合计仍记 156.06。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-geom4-score-return-20261007；reports/t2_geom4_20261007/SCORE_REVIEW.md；32 行 submetrics。submission ID/时间未提供，不伪造。"
+- boundary: "v0023 的表达和尺度与 v0019 逐位相同。增益全在 d2 65.4→69.5，占据 47.8→45.2 变差。晋级不表示占位孔被修好。v0035 的 0.890 倍被服务器读成尺度更差。blocks_submission:false。"
+- review_trigger: "门户合计重读。不得用这次 0.12 去扫主轴比例。"
+
+## D-20261007-T1SIXSCORE-001 — T1-SIX 六路线回分：v0058 带内 TIE 不晋级，其余五件 REJECT，现役 v0051 留任
+
+- date: 2026-10-07
+- scope: T1
+- type: server_score_return
+- decision: "v0057–v0062 全部登记。v0058＝53.85 落 ±0.1 平局带（−0.07 vs v0051 53.92），不换人；v0057＝49.28、v0059＝51.13、v0060＝52.07、v0061＝49.42、v0062＝51.02 均 REJECT。现役 v0051=53.92 不变，T1 待分清零。混合/结合与全新机制三件一次回分无一晋级，本波关闭。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t1-six-score-return-20261007；24 行 submetrics；reports/t1_six_20261007/REPORT.md。用户回填 portal 分数，submission ID/时间未提供，不伪造。候选 SHA 以 submissions/INDEX.tsv 为准。"
+- boundary: "v0058 本地 de 冠军（0.6111，+0.0185）服务器 TIE——本地 de 信号再次未转化为服务器收益，与 T1 phase 预承诺 proxy 警告一致。v0058 的 dir 60.4（与 v0054 并列已知最高）/vario 51.2（已知最高）为板面强项，被 de −0.5/mmd −0.6 抵消；不得据此宣称 ostabmix 优于现役或重启混合族调参。blocks_submission:false。"
+- review_trigger: "门户 Total 重读。不得用本波数字扫混合权重或方向权重。"

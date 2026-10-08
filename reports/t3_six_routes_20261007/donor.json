@@ -1,0 +1,4 @@
+{
+  "donor_condition": "Yy1",
+  "rule": "GO embedding argmax over 26 conditions"
+}

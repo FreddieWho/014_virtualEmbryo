@@ -28,7 +28,7 @@
 
 ## 分支记录
 
-- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX/AR-MIX2 八 lane INDEX 补登记完成；v0054 53.98 TIE 备份，v0049 53.72 高备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推 v0030=51.12（HOLDOUT10 新 best，D-20261003-T2H10SCORE-001；Route C 全 REJECT，v0029 scale 探针 REJECT，v0031 crosswalk REJECT 关闭）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；第一轮 15 运行收敛封存，最佳 run10＝0.92868（差 0.029）；HOLDOUT10 五 lane 全部回分：v0030=51.12 现役，v0032 51.14/v0034 51.02 TIE 备份，v0031/v0033 REJECT；T2 待分清零；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填缺口清零（T1 v0049–v0056 canonical 落盘＋SHA＋contract 全齐）；② 重读门户确认合计（推导 160.64，确认仍 156.06）；③ organizer 答复；④ T1 新用途批准。T2 待分 0（五 lane 全结）。
+- **当前执行分支**：T1 选择 **v0051=53.92**（AR-MIX/AR-MIX2 八 lane INDEX 补登记完成；v0054 53.98 TIE 备份，v0049 53.72 高备份）；T2 选择胚胎 62.89 / 心脏插值 62.36 / 外推 v0030=51.12（HOLDOUT10 新 best，D-20261003-T2H10SCORE-001；Route C 全 REJECT，v0029 scale 探针 REJECT，v0031 crosswalk REJECT 关闭）；T2 留阶段 10% 新循环已冻结开跑（`artifacts/t2_holdout_10pct_20261003-v1/`，目标归一中位数 ≤0.90，reserve NOT_RUN）；第一轮 15 运行收敛封存，最佳 run10＝0.92868（差 0.029）；HOLDOUT10 五 lane 全部回分：v0030=51.12 现役，v0032 51.14/v0034 51.02 TIE 备份，v0031/v0033 REJECT；T2 待分清零；T3 选择 v0048=47.93（v0070 45.80 REJECT）。待办：① INDEX 回填缺口清零（T1 v0049–v0056 canonical 落盘＋SHA＋contract 全齐）；② 重读门户确认合计（推导 160.64，确认仍 156.06）；③ organizer 答复；④ T1 新用途批准。T2 待分 0（五 lane 全结）。T2 几何新机制第一刀已跑完：心脏插值 RMS 锁定各向异性为 HEART_ONLY_CONTINUE，胚胎因谱差 0.030 关闭（D-20261007-T2GEOM-001/002）。随后用户再给 3 个新预算，四件已回分：心脏插值现役改为 v0023=62.48，v0024/v0035/v0018 REJECT（D-20261007-T2GEOM4SCORE-001）。T1-SIX 六路线已回分：v0058＝53.85 带内 TIE 不晋级（−0.07 vs v0051），其余 5 件 REJECT，T1 待分清零（D-20261007-T1SIXSCORE-001）。
 - **并行分支**：无。
 - **暂缓分支**：
   - T1-D7 E7.75 对齐：CLOSED（2026-09-17）。官网实抓：E7.75 not released，不向任何任务分发，前提不存在；此前 PARKED 及下载触发条件一并作废。
@@ -239,3 +239,7 @@ D5b已按最终RESULT失败关闭，不以旧追踪“建门中”状态重启�
 - [x] 已评分上传包删除，报告和文档加索引，不搬动被引用的目录（D-20261005-STRUCT-001）
 
 - 2026-10-05：**结构整理（用户要求目录变简单，且不丢迭代知识）**——已评分 deliveries 包/散落 h5ad 删除（75 文件，约 9.45 GB；正本与 SHA 仍在 submissions/candidates；VOID 包和留阶段 inspect 包保留）。reports、submissions、docs/batch3 不搬：路径被大量引用，搬走更难懂。新增 docs/00_START_HERE.md、docs/ATOM_MAP.md、reports/README.md、reports/INDEX.md、reports/SYNTHESIS_T{1,2,3}.md、deliveries/README.md、outputs/README.md。INDEX 回填 T3 v0026/v0027/v0030–v0033 的空白 server_score（数字本来就在 registry）。待办变化：无新科学待办；选集不变。
+- 2026-10-07：**T2 几何新机制第一刀**——用户选几何，不走行集合、不封存。冻结 RMS 锁定的各向异性插值（D-20261007-T2GEOM-001），诊断判 HEART_ONLY_CONTINUE / 胚胎 INSUFFICIENT_ANISOTROPY（D-20261007-T2GEOM-002）。零候选、INDEX 未改、未上传。待办变化：当前执行分支记下该诊断；不自动建候选。
+- 2026-10-07：**T2 四件几何包**——用户再给 3 个新预算并要 4 个可提交 h5ad。交付 v0023 主轴中点、v0024 心脏分位数、v0035 外推生长（尺度比 0.890）、v0018 胚胎分位数；contract PASS，INDEX 四行 score_pending，包 `deliveries/t2geom__t2__upload__20261007.zip`。待办变化：新增等用户上传并回填；现役不变。
+- 2026-10-07：**T2 四件回分**——v0023＝62.48 晋级心脏插值（+0.12，超出平局带）；v0024＝60.61、v0035＝49.06、v0018＝62.50 REJECT。登记 registry/submetrics 32 行/INDEX/verdicts/AUDIT/双层 STATUS。待办变化：移除待回填；分位数搬运和外推生长关闭；门户合计仍待重读（推导 160.68）。
+- 2026-10-07：**T1-SIX 六路线回分**——v0057–v0062 全部登记：v0058＝53.85 带内 TIE 不晋级（−0.07 vs 现役 v0051 53.92；本地 de 冠军未转化），其余 5 件 REJECT。登记 registry/submetrics 24 行/INDEX 6 行/verdicts/双层 STATUS/DECISIONS。待办变化：T1 待分清零；混合/结合与全新机制本波关闭；门户合计仍待重读（推导 160.68 不变）。

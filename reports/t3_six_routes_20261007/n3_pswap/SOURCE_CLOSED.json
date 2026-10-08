@@ -1,0 +1,10 @@
+{
+  "status": "CLOSED_NO_POSITIVE_SIGNAL",
+  "reason": "identity ranked best in frozen source LOPO; all strengths worse; no candidate delivered",
+  "mean_weighted_rank": {
+    "identity": 2.282941176470589,
+    "p0.25": 2.3943137254901963,
+    "p0.5": 2.562450980392157,
+    "p1.0": 2.7602941176470592
+  }
+}

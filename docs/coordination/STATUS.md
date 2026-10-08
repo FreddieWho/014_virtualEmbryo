@@ -64,12 +64,12 @@ data:
 leaderboard:
   total: 156.06
   total_status: portal_confirmed_2026-09-26
-  derived_total: 160.64
+  derived_total: 160.68
   derived_total_status: not_portal_confirmed
   T1: 53.92
-  T2: 58.79
+  T2: 58.83
   T3: 47.93
-  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0051 53.92 (v0054 53.98 TIE numeric-high backup, v0049 53.72 high backup), T2 boards 62.89/62.36/51.12 (task mean 58.79), T3 v0048 47.93. Their sum 160.64 is a derived figure only (D-20261003-T2H10SCORE-001 + D-20261002-T1MIXSCORE-001/D-20261003-T1MIX2SCORE-001) and must not be cited as a portal Total. OPEN: portal Total re-read."
+  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0051 53.92 (v0054 53.98 TIE numeric-high backup, v0049 53.72 high backup), T2 boards 62.89/62.48/51.12 (task mean 58.83), T3 v0048 47.93. Their sum 160.68 is a derived figure only (D-20261007-T2GEOM4SCORE-001) and must not be cited as a portal Total. OPEN: portal Total re-read."
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -81,7 +81,7 @@ tasks:
     worktree: current
     current_best: "candidate/T1_val/v0051_mix36x38a (scored 53.92; v0054 53.98 TIE numeric-high backup; v0049 53.72 high backup)"
     current_best_score: 53.92
-    next_action: "AR-MIX/AR-MIX2 八 lane 全回分、INDEX 补登记完成；v0051现役，v0054 TIE 备份；混合族饱和 ~53.7，新机制才值得烧名额；确认门户选集与Total。"
+    next_action: "T1-SIX 六路线回分完成（v0058=53.85 带内 TIE 不晋级，其余 5 件 REJECT；D-20261007-T1SIXSCORE-001）；v0051现役，v0054 TIE 备份；混合族饱和再确认（~53.8），本波关闭，新机制才值得烧名额；确认门户选集与Total。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -98,10 +98,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0019 h_o1_shrinkmerge 62.36 + heart_extrap v0030 x_r3_medlib09 51.12"
-    current_best_score: 58.79
-    current_best_score_basis: "board-mean (62.89+62.36+51.12)/3=58.79. Promoted 2026-10-03 (D-20261003-T2H10SCORE-001; v0030 +0.59 vs baseline, +0.48 vs v0011 50.64). The portal-confirmed Total 156.06 still uses older components; 160.27 derived only."
-    next_action: "HOLDOUT10 五 lane 全回分：v0030=51.12 现役（v0032 51.14/v0034 51.02 TIE 不晋级，v0031/v0033 REJECT）；recipe 家族 ~51.1 平台期，同族调参无服务器意义；T2 待分清零。OPEN: portal Total 重读（推导合计 160.27 待确认；确认合计仍 156.06）；下一波需行集合/几何级新机制（新冻结授权）或封存。"
+    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0023 h_aniso50 62.48 + heart_extrap v0030 x_r3_medlib09 51.12"
+    current_best_score: 58.83
+    current_best_score_basis: "board-mean (62.89+62.48+51.12)/3=58.83. Heart interp promoted 2026-10-07 (D-20261007-T2GEOM4SCORE-001; v0023 +0.12 vs v0019, outside ±0.1). Occupancy worsened. Portal-confirmed Total remains 156.06; 160.68 derived only."
+    next_action: "GEOM4 四件已回分。心脏插值现役 v0023=62.48；v0024/v0018 分位数搬运关闭；v0035 外推生长关闭。不再调同一形变的比例。OPEN: portal Total 重读（推导 160.68，确认仍 156.06）。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -669,3 +669,9 @@ coordinator独占scripts/t1_seven、configs/t1_seven、tests/t1_seven、artifact
 
 ### 2026-09-30 T1十一条回分完成
 v0037–v0047回填完成，v0038晋级53.55，v0043同分备份；11身份哈希通过，44子项齐全，T1待分清零。均值平移家族不再推荐，未重训/未生成候选/未操作portal。D-20260930-T1SCORE-001；reports/t1_score_review_20260930/REPORT.md；blocks_submission:false。
+
+### 2026-10-07 T1 六路线执行 lease
+T1 agent 独占 scripts/t1_six、configs/t1_six、tests/t1_six、artifacts/t1_six、reports/t1_six_20261007；共享登记串行（t1_three/t1_seven 冻结产物只读）。用户 /goal 授权：3 条既有路线优化/结合（混合只作载体带新组件）＋3 条全新路线（本轮检索优先）；设计 reports/T1_SIX_DESIGN_20261007.md，参数冻结 configs/t1_six/design_20261007.json。当前 best v0051=53.92 保持；完整 32285 列实际推断及本地 scorer，科学限制 blocks_submission:false。
+
+### 2026-10-07 T1 六路线完成
+3 条优化/结合＋3 条全新全部全量执行，六次完整 panel 本地 scorer 与独立进程重放通过，13 测试通过。候选 v0057（osoftcov）/v0058（ostabmix）/v0059（nconf）/v0060（nbidir）/v0061（ocovstab）/v0062（nwasser）未提交/未评分，best v0051=53.92 保持；本地信号 ostabmix de 改善、nbidir 取舍，其余全劣；reports/t1_six_20261007/REPORT.md；deliveries/t1six__t1__upload__20261007.zip READY_NOT_SUBMITTED。未来真值 NOT_RUN，科学 EXPLORATORY_LOCAL；lease 释放，blocks_submission:false。

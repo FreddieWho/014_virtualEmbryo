@@ -1486,3 +1486,147 @@ Pending coordinator: INDEX rows (v0052–v0056; staged paths + SHAs in
 T1_TRACKING line, STATUS/TODO sync. (Still pending from 2026-10-02: INDEX rows
 v0049–v0051 — that batch's submetric rows and LANE_VERDICTS rows were also never
 added.)
+
+<a id="t3-six-score-return-20261007"></a>
+## T3 六新路线回分（2026-10-07）
+
+来源：用户本轮直接提供；canonical与交付文件SHA匹配INDEX（zip `deliveries/t3six__t3__upload__20261006.zip`，6 成员）。未查询门户，submission ID/上传时间/截图未提供。
+
+```text
+t3_gata4__o1dual__v0075.h5ad：46.73
+de_score 40.0
+de_direction 50.9
+severity_slope 50.0
+mmd_u 51.2
+variogram 42.1
+
+t3_gata4__o2gate__v0076.h5ad：47.31
+de_score 40.4
+de_direction 50.3
+severity_slope 50.0
+mmd_u 51.6
+variogram 49.0
+
+t3_gata4__o3shrink__v0077.h5ad：47.43
+de_score 40.8
+de_direction 50.3
+severity_slope 50.0
+mmd_u 51.6
+variogram 48.9
+
+t3_gata4__n1nmf__v0078.h5ad：47.93
+de_score 42.6
+de_direction 49.8
+severity_slope 50.0
+mmd_u 51.9
+variogram 49.9
+
+t3_gata4__n2marker__v0079.h5ad：47.4
+de_score 40.0
+de_direction 51.2
+severity_slope 50.0
+mmd_u 51.5
+variogram 48.9
+
+t3_gata4__n3switch__v0080.h5ad：46.82
+de_score 40.4
+de_direction 49.3
+severity_slope 50.0
+mmd_u 51.9
+variogram 45.7
+```
+
+总分与五项原样登记。对照现役 v0048=47.93：v0078（N1 NMF 程序消融）47.93 同分，按 ±0.1 平局带规则现役留下、不换人；其余 5 个（o1_dual 46.73、o2_gate 47.31、o3_shrunk 47.43、n2_marker 47.4、n3_switch 46.82）均低于现役，NOT_PROMOTED。六条源侧变换路线一次回分无一晋级：hurdle 概率门、可靠性收缩、marker 门与开关发射都没有把 DE 或分布子分抬过现役；v0078 的 DE 42.6 是六候选最高、variogram 49.9 也接近现役，但未构成晋级，不能据此宣称 NMF 机制优于现役。同分不换人与单次评分的无重复性照旧。D-20261007-T3SIXSCORE-001；reports/t3_six_routes_20261006/REPORT.md。blocks_submission:false。
+
+<a id="t2-geom4-score-return-20261007"></a>
+## T2 GEOM4 score return — 2026-10-07
+
+Source / raw evidence: user-transcribed portal returns in this conversation for the four
+geometry lanes (`deliveries/t2geom__t2__upload__20261007.zip`, sha `f864af37…`; run
+`T2-GEOM4-20261007-v1`). Evidence class: SERVER_SCORED_USER_REPORTED. No independent
+portal lookup; portal submission ID and timestamp not supplied; no Total returned.
+Candidate identity verified by ZIP-member filename bound to INDEX SHA256
+(v0023 `049c48f0…`, v0024 `b553bd9c…`, v0035 `3cfb0791…`, v0018 `66f4674b…`);
+no artifact was modified. Date is the score-recording date.
+
+```text
+t2_hrt_int__h_aniso50__v0023.h5ad: 62.48
+t2_hrt_int__h_qaxis__v0024.h5ad: 60.61
+t2_hrt_ext__x_grows__v0035.h5ad: 49.06
+t2_emb_int__e_qaxis__v0018.h5ad: 62.50
+```
+
+| Portal model | Board score | de | dir | mmd_u | vario | d2 | occ | scale | nmmd | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| `t2_hrt_int__h_aniso50__v0023.h5ad` | 62.48 | 61.2 | 66.1 | 61.9 | 30.0 | 69.5 | 45.2 | 97.9 | 66.3 | **PROMOTED (+0.12 vs v0019 62.36; outside ±0.1)** |
+| `t2_hrt_int__h_qaxis__v0024.h5ad` | 60.61 | 61.2 | 66.1 | 61.9 | 30.0 | 37.9 | 53.5 | 97.9 | 66.6 | REJECT (−1.75) |
+| `t2_hrt_ext__x_grows__v0035.h5ad` | 49.06 | 52.0 | 50.9 | 49.4 | 50.4 | 33.3 | 50.4 | 40.7 | 53.5 | REJECT (−2.06 vs v0030 51.12) |
+| `t2_emb_int__e_qaxis__v0018.h5ad` | 62.50 | 55.2 | 67.4 | 60.3 | 56.0 | 51.9 | 48.9 | 90.8 | 66.2 | REJECT (−0.39 vs v0014 62.89) |
+
+Decision and limits:
+- **Heart interpolation selection moves to v0023 = 62.48.** +0.12 is outside the
+  standing ±0.1 TIE band (the band edge, used for v0034 −0.10, stays inside and
+  does not promote). Expression metrics and scale are identical to v0019. The
+  whole gain is d2 65.4→69.5, paid for by occupancy 47.8→45.2. Promotion is real.
+  It does not mean the occupancy hole was repaired.
+- **Quantile transport is closed.** v0024 raised occupancy to 53.5 and collapsed
+  d2 to 37.9. Embryo v0018 lost both geometry skills. Do not retune the quantile.
+- **Growth extrapolation is closed.** v0035 left expression identical to v0030 and
+  made scale 49.7→40.7 and d2 46.2→33.3. The formula factor 0.890 was read by the
+  server as a worse size, same direction as the closed ×0.9 knob. Do not try
+  another factor.
+- Derived only: T2 = (62.89+62.48+51.12)/3 = 58.83; derived sum
+  53.92+58.83+47.93 = 160.68. Portal-confirmed Total remains 156.06.
+- blocks_submission: false.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, 32 rows. Review:
+`reports/t2_geom4_20261007/SCORE_REVIEW.md`. Decision D-20261007-T2GEOM4SCORE-001.
+
+<a id="t1-six-score-return-20261007"></a>
+## T1 SIX score return — 2026-10-07
+
+Source / raw evidence: user-transcribed portal returns in this conversation for the six
+T1-SIX lanes (`deliveries/t1six__t1__upload__20261007.zip`, zip sha `22e99637…`; run
+`T1-SIX-20261007-v1`). Evidence class: SERVER_SCORED_USER_REPORTED. No independent
+portal lookup; portal submission ID and timestamp not supplied; no Total returned.
+Candidate identity verified by ZIP-member filename bound to INDEX SHA256
+(v0057 `d8e0b178…`, v0058 `7e0ff6c6…`, v0059 `0d58989a…`, v0060 `52bf8c7b…`,
+v0061 `e8cc3acd…`, v0062 `cd8c1501…`); no artifact was modified. Date is the
+score-recording date.
+
+```text
+t1_val__osoftcov__v0057.h5ad: 49.28
+t1_val__ostabmix__v0058.h5ad: 53.85
+t1_val__nconf__v0059.h5ad: 51.13
+t1_val__nbidir__v0060.h5ad: 52.07
+t1_val__ocovstab__v0061.h5ad: 49.42
+t1_val__nwasser__v0062.h5ad: 51.02
+```
+
+| Portal model | Board score | de | dir | mmd_u | vario | Verdict |
+|---|---:|---:|---:|---:|---:|---|
+| `t1_val__osoftcov__v0057.h5ad` | 49.28 | 42.6 | 55.7 | 51.9 | 45.7 | REJECT (−4.64 vs v0051 53.92) |
+| `t1_val__ostabmix__v0058.h5ad` | 53.85 | 46.7 | 60.4 | 56.1 | 51.2 | **TIE 带内（−0.07; ±0.1 内不换人）NOT_PROMOTED** |
+| `t1_val__nconf__v0059.h5ad` | 51.13 | 45.0 | 56.3 | 53.6 | 48.6 | REJECT (−2.79) |
+| `t1_val__nbidir__v0060.h5ad` | 52.07 | 44.2 | 59.1 | 53.8 | 50.4 | REJECT (−1.85) |
+| `t1_val__ocovstab__v0061.h5ad` | 49.42 | 43.0 | 55.3 | 51.3 | 47.3 | REJECT (−4.50) |
+| `t1_val__nwasser__v0062.h5ad` | 51.02 | 44.8 | 56.2 | 53.6 | 48.5 | REJECT (−2.90) |
+
+Decision and limits:
+- **v0051 = 53.92 留任**。v0058（ostabmix，本地 de 冠军 0.6111 = +0.0185）服务器
+  53.85 落在 ±0.1 平局带内不晋级——本地 de 信号再次未转化为服务器收益，与 T1 phase
+  预承诺的 proxy 有效性警告一致（本地 de 不选拔服务器冠军）。
+- v0058 的 dir 60.4（与 v0054 并列已知最高）与 vario 51.2（已知最高）是板面强项，
+  但被 de 46.7（−0.5 vs 47.2）与 mmd 56.1（−0.6 vs 56.7）抵消。不据此宣称
+  ostabmix 机制优于现役，不重启混合族调参。
+- 其余五件全部 REJECT：conformal 校准（v0059）、前向/后向一致性权重（v0060，本地
+  dir/Energy/Vario 改善未兑现）、cov-OT 升级（v0061）、精确 OT 位移场（v0062）、
+  soft-cov（v0057）均无晋级信号。
+- 六条一次回分无一晋级：混合/结合族饱和再确认（v0058 又一个 ~53.8）；全新机制
+  三件（nconf/nwasser/nbidir）也未越过现役。本波关闭。
+- Derived only: T1 53.92 不变；derived sum 160.68 不变。Portal-confirmed Total
+  remains 156.06。
+- blocks_submission: false.
+
+Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, 24 rows. Review:
+`reports/t1_six_20261007/REPORT.md`. Decision D-20261007-T1SIXSCORE-001.

@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "requirements": {
+    "three_optimization_combination": 3,
+    "three_new": 3,
+    "routes_executed": 6,
+    "full_panel_scorers": 6
+  },
+  "routes": [
+    {
+      "lane": "ocovstab",
+      "category": "optimization_combination",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "osoftcov",
+      "category": "optimization_combination",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "ostabmix",
+      "category": "optimization_combination",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "nwasser",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "nconf",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    },
+    {
+      "lane": "nbidir",
+      "category": "new",
+      "scorer": "FULL_32285_EXECUTED",
+      "report_and_final_replay": "PASS",
+      "fit_specific_checks": "PASS",
+      "training_split_and_code_hashes": "PASS",
+      "candidates": 1
+    }
+  ],
+  "scored_parents_exact_reproductions": 4,
+  "archive_members": 6,
+  "archive_crc_sha": "PASS",
+  "validator_sha256": "85987ffa7f8a0eafea8006816805a74945973aca3d34d5b73d73d7af35e2ff62",
+  "future_truth": "NOT_RUN_NO_E105_TRUTH"
+}

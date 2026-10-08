@@ -21,5 +21,8 @@ infra/external_data/manifests/
 *.zip
 *.gz
 
+# third-party source checkouts (contain nested .git; reproducible, keep locally)
+infra/toolchains/
+
 # agent session scratch (background task logs, goals)
 .pi/
