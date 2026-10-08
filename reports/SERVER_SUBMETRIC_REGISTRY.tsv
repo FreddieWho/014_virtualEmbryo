@@ -970,3 +970,8 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-08	T3:gata4	v0086	arank_r2	t3_gata4__arank__v0086.h5ad	2026-10-08 08:54 (timezone NOT_LABELLED)	49.34	severity_slope	50.0
 2026-10-08	T3:gata4	v0086	arank_r2	t3_gata4__arank__v0086.h5ad	2026-10-08 08:54 (timezone NOT_LABELLED)	49.34	mmd_u	54.5
 2026-10-08	T3:gata4	v0086	arank_r2	t3_gata4__arank__v0086.h5ad	2026-10-08 08:54 (timezone NOT_LABELLED)	49.34	variogram	53.1
+2026-10-08	T3:gata4	v0087	embhurdle_v2	t3_gata4__embhurdle__v0087.h5ad	2026-10-08 10:47 (timezone NOT_LABELLED)	53.42	de_score	41.7
+2026-10-08	T3:gata4	v0087	embhurdle_v2	t3_gata4__embhurdle__v0087.h5ad	2026-10-08 10:47 (timezone NOT_LABELLED)	53.42	de_direction	51.2
+2026-10-08	T3:gata4	v0087	embhurdle_v2	t3_gata4__embhurdle__v0087.h5ad	2026-10-08 10:47 (timezone NOT_LABELLED)	53.42	severity_slope	75.0
+2026-10-08	T3:gata4	v0087	embhurdle_v2	t3_gata4__embhurdle__v0087.h5ad	2026-10-08 10:47 (timezone NOT_LABELLED)	53.42	mmd_u	49.7
+2026-10-08	T3:gata4	v0087	embhurdle_v2	t3_gata4__embhurdle__v0087.h5ad	2026-10-08 10:47 (timezone NOT_LABELLED)	53.42	variogram	42.3

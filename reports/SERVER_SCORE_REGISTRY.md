@@ -1686,3 +1686,48 @@ One of the user's two newly authorized attempts has been used; one remains
 reserved. Portal Total/rank observed at 2026-10-08T08:55:56Z remained 163.2/83
 (rounded display); other-board identities and selections are unchanged.
 blocks_submission:false. Five metric rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
+
+<a id="t3-embhurdle-v0087-score-return-20261008"></a>
+## T3 v0087 embryonic hurdle-v2 score return — 2026-10-08
+
+Evidence class: SERVER_SCORED_PORTAL_VERIFIED. Official detail page observed
+2026-10-08T10:48:14Z. Submitted display is `2026-10-08 10:47`; timezone is unlabelled.
+Submission [592546488d2543d5bfcf42394d5de414](https://virtualembryo.ai/challenge/account/submissions/592546488d2543d5bfcf42394d5de414),
+file `t3_gata4__embhurdle__v0087.h5ad`. The exact uploaded SHA256 is in INDEX;
+original v0084/v0086 artifacts, scores and hashes are preserved.
+
+| Candidate | Detail score | de_score | de_direction | severity_slope | mmd_u | variogram | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---|
+| v0087 embhurdle v2 | 53.42 | 41.7 | 51.2 | 75.0 | 49.7 | 42.3 | PROMOTED; +3.87 vs v0084 49.55 |
+
+**Current T3 selection: v0087, 53.42.** The gain exceeds the ±0.1 incumbent band;
+v0084's 2026-10-08 reconstructed q0.25 revision remains a historical fallback.
+The five submetrics are displayed SKILL values; raw metrics were not exposed and
+are not inferred. Compared with v0084, direction rises 48.4→51.2 and severity
+50.0→75.0, while DE falls 47.1→41.7, MMD 54.8→49.7 and variogram 53.4→42.3.
+This is a total-score improvement with substantial distribution/DE tradeoffs,
+not uniform improvement across metrics.
+
+Method/source boundary: a generic seven-KO embryonic state-response model with
+composition resampling and separate detection-fraction/positive-quantile hurdle-v2
+emission. Selected source conditions are E8.5 Dnmt1, Dnmt3a, Dnmt3b, Ehmt2/G9a,
+Kdm2b, Kmt2a and Kmt2b interventions from GSE137337, with GSE122187 E8.5 WT and
+ontology information. These replace the previous adult-fibroblast response source;
+there are seven source KOs, not adult OP2/26 in this model. GO identity models were
+compared but the final generic response is not determined by GO identity.
+Condition-scoped permits, attribution and full source provenance are embedded in
+the uploaded artifact. No hidden Gata4 truth, same-target KO signatures or forbidden
+phenocopy data were used. WT-only states, sex-matched controls and equal embryo
+weighting do not eliminate cohort, chemistry, sex and developmental-context
+confounding; development was adaptive, not a pristine independent confirmation.
+This is a generic developmental perturbation prior, not proof of a Gata4-specific
+causal mechanism.
+
+Final 7449×500 contract, source review, frozen expression equality, parent v0084
+geometry and independent hash/array checks passed before submission. Expression
+carrier is official E8.75 WT; v0084 is the selected parent/geometry reference.
+The two newly authorized attempts are now exhausted: v0086 and v0087. No further
+submission is implied. Other-board identities and selections are unchanged.
+blocks_submission:false. Five metric rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
+
+Portal leaderboard observation at 2026-10-08T10:49:25Z: displayed Total 167.1, Human rank 72, T1 54.0 / T2 59.7 / T3 53.4. These are rounded page displays; the submission detail provides the exact T3 score 53.42. No precise aggregate is inferred, and unrelated board candidate identities are not reassigned.
