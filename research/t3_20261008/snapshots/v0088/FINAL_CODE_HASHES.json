@@ -1,0 +1,18 @@
+{
+  "crossko_hurdle_v2.py": "9ddcbc7bb2889e086e915f71e8ed056baca8c7463868e7656a9f70a1389add13",
+  "preprocess_wt_idmatch.py": "dd048b52cf93ae04c1035caa5dbf1d056d9247468c21315f58a757783754f522",
+  "verify_source_reconstruction.py": "9ce9fda1296245efd0844b5a43034e0d375bc9d80d091a560a617b4641f01d3c",
+  "preprocess_source.py": "62fca81ae6bac07695d8e6cd9efb982887610a66249dd920a03385e317d71490",
+  "check_features.py": "e56a7f98a08d27370489b0d0d9ec9d38a24f782887b1368403f7397362ddc836",
+  "package_repro.py": "8d7f4231b323c0ca3d0c8d6d428fe7d05d1e0f8ef39c8b8212dadb5d3adffcfa",
+  "run_source_from_pack.py": "f48c246c761058fc2baa8b5564af2fc3833107c2569fefd0f487f5c35f250c05",
+  "normalize_source_panels.py": "fb0f94489e32730e3630d856bab5592889dcbc9e933e55a5322ec61a91a942dc",
+  "evaluate_source.py": "20c3b5334a341a3f7013e0de671d8fd0d8a5d6a26d669226cc7ea1517ccd6c72",
+  "calibrate_variants_mab.py": "aea3f2ed5adf7afa6f6a6f93531c8403d4276e148754ab126d628c0a758bb004",
+  "crossko.py": "efef85f8165d4a0a0934d6a522a56d76b67a26eb963b7e142dd97b8b3013dd67",
+  "deploy_variants.py": "22e514e49039abad70c65d0cafec894579873f5fa205457a416135f077f65cf5",
+  "write_report.py": "926d9534c11bd5689d1bea8d9905bd72c3fdddfd1a932d5210e507f21e17ae7a",
+  "emitter_v88.py": "d678765d83cefce5a5eacb167ce3357769ff9569a8195c139261413c53de3914",
+  "preprocess_expanded.py": "085a54a2caf6ea88bc65af79f0143dbec181dc032360b4dd2313acaaeeddfeca",
+  "finalize_v88.py": "e0b897f37e438047e0bd5fbdc03e6818c0baf5f05a4dba93ab83dc8dd2068890"
+}

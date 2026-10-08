@@ -1,0 +1,3 @@
+Portable code/reproduce.py: three of three submitted expression-array SHA256 values match exactly.
+Bundled tests: 4 passed.
+Original relevant project tests:33 passed,1 Torch-dependent unrelated test deselected.

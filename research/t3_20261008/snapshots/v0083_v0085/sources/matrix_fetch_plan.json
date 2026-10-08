@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GSM8151756_exVivo_OP2_resting_1_filtered_feature_bc_matrix.h5",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151756/suppl/GSM8151756_exVivo_OP2_resting_1_filtered_feature_bc_matrix.h5",
+    "max_bytes": 700000000
+  },
+  {
+    "name": "GSM8151757_exVivo_OP2_resting_2_filtered_feature_bc_matrix.h5",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151757/suppl/GSM8151757_exVivo_OP2_resting_2_filtered_feature_bc_matrix.h5",
+    "max_bytes": 700000000
+  }
+]

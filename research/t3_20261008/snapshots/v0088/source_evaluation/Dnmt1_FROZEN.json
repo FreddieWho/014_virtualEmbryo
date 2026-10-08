@@ -1,0 +1,48 @@
+{
+  "training_genes": [
+    "Dnmt3a",
+    "Kmt2a",
+    "Kdm2b",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kmt2b"
+  ],
+  "heldout": "Dnmt1",
+  "evaluation_embryos": [
+    "embryo10",
+    "embryo12",
+    "embryo3",
+    "embryo5",
+    "embryo7",
+    "embryo9"
+  ],
+  "prediction_receipts": [
+    {
+      "model": "baseline",
+      "sha256": "8f8d84a473e3e6aa446665aa9e1b131ba5e1005d774e00e2d9d2c67a5243f74d",
+      "detection": 0.1284204591220298,
+      "donor_sha256": "d4f522737073f1fc92b8cc005f68e959b2a6ebbc9b1f8e87e8778a51dfb53c0b"
+    },
+    {
+      "model": "residual",
+      "sha256": "47449b2ae255e506cb08b5b62a14d88e22b66ca908b2c6c2dcb3bb7518944e2b",
+      "detection": 0.1284204591220298,
+      "donor_sha256": "d4f522737073f1fc92b8cc005f68e959b2a6ebbc9b1f8e87e8778a51dfb53c0b"
+    },
+    {
+      "model": "conditional",
+      "sha256": "065fab5a9d53b597e572717617654de8537c1837eae907cf439ac65890e270bf",
+      "detection": 0.1284204591220298,
+      "donor_sha256": "d4f522737073f1fc92b8cc005f68e959b2a6ebbc9b1f8e87e8778a51dfb53c0b"
+    },
+    {
+      "model": "both",
+      "sha256": "8a6e3cb19e5cca1517a15e0b3092b3ee736bb8b24e789c98f30273c0a50df9ff",
+      "detection": 0.1284204591220298,
+      "donor_sha256": "d4f522737073f1fc92b8cc005f68e959b2a6ebbc9b1f8e87e8778a51dfb53c0b"
+    }
+  ],
+  "code_sha256": "20c3b5334a341a3f7013e0de671d8fd0d8a5d6a26d669226cc7ea1517ccd6c72",
+  "emitter_sha256": "d678765d83cefce5a5eacb167ce3357769ff9569a8195c139261413c53de3914",
+  "protocol_sha256": "c3797262f1faad9cf187034c2c48558306c12d5e606e02d5bb0d10245d5d3e5e"
+}

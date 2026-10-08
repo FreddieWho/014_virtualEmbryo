@@ -1,0 +1,103 @@
+{
+  "receipts": [
+    {
+      "target": "gata4",
+      "arm": "baseline",
+      "sha256": "e7b4a698adfc65b061276e875686d63d41d685bbb78b08d47175198199bed370",
+      "array_sha256": "2420c6b992fed7c431bf2cf4a4fb30d630fcba9bafa8d9b5898b5caae4db1f98",
+      "donors_same_as_baseline": true,
+      "detection": 0.11084279769096524,
+      "mean_log_L2_drift": 0.0,
+      "response_L2": 4.246204600877602,
+      "response_rank_correlation": 1.0,
+      "max_row_mass_error": 0.00449409842985915
+    },
+    {
+      "target": "gata4",
+      "arm": "residual",
+      "sha256": "15aa1629e445f0820cf577cde15021a17a144879186b1116d6b14a539eb4bb35",
+      "array_sha256": "b29241ce357a480bcc64aeb9e1a63586c78a6ba725f2fd8e79e712516ba8b773",
+      "donors_same_as_baseline": true,
+      "detection": 0.11084279769096524,
+      "mean_log_L2_drift": 0.09646385427820327,
+      "response_L2": 4.285667402155365,
+      "response_rank_correlation": 0.9994806379225516,
+      "max_row_mass_error": 0.004410324780110386
+    },
+    {
+      "target": "gata4",
+      "arm": "conditional",
+      "sha256": "08bedcc7083cf42ed5a898899f44300a9656c80efb3c232e6bb45e90187027f5",
+      "array_sha256": "7cfe4e0cfcfe1a76c003e25eed7d3fab58868f1d6d5dd7cb6b0ab14b3dddf77c",
+      "donors_same_as_baseline": true,
+      "detection": 0.11084279769096524,
+      "mean_log_L2_drift": 0.03962938118197329,
+      "response_L2": 4.235587227477301,
+      "response_rank_correlation": 0.9998111672446689,
+      "max_row_mass_error": 0.0038214348132896703
+    },
+    {
+      "target": "gata4",
+      "arm": "both",
+      "sha256": "7f5a9fbbb763df43128d50a2493a6297c22152442f6e1503aca0618743952a93",
+      "array_sha256": "10250b19aa94582fc48eab5f22454a88026f37b34b86d9f6e6779fdfad7003ec",
+      "donors_same_as_baseline": true,
+      "detection": 0.11084279769096524,
+      "mean_log_L2_drift": 0.07638729801044472,
+      "response_L2": 4.269772319828017,
+      "response_rank_correlation": 0.9998445753783015,
+      "max_row_mass_error": 0.0036089237164560473
+    },
+    {
+      "target": "mab",
+      "arm": "baseline",
+      "sha256": "97c8b01b915e23cb97dfd14373c02f8cda19e856c4657047d87eabe7ffd36e9a",
+      "array_sha256": "3251eb7ba7fa40c61c9744398cf8a3972158fb3462ac74adc234ad2934d225b6",
+      "donors_same_as_baseline": true,
+      "detection": 0.08554571083366895,
+      "mean_log_L2_drift": 0.0,
+      "response_L2": 3.936870951910937,
+      "response_rank_correlation": 1.0,
+      "max_row_mass_error": 0.002242237775135436
+    },
+    {
+      "target": "mab",
+      "arm": "residual",
+      "sha256": "bf51188f6ac938191f560683f2e214d884b511c18b217c461125798278ac86df",
+      "array_sha256": "253ac23e5608932d3304274cc79619999638ccd5969cf2f9a5d93f9e8897a3c9",
+      "donors_same_as_baseline": true,
+      "detection": 0.08554571083366895,
+      "mean_log_L2_drift": 0.07722775124011494,
+      "response_L2": 3.9746419266003143,
+      "response_rank_correlation": 0.9993320293281172,
+      "max_row_mass_error": 0.002190679377235938
+    },
+    {
+      "target": "mab",
+      "arm": "conditional",
+      "sha256": "f8b72b5bac9187e7d219071bed6d2de55af973c62392b739cdbbfb795d6f604f",
+      "array_sha256": "f7d91cea4d217e07185f800ccae764dd2f4d0b0fa17bf362699a12c234cd8aec",
+      "donors_same_as_baseline": true,
+      "detection": 0.08554571083366895,
+      "mean_log_L2_drift": 0.06674257629777795,
+      "response_L2": 3.903916337570525,
+      "response_rank_correlation": 0.9997912951651807,
+      "max_row_mass_error": 0.002872785466024652
+    },
+    {
+      "target": "mab",
+      "arm": "both",
+      "sha256": "14234fd942796a84797ee14a8ef8fc7292283d1caabda1e4fc7d17bd80535588",
+      "array_sha256": "8c6a3010240ec77119cfc5a4b933a0090e84057dd03879da9c5e0b57434cb0bd",
+      "donors_same_as_baseline": true,
+      "detection": 0.08554571083366895,
+      "mean_log_L2_drift": 0.08070107147773442,
+      "response_L2": 3.93843012885858,
+      "response_rank_correlation": 0.9992644450577801,
+      "max_row_mass_error": 0.0025336434046039358
+    }
+  ],
+  "loaded_Mab_outcomes": false,
+  "loaded_target_outcomes": false,
+  "protocol_sha256": "c3797262f1faad9cf187034c2c48558306c12d5e606e02d5bb0d10245d5d3e5e"
+}

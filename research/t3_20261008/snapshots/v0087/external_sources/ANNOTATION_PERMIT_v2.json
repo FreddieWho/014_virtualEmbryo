@@ -1,0 +1,37 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "source_review_sha256": "6be8e1f06c4855f3f1b671cf357b62b8b051b6fe10587914cadc74c872f5acfb",
+  "source_workbook_sha256": "0d8638513d0bbd30750949ba6993f0d2d358dd1948145c782c792ebe16e80dbe",
+  "files": [
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Dnmt1_E8.5_cell_annotations.tsv",
+      "sha256": "cbcc707d7749191314fa4397e5364ad4fff12b708ed7b4e3c5fdeda000d789f8",
+      "bytes": 1808246,
+      "source_sheet": "Dnmt1_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Dnmt3b_E8.5_cell_annotations.tsv",
+      "sha256": "d60d4175e2b3498ac649859d8693ebb5858bb36987507c8a3733de97ebd20547",
+      "bytes": 2273532,
+      "source_sheet": "Dnmt3b_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/G9a_E8.5_cell_annotations.tsv",
+      "sha256": "e5d7f7a4e3021cafd6ea1482ad5dbaeb1710e60adcf37b88de3767d234257157",
+      "bytes": 1708652,
+      "source_sheet": "G9a_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Kmt2b_E8.5_cell_annotations.tsv",
+      "sha256": "16b1f9d9c927e7b303792d67a58ceaae0ab42d69b8d635ede95b4b74140c152f",
+      "bytes": 1336625,
+      "source_sheet": "Kmt2b_cells",
+      "status": "VERIFIED_DERIVATION"
+    }
+  ],
+  "scope": "Only selected additional single-gene E8.5 KO metadata; expression counts separately governed by TASK_DATA_PERMIT_v2.json"
+}

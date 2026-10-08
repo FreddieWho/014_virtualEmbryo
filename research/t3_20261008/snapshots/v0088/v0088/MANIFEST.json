@@ -1,0 +1,16 @@
+{
+  "candidate_id": "v0088",
+  "parent": "v0087",
+  "arm": "conditional",
+  "file": "/workspace/shared/t3_v88_optimization_20261008/v0088/t3_gata4__condhurdle__v0088.h5ad",
+  "sha256": "d7944880d8f55974946dad4b2c22879582c03bce547ead312921b0fc39bdddc7",
+  "array_sha256": "7cfe4e0cfcfe1a76c003e25eed7d3fab58868f1d6d5dd7cb6b0ab14b3dddf77c",
+  "contract": "PASS",
+  "submitted": false,
+  "geometry_parent_exact": true,
+  "shape": [
+    7449,
+    500
+  ],
+  "source_frozen_sha256": "08bedcc7083cf42ed5a898899f44300a9656c80efb3c232e6bb45e90187027f5"
+}

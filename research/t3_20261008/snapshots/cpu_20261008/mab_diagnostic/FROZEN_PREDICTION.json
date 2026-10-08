@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "245e74d8237b60987fc670c0225c6f7a720f40804a8397ccdb69c996ed2a548b",
+  "wt_sha256": "371ca6530e084de2b6cd6703b49d95f4bb59546c9291659809575382a630ee9a",
+  "prediction_sha256": "f2450217ec2407956099009694b4bda19bff6bfd131a9acbdd6120e82a846128",
+  "fit_seconds": 3.352858543395996,
+  "fit_rows": 53742,
+  "changed_rows": 10031,
+  "training_KO_used": false,
+  "outcome_role": "released Mab21l2 only; a single intervention, not independent Gata4 evidence",
+  "metrics": []
+}

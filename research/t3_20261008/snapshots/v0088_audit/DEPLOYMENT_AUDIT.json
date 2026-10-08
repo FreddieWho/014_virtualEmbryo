@@ -1,0 +1,66 @@
+{
+  "baseline": {
+    "sha256": "e7b4a698adfc65b061276e875686d63d41d685bbb78b08d47175198199bed370",
+    "shape": [
+      7449,
+      500
+    ],
+    "mean_shift_l2_vs_v87": 0.0,
+    "mean_shift_max_abs_vs_v87": 0.0,
+    "native_float32_mean_max_abs_vs_v87": 0.0,
+    "response_l2": 4.246204600877602,
+    "amplitude_ratio": 1.0,
+    "response_rank_spearman_vs_v87": 1.0,
+    "detection": 0.11084279769096524,
+    "max_panel_mass_error": 0.00449409842985915,
+    "covariance_frobenius_change_vs_v87": 0.0
+  },
+  "residual": {
+    "sha256": "15aa1629e445f0820cf577cde15021a17a144879186b1116d6b14a539eb4bb35",
+    "shape": [
+      7449,
+      500
+    ],
+    "mean_shift_l2_vs_v87": 0.09646385427820327,
+    "mean_shift_max_abs_vs_v87": 0.04956937930874883,
+    "native_float32_mean_max_abs_vs_v87": 0.04956841468811035,
+    "response_l2": 4.285667402155365,
+    "amplitude_ratio": 1.0092936645750905,
+    "response_rank_spearman_vs_v87": 0.9994806379225516,
+    "detection": 0.11084279769096524,
+    "max_panel_mass_error": 0.004410324780110386,
+    "covariance_frobenius_change_vs_v87": 0.8908813317622215
+  },
+  "conditional": {
+    "sha256": "08bedcc7083cf42ed5a898899f44300a9656c80efb3c232e6bb45e90187027f5",
+    "shape": [
+      7449,
+      500
+    ],
+    "mean_shift_l2_vs_v87": 0.03962938118197329,
+    "mean_shift_max_abs_vs_v87": 0.0071433307116648415,
+    "native_float32_mean_max_abs_vs_v87": 0.0071446895599365234,
+    "response_l2": 4.235587227477301,
+    "amplitude_ratio": 0.9974995615147448,
+    "response_rank_spearman_vs_v87": 0.9998111672446689,
+    "detection": 0.11084279769096524,
+    "max_panel_mass_error": 0.0038214348132896703,
+    "covariance_frobenius_change_vs_v87": 25.458122232330172
+  },
+  "both": {
+    "sha256": "7f5a9fbbb763df43128d50a2493a6297c22152442f6e1503aca0618743952a93",
+    "shape": [
+      7449,
+      500
+    ],
+    "mean_shift_l2_vs_v87": 0.07638729801044472,
+    "mean_shift_max_abs_vs_v87": 0.044308202188916734,
+    "native_float32_mean_max_abs_vs_v87": 0.04431009292602539,
+    "response_l2": 4.269772319828017,
+    "amplitude_ratio": 1.0055503022500478,
+    "response_rank_spearman_vs_v87": 0.9998445753783015,
+    "detection": 0.11084279769096524,
+    "max_panel_mass_error": 0.0036089237164560473,
+    "covariance_frobenius_change_vs_v87": 25.786386628072208
+  }
+}

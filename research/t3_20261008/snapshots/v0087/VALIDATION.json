@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "artifacts_checked": 14,
+  "checks": [
+    "Disjoint WT cells",
+    "Disjoint KO cells and sections",
+    "WT training gene halves250",
+    "Unique generated row IDs despite duplicate source KO names",
+    "500 genes ordered",
+    "Finite nonnegative",
+    "Mab21l2 zero",
+    "Panel closure10000 tolerance0.01",
+    "Coordinate carrier equality",
+    "All input/source/protocol hashes unchanged",
+    "32 finite raw metric rows"
+  ],
+  "caveat": "Local structure checks, not official portal contract or biological validation"
+}

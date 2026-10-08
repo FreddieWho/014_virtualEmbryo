@@ -1,0 +1,140 @@
+{
+  "selected_by_source": "mean_combined",
+  "source_selection": {
+    "criteria": [
+      {
+        "model": "mean_within",
+        "passes": true,
+        "mean_direction": 0.5356045595546146,
+        "median_direction": 0.6137047258006438,
+        "mse_wins": 6,
+        "severity_wins": 7,
+        "mean_direction_control": 0.5356045595546146,
+        "mse": 0.027653049576344572
+      },
+      {
+        "model": "mean_combined",
+        "passes": true,
+        "mean_direction": 0.573895591765426,
+        "median_direction": 0.5969400024574062,
+        "mse_wins": 6,
+        "severity_wins": 7,
+        "mean_direction_control": 0.573895591765426,
+        "mse": 0.02717500160581224
+      },
+      {
+        "model": "nearest_within",
+        "passes": true,
+        "mean_direction": 0.27607866757799954,
+        "median_direction": 0.3173303007264106,
+        "mse_wins": 4,
+        "severity_wins": 5,
+        "mean_direction_control": 0.5356045595546146,
+        "mse": 0.0484517807711718
+      },
+      {
+        "model": "nearest_combined",
+        "passes": true,
+        "mean_direction": 0.3436683249369437,
+        "median_direction": 0.4609047854186115,
+        "mse_wins": 4,
+        "severity_wins": 5,
+        "mean_direction_control": 0.573895591765426,
+        "mse": 0.04743450836336872
+      },
+      {
+        "model": "ridge_within",
+        "passes": true,
+        "mean_direction": 0.47536912118968366,
+        "median_direction": 0.5275867175932663,
+        "mse_wins": 5,
+        "severity_wins": 6,
+        "mean_direction_control": 0.5356045595546146,
+        "mse": 0.032690502441316424
+      },
+      {
+        "model": "ridge_combined",
+        "passes": true,
+        "mean_direction": 0.5220542056400869,
+        "median_direction": 0.5968538524404854,
+        "mse_wins": 6,
+        "severity_wins": 7,
+        "mean_direction_control": 0.573895591765426,
+        "mse": 0.03132452043696474
+      }
+    ],
+    "status": "completed",
+    "no_target_outcomes": true,
+    "candidate_built": false
+  },
+  "training_genes": [
+    "Dnmt1",
+    "Dnmt3a",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kdm2b",
+    "Kmt2a",
+    "Kmt2b"
+  ],
+  "protocol_sha256": "a36d3cfbec03ca6ef57de80fc0665d462827d345e8e66b8a9ad51d49c10709e3",
+  "code_sha256": "366f005d28603730b71bb0f2357fb39d92ae8bff1da882651f4d3a7f8fcc44ea",
+  "emitter_sha256": "9ddcbc7bb2889e086e915f71e8ed056baca8c7463868e7656a9f70a1389add13",
+  "predictions": [
+    {
+      "stage": "mab",
+      "variant": "all_supported",
+      "source_method": "mean_combined",
+      "mask_cells": 7449,
+      "changed_cells": 7449,
+      "outside95_cells": 2909,
+      "changed_outside95": 2909,
+      "detection": 0.08554571083366895,
+      "base_detection": 0.07793958920660492,
+      "zero_to_positive": 242354,
+      "positive_to_zero": 214025,
+      "delta_L2": 3.936870951910937,
+      "max_log_change": 8.551872253417969,
+      "delta_on_outside95_L2": 6.331047058105469,
+      "sha256": "f892ffc7d3fdc36cec4690be79ad548f239960256900e5d51d901a7503fd1f64",
+      "file": "/workspace/shared/t3_state_response_20261008/deployment_diagnostics/mab_all_supported.h5ad"
+    },
+    {
+      "stage": "gata4",
+      "variant": "all_supported",
+      "source_method": "mean_combined",
+      "mask_cells": 7449,
+      "changed_cells": 7449,
+      "outside95_cells": 2110,
+      "changed_outside95": 2110,
+      "detection": 0.11084279769096524,
+      "base_detection": 0.10499342193583032,
+      "zero_to_positive": 297389,
+      "positive_to_zero": 275603,
+      "delta_L2": 4.246204600877602,
+      "max_log_change": 9.210440635681152,
+      "delta_on_outside95_L2": 6.0782952308654785,
+      "sha256": "d845759d0e04f0ee0db74c2877e4fbf4f6d2889ccad448da518d29392af24a2b",
+      "file": "/workspace/shared/t3_state_response_20261008/deployment_diagnostics/gata4_all_supported.h5ad"
+    },
+    {
+      "stage": "gata4",
+      "variant": "positive_lineage",
+      "source_method": "mean_combined",
+      "mask_cells": 1660,
+      "changed_cells": 1660,
+      "outside95_cells": 2110,
+      "changed_outside95": 756,
+      "detection": 0.10652973553497114,
+      "base_detection": 0.10499342193583032,
+      "zero_to_positive": 69102,
+      "positive_to_zero": 63380,
+      "delta_L2": 0.8724634209499463,
+      "max_log_change": 8.517393112182617,
+      "delta_on_outside95_L2": 1.923363447189331,
+      "sha256": "14a772953abde3797941869397dfb07342a7e08dddfdbf7828b04c9c79153b8d",
+      "file": "/workspace/shared/t3_state_response_20261008/deployment_diagnostics/gata4_positive_lineage.h5ad"
+    }
+  ],
+  "Mab_outcome_loaded": false,
+  "Gata_outcome_loaded": false
+}

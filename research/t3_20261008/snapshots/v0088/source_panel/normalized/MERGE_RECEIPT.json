@@ -1,0 +1,130 @@
+[
+  {
+    "gene": "WT",
+    "whitelist": 22515,
+    "matched": 21825,
+    "missing": 690,
+    "embryos": 10,
+    "sex_embryos": {
+      "female": 8,
+      "male": 2
+    },
+    "input_sha256": "0bc7fae3682c23087651aae68abe785a786f10be8b8e41065d858c77ee4fe45e",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/WT_whitelisted_panel10000.h5ad",
+    "sha256": "c250bfee6d80a105931aa7707ca18914956d950bfee9fec021543759717f7e4b",
+    "expression_array_sha256": "5b77e8a6a37af46e8595fbf2287ec18b178575cb24d016633a64bec5cf33848d",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Dnmt3a",
+    "whitelist": 18320,
+    "matched": 18320,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 9,
+      "female": 1
+    },
+    "input_sha256": "c8627b19f6e0c4288aa6fb2bf3db2c9595b420dbebda1382f3fbacb192a4c492",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt3a_whitelisted_panel10000.h5ad",
+    "sha256": "b5415999941df7846c02fc817c2510123e4841031eed0b684b6a6424e7d59a54",
+    "expression_array_sha256": "7a744ecf3e5c6f04830cae8f25cff80f5a947957e6ace64efbc6d18292b435ea",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Kmt2a",
+    "whitelist": 15776,
+    "matched": 15776,
+    "missing": 0,
+    "embryos": 11,
+    "sex_embryos": {
+      "male": 8,
+      "female": 3
+    },
+    "input_sha256": "7f8f550454d04419945e7c8770c9d32dd0d58cd89083a32a89fa9fe15ff35f1a",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kmt2a_whitelisted_panel10000.h5ad",
+    "sha256": "c880d2d560115bf9cc024dec16f9043284c46dadc14d9d778480dd01abea1910",
+    "expression_array_sha256": "3f18245a395f2914efbab1d2df8ddf8b0a79e3603e352d290846b7469910d659",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Kdm2b",
+    "whitelist": 18943,
+    "matched": 18943,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 6,
+      "female": 4
+    },
+    "input_sha256": "934ab0f8bb0ac867378e09485fdb4debf962a08802d4a940dbcc591101662307",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kdm2b_whitelisted_panel10000.h5ad",
+    "sha256": "56141602a7a30ca7c8e3b59c6e2a6ce3288b0b459f56818c201cb5459a815c4d",
+    "expression_array_sha256": "881a3a95b01259dab228bead9f4ad916454f78bf78d0d775ffd585e638978b18",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Dnmt1",
+    "whitelist": 20890,
+    "matched": 20890,
+    "missing": 0,
+    "embryos": 12,
+    "sex_embryos": {
+      "female": 9,
+      "male": 3
+    },
+    "input_sha256": "50efd24c22d0eac00d48c6a4b561755ffa33c97147f2af2d12b988bf9cc24ccd",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt1_whitelisted_panel10000.h5ad",
+    "sha256": "c7712ee10e8294d8c72d9d6efe55ad3d928970536ca865048b3b4ca47588e0ef",
+    "expression_array_sha256": "dfb81b5f1fe33fda3c73288b89d4efcb47a2ae036325ddcaaecdf809add342e8",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Dnmt3b",
+    "whitelist": 25408,
+    "matched": 25408,
+    "missing": 0,
+    "embryos": 8,
+    "sex_embryos": {
+      "female": 6,
+      "male": 2
+    },
+    "input_sha256": "800c2d767bab0e6c8804e0ca786170234526b7daf1c1baf263bc41d9f6dda245",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt3b_whitelisted_panel10000.h5ad",
+    "sha256": "5431a2ce277fc785a93f6bd3060d595aa34cc9110c365c8ecbf69f3060a8c98e",
+    "expression_array_sha256": "718e3353bf1f6c5727a06c7a9cca677a5351a94248c76660ff261995a1a9615d",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Ehmt2",
+    "whitelist": 20389,
+    "matched": 20389,
+    "missing": 0,
+    "embryos": 11,
+    "sex_embryos": {
+      "female": 6,
+      "male": 5
+    },
+    "input_sha256": "fa626e154d8aba25efd26cb8f84aac70b6486d0656607c28529d045c3497bde1",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Ehmt2_whitelisted_panel10000.h5ad",
+    "sha256": "e40df07fa27921cbbc0f2f249ce7935aeb0a4a74b09aa518a2bd114c26c53b05",
+    "expression_array_sha256": "712b250715dadf20355d88d695df8637ca7417996f6b1786ced697f6bbaf97c9",
+    "frozen_merge_matches": true
+  },
+  {
+    "gene": "Kmt2b",
+    "whitelist": 15603,
+    "matched": 15603,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 6,
+      "female": 4
+    },
+    "input_sha256": "ff3ab16209e483ea5025c4883c1ea75a92aee2f3bc6d165b31515c019b26dddc",
+    "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kmt2b_whitelisted_panel10000.h5ad",
+    "sha256": "1c1ca3d5b78d377147ee83e9d98aa27eb4d5de11912a24b5dc3751364fedc237",
+    "expression_array_sha256": "30d954f07460e2d0df4b8f347cfa89e1979c6ce0f76a012a6417867e535ff09d",
+    "frozen_merge_matches": true
+  }
+]

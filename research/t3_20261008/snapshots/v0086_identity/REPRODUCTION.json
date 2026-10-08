@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "candidate_id": "v0086",
+    "original_candidate": "v0083",
+    "original_sha256": "c7e74287b68a3a1d33cf93143abb02e898ead11d8f1d8a0214a1addf3557f444",
+    "original_byte_identity": false,
+    "recipe": "o3_psb",
+    "params": "psb",
+    "path": "/workspace/shared/t3cpu/submissions/candidates/T3_gata4/v0086_repro_psb/submission.h5ad",
+    "sha256": "9891565df040af9436cdd9d5c6dfa1b437c8e4decb05e79d25413aeb9d403d65",
+    "array_sha256": "938461817b8fe4cc682ff0478a044e168dbd61dc35d85d8c798126cd71399eb1",
+    "portal_filename": "t3_gata4__repropsb__v0086.h5ad",
+    "shape": [
+      7449,
+      500
+    ],
+    "contract": "PASS",
+    "changed_entries_vs_parent": 459625,
+    "density": 0.16216673378977045,
+    "response_mean_max_abs": 0.07301187515258789
+  },
+  "inputs": {
+    "/workspace/shared/virtual_embryo_data/E8.75.h5ad": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+    "/workspace/shared/t3source/expression.h5ad": "d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f",
+    "/workspace/shared/t3source/GO_EMBEDDING.npz": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+    "/workspace/shared/t3source/SOURCE_MANIFEST.json": "9c47fb774be9e62eb162b617aff6235d196fb90ed8eb8e7894b8bc4ecd32c043",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/baseline_compat_v2/hurdle_rebuild.h5ad": "25621bb66d403832367874c7b52790bf8e5401b24b784ef1fbc2b871f671f6ae",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/baseline/hurdle_model.pkl": "8f53856a58d654999eb305777731b42306ffbf09caaaf95a22594bd03a4b531a",
+    "/workspace/shared/t3cpu/scripts/t3_autoresearch/retained_model.py": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+    "/workspace/shared/t3cpu/scripts/t3_six2/deliver.py": "5668df1a762b666062a48cf0ba7d4f49711b8fc96af6df21f53b5732f85314ce",
+    "/workspace/shared/t3cpu/scripts/t3_next/five_ops.py": "42791d3197402abe871b81ebf98e844ff7ee5fc777dff125b8133912c85bc3a9",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/SCORER_LOCK.json": "f7ae191c52364f25f43bd46d3a1a021313d099d6ad642ec2e0b0ae909f6d7846"
+  },
+  "source_manifest": "/workspace/shared/t3source/SOURCE_MANIFEST.json"
+}

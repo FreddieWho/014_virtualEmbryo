@@ -1,0 +1,15 @@
+[
+  {
+    "gene": "WT",
+    "raw_matrix_shape": [
+      27998,
+      24780
+    ],
+    "nnz": 93027661,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 24780,
+    "seconds": 27.673779487609863,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/WT_idmatched_raw_panel.h5ad",
+    "sha256": "0bc7fae3682c23087651aae68abe785a786f10be8b8e41065d858c77ee4fe45e"
+  }
+]

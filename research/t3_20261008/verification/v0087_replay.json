@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "version": "v0087",
+  "expression_sha256": "2420c6b992fed7c431bf2cf4a4fb30d630fcba9bafa8d9b5898b5caae4db1f98",
+  "shape": [
+    7449,
+    500
+  ],
+  "donor_replay_exact": true,
+  "output_files_written": false
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Custom public-core local Mab split-half calibration, NOT official score or Gata4 forecast",
+  "weights": {
+    "de": 0.3,
+    "direction": 0.25,
+    "severity_abs": 0.25,
+    "mmd": 0.12,
+    "variogram": 0.08
+  },
+  "protocol_sha256": "77e9a287a3a09b21693c8aa4f073e814559984bdf293e0c5a8537d3c1c860a25",
+  "code_sha256": "504bd1b8b1e00caeffd11e0c8b1658c1357af628b0ac3bc1d18262aae51c9d2b",
+  "summary": {
+    "WT_sampled7449": {
+      "mean": 53.030631744166904,
+      "std": 0.42021643909629697,
+      "min": 52.56364313369468,
+      "max": 53.37824477684811
+    },
+    "historical_adult": {
+      "mean": 49.56704124248801,
+      "std": 0.3849905149729948,
+      "min": 49.144269940598875,
+      "max": 49.89744796863943
+    },
+    "sevenKO_hurdle": {
+      "mean": 57.25179880443196,
+      "std": 0.2790303519874332,
+      "min": 56.92961872950817,
+      "max": 57.41570607844928
+    }
+  },
+  "paired_new_minus_old": [
+    7.756300260223568,
+    7.512623636698976,
+    7.785348788909296
+  ]
+}

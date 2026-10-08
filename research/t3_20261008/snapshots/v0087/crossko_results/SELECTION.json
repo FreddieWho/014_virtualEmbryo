@@ -1,0 +1,43 @@
+{
+  "criteria": [
+    {
+      "model": "nearest_within",
+      "passes": false,
+      "mean_direction": 0.23550840540314413,
+      "median_direction": 0.1693246875688784,
+      "mse_wins": 1,
+      "mean_direction_control": 0.4239487100407393,
+      "mse": 0.07347583605503318
+    },
+    {
+      "model": "nearest_combined",
+      "passes": false,
+      "mean_direction": 0.28640982589671543,
+      "median_direction": 0.21683936093844333,
+      "mse_wins": 1,
+      "mean_direction_control": 0.4583926758596763,
+      "mse": 0.08209360218726974
+    },
+    {
+      "model": "ridge_within",
+      "passes": false,
+      "mean_direction": 0.4026484619088899,
+      "median_direction": 0.29487236744496087,
+      "mse_wins": 2,
+      "mean_direction_control": 0.4239487100407393,
+      "mse": 0.049314863091877804
+    },
+    {
+      "model": "ridge_combined",
+      "passes": false,
+      "mean_direction": 0.42647635018042956,
+      "median_direction": 0.3390272708639444,
+      "mse_wins": 2,
+      "mean_direction_control": 0.4583926758596763,
+      "mse": 0.05277661970352578
+    }
+  ],
+  "status": "completed",
+  "no_target_outcomes": true,
+  "candidate_built": false
+}

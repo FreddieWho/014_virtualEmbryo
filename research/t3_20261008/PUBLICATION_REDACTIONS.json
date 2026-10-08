@@ -1,0 +1,40 @@
+{
+  "reason": "Account-specific identifiers, private recovery identifiers and account-wide standings omitted; all Python and frozen protocol bytes unchanged",
+  "files": [
+    {
+      "path": "snapshots/v0083_v0085/RESULTS.json",
+      "original_sha256": "370a7b7932c3e98938547a31dc056e2cd1fadcee83652b86b090961132719788",
+      "sha256": "830cd3c8ae129d3d09ff03249070419ac8285b294d29c9a5571d80cfcf001912"
+    },
+    {
+      "path": "snapshots/v0087/FINAL_REPORT.md",
+      "original_sha256": "b3c325946b9715cf4c93032685951c44bc3950341e4beb6cec2ebd347bd1af86",
+      "sha256": "e9a1497566c0cfcfaf2aa237301023e66a2ed30c070d7d6a174a0525a7b19155"
+    },
+    {
+      "path": "snapshots/v0087/v0087/SERVER_RESULT.json",
+      "original_sha256": "b1e77a8f046699c36e6ee31e48815f4180d3a3d85e64fc859cd2e7766a35e753",
+      "sha256": "59b84333b6ebdcd6267171909d534f3333539b53be12b51c989f79fa85f7e733"
+    },
+    {
+      "path": "snapshots/v0088/REPORT.md",
+      "original_sha256": "6600f9d9aadf5f293979b05ca4ead283f7cec3f16b3f04a1afb0e913603cd5d0",
+      "sha256": "9431e0e0a88f470cfbf972d8cd2acdfafb37b7f657e9f65ba59be860ad7bc43a"
+    },
+    {
+      "path": "snapshots/v0088/REPRO_INPUTS.json",
+      "original_sha256": "bc4b3681a416ea06715cbeca1fd42ad95d84854fa7eee8a72aa7409eb5ffb9ff",
+      "sha256": "095eca5a2ea2a469f4443e2531b6be46b2913149df1064ab7ad278cedfdb5481"
+    },
+    {
+      "path": "snapshots/v0088/v0088/SERVER_RESULT.json",
+      "original_sha256": "fa0ee845692644dad96af373771e2137697c58fc8c6f1d68ed92efdcd32ad9b7",
+      "sha256": "dc4742626b2f72c595f0a9bf857ed12413c2d802d43ccca28111b179daef7460"
+    },
+    {
+      "path": "snapshots/v0088/source_panel/normalized/MERGE_RECEIPT.json",
+      "original_sha256": "a44e66eb42e28e334be7ef1265c43e084887cb962d72082cb7b94169368be76a",
+      "sha256": "c47476a0bd73c5b0b94d953b5f9a6f8ed538a2f241f65bf11c1ad7487c0cbe21"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "models": 14,
+  "folds": 2,
+  "metrics": 32,
+  "no_hidden_outcomes": true,
+  "no_submission": true,
+  "blocks_submission": false
+}

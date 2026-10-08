@@ -1,0 +1,74 @@
+{
+  "preprocess_source.py": {
+    "sha256": "62fca81ae6bac07695d8e6cd9efb982887610a66249dd920a03385e317d71490",
+    "changes": "none; script-relative output root changes by copy location"
+  },
+  "preprocess_wt_idmatch.py": {
+    "sha256": "dd048b52cf93ae04c1035caa5dbf1d056d9247468c21315f58a757783754f522",
+    "changes": "none; script-relative output root changes by copy location"
+  },
+  "preprocess_expanded.py": {
+    "sha256": "085a54a2caf6ea88bc65af79f0143dbec181dc032360b4dd2313acaaeeddfeca",
+    "changes": "none; script-relative output root changes by copy location"
+  },
+  "check_features.py": {
+    "sha256": "e56a7f98a08d27370489b0d0d9ec9d38a24f782887b1368403f7397362ddc836",
+    "changes": "none; script-relative output root changes by copy location"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/GO_EXPANDED_EMBEDDING.npz": {
+    "sha256": "ece34bbb0968882a8989df9848976172b21d31cb8279deac0bb3cbb6a0062b1c",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/COVERAGE.tsv": {
+    "sha256": "a72856213faee554691555daf05e6f5cc93b8e90344de8a1cb1b381c4cfa4513",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/README.md": {
+    "sha256": "cfc29895644d2af6175daceaecc88a62c4c92859c04b712d9b4f6825edd2eec4",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/build_go.py": {
+    "sha256": "e2b0078f0da00a94f423dc76dde4b7a2f2b76ff5201771a789e827abaeaeaf2f",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/PROVENANCE.json": {
+    "sha256": "d5c9d3af045e0a7dfbfc76cb7cfd92e7c9953e5ed98d79a6994f8f404cd825cf",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded/SHA256SUMS": {
+    "sha256": "0308405a9acddda27b95b5b354e91befb5b7553e11af4971102c3fdbf1ab6b7b",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/GO_EXPANDED_EMBEDDING.npz": {
+    "sha256": "a81ff9a593285286d030672d2ed728bed6dd220d716bbdf804c8370c12032150",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/COVERAGE.tsv": {
+    "sha256": "88a7fa5459211ba337940ae7dd903f7d752668b07e0210b51b98fd38145338da",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/README.md": {
+    "sha256": "b1b7ab911d993a865eb8f0da3b894d805dcce417ad22b3f1e0c7c5f6df5fb738",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/build_go.py": {
+    "sha256": "f0d99d8d2ee3de6cdd2602b89a01f3773dd300914880f2c0c1697d8722ad1d40",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/PROVENANCE.json": {
+    "sha256": "eceabd04e0fe3e48f489f253ee90a2a00f156f216d85751240c4c8145a991e60",
+    "changes": "none"
+  },
+  "/workspace/shared/t3_observation_reset/go_expanded7/SHA256SUMS": {
+    "sha256": "586002c2dcf0ff9e170b645a15ee19b5b54fbb28a4d2318869e3d81206428c35",
+    "changes": "none"
+  },
+  "normalize_source_panels.py": {
+    "sha256": "fb0f94489e32730e3630d856bab5592889dcbc9e933e55a5322ec61a91a942dc",
+    "changes": "Exact v87 join and normalization extracted; fresh output directory and added verification only"
+  },
+  "verify_source_reconstruction.py": {
+    "sha256": "9ce9fda1296245efd0844b5a43034e0d375bc9d80d091a560a617b4641f01d3c",
+    "changes": "New validation wrapper; no fitting or prediction"
+  }
+}

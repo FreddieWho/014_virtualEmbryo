@@ -1,0 +1,57 @@
+{
+  "methods": [
+    "identity",
+    "mean",
+    "mse_ridge",
+    "signed_rank_ridge",
+    "shuffled_mse",
+    "shuffled_rank",
+    "retained"
+  ],
+  "alpha": 1.0,
+  "rank_target": "sign(Y)*rank(abs(Y))/500, global least-squares magnitude calibration from outer-train only",
+  "emitter": "identical bounded_add strength1, +/-log2; no post hoc outcome calibration",
+  "development": "LOPO among original17 only",
+  "confirmation": "original9 historical holdouts, all predictions fit original17; these were seen in prior project work, not pristine",
+  "train_genes": [
+    "Yy1",
+    "Arid2",
+    "Setd1b",
+    "Brd9",
+    "Znhit1",
+    "Kansl1",
+    "Pbrm1",
+    "Tfpt",
+    "Setdb1",
+    "Chd4",
+    "Srcap",
+    "Smarcd1",
+    "Rest",
+    "Dmap1",
+    "Kmt2a",
+    "Egr2",
+    "Rnf40"
+  ],
+  "held_genes": [
+    "Brd7",
+    "Kat8",
+    "Kat5",
+    "Ino80",
+    "Wdr82",
+    "Smarca4",
+    "Paxip1",
+    "Hcfc1",
+    "Yeats4"
+  ],
+  "scenarios": [
+    "pooled",
+    "sample0_to_1",
+    "sample1_to_0"
+  ],
+  "seed": 20261008,
+  "source_sha256": "d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f",
+  "embedding_sha256": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+  "scorer_sha256": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31",
+  "code_sha256": "1af10a2e2fb62ff0a84d4f14be7d754dadca598c2703caf014560a8af8e1fffd",
+  "target_Gata4_labels_used": false
+}

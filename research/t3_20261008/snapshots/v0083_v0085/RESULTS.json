@@ -1,0 +1,41 @@
+{
+  "v0083": {
+    "score": 47.51,
+    "status": "scored",
+    "displayed_submetrics": {
+      "DE_recovery": 41.2,
+      "direction": 50,
+      "severity": 50,
+      "MMD": 51.7,
+      "variogram": 49.2
+    }
+  },
+  "v0084": {
+    "score": 49.55,
+    "status": "scored",
+    "prior_numerical_best": 47.95,
+    "improvement": 1.6,
+    "displayed_submetrics": {
+      "DE_recovery": 47.1,
+      "direction": 48.4,
+      "severity": 50,
+      "MMD": 54.8,
+      "variogram": 53.4
+    },
+    "improvement_vs_selected_47_93": 1.62
+  },
+  "v0085": {
+    "score": 47.45,
+    "status": "scored",
+    "displayed_submetrics": {
+      "DE_recovery": 40.8,
+      "direction": 50.1,
+      "severity": 50,
+      "MMD": 51.9,
+      "variogram": 49.2
+    }
+  },
+  "registry_commit": null,
+  "registry_url": null,
+  "registry_status": "PENDING_USER_CONFIRMATION"
+}

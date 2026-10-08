@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "0eac3c53a954040e8f45134dcc60d64d83e74205efd23a074dfc607cd17959b7",
+  "code_sha256": "cd9300d72512f4a8cf6ce055818e541994f539681e423e2c5c54fb6ab1fe8e94",
+  "model_sha256": "9ddcbc7bb2889e086e915f71e8ed056baca8c7463868e7656a9f70a1389add13",
+  "GO_sha256": "a81ff9a593285286d030672d2ed728bed6dd220d716bbdf804c8370c12032150",
+  "controls": "sex-matched WT; equal embryo training and evaluation samples",
+  "states": 8,
+  "quantiles": 21,
+  "seed": 241
+}

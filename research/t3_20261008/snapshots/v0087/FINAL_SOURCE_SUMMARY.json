@@ -1,0 +1,44 @@
+{
+  "source_genotypes": [
+    "Dnmt1",
+    "Dnmt3a",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kdm2b",
+    "Kmt2a",
+    "Kmt2b"
+  ],
+  "direction_differences_vs_WT": [
+    0.8382861604507559,
+    0.4004159074768134,
+    0.6238596320168078,
+    0.46897177966499537,
+    0.6455410474282678,
+    0.6491078920535845,
+    0.8540877563327953
+  ],
+  "genotype_bootstrap_mean_difference_95": [
+    0.5219595858795658,
+    0.6400385964891457,
+    0.7576080578665375
+  ],
+  "bootstrap_scope": "descriptive genotype-resampling of adaptive7KO evaluation; no independent generalization CI",
+  "source_mse_wins": 6,
+  "severity_wins": 7,
+  "Dnmt3b_chemistry_matched": {
+    "model": "mean_combined",
+    "de": 0.4545454545454545,
+    "direction": 0.5539837744319793,
+    "severity_abs": 0.410472992467946,
+    "severity_r2": 0.6758,
+    "mmd": 0.0079217348247766,
+    "variogram": 0.007887371815741,
+    "mse": 0.0234923108399946,
+    "detection": 0.1253988454826151
+  },
+  "Dnmt3a_downside": {
+    "WT_MSE": 0.0326026114200169,
+    "model_MSE": 0.0522239664806256,
+    "percent_worse": 60.18338472286258
+  }
+}

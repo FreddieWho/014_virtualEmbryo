@@ -1,0 +1,50 @@
+[
+  {
+    "gene": "WT",
+    "whitelist": 22515,
+    "matched": 21825,
+    "missing": 690,
+    "embryos": 10,
+    "sex_embryos": {
+      "female": 8,
+      "male": 2
+    },
+    "input_sha256": "0bc7fae3682c23087651aae68abe785a786f10be8b8e41065d858c77ee4fe45e"
+  },
+  {
+    "gene": "Dnmt3a",
+    "whitelist": 18320,
+    "matched": 18320,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 9,
+      "female": 1
+    },
+    "input_sha256": "c8627b19f6e0c4288aa6fb2bf3db2c9595b420dbebda1382f3fbacb192a4c492"
+  },
+  {
+    "gene": "Kmt2a",
+    "whitelist": 15776,
+    "matched": 15776,
+    "missing": 0,
+    "embryos": 11,
+    "sex_embryos": {
+      "male": 8,
+      "female": 3
+    },
+    "input_sha256": "7f8f550454d04419945e7c8770c9d32dd0d58cd89083a32a89fa9fe15ff35f1a"
+  },
+  {
+    "gene": "Kdm2b",
+    "whitelist": 18943,
+    "matched": 18943,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 6,
+      "female": 4
+    },
+    "input_sha256": "934ab0f8bb0ac867378e09485fdb4debf962a08802d4a940dbcc591101662307"
+  }
+]

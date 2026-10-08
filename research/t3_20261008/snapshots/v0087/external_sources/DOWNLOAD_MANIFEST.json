@@ -1,0 +1,44 @@
+[
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.matrix.mtx.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_DNMT3A_E8.5_1ab.matrix.mtx.gz",
+    "bytes": 413636952,
+    "sha256": "1ed3b6c6b454ffaf161aa2c255eb033c9496775e744258d58aa0f1c0a9ed089e",
+    "status": "VERIFIED_DOWNLOAD"
+  },
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.barcodes.tsv.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_DNMT3A_E8.5_1ab.barcodes.tsv.gz",
+    "bytes": 41842630,
+    "sha256": "1c1f4e67a07418f9f7dce03f24e8a2d6d6445019322ca907e376140a6ffde18c",
+    "status": "VERIFIED_DOWNLOAD"
+  },
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KMT2A_E8.5_1ab.tar.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_KMT2A_E8.5_1ab.tar.gz",
+    "bytes": 615542703,
+    "sha256": "19168fa16c7f2d7371636366e131102c43a1223a503511229142170d772dadaa",
+    "status": "VERIFIED_DOWNLOAD"
+  },
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KDM2B_E8.5_1ab.tar.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_KDM2B_E8.5_1ab.tar.gz",
+    "bytes": 622067715,
+    "sha256": "578877c07c4ca5060349fbe05213913a0e8ffa2a6c4c0b7fa5319772d90ea575",
+    "status": "VERIFIED_DOWNLOAD"
+  },
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_WT_E8.5_1ab.tar.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE122nnn/GSE122187/suppl/GSE122187_WT_E8.5_1ab.tar.gz",
+    "bytes": 290002631,
+    "sha256": "68a9959357ed1482a2c01273c7749b137928706da06b68e7c57183adae3d889a",
+    "status": "VERIFIED_DOWNLOAD"
+  },
+  {
+    "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_CellStateKernels.xls.gz",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE122nnn/GSE122187/suppl/GSE122187_CellStateKernels.xls.gz",
+    "bytes": 327106,
+    "sha256": "4d3a077aa9480be1637b036fba8bb46401ddfce338b7bac5a3e6f828e32d4308",
+    "status": "VERIFIED_DOWNLOAD"
+  }
+]

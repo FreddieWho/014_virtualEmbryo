@@ -1,0 +1,92 @@
+{
+  "task": "T3:gata4",
+  "policy_version": "T3_EXTERNAL_DATA_20260921",
+  "classification": "ALLOWED",
+  "version": 2,
+  "parent_review_sha256": "509a5cbf99aa1fb5d41ec71da2cfd3a50d2910225af9d063b0b02486aae315d8",
+  "scope": "Only GSE137337 chronological E8.5 single-gene Dnmt1, Dnmt3b, Ehmt2 (source label G9a), Kmt2b; no double knockouts or other stages; source WT inherited from v1",
+  "condition_allowlist": [
+    "Dnmt1",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kmt2b"
+  ],
+  "sample_allowlist": [
+    "GSM4405456",
+    "GSM4405457",
+    "GSM4075607",
+    "GSM4075608",
+    "GSM4075609",
+    "GSM4075610",
+    "GSM4075613",
+    "GSM4075614"
+  ],
+  "allowed_response_roles": [
+    "SIGNED_RESPONSE",
+    "GENOTYPE_HELD_OUT_TRAINING_DIAGNOSTIC",
+    "SOURCE_SUPPORT_AUDIT"
+  ],
+  "license_status": "PERMITTED_UNDER_GEO_DATA_POLICY",
+  "license_basis": "NCBI GEO imposes no restrictions on data use/distribution; author-deposited measurements and metadata show no contrary data-specific restriction. No claim of CC licensing is made. Article academic-manuscript terms and GPL3 code license are not used to license the numerical dataset. Retain attribution, accession IDs and source processing disclosure.",
+  "license_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+  "phenotype_review": {
+    "Dnmt1": {
+      "decision": "ALLOWED",
+      "evidence": "Selected E8.5 zygotic single-gene KO in Grosswendt study has global DNA methylation loss with IAP/transposon derepression and developmental delay. Published barcode metadata contains 605 heart-tube and1122 SHF cells across12 embryos. It is not target-gene deletion, GATA4 activity suppression, or a demonstrated phenocopy of the conditional cardiac target. Broad developmental delay alone does not establish equivalent condition.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7305168/"
+      ]
+    },
+    "Dnmt3b": {
+      "decision": "ALLOWED",
+      "evidence": "Selected E8.5 zygotic single-gene KO, methylation/imprinting regulation; 518 heart-tube and1055 SHF cells across8 embryos. Dnmt3b can cause later cardiac septation defects, which were explicitly considered; later E13.5/E16.5 septation phenotype is not evidence of comparable E8.75 conditional Gata4/Gata6 or Ctnnb1 response. Current-stage source has differentiated cardiac states and a different primary perturbation.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3475715/",
+        "https://journals.biologists.com/dev/article/133/6/1183/43533/Roles-for-Dnmt3b-in-mammalian-development-a-mouse"
+      ]
+    },
+    "Ehmt2": {
+      "source_label": "G9a",
+      "decision": "ALLOWED",
+      "evidence": "Selected E8.5 zygotic G9a/Ehmt2 single KO affects H3K9 methylation, gene silencing and developmental progression;531 heart-tube/1014 SHF cells across11 embryos. Independent primary genetics describes broad developmental retardation without organ-specific abnormalities at E9.5, not a cardiac Gata4/beta-catenin phenocopy. Shared muscle/differentiation pathways do not prove equivalence.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC186403/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8601470/"
+      ]
+    },
+    "Kmt2b": {
+      "decision": "ALLOWED",
+      "evidence": "Selected E8.5 Kmt2b H3K4 methyltransferase KO affects CpG-island protection and differentiation progression, with347 heart-tube and876 SHF cells across10 embryos. Primary source distinguishes its epigenetic and multi-lineage behavior, without identifying it as a conditional cardiac Gata4/Gata6 or beta-catenin phenocopy. Do not confuse Kmt2b with Kmt2d or reuse ambiguous historical MLL nomenclature blindly.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2674429/"
+      ]
+    }
+  },
+  "prohibited_records_remaining_in_selected_scope": 0,
+  "statement": "Scoped evidence-based phenotype review; not proof of universal absence of shared downstream responses. No organizer endorsement claimed. No same-target measurements retrieved to estimate target effect.",
+  "limitations": [
+    "No Gata4 causal-effect identification",
+    "Zygotic whole-embryo perturbation differs from mesoderm-lineage conditional deletion",
+    "Libraries a/b are technical cell partitions, not independent biological replicates; require SNP embryo assignments for proper embryo validation",
+    "WT kernel stage states do not establish causal perturbation signs",
+    "Every source intervention is an epigenetic regulator; seven KOs still do not identify a Gata4 response",
+    "Sex, stage-shift and sequencing chemistry confounding must remain visible; embryo IDs recovered in original publisher tables"
+  ],
+  "download_limits": {
+    "additional_total_bytes": 3000000000,
+    "per_file_bytes": 700000000
+  },
+  "deferred": [
+    "Eed",
+    "Rnf2",
+    "L3mbtl2",
+    "Cdkn2a",
+    "Eed.Cdkn2a"
+  ],
+  "training_permission": "Only completed SHA256-bound expanded files and genotype-filtered annotations in TASK_DATA_PERMIT_v2.json"
+}

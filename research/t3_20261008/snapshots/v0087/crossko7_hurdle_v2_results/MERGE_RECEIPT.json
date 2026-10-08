@@ -1,0 +1,98 @@
+[
+  {
+    "gene": "WT",
+    "whitelist": 22515,
+    "matched": 21825,
+    "missing": 690,
+    "embryos": 10,
+    "sex_embryos": {
+      "female": 8,
+      "male": 2
+    },
+    "input_sha256": "0bc7fae3682c23087651aae68abe785a786f10be8b8e41065d858c77ee4fe45e"
+  },
+  {
+    "gene": "Dnmt3a",
+    "whitelist": 18320,
+    "matched": 18320,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 9,
+      "female": 1
+    },
+    "input_sha256": "c8627b19f6e0c4288aa6fb2bf3db2c9595b420dbebda1382f3fbacb192a4c492"
+  },
+  {
+    "gene": "Kmt2a",
+    "whitelist": 15776,
+    "matched": 15776,
+    "missing": 0,
+    "embryos": 11,
+    "sex_embryos": {
+      "male": 8,
+      "female": 3
+    },
+    "input_sha256": "7f8f550454d04419945e7c8770c9d32dd0d58cd89083a32a89fa9fe15ff35f1a"
+  },
+  {
+    "gene": "Kdm2b",
+    "whitelist": 18943,
+    "matched": 18943,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 6,
+      "female": 4
+    },
+    "input_sha256": "934ab0f8bb0ac867378e09485fdb4debf962a08802d4a940dbcc591101662307"
+  },
+  {
+    "gene": "Dnmt1",
+    "whitelist": 20890,
+    "matched": 20890,
+    "missing": 0,
+    "embryos": 12,
+    "sex_embryos": {
+      "female": 9,
+      "male": 3
+    },
+    "input_sha256": "50efd24c22d0eac00d48c6a4b561755ffa33c97147f2af2d12b988bf9cc24ccd"
+  },
+  {
+    "gene": "Dnmt3b",
+    "whitelist": 25408,
+    "matched": 25408,
+    "missing": 0,
+    "embryos": 8,
+    "sex_embryos": {
+      "female": 6,
+      "male": 2
+    },
+    "input_sha256": "800c2d767bab0e6c8804e0ca786170234526b7daf1c1baf263bc41d9f6dda245"
+  },
+  {
+    "gene": "Ehmt2",
+    "whitelist": 20389,
+    "matched": 20389,
+    "missing": 0,
+    "embryos": 11,
+    "sex_embryos": {
+      "female": 6,
+      "male": 5
+    },
+    "input_sha256": "fa626e154d8aba25efd26cb8f84aac70b6486d0656607c28529d045c3497bde1"
+  },
+  {
+    "gene": "Kmt2b",
+    "whitelist": 15603,
+    "matched": 15603,
+    "missing": 0,
+    "embryos": 10,
+    "sex_embryos": {
+      "male": 6,
+      "female": 4
+    },
+    "input_sha256": "ff3ab16209e483ea5025c4883c1ea75a92aee2f3bc6d165b31515c019b26dddc"
+  }
+]

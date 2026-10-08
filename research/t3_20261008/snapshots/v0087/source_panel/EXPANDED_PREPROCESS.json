@@ -1,0 +1,54 @@
+[
+  {
+    "gene": "Dnmt1",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 139357103,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 277091,
+    "seconds": 37.20426630973816,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Dnmt1_raw_panel.h5ad",
+    "sha256": "50efd24c22d0eac00d48c6a4b561755ffa33c97147f2af2d12b988bf9cc24ccd"
+  },
+  {
+    "gene": "Dnmt3b",
+    "raw_matrix_shape": [
+      31053,
+      1474560
+    ],
+    "nnz": 153833073,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 225067,
+    "seconds": 38.80641436576843,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Dnmt3b_raw_panel.h5ad",
+    "sha256": "800c2d767bab0e6c8804e0ca786170234526b7daf1c1baf263bc41d9f6dda245"
+  },
+  {
+    "gene": "Ehmt2",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 139969238,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 417721,
+    "seconds": 40.223273277282715,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Ehmt2_raw_panel.h5ad",
+    "sha256": "fa626e154d8aba25efd26cb8f84aac70b6486d0656607c28529d045c3497bde1"
+  },
+  {
+    "gene": "Kmt2b",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 128018326,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 393773,
+    "seconds": 37.49114012718201,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Kmt2b_raw_panel.h5ad",
+    "sha256": "ff3ab16209e483ea5025c4883c1ea75a92aee2f3bc6d165b31515c019b26dddc"
+  }
+]

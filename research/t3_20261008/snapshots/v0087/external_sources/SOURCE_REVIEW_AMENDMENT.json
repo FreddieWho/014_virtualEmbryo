@@ -1,0 +1,11 @@
+{
+  "parent_review": "SOURCE_REVIEW.json",
+  "additional_limitations": [
+    "WT E8.5 chemistry v2 versus at least Kdm2b v3: assay batch confounding requires technical controls",
+    "WT E8.5 sex composition 8F/2M versus Dnmt3a1F/9M, Kmt2a3F/8M,Kdm2b4F/6M",
+    "GEO WT copied description says E8.0 but title/characteristics/archive and publisher annotation say E8.5; retain discrepancy and rely on convergent explicit fields"
+  ],
+  "embryo_metadata_recovered": true,
+  "classification_unchanged": "ALLOWED",
+  "reason": "No new protected target data; technical confounds affect scientific inference"
+}

@@ -1,0 +1,27 @@
+{
+  "00": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.0030133564432617277,
+    "null_genes_shared_closure_spread": 7.571812410400725e-07
+  },
+  "10": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.00317120470572263,
+    "null_genes_shared_closure_spread": 7.517948709123701e-07
+  },
+  "01": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.0028618969099625247,
+    "null_genes_shared_closure_spread": 7.571812410400725e-07
+  },
+  "11": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.00317120470572263,
+    "null_genes_shared_closure_spread": 7.517948709123701e-07
+  },
+  "own_gene_subtraction_max_error": 3.3527612686157227e-08
+}

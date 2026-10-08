@@ -1,0 +1,366 @@
+[
+  {
+    "fold": 0,
+    "model": "identity",
+    "sha256": "ed399f55c97ce26d984c690f5fa88d4e35d1d57d6ad37ace3a68cfa5ebbe3294",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 0,
+    "positive_to_zero": 1403,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997620629976,
+      9999.998160292775,
+      9999.99998853507,
+      10000.001792820514,
+      10000.002359180855
+    ],
+    "detection": 0.07703181635118808,
+    "positive_quantiles": [
+      3.3649814128875732,
+      5.073485851287842,
+      7.516288757324219
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "global_shift",
+    "sha256": "c5db532bf1363119de53a735f8771d743f3bf52afcaf133f90c70b58b7afe46d",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 2022643,
+    "positive_to_zero": 1403,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997576796843,
+      9999.998791746244,
+      9999.999996592647,
+      10000.00112001916,
+      10000.002563258546
+    ],
+    "detection": 0.6200961202846019,
+    "positive_quantiles": [
+      0.00047363377903820954,
+      0.08161864429712296,
+      6.467242960929845
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "composition",
+    "sha256": "90d96be3f8f4373390f182a64b751fce6c99726e507a3ac8f87ebc222f5d2843",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 232119,
+    "positive_to_zero": 212920,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997654302451,
+      9999.998182498803,
+      9999.999986828465,
+      10000.001632198206,
+      10000.002385803653
+    ],
+    "detection": 0.08256329708685729,
+    "positive_quantiles": [
+      3.2605035305023193,
+      4.968820571899414,
+      7.458378314971924
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "state_shift",
+    "sha256": "7d9c3d6d78af94a95bd54ffa5ad36c8b9ef060f579f316b7cda778e9f6d4be7f",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 1924174,
+    "positive_to_zero": 1403,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.99688442734,
+      9999.99850685554,
+      10000.000003662932,
+      10000.001515111711,
+      10000.003516738525
+    ],
+    "detection": 0.5936579406631762,
+    "positive_quantiles": [
+      0.0004810583702055737,
+      0.07408485561609268,
+      6.531764278411877
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "within_joint",
+    "sha256": "87140c9b0ecaed3b413fe589d9f830f75d74a927022a21fc8ef847a90368a370",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 208757,
+    "positive_to_zero": 177497,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.99789691977,
+      9999.998624182164,
+      10000.000216062765,
+      10000.001826100093,
+      10000.002380300986
+    ],
+    "detection": 0.08580158410524903,
+    "positive_quantiles": [
+      3.14086651802063,
+      4.940848350524902,
+      7.4473347663879395
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "combined_joint",
+    "sha256": "514ddf8d9fa906ddff36180a1bfff5ebc92c35aafccc871cc8665d986ffbe648",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 268292,
+    "positive_to_zero": 208440,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997763854635,
+      9999.998629894573,
+      10000.000209599155,
+      10000.001824439536,
+      10000.002351352925
+    ],
+    "detection": 0.09347831923748154,
+    "positive_quantiles": [
+      3.0934319496154785,
+      4.799765586853027,
+      7.419180870056152
+    ]
+  },
+  {
+    "fold": 0,
+    "model": "state_gene_shuffle",
+    "sha256": "c5f0b731d42b40291d2b9ec3c0d7fc6ac94cfd95a21774f6a57d464e4bb0bfb2",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 1886977,
+    "positive_to_zero": 1431,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.996341974982,
+      9999.997790565978,
+      10000.000007782095,
+      10000.002193475511,
+      10000.003617187123
+    ],
+    "detection": 0.583663310511478,
+    "positive_quantiles": [
+      0.0004655167300370522,
+      0.07305614277720451,
+      6.435554280281076
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "identity",
+    "sha256": "5be4116303ee4b073a0a0586a3f004b48cf9e19ea9691f15a1f47419eb3f6b22",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 0,
+    "positive_to_zero": 1391,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.99763743987,
+      9999.998066495322,
+      9999.999994984115,
+      10000.001772655587,
+      10000.002385803653
+    ],
+    "detection": 0.07793583031279366,
+    "positive_quantiles": [
+      3.3331692218780518,
+      5.057837009429932,
+      7.501371383666992
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "global_shift",
+    "sha256": "a16574bb52aa3bf895f9829813c0a7f1ea89f6cc043dac0222b628cf32f5b06f",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 1981277,
+    "positive_to_zero": 1391,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997800955545,
+      9999.99879919024,
+      9999.99999805047,
+      10000.001172448237,
+      10000.002351740684
+    ],
+    "detection": 0.6098936770036246,
+    "positive_quantiles": [
+      0.0006244354113005102,
+      0.0790153294801712,
+      6.462974529266358
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "composition",
+    "sha256": "2b0e4bd455a8041166e28e74cd96a1735fc7c60f9c0ace7dedac8fcece50816c",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 216101,
+    "positive_to_zero": 219094,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997573574685,
+      9999.998055389498,
+      9999.99999990443,
+      10000.001806024617,
+      10000.002372121817
+    ],
+    "detection": 0.07750570546382064,
+    "positive_quantiles": [
+      3.3176615238189697,
+      5.057837009429932,
+      7.49111270904541
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "state_shift",
+    "sha256": "0aee32a4efcc8f7acd3af000f1aa45401f097d3d20a9ba5430bba82952dc0645",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 1944959,
+    "positive_to_zero": 1391,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997080052011,
+      9999.99883312925,
+      10000.000003736845,
+      10000.0013156067,
+      10000.002582986566
+    ],
+    "detection": 0.6001425694724124,
+    "positive_quantiles": [
+      0.000525448506232351,
+      0.07337318360805511,
+      6.527402734756469
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "within_joint",
+    "sha256": "5a6434af432ae457c1eaa832114d8cd73f246cdea11f43110422268842da423f",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 218704,
+    "positive_to_zero": 174148,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997848136052,
+      9999.998524402534,
+      10000.000220461332,
+      10000.001954546537,
+      10000.00237551495
+    ],
+    "detection": 0.09027225130890053,
+    "positive_quantiles": [
+      3.1261680126190186,
+      4.874205589294434,
+      7.402661323547363
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "combined_joint",
+    "sha256": "e56ef47a88ec296d9337027fdca9c3795d76fb2a31086d8235f0e7100a8d80e7",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 264979,
+    "positive_to_zero": 211622,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997666861987,
+      9999.998534437635,
+      10000.000189359213,
+      10000.001901505395,
+      10000.002384904152
+    ],
+    "detection": 0.09263525305410122,
+    "positive_quantiles": [
+      3.059889793395996,
+      4.836281776428223,
+      7.386410713195801
+    ]
+  },
+  {
+    "fold": 1,
+    "model": "state_gene_shuffle",
+    "sha256": "c02bf2cbf44163deaf4d55db5609f0d6902f3a227a0960d9bb90e3eb10626e09",
+    "serialization": "PASS",
+    "normalization": "PASS",
+    "zero_to_positive": 1931695,
+    "positive_to_zero": 1408,
+    "shape": [
+      7449,
+      500
+    ],
+    "row_expm1_sum_quantiles": [
+      9999.997593966531,
+      9999.998835661389,
+      9999.999997619816,
+      10000.001307862176,
+      10000.002706710802
+    ],
+    "detection": 0.5965767217076118,
+    "positive_quantiles": [
+      0.0006047827418660745,
+      0.08646317198872566,
+      6.4623318481445295
+    ]
+  }
+]

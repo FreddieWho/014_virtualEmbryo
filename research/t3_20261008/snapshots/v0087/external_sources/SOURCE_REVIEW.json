@@ -1,0 +1,50 @@
+{
+  "task": "T3:gata4",
+  "policy_version": "T3_EXTERNAL_DATA_20260921",
+  "classification": "ALLOWED",
+  "scope": "Only Dnmt3a, Kmt2a, Kdm2b single-gene zygotic KO E8.5 and GSE122187 WT E8.5, plus WT-only state kernels across E6.5-E8.5; no other task reuse",
+  "condition_allowlist": [
+    "Dnmt3a",
+    "Kmt2a",
+    "Kdm2b",
+    "WT"
+  ],
+  "sample_allowlist": [
+    "GSM4405458",
+    "GSM4405459",
+    "GSM4075611",
+    "GSM4075612",
+    "GSM4075599",
+    "GSM4075600",
+    "GSM3457440",
+    "GSM3457441"
+  ],
+  "prohibited_records_remaining_in_selected_scope": 0,
+  "license_status": "PERMITTED_UNDER_GEO_DATA_POLICY",
+  "license_basis": "NCBI GEO imposes no restrictions on data use/distribution; author-deposited measurements and metadata show no contrary data-specific restriction. No claim of CC licensing is made. Article academic-manuscript terms and GPL3 code license are not used to license the numerical dataset. Retain attribution, accession IDs and source processing disclosure.",
+  "license_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+  "phenotype_review": {
+    "Dnmt3a": "Single Dnmt3a KO has postnatal viability phenotype with neuronal abnormalities; primary study E8.5 chromatin perturbation, not conditional cardiac Gata4/Gata6 dosage or beta-catenin deletion. No identified comparable cardiac phenocopy in selected context.",
+    "Kmt2a": "Primary study explicitly reports normal advancement through E8.5 (Results: Epigenetic deregulation at E6.5); trithorax methyltransferase perturbation, not same target allele or identified cardiac phenocopy.",
+    "Kdm2b": "Primary study reports production of mature cell types and insufficient deregulation to substantially alter early embryo patterning; distinct from severe Eed/Rnf2 arrest. Shared developmental regulation is not itself phenocopy.",
+    "WT": "Explicit WT controls from original same-laboratory gastrulation compendium used by study. E8.5 restriction for Task 2 is not applied to Task 3; no Gata4/beta-catenin KO."
+  },
+  "unselected": "All other conditions outside permit, without declaring them prohibited. Eed/Rnf2/L3mbtl2 severe arrest deferred for separate review.",
+  "uses": [
+    "source support audit",
+    "within-state response contrasts against source WT",
+    "cross-perturbation training and genotype-held-out diagnostic"
+  ],
+  "limitations": [
+    "No Gata4 causal-effect identification",
+    "Zygotic whole-embryo perturbation differs from mesoderm-lineage conditional deletion",
+    "Libraries a/b are technical cell partitions, not independent biological replicates; require SNP embryo assignments for proper embryo validation",
+    "WT kernel stage states do not establish causal perturbation signs"
+  ],
+  "download_limits": {
+    "total_bytes": 2100000000,
+    "per_file_bytes": 650000000
+  },
+  "training_permission": "Only integrity-verified completed files subsequently hash-bound in TASK_DATA_PERMIT.json"
+}

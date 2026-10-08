@@ -1,0 +1,17 @@
+{
+  "permit_check": "PASS",
+  "panel_order": "PASS",
+  "shape": [
+    5454,
+    500
+  ],
+  "all_finite_nonnegative": true,
+  "counts_match_frozen_receipt": true,
+  "barcode_plan_hash_matches_frozen_receipt": true,
+  "expression_array_sha256": "6fcbecd0da0974ad57d3f100094df765f08d53b48d9b8fa7c73f4fd0638e2575",
+  "validation_reader_environment": {
+    "anndata": "0.11.4",
+    "numpy": "2.3.5",
+    "pandas": "3.0.6"
+  }
+}

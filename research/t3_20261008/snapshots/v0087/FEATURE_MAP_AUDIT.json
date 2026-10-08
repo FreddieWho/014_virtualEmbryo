@@ -1,0 +1,12 @@
+{
+  "WT": {
+    "unique": 500,
+    "missing": [],
+    "duplicates": {}
+  },
+  "KO_shared": {
+    "unique": 500,
+    "missing": [],
+    "duplicates": {}
+  }
+}

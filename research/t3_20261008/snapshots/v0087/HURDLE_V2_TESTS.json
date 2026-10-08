@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic implementation tests only; no biological validation",
+  "checks": [
+    "Heldout KO poisoning leaves fit/output byte-identical",
+    "Holdout gene omitted from training",
+    "Missing gene identity prior blocks prediction",
+    "Finite closure10000",
+    "Locked knockout zero",
+    "Composition/within joint output shapes",
+    "Three identity model controls"
+  ]
+}

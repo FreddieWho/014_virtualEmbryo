@@ -1,0 +1,20 @@
+{
+  "schema": "t3.go.reconstruction.v1",
+  "embedding_path": "/workspace/shared/t3source/GO_EMBEDDING.npz",
+  "sha256": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+  "expected_sha256": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+  "byte_identical": true,
+  "all_frozen_go_input_hashes_match": true,
+  "original_code_sha256": "7e5723c81c5e7d60c7d4549a6216ab3b11135f959350c2c6ffdabedd5463ce64",
+  "embedding_shape": [
+    526,
+    128
+  ],
+  "no_perturbation_outcomes": true,
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "sklearn": "1.8.0"
+  },
+  "seed": 20260930
+}

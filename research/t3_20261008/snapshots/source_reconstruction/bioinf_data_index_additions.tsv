@@ -1,0 +1,3 @@
+path	source	role	sha256	status
+/workspace/shared/t3source/expression.h5ad	GSE261783 GSM8151756/57 frozen allowlist	SIGNED_RESPONSE	d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f	RECONSTRUCTED_VERSION; original review retained
+/workspace/shared/t3source/GO_EMBEDDING.npz	GO frozen inputs + original SVD recipe	ONTOLOGY_ONLY	acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d	BYTE_IDENTICAL_RESTORATION

@@ -1,0 +1,31 @@
+{
+  "candidate_id": "v0087",
+  "method": "Generic seven-KO embryonic state-response hurdle-v2 with composition resampling",
+  "status": "scored",
+  "board": "T3:gata4",
+  "portal_filename": "t3_gata4__embhurdle__v0087.h5ad",
+  "upload_path": "/workspace/shared/t3_state_response_20261008/v0087/t3_gata4__embhurdle__v0087.h5ad",
+  "upload_sha256": "b0cfdf5e870f762185efd9f2bdc803cab26ecb0a54e18a870286d41165ce5fc9",
+  "upload_bytes": 2642532,
+  "model_display": "t3_gata4__embhurdle__v0087",
+  "architecture_entered": "7KO Hurdle; GSE137337+GSE122187+GO; full sources in uns",
+  "headline_score": 53.42,
+  "submitted_display": "2026-10-08 10:47",
+  "submitted_timezone": "NOT_LABELLED_BY_UI",
+  "observed_at_utc": "2026-10-08T10:48:14Z",
+  "per_metric_skill": {
+    "de_score": 41.7,
+    "de_direction": 51.2,
+    "severity_slope": 75.0,
+    "mmd_u": 49.7,
+    "variogram": 42.3
+  },
+  "previous_best": {
+    "candidate_id": "v0084",
+    "score": 49.55
+  },
+  "delta_from_previous_best": 3.87,
+  "optional_website_format_precheck_used": false,
+  "raw_metric_values": "NOT_DISPLAYED",
+  "source": "Visible authenticated official submission detail page"
+}

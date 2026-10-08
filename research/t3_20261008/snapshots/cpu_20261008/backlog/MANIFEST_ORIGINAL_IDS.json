@@ -1,0 +1,112 @@
+{
+  "status": "CANDIDATES_READY_NOT_SUBMITTED",
+  "date": "2026-10-08",
+  "source_KO": "only approved GSE261783 adult cardiac fibroblast OP2 resting26 conditions",
+  "embryo_training": "official E8.75 WT",
+  "target_truth_used": false,
+  "donor": "Yy1",
+  "inputs": {
+    "/workspace/shared/virtual_embryo_data/E8.75.h5ad": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+    "/workspace/shared/t3source/expression.h5ad": "d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f",
+    "/workspace/shared/t3source/GO_EMBEDDING.npz": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+    "/workspace/shared/t3source/SOURCE_MANIFEST.json": "9c47fb774be9e62eb162b617aff6235d196fb90ed8eb8e7894b8bc4ecd32c043",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/baseline_compat_v2/hurdle_rebuild.h5ad": "25621bb66d403832367874c7b52790bf8e5401b24b784ef1fbc2b871f671f6ae",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/baseline/hurdle_model.pkl": "8f53856a58d654999eb305777731b42306ffbf09caaaf95a22594bd03a4b531a",
+    "/workspace/shared/t3cpu/scripts/t3_autoresearch/retained_model.py": "691d89ca9bbbec94aa8f246e638109f1b11c7834d0c315f65bee33f4a4205157",
+    "/workspace/shared/t3cpu/scripts/t3_six2/deliver.py": "5668df1a762b666062a48cf0ba7d4f49711b8fc96af6df21f53b5732f85314ce",
+    "/workspace/shared/t3cpu/scripts/t3_next/five_ops.py": "42791d3197402abe871b81ebf98e844ff7ee5fc777dff125b8133912c85bc3a9",
+    "/workspace/shared/t3cpu/experiments/cpu_20261008/SCORER_LOCK.json": "f7ae191c52364f25f43bd46d3a1a021313d099d6ad642ec2e0b0ae909f6d7846"
+  },
+  "source_serialization_notice": "new source H5AD from verified original raw GEO hashes and frozen barcode selection; GO byte-identical",
+  "parent_rebuild": "historical v0048 algorithm and row seed reproduced; 301307 changed entries,1354 affected rows; original parent bytes unavailable",
+  "candidates": [
+    {
+      "candidate_id": "v0083",
+      "original_candidate": "v0083",
+      "original_sha256": "c7e74287b68a3a1d33cf93143abb02e898ead11d8f1d8a0214a1addf3557f444",
+      "original_byte_identity": false,
+      "recipe": "o3_psb",
+      "params": "psb",
+      "path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0083/submission.h5ad",
+      "sha256": "8232a607865f4e92d92b027251cc1e59212792b82466086a79b4ad669333c657",
+      "array_sha256": "938461817b8fe4cc682ff0478a044e168dbd61dc35d85d8c798126cd71399eb1",
+      "portal_filename": "t3_gata4__repropsb__v0083.h5ad",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "changed_entries_vs_parent": 459625,
+      "density": 0.16216673378977045,
+      "response_mean_max_abs": 0.07301187515258789,
+      "upload_path": "/workspace/shared/t3cpu/experiments/cpu_20261008/backlog/uploads_original_ids/t3_gata4__repropsb__v0083.h5ad",
+      "prior_metadata_only_artifact": {
+        "path": "/workspace/shared/t3cpu/submissions/candidates/T3_gata4/v0086_repro_psb/submission_disclosed.h5ad",
+        "sha256": "e17266214a49ffbee6c6d99787440e9b2132efa583d1bfbe3aaeb2a85d2d3577",
+        "unused_candidate_id": "v0086"
+      },
+      "contract_path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0083/contract.json",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true
+    },
+    {
+      "candidate_id": "v0084",
+      "original_candidate": "v0084",
+      "original_sha256": "c8cba8be882a43bfe4af7f5697c8efe16c189b54792ab169fd237146f40f3f0d",
+      "original_byte_identity": false,
+      "recipe": "n1_qtl",
+      "params": "q0.25",
+      "path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0084/submission.h5ad",
+      "sha256": "d7af1cef61e032210f9af502684a8b8a95f5a79bef79f79e15634daa556f6230",
+      "array_sha256": "a93f267c18afd2986e359a1d3cc6202ea1b39016cdb16401c28c47bb68e4361e",
+      "portal_filename": "t3_gata4__reproqtl__v0084.h5ad",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "changed_entries_vs_parent": 313505,
+      "density": 0.16216673378977045,
+      "response_mean_max_abs": 0.5488705635070801,
+      "upload_path": "/workspace/shared/t3cpu/experiments/cpu_20261008/backlog/uploads_original_ids/t3_gata4__reproqtl__v0084.h5ad",
+      "prior_metadata_only_artifact": {
+        "path": "/workspace/shared/t3cpu/submissions/candidates/T3_gata4/v0087_repro_qtl/submission_disclosed.h5ad",
+        "sha256": "68fb30bd71e15445c0b289dab8b5ed34d272182d676cb7305c5895542bc7c16a",
+        "unused_candidate_id": "v0087"
+      },
+      "contract_path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0084/contract.json",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true
+    },
+    {
+      "candidate_id": "v0085",
+      "original_candidate": "v0085",
+      "original_sha256": "e3ded141f62dda83cb17ad96b5458e65b71f4a8bc24247f4d5856a0522d9cc6a",
+      "original_byte_identity": false,
+      "recipe": "n2_dsign",
+      "params": "g0.5",
+      "path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0085/submission.h5ad",
+      "sha256": "8cfbc8950216f8848969f26bb1973c9c52b8efd4c85c49ab15c17c7b16246418",
+      "array_sha256": "5f83c81fc005c7d8c87132c83151c5d4b5e2fb3b79c053d8ff4cab5f22cfd839",
+      "portal_filename": "t3_gata4__reprodsign__v0085.h5ad",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "changed_entries_vs_parent": 228019,
+      "density": 0.16216673378977045,
+      "response_mean_max_abs": 0.1408097743988037,
+      "upload_path": "/workspace/shared/t3cpu/experiments/cpu_20261008/backlog/uploads_original_ids/t3_gata4__reprodsign__v0085.h5ad",
+      "prior_metadata_only_artifact": {
+        "path": "/workspace/shared/t3cpu/submissions/candidates/T3_gata4/v0088_repro_dsign/submission_disclosed.h5ad",
+        "sha256": "754d31871b36daa33dc09adbeabef50a5d8bfd12d0e8bff5c62aaac8d0002f03",
+        "unused_candidate_id": "v0088"
+      },
+      "contract_path": "/workspace/shared/t3cpu/artifacts/reproductions/20261008/v0085/contract.json",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true
+    }
+  ],
+  "identity_policy": "User explicitly requested original candidate IDs83/84/85. Historical SHA preserved separately; current reconstruction hash authoritative for this upload, not original-byte identity."
+}

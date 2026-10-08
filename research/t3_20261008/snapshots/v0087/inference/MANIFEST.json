@@ -1,0 +1,22 @@
+{
+  "purpose": "Inference needs only state_emitter, generic_response, WT_carrier and exact emitter code; no KO outcomes at inference",
+  "frozen_expression_sha256": "2420c6b992fed7c431bf2cf4a4fb30d630fcba9bafa8d9b5898b5caae4db1f98",
+  "exact_match_to_v0087": true,
+  "training_genotypes": [
+    "Dnmt1",
+    "Dnmt3a",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kdm2b",
+    "Kmt2a",
+    "Kmt2b"
+  ],
+  "source_selection": "mean_combined",
+  "model_pickle_warning": "Trusted project artifact; unpickle only these hash-verified files",
+  "files": {
+    "generic_response.npz": "da0b135906e7c8f4dc00867107178c6000bad7244a1e4121eed153d443c57a9e",
+    "WT_carrier7449.h5ad": "9789e1236c8342fa2d863676edcfb10c9528bd7e791f607613a58821692dda57",
+    "expected_donor_rows.npy": "05ccdc901ff45c628c2182b524c2a7c5d5c7a6c12c154343d96b27fb33c36aeb",
+    "state_emitter.joblib": "35f61567e91c7e8a55b660a8d0f006f415fb2f4075a88f8dcb5056d7f7a3a4f1"
+  }
+}

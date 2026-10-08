@@ -1,0 +1,20 @@
+{
+  "candidate_id": "v0087",
+  "parent_selected": "v0084",
+  "variant": "all_supported",
+  "file": "/workspace/shared/t3_state_response_20261008/v0087/t3_gata4__embhurdle__v0087.h5ad",
+  "sha256": "b0cfdf5e870f762185efd9f2bdc803cab26ecb0a54e18a870286d41165ce5fc9",
+  "array_sha256": "2420c6b992fed7c431bf2cf4a4fb30d630fcba9bafa8d9b5898b5caae4db1f98",
+  "frozen_source": "/workspace/shared/t3_state_response_20261008/deployment_diagnostics/gata4_all_supported.h5ad",
+  "frozen_source_sha256": "d845759d0e04f0ee0db74c2877e4fbf4f6d2889ccad448da518d29392af24a2b",
+  "frozen_expression_exact": true,
+  "geometry_parent_exact": true,
+  "shape": [
+    7449,
+    500
+  ],
+  "contract": "PASS",
+  "submitted": false,
+  "source_licenses_disclosed": true,
+  "target_truth_used": false
+}

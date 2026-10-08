@@ -1,0 +1,14 @@
+{
+  "arm": "conditional",
+  "expression_sha256": "7cfe4e0cfcfe1a76c003e25eed7d3fab58868f1d6d5dd7cb6b0ab14b3dddf77c",
+  "files": {
+    "crossko_hurdle_v2.py": "9ddcbc7bb2889e086e915f71e8ed056baca8c7463868e7656a9f70a1389add13",
+    "generic_response.npz": "da0b135906e7c8f4dc00867107178c6000bad7244a1e4121eed153d443c57a9e",
+    "state_emitter.joblib": "35f61567e91c7e8a55b660a8d0f006f415fb2f4075a88f8dcb5056d7f7a3a4f1",
+    "expected_donor_rows.npy": "05ccdc901ff45c628c2182b524c2a7c5d5c7a6c12c154343d96b27fb33c36aeb",
+    "replay.py": "effdecef12a745d7eb2b314238b70e36fc484ec65a28ef58b9516679a45d88ca",
+    "crossko.py": "efef85f8165d4a0a0934d6a522a56d76b67a26eb963b7e142dd97b8b3013dd67",
+    "emitter_v88.py": "d678765d83cefce5a5eacb167ce3357769ff9569a8195c139261413c53de3914",
+    "WT_carrier7449.h5ad": "9789e1236c8342fa2d863676edcfb10c9528bd7e791f607613a58821692dda57"
+  }
+}

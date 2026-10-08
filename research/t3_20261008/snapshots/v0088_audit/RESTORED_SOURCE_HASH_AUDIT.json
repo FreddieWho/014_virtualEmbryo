@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "source_files": 13,
+  "total_bytes": 4362519944,
+  "all_hashes_bound_in_immutable_original_manifests": true,
+  "records": [
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.matrix.mtx.gz",
+      "sha256": "1ed3b6c6b454ffaf161aa2c255eb033c9496775e744258d58aa0f1c0a9ed089e",
+      "bytes": 413636952
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.barcodes.tsv.gz",
+      "sha256": "1c1f4e67a07418f9f7dce03f24e8a2d6d6445019322ca907e376140a6ffde18c",
+      "bytes": 41842630
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KMT2A_E8.5_1ab.tar.gz",
+      "sha256": "19168fa16c7f2d7371636366e131102c43a1223a503511229142170d772dadaa",
+      "bytes": 615542703
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KDM2B_E8.5_1ab.tar.gz",
+      "sha256": "578877c07c4ca5060349fbe05213913a0e8ffa2a6c4c0b7fa5319772d90ea575",
+      "bytes": 622067715
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_WT_E8.5_1ab.tar.gz",
+      "sha256": "68a9959357ed1482a2c01273c7749b137928706da06b68e7c57183adae3d889a",
+      "bytes": 290002631
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_CellStateKernels.xls.gz",
+      "sha256": "4d3a077aa9480be1637b036fba8bb46401ddfce338b7bac5a3e6f828e32d4308",
+      "bytes": 327106
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/GSE137337_features.gz",
+      "sha256": "59c1d83859265d492df1396732a121211c0cd5811542199e1b22debb7d384837",
+      "bytes": 279361
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_DNMT1_E8.5_1ab.matrix.mtx.gz",
+      "sha256": "02fe819bb95f54b7026add662a61ad4ff8481cef1c9edef72793a3d233fbc698",
+      "bytes": 561170750
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_DNMT1_E8.5_1ab.barcodes.tsv.gz",
+      "sha256": "9d1d73e2d3ae5a03f64ea44d62bf4a791dda4e78a705bba1cc0ab735482540a4",
+      "bytes": 41842630
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_DNMT1_E8.5_1ab.features.tsv.gz",
+      "sha256": "fdde9f11d877204e0a0683f33a6257010a8bb99d278b098dc7bf29db12d2c91a",
+      "bytes": 279361
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_DNMT3B_E8.5_1ab.tar.gz",
+      "sha256": "ed8fe5e4e3972722fa1502177d48ca22ed6e1f67484ced6e83209f3896d45ac3",
+      "bytes": 609745384
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_G9A_E8.5_1ab.tar.gz",
+      "sha256": "6820fd0de453a598dc3d5df7361b8f570abd1562f2deba8c513bb5c69522b7b0",
+      "bytes": 605698779
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted_expanded/GSE137337_KMT2B_E8.5_1ab.tar.gz",
+      "sha256": "a842c8f5f64ee836bdcf8b2e612549e98eef5bd679a1ea2d40cee2bdec4c7848",
+      "bytes": 560083942
+    }
+  ]
+}

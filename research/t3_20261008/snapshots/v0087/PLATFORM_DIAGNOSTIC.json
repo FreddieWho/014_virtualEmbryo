@@ -1,0 +1,72 @@
+{
+  "scope": "Untreated-only source10x versus targetMERFISH technical/state comparison; no heldout outcome",
+  "statistics": [
+    {
+      "name": "source_WT10x",
+      "cells": 21825,
+      "detection": 0.11866254295532647,
+      "positive_quantiles": [
+        2.195094108581543,
+        3.926936149597168,
+        8.020117530822752
+      ],
+      "row_expm1_quantiles": [
+        9999.996926904594,
+        10000.000151809409,
+        10000.003275463627
+      ]
+    },
+    {
+      "name": "target_WT_MERFISH",
+      "cells": 24826,
+      "detection": 0.1049833239345847,
+      "positive_quantiles": [
+        3.0312860012054443,
+        4.605269432067871,
+        7.294097423553467
+      ],
+      "row_expm1_quantiles": [
+        9999.996093863016,
+        10000.000001554354,
+        10000.003109090794
+      ]
+    }
+  ],
+  "target_outside95": 0.2816402159026827,
+  "target_celltype_support": {
+    "NCC": 0.8035069623517277,
+    "Unknown": 0.4921203438395415,
+    "V-CSE": 0.9551954242135368,
+    "Allantois": 0.7777777777777778,
+    "d-CSE": 0.8866544789762341,
+    "Intra-Endoth-1": 0.5375375375375375,
+    "aPHM": 0.815359477124183,
+    "Intra-Endoth-2": 0.1323155216284987,
+    "a-FG": 0.7761627906976745,
+    "HEM-Endoth": 0.2727272727272727,
+    "PAM-4": 0.36309523809523814,
+    "D-FG": 0.5718390804597702,
+    "Neural Tube": 0.8218666666666666,
+    "PAM-2": 0.9436936936936937,
+    "PAM-1": 0.9225806451612903,
+    "EXE-Endoderm": 0.48571428571428577,
+    "Lateral FG": 0.7029478458049887,
+    "ExEM-2": 0.6622516556291391,
+    "Endo": 0.6705263157894736,
+    "Forebrain": 0.7777777777777778,
+    "ExEM-1": 0.6541717049576783,
+    "SOM": 0.6097560975609756,
+    "Peri": 0.9861111111111112,
+    "JCF": 0.9624413145539906,
+    "V-CM": 0.5881826320501342,
+    "Caudal Epiblast": 0.6170212765957447,
+    "pSE": 0.8666666666666667,
+    "LPM": 0.5365853658536586,
+    "Gut Endoderm": 0.5892857142857143,
+    "PAM-3": 0.6919642857142857,
+    "pPHM": 0.7888324873096446,
+    "Hindgut": 0.75,
+    "IFT-CM": 0.5501285347043702
+  },
+  "warning": "Same nominal panel closure does not align detection, state resolution or response amplitude; distance thresholds are descriptive, not calibrated probability"
+}

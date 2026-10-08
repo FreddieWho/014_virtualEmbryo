@@ -1,0 +1,95 @@
+[
+  {
+    "stage": "mab",
+    "variant": "all_supported",
+    "exact_emitter_replay": "PASS",
+    "rowwise_recipient_zero_to_positive": 242354,
+    "donor_relative_zero_to_positive": 48667,
+    "donor_relative_positive_to_zero": 28222,
+    "donor_outside95_fraction": 0.3395086588803866,
+    "recipient_outside95_fraction": 0.39052221774734863,
+    "source_state_counts_before": [
+      3019,
+      6,
+      258,
+      2170,
+      3,
+      743,
+      1228,
+      22
+    ],
+    "source_state_counts_after_sampling": [
+      3739,
+      8,
+      168,
+      2147,
+      3,
+      655,
+      696,
+      33
+    ],
+    "note": "Source state is sampled WT donor identity, not target-trained celltype or inferred post-perturbation fate; coordinates kept at recipient slots"
+  },
+  {
+    "stage": "gata4",
+    "variant": "all_supported",
+    "exact_emitter_replay": "PASS",
+    "rowwise_recipient_zero_to_positive": 297389,
+    "donor_relative_zero_to_positive": 48980,
+    "donor_relative_positive_to_zero": 29411,
+    "donor_outside95_fraction": 0.2733252785608807,
+    "recipient_outside95_fraction": 0.28325949791918376,
+    "source_state_counts_before": [
+      1636,
+      1,
+      148,
+      2467,
+      1169,
+      567,
+      1435,
+      26
+    ],
+    "source_state_counts_after_sampling": [
+      2275,
+      1,
+      94,
+      2699,
+      875,
+      559,
+      898,
+      48
+    ],
+    "note": "Source state is sampled WT donor identity, not target-trained celltype or inferred post-perturbation fate; coordinates kept at recipient slots"
+  },
+  {
+    "stage": "gata4",
+    "variant": "positive_lineage",
+    "exact_emitter_replay": "PASS",
+    "rowwise_recipient_zero_to_positive": 69102,
+    "donor_relative_zero_to_positive": 10471,
+    "donor_relative_positive_to_zero": 6738,
+    "donor_outside95_fraction": 0.2782923882400322,
+    "recipient_outside95_fraction": 0.28325949791918376,
+    "source_state_counts_before": [
+      1636,
+      1,
+      148,
+      2467,
+      1169,
+      567,
+      1435,
+      26
+    ],
+    "source_state_counts_after_sampling": [
+      1823,
+      1,
+      117,
+      2454,
+      1169,
+      507,
+      1352,
+      26
+    ],
+    "note": "Source state is sampled WT donor identity, not target-trained celltype or inferred post-perturbation fate; coordinates kept at recipient slots"
+  }
+]

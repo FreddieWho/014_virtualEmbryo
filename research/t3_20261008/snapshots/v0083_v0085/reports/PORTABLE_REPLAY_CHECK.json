@@ -1,0 +1,23 @@
+[
+  {
+    "candidate_id": "v0083",
+    "filename": "v0083.h5ad",
+    "sha256": "eefe2963352fe5bc61ca814552ff95dcd144f65113f19bb823a4e1499368d270",
+    "expression_sha256": "938461817b8fe4cc682ff0478a044e168dbd61dc35d85d8c798126cd71399eb1",
+    "exact_expression_match": true
+  },
+  {
+    "candidate_id": "v0084",
+    "filename": "v0084.h5ad",
+    "sha256": "032091f2ad46188512265b371f9e09a2482abe63120e256da52d90d29b1433a4",
+    "expression_sha256": "a93f267c18afd2986e359a1d3cc6202ea1b39016cdb16401c28c47bb68e4361e",
+    "exact_expression_match": true
+  },
+  {
+    "candidate_id": "v0085",
+    "filename": "v0085.h5ad",
+    "sha256": "bc43d1d9878a1cd94faed45d35b87bba25daae439e3562e6a7588b6248e821d1",
+    "expression_sha256": "5f83c81fc005c7d8c87132c83151c5d4b5e2fb3b79c053d8ff4cab5f22cfd839",
+    "exact_expression_match": true
+  }
+]

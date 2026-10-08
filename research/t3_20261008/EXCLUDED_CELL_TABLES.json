@@ -1,0 +1,50 @@
+[
+  {
+    "path": "snapshots/source_reconstruction/filter_report/fibro_actual_keep_cells.tsv",
+    "sha256": "f9bc1a85b6b7879995256537392a053386026c529513118d28dcdb15d5b72572",
+    "bytes": 294548,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/source_reconstruction/filter_report/fibro_planned_keep_samples.tsv",
+    "sha256": "353775af068057fe93643ed5d2f9e80405151221637a68ac7226ffb3dfcfee49",
+    "bytes": 703929,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/source_reconstruction/filter_report/fibro_actual_remove_cells.tsv",
+    "sha256": "6f68c00e8def5fc770a123f9d9197a995e55b53183a2ee18b7f5074b50befea7",
+    "bytes": 284360,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/v0087/deployment_diagnostics/gata4_positive_lineage_row_provenance.csv",
+    "sha256": "cd575bc1cd9394701e9d2e27d21d4b173d4ad034b71032f18473df0035862c28",
+    "bytes": 297543,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/v0087/deployment_diagnostics/gata4_all_supported_DONOR_PROVENANCE.csv",
+    "sha256": "b2137612a1653844fa3b3659611427ad3780b97bd6199174765ed1ce133c08f6",
+    "bytes": 484333,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/v0087/deployment_diagnostics/mab_all_supported_DONOR_PROVENANCE.csv",
+    "sha256": "ed3e0f98f17f2e46b35cfaa3a520713e80bcaeb91dac71ce8d973714f7af3a98",
+    "bytes": 469593,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/v0087/deployment_diagnostics/gata4_all_supported_row_provenance.csv",
+    "sha256": "4e365b594afaf71e7e8d3ed22d0306568b0ce4ec7e6a6a088790e54b5d8eb891",
+    "bytes": 285965,
+    "reason": "Cell-level data excluded from publication"
+  },
+  {
+    "path": "snapshots/v0087/deployment_diagnostics/gata4_positive_lineage_DONOR_PROVENANCE.csv",
+    "sha256": "34bdb3faae9fa7464524be8fdd6341dfe3d4092bae7605a9e8ed05f8d87d621e",
+    "bytes": 489997,
+    "reason": "Cell-level data excluded from publication"
+  }
+]

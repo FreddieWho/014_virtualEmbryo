@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-20",
+  "purpose": "quarantine metadata and input audit only",
+  "model_input": false,
+  "files": [
+    {
+      "name": "GSM8151756_exVivo_OP2_resting_1_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151756/suppl/GSM8151756_exVivo_OP2_resting_1_filtered_feature_bc_matrix.h5",
+      "max_bytes": 700000000,
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/raw/GSM8151756_exVivo_OP2_resting_1_filtered_feature_bc_matrix.h5",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 28857294,
+      "sha256": "a4dd3b3000648093b23a96298603d7c0916cbcb6c696293494d880c2a317fa69",
+      "model_input": false
+    },
+    {
+      "name": "GSM8151757_exVivo_OP2_resting_2_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8151nnn/GSM8151757/suppl/GSM8151757_exVivo_OP2_resting_2_filtered_feature_bc_matrix.h5",
+      "max_bytes": 700000000,
+      "path": "infra/external_data/quarantine/T3-NEXT-R56-20260920/raw/GSM8151757_exVivo_OP2_resting_2_filtered_feature_bc_matrix.h5",
+      "status": "DOWNLOADED_QUARANTINE",
+      "bytes": 30994795,
+      "sha256": "3b1e8782c8c9a4bcf38eca2f1e39c8143592bea7578ad17893efff2d4c78ff46",
+      "model_input": false
+    }
+  ]
+}

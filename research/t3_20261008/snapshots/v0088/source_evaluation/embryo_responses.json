@@ -1,0 +1,362 @@
+[
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo1",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo10",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo3",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo4",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo5",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo6",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo7",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo8",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3a",
+    "embryo": "embryo9",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo1",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo10",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo11",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo3",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo4",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo5",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo6",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo7",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo8",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2a",
+    "embryo": "embryo9",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo1",
+    "sex": "female"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo10",
+    "sex": "female"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo3",
+    "sex": "female"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo4",
+    "sex": "female"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo5",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo6",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo7",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo8",
+    "sex": "male"
+  },
+  {
+    "gene": "Kdm2b",
+    "embryo": "embryo9",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo1",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo10",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo11",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo12",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo3",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo4",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo5",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo6",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo7",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo8",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt1",
+    "embryo": "embryo9",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo1",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo3",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo4",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo5",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo6",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo7",
+    "sex": "female"
+  },
+  {
+    "gene": "Dnmt3b",
+    "embryo": "embryo8",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo1",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo10",
+    "sex": "male"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo11",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo2",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo3",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo4",
+    "sex": "male"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo5",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo6",
+    "sex": "female"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo7",
+    "sex": "male"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo8",
+    "sex": "male"
+  },
+  {
+    "gene": "Ehmt2",
+    "embryo": "embryo9",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo1",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo10",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo2",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo3",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo4",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo5",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo6",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo7",
+    "sex": "male"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo8",
+    "sex": "female"
+  },
+  {
+    "gene": "Kmt2b",
+    "embryo": "embryo9",
+    "sex": "female"
+  }
+]

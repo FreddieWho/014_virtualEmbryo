@@ -1,0 +1,54 @@
+[
+  {
+    "gene": "WT",
+    "raw_matrix_shape": [
+      27998,
+      24780
+    ],
+    "nnz": 93027661,
+    "panel_symbols_found": 498,
+    "retained_panel_positive_droplets": 24780,
+    "seconds": 27.66614818572998,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/WT_raw_panel.h5ad",
+    "sha256": "79902a45835a26e31effd08943c2ad3f227f7f26c78829dce772b147705fdb16"
+  },
+  {
+    "gene": "Dnmt3a",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 102409185,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 274461,
+    "seconds": 26.760162830352783,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Dnmt3a_raw_panel.h5ad",
+    "sha256": "c8627b19f6e0c4288aa6fb2bf3db2c9595b420dbebda1382f3fbacb192a4c492"
+  },
+  {
+    "gene": "Kmt2a",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 141584045,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 399226,
+    "seconds": 38.852256298065186,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Kmt2a_raw_panel.h5ad",
+    "sha256": "7f8f550454d04419945e7c8770c9d32dd0d58cd89083a32a89fa9fe15ff35f1a"
+  },
+  {
+    "gene": "Kdm2b",
+    "raw_matrix_shape": [
+      31053,
+      13589760
+    ],
+    "nnz": 143831473,
+    "panel_symbols_found": 500,
+    "retained_panel_positive_droplets": 393637,
+    "seconds": 38.38361859321594,
+    "output": "/workspace/shared/t3_state_response_20261008/source_panel/Kdm2b_raw_panel.h5ad",
+    "sha256": "934ab0f8bb0ac867378e09485fdb4debf962a08802d4a940dbcc591101662307"
+  }
+]

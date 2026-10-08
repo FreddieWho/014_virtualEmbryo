@@ -1,0 +1,109 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "source_review_sha256": "509a5cbf99aa1fb5d41ec71da2cfd3a50d2910225af9d063b0b02486aae315d8",
+  "review": "/workspace/shared/t3_developmental_sources/SOURCE_REVIEW.json",
+  "files": [
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.matrix.mtx.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_DNMT3A_E8.5_1ab.matrix.mtx.gz",
+      "bytes": 413636952,
+      "sha256": "1ed3b6c6b454ffaf161aa2c255eb033c9496775e744258d58aa0f1c0a9ed089e",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_DNMT3A_E8.5_1ab.barcodes.tsv.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_DNMT3A_E8.5_1ab.barcodes.tsv.gz",
+      "bytes": 41842630,
+      "sha256": "1c1f4e67a07418f9f7dce03f24e8a2d6d6445019322ca907e376140a6ffde18c",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KMT2A_E8.5_1ab.tar.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_KMT2A_E8.5_1ab.tar.gz",
+      "bytes": 615542703,
+      "sha256": "19168fa16c7f2d7371636366e131102c43a1223a503511229142170d772dadaa",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE137337_KDM2B_E8.5_1ab.tar.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_KDM2B_E8.5_1ab.tar.gz",
+      "bytes": 622067715,
+      "sha256": "578877c07c4ca5060349fbe05213913a0e8ffa2a6c4c0b7fa5319772d90ea575",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_WT_E8.5_1ab.tar.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE122nnn/GSE122187/suppl/GSE122187_WT_E8.5_1ab.tar.gz",
+      "bytes": 290002631,
+      "sha256": "68a9959357ed1482a2c01273c7749b137928706da06b68e7c57183adae3d889a",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/admitted/GSE122187_CellStateKernels.xls.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE122nnn/GSE122187/suppl/GSE122187_CellStateKernels.xls.gz",
+      "bytes": 327106,
+      "sha256": "4d3a077aa9480be1637b036fba8bb46401ddfce338b7bac5a3e6f828e32d4308",
+      "status": "VERIFIED_DOWNLOAD"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/GSE137337_features.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137337/suppl/GSE137337_DNMT3A_E8.5_1ab.features.tsv.gz",
+      "bytes": 279361,
+      "sha256": "59c1d83859265d492df1396732a121211c0cd5811542199e1b22debb7d384837",
+      "status": "VERIFIED_DOWNLOAD",
+      "role": "GENE_FEATURE_METADATA"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/Sup_Tab_1_nature.xlsx",
+      "sha256": "458a376158eee437b3dabe7be8d4a2ff893859ef646c7c90bb9c7d2cef52b574",
+      "bytes": 38183,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2552-x/MediaObjects/41586_2020_2552_MOESM4_ESM.xlsx",
+      "role": "METADATA_ONLY_NOT_RESPONSE",
+      "status": "VERIFIED_DOWNLOAD",
+      "scope": "Only selected genotype/WT annotations for training; full other-genotype metadata permissible for source review"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/Sup_Tab_2_nature.xlsx",
+      "sha256": "0d8638513d0bbd30750949ba6993f0d2d358dd1948145c782c792ebe16e80dbe",
+      "bytes": 10732865,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2552-x/MediaObjects/41586_2020_2552_MOESM5_ESM.xlsx",
+      "role": "METADATA_ONLY_NOT_RESPONSE",
+      "status": "VERIFIED_DOWNLOAD",
+      "scope": "Only selected genotype/WT annotations for training; full other-genotype metadata permissible for source review"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/WT_E8.5_cell_annotations.tsv",
+      "sha256": "0d72632c6cf32c379ee2c15941ea08d09453bd6c15791242082522ac21827a15",
+      "bytes": 1771185,
+      "role": "DERIVED_SELECTED_BARCODE_METADATA",
+      "source_sheet": "WT85_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Dnmt3a_E8.5_cell_annotations.tsv",
+      "sha256": "308a1698787f8fa0d8d52176089fd6753fa85d6d64eea6913d1b73b17e69ed04",
+      "bytes": 1491641,
+      "role": "DERIVED_SELECTED_BARCODE_METADATA",
+      "source_sheet": "Dnmt3a_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Kmt2a_E8.5_cell_annotations.tsv",
+      "sha256": "4cddb9c63cfe5e936fc583787339741428ec181c61b07882040a14ac2460eeb9",
+      "bytes": 1259217,
+      "role": "DERIVED_SELECTED_BARCODE_METADATA",
+      "source_sheet": "Kmt2a_cells",
+      "status": "VERIFIED_DERIVATION"
+    },
+    {
+      "file": "/workspace/shared/t3_developmental_sources/annotations/Kdm2b_E8.5_cell_annotations.tsv",
+      "sha256": "dd89d76b0013bcb016672b6173885813f0d8d01a8d10846c51ecb70bd6bcf6ae",
+      "bytes": 1505001,
+      "role": "DERIVED_SELECTED_BARCODE_METADATA",
+      "source_sheet": "Kdm2b_cells",
+      "status": "VERIFIED_DERIVATION"
+    }
+  ],
+  "forbid_unlisted_files": true
+}

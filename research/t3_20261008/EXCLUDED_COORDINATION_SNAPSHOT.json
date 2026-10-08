@@ -1,0 +1,7 @@
+[
+  {
+    "path": "snapshots/source_reconstruction/docs/coordination/T3_EXTERNAL_DATA_POLICY_20260921.md",
+    "sha256": "542cdd0c2d342a36017cd310b010314bf5cb06bfb56f90d891bad9de8d4b212a",
+    "reason": "Omit duplicated coordination-policy snapshot from narrowed code/evidence release; original repository policy remains in place"
+  }
+]

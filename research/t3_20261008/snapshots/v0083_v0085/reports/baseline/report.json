@@ -1,0 +1,70 @@
+{
+  "source_sha256": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+  "row_seed": 20260904,
+  "row_indices_sha256": "db923b289ad9282d56b6c0868e169523b567d81633b779a7a35bc88de8946ec2",
+  "rows": 7449,
+  "full_wt": 24826,
+  "Gata4_positive_rows": 1354,
+  "n_celltypes": 33,
+  "algorithm": "v0048 frozen alpha100 strength0.25; rebuilt historical sampler, not asserted artifact byte-identical",
+  "folds": [
+    {
+      "fold": 0,
+      "mse": 1.3057196076405106,
+      "type_mean_mse": 1.327736735343933,
+      "brier": 0.06398481570736222,
+      "type_brier": 0.06496653665507085,
+      "entries": 2942603,
+      "seconds": 1.3861193656921387
+    },
+    {
+      "fold": 1,
+      "mse": 1.2291377769639944,
+      "type_mean_mse": 1.250801920890808,
+      "brier": 0.05890719916725742,
+      "type_brier": 0.05993698741741767,
+      "entries": 3052882,
+      "seconds": 1.323664665222168
+    },
+    {
+      "fold": 2,
+      "mse": 1.2513683790532513,
+      "type_mean_mse": 1.267029881477356,
+      "brier": 0.05963731750757597,
+      "type_brier": 0.06035659352728716,
+      "entries": 3270945,
+      "seconds": 1.3389222621917725
+    },
+    {
+      "fold": 3,
+      "mse": 1.3572884602686015,
+      "type_mean_mse": 1.3761303424835205,
+      "brier": 0.06177327325019222,
+      "type_brier": 0.06252025225068378,
+      "entries": 3121744,
+      "seconds": 1.5584616661071777
+    }
+  ],
+  "wt_identity": {
+    "path": "<REPO>/experiments/cpu_20261008/baseline/wt_identity.h5ad",
+    "sha256": "9d9d355c2281664c7f75d1e8ac45efe4d18f16a9245518fcfc849b98fa1a3171",
+    "changed_entries_vs_zero": 1354,
+    "downstream_changed_rows": 0,
+    "density": 0.10499342193583032
+  },
+  "genotype_zero": {
+    "path": "<REPO>/experiments/cpu_20261008/baseline/genotype_zero.h5ad",
+    "sha256": "b426b9f762df309e4c619c5e5d79092f362712939ecb3f9b8b2ecb17aae308fb",
+    "changed_entries_vs_zero": 0,
+    "downstream_changed_rows": 0,
+    "density": 0.10462988320579944
+  },
+  "hurdle_rebuild": {
+    "path": "<REPO>/experiments/cpu_20261008/baseline/hurdle_rebuild.h5ad",
+    "sha256": "dee041dc426591f86c90fd04a437219a894c0c67c1ef19d3ce9012ab6d3c0469",
+    "changed_entries_vs_zero": 301307,
+    "downstream_changed_rows": 1354,
+    "density": 0.16216673378977045
+  },
+  "final_fit_seconds": 1.9342868328094482
+}

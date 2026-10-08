@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "selection": "conditional",
+  "source_scores_independently_recomputed": 84,
+  "all7_baseline_metrics_exact": true,
+  "decisions": [
+    {
+      "arm": "residual",
+      "eligible": false,
+      "gain": -0.44581319478750253,
+      "wins": 1
+    },
+    {
+      "arm": "conditional",
+      "eligible": true,
+      "gain": 0.3252895166891189,
+      "wins": 7
+    },
+    {
+      "arm": "both",
+      "eligible": false,
+      "gain": -0.08909867363137332,
+      "wins": 4
+    }
+  ],
+  "file": "/workspace/shared/t3_v88_optimization_20261008/v0088/t3_gata4__condhurdle__v0088.h5ad",
+  "sha256": "d7944880d8f55974946dad4b2c22879582c03bce547ead312921b0fc39bdddc7",
+  "expression_sha256": "7cfe4e0cfcfe1a76c003e25eed7d3fab58868f1d6d5dd7cb6b0ab14b3dddf77c",
+  "parent_immutable": true,
+  "parent_metadata_geometry_exact": true,
+  "frozen_selected_expression_exact": true,
+  "panel_mass_max_error": 0.0038214348132896703,
+  "contract": {
+    "schema_version": "ve.batch3.contract-report.v1",
+    "status": "PASS",
+    "valid": true,
+    "path": "/workspace/shared/t3_v88_optimization_20261008/v0088/t3_gata4__condhurdle__v0088.h5ad",
+    "task": "T3",
+    "board": "gata4",
+    "checks": {
+      "scorer_lock": {
+        "status": "PASS",
+        "path": "/workspace/shared/t3cpu/experiments/cpu_20261008/SCORER_LOCK.json",
+        "sha256": "f7ae191c52364f25f43bd46d3a1a021313d099d6ad642ec2e0b0ae909f6d7846"
+      },
+      "board_definition": {
+        "status": "PASS",
+        "key": "T3:gata4",
+        "genes_path": "/workspace/shared/t3cpu/data/gene_panel/T3__gata4.genes.txt",
+        "genes_sha256": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa",
+        "canonical_genes_sha256": "a9a553108e19acb6cbf4323aa692e6bdc51b7192f7a7866307bc058a1573e1d6",
+        "index_declared_genes_sha256": "a9a553108e19acb6"
+      },
+      "parent_binding": {
+        "status": "PASS",
+        "path": "/workspace/shared/t3_v87_restored/v0087/t3_gata4__embhurdle__v0087.h5ad",
+        "sha256": "b0cfdf5e870f762185efd9f2bdc803cab26ecb0a54e18a870286d41165ce5fc9"
+      },
+      "shape": {
+        "status": "PASS",
+        "n_obs": 7449,
+        "n_vars": 500
+      },
+      "cell_limits": {
+        "status": "PASS",
+        "min_cells": 1000,
+        "max_cells": 7449
+      },
+      "gene_order": {
+        "status": "PASS",
+        "expected_count": 500,
+        "observed_count": 500,
+        "exact_order": true,
+        "missing_head": [],
+        "extra_head": []
+      },
+      "cell_identity": {
+        "status": "PASS",
+        "unique": true,
+        "nonempty": true,
+        "n_obs": 7449
+      },
+      "normalisation": {
+        "status": "PASS",
+        "expected": "log_normalized",
+        "evidence": "uns.ve_contract.normalization"
+      },
+      "expression": {
+        "status": "PASS",
+        "finite": true,
+        "nonnegative": true,
+        "dtype": "float32",
+        "normalisation_assumption": "log-normalized nonnegative expression; no mutation performed"
+      },
+      "obs": {
+        "status": "PASS",
+        "required": [],
+        "missing": []
+      },
+      "uns": {
+        "status": "PASS",
+        "required": [],
+        "missing": []
+      },
+      "obsm": {
+        "status": "PASS",
+        "required": [
+          "spatial_3D"
+        ],
+        "missing": [],
+        "spatial_3D": {
+          "shape": [
+            7449,
+            3
+          ],
+          "finite_first_three": true
+        }
+      },
+      "protected_parent": {
+        "status": "PASS",
+        "obs_names_exact": true,
+        "obs_exact": true,
+        "var_exact": true,
+        "layers_keys_exact": true,
+        "raw_exact": true,
+        "layers_exact": true,
+        "spatial_3D_exact": true
+      },
+      "serialisation_round_trip": {
+        "status": "PASS",
+        "exact_matrix_content": true,
+        "exact_var_names": true,
+        "spatial_content_preserved": true
+      }
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "zip": "/workspace/shared/t3_v88_optimization_20261008/v0088/er4__t3__upload__20261008.zip",
+  "zip_sha256": "9918ce8b6e80736deb4290523621be13edd97fc62cb87dd96d9d657a023f3635"
+}

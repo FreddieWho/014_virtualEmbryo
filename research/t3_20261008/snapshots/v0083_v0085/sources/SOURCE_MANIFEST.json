@@ -1,0 +1,36 @@
+{
+  "task": "T3:gata4",
+  "status": "APPROVED_SANITIZED",
+  "source_reference": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783",
+  "allowed_response_role": "SIGNED_RESPONSE",
+  "compliance_review": {
+    "path": "reports/t3_r56_launch_20260921/SOURCE_REVIEW.json",
+    "sha256": "7c80f2ef5bb7725f318d3b6377546a8c71db9390df04cfb3c6784437b7016bea"
+  },
+  "forbidden_records_remaining": 0,
+  "license": "CC-BY-4.0",
+  "species": "mouse",
+  "model_input": true,
+  "cell_type": "adult_mouse_cardiac_fibroblast",
+  "embedding_role": "WT_OR_ONTOLOGY_ONLY",
+  "filter_receipt": {
+    "path": "RECONSTRUCTION.json",
+    "sha256": "bd619340d0863b6e5ef30caf9bf946328df9a61a2ac2016dda12fcb5a800d2c9"
+  },
+  "files": {
+    "expression": {
+      "path": "expression.h5ad",
+      "sha256": "d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f"
+    },
+    "go_embedding": {
+      "path": "GO_EMBEDDING.npz",
+      "sha256": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d"
+    }
+  },
+  "schema": "t3.source.reconstructed.20261008.v1",
+  "parent_manifest": {
+    "path": "<REPO>/reports/t3_r56_launch_20260921/SOURCE_MANIFEST.json",
+    "sha256": "5663e0d55d347014906c39a7da844f4ec63387255d056b82537ffc38c5e90e38"
+  },
+  "reconstruction_notice": "New serialized H5AD; exact raw GEO hashes and frozen barcode plan, original filter and normalization code; not asserted byte-identical to original H5AD. GO embedding is byte-identical to frozen original."
+}

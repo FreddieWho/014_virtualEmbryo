@@ -1,0 +1,95 @@
+{
+  "training_genes": [
+    "Dnmt3a",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kdm2b",
+    "Kmt2a",
+    "Kmt2b"
+  ],
+  "discovery": [
+    "embryo1",
+    "embryo11",
+    "embryo2",
+    "embryo4",
+    "embryo6",
+    "embryo8"
+  ],
+  "evaluation": [
+    "embryo10",
+    "embryo12",
+    "embryo3",
+    "embryo5",
+    "embryo7",
+    "embryo9"
+  ],
+  "response_info": {
+    "mean": {
+      "support": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "composition": [
+        0.28922456737867397,
+        -0.10018329759300655,
+        -0.3142847067130353,
+        0.06351497333079804,
+        -0.20555671786031168,
+        -0.0637787756587605,
+        -0.37265734143183654,
+        0.7037212985474786
+      ]
+    },
+    "nearest": {
+      "support": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "composition": [
+        0.35700342433784693,
+        0.006171178236606255,
+        0.04814959040344567,
+        -0.05962878127828433,
+        -0.34473907756020716,
+        -0.024841091706484283,
+        -0.4312408854304892,
+        0.4491256429975662
+      ]
+    },
+    "ridge": {
+      "support": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "composition": [
+        0.32810273725536787,
+        -0.0586865688707975,
+        -0.1354572512754906,
+        -0.05448329423218902,
+        -0.28599735457127134,
+        -0.0009519460954069137,
+        -0.376332994460059,
+        0.5838066722498465
+      ]
+    }
+  },
+  "query_prior": "GO ontology only"
+}

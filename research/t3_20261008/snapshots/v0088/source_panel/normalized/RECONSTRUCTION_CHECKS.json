@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "matched_cells": 157154,
+  "genotype_count": 8,
+  "protected_target_outcomes_used": false,
+  "model_fit_or_evaluation_run": false,
+  "baseline_pack_modified": false,
+  "frozen_join_source": "/workspace/shared/t3_v87_restored/run_crossko7_hurdle_v2.py",
+  "normalization": "Identical v87 sparse panel closure to 10000 then log1p float32",
+  "reconstruction_code_sha256": "fb0f94489e32730e3630d856bab5592889dcbc9e933e55a5322ec61a91a942dc"
+}

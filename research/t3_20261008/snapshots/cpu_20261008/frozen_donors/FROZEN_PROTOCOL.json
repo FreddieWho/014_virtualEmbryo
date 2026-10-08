@@ -1,0 +1,39 @@
+{
+  "qtl_strength": 0.25,
+  "dsign_strength": 0.5,
+  "training_genes": [
+    "Yy1",
+    "Arid2",
+    "Setd1b",
+    "Brd9",
+    "Znhit1",
+    "Kansl1",
+    "Pbrm1",
+    "Tfpt",
+    "Setdb1",
+    "Chd4",
+    "Srcap",
+    "Smarcd1",
+    "Rest",
+    "Dmap1",
+    "Kmt2a",
+    "Egr2",
+    "Rnf40"
+  ],
+  "held_genes": [
+    "Brd7",
+    "Kat8",
+    "Kat5",
+    "Ino80",
+    "Wdr82",
+    "Smarca4",
+    "Paxip1",
+    "Hcfc1",
+    "Yeats4"
+  ],
+  "origin": "same frozen 2026-10-07 parameters, not retuned",
+  "source_sha256": "d6472b11e0de9ffff625228787de9f82e4b6b4b959eda266b8ed3778e2c13c8f",
+  "code_sha256": "192a9522ea55c195e1bab0ba6ad065f8263ef7daed43c39d486a5e5c1dca2965",
+  "test_emission": "source reference ctrl/donor applied to recipient held-sample WT ctrl, identical target emitter",
+  "limitation": "target carrier is hurdle, source carrier here is WT control; no complete carrier-model validation"
+}

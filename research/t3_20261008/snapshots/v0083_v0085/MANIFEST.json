@@ -1,0 +1,59 @@
+{
+  "base_commit": "eb464afa7ee53d5bed7078d65bfed4f03df675b2",
+  "date": "2026-10-08",
+  "identity_policy": "Original candidate IDs83\u201385 retained at user request. Historical hash and reconstructed submitted hash differ; historical original-array identity cannot be established without historical artifacts.",
+  "candidates": [
+    {
+      "candidate_id": "v0083",
+      "original_sha256": "c7e74287b68a3a1d33cf93143abb02e898ead11d8f1d8a0214a1addf3557f444",
+      "sha256": "8232a607865f4e92d92b027251cc1e59212792b82466086a79b4ad669333c657",
+      "array_sha256": "938461817b8fe4cc682ff0478a044e168dbd61dc35d85d8c798126cd71399eb1",
+      "recipe": "o3_psb",
+      "params": "psb",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true,
+      "file": "artifacts/reproductions/20261008/v0083/submission.h5ad",
+      "historical_bytes_equal": false
+    },
+    {
+      "candidate_id": "v0084",
+      "original_sha256": "c8cba8be882a43bfe4af7f5697c8efe16c189b54792ab169fd237146f40f3f0d",
+      "sha256": "d7af1cef61e032210f9af502684a8b8a95f5a79bef79f79e15634daa556f6230",
+      "array_sha256": "a93f267c18afd2986e359a1d3cc6202ea1b39016cdb16401c28c47bb68e4361e",
+      "recipe": "n1_qtl",
+      "params": "q0.25",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true,
+      "file": "artifacts/reproductions/20261008/v0084/submission.h5ad",
+      "historical_bytes_equal": false
+    },
+    {
+      "candidate_id": "v0085",
+      "original_sha256": "e3ded141f62dda83cb17ad96b5458e65b71f4a8bc24247f4d5856a0522d9cc6a",
+      "sha256": "8cfbc8950216f8848969f26bb1973c9c52b8efd4c85c49ab15c17c7b16246418",
+      "array_sha256": "5f83c81fc005c7d8c87132c83151c5d4b5e2fb3b79c053d8ff4cab5f22cfd839",
+      "recipe": "n2_dsign",
+      "params": "g0.5",
+      "shape": [
+        7449,
+        500
+      ],
+      "contract": "PASS",
+      "reconstruction_date": "2026-10-08",
+      "same_id_reconstruction": true,
+      "file": "artifacts/reproductions/20261008/v0085/submission.h5ad",
+      "historical_bytes_equal": false
+    }
+  ],
+  "embedded_provenance_notice": "Immutable submitted H5ADs retain original cloud-workspace provenance paths. Surrounding package documents are sanitized; no credentials or user-computer paths included."
+}

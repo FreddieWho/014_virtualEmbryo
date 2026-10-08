@@ -1,0 +1,23 @@
+{
+  "candidate_id": "v0088",
+  "status": "scored",
+  "score": 53.69,
+  "verdict": "PROMOTE",
+  "parent": "v0087",
+  "parent_score": 53.42,
+  "delta": 0.27,
+  "skills": {
+    "DE": 41.7,
+    "DCS": 51.2,
+    "PSS": 75.2,
+    "MMD": 51.1,
+    "CSS": 43.1
+  },
+  "url": "[account-specific link omitted]",
+  "observed_at": "2026-10-08T11:57:10Z",
+  "displayed_submission_time": "11:56",
+  "displayed_time_timezone": "unlabeled",
+  "evidence_origin": "Verified official portal receipt included in PORTAL_RECEIPT.json",
+  "budget_status": "One final newly authorized submission spent; daily8/8; no further uploads authorized",
+  "portal_receipt_sha256": "64dd223dda284620f2fff7eb31320976d682b8c92124256f6085c7617c4a3e53"
+}

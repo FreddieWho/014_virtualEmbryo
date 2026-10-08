@@ -1,0 +1,134 @@
+diff --git a/scripts/t3_six/evaluate.py b/scripts/t3_six/evaluate.py
+index eeef3eb..a88d1ec 100644
+--- a/scripts/t3_six/evaluate.py
++++ b/scripts/t3_six/evaluate.py
+@@ -8,6 +8,8 @@ sys.path[:0] = [str(Path(__file__).resolve().parents[1])]
+ from t3_six.common import (ART, KEYS, OUT, dense, dump, emit_mult, fit_log_multiplier,
+                            load, measure, sha, weighted_rank)
+ 
++from t3_six.validation import nearest_training_donor
++
+ GRID = [0., .25, .5, 1.0]
+ GRID1K = [0., .25, .5, 1.0, 2.0]
+ 
+@@ -130,7 +132,12 @@ def main():
+     genes26 = sum(cfg['split'].values(), [])
+     Y = ymat(x, labels, genes26, ctrl)
+     dev = cfg['split']['train']
+-    all_sd = np.std(np.stack([Y[g] for g in genes26]), axis=0)
++    # Use the same ontology-nearest donor rule as delivery, excluding heldout KO.
++    ep = Path(__file__).resolve().parents[2] / 'artifacts/t3_priority_six_20260930/GO_EMBEDDING.npz'
++    emb = np.load(ep, allow_pickle=False)
++    donors = {g: nearest_training_donor(emb['embedding'], emb['genes'].tolist(),
++              [h for h in genes26 if h != g], g) for g in genes26}
++    dump(OUT / 'OUTER_DONORS.json', donors)
+ 
+     panel = (Path(__file__).resolve().parents[2] / 'data/gene_panel/T3__gata4.genes.txt').read_text().splitlines()
+     col = {g: i for i, g in enumerate(panel)}
+@@ -144,7 +151,8 @@ def main():
+                                              np.std(np.stack([Y[h] for h in genes26 if h != g]), axis=0)),
+         'n1_nmf_ablation': lambda g: route_n1(W, H, ctrl, predict_delta(predict, genes26, g)),
+         'n2_marker_gate': lambda g: route_n2(ctrl, predict_delta(predict, genes26, g), panel),
+-        'n3_switch_emit': lambda g: route_n3(x[labels == g], ctrl),
++        'n3_switch_emit': lambda g: route_n3(x[labels == donors[g]], ctrl),
++        'n3_switch_oracle_upper_bound': lambda g: route_n3(x[labels == g], ctrl),
+     }
+ 
+     jobs = []
+@@ -189,7 +197,7 @@ def main():
+         best = names[int(np.argmin(avg))]
+         sel = {'method': name, 'best_params': best,
+                'mean_weighted_rank': dict(zip(names, avg.tolist())),
+-                'target_truth_used': False, 'design_sha256': sha(OUT / 'DESIGN.md')}
++                'target_truth_used': False, 'oracle_upper_bound_only': name == 'n3_switch_oracle_upper_bound', 'design_sha256': sha(OUT / 'DESIGN.md')}
+         oddir = OUT / name
+         oddir.mkdir(parents=True, exist_ok=True)
+         dump(oddir / 'SELECTION.json', sel)
+diff --git a/scripts/t3_six2/evaluate.py b/scripts/t3_six2/evaluate.py
+index e61cc13..b7c8213 100644
+--- a/scripts/t3_six2/evaluate.py
++++ b/scripts/t3_six2/evaluate.py
+@@ -8,6 +8,8 @@ sys.path[:0] = [str(Path(__file__).resolve().parents[1])]
+ from t3_six.common import (KEYS, dense, dump, emit_mult, fit_log_multiplier,
+                            load, measure, sha, weighted_rank)
+ 
++from t3_six.validation import training_response_sd, signed_program_pair
++
+ OUT = Path(__file__).resolve().parents[2] / 'reports/t3_six_routes_20261007'
+ GRID = [.25, .5, 1.0]
+ SEED = 20261006
+@@ -21,14 +23,7 @@ def nmf_basis(z, k=16, seed=SEED):
+ 
+ 
+ def program_pair(H, delta):
+-    def corr(v):
+-        return [abs(np.corrcoef(H[k], v)[0, 1]) if H[k].std() > 0 and v.std() > 0 else 0.0
+-                for k in range(H.shape[0])]
+-    kplus = int(np.argmax(corr(delta)))
+-    cminus = corr(-delta)
+-    cminus[kplus] = -1.0
+-    kminus = int(np.argmax(cminus))
+-    return kplus, kminus
++    return signed_program_pair(H, delta)
+ 
+ 
+ def donor_for(emb, ei, genes, query, exclude):
+@@ -43,7 +38,7 @@ def route_o1(ctrl, dg, add_analog, nmf_analog):
+ 
+ 
+ def route_o2(ctrl, dg, W, H, kplus, density):
+-    prog = W[:, kplus:kplus + 1] * H[kplus:kplus + 1]
++    prog = np.zeros_like(ctrl) if kplus is None else W[:, kplus:kplus + 1] * H[kplus:kplus + 1]
+     raw = np.expm1(ctrl) - 0.25 * density[None, :] * prog
+     return {'pnmf': np.log1p(np.maximum(raw, 0)).astype('float32')}
+ 
+@@ -72,6 +67,8 @@ def route_n2(ctrl, dg, beta, donor_ko):
+ 
+ 
+ def route_n3(ctrl, W, H, kplus, kminus):
++    if kplus is None or kminus is None:
++        return {'identity': ctrl.copy(), **{f'p{s}': ctrl.copy() for s in GRID}}
+     prog_plus = W[:, kplus:kplus + 1] * H[kplus:kplus + 1]
+     prog_minus = W[:, kminus:kminus + 1] * H[kminus:kminus + 1]
+     ratio = prog_plus.sum(1) / np.maximum(prog_minus.sum(1), 1e-12)
+@@ -93,7 +90,9 @@ def main():
+     genes26 = sum(cfg['split'].values(), [])
+     dev = cfg['split']['train']
+     Y = {g: x[labels == g].mean(0) - ctrl.mean(0) for g in genes26}
+-    all_sd = np.std(np.stack([Y[g] for g in genes26]), axis=0)
++    fold_train = {g: [h for h in genes26 if h != g] for g in genes26}
++    fold_sd = {g: training_response_sd(Y, fold_train[g], g) for g in genes26}
++    dump(OUT / 'OUTER_TRAIN_IDENTITIES.json', fold_train)
+     density = (ctrl > 0).mean(0)
+ 
+     import json
+@@ -114,11 +113,11 @@ def main():
+         donor = donor_for(emb, ei, genes26, g, exclude=())
+         donor_ko = x[labels == donor]
+         add_analog = np.maximum(ctrl + dg, 0)
+-        nmf_raw = np.expm1(ctrl) - 0.25 * (W[:, kplus:kplus + 1] * H[kplus:kplus + 1])
++        nmf_raw = np.expm1(ctrl) if kplus is None else np.expm1(ctrl) - 0.25 * (W[:, kplus:kplus + 1] * H[kplus:kplus + 1])
+         nmf_analog = np.log1p(np.maximum(nmf_raw, 0))
+         routes.setdefault('o1_hnmf', []).append((g, route_o1(ctrl, dg, add_analog, nmf_analog)))
+         routes.setdefault('o2_pnmf', []).append((g, route_o2(ctrl, dg, W, H, kplus, density)))
+-        routes.setdefault('o3_psb', []).append((g, route_o3(ctrl, dg, beta, all_sd, density)))
++        routes.setdefault('o3_psb', []).append((g, route_o3(ctrl, dg, beta, fold_sd[g], density)))
+         routes.setdefault('n1_qtl', []).append((g, route_n1(ctrl, donor_ko)))
+         routes.setdefault('n2_dsign', []).append((g, route_n2(ctrl, dg, beta, donor_ko)))
+         routes.setdefault('n3_pswap', []).append((g, route_n3(ctrl, W, H, kplus, kminus)))
+@@ -136,13 +135,13 @@ def main():
+         donor = donor_for(emb, ei, genes26, g, exclude=())
+         donor_ko = x[labels == donor]
+         add_analog = np.maximum(ctrl + dg, 0)
+-        nmf_raw = np.expm1(ctrl) - 0.25 * (W[:, kplus:kplus + 1] * H[kplus:kplus + 1])
++        nmf_raw = np.expm1(ctrl) if kplus is None else np.expm1(ctrl) - 0.25 * (W[:, kplus:kplus + 1] * H[kplus:kplus + 1])
+         nmf_analog = np.log1p(np.maximum(nmf_raw, 0))
+         for mname, pred in route_o1(ctrl, dg, add_analog, nmf_analog).items():
+             jobs.append(('o1_hnmf', 'historical_test', g, mname, pred, x[labels == g], ctrl))
+         for mname, pred in route_o2(ctrl, dg, W, H, kplus, density).items():
+             jobs.append(('o2_pnmf', 'historical_test', g, mname, pred, x[labels == g], ctrl))
+-        for mname, pred in route_o3(ctrl, dg, beta, all_sd, density).items():
++        for mname, pred in route_o3(ctrl, dg, beta, fold_sd[g], density).items():
+             jobs.append(('o3_psb', 'historical_test', g, mname, pred, x[labels == g], ctrl))
+         for mname, pred in route_n1(ctrl, donor_ko).items():
+             jobs.append(('n1_qtl', 'historical_test', g, mname, pred, x[labels == g], ctrl))

@@ -1,0 +1,84 @@
+{
+  "schema": "t3.go.expanded.v1",
+  "role": "WT_OR_ONTOLOGY_ONLY; gene identity prior, no response signs/magnitudes",
+  "input_hashes": {
+    "/workspace/shared/t3source/GO/go-basic.obo": "b08d45b268b8c24ccb2513dbbbc7d4df9f6521c099b413f79eb31e06e0fa3bcc",
+    "/workspace/shared/t3source/GO/MOUSE-mod.gaf.gz": "6cbefce3a2efd9862f102a2732e923fde525c8fa59a3e5ce22e8178c3ebb0093",
+    "/workspace/shared/t3source/GO/MOUSE-uniprot.gaf.gz": "ea07d1a19adad445da59b2d8c48e7f7678827b09c12cc056f3faf7a1f88068b8"
+  },
+  "existing_scope_audit": "/workspace/shared/t3repo/infra/external_data/reports/GO__DATA_AUDIT_REPORT.json",
+  "original_parser_sha256": "7e5723c81c5e7d60c7d4549a6216ab3b11135f959350c2c6ffdabedd5463ce64",
+  "build_code_sha256": "f0d99d8d2ee3de6cdd2602b89a01f3773dd300914880f2c0c1697d8722ad1d40",
+  "previous_embedding_sha256": "acdb554d47989a4d8230fb8acc0fc7d20ec40e12086b56ef1715afb8fee11e0d",
+  "requested": [
+    "Dnmt1",
+    "Dnmt3a",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kdm2b",
+    "Kmt2a",
+    "Kmt2b",
+    "Mab21l2",
+    "Gata4",
+    "Gata6"
+  ],
+  "genes": 532,
+  "terms": 8287,
+  "missing_requested": [],
+  "all_missing": [
+    "AI646519",
+    "Car4",
+    "Car8",
+    "Gm14226",
+    "Gm15915",
+    "Gyg",
+    "H19",
+    "Meg3",
+    "Olfr558",
+    "Olfr78",
+    "Olfr872",
+    "Pifo"
+  ],
+  "method": "same approved positive GAF is_a/part_of closure; binary term incidence. Exact row-L2-normalized topology and refitted row-L2-normalized SVD128, shared basis for all genes",
+  "seed": 20260930,
+  "outcome_data_read": false,
+  "fit_scope": "ontology annotations only; includes query gene identity, never KO outcomes",
+  "not_compatible_with_old_coordinates": "Replace old embeddings for ALL genes; do not append new rows to old GO128",
+  "ontology_version": "data-version: releases/2026-07-26",
+  "annotation_headers": {
+    "MOUSE-mod.gaf.gz": [
+      "!gaf-version: 2.2",
+      "!generated-by: UniProt",
+      "!date-generated: 2026-08-04 15:07",
+      "!go-version: http://purl.obolibrary.org/obo/go/releases/2026-08-02/extensions/go-plus.ofn"
+    ],
+    "MOUSE-uniprot.gaf.gz": [
+      "!gaf-version: 2.2",
+      "!generated-by: UniProt",
+      "!date-generated: 2026-07-28 19:46",
+      "!go-version: http://purl.obolibrary.org/obo/go/releases/2026-07-26/extensions/go-plus.ofn"
+    ]
+  },
+  "terms_absent_from_obo": 0,
+  "version_mismatch": "Frozen OBO2026-07-26 versus GAF2026-08-04/GO2026-08-02; missing ontology nodes retained as leaves per original parser, listed separately",
+  "license": "CC BY 4.0",
+  "license_source": "https://geneontology.org/docs/go-citation-policy/",
+  "license_checked_utc": "2026-10-08",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "sklearn": "1.8.0"
+  },
+  "tests": "PASS: frozen raw hashes, requested coverage, topology reconstruction, SVD projection reconstruction, unit norms, exact serialized reload",
+  "outputs": {
+    "GO_TOPOLOGY_EMBEDDING.npz": "ce1d55517c87727a5ae45e7817e027ebd2d5686bfa031ba01e07747bc75f9504",
+    "GO_SVD_BASIS.npz": "a4b0ba30207875931bf6a720a4d24d5d20387840b33c55662d46dde3d04ad269",
+    "GO_EXPANDED_EMBEDDING.npz": "a81ff9a593285286d030672d2ed728bed6dd220d716bbdf804c8370c12032150",
+    "GO_TERM_INCIDENCE.npz": "3b8e05e48af2c4390169d62fce35db81b54f70a42cf07a8ef4263e693f790975"
+  },
+  "source_symbol_mapping": {
+    "G9a": "Ehmt2"
+  },
+  "source_symbol_evidence": "SOURCE_SYMBOL_MAP.json",
+  "previous_three_KO_basis_preserved": true
+}

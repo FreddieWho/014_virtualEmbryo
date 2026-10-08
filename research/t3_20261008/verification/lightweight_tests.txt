@@ -1,0 +1,37 @@
+{'status': 'PASS', 'scope': 'Synthetic implementation tests only; no biological validation', 'checks': ['Heldout KO poisoning leaves fit/output byte-identical', 'Holdout gene omitted from training', 'Missing gene identity prior blocks prediction', 'Finite closure10000', 'Locked knockout zero', 'Composition/within joint output shapes', 'Three identity model controls']}
+{'status': 'PASS', 'scope': 'Synthetic implementation tests only; no biological validation', 'checks': ['Heldout KO poisoning leaves fit/output byte-identical', 'Holdout gene omitted from training', 'Missing gene identity prior blocks prediction', 'Finite closure10000', 'Locked knockout zero', 'Composition/within joint output shapes', 'Three identity model controls']}
+{'status': 'PASS', 'scope': 'Synthetic implementation tests only; no biological validation', 'checks': ['Heldout KO poisoning leaves fit/output byte-identical', 'Holdout gene omitted from training', 'Missing gene identity prior blocks prediction', 'Finite closure10000', 'Locked knockout zero', 'Composition/within joint output shapes', 'Three identity model controls']}
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/joblib/externals/loky/backend/context.py:131: UserWarning: Could not find the number of physical cores for the following reason:
+found 0 physical cores < 1
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/joblib/externals/loky/backend/context.py", line 255, in _count_physical_cores
+    raise ValueError(f"found {cpu_count_physical} physical cores < 1")
+{
+  "00": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.0030133564432617277,
+    "null_genes_shared_closure_spread": 7.571812410400725e-07
+  },
+  "10": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.00317120470572263,
+    "null_genes_shared_closure_spread": 7.517948709123701e-07
+  },
+  "01": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.0028618969099625247,
+    "null_genes_shared_closure_spread": 7.571812410400725e-07
+  },
+  "11": {
+    "null_exact": true,
+    "deterministic": true,
+    "row_mass_max_error": 0.00317120470572263,
+    "null_genes_shared_closure_spread": 7.517948709123701e-07
+  },
+  "own_gene_subtraction_max_error": 3.3527612686157227e-08
+}
+PASS: snapshot integrity, three historical synthetic suites, four-arm emitter controls; no source or scored artifact mutation

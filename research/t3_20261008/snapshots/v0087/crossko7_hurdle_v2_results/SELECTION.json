@@ -1,0 +1,67 @@
+{
+  "criteria": [
+    {
+      "model": "mean_within",
+      "passes": true,
+      "mean_direction": 0.5356045595546146,
+      "median_direction": 0.6137047258006438,
+      "mse_wins": 6,
+      "severity_wins": 7,
+      "mean_direction_control": 0.5356045595546146,
+      "mse": 0.027653049576344572
+    },
+    {
+      "model": "mean_combined",
+      "passes": true,
+      "mean_direction": 0.573895591765426,
+      "median_direction": 0.5969400024574062,
+      "mse_wins": 6,
+      "severity_wins": 7,
+      "mean_direction_control": 0.573895591765426,
+      "mse": 0.02717500160581224
+    },
+    {
+      "model": "nearest_within",
+      "passes": true,
+      "mean_direction": 0.27607866757799954,
+      "median_direction": 0.3173303007264106,
+      "mse_wins": 4,
+      "severity_wins": 5,
+      "mean_direction_control": 0.5356045595546146,
+      "mse": 0.0484517807711718
+    },
+    {
+      "model": "nearest_combined",
+      "passes": true,
+      "mean_direction": 0.3436683249369437,
+      "median_direction": 0.4609047854186115,
+      "mse_wins": 4,
+      "severity_wins": 5,
+      "mean_direction_control": 0.573895591765426,
+      "mse": 0.04743450836336872
+    },
+    {
+      "model": "ridge_within",
+      "passes": true,
+      "mean_direction": 0.47536912118968366,
+      "median_direction": 0.5275867175932663,
+      "mse_wins": 5,
+      "severity_wins": 6,
+      "mean_direction_control": 0.5356045595546146,
+      "mse": 0.032690502441316424
+    },
+    {
+      "model": "ridge_combined",
+      "passes": true,
+      "mean_direction": 0.5220542056400869,
+      "median_direction": 0.5968538524404854,
+      "mse_wins": 6,
+      "severity_wins": 7,
+      "mean_direction_control": 0.573895591765426,
+      "mse": 0.03132452043696474
+    }
+  ],
+  "status": "completed",
+  "no_target_outcomes": true,
+  "candidate_built": false
+}

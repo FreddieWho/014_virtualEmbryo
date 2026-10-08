@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "rows": 546,
+  "protocol_sha256": "48454b98f242aa86da054a6531cb3c5c9988e01f832efefd4057add9c219a79f",
+  "metrics_sha256": "79a20f7978c9665fa608055734eca7102e093bfd392b0595fba72710a709f7bd",
+  "source_role": "SIGNED_RESPONSE",
+  "target_outcomes_used": false,
+  "historical_holdout_is_pristine": false
+}

@@ -1,0 +1,43 @@
+{
+  "downloaded_at_utc": "2026-10-08T06:03:45Z",
+  "source_page": "https://virtualembryo.ai/challenge/data#download",
+  "download_method": "Official authenticated browser Download controls, with completed browser paths copied to shared workspace",
+  "scope": "Released training/reference data only; no validation or test targets",
+  "new_agreements_accepted": false,
+  "files": [
+    {
+      "file": "E8.75.h5ad",
+      "portal_name": "T2/E8.75.h5ad",
+      "role": "T3 matched WT, E8.75",
+      "bytes": 83750668,
+      "sha256": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c"
+    },
+    {
+      "file": "E9.5.h5ad",
+      "portal_name": "T2/E9.5.h5ad",
+      "role": "T3 matched WT, E9.5",
+      "bytes": 163640212,
+      "sha256": "371ca6530e084de2b6cd6703b49d95f4bb59546c9291659809575382a630ee9a"
+    },
+    {
+      "file": "E9.5_mab21l2_ko.h5ad",
+      "portal_name": "T3/E9.5_mab21l2_ko.h5ad",
+      "role": "T3 training knockout, E9.5",
+      "bytes": 457667084,
+      "sha256": "5b1668ab982e64f7683fbf5f905218fab311c63548de5f5bc18a74f9d4d357e0"
+    },
+    {
+      "file": "T3__gata4.genes.txt",
+      "source": "https://virtualembryo.ai/challenge/panels/T3__gata4.genes.txt",
+      "genes": 500,
+      "bytes": 3008,
+      "sha256": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa"
+    },
+    {
+      "file": "official_panel_index.json",
+      "source": "https://virtualembryo.ai/challenge/panels/index.json",
+      "bytes": 5608,
+      "sha256": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78"
+    }
+  ]
+}
