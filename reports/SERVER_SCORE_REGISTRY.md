@@ -1774,3 +1774,44 @@ rank 61, T1 58.0 / T2 59.7 / T3 53.7. Immediately before this final attempt the
 observed Total/rank was 171.1/62. These are rounded displays; only the detail-page
 T3 score is recorded precisely as 53.69. The separate T1 improvement is not credited
 to this T3 attempt, and no precise aggregate is inferred.
+
+<a id="t2-heart-extrap-endpoint-rank-v0036-score-return-20261008"></a>
+## T2 heart extrapolation v0036 endpoint-rank score return — 2026-10-08
+
+Evidence class: SERVER_SCORED_PORTAL_VERIFIED. Official detail page observed
+2026-10-08T12:45:01Z. Submitted display is `2026-10-08 12:44`; timezone is unlabelled.
+Submission [4ccbf06d9ca247a191e3d7cefb242a7c](https://virtualembryo.ai/challenge/account/submissions/4ccbf06d9ca247a191e3d7cefb242a7c),
+file `t2_hrt_ext__x_endrank__v0036.h5ad`, 15,353,761 bytes.
+Exact uploaded SHA256: `0b89c69adff3b5cb3d86f0d8b0dbfe667f289343b0d7ac8908ca9c70ed33fc03`.
+
+| Candidate | Detail score | de_score | de_direction | mmd_u | variogram | d2_shape | occupancy_dice | scale_log_ratio | neighborhood_mmd | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| v0036 x_endpoint_rank | 50.47 | 52.4 | 52.6 | 44.8 | 52.3 | 46.2 | 53.2 | 49.7 | 51.8 | REJECT for promotion; -0.65 vs incumbent v0030 51.12 |
+
+**Heart-extrap selection remains v0030, 51.12.** Numeric-high backup v0032 remains
+51.14 under the existing ±0.1 tie/no-co-promotion rule; v0036 is 0.67 below it.
+All eight submetrics are displayed SKILL values, not raw metrics. Raw values were
+not exposed and are not inferred. Relative to incumbent v0030, displayed
+DE/direction/variogram rise +0.4/+1.7/+1.9, while MMD falls -4.6 and neighborhood
+MMD -1.7; d2/occupancy/scale are unchanged. Source-proxy gains did not transfer
+to total server score in this submission. This is a configuration-level negative
+result, not proof that every external-endpoint method fails.
+
+Method/source boundary: fixed-drift cardiomyocyte endpoint-rank residual using
+official released stages and clean raw MOSTA STDS0000058 E14.5_E1S3 Heart bins
+(Chen et al., Cell 2022, DOI 10.1016/j.cell.2022.04.003). The fixed terminal-rank
+correction used 483 measured genes, 7,633 eligible cardiomyocyte rows and weight
+0.104, with 17 unmeasured genes and non-cardiomyocyte rows left at the reconstructed
+recipe. No external E9.5 or hidden E10.5/E12.5 outcomes were used. Full source
+attribution and provenance are embedded in the submitted artifact. Historical
+v0030 is a recipe reference; its exact artifact was unavailable and byte-identical
+parent reconstruction is NOT claimed. The local development was adaptive and
+reused E9.5; the held-row check is not an independent biological validation.
+A single far-stage, mixed-bin external section limits the transfer evidence.
+
+Final 25179×500 contract, frozen-array/hash and independent replay checks passed
+before submission. This record registers the scored artifact without uploading
+its binary or broad audit files to the repository. All previous candidate rows,
+hashes, scores and other-board selections are preserved. The single authorized
+T2 attempt is consumed; portal daily usage is 8/8. No further submission is
+implied. Eight rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.

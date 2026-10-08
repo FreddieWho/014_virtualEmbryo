@@ -980,3 +980,11 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-08	T3:gata4	v0088	condhurdle	t3_gata4__condhurdle__v0088.h5ad	2026-10-08 11:56 (timezone NOT_LABELLED)	53.69	severity_slope	75.2
 2026-10-08	T3:gata4	v0088	condhurdle	t3_gata4__condhurdle__v0088.h5ad	2026-10-08 11:56 (timezone NOT_LABELLED)	53.69	mmd_u	51.1
 2026-10-08	T3:gata4	v0088	condhurdle	t3_gata4__condhurdle__v0088.h5ad	2026-10-08 11:56 (timezone NOT_LABELLED)	53.69	variogram	43.1
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	de_score	52.4
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	de_direction	52.6
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	mmd_u	44.8
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	variogram	52.3
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	d2_shape	46.2
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	occupancy_dice	53.2
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	scale_log_ratio	49.7
+2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	neighborhood_mmd	51.8
