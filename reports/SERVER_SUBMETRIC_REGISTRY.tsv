@@ -940,3 +940,28 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-07	T1:val	v0062	six_nwasser	t1_val__nwasser__v0062.h5ad	NOT_PROVIDED	51.02	de_direction	56.2
 2026-10-07	T1:val	v0062	six_nwasser	t1_val__nwasser__v0062.h5ad	NOT_PROVIDED	51.02	mmd_u	53.6
 2026-10-07	T1:val	v0062	six_nwasser	t1_val__nwasser__v0062.h5ad	NOT_PROVIDED	51.02	variogram	48.5
+2026-10-08	T3:gata4	v0081	six2_o1_hnmf	t3_gata4__hnmf__v0081.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.92	de_score	42.6
+2026-10-08	T3:gata4	v0081	six2_o1_hnmf	t3_gata4__hnmf__v0081.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.92	de_direction	49.9
+2026-10-08	T3:gata4	v0081	six2_o1_hnmf	t3_gata4__hnmf__v0081.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.92	severity_slope	50.0
+2026-10-08	T3:gata4	v0081	six2_o1_hnmf	t3_gata4__hnmf__v0081.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.92	mmd_u	51.8
+2026-10-08	T3:gata4	v0081	six2_o1_hnmf	t3_gata4__hnmf__v0081.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.92	variogram	49.5
+2026-10-08	T3:gata4	v0082	six2_o2_pnmf	t3_gata4__pnmf__v0082.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.94	de_score	42.6
+2026-10-08	T3:gata4	v0082	six2_o2_pnmf	t3_gata4__pnmf__v0082.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.94	de_direction	49.9
+2026-10-08	T3:gata4	v0082	six2_o2_pnmf	t3_gata4__pnmf__v0082.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.94	severity_slope	50.0
+2026-10-08	T3:gata4	v0082	six2_o2_pnmf	t3_gata4__pnmf__v0082.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.94	mmd_u	51.8
+2026-10-08	T3:gata4	v0082	six2_o2_pnmf	t3_gata4__pnmf__v0082.h5ad	2026-10-07 11:07 (timezone NOT_LABELLED)	47.94	variogram	49.6
+2026-10-08	T3:gata4	v0083	six2_o3_psb	t3_gata4__repropsb__v0083.h5ad	2026-10-08 06:36 (timezone NOT_LABELLED)	47.51	de_score	41.2
+2026-10-08	T3:gata4	v0083	six2_o3_psb	t3_gata4__repropsb__v0083.h5ad	2026-10-08 06:36 (timezone NOT_LABELLED)	47.51	de_direction	50.0
+2026-10-08	T3:gata4	v0083	six2_o3_psb	t3_gata4__repropsb__v0083.h5ad	2026-10-08 06:36 (timezone NOT_LABELLED)	47.51	severity_slope	50.0
+2026-10-08	T3:gata4	v0083	six2_o3_psb	t3_gata4__repropsb__v0083.h5ad	2026-10-08 06:36 (timezone NOT_LABELLED)	47.51	mmd_u	51.7
+2026-10-08	T3:gata4	v0083	six2_o3_psb	t3_gata4__repropsb__v0083.h5ad	2026-10-08 06:36 (timezone NOT_LABELLED)	47.51	variogram	49.2
+2026-10-08	T3:gata4	v0084	six2_n1_qtl	t3_gata4__reproqtl__v0084.h5ad	2026-10-08 06:40 (timezone NOT_LABELLED)	49.55	de_score	47.1
+2026-10-08	T3:gata4	v0084	six2_n1_qtl	t3_gata4__reproqtl__v0084.h5ad	2026-10-08 06:40 (timezone NOT_LABELLED)	49.55	de_direction	48.4
+2026-10-08	T3:gata4	v0084	six2_n1_qtl	t3_gata4__reproqtl__v0084.h5ad	2026-10-08 06:40 (timezone NOT_LABELLED)	49.55	severity_slope	50.0
+2026-10-08	T3:gata4	v0084	six2_n1_qtl	t3_gata4__reproqtl__v0084.h5ad	2026-10-08 06:40 (timezone NOT_LABELLED)	49.55	mmd_u	54.8
+2026-10-08	T3:gata4	v0084	six2_n1_qtl	t3_gata4__reproqtl__v0084.h5ad	2026-10-08 06:40 (timezone NOT_LABELLED)	49.55	variogram	53.4
+2026-10-08	T3:gata4	v0085	six2_n2_dsign	t3_gata4__reprodsign__v0085.h5ad	2026-10-08 06:42 (timezone NOT_LABELLED)	47.45	de_score	40.8
+2026-10-08	T3:gata4	v0085	six2_n2_dsign	t3_gata4__reprodsign__v0085.h5ad	2026-10-08 06:42 (timezone NOT_LABELLED)	47.45	de_direction	50.1
+2026-10-08	T3:gata4	v0085	six2_n2_dsign	t3_gata4__reprodsign__v0085.h5ad	2026-10-08 06:42 (timezone NOT_LABELLED)	47.45	severity_slope	50.0
+2026-10-08	T3:gata4	v0085	six2_n2_dsign	t3_gata4__reprodsign__v0085.h5ad	2026-10-08 06:42 (timezone NOT_LABELLED)	47.45	mmd_u	51.9
+2026-10-08	T3:gata4	v0085	six2_n2_dsign	t3_gata4__reprodsign__v0085.h5ad	2026-10-08 06:42 (timezone NOT_LABELLED)	47.45	variogram	49.2

@@ -1630,3 +1630,24 @@ Decision and limits:
 
 Submetrics: `reports/SERVER_SUBMETRIC_REGISTRY.tsv`, 24 rows. Review:
 `reports/t1_six_20261007/REPORT.md`. Decision D-20261007-T1SIXSCORE-001.
+
+<a id="t3-backlog-score-return-20261008"></a>
+## T3 backlog reproduction and score return — 2026-10-08
+
+Evidence class: SERVER_SCORED_PORTAL_VERIFIED. Direct authenticated browser observation of official submission detail pages. Scores below retain detail-page precision; list-page rounded values are separate. Submitted timestamps are copied from the page, whose timezone is not labelled; UTC observation times do not reinterpret submitted timestamps. No account email or other private account details are published.
+
+User requested original candidate IDs v0083–v0085. These three are explicitly labelled same-ID reconstructed revisions, not original-byte restorations; historical and uploaded SHA256 bindings are preserved in INDEX. Original frozen parameters unchanged. v0081/v0082 are existing submissions, not resubmitted by this run. Their mapping uses exact portal filenames; portal did not expose artifact hashes, so their historical INDEX SHA values have not been independently binary-verified. v0081/v0082 remain within the prior v0048 tie band; neither is promoted.
+
+| Candidate | Portal file | Submission ID / evidence | Submitted (timezone unlabelled) | Observed UTC | Detail score | List score | de_score | de_direction | severity_slope | mmd_u | variogram |
+|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| v0081 | `t3_gata4__hnmf__v0081.h5ad` | [62c624e98c1e4c218e20688ba15e2b24](https://virtualembryo.ai/challenge/account/submissions/62c624e98c1e4c218e20688ba15e2b24) | 2026-10-07 11:07 | 2026-10-08T06:44:40Z | 47.92 | 47.9 | 42.6 | 49.9 | 50.0 | 51.8 | 49.5 |
+| v0082 | `t3_gata4__pnmf__v0082.h5ad` | [e1e3ddd0cac241d391cf3f7bba27c54f](https://virtualembryo.ai/challenge/account/submissions/e1e3ddd0cac241d391cf3f7bba27c54f) | 2026-10-07 11:07 | 2026-10-08T06:45:22Z | 47.94 | 47.9 | 42.6 | 49.9 | 50.0 | 51.8 | 49.6 |
+| v0083 | `t3_gata4__repropsb__v0083.h5ad` | [d22593c4f14041be9824552910220129](https://virtualembryo.ai/challenge/account/submissions/d22593c4f14041be9824552910220129) | 2026-10-08 06:36 | 2026-10-08T06:38:25Z | 47.51 | 47.5 | 41.2 | 50.0 | 50.0 | 51.7 | 49.2 |
+| v0084 | `t3_gata4__reproqtl__v0084.h5ad` | [d11defa589b64fcd90bfb76d83328707](https://virtualembryo.ai/challenge/account/submissions/d11defa589b64fcd90bfb76d83328707) | 2026-10-08 06:40 | 2026-10-08T06:41:15Z | 49.55 | 49.6 | 47.1 | 48.4 | 50.0 | 54.8 | 53.4 |
+| v0085 | `t3_gata4__reprodsign__v0085.h5ad` | [1e1a1d550e66460fbe61a59647d19117](https://virtualembryo.ai/challenge/account/submissions/1e1a1d550e66460fbe61a59647d19117) | 2026-10-08 06:42 | 2026-10-08T06:43:37Z | 47.45 | NOT_RECORDED | 40.8 | 50.1 | 50.0 | 51.9 | 49.2 |
+
+All five submetrics are the portal SKILL values, not locally computed scores. v0084 reconstructed q0.25 revision is promoted at 49.55 (+1.62 versus previous incumbent v0048 47.93), beyond the strict >48.03 promotion threshold. Same-ID reconstruction does not retroactively score the unavailable historical bytes. No other board selection or portal Total is changed by this registration. blocks_submission:false.
+
+Identity/reconstruction: reports/t3_backlog_20261008/RECONSTRUCTION_RECEIPT.json and REPORT.md. Decision reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008.
+
+Portal leaderboard observation at 2026-10-08T06:46:14Z: displayed Total 163.2, Human rank 83, task values T1 54.0 / T2 59.7 / T3 49.6. Before these three uploads the observed Total was 161.6, rank 85. The independent T2 heart-interpolation 65.0 submission was not produced by this run; no T1/T2 candidate identities or selections are reassigned here. These are rounded page displays, not inferred precise totals.
