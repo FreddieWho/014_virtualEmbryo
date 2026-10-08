@@ -1,0 +1,13 @@
+{
+  "method": "n3_switch_emit",
+  "best_params": "s0.5",
+  "mean_weighted_rank": {
+    "identity": 4.228529411764705,
+    "s0.0": 4.237941176470588,
+    "s0.25": 2.2580392156862747,
+    "s0.5": 2.089607843137255,
+    "s1.0": 2.1858823529411766
+  },
+  "target_truth_used": false,
+  "design_sha256": "9361a9b7eb84763c7493876c943a22326de21bb2f5ba1ba8af9895a86a790bbd"
+}

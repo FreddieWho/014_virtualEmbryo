@@ -1,0 +1,54 @@
+{
+  "schema": "calibration.excluded-source-receipts.v1",
+  "content_included": false,
+  "sources": [
+    {
+      "omitted_package_path": "evidence/t3repo/reports/t2_holdout_setup_20261003/REPORT.md",
+      "repository_path": "reports/t2_holdout_setup_20261003/REPORT.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/t2_holdout_setup_20261003/REPORT.md",
+      "original_sha256": "ceb8ccf5910cb0fcbdf1c8e39c329fb23fdae0199cd6b0552d2612fa62e83cf4",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    },
+    {
+      "omitted_package_path": "evidence/t3repo/reports/t2_holdout10_score_review_20261003/REPORT.md",
+      "repository_path": "reports/t2_holdout10_score_review_20261003/REPORT.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/t2_holdout10_score_review_20261003/REPORT.md",
+      "original_sha256": "55ff5259c9095c7674d55aef4346a6c5f750a61cca932dcb64a36bc50656476d",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    },
+    {
+      "omitted_package_path": "evidence/t3repo/reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md",
+      "repository_path": "reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/T2_NINE_ROUTES_20260927_M0_FREEZE.md",
+      "original_sha256": "719549f4840178bdf4a36d9611ab7e8831c8ba7e43735526ff9c2957a188cbd6",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    },
+    {
+      "omitted_package_path": "evidence/t3repo/reports/t3_round2_20260928/REPORT.md",
+      "repository_path": "reports/t3_round2_20260928/REPORT.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/t3_round2_20260928/REPORT.md",
+      "original_sha256": "64261434d199a576e9cd27321854e22aa43441d685cd84c3a8e42649cf464dcf",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    },
+    {
+      "omitted_package_path": "evidence/t3repo/reports/t3_five_20260927/REPORT.md",
+      "repository_path": "reports/t3_five_20260927/REPORT.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/t3_five_20260927/REPORT.md",
+      "original_sha256": "86fa92db23603889056db56690b65ec9f99bbf3f3161942b831f2068aa92b7a2",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    },
+    {
+      "omitted_package_path": "evidence/t3repo/reports/t3_three_20260929/REPORT.md",
+      "repository_path": "reports/t3_three_20260929/REPORT.md",
+      "source_url": "https://github.com/FreddieWho/014_virtualEmbryo/blob/eb464afa7ee53d5bed7078d65bfed4f03df675b2/reports/t3_three_20260929/REPORT.md",
+      "original_sha256": "4805bf6e4535951c29bf7f55943381eb736f9a93d8e98e2c7a1b24c13ceb8587",
+      "hash_basis": "Recorded original source hash from the previously audited source inventory; omitted bytes are not reverified by this package",
+      "reason": "Historical report content excluded from this publication; no excerpts repackaged"
+    }
+  ]
+}

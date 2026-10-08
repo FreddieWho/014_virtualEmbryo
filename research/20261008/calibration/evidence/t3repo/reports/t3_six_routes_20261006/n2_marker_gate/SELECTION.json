@@ -1,0 +1,13 @@
+{
+  "method": "n2_marker_gate",
+  "best_params": "s2.0",
+  "mean_weighted_rank": {
+    "s0.0": 4.540392156862745,
+    "s0.25": 2.875686274509804,
+    "s0.5": 2.5260784313725497,
+    "s1.0": 2.5586274509803926,
+    "s2.0": 2.4992156862745096
+  },
+  "target_truth_used": false,
+  "design_sha256": "9361a9b7eb84763c7493876c943a22326de21bb2f5ba1ba8af9895a86a790bbd"
+}

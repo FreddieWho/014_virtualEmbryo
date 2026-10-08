@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "replacement_derivation": true,
+  "source_workbook_hashes": {
+    "Sup_Tab_1_nature.xlsx": "458a376158eee437b3dabe7be8d4a2ff893859ef646c7c90bb9c7d2cef52b574",
+    "Sup_Tab_2_nature.xlsx": "0d8638513d0bbd30750949ba6993f0d2d358dd1948145c782c792ebe16e80dbe"
+  },
+  "admitted_conditions": [
+    "WT",
+    "Dnmt3a",
+    "Kmt2a",
+    "Kdm2b",
+    "Dnmt1",
+    "Dnmt3b",
+    "G9a",
+    "Kmt2b"
+  ],
+  "outputs": [
+    {
+      "file": "WT_E8.5_cell_annotations.tsv",
+      "sha256": "0d72632c6cf32c379ee2c15941ea08d09453bd6c15791242082522ac21827a15",
+      "cells": 22515,
+      "embryos": 10,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Dnmt3a_E8.5_cell_annotations.tsv",
+      "sha256": "308a1698787f8fa0d8d52176089fd6753fa85d6d64eea6913d1b73b17e69ed04",
+      "cells": 18320,
+      "embryos": 10,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Kmt2a_E8.5_cell_annotations.tsv",
+      "sha256": "4cddb9c63cfe5e936fc583787339741428ec181c61b07882040a14ac2460eeb9",
+      "cells": 15776,
+      "embryos": 11,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Kdm2b_E8.5_cell_annotations.tsv",
+      "sha256": "dd89d76b0013bcb016672b6173885813f0d8d01a8d10846c51ecb70bd6bcf6ae",
+      "cells": 18943,
+      "embryos": 10,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Dnmt1_E8.5_cell_annotations.tsv",
+      "sha256": "cbcc707d7749191314fa4397e5364ad4fff12b708ed7b4e3c5fdeda000d789f8",
+      "cells": 20890,
+      "embryos": 12,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Dnmt3b_E8.5_cell_annotations.tsv",
+      "sha256": "d60d4175e2b3498ac649859d8693ebb5858bb36987507c8a3733de97ebd20547",
+      "cells": 25408,
+      "embryos": 8,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "G9a_E8.5_cell_annotations.tsv",
+      "sha256": "e5d7f7a4e3021cafd6ea1482ad5dbaeb1710e60adcf37b88de3767d234257157",
+      "cells": 20389,
+      "embryos": 11,
+      "exact_historical_bytes": true
+    },
+    {
+      "file": "Kmt2b_E8.5_cell_annotations.tsv",
+      "sha256": "16b1f9d9c927e7b303792d67a58ceaae0ab42d69b8d635ede95b4b74140c152f",
+      "cells": 15603,
+      "embryos": 10,
+      "exact_historical_bytes": true
+    }
+  ]
+}

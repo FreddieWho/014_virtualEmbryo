@@ -1,0 +1,7 @@
+cohort,scenario,split,n_scored,source_metrics_favor_v85,top1,server_best,missed_server_points,missed_incumbent_gain,independent_candidate_pairs
+fixed_donor,pooled,development17,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1
+fixed_donor,pooled,historical9,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1
+fixed_donor,sample0_to_1,development17,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1
+fixed_donor,sample0_to_1,historical9,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1
+fixed_donor,sample1_to_0,development17,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1
+fixed_donor,sample1_to_0,historical9,2,5,v0085,v0084,2.0999999999999943,1.6199999999999974,1

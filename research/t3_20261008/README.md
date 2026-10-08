@@ -6,6 +6,7 @@ Seven unrelated embryonic KOs supported a generic developmental response more st
 
 ## Start here
 
+- PUBLIC_REBUILD_FOLLOWUP.md: exact public annotation derivation and unexecuted fixed-model rebuild wiring
 - REPRODUCTION.md: executable read-only replay/tests, omitted inputs and rebuild limits
 - SOURCES_AND_PERMISSIONS.md: public source links, source licences versus competition permission
 - snapshots/v0083_v0085: original-ID reconstruction, source filtering, validation repairs, recorded replay and source-ranking controls

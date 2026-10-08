@@ -1,0 +1,12 @@
+{
+  "method": "o2_gate_mult",
+  "best_params": "s0.5",
+  "mean_weighted_rank": {
+    "s0.0": 3.6701960784313727,
+    "s0.25": 2.2951960784313723,
+    "s0.5": 2.0012745098039217,
+    "s1.0": 2.0333333333333337
+  },
+  "target_truth_used": false,
+  "design_sha256": "9361a9b7eb84763c7493876c943a22326de21bb2f5ba1ba8af9895a86a790bbd"
+}

@@ -1,0 +1,31 @@
+{
+  "WT": {
+    "unique": 500,
+    "missing": [],
+    "duplicates": {}
+  },
+  "KO_shared": {
+    "unique": 500,
+    "missing": [],
+    "duplicates": {}
+  }
+}
+{
+  "stage": "check_features",
+  "original_code_sha256": "e56a7f98a08d27370489b0d0d9ec9d38a24f782887b1368403f7397362ddc836",
+  "adapted_code_sha256": "e56a7f98a08d27370489b0d0d9ec9d38a24f782887b1368403f7397362ddc836",
+  "path_only_substitutions": [
+    {
+      "from": "/workspace/shared/t3_developmental_sources",
+      "to": "/workspace/shared/t3_developmental_sources",
+      "occurrences": 1
+    },
+    {
+      "from": "/workspace/shared/virtual_embryo_data",
+      "to": "/workspace/shared/virtual_embryo_data",
+      "occurrences": 1
+    }
+  ],
+  "execute": true,
+  "output_root": "/workspace/shared/t3_rebuild_followup_20261008/private_work/input_smoke"
+}

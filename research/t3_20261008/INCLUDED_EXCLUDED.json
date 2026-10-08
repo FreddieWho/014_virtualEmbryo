@@ -17,9 +17,9 @@
     "t3_developmental_sources",
     "t3_observation_reset"
   ],
-  "missing_rebuild_step": "Original workbook-to-selected-annotation derivation script not located; no claim of turnkey public model retraining",
-  "included_snapshot_files": 309,
-  "included_snapshot_bytes": 1687708,
+  "missing_rebuild_step": "Original annotation extractor absent; independently verified public replacement supplied. End-to-end GO rebuild and full model refitting NOT_RUN for this publication.",
+  "included_snapshot_files": 308,
+  "included_snapshot_bytes": 1684303,
   "all_python_original_bytes": true,
   "excluded_cell_level_tables": [
     {
@@ -70,5 +70,6 @@
       "bytes": 489997,
       "reason": "Cell-level data excluded from publication"
     }
-  ]
+  ],
+  "excluded_coordination_policy_snapshot": "EXCLUDED_COORDINATION_SNAPSHOT.json"
 }

@@ -1,0 +1,96 @@
+{
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  },
+  "original_comparison": [
+    {
+      "path": "t2/historical_paired_audit.csv",
+      "rows": 17,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t2/all_extrap_inclusion_audit.csv",
+      "rows": 36,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t2/new_run_raw_audit.csv",
+      "rows": 966,
+      "result": "PASS",
+      "ignored_publication_fields": [
+        "source"
+      ],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t3/paired_local_server.csv",
+      "rows": 106,
+      "result": "PASS",
+      "ignored_publication_fields": [
+        "source",
+        "source_sha256"
+      ],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t3/dominance_reversals.csv",
+      "rows": 6,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t3/topk_counterfactual.csv",
+      "rows": 28,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t3/fixed_donor_raw_rows.csv",
+      "rows": 156,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 0.0,
+      "roundoff_changed_cells": 0
+    },
+    {
+      "path": "t3/fixed_donor_summary.csv",
+      "rows": 12,
+      "result": "PASS",
+      "ignored_publication_fields": [],
+      "max_float_difference": 8.881784197001252e-16,
+      "roundoff_changed_cells": 54
+    }
+  ],
+  "t2_statistics_exact_match": true,
+  "t3_original_summary_keys_exact_match": true,
+  "unit_tests": {
+    "passed": 11,
+    "failed": 0,
+    "duration_seconds": 11.559
+  },
+  "training": "NOT_RUN",
+  "model_inference": "NOT_RUN",
+  "original_scorer": "NOT_RUN",
+  "server_submission": "NOT_RUN",
+  "narrowed_publication": {
+    "historical_markdown_copies_removed": 6,
+    "report_content_reextracted": false,
+    "scientific_values_preserved": true,
+    "provenance_mode": "Original repository links and recorded original hashes for excluded sources; no claim of re-verifying absent report text"
+  }
+}

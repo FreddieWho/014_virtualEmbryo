@@ -1,0 +1,12 @@
+{
+  "method": "o3_shrunk_beta",
+  "best_params": "k2.0",
+  "mean_weighted_rank": {
+    "identity": 3.7319607843137255,
+    "k0.5": 2.1621568627450976,
+    "k1.0": 2.073529411764706,
+    "k2.0": 2.0323529411764705
+  },
+  "target_truth_used": false,
+  "design_sha256": "9361a9b7eb84763c7493876c943a22326de21bb2f5ba1ba8af9895a86a790bbd"
+}

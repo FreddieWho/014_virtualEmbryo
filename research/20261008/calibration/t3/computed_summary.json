@@ -1,0 +1,19 @@
+{
+  "n_candidate_inventory": 87,
+  "n_scored_inventory": 78,
+  "n_published_inventory": 26,
+  "n_local_records": 106,
+  "n_unique_scored_with_local": 24,
+  "n_same_target_absolute_score_pairs": 0,
+  "absolute_underestimation_distribution": null,
+  "overall_false_negative_rate": null,
+  "max_observed_source_dominance_reversal_server_gap": 2.1,
+  "source_dominance_reversal_incumbent_gain": 1.62,
+  "source_strata_favoring_v85_all_five": 6,
+  "source_strata_count": 6,
+  "v88_source_delta": 0.32528951668911077,
+  "v88_mab_delta": 0.22697304896170323,
+  "v88_server_delta": 0.27,
+  "v87_mab_vs_adult_delta": 7.684757561943947,
+  "v87_server_vs_v84_delta": 3.87
+}

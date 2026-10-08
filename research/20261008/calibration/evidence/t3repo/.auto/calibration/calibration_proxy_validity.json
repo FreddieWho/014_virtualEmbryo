@@ -1,0 +1,210 @@
+{
+ "n": 12,
+ "rows": [
+  {
+   "label": "baseline_v0001",
+   "server_board": 50.53,
+   "composite": 0.0,
+   "worst_channel": "de",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0,
+    "mmd_u": -0.0,
+    "vario": -0.0,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0
+   }
+  },
+  {
+   "label": "v0011_g0_t2_r2_shrink",
+   "server_board": 50.64,
+   "composite": 0.029692310909200305,
+   "worst_channel": "dir",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": -0.009,
+    "mmd_u": 0.0016,
+    "vario": 0.0094,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": 0.0003
+   }
+  },
+  {
+   "label": "v0012_g0_t2_r3_spatial",
+   "server_board": 50.26,
+   "composite": -0.03543023939624014,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0556,
+    "dir": 0.0036,
+    "mmd_u": -0.0129,
+    "vario": -0.0508,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": 0.0017
+   }
+  },
+  {
+   "label": "v0013_g0_t2_r4_k07",
+   "server_board": 50.32,
+   "composite": -0.5342400738856808,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0019,
+    "mmd_u": -0.0102,
+    "vario": -0.036,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": 0.0016
+   }
+  },
+  {
+   "label": "v0016_g0_t2_r5_k60",
+   "server_board": 50.25,
+   "composite": -0.3666307734588307,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0556,
+    "dir": 0.0057,
+    "mmd_u": -0.0169,
+    "vario": -0.0729,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0007
+   }
+  },
+  {
+   "label": "v0017_x_n1_lineage",
+   "server_board": 48.17,
+   "composite": -7.970746055528008,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": -0.0556,
+    "dir": 0.0403,
+    "mmd_u": -0.2058,
+    "vario": -0.3,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.1166
+   }
+  },
+  {
+   "label": "v0018_x_n2_trend3",
+   "server_board": 48.4,
+   "composite": -1.5231097109584102,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0206,
+    "mmd_u": -0.0024,
+    "vario": -0.1273,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0127
+   }
+  },
+  {
+   "label": "v0019_x_n3_compmix",
+   "server_board": 50.38,
+   "composite": 0.9310565400278761,
+   "worst_channel": "d2",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0398,
+    "mmd_u": 0.0502,
+    "vario": -0.0142,
+    "d2": -0.0693,
+    "occ": 0.0306,
+    "scale": 0.0111,
+    "nmmd": 0.0263
+   }
+  },
+  {
+   "label": "v0020_x_o1_trendshrink",
+   "server_board": 48.59,
+   "composite": -1.2738134868321758,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0208,
+    "mmd_u": -0.0028,
+    "vario": -0.1078,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0122
+   }
+  },
+  {
+   "label": "v0021_x_o2_shrinkcomp",
+   "server_board": 50.52,
+   "composite": 1.7087004120207823,
+   "worst_channel": "d2",
+   "guards": true,
+   "gains": {
+    "de": 0.0556,
+    "dir": 0.0367,
+    "mmd_u": 0.0513,
+    "vario": -0.0058,
+    "d2": -0.0693,
+    "occ": 0.0306,
+    "scale": 0.0111,
+    "nmmd": 0.0265
+   }
+  },
+  {
+   "label": "v0022_x_r1_lateref",
+   "server_board": 50.74,
+   "composite": -3.1825633949436467,
+   "worst_channel": "de",
+   "guards": false,
+   "gains": {
+    "de": -0.1667,
+    "dir": 0.0232,
+    "mmd_u": -0.0374,
+    "vario": -0.0524,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0214
+   }
+  },
+  {
+   "label": "v0023_x_r2_shrinkc1",
+   "server_board": 50.03,
+   "composite": -0.7693809993625247,
+   "worst_channel": "vario",
+   "guards": true,
+   "gains": {
+    "de": 0.0,
+    "dir": 0.0315,
+    "mmd_u": -0.0204,
+    "vario": -0.0568,
+    "d2": -0.0,
+    "occ": 0.0,
+    "scale": -0.0,
+    "nmmd": -0.0158
+   }
+  }
+ ],
+ "spearman_composite_vs_server": 0.5385
+}

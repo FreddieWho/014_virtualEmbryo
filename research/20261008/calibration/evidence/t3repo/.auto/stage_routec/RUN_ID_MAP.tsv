@@ -1,0 +1,6 @@
+filename	run_id	parent_version	local_composite	local_expr_composite	role
+t2_hrt_ext__qte_tc_s929__v0024.h5ad	AR-ROUTE-C-20261002-v1	v0001_baseline	3.913	6.8119	CHAMPION (median-value seed of 3)
+t2_hrt_ext__qte_compmix__v0025.h5ad	AR-ROUTE-C-20261002-v1	v0001_baseline	3.4636	6.074	robust runner-up (3 seeds all > old champion)
+t2_hrt_ext__qte_time__v0026.h5ad	AR-ROUTE-C-20261002-v1	v0001_baseline	2.6084	4.1735	deterministic marginal-only design (NO resampling: zero seed risk)
+t2_hrt_ext__sharetrend_qte__v0027.h5ad	AR-ROUTE-C-20261002-v1	v0001_baseline	0.855	11.479	DIAGNOSTIC PROBE, OPTIONAL (skip for promising-only): median seed of {0.522, 0.855, 1.440}; known defect library_size_ratio=11.98 (12x) + variance_ratio 1.74 -> local guardrails FAIL; highest expression composite ever (11.5) so it tests whether the server rewards the marginal/expression profile or punishes composition aggressiveness
+t2_hrt_ext__qte_tc_s008__v0028.h5ad	AR-ROUTE-C-20261002-v1	v0001_baseline	3.6058	6.3022	seed-replication probe (identical design to v0024, different rows: measures server-side row-luck)

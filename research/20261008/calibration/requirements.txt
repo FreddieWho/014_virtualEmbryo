@@ -1,0 +1,5 @@
+# Exact versions used for publication recomputation (Python 3.12.14).
+# Small tabular audit only; no GPU, anndata, scorer, or model dependencies.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0

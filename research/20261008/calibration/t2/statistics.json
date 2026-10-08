@@ -1,0 +1,222 @@
+{
+  "all17": {
+    "n": 17,
+    "pearson": 0.09008895171584341,
+    "spearman": 0.11158800380653922,
+    "spearman_p": 0.6698308183959898,
+    "spearman_bootstrap_ci95": [
+      -0.4441998289951317,
+      0.6501621769155379
+    ],
+    "kendall_tau_b": 0.11070186069251191,
+    "pairwise_concordant": 75,
+    "pairwise_nontied": 135,
+    "pairwise_concordance": 0.5555555555555556,
+    "loocv_linear_mae": 1.5334895772268236,
+    "loocv_linear_rmse": 2.732091001226586,
+    "loocv_mean_baseline_mae": 1.575588235294118,
+    "loocv_mean_baseline_rmse": 2.7101870899441614,
+    "loocv_positive_residual_max": 1.9442794430078223,
+    "loocv_note": "fitted predictions in server points, not raw local-minus-server error; exploratory dependent convenience sample",
+    "predictions": [
+      49.25922283527808,
+      49.25500900233995,
+      49.27292902775054,
+      49.221829574383335,
+      49.24276016233246,
+      49.304842005504106,
+      49.27653721801549,
+      49.34480196358722,
+      49.27852796354441,
+      49.386338860014604,
+      48.79572055699218,
+      49.21780048853619,
+      49.56992300849648,
+      49.52761943954561,
+      49.49283144863429,
+      50.06844741729874,
+      49.55224542361581
+    ]
+  },
+  "nonbaseline16": {
+    "n": 16,
+    "pearson": 0.09161954551295395,
+    "spearman": 0.13833704996073615,
+    "spearman_p": 0.609400173254655,
+    "spearman_bootstrap_ci95": [
+      -0.4570385801174182,
+      0.6892976294995611
+    ],
+    "kendall_tau_b": 0.12552411131335847,
+    "pairwise_concordant": 67,
+    "pairwise_nontied": 119,
+    "pairwise_concordance": 0.5630252100840336,
+    "loocv_linear_mae": 1.591450932001187,
+    "loocv_linear_rmse": 2.806093123354368,
+    "loocv_mean_baseline_mae": 1.6410000000000005,
+    "loocv_mean_baseline_rmse": 2.785449734283895,
+    "loocv_positive_residual_max": 2.043882720066854,
+    "loocv_note": "fitted predictions in server points, not raw local-minus-server error; exploratory dependent convenience sample",
+    "predictions": [
+      49.169782601829546,
+      49.189192898550445,
+      49.13690076728996,
+      49.158485302678436,
+      49.13007455954618,
+      49.19723194463508,
+      49.26135699250574,
+      49.19914781444692,
+      49.301959643023935,
+      48.69611727993315,
+      49.13354243808968,
+      49.48110739798517,
+      49.44044524736885,
+      49.40900895971928,
+      50.029564193563225,
+      49.464904071198234
+    ]
+  },
+  "old12": {
+    "n": 12,
+    "pearson": 0.6287823071314501,
+    "spearman": 0.5384615384615385,
+    "spearman_p": 0.07089431754922311,
+    "spearman_bootstrap_ci95": [
+      -0.2043010752688172,
+      0.9852981283422458
+    ],
+    "kendall_tau_b": 0.5151515151515151,
+    "pairwise_concordant": 50,
+    "pairwise_nontied": 66,
+    "pairwise_concordance": 0.7575757575757576,
+    "loocv_linear_mae": 0.5526514959763595,
+    "loocv_linear_rmse": 0.7921880721469235,
+    "loocv_mean_baseline_mae": 0.826818181818183,
+    "loocv_mean_baseline_rmse": 0.9792504301549612,
+    "loocv_positive_residual_max": 1.5657675589096556,
+    "loocv_note": "fitted predictions in server points, not raw local-minus-server error; exploratory dependent convenience sample",
+    "predictions": [
+      50.116938899000985,
+      50.111899937594764,
+      50.137929771006284,
+      50.00440628906521,
+      50.053922582227564,
+      48.634798306575604,
+      49.93008640339638,
+      50.378402627810864,
+      49.97319444205062,
+      50.57299680155342,
+      49.174232441090346,
+      49.971525454063695
+    ]
+  },
+  "QTE5": {
+    "n": 5,
+    "pearson": 0.9223115099794978,
+    "spearman": 0.7,
+    "spearman_p": 0.1881204043741873,
+    "spearman_bootstrap_ci95": [
+      -0.6666666666666666,
+      1.0
+    ],
+    "kendall_tau_b": 0.6,
+    "pairwise_concordant": 8,
+    "pairwise_nontied": 10,
+    "pairwise_concordance": 0.8,
+    "loocv_linear_mae": 3.474855467392918,
+    "loocv_linear_rmse": 5.058965905322861,
+    "loocv_mean_baseline_mae": 4.197,
+    "loocv_mean_baseline_rmse": 5.246550056942181,
+    "loocv_positive_residual_max": 3.8360325920140426,
+    "loocv_note": "fitted predictions in server points, not raw local-minus-server error; exploratory dependent convenience sample",
+    "predictions": [
+      52.460906251800175,
+      49.95001900080394,
+      46.19396740798596,
+      49.955206579738665,
+      50.67215091421565
+    ]
+  },
+  "thresholds": [
+    {
+      "local_threshold": 0,
+      "require_guards": false,
+      "selected_n": 8,
+      "winner_n": 2,
+      "retained_winners": 1,
+      "recall": 0.5,
+      "nominal_exact_recall_ci95": [
+        0.01257911709367899,
+        0.987420882906321
+      ],
+      "selected_winner_precision": 0.125,
+      "missed": [
+        "v0022"
+      ]
+    },
+    {
+      "local_threshold": 0,
+      "require_guards": true,
+      "selected_n": 7,
+      "winner_n": 2,
+      "retained_winners": 1,
+      "recall": 0.5,
+      "nominal_exact_recall_ci95": [
+        0.01257911709367899,
+        0.987420882906321
+      ],
+      "selected_winner_precision": 0.14285714285714285,
+      "missed": [
+        "v0022"
+      ]
+    },
+    {
+      "local_threshold": 1,
+      "require_guards": false,
+      "selected_n": 5,
+      "winner_n": 2,
+      "retained_winners": 0,
+      "recall": 0.0,
+      "nominal_exact_recall_ci95": [
+        0.0,
+        0.841886116991607
+      ],
+      "selected_winner_precision": 0.0,
+      "missed": [
+        "v0011",
+        "v0022"
+      ]
+    },
+    {
+      "local_threshold": 1,
+      "require_guards": true,
+      "selected_n": 5,
+      "winner_n": 2,
+      "retained_winners": 0,
+      "recall": 0.0,
+      "nominal_exact_recall_ci95": [
+        0.0,
+        0.841886116991607
+      ],
+      "selected_winner_precision": 0.0,
+      "missed": [
+        "v0011",
+        "v0022"
+      ]
+    }
+  ],
+  "false_negative_sign": [
+    {
+      "version": "v0022",
+      "composite": -3.1825633949436467,
+      "server_board": 50.74,
+      "server_delta": 0.21,
+      "guards": false
+    }
+  ],
+  "cautions": [
+    "Bootstrap/binomial intervals nominal only: dependent adaptive selected candidates, not unbiased future population",
+    "No same-scale local-to-server MAE/RMSE/bias: raw-relative composite is not server skill points",
+    "No universal false-negative rate: unsubmitted local rejects lack server outcomes"
+  ]
+}

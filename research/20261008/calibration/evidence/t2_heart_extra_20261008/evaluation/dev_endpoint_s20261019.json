@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "task": "T2",
+    "setting": "heart",
+    "target_source": "t2_heart_extra_20261008/evaluation/dev_e95.h5ad",
+    "reference_defaulted_to_input": false,
+    "truth_cells": 26871,
+    "prediction_cells": 24826,
+    "genes": 500
+  },
+  "metrics": {
+    "de_score": 0.0,
+    "de_direction": 0.0372,
+    "energy_distance": 2.34673,
+    "mmd_u": 0.06102,
+    "variogram": 0.049302,
+    "d2_shape": 0.05002,
+    "sliced_wasserstein": 0.05653,
+    "occupancy_dice": 0.8088,
+    "scale_log_ratio": -0.4348,
+    "count_log_ratio": -0.0792,
+    "neighborhood_mmd": 0.09922,
+    "pb_rel_err": 0.5142,
+    "library_size_ratio": 1.0,
+    "variance_ratio": 0.812,
+    "composition_JSD": 0.1143,
+    "pseudobulk_pearson": 0.8068,
+    "morans_I_agreement": 0.6768,
+    "_de_raw": 0.4286,
+    "_de_chance": 0.4286,
+    "_n_up": 36,
+    "_n_dn": 90,
+    "_sw_flip_spread": 0.00496,
+    "_dice_voxel_over_nn": 11.9
+  },
+  "seed": 20261019,
+  "elapsed_seconds": 20.45809769630432,
+  "scorer_sha256": "52034554f03aec10193cb09baa2c78a1de04218ef678f327eb63acc58fa28add"
+}

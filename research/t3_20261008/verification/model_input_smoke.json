@@ -1,0 +1,49 @@
+{
+  "status": "INPUTS_AND_FIT_PREFIX_VERIFIED",
+  "fitting_executed": false,
+  "normalized_inputs": [
+    {
+      "gene": "WT",
+      "expression_array_sha256": "5b77e8a6a37af46e8595fbf2287ec18b178575cb24d016633a64bec5cf33848d",
+      "cells": 21825
+    },
+    {
+      "gene": "Dnmt3a",
+      "expression_array_sha256": "7a744ecf3e5c6f04830cae8f25cff80f5a947957e6ace64efbc6d18292b435ea",
+      "cells": 18320
+    },
+    {
+      "gene": "Kmt2a",
+      "expression_array_sha256": "3f18245a395f2914efbab1d2df8ddf8b0a79e3603e352d290846b7469910d659",
+      "cells": 15776
+    },
+    {
+      "gene": "Kdm2b",
+      "expression_array_sha256": "881a3a95b01259dab228bead9f4ad916454f78bf78d0d775ffd585e638978b18",
+      "cells": 18943
+    },
+    {
+      "gene": "Dnmt1",
+      "expression_array_sha256": "dfb81b5f1fe33fda3c73288b89d4efcb47a2ae036325ddcaaecdf809add342e8",
+      "cells": 20890
+    },
+    {
+      "gene": "Dnmt3b",
+      "expression_array_sha256": "718e3353bf1f6c5727a06c7a9cca677a5351a94248c76660ff261995a1a9615d",
+      "cells": 25408
+    },
+    {
+      "gene": "Ehmt2",
+      "expression_array_sha256": "712b250715dadf20355d88d695df8637ca7417996f6b1786ced697f6bbaf97c9",
+      "cells": 20389
+    },
+    {
+      "gene": "Kmt2b",
+      "expression_array_sha256": "30d954f07460e2d0df4b8f347cfa89e1979c6ce0f76a012a6417867e535ff09d",
+      "cells": 15603
+    }
+  ],
+  "original_code_sha256": "366f005d28603730b71bb0f2357fb39d92ae8bff1da882651f4d3a7f8fcc44ea",
+  "fit_prefix_sha256": "86a82c3e64bcbd97949ab8c0915979cae2aaf53c92361d18d4cb4890b5e7894a",
+  "scope": "Same frozen fit prefix; stop before target deployment and all scoring loops"
+}

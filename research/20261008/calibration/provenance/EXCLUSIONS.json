@@ -1,0 +1,42 @@
+{
+  "excluded_original_package_files": [
+    {
+      "path": "t2/INDEX.tsv",
+      "reason": "Full multi-board registry omitted; only 36 heart-extrapolation rows and required columns retained as static historical evidence"
+    },
+    {
+      "path": "t2/SERVER_SCORE_REGISTRY.md",
+      "reason": "Full registry omitted; authoritative repository-root report remains canonical"
+    },
+    {
+      "path": "t2/SERVER_SUBMETRIC_REGISTRY.tsv",
+      "reason": "Full 989-row submetric registry omitted; eight relevant embryo-v2 scale-example rows retained"
+    },
+    {
+      "path": "t2/statistics_stdout.json",
+      "reason": "Duplicate of statistics.json omitted"
+    },
+    {
+      "path": "t2/source_manifest.csv",
+      "reason": "Replaced by complete original/published source inventory with unsupported source classes omitted"
+    },
+    {
+      "path": "MANIFEST_SHA256.json",
+      "reason": "Replaced by original-package manifest plus final published manifest"
+    }
+  ],
+  "transformed_original_outputs": {
+    "t3/candidate_inventory.csv": "Focused on the 26 candidates and parents referenced by this audit; full 87/78 counts remain metadata",
+    "t3/source_hashes.json": "Recomputed with evidence-relative IDs and hashes of published source bytes; original hashes retained in source inventory",
+    "t2/new_run_raw_audit.csv": "Regenerated from all 42 JSON receipts with portable source IDs"
+  },
+  "excluded_classes": [
+    "Internal raw execution logs and private notes",
+    "Credentials, tokens, signed URLs and personal account information",
+    "H5AD/expression matrices, model weights, large data binaries, cell-ID arrays and submission ZIPs",
+    "Duplicate complete server-score or candidate registries",
+    "All historical Markdown report copies under evidence/; only original repository links and previously recorded hashes retained"
+  ],
+  "source_recreation_limits": "Only small recorded research evidence is bundled. No claim of recreating missing original historical artifact bytes, training runs or scorer caches.",
+  "excluded_source_receipt": "EXCLUDED_SOURCE_RECEIPTS.json"
+}

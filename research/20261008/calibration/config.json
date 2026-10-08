@@ -1,0 +1,6 @@
+{
+  "evidence_dir": "evidence",
+  "output_dir": "recomputed",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20261008
+}

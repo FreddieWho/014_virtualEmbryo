@@ -1,0 +1,9 @@
+record_date	board	version	method	board_score	metric	skill
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	de_score	50.5
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	de_direction	53.2
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	mmd_u	60.9
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	variogram	59.0
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	d2_shape	52.8
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	occupancy_dice	46.6
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	scale_log_ratio	91.9
+2026-09-04	T2:embryo:val_interp	v0002	g1_formal_log_rms	60.15	neighborhood_mmd	64.8
