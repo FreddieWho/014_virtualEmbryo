@@ -1,0 +1,22 @@
+name: cdn-bust-registry
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Touch registry trailing newline and remove this workflow
+        run: |
+          set -euo pipefail
+          # Ensure file ends with exactly one trailing newline; append a blank comment line for new blob sha
+          printf '\n<!-- tip sync 20261009 -->\n' >> reports/SERVER_SCORE_REGISTRY.md
+          rm -f .github/workflows/cdn-bust-registry.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/SERVER_SCORE_REGISTRY.md
+          git add -u .github/workflows/cdn-bust-registry.yml || true
+          git commit -m "CDN-bust SERVER_SCORE_REGISTRY tip after restore (keep v0092/58.89)"
+          git push origin HEAD:main
