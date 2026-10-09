@@ -4,6 +4,10 @@
 
 接手先看 [`../ATOM_MAP.md`](../ATOM_MAP.md) 和 [`../../reports/README.md`](../../reports/README.md)。本文件是并行状态摘要，不是入门读物。2026-10-05 只加了这句导航，没有改下面的选集。
 
+### 2026-10-09 T3 v0089 回分：53.74，平局带内不晋级
+
+v0089 `resplam15unmask`（响应结构路线：收缩 lam nk/(nk+50)→nk/(nk+15)、去掉 global_valid 掩码；发射器/atlas/几何冻结）服务器 **53.74**，较现役 v0088 53.69 为 **+0.05，落在 ±0.1 平局带内**，按规则不换人，现役保持 v0088。子项 de 41.7→42.1（+0.4）、severity 75.2→76.2（+1.0），direction 51.2→50.5（−0.7）、mmd 51.1→50.3（−0.8）、variogram 43.1→42.7（−0.4）。**本地源侧复合分预测 +0.1985、其中 de +0.354，服务器 de 方向成立（+0.4），但净效应被其余三项回落吸收，本地分高估约四倍。** 这是本地增益未能按预测转化的第三例（v0086、T1 v0058、T2 v0035）。响应结构诊断（DE 在响应里而非发射器里）与结果方向一致，但单次带内结果不足以确立机制。证据类别 SERVER_SCORED_USER_REPORTED（用户转录，未提供 submission ID 与时间，未伪造）。**后续 T3 以服务器分裁决，本地复合分仅作候选筛选。** blocks_submission:false。
+
 ### 2026-10-09 门户合计确认与 per-task 对账关闭
 
 用户确认门户 **Total 172.9**、per-task T1 58.9 / T2 60.3 / T3 53.7；registry 记 Human rank 71/187 @ 09:23:59Z。按现役相加 T1 v0092 58.89 + T2 选集均值 60.2770 + T3 v0088 53.69 = **172.857**，与门户合计在显示精度内一致。**此前记录的 per-task 对不上问题关闭**：根因是选集滞后而非门户口径未知——T1 门户 58.0 对应的是旧现役、T2 59.7 对应的是心插未换人时的选集。门户 T2 用各榜数值最高（embryo v0023 63.0185 + 心插 v0025 66.7064 + 外推 51.1388）/3 = 60.2879，与选集差 0.011 全部来自 ±0.1 带内的两处保留。T2 心插现役由 v0023 62.48 换为 **v0025 h_heart_copula 66.7064**（+4.23，最大单榜跃升）；外推 v0037 零保位移 48.86 REJECT；胚胎 v0023 63.0185 带内不换人。blocks_submission:false。
@@ -131,11 +135,11 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback. v0089 resplam15unmask built and packaged, NOT scored, not submitted."
+    current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback. v0089 resplam15unmask scored 53.74 but +0.05 is inside the +/-0.1 band so the incumbent is retained (D-20261009-T3RESPLAMSCORE-001)."
     current_best_score: 53.69
     active_atom: null
     next_action: "v0088 现役保持。2026-10-09 本地重训完整复现 v0087/v0088 表达式与三个推理产物（逐位），GO embedding 亦逐字节相同，PUBLIC_REBUILD_FOLLOWUP 的未验证拟合限制可撤销；基线复合分与归档 summary 差 0.0。发射器成分轴 14 次迭代判定饱和：最好 +0.0034，de_skill 全变体零变化，三个轴精确 no-op，检测比例轴曲率极陡；不建议提交任何变体。本地源侧指标不再是有效目标，下一手需服务器分仲裁（须重新授权）或改响应结构开新路线。reports/t3_rebuild_20261009/REPORT.md。"
-    submission_budget: "OPEN/UNVERIFIED. Registry records 2026-10-08 v0088 consumed the separately authorized final one-attempt budget with portal daily T3 usage 8/8. 2026-10-09 has NO T3 submission; whether the daily counter reset was not observed. Do not claim budget availability without user confirmation."
+    submission_budget: "OPEN/UNVERIFIED. Registry records 2026-10-08 v0088 consumed the separately authorized final one-attempt budget with portal daily T3 usage 8/8. On 2026-10-09 v0089 WAS submitted and scored 53.74, so one attempt was in fact available and is now consumed. Remaining allowance is not established; confirm with the user before any further T3 submission."
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

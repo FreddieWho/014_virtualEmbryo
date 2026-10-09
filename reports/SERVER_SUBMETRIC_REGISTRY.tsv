@@ -1056,3 +1056,8 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	occupancy_dice	47.3088
 2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	scale_log_ratio	82.5078
 2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	neighborhood_mmd	68.1245
+2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	de_score	42.1
+2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	de_direction	50.5
+2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	severity_slope	76.2
+2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	mmd_u	50.3
+2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	variogram	42.7

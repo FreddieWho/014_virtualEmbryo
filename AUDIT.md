@@ -7,14 +7,14 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 - T2:embryo:val_interp: **62.89** (v0014 e_o1_shrinkmerge)
 - T2:heart:val_extrap: **51.14** (v0032 x_r5_tshrink09)
 - T2:heart:val_interp: **62.48** (v0023 h_aniso50)
-- T3:gata4: **53.69** (v0088 condhurdle)
+- T3:gata4: **53.74** (v0089 resplam15unmask)
 
-Score-pending rows: 7 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment, v0089/resplam15unmask)
+Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
 ## Lane verdicts (198 rows in LANE_VERDICTS.tsv)
 - PASS: 6
-- SHIPPED: 154
+- SHIPPED: 155
 - FAIL: 18
 - VOID: 3
 - PARKED: 4

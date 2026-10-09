@@ -1579,3 +1579,13 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "autoresearch/loop-261009-1845（30 次迭代台账、handoff.json、8 个脚本、33 份路线结果）；reports/t3_rebuild_20261009/REPORT.md；submissions/candidates/T3_gata4/v0089_resplam15unmask/RECEIPT.json；本地复合 74.936110 vs 74.737588（+0.1985，赢 4/7，冻结门 PASS）。响应重实现保真度 PASS：delta/composition/support 相对原缓存 maxabs 0.0。"
 - boundary: "本地源侧复合分**不是服务器预测**：v0086 源侧改善而服务器 49.34 低于 v0084，T1 v0058、T2 v0035 同类。本候选增益不均匀（Ehmt2 +1.0、Kmt2b +0.87、Kmt2a +0.59 对 Dnmt1 −0.855）。**T3 提交额度未解决**：registry 记 2026-10-08 用尽当日 8/8 并声明无剩余授权，2026-10-09 T3 无提交记录，当日计数器是否重置未观测；上传需用户明确重新授权。联合秩传输新架构为干净负结果（−12.07，对照组不变）。blocks_submission:false。"
 - review_trigger: "用户授权 T3 提交额度后方可上传；服务器回分后按 ±0.1 带内保留规则裁决是否晋级 v0089。"
+
+## D-20261009-T3RESPLAMSCORE-001 — T3 v0089 回分 53.74：平局带内不晋级，现役 v0088 保持
+
+- date: 2026-10-09
+- scope: T3
+- type: server_score_return
+- decision: "v0089 resplam15 服务器 53.74，较现役 v0088 53.69 高 0.05，落在 ±0.1 平局带内，按 standing rule **不换人**。T3 现役保持 v0088 = 53.69，v0089 登记为已评分历史结果。五项子项为门户显示 SKILL 值，原始指标未暴露也不推断。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-resplam15-v0089-score-return-20261009；reports/SERVER_SUBMETRIC_REGISTRY.tsv 新增 5 行；候选身份绑定 INDEX SHA256 ddac99703587e2c35…，交付包成员 t3_gata4__resplam15__v0089.h5ad 已对该哈希核验一致。证据类别 SERVER_SCORED_USER_REPORTED：分数由用户从门户转录，未做独立门户查询，用户未提供 submission ID 与提交时间，未伪造。"
+- boundary: "**本地源侧复合分高估净效应约四倍。** 本地预测 +0.1985 且主要由 de +0.354 驱动；服务器 de 确实涨 +0.4（方向成立），但 direction −0.7、mmd −0.8、variogram −0.4、severity +1.0 相互抵消后净剩 +0.05。这是本地源侧增益未能按预测转化的第三例（v0086 源侧改善而服务器低于 v0084；T1 v0058、T2 v0035 同类）。响应结构诊断（发射器只重分配已激活细胞故 DE 在响应里）与本次结果方向一致，但单次带内结果不足以确立机制。本地分不得作为总分预测使用。blocks_submission:false。"
+- review_trigger: "T3 提交额度：本次已消耗一次授权提交，实际可用额度需用户确认（registry 记 2026-10-08 用尽当日 8/8）。后续 T3 迭代应以服务器分裁决，本地复合分仅作候选筛选。"

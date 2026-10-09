@@ -1902,3 +1902,62 @@ Submission 01f2cb4b59794d63ac27dd0d84962cff, 2026-10-09 09:22 UTC, model extra-x
 Submission 84e1cb88cbdd4dd8861488783a1002b9, 2026-10-09 09:20 UTC, model heart-copula-v0025. UI66.71, official API66.7064; PROMOTE +1.6804 vs byte-exact H1 65.0260. Candidate SHAefb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2; parent SHA7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37. The apparent first replay mismatch was the later-added carrier provenance field; removing that field reproduced the entire historical H1 file, not merely arrays. The heart-specific B is trained only on released heart E8.25_late/E8.75. Exact marginal preservation and independent refit/rank-transfer replay passed. Full eight official API skills are in the submetric registry; MMD +10.7466, variogram +0.0938, neighborhood +0.2358, other five unchanged. Final diagnostic classifier did not converge by max_iter300; it is independent of candidate construction, so diagnostic soft-mass is not an exact mechanistic result.
 
 Final official best-per-board mean is60.2879, Human71/187, at2026-10-09 09:23:59UTC. This API mean uses embryo numeric-high v23 63.0185 even though the project retains v21 under its ±0.1 incumbent rule, plus heart interp66.7064 and extra51.1388. Extra v37 did not replace extra best. All3 requested slots finished, today7/8, the remaining1 is unauthorized. Full raw API/portal evidence is archived in this run receipts. The builder performed no remote push; subsequent synchronization is separately authorized.
+
+<a id="t3-resplam15-v0089-score-return-20261009"></a>
+## T3 v0089 resplam15 score return — 2026-10-09
+
+Evidence class: SERVER_SCORED_USER_REPORTED. Scores transcribed by the user from
+the official portal on 2026-10-09. No independent portal lookup was performed; no
+submission ID and no submitted timestamp were supplied, and none are invented.
+Candidate identity is bound to INDEX SHA256
+`ddac99703587e2c35713dcf0e3eb09bb6a0dfff88298bb94548a08d1fa115f3a`, and the zip
+member `t3_gata4__resplam15__v0089.h5ad` in
+`deliveries/t3lam15__t3__upload__20261009.zip` was verified byte-identical against
+that value. All previous candidate rows, artifacts, scores and hashes are
+preserved.
+
+| Candidate | Detail score | de_score | de_direction | severity_slope | mmd_u | variogram | Verdict |
+|---|---:|---:|---:|---:|---:|---:|---|
+| v0089 resplam15 | 53.74 | 42.1 | 50.5 | 76.2 | 50.3 | 42.7 | TIE band; +0.05 vs v0088 53.69; incumbent retained, NOT promoted |
+
+**Current T3 selection remains v0088, 53.69.** The +0.05 gain is inside the plus/minus
+0.1 incumbent band, so the standing rule keeps v0088 and v0089 is recorded as a
+scored historical result rather than a promotion. All five submetrics are the
+portal's displayed SKILL values, not locally computed metrics; raw metric values
+were not exposed and are not inferred.
+
+Versus v0088 by submetric: de 41.7 to 42.1 (+0.4), direction 51.2 to 50.5
+(-0.7), severity 75.2 to 76.2 (+1.0), mmd 51.1 to 50.3 (-0.8), variogram 43.1 to
+42.7 (-0.4). This is not uniform improvement: the de and severity gains were
+absorbed by direction, mmd and variogram declines.
+
+### What this does and does not establish
+
+The local source-side composite predicted a +0.1985 total gain driven by de
++0.354, and the server de did rise by +0.4, so the direction of that specific
+prediction held. It does not follow that the local composite forecasts totals: it
+overstated the net effect by roughly four times, because it did not anticipate the
+direction, mmd and variogram regressions. This is the third recorded instance of a
+local source-side gain failing to convert as predicted (v0086 improved source-side
+and scored below v0084; T1 v0058 and T2 v0035 show the same pattern).
+
+The response-structure diagnosis itself is that de_skill is immovable at the
+emitter, because the emitter only redistributes already-activated cells and so
+cannot change which genes are detected together; DE therefore lives in the
+response. This return is consistent with that, but a single band-contained result
+does not establish the mechanism.
+
+### Method and source boundary
+
+Same seven-KO generic embryonic state response, WT-only state-conditioned
+activation propensity, frozen emitter, frozen WT atlas, frozen state assignment
+and quantile grid, seed 20260904, method/mode `mean_combined` from the frozen
+source-side selection, E8.75 WT carrier 7449x500. The only change from v0088 is
+the response structure: shrinkage blend `lam = nk/(nk+50)` to `nk/(nk+15)` and
+removal of the `global_valid` gene mask. Sources remain the admitted GSE137337
+embryonic KO conditions, GSE122187 E8.5 WT and ontology information; no new source
+scope and no hidden target outcomes. Full condition-level provenance is embedded
+in the uploaded artifact. Cohort, chemistry, sex and developmental-context
+confounding is not resolved by this result.
+
+blocks_submission:false. Five rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
