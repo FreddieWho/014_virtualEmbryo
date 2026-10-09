@@ -1,1 +1,1 @@
-file:///workspace/ve/repo/reports/SERVER_SCORE_REGISTRY.md
+PLACEHOLDER_REPLACE_VIA_SHELL
