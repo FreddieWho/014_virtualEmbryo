@@ -1,0 +1,75 @@
+{
+ "thresholds": {
+  "min_umi": 1500,
+  "min_genes": 700,
+  "max_mt": 0.25
+ },
+ "samples": {
+  "GSM7226268_E8_5_1": {
+   "stage": 8.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 2924,
+   "median_umi": 24684.5,
+   "median_genes": 3757.0,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": true,
+   "entries_read": 12647967,
+   "entries_declared": 27140691
+  },
+  "GSM7226269_E8_5_2": {
+   "stage": 8.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 5776,
+   "median_umi": 24196.5,
+   "median_genes": 3900.5,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": false,
+   "entries_read": 27617453,
+   "entries_declared": 27617453
+  },
+  "GSM7226272_E14_5_1": {
+   "stage": 14.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 4966,
+   "median_umi": 14218.0,
+   "median_genes": 3193.5,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": false,
+   "entries_read": 21301922,
+   "entries_declared": 21301922
+  },
+  "GSM7226273_E14_5_2": {
+   "stage": 14.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 4358,
+   "median_umi": 10480.0,
+   "median_genes": 2667.0,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": false,
+   "entries_read": 16502217,
+   "entries_declared": 16502217
+  },
+  "GSM7226274_E16_5_1": {
+   "stage": 16.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 4960,
+   "median_umi": 18357.5,
+   "median_genes": 3414.0,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": false,
+   "entries_read": 24496812,
+   "entries_declared": 24496812
+  },
+  "GSM7226276_E16_5_2": {
+   "stage": 16.5,
+   "barcodes_raw": 737280,
+   "cells_kept": 4818,
+   "median_umi": 12406.0,
+   "median_genes": 2824.0,
+   "panel_genes_present": 25943,
+   "mtx_truncated_at_source": false,
+   "entries_read": 19494873,
+   "entries_declared": 19494873
+  }
+ }
+}
