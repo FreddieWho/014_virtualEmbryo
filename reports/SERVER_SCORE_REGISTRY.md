@@ -1863,3 +1863,5 @@ Twelve skill rows (LA3 + A + B × four metrics) appended to SERVER_SUBMETRIC_REG
 INDEX rows v0089–v0093 appended (old mistaken v0063–v0067 labels retired). Test-phase plan
 (no official submission authorized by this commit): `reports/TEST_PHASE_PLAN.md`.
 blocks_submission:false for further val work; ask before any official test-phase portal upload.
+
+<!-- tip sync 20261009 -->
