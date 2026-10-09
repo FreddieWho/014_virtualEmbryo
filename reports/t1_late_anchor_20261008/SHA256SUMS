@@ -1,0 +1,7 @@
+# SHA-256 of submitted T1 late-anchor / OT generative h5ads (gitignored artifacts).
+# Paths relative to /workspace/ve/submit at build time.
+f876b1ef0983c635833fe7ca8713034712b777b091413196923fac5282d84282  T1_val__late_anchor_x1.h5ad
+7dbc0eb05f5ab578fffe3590158bbb5b33cd1230acb26522759a1db5e217fa09  T1_val__late_anchor_x2_comphalf.h5ad
+79af479a577c53a182b5c74aeba5066c8b9a553e1a9570ccf4b9a15c540052d2  T1_val__v51_anchor_auto.h5ad
+35fae3a797acdf44b4c6d141e1a0db65b44744ea218f96218c7909e34eda5dc1  T1_val__ot_gen_v51.h5ad
+04d73c5d2c9daab7c9fc9db3ba9543c295639f9e4415ca312511c0147adf7fe6  T1_val__v51_anchor_pergroup.h5ad
