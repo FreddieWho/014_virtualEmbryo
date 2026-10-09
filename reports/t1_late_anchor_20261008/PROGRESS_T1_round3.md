@@ -1,4 +1,6 @@
 # T1 round 3 (2026-10-08 evening): (A) new big direction, (B) optimise on LA3
+
+**Renumber note:** mistaken draft IDs v0063–v0067 retired (already T3:gata4). Assigned **v0089–v0093**. SHA-256 unchanged.
 - LA3 portal 57.99 (de 51.6 dir 64.0 mmd 61.7 vario 52.8). Quota: 2 left today (deadline 08:00 UTC+8 10-09).
 - 19:55 Released data: no ATAC / spliced-unspliced layers -> velocity route impossible with released files.
 - Plan A (new mechanism): OT-coupled two-part generative displacement (vework/t1ext/otfield.py): within-group entropic OT ext E8.5->E14.5 (GSE230531, same files as LA), cell-specific detection(logit)+level displacement, transferred to carrier cells via kNN in z-scored ext-E8.5 PCA; stochastic gene on/off + level shift (no zp group-mean shift). Carrier v0051 rebuild, tau = 0.187 x 1.46 (same overall strength as LA3 -> clean mechanism comparison).

@@ -1,5 +1,7 @@
 # T1 late-anchor + OT generative round (2026-10-08 / 10-09)
 
+**Renumber note:** mistaken draft IDs v0063–v0067 retired (already T3:gata4). Assigned **v0089–v0093**. SHA-256 unchanged.
+
 Human Team track. Validation-board work only; no official test-phase portal upload in this publication.
 
 ## What this package is
@@ -20,11 +22,11 @@ Code and docs for the T1 late-external-anchor route (GSE230531 E8.5 / E14.5 / E1
 
 | version | method | board | de | dir | mmd | vario | vs prior T1 best (v0051 53.92) | verdict |
 |---|---|---:|---:|---:|---:|---:|---|---|
-| v0063 | late_anchor_x1 (LA1) | 53.14 | — | — | — | — | −0.78 | REJECT (submetrics not re-read) |
-| v0064 | late_anchor_x2_comphalf (LA2) | 53.43 | — | — | — | — | −0.49 | REJECT (submetrics not re-read) |
-| v0065 | v51_anchor_auto (LA3) | **57.99** | 51.6 | 64.0 | 61.7 | 52.8 | **+4.07** | PROMOTED (then superseded) |
-| v0066 | ot_gen_v51 (ot-gen-A) | **58.89** | 49.7 | 65.9 | 65.2 | 52.3 | **+4.97** | **PROMOTED current T1 best** |
-| v0067 | v51_anchor_pergroup (B) | 58.22 | 51.4 | 64.2 | 62.4 | 53.0 | +4.30 | scored backup (−0.67 vs A) |
+| v0089 | late_anchor_x1 (LA1) | 53.14 | — | — | — | — | −0.78 | REJECT (submetrics not re-read) |
+| v0090 | late_anchor_x2_comphalf (LA2) | 53.43 | — | — | — | — | −0.49 | REJECT (submetrics not re-read) |
+| v0091 | v51_anchor_auto (LA3) | **57.99** | 51.6 | 64.0 | 61.7 | 52.8 | **+4.07** | PROMOTED (then superseded) |
+| v0092 | ot_gen_v51 (ot-gen-A) | **58.89** | 49.7 | 65.9 | 65.2 | 52.3 | **+4.97** | **PROMOTED current T1 best** |
+| v0093 | v51_anchor_pergroup (B) | 58.22 | 51.4 | 64.2 | 62.4 | 53.0 | +4.30 | scored backup (−0.67 vs A) |
 
 Submission detail IDs (portal): A `39e6870fb90549e09067e7c3cff92333`; B `455eb227ed4a407382c2f18a4d2ab920`. LA1–LA3 submission IDs not re-captured in this write-up.
 
