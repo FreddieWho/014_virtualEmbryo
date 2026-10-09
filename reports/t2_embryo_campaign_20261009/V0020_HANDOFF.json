@@ -1,0 +1,240 @@
+{
+  "candidate_id": "T2_embryo_val_interp/v0020_e3_supportmix",
+  "board": "T2:embryo:val_interp",
+  "target": "E7.5",
+  "artifact_path": "submissions/candidates/T2_embryo_val_interp/v0020_e3_supportmix/submission.h5ad",
+  "sha256": "2b0693b223b34718af8fd4c2627c5d1e0f2e98f9605137c116888613adb3eae4",
+  "bytes": 10359584,
+  "n_obs": 5000,
+  "n_vars": 498,
+  "parent_sha256": "e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae",
+  "parent": "byte-exact scored E3, not original v0014",
+  "method": "RMS-normalize right shape to left; proper Procrustes; fixed time-fraction mixture of actual left/right coordinate support; within-state capacity-constrained Hungarian matching on normalized geometry + internal rank-PCA; relock E3 RMS",
+  "seed": 20261009,
+  "lambda": 0.3333333333333333,
+  "external_sources": [],
+  "external_files_read_for_build": false,
+  "disclosure": "No external data or pretrained models. Official released E6.75, E7.25, E8.0 only. No protected target expression or labels used.",
+  "right_selected_rows": 1117,
+  "unique_right_donors": 1117,
+  "max_donor_reuse": 1,
+  "fallback_states": [
+    "Anterior Epiblast",
+    "Blood Progenitor",
+    "CP",
+    "EXE-Ectoderm",
+    "Gut Endoderm",
+    "PHM/PAM",
+    "aSE"
+  ],
+  "fallback_rows": 1651,
+  "fallback_policy": "actual source-left coordinates, together with all output points relocked to E3 RMS; source labels/counts not changed",
+  "checks": {
+    "X_exact": true,
+    "obs_exact": true,
+    "var_exact": true,
+    "all_state_gene_marginals_exact": true,
+    "independent_replay_byte_exact": true
+  },
+  "contract": {
+    "board": "T2:embryo:val_interp",
+    "file": "artifacts/t2_embryo_campaign_20261009/shapemix_internal_replay/internal.h5ad",
+    "n_obs": 5000,
+    "n_vars": 498,
+    "size_mb": 10.4,
+    "errors": [],
+    "pass": true
+  },
+  "local_evidence": "artifacts/t2_embryo_campaign_20261009/shapemix_holdout/RESULT.json",
+  "risk": "Holdout total approximately tied, occupancy/neighborhood lower than untouched carrier; tests support model, not a proven fix",
+  "mechanism_test": "Real endpoint support vs Gaussian/continuous generated coordinates. Relative to scored E3, only coordinates change; expression and scale negative controls.",
+  "budget": "existing 2/2, overall 2/4 planned; external 2 slots unused",
+  "diagnostics": {
+    "mode": "internal",
+    "support": "mixture",
+    "right_shape_scale": 0.4510232261710186,
+    "shuffle_control": false,
+    "t": 0.3333333333333333,
+    "registration": {
+      "shared_anchor_types": [
+        "Allantois",
+        "Caudal Epiblast",
+        "EXE-Endoderm",
+        "ExEM-1",
+        "ExEM-2",
+        "HEM-Endoth",
+        "LPM",
+        "Primitive Streak",
+        "SOM",
+        "Unknown",
+        "pSE"
+      ],
+      "anchor_weights": [
+        0.0960974177420151,
+        0.022132206464560305,
+        0.31124408060359754,
+        0.11360601869556305,
+        0.1836448990763905,
+        0.05851217506525358,
+        0.03410783617280263,
+        0.04349658136648941,
+        0.0333080183966992,
+        0.09444438488060784,
+        0.00940638153602093
+      ],
+      "rotation": [
+        [
+          0.803288408024905,
+          -0.47982165996516035,
+          -0.35284402809328386
+        ],
+        [
+          0.500957024887705,
+          0.8647455596000717,
+          -0.035456682975413406
+        ],
+        [
+          0.3221331910071917,
+          -0.1482777521418411,
+          0.9350101151705729
+        ]
+      ],
+      "determinant": 1.0000000000000022,
+      "right_anchor_center": [
+        -9.437741992170734,
+        47.84627197506197,
+        -6.442487998557234
+      ],
+      "left_anchor_center": [
+        -2.9272069617172543,
+        13.53795474476996,
+        57.09906632329021
+      ],
+      "anchor_singular_values": [
+        2411.497447240092,
+        701.7160858768103,
+        5.6897300165378475
+      ],
+      "anchor_weighted_residual_rms": 58.597086660189696,
+      "left_anchor_rank_ratio": 0.5450711576646615,
+      "right_anchor_rank_ratio": 0.4972271818505432
+    },
+    "states": {
+      "Allantois": {
+        "n_carrier": 257,
+        "n_right": 1815,
+        "right_selected_rows": 86,
+        "unique_right_donors": 86,
+        "max_right_reuse": 1,
+        "donor_entropy": 4.4543472962535064,
+        "mean_matching_distance": 0.8356559637719065
+      },
+      "Caudal Epiblast": {
+        "n_carrier": 315,
+        "n_right": 112,
+        "right_selected_rows": 105,
+        "unique_right_donors": 105,
+        "max_right_reuse": 1,
+        "donor_entropy": 4.653960350157524,
+        "mean_matching_distance": 1.2772413407635645
+      },
+      "EXE-Endoderm": {
+        "n_carrier": 824,
+        "n_right": 5528,
+        "right_selected_rows": 275,
+        "unique_right_donors": 275,
+        "max_right_reuse": 1,
+        "donor_entropy": 5.616771097666572,
+        "mean_matching_distance": 0.7138689155936483
+      },
+      "ExEM-1": {
+        "n_carrier": 308,
+        "n_right": 2291,
+        "right_selected_rows": 103,
+        "unique_right_donors": 103,
+        "max_right_reuse": 1,
+        "donor_entropy": 4.634728988229635,
+        "mean_matching_distance": 0.7744926565691223
+      },
+      "ExEM-2": {
+        "n_carrier": 482,
+        "n_right": 2422,
+        "right_selected_rows": 161,
+        "unique_right_donors": 161,
+        "max_right_reuse": 1,
+        "donor_entropy": 5.081404364984463,
+        "mean_matching_distance": 0.8623060011020579
+      },
+      "HEM-Endoth": {
+        "n_carrier": 219,
+        "n_right": 2485,
+        "right_selected_rows": 73,
+        "unique_right_donors": 73,
+        "max_right_reuse": 1,
+        "donor_entropy": 4.29045944114839,
+        "mean_matching_distance": 1.112225488116464
+      },
+      "LPM": {
+        "n_carrier": 106,
+        "n_right": 297,
+        "right_selected_rows": 35,
+        "unique_right_donors": 35,
+        "max_right_reuse": 1,
+        "donor_entropy": 3.5553480614894135,
+        "mean_matching_distance": 1.0295325082294327
+      },
+      "Primitive Streak": {
+        "n_carrier": 198,
+        "n_right": 284,
+        "right_selected_rows": 66,
+        "unique_right_donors": 66,
+        "max_right_reuse": 1,
+        "donor_entropy": 4.189654742026424,
+        "mean_matching_distance": 1.0884398495723597
+      },
+      "SOM": {
+        "n_carrier": 138,
+        "n_right": 228,
+        "right_selected_rows": 46,
+        "unique_right_donors": 46,
+        "max_right_reuse": 1,
+        "donor_entropy": 3.828641396489094,
+        "mean_matching_distance": 1.1255675111025156
+      },
+      "Unknown": {
+        "n_carrier": 468,
+        "n_right": 594,
+        "right_selected_rows": 156,
+        "unique_right_donors": 156,
+        "max_right_reuse": 1,
+        "donor_entropy": 5.049856007249538,
+        "mean_matching_distance": 1.1041664652429342
+      },
+      "pSE": {
+        "n_carrier": 34,
+        "n_right": 381,
+        "right_selected_rows": 11,
+        "unique_right_donors": 11,
+        "max_right_reuse": 1,
+        "donor_entropy": 2.3978952727983707,
+        "mean_matching_distance": 0.8259346835890174
+      }
+    },
+    "fallback_states": [
+      "Anterior Epiblast",
+      "Blood Progenitor",
+      "CP",
+      "EXE-Ectoderm",
+      "Gut Endoderm",
+      "PHM/PAM",
+      "aSE"
+    ],
+    "rms_target": 191.28394070492925,
+    "rms_before_lock": 147.02156667025025,
+    "parent_expression_frozen": true,
+    "mechanism": "paired nonlinear displacement, no generated Gaussian points",
+    "internal_pca_components": 12,
+    "blocks_equal_norm": true,
+    "parameter_search": false
+  }
+}

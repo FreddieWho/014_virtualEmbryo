@@ -1,0 +1,36 @@
+{
+  "base_commit": "29a8e1976665a66a7378892857c815f589720971",
+  "code_sha256": {
+    "scripts/t2_embryo_campaign_20261009/build_geometry.py": "e74c7169f650ea101bbc7af46e60e829a7de9762954d40c8df0316f43865bf8d",
+    "scripts/t2_embryo_campaign_20261009/run_external.py": "f5675d37f6103253b4b43eab00a1faf297916819d5e6d743eadda0ed8bdb3ed9",
+    "scripts/t2_embryo_campaign_20261009/test_copula.py": "766f2fe6cc4501c42b171d671e09e09406da261286f6b75c2d1a572c9428d931",
+    "scripts/t2_embryo_campaign_20261009/test_geometry.py": "b5be2c148d2432bfde971bbebfe1c12335adc7d6a43a59d46ed389e1771ff62e",
+    "scripts/t2_embryo_campaign_20261009/run_copula.py": "02c9e354d05baaef67d3e1ea8180ddac2f3721d0a5dc00f797520e0cd13011e8",
+    "scripts/t2_embryo_campaign_20261009/runtime.py": "3f3d948bc4d96b6f4258cead7627d53fe29adddec97c4cb7d2586559dce73737",
+    "scripts/t2_embryo_campaign_20261009/transport.py": "d505a6f812fd71ccee9799a2545224299d6182fd79b1111855fbb79123248c6a",
+    "scripts/t2_embryo_campaign_20261009/test_rewire.py": "edc3390d1d045b63764a590957c8de66d161698859d11edbb06ffb2cbadc8a83",
+    "scripts/t2_embryo_campaign_20261009/rewire.py": "bcad5a75435de5b1b07648200c6859f9eb3694e151819c1d3317d1d751cebac7",
+    "scripts/t2_embryo_campaign_20261009/copula.py": "e8a97001106a5326f69e47711cab3ce07e3da9c3d30808278cc047519613cbf4",
+    "scripts/t2_embryo_campaign_20261009/test_transport.py": "b9b76b67f0cf93879b72af664359543e8b38bb66d27cb225cec36055ca7c79d6",
+    "scripts/t2_embryo_campaign_20261009/build.py": "ee34ecce1660c62ea968d7ffee3816fae1b9915deb6d1b10374a2e7bc8b966aa",
+    "scripts/t2_embryo_campaign_20261009/run_rewire.py": "e7025c3a60f4e51db84aa78f280308bbb753510484ea70039c444b312008899a",
+    "scripts/t2_embryo_campaign_20261009/reproduce_e3.py": "a0432af427f1be8d3f49bc6e35348f1d2fb4e216ab7e8ade22de1af252208af8",
+    "scripts/t2_embryo_campaign_20261009/test_build.py": "50eb2e52a46b471fea7bc12fa164c978b675c3e8e95443369457e8a2ae805cc0",
+    "scripts/t2_embryo_campaign_20261009/geometry.py": "e2bd19ae810c2f24178bc24f6385b605657f3522992736861c332268377e21b0",
+    "scripts/t2_embryo_campaign_20261009/evaluate.py": "bf76ff6f9ae83ae69e1007e3a3209d0a6d9a53169dfbd5c7b3a18f48bbc4d94b",
+    "scripts/t2_embryo_campaign_20261009/external_programs.py": "e102d592a0c3fd2e3db86f13cef7163dd43d0e775d90a5196e8269b0573e3a95"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "anndata": "0.13.4",
+    "h5py": "3.16.0",
+    "scikit-learn": "1.8.0",
+    "pandas": "3.0.6"
+  },
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "source_data": "Three official hash-matched released embryo files; independently audited external datasets listed in source manifests. No GSE171588/Harland."
+}

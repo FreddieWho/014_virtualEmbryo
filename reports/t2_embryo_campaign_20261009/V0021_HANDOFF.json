@@ -1,0 +1,74 @@
+{
+  "candidate_id": "T2_embryo_val_interp/v0021_e3_scrna_copula",
+  "board": "T2:embryo:val_interp",
+  "target": "E7.5",
+  "artifact_path": "submissions/candidates/T2_embryo_val_interp/v0021_e3_scrna_copula/submission.h5ad",
+  "sha256": "3728f7ff375bf59573f396e61e875cf23488aba30e2f5fd90a198e7044094679",
+  "n_obs": 5000,
+  "n_vars": 498,
+  "parent": "byte-exact scored E3; original coordinates retained",
+  "parent_sha256": "e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae",
+  "mechanism": "Fit rank-Gaussian LedoitWolf partial correlations on independent E7.25 single cells; within each parent state blend conditional/original ranks equally, then permute existing values separately per gene. Transfer dependence, never expression units.",
+  "checks": {
+    "state_gene_marginals_exact": true,
+    "zero_and_positive_value_distributions_exact": true,
+    "coords_array_exact": true,
+    "obs_exact": true,
+    "var_exact": true,
+    "replay_byte_exact": true,
+    "changed_entries_fraction": 0.04448353413654618
+  },
+  "external_source": "GSE278981/GSM8559288 independent E7.25 PE725 10x filtered count matrix only",
+  "intake_manifest": "/workspace/shared/embryo_external_20261009/GSM8559288_INPUT_MANIFEST.json",
+  "intake_manifest_sha256": "c3cf503811cf0b9886acc1ffc5e2d5611883aa4d85a9e0bb1f763cf983473a6c",
+  "external_cells_raw": 6173,
+  "external_cells_qc": 5799,
+  "panel_alignment": "498 official genes, explicit aggregation of same-symbol feature counts; no missing gene filled",
+  "fit": {
+    "n_fit_cells": 5799,
+    "n_genes": 498,
+    "ledoit_wolf_shrinkage": 0.0085855531876547,
+    "rank_gaussian": true,
+    "blend": 0.5,
+    "parameter_search": false
+  },
+  "disclosure": "External data: NCBI GEO GSE278981, sample GSM8559288, independently processed E7.25 mouse embryo 10x single-cell RNA-seq PE725 filtered count files only. Only E7.25 sample-specific barcodes/features/matrix downloaded and used; no E7.5 files or jointly trained atlas/embedding/labels from that series used. Source counts supply gene rank dependence, not absolute expression or proportions. No pretrained models. Carrier and geometry use official released E6.75/E7.25/E8.0 Task 2 data.",
+  "license": "GEO open reuse policy; not asserted CC-BY/CC0",
+  "contract": {
+    "board": "T2:embryo:val_interp",
+    "file": "artifacts/t2_embryo_campaign_20261009/copula_target/scrna.h5ad",
+    "n_obs": 5000,
+    "n_vars": 498,
+    "size_mb": 10.4,
+    "errors": [],
+    "pass": true
+  },
+  "local_evidence": "artifacts/t2_embryo_campaign_20261009/copula_holdout/RESULT.json",
+  "local_summary": {
+    "unmodified": 51.5302,
+    "internal_covariance": 52.339,
+    "external_scrna": 51.757,
+    "shuffled_gene_external": 49.955
+  },
+  "limitations": [
+    "Internal covariance control outperforms external covariance locally; no claim external is best.",
+    "External E7.25 is an independent dataset but same stage as official pseudo-target, so this local fold is not strict all-source stage holdout.",
+    "Different platform/detection/strain may bias dependence; ranks avoid UMI units but do not eliminate domain mismatch.",
+    "MMD and variogram depend on joint gene structure and can change despite fixed marginals. DE estimates use finite sampling; no guarantee all server metrics stay numerically exact."
+  ],
+  "budget": "overall third planned submission, external first of two; unsubmitted at freeze",
+  "reproducibility_environment": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "cross_thread_bit_exact": "NOT_GUARANTEED; rank ties can change under different BLAS reduction order",
+    "independent_same_env_audit": "V21_INDEPENDENT_REPLAY.json",
+    "two_thread_comparison": {
+      "changed_entries": 1709,
+      "total_entries": 2490000,
+      "fraction": 0.0006863453815261044,
+      "mean_absolute_difference": 0.00295019,
+      "max_absolute_difference": 7.12952,
+      "interpretation": "Small floating reduction changes can cause discrete rank reassignment. Do not describe all value differences as tiny. Same locked single-thread environment independently reproduces exactly."
+    }
+  }
+}

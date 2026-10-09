@@ -1,0 +1,78 @@
+{
+  "task": "T2",
+  "board": "T2:embryo:val_interp",
+  "phase": "p2",
+  "phase_label": "P2 · Baselines released",
+  "shows_scores": true,
+  "updated_at": "2026-10-09T07:51:48+00:00",
+  "reference": [
+    {
+      "name": "ceiling",
+      "headline": 100.0,
+      "metrics": {
+        "de_score": 100.0,
+        "de_direction": 100.0,
+        "mmd_u": 100.0,
+        "variogram": 100.0,
+        "d2_shape": 100.0,
+        "occupancy_dice": 100.0,
+        "scale_log_ratio": 100.0,
+        "neighborhood_mmd": 100.0
+      }
+    },
+    {
+      "name": "pseudobulk_shift",
+      "headline": 55.2229,
+      "metrics": {
+        "de_score": 48.6244,
+        "de_direction": 50.0,
+        "mmd_u": 61.4698,
+        "variogram": 57.5675,
+        "d2_shape": 50.0,
+        "occupancy_dice": 50.0,
+        "scale_log_ratio": 50.0,
+        "neighborhood_mmd": 61.6707
+      }
+    },
+    {
+      "name": "copy_last",
+      "headline": 50.0,
+      "metrics": {
+        "de_score": 50.0,
+        "de_direction": 50.0,
+        "mmd_u": 50.0,
+        "variogram": 50.0,
+        "d2_shape": 50.0,
+        "occupancy_dice": 50.0,
+        "scale_log_ratio": 50.0,
+        "neighborhood_mmd": 50.0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "rank": 96,
+      "team": "Physical Fossil",
+      "affiliation": "Shanghai Medical College of Fudan University",
+      "model": "embryo-scrna-copula-v0021",
+      "track": "human",
+      "headline": 63.0047,
+      "metrics": {
+        "de_score": 54.082,
+        "de_direction": 67.9967,
+        "mmd_u": 61.8563,
+        "variogram": 53.5406,
+        "d2_shape": 54.648,
+        "occupancy_dice": 51.1667,
+        "scale_log_ratio": 90.8268,
+        "neighborhood_mmd": 66.9022
+      },
+      "scored_at": "2026-10-09T07:50:07+00:00"
+    }
+  ],
+  "counts": {
+    "teams": 178
+  },
+  "note": null,
+  "excerpt_note": "Campaign-relevant excerpt of public API response; 178 leaderboard rows in original; unrelated competitors omitted."
+}

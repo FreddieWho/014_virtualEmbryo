@@ -1,0 +1,71 @@
+{
+  "source": "GSE278981/GSM8559288",
+  "decision": "ALLOW_INDEPENDENT_STAGE_SPECIFIC_COUNT_MATRIX_ONLY",
+  "stage": 7.25,
+  "stage_evidence": "GSM8559288 title E7.25 mouse embryo Single Cell RNA seq; three sample-specific PE725 count files. GSE278981 also contains forbidden E7.5, not downloaded.",
+  "species": "Mus musculus",
+  "strain": "ARC",
+  "treatment": "Normal",
+  "modality": "10x Chromium v3/v3.1 single-cell RNA-seq; filtered feature barcode matrix",
+  "shape_cells_genes": [
+    6173,
+    32285
+  ],
+  "nonzeros": 15033053,
+  "count_range": [
+    1.0,
+    854.0
+  ],
+  "median_counts": 7672.0,
+  "median_genes": 2573.0,
+  "genesymbol_duplicates": 40,
+  "files": [
+    {
+      "file": "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_barcodes.tsv.gz",
+      "bytes": 32285,
+      "sha256": "e08c7ebd8a752e729589fae22475bb595e095305e866e7ce282ffede901b3c58",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8559nnn/GSM8559288/suppl/GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_barcodes.tsv.gz"
+    },
+    {
+      "file": "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_features.tsv.gz",
+      "bytes": 290896,
+      "sha256": "a4f4b7c7284188f1404dd002d369ac1d4f4ebed498fe65f99e7fa286f8e5a9ee",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8559nnn/GSM8559288/suppl/GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_features.tsv.gz"
+    },
+    {
+      "file": "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_matrix.mtx.gz",
+      "bytes": 56545975,
+      "sha256": "21515925b9eae6481f3c1f0feee9137742f15b0b497d37204693e3590acc0f0d",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8559nnn/GSM8559288/suppl/GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_matrix.mtx.gz"
+    },
+    {
+      "file": "gsm8559288_e725_counts_csr.npz",
+      "sha256": "51e6acbf441b8b39888f5f7149a8778ec977cfc850c0a30d5ae68bcb8c819a6a",
+      "bytes": 31753256,
+      "derived": true
+    },
+    {
+      "file": "gsm8559288_e725_features.tsv",
+      "sha256": "b74b70409391179b8fef0818f9683f42e86f80e5ce3dc65105cbea640463a403",
+      "bytes": 1374731,
+      "derived": true
+    },
+    {
+      "file": "gsm8559288_e725_cell_qc.tsv",
+      "sha256": "2979e656a9ec1942bfb63e668da25e93e25aeac7f66fd5bdfaf53f170727eb28",
+      "bytes": 403143,
+      "derived": true
+    }
+  ],
+  "license": "NCBI GEO open data reuse policy; no source-specific restriction found; no claim that NCBI assigns a CC license",
+  "license_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+  "pretraining": "No embeddings, imputed data, learned labels, or joint atlas used. Source filenames identify sample-specific Cell Ranger filtered feature barcode output; sparse nonnegative integer counts verified.",
+  "limits": [
+    "Single specimen/channel; selection and dissociation bias, pooled embryo count unspecified.",
+    "No spatial coordinates, no measured occupancy/3D shape.",
+    "Training-stage-only cell-state density support, not target-stage cell proportions.",
+    "Do not transfer absolute UMI values to challenge expression. Use common-gene within-platform rank or calibrated official training domains.",
+    "No source cell labels supplied or required; annotate only against permitted official training data if needed.",
+    "Processed raw-count integer matrix is auditable; original FASTQ alignment provenance refers to Aryamanesh2022 rather than explicit CellRanger version. This limits computational reproducibility, not known evidence of held-out-stage exposure."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "candidate_id": "T2_embryo_val_interp/v0022_copula_geocouple",
+  "board": "T2:embryo:val_interp",
+  "target": "E7.5",
+  "artifact_path": "submissions/candidates/T2_embryo_val_interp/v0022_copula_geocouple/submission.h5ad",
+  "sha256": "c5d810c54a6336d59e5cf0b2701435ff2facdb601a682ced2a22e74264d7a1e7",
+  "n_obs": 5000,
+  "n_vars": 498,
+  "parent": "v0021 e3_scrna_copula, scored 63.0047",
+  "parent_sha256": "3728f7ff375bf59573f396e61e875cf23488aba30e2f5fd90a198e7044094679",
+  "method": "Geo-seq AP/PD rank programme spatial field interpolation with a fixed 15-neighbor-scale locality cost; within-state capacity-constrained pairing represented as inverse coordinate permutation",
+  "X_exact_to_parent": true,
+  "obs_exact_to_parent": true,
+  "coordinate_multiset_exact": true,
+  "coordinate_permutation_file": "artifacts/t2_embryo_campaign_20261009/composite_target/spatial_permutation.npy",
+  "state_match_exact": true,
+  "changed_indices": 1778,
+  "actually_moved_coordinates": 1253,
+  "nonzero_displacement_quantiles": [
+    2.4344725608825684,
+    16.881689071655273,
+    26.909595489501953,
+    40.04283142089844,
+    151.54710388183594
+  ],
+  "replay_byte_exact": true,
+  "contract": {
+    "board": "T2:embryo:val_interp",
+    "file": "artifacts/t2_embryo_campaign_20261009/composite_target/spatial.h5ad",
+    "n_obs": 5000,
+    "n_vars": 498,
+    "size_mb": 10.4,
+    "errors": [],
+    "pass": true
+  },
+  "parent_program_score_comparison": "reports/t2_embryo_campaign_20261009/V22_PARENT_PROGRAM_COMPARISON.json",
+  "local_summary": {
+    "unmodified": {
+      "TOTAL": 51.75682921049118,
+      "neighborhood_mmd": 60.99523837507479
+    },
+    "internal": {
+      "TOTAL": 51.708161307326314,
+      "neighborhood_mmd": 61.034945704654824
+    },
+    "spatial": {
+      "TOTAL": 51.50167652770284,
+      "neighborhood_mmd": 60.738204148109865
+    },
+    "spatial_shuffle": {
+      "TOTAL": 51.519734925443935,
+      "neighborhood_mmd": 59.86683558809122
+    }
+  },
+  "external_sources": [
+    "GSE65924 E7.0 epiblast Geo-seq, three independent replicates",
+    "GSE278981/GSM8559288 independent E7.25 PE725 counts, inherited solely through fixed v0021 parent"
+  ],
+  "disclosure": "External data: GSE65924, three independent E7.0 epiblast Geo-seq replicates, cross-replicate stable AP/PD gene rank priors only; no absolute FPKM, inferred atlas embeddings, or fabricated physical coordinates transferred. Parent v0021 additionally uses GSE278981/GSM8559288 independent E7.25 PE725 10x sample-specific count files to learn gene rank dependence; no E7.5 files or joint atlas models. Official released E6.75/E7.25/E8.0 embryo data only; no protected validation/test labels. No pretrained models.",
+  "limitations": [
+    "Local programme coupling is stronger than shuffled-gene control but does not improve on the untouched copula parent; this is a server hypothesis test, not a claimed gain.",
+    "Coordinate multiset invariance does not guarantee invariant finite-index subsampled shape skills.",
+    "Geo-seq pools are E7.0 epiblast and not single-cell target anatomy; coarse programmes omit other spatial dimensions.",
+    "Parent is fixed byte-exact v0021; programme scores and pairing are recomputed on its actual X, not copied from E3."
+  ],
+  "budget": "fourth and final planned slot, external second of two; unsubmitted at freeze"
+}

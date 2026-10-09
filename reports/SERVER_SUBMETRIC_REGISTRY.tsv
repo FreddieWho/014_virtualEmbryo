@@ -1000,4 +1000,35 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	de_direction	64.2
 2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	mmd_u	62.4
 2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	variogram	53.0
-
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	de_score	54.1
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	de_direction	68.0
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	mmd_u	61.3
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	variogram	53.3
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	d2_shape	59.0
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	occupancy_dice	41.9
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	scale_log_ratio	90.8
+2026-10-09	T2:embryo:val_interp	v0019	e3_state_bures	t2_emb_int__e3_bures__v0019.h5ad	2026-10-09 07:31	62.33	neighborhood_mmd	66.3
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	de_score	54.1
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	de_direction	68.0
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	mmd_u	61.3
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	variogram	53.3
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	d2_shape	54.7
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	occupancy_dice	39.2
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	scale_log_ratio	90.8
+2026-10-09	T2:embryo:val_interp	v0020	e3_supportmix	t2_emb_int__e3_supportmix__v0020.h5ad	2026-10-09 07:39	61.39	neighborhood_mmd	64.9
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	de_score	54.0820
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	de_direction	67.9967
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	mmd_u	61.8563
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	variogram	53.5406
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	d2_shape	54.6480
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	occupancy_dice	51.1667
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	scale_log_ratio	90.8268
+2026-10-09	T2:embryo:val_interp	v0021	e3_scrna_copula	t2_emb_int__scrna_copula__v0021.h5ad	2026-10-09 07:49	63.0047	neighborhood_mmd	66.9022
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	de_score	54.1
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	de_direction	68.0
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	mmd_u	61.9
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	variogram	53.5
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	d2_shape	54.6
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	occupancy_dice	48.2
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	scale_log_ratio	90.8
+2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	neighborhood_mmd	66.5

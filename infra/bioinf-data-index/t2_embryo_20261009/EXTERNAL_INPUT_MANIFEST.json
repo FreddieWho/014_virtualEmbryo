@@ -1,0 +1,78 @@
+{
+  "source": "GSE65924; Peng et al. 2016, doi:10.1016/j.devcel.2016.02.020",
+  "decision": "ALLOW_STAGE_SPECIFIC_RAW_FPKM_AND_OBSERVED_REGION_METADATA",
+  "stages": [
+    7.0
+  ],
+  "species": "Mus musculus",
+  "genotype": "unperturbed C57BL/6",
+  "files": [
+    {
+      "file": "GSE65924_E1.gene.expression.txt.gz",
+      "sha256": "6cd0e9ae379362eec3fbc55c318ef4bc8f90a61a55a25abfe9691b49e71caa9f",
+      "bytes": 1935757,
+      "shape_genes_pools": [
+        23361,
+        41
+      ],
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE65nnn/GSE65924/suppl/GSE65924_E1.gene.expression.txt.gz"
+    },
+    {
+      "file": "GSE65924_E2.gene.expression.txt.gz",
+      "sha256": "ea4fa076913e01ee5d7139210ab5526762d9c3220c1c195ae88d5d5f7cb8e430",
+      "bytes": 1950941,
+      "shape_genes_pools": [
+        23361,
+        40
+      ],
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE65nnn/GSE65924/suppl/GSE65924_E2.gene.expression.txt.gz"
+    },
+    {
+      "file": "GSE65924_E3.gene.expression.txt.gz",
+      "sha256": "1abf42f2f166121d84d302f6c22fece0ea02708a7e1fe77a0d29a863d9ecc9c5",
+      "bytes": 2199514,
+      "shape_genes_pools": [
+        23361,
+        41
+      ],
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE65nnn/GSE65924/suppl/GSE65924_E3.gene.expression.txt.gz"
+    },
+    {
+      "file": "gse65924_e70_pool_fpkm.npz",
+      "sha256": "edf36c508716e69414a938e5b1205d292f76b509954e1f8f2fd0597e79102b33",
+      "bytes": 6873104,
+      "derived": true
+    },
+    {
+      "file": "gse65924_e70_pool_metadata.tsv",
+      "sha256": "f0c11d75b144ca7bd6b5f8d0b06a0c4598de12a3b1b31f8c2cb73d4f70a43687",
+      "bytes": 7496,
+      "derived": true
+    },
+    {
+      "file": "gse65924_e70_gene_spatial_rank_prior.tsv",
+      "sha256": "1a390e47b68dfbdc739a8978f7676c16ee380786e6d0335c3968f88208ce1021",
+      "bytes": 5144448,
+      "derived": true
+    }
+  ],
+  "license": "NCBI GEO open reuse policy; no source-specific restriction found; not asserted CC-BY or CC0",
+  "license_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+  "pretraining": "None; source FPKM aligned per library with Tophat2/Cufflinks, no learned shared atlas, embeddings, annotation, or imputation used",
+  "fields": {
+    "X": "per-pool FPKM; not single-cell counts or official log-expression",
+    "section": "observed serial cryosection 1(distal) to 11(proximal)",
+    "region": "observed epiblast A/P/L/R; deposited L/R are mirror reversed",
+    "pd_ordinal": "derived normalized section rank; NOT measured physical coordinate",
+    "ap_category": "derived categorical coding A=-1 P=+1 L/R=0; NOT measured physical coordinate"
+  },
+  "limitations": [
+    "Only epiblast, ~20 cells per pool, no extraembryonic/mesoderm/endoderm completeness.",
+    "No measured 3D surface or volume; does not supply target occupancy or cell counts.",
+    "Relative gene-space coupling only; absolute FPKM must not be substituted for official expression.",
+    "Cross-platform information gain requires matched no-external and shuffled coupling controls.",
+    "Time transfer E7.0 to E7.5 is an unvalidated prior, tune only on allowed stage replicates."
+  ],
+  "held_out_access": "No held-out expression/coordinates downloaded; only bibliographic and stage metadata for source triage.",
+  "quarantined_source": "GSE171588 allowed-stage FPKM retained as REVIEW_HOLD: blanket GSM processing mentions ComBat; cross-stage scope cannot be conclusively reconstructed. Do not use. Harland2025 integrated/imputed/learned labels excluded."
+}

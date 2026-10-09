@@ -80,3 +80,14 @@ T1 短名单：本地 ExtendedMouseAtlas 为首选（217,553 合规细胞／8 �
 ## 2026-10-03 — T1 外部预训练关闭
 
 ExtendedMouseAtlas 合规子集新用途已执行并关闭（T1-EXTPRE-20261003-v1，G-return 挂门）。未新增外部文件；索引行 211 状态从 pending lane freeze 改为已关闭。详见 `artifacts/t1_extpretrain/T1-EXTPRE-20261003-v1/RESULT_B.json`。
+
+## 2026-10-09 T2 embryo independent sources
+
+- GSE65924: three independent E7.0 epiblast Geo-seq pool replicates, 122 pools × 23361 genes. Cross-replicate AP/PD rank prior overlaps 480/498 current embryo genes; pool FPKM units and idealized section geometry are not transferred. Used only in local spatial coupling prototypes at this point, not v0019/v0020/v0021.
+- GSE278981/GSM8559288: only independently processed E7.25 PE725 sample-specific 10x count files; no E7.5 files or joint atlas/imputation models. 6173 raw cells / 5799 after fixed input QC; exact current 498-gene panel after explicit duplicate-symbol aggregation. v0021 uses this source alone to learn rank-Gaussian gene dependence; every parent state/gene marginal and original geometry are preserved.
+- GSE171588: REVIEW_HOLD, possible cross-stage ComBat processing ambiguity; not a candidate input. Harland joint/imputed products excluded. Neither source contributes to the candidates.
+- Reuse basis is GEO's published open reuse policy, not a fabricated CC-BY/CC0 licence. Complete intake manifests and policy evidence are in t2_embryo_20261009/. Absolute INDEX paths identify the verified consumer-local cache; raw source URLs and hashes are retained for recovery.
+
+v0022 frozen (not yet submitted): GSE65924 relative AP/PD prior is now an actual candidate input, while the independently learned GSM8559288 dependence is inherited through immutable v0021. Only coordinate pairing changes; no external idealized coordinates or FPKM values are introduced. Both sources must be disclosed.
+
+Campaign close: v0021 and v0022 are both terminal scored. v0021 uses the independent scRNA source and is selected; v0022 adds Geo-seq prior and is not selected. These server outcomes do not change source legality. All four slots used; no new data collection or submission continues.

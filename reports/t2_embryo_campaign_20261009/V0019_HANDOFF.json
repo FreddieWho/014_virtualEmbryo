@@ -1,0 +1,46 @@
+{
+  "candidate_id": "T2_embryo_val_interp/v0019_e3_state_bures",
+  "board": "T2:embryo:val_interp",
+  "target": "E7.5",
+  "artifact_path": "submissions/candidates/T2_embryo_val_interp/v0019_e3_state_bures/submission.h5ad",
+  "sha256": "c372a032fd620589e31a2050951af0b0b0e53b184085408722f0546e524fbc69",
+  "bytes": 10371584,
+  "n_obs": 5000,
+  "n_vars": 498,
+  "contract": {
+    "board": "T2:embryo:val_interp",
+    "file": "artifacts/t2_embryo_campaign_20261009/e3_state_bures.h5ad",
+    "n_obs": 5000,
+    "n_vars": 498,
+    "size_mb": 10.4,
+    "errors": [],
+    "pass": true
+  },
+  "mechanism": "source-only proper Procrustes + state-conditional Bures affine transport, preserving expression and rows; lock parent RMS",
+  "parent": {
+    "name": "E3_v0014faithful",
+    "sha256": "e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae",
+    "portal_id": "a92d87c9e46b4c6f822c1f7e96e9c755",
+    "identity_source": "reports/t1_late_anchor_20261008/MANIFEST.tsv",
+    "not_original_v0014": true
+  },
+  "checks": {
+    "X_exact": true,
+    "obs_exact": true,
+    "var_exact": true,
+    "parent_byte_exact_historical_E3": true,
+    "RMS_delta": 2.842170943040401e-14,
+    "full_candidate_replay_byte_exact": true
+  },
+  "external_sources": [],
+  "disclosure": "No external data or pretrained models. Uses only official released Task 2 embryo stages E6.75, E7.25 and E8.0. No validation/test target data or protected labels used.",
+  "local_evidence": "reports/t2_embryo_campaign_20261009/holdout_geometry.json",
+  "risk": "Released-stage holdout D2 improves but occupancy and neighborhood worsen; Gaussian moment interpolation cannot reproduce non-Gaussian topology. No server improvement claimed.",
+  "budget": "existing route submission 1 of 2; external slots remain 2 of 2; no upload yet",
+  "falsifiable_expectation": "E3 expression four skill values should be unchanged; RMS skill unchanged. D2/occupancy/neighborhood arbitrate the geometry mechanism.",
+  "fallback": {
+    "missing_endpoint_types": 7,
+    "rows": 1651,
+    "policy": "Retain base geometry for missing states, then same global RMS lock; not all states have a double-ended bridge"
+  }
+}

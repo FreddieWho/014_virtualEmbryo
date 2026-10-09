@@ -1865,3 +1865,24 @@ INDEX rows v0089–v0093 appended (old mistaken v0063–v0067 labels retired). T
 blocks_submission:false for further val work; ask before any official test-phase portal upload.
 
 <!-- tip sync 20261009 -->
+
+## T2-EMBRYO-20261009
+
+Portal authenticated UI read by the single upload worker, 2026-10-09. All scores below are the UI displayed precision (total two decimals, skills one decimal); no unobserved precision is inferred.
+
+Exact parent E3: portal a92d87c9e46b4c6f822c1f7e96e9c755, model calib-r3, T2_embryo_val_interp__E3_v0014faithful.h5ad, 2026-10-08 06:19. Total 62.89; skills in canonical metric order: 54.1 / 68.0 / 61.3 / 53.3 / 54.6 / 51.2 / 90.8 / 66.9. SHA e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae reproduced byte-exact against the historical manifest. E3 is not the original v0014 despite similar displayed total.
+
+- v0019 e3_state_bures: submission 07d32ef4cdfc4682b5998e6ab88c03e6, 2026-10-09 07:31, terminal scored 62.33. Skills 54.1 / 68.0 / 61.3 / 53.3 / 59.0 / 41.9 / 90.8 / 66.3. REJECT relative to E3; expression/scale controls repeat, shape improves but occupancy/neighborhood worsen. No promotion.
+- v0020 e3_supportmix: submission 7486e84fb2934a38a72737c4cefa655f, 2026-10-09 07:39, terminal scored 61.39. Skills 54.1 / 68.0 / 61.3 / 53.3 / 54.7 / 39.2 / 90.8 / 64.9. REJECT relative to E3; real endpoint support mixture also harms occupancy/neighborhood. No promotion.
+
+Full skills are appended to SERVER_SUBMETRIC_REGISTRY.tsv; artifact hashes are in submissions/INDEX.tsv. Existing-route budget is 2/2 used; external slots remain separate. These results reject the particular shape interventions, not all geometry research. No protected target labels were accessed or inferred.
+
+### v0021 scRNA copula return
+
+2026-10-09 07:49, portal submission 1b4b7c94a7fa45b6bb77cd3e839b5b6e, terminal UI total 63.00. Skills in canonical order: 54.1 / 68.0 / 61.9 / 53.5 / 54.6 / 51.2 / 90.8 / 66.9. MMD/variogram improve at displayed precision, six other controls repeat. Portal marks new best; displayed +0.11 vs E3 is near the 0.1 selection threshold, so exact four-decimal threshold verification is pending before asserting formal promotion. No unobserved precision inferred. Three of four total budget slots now used; one external slot remains.
+
+Precision resolution (official public API 2026-10-09 07:51:48–51 UTC): v0021 total **63.0047**, previous best original v0014 **62.8930**, delta **+0.1117**, exceeding the 0.1 tie band. **PROMOTED** embryo selection. This is not an exact E3 delta (E3 total is only known at UI precision). Exact skills: 54.0820 / 67.9967 / 61.8563 / 53.5406 / 54.6480 / 51.1667 / 90.8268 / 66.9022. API model embryo-scrna-copula-v0021, scored_at 2026-10-09T07:50:07Z; label/time cross-check portal ID above. Human rank 96/178. Evidence: reports/t2_embryo_campaign_20261009/V21_OFFICIAL_API.json.
+
+### v0022 Geo coupling return and campaign close
+
+2026-10-09 08:00, portal efe73e77283d4b9486c72b7c919e76c8, terminal UI total 62.65. Skills: 54.1 / 68.0 / 61.9 / 53.5 / 54.6 / 48.2 / 90.8 / 66.5. REJECT vs v0021; keep v0021 selection. The exact full coordinate multiset is unchanged, so the occupancy score drop cannot be called a loss of complete geometric support; finite-index sampling differs under row permutation. Neighborhood also decreases at displayed precision, so the spatial prior increment is not supported by this server test. All four authorized budget slots are terminal scored: two internal and two external. No fifth submission. Final best v0021 official 63.0047.

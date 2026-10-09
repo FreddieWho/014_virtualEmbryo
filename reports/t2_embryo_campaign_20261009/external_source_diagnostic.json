@@ -1,0 +1,54 @@
+{
+  "prior": {
+    "path": "/workspace/shared/embryo_external_20261009/gse65924_e70_gene_spatial_rank_prior.tsv",
+    "sha256": "1a390e47b68dfbdc739a8978f7676c16ee380786e6d0335c3968f88208ce1021",
+    "overlap": 480,
+    "n_genes": 498,
+    "nonzero_per_axis": [
+      240,
+      220
+    ],
+    "policy": "source-replicate stable rank weights; no absolute-expression transfer"
+  },
+  "released_E7.25": {
+    "linear_coordinate_r2_per_axis": [
+      0.21386106662616322,
+      0.3214348877979216
+    ],
+    "fitted_direction_vectors": [
+      [
+        2.78307288783271e-05,
+        0.00010479107463755572,
+        -2.9455641542822997e-05
+      ],
+      [
+        -1.1070547441181946e-05,
+        5.5777099874300675e-05,
+        0.0001283788788717005
+      ]
+    ],
+    "score_quantiles": [
+      [
+        -0.08438310870485871,
+        -0.10408066039394546
+      ],
+      [
+        -0.012914098080987205,
+        -0.01447942563485273
+      ],
+      [
+        -0.0035228786695406804,
+        -0.004129871569188921
+      ],
+      [
+        0.009994644870592538,
+        0.014858461269113941
+      ],
+      [
+        0.1096600000534845,
+        0.08124086138035544
+      ]
+    ],
+    "interpretation": "released-source diagnostic, not target accuracy or inferred true anatomy"
+  }
+}

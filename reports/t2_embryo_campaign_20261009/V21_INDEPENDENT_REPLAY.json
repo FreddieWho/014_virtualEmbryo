@@ -1,0 +1,161 @@
+{
+  "candidate_path": "/workspace/shared/t2_campaign_20261009/artifacts/t2_embryo_campaign_20261009/copula_target/scrna.h5ad",
+  "candidate_sha256": "3728f7ff375bf59573f396e61e875cf23488aba30e2f5fd90a198e7044094679",
+  "parent_path": "/workspace/shared/t2_campaign_20261009/artifacts/t2_embryo_campaign_20261009/e3_original_recipe.h5ad",
+  "parent_sha256": "e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae",
+  "shape": [
+    5000,
+    498
+  ],
+  "obs_names_exact": true,
+  "obs_frame_exact": true,
+  "panel_exact": true,
+  "panel_size": 498,
+  "spatial_keys": {
+    "spatial_3D": true
+  },
+  "state_marginals": {
+    "Allantois": {
+      "n": 257,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Anterior Epiblast": {
+      "n": 465,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Blood Progenitor": {
+      "n": 70,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "CP": {
+      "n": 157,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Caudal Epiblast": {
+      "n": 315,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "EXE-Ectoderm": {
+      "n": 118,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "EXE-Endoderm": {
+      "n": 824,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "ExEM-1": {
+      "n": 308,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "ExEM-2": {
+      "n": 482,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Gut Endoderm": {
+      "n": 276,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "HEM-Endoth": {
+      "n": 219,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "LPM": {
+      "n": 106,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "PHM/PAM": {
+      "n": 397,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Primitive Streak": {
+      "n": 198,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "SOM": {
+      "n": 138,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "Unknown": {
+      "n": 468,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "aSE": {
+      "n": 168,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    },
+    "pSE": {
+      "n": 34,
+      "exact_sorted_gene_values": true,
+      "exact_gene_zero_counts": true
+    }
+  },
+  "source_files": {
+    "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_barcodes.tsv.gz": {
+      "sha256": "e08c7ebd8a752e729589fae22475bb595e095305e866e7ce282ffede901b3c58",
+      "expected_match": true
+    },
+    "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_features.tsv.gz": {
+      "sha256": "a4f4b7c7284188f1404dd002d369ac1d4f4ebed498fe65f99e7fa286f8e5a9ee",
+      "expected_match": true
+    },
+    "GSM8559288_cellranger_PE725_outs_filtered_feature_bc_matrix_matrix.mtx.gz": {
+      "sha256": "21515925b9eae6481f3c1f0feee9137742f15b0b497d37204693e3590acc0f0d",
+      "expected_match": true
+    },
+    "gsm8559288_e725_counts_csr.npz": {
+      "sha256": "51e6acbf441b8b39888f5f7149a8778ec977cfc850c0a30d5ae68bcb8c819a6a",
+      "expected_match": true
+    },
+    "gsm8559288_e725_features.tsv": {
+      "sha256": "b74b70409391179b8fef0818f9683f42e86f80e5ce3dc65105cbea640463a403",
+      "expected_match": true
+    },
+    "gsm8559288_e725_cell_qc.tsv": {
+      "sha256": "2979e656a9ec1942bfb63e668da25e93e25aeac7f66fd5bdfaf53f170727eb28",
+      "expected_match": true
+    }
+  },
+  "finite_nonnegative": true,
+  "changed_entry_fraction": 0.04448353413654618,
+  "qc": {
+    "n_before": 6173,
+    "n_after": 5799,
+    "matches_explicit_thresholds": true
+  },
+  "external_shape": [
+    5799,
+    498
+  ],
+  "external_nonnegative_integer": true,
+  "duplicate_symbols_in_panel": {},
+  "recomputed_output_exact": true,
+  "recomputed_changed_entries": 0,
+  "recomputed_max_abs_diff": 0.0,
+  "recomputed_mean_abs_diff": 0.0,
+  "fit": {
+    "n_fit_cells": 5799,
+    "n_genes": 498,
+    "ledoit_wolf_shrinkage": 0.0085855531876547,
+    "rank_gaussian": true,
+    "blend": 0.5,
+    "parameter_search": false
+  },
+  "approve": true
+}

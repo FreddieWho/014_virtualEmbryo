@@ -1,0 +1,6 @@
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.165s
+
+OK
+PASS: shapes, finite, nonnegative, fixed geometry/rows, distinct weight and carrier, deterministic arrays. SYNTHETIC ONLY
