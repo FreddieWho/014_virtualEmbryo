@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "purpose": "Full numerical-training and inherited-developmental-history disclosure for T3 v0090+ campaign",
+  "created_utc": "2026-10-09T15:50:00Z",
+  "loaded_protected_outcomes": false,
+  "target_gene_RNA_forced_zero": false,
+  "target": "Official T3 Gata4 KO E8.75. No specific conditional genotype assertion is needed by this model; present Mesp1 RNA is not interpreted as lineage membership.",
+  "inputs": [
+    {
+      "accession": "GSE137337",
+      "stage": "E8.5",
+      "species": "Mus musculus",
+      "condition_allowlist": [
+        "Dnmt1",
+        "Dnmt3a",
+        "Dnmt3b",
+        "Ehmt2/G9a",
+        "Kdm2b",
+        "Kmt2a",
+        "Kmt2b"
+      ],
+      "role": [
+        "response training",
+        "seven-genotype held-out source validation",
+        "source-only scrambled-response control"
+      ],
+      "unit": "SNP-resolved individual embryos; a/b libraries are technical partitions",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137337",
+      "admission": "Previously reviewed permitted single-gene KOs only; no target-gene KO or identified conditional target phenocopy",
+      "sample_allowlist": [
+        "GSM4405458",
+        "GSM4405459",
+        "GSM4075611",
+        "GSM4075612",
+        "GSM4075599",
+        "GSM4075600",
+        "GSM4405456",
+        "GSM4405457",
+        "GSM4075607",
+        "GSM4075608",
+        "GSM4075609",
+        "GSM4075610",
+        "GSM4075613",
+        "GSM4075614"
+      ]
+    },
+    {
+      "accession": "GSE122187",
+      "stage": "E8.5",
+      "species": "Mus musculus",
+      "condition": "WT",
+      "role": [
+        "WT-only PCA/state atlas",
+        "sex-matched embryo-balanced control",
+        "fixed held-out comparison reference"
+      ],
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122187",
+      "samples": [
+        "GSM3457440",
+        "GSM3457441"
+      ],
+      "cells": 21825,
+      "embryos": 10,
+      "known_missing_barcodes": 690
+    },
+    {
+      "accession": "Grosswendt et al. publisher supplementary annotations",
+      "stage": "E8.5 selected records",
+      "role": [
+        "original barcode join",
+        "SNP embryo identity",
+        "sex matching",
+        "cell-state/lineage provenance"
+      ],
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415732/",
+      "artifact_permits": [
+        "TASK_DATA_PERMIT.json",
+        "ANNOTATION_PERMIT_v2.json"
+      ],
+      "restriction": "Selected WT and permitted KO sheets only; annotation metadata is not an extra replicate"
+    },
+    {
+      "accession": "Virtual Embryo released WT E8.75",
+      "stage": "E8.75",
+      "role": [
+        "target untreated carrier",
+        "baseline WT-only conditional activation association",
+        "later WT domain/representation diagnostics"
+      ],
+      "url": "https://virtualembryo.ai/challenge/data#download",
+      "full_source_sha256": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+      "carrier_sha256": "9789e1236c8342fa2d863676edcfb10c9528bd7e791f607613a58821692dda57",
+      "carrier_shape": [
+        7449,
+        500
+      ]
+    }
+  ],
+  "inherited_method_history": [
+    {
+      "accession": "GSE261783",
+      "stage": "adult mouse cardiac fibroblast, OP2 resting",
+      "samples": [
+        "GSM8151756",
+        "GSM8151757"
+      ],
+      "role": "Earlier model-family comparisons and adult-source negative/low-transfer findings informed move to embryo sources; NO adult expression/features/response loaded by current campaign",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261783",
+      "numerical_influence_current_artifact": false
+    },
+    {
+      "accession": "Gene Ontology and mouse GAF",
+      "stage": "not applicable",
+      "role": "Earlier identity-prior method selection compared mean/nearest/ridge; selected identity-free generic mean. Current archived atlas has no GO features or identity coefficients, and current candidate does not load GO embedding",
+      "numerical_influence_current_artifact": false,
+      "url": "https://geneontology.org/docs/go-citation-policy/"
+    },
+    {
+      "accession": "Virtual Embryo released E9.5 WT and Mab21l2 KO",
+      "stage": "E9.5",
+      "role": "Earlier adaptive secondary diagnostics of v87/v88. Current initial route evaluation does not load these outcomes; restored for possible separately frozen later diagnostics",
+      "current_run_loaded": false,
+      "url": "https://virtualembryo.ai/challenge/data#download"
+    },
+    {
+      "accession": "GSE122187 WT stage kernels E6.5-E8.5",
+      "stage": "E6.5-E8.5 WT",
+      "role": "Earlier state-support annotation history; not used in current numeric fit",
+      "current_run_loaded": false
+    }
+  ],
+  "excluded": [
+    "Gata4 KO protected outcomes",
+    "Ctnnb1/beta-catenin KO protected outcomes",
+    "comparable-stage other target alleles",
+    "identified target phenocopies",
+    "unreviewed severe-arrest source genotypes",
+    "score inversion or hidden-target recovery"
+  ],
+  "licenses": "GEO data use/distribution policy for numerical measurements, with retained study attribution; no blanket CC claim. Official released files retain challenge use terms. Annotation/GO provenance retains original applicable terms.",
+  "source_permit_hashes": {
+    "TASK_DATA_PERMIT_v2.json": "d5bcc075a39be4fa4873eedc67aba7a18fb5f28c3c23cacffbbb356e7c192a14",
+    "TASK_DATA_PERMIT.json": "3513c3f4e17aa8191a8de3b81b6db6cd3b9507795517a37caf847cf830e26570",
+    "ANNOTATION_PERMIT_v2.json": "93998058dd024a050151f2f31d867c3035646014938ef25ab581c9e6e6304311"
+  },
+  "normalized_input_hashes": [
+    {
+      "gene": "WT",
+      "whitelist": 22515,
+      "matched": 21825,
+      "missing": 690,
+      "embryos": 10,
+      "sex_embryos": {
+        "female": 8,
+        "male": 2
+      },
+      "input_sha256": "0bc7fae3682c23087651aae68abe785a786f10be8b8e41065d858c77ee4fe45e",
+      "max_library_error": 0.003275463626778219,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/WT_whitelisted_panel10000.h5ad",
+      "sha256": "c250bfee6d80a105931aa7707ca18914956d950bfee9fec021543759717f7e4b",
+      "expression_array_sha256": "5b77e8a6a37af46e8595fbf2287ec18b178575cb24d016633a64bec5cf33848d",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Dnmt3a",
+      "whitelist": 18320,
+      "matched": 18320,
+      "missing": 0,
+      "embryos": 10,
+      "sex_embryos": {
+        "male": 9,
+        "female": 1
+      },
+      "input_sha256": "c8627b19f6e0c4288aa6fb2bf3db2c9595b420dbebda1382f3fbacb192a4c492",
+      "max_library_error": 0.0034313718861085363,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt3a_whitelisted_panel10000.h5ad",
+      "sha256": "b5415999941df7846c02fc817c2510123e4841031eed0b684b6a6424e7d59a54",
+      "expression_array_sha256": "7a744ecf3e5c6f04830cae8f25cff80f5a947957e6ace64efbc6d18292b435ea",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Kmt2a",
+      "whitelist": 15776,
+      "matched": 15776,
+      "missing": 0,
+      "embryos": 11,
+      "sex_embryos": {
+        "male": 8,
+        "female": 3
+      },
+      "input_sha256": "7f8f550454d04419945e7c8770c9d32dd0d58cd89083a32a89fa9fe15ff35f1a",
+      "max_library_error": 0.0031748671408422524,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kmt2a_whitelisted_panel10000.h5ad",
+      "sha256": "c880d2d560115bf9cc024dec16f9043284c46dadc14d9d778480dd01abea1910",
+      "expression_array_sha256": "3f18245a395f2914efbab1d2df8ddf8b0a79e3603e352d290846b7469910d659",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Kdm2b",
+      "whitelist": 18943,
+      "matched": 18943,
+      "missing": 0,
+      "embryos": 10,
+      "sex_embryos": {
+        "male": 6,
+        "female": 4
+      },
+      "input_sha256": "934ab0f8bb0ac867378e09485fdb4debf962a08802d4a940dbcc591101662307",
+      "max_library_error": 0.003524910955093219,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kdm2b_whitelisted_panel10000.h5ad",
+      "sha256": "56141602a7a30ca7c8e3b59c6e2a6ce3288b0b459f56818c201cb5459a815c4d",
+      "expression_array_sha256": "881a3a95b01259dab228bead9f4ad916454f78bf78d0d775ffd585e638978b18",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Dnmt1",
+      "whitelist": 20890,
+      "matched": 20890,
+      "missing": 0,
+      "embryos": 12,
+      "sex_embryos": {
+        "female": 9,
+        "male": 3
+      },
+      "input_sha256": "50efd24c22d0eac00d48c6a4b561755ffa33c97147f2af2d12b988bf9cc24ccd",
+      "max_library_error": 0.003804101050263853,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt1_whitelisted_panel10000.h5ad",
+      "sha256": "c7712ee10e8294d8c72d9d6efe55ad3d928970536ca865048b3b4ca47588e0ef",
+      "expression_array_sha256": "dfb81b5f1fe33fda3c73288b89d4efcb47a2ae036325ddcaaecdf809add342e8",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Dnmt3b",
+      "whitelist": 25408,
+      "matched": 25408,
+      "missing": 0,
+      "embryos": 8,
+      "sex_embryos": {
+        "female": 6,
+        "male": 2
+      },
+      "input_sha256": "800c2d767bab0e6c8804e0ca786170234526b7daf1c1baf263bc41d9f6dda245",
+      "max_library_error": 0.003538568107614992,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Dnmt3b_whitelisted_panel10000.h5ad",
+      "sha256": "5431a2ce277fc785a93f6bd3060d595aa34cc9110c365c8ecbf69f3060a8c98e",
+      "expression_array_sha256": "718e3353bf1f6c5727a06c7a9cca677a5351a94248c76660ff261995a1a9615d",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Ehmt2",
+      "whitelist": 20389,
+      "matched": 20389,
+      "missing": 0,
+      "embryos": 11,
+      "sex_embryos": {
+        "female": 6,
+        "male": 5
+      },
+      "input_sha256": "fa626e154d8aba25efd26cb8f84aac70b6486d0656607c28529d045c3497bde1",
+      "max_library_error": 0.0031513184949290007,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Ehmt2_whitelisted_panel10000.h5ad",
+      "sha256": "e40df07fa27921cbbc0f2f249ce7935aeb0a4a74b09aa518a2bd114c26c53b05",
+      "expression_array_sha256": "712b250715dadf20355d88d695df8637ca7417996f6b1786ced697f6bbaf97c9",
+      "frozen_merge_matches": true
+    },
+    {
+      "gene": "Kmt2b",
+      "whitelist": 15603,
+      "matched": 15603,
+      "missing": 0,
+      "embryos": 10,
+      "sex_embryos": {
+        "male": 6,
+        "female": 4
+      },
+      "input_sha256": "ff3ab16209e483ea5025c4883c1ea75a92aee2f3bc6d165b31515c019b26dddc",
+      "max_library_error": 0.0032685898931958945,
+      "output": "/workspace/shared/t3_v88_optimization_20261008/source_panel/normalized/Kmt2b_whitelisted_panel10000.h5ad",
+      "sha256": "1c1ca3d5b78d377147ee83e9d98aa27eb4d5de11912a24b5dc3751364fedc237",
+      "expression_array_sha256": "30d954f07460e2d0df4b8f347cfa89e1979c6ce0f76a012a6417867e535ff09d",
+      "frozen_merge_matches": true
+    }
+  ],
+  "new_sources_added": false,
+  "limitations": [
+    "Generic developmental response from seven epigenetic KOs does not identify the target causal effect",
+    "Source whole-embryo zygotic KOs differ from lineage-conditional heart target",
+    "Source/target stage, chemistry and lineage composition may confound transfer",
+    "Source-local full-panel score is a screening diagnostic, never a server forecast"
+  ]
+}

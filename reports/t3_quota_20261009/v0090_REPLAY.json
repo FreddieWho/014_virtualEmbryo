@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "expression_sha256": "c6223f80373548a7929a04598e1af94642271335a49c5e8e2385809a82ffd637",
+  "donor_sha256": "b7bc7296646baf340dc4b6f593e1eee290a5dbebc11f2a8e5ed9791aa259888d",
+  "max_mass_error": 0.0034579003313410794,
+  "fresh_process": true
+}

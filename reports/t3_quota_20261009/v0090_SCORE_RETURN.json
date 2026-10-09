@@ -1,0 +1,63 @@
+{
+  "task": "T3",
+  "board": "T3:gata4",
+  "candidate_id": "v0090",
+  "method": "detatlas",
+  "artifact_revision": "r1",
+  "artifact_path": "submissions/candidates/T3_gata4/v0090_detatlas/submission.h5ad",
+  "sha256": "a6d87c972fb55edc8fac16e28231c807019c9508e74b5e6a8a610328eba9f2e1",
+  "bytes": 2582042,
+  "submission_id": "68d9d4fdccb449d1b7314f9c10b83cc1",
+  "submission_url": "https://virtualembryo.ai/challenge/account/submissions/68d9d4fdccb449d1b7314f9c10b83cc1",
+  "portal_model": "T3-detatlas-v0090",
+  "submitted_at_utc": "2026-10-09T16:04:03Z",
+  "portal_submitted_display": "2026-10-09 16:04",
+  "scored_at_utc": "2026-10-09T16:04:39+00:00",
+  "official_api_score": 54.3935,
+  "official_api_skills": {
+    "de_score": 43.0112,
+    "de_direction": 52.4563,
+    "severity_slope": 75.5699,
+    "mmd_u": 50.1779,
+    "variogram": 43.2777
+  },
+  "official_api_task_rank": 88,
+  "official_ui_score": 54.39,
+  "official_ui_skills": {
+    "de_score": 43.0,
+    "de_direction": 52.5,
+    "severity_slope": 75.6,
+    "mmd_u": 50.2,
+    "variogram": 43.3
+  },
+  "precision": "API values copied as returned; UI total has 2 decimal places and UI skills 1. No additional precision inferred.",
+  "identity_binding": "Exact model, task, board and matching displayed headline; submission ID only from authenticated browser receipt, never claimed to be in public API.",
+  "evidence": {
+    "authenticated_receipt": "Exact uploaded hash verified before one submission; ID and submission time come from the authenticated receipt.",
+    "leaderboard_source": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T3&board=T3:gata4&track=human",
+    "overall_source": "https://kg.virtualembryo.ai/challenge/overall?task=T3&track=human",
+    "retrieved_at_utc": "2026-10-09T16:07:08.784286+00:00"
+  },
+  "decision": {
+    "status": "PROMOTED",
+    "incumbent_before": "v0088",
+    "incumbent_reference_score": 53.69,
+    "incumbent_reference_precision": "UI 2 decimals",
+    "new_incumbent": "v0090",
+    "numeric_team_best_at_observation": true,
+    "delta_vs_stored_incumbent_reference": 0.7035,
+    "tie_band": 0.1,
+    "policy": "Improvement exceeds +0.1, so candidate replaces incumbent; this is leaderboard selection, not causal validation."
+  },
+  "quota_at_submission": {
+    "before": "1/8",
+    "after": "2/8",
+    "campaign_attempt": 1,
+    "campaign_limit": 7,
+    "upload_count": 1
+  },
+  "limitations": [
+    "Source-side diagnostics are not forecasts of server score.",
+    "Public leaderboard exposes team best only; submission ID is bound through the authenticated receipt, not inferred from that API."
+  ]
+}
