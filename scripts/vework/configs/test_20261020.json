@@ -1,0 +1,14 @@
+{"outdir": "/workspace/ve/work/pipeline_test_20261020",
+ "note": "TEMPLATE for release day. Stage file names (E7.5*, E8.5 heart truth, E10.5*, Gata4 truth) are TBC until the 10-20 release: rename the 'name:time' left side to the actual files in /workspace/ve/data. Run with --index /workspace/ve/data/index.json after downloading the NEW index.json + *.genes.txt so boards resolve to OFFICIAL panels (the manifest must say panel=official for every entry before anything is handed over). Limits are placeholders; official limits from index.json override.",
+ "entries": {
+  "T2E_S1": {"board": "T2:embryo:test", "slot": "S1", "recipe": "interp_baseline", "prev": "E7.25:7.25", "left": "E7.5:7.5", "right": "E8.0:8.0", "target": 7.75, "n": 5000, "geometry": "logrms", "limits": [583, 5000], "external_sources": "none"},
+  "T2E_S2": {"board": "T2:embryo:test", "slot": "S2", "recipe": "interp", "left": "E7.5:7.5", "right": "E8.0:8.0", "target": 7.75, "n": 5000, "geometry": "logrms", "limits": [583, 5000], "external_sources": "none"},
+  "T2X_S1": {"board": "T2:heart:test_extrap", "slot": "S1", "recipe": "extrap", "prev": "E9.5:9.5", "last": "E10.5:10.5", "target": 12.5, "n": 25000, "timescale": "none", "rows": "repo", "limits": [1000, 25179], "external_sources": "none"},
+  "T2X_S2": {"board": "T2:heart:test_extrap", "slot": "S2", "recipe": "extrap", "prev": "E9.5:9.5", "last": "E10.5:10.5", "target": 12.5, "n": 25000, "timescale": "linear", "damp": 0.5, "limits": [1000, 25179], "external_sources": "none"},
+  "T1_partA": {"board": "T1:test", "slot": "part", "recipe": "t1_shift", "train": ["E9.5_RNA:9.5", "E10.5_RNA:10.5"], "target": 12.5, "n": 5000, "zero_preserve": true, "limits": [1000, 5118]},
+  "T1_partB": {"board": "T1:test", "slot": "part", "recipe": "t1_shift", "train": ["E9.5_RNA:9.5", "E10.5_RNA:10.5"], "target": 12.5, "n": 5000, "limits": [1000, 5118]},
+  "T1_S1": {"board": "T1:test", "slot": "S1", "recipe": "t1_mix", "train": ["E9.5_RNA:9.5", "E10.5_RNA:10.5"], "parts": ["T1_partA", "T1_partB"], "frac_a": 0.7, "n": 5000, "limits": [1000, 5118], "external_sources": "none"},
+  "T1_S2_copy_last": {"board": "T1:test", "slot": "S2-fallback", "recipe": "t1_copy_last", "train": ["E9.5_RNA:9.5", "E10.5_RNA:10.5"], "target": 12.5, "n": 5000, "limits": [1000, 5118], "external_sources": "none"},
+  "T3_S1": {"board": "T3:ctnnb1", "slot": "S1", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "limits": [1000, 7449], "external_sources": "none"},
+  "T3_S2": {"board": "T3:ctnnb1", "slot": "S2", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "program": "WNT", "strength": 0.25, "limits": [1000, 7449], "external_sources": "generic canonical Wnt-target gene list (textbook pathway knowledge, no data); Mesp1 lineage map (Saga 1999; Devine 2014; Lescroart 2014); no external expression data"}
+ }}
