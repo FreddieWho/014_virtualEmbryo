@@ -1,0 +1,145 @@
+{
+  "status": "PASS_RAW_LIBRARY_AGGREGATES_REPRODUCE_FROZEN_SOURCE",
+  "checks": [
+    {
+      "stage": "8.5",
+      "group": "BLOOD",
+      "n": 106,
+      "mean_max_abs_from_frozen": 1.9028501689888344e-06,
+      "det_max_abs_from_frozen": 2.9240014409737114e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "CM_A",
+      "n": 82,
+      "mean_max_abs_from_frozen": 1.2793192047944046e-06,
+      "det_max_abs_from_frozen": 2.9075436502878915e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "CM_V",
+      "n": 164,
+      "mean_max_abs_from_frozen": 2.0091126602395093e-06,
+      "det_max_abs_from_frozen": 2.9075436502878915e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "ECTO",
+      "n": 3996,
+      "mean_max_abs_from_frozen": 9.33185592666419e-06,
+      "det_max_abs_from_frozen": 2.9772490250934425e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "ENDO",
+      "n": 336,
+      "mean_max_abs_from_frozen": 3.081702050877766e-06,
+      "det_max_abs_from_frozen": 2.838316415232356e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "ENDODERM",
+      "n": 399,
+      "mean_max_abs_from_frozen": 3.0190723583345402e-06,
+      "det_max_abs_from_frozen": 2.9727629802245303e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "EPI",
+      "n": 41,
+      "mean_max_abs_from_frozen": 9.5367431640625e-07,
+      "det_max_abs_from_frozen": 2.9075436502878915e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "MESO",
+      "n": 1138,
+      "mean_max_abs_from_frozen": 4.147812854959909e-06,
+      "det_max_abs_from_frozen": 2.974994572912948e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "NCC",
+      "n": 702,
+      "mean_max_abs_from_frozen": 3.742356585512141e-06,
+      "det_max_abs_from_frozen": 2.9717415528374147e-08
+    },
+    {
+      "stage": "8.5",
+      "group": "SHF",
+      "n": 1105,
+      "mean_max_abs_from_frozen": 3.93120951258652e-06,
+      "det_max_abs_from_frozen": 2.97753519618027e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "BLOOD",
+      "n": 16,
+      "mean_max_abs_from_frozen": 8.270144462585449e-07,
+      "det_max_abs_from_frozen": 0.0
+    },
+    {
+      "stage": "14.5",
+      "group": "CM_A",
+      "n": 410,
+      "mean_max_abs_from_frozen": 2.4481517515440032e-06,
+      "det_max_abs_from_frozen": 2.9656945232936494e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "CM_V",
+      "n": 5830,
+      "mean_max_abs_from_frozen": 1.9025260751703854e-05,
+      "det_max_abs_from_frozen": 2.9792098565906144e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "ECTO",
+      "n": 1,
+      "mean_max_abs_from_frozen": 0.0,
+      "det_max_abs_from_frozen": 0.0
+    },
+    {
+      "stage": "14.5",
+      "group": "ENDO",
+      "n": 1135,
+      "mean_max_abs_from_frozen": 4.302667626632228e-06,
+      "det_max_abs_from_frozen": 2.9723549732629806e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "ENDODERM",
+      "n": 13,
+      "mean_max_abs_from_frozen": 6.877459011178644e-07,
+      "det_max_abs_from_frozen": 2.750983607580082e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "EPI",
+      "n": 36,
+      "mean_max_abs_from_frozen": 7.616149053646382e-07,
+      "det_max_abs_from_frozen": 2.6490953208835322e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "MESO",
+      "n": 1324,
+      "mean_max_abs_from_frozen": 7.105377865634921e-06,
+      "det_max_abs_from_frozen": 2.9712285187777354e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "NCC",
+      "n": 421,
+      "mean_max_abs_from_frozen": 2.851112438140291e-06,
+      "det_max_abs_from_frozen": 2.9731533013332978e-08
+    },
+    {
+      "stage": "14.5",
+      "group": "SHF",
+      "n": 41,
+      "mean_max_abs_from_frozen": 9.653044905633124e-07,
+      "det_max_abs_from_frozen": 2.9075436502878915e-08
+    }
+  ]
+}

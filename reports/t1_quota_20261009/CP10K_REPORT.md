@@ -1,6 +1,6 @@
 # T1 v0096: restore the observed RNA normalization
 
-Status: built and independently reviewed; server score pending release/submission. Parent reference is the exact scored v0094 file, not a reconstruction of historical v0092.
+Status: submitted and terminal-scored; promoted over v0094. Parent reference is the exact scored v0094 file, not a reconstruction of historical v0092.
 
 ## Fixed intervention
 
@@ -36,3 +36,7 @@ The new H5AD replaces stale inherited source metadata with an explicit complete 
 Use the pinned runtime in configs/t1_quota_20261009/requirements_runtime.txt. Run scripts/t1_quota_20261009/build_cp10k.py with the exact v0094 parent, the official T1 panel, paired v0051 donor-state labels, configs/t1_quota_20261009/cp10k_v0096_r2.json, and a fresh output directory. The builder rejects parent hash drift and any existing destination. Parameter-free expression replay is independent of the donor labels; those labels are used only for statewise diagnostics.
 
 Source-only diagnostic scripts take explicit released official input paths. Never point them at a protected validation/test target.
+
+## Terminal result
+
+The official public API confirms60.7928 and all four ranked components improve. This is a configuration-level result for parameter-free CP10k restoration; it does not identify hidden target properties or validate a new biological mechanism. The full score and submission evidence belong in the canonical registry. [Submission](https://virtualembryo.ai/challenge/account/submissions/24e762950f3a42a89499b59ec02b5f73). The source-reference MMD deterioration did not predict the server outcome, reinforcing the limited role of these source assays.

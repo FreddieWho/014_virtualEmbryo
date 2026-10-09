@@ -1,0 +1,19 @@
+{
+  "status": "SOURCE_ONLY_PROTOTYPE_BEFORE_ANY_TARGET_ARTIFACT",
+  "fit_stage": "official E8.5 and GSE230531 two E8.5 libraries only",
+  "evaluation_stage": "GSM5820434 independent E9.5 study versus official E9.5; no E9.5 fit",
+  "mapping": "fresh official E8.5-only 400-marker coarse classifier, C0.5,max_iter1000, sourceconfidence>=0.8; 70/30 E8.5 classifier check only",
+  "minimum_external_group_cells_per_early_library": 20,
+  "minimum_positive_cells_per_early_library_and_official": 10,
+  "minimum_positive_sd": 0.05,
+  "slope": "b=exp(alpha*log(clip(sd_official85 / max(sd_external85,0.05),0.5,2.0)))",
+  "shrinkage": "alpha=min(npos_official85,npos_external85_rep1,npos_external85_rep2)/(min_count+50)",
+  "external_early_moments": "equal-library mixture of conditional-positive means and variances",
+  "intercept": "a=alpha*(mu_official85-b*mu_external85); evaluated diagnostically only, not used for a temporal displacement",
+  "evaluation_selection": "positive count>=10 in both E9.5 sources, >=100 evaluated genes per state; label-confidence conditioning reported",
+  "gate": "at least3 evaluable states; equal-state mean of median absolute log positive-SD error improves>=5% versus slope1, improves in>=two-thirds states, and beats fixed gene-permuted-slope control",
+  "error": "abs(log((b*sd_external95+0.05)/(sd_official95+0.05)))",
+  "failure_policy": "close without target candidate; no threshold or shrinkage retuning",
+  "seed": 20261009,
+  "scope_limit": "E9.5 cross-study diagnostic does not establish E14.5 or future transfer; differences are not attributed purely to platform"
+}

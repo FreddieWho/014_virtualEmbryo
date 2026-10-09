@@ -1,0 +1,162 @@
+{
+  "status": "SOURCE_ELIGIBILITY_ONLY_NO_CANDIDATE",
+  "global_parent_zero_genes": 6481,
+  "external_measured_all_libraries": 25943,
+  "external_missing": 6342,
+  "parent_zero_external_missing_overlap": 1949,
+  "parent_zero_external_measured": 4532,
+  "unique_eligible_onset_genes": 17,
+  "replicate_group_cell_counts": {
+    "GSM7226268_E8_5_1": {
+      "BLOOD": 26,
+      "CM_A": 30,
+      "CM_V": 59,
+      "ECTO": 1350,
+      "ENDO": 110,
+      "ENDODERM": 134,
+      "EPI": 10,
+      "MESO": 381,
+      "NCC": 230,
+      "SHF": 365
+    },
+    "GSM7226269_E8_5_2": {
+      "BLOOD": 80,
+      "CM_A": 52,
+      "CM_V": 105,
+      "ECTO": 2646,
+      "ENDO": 226,
+      "ENDODERM": 265,
+      "EPI": 31,
+      "MESO": 757,
+      "NCC": 472,
+      "SHF": 740
+    },
+    "GSM7226272_E14_5_1": {
+      "BLOOD": 9,
+      "CM_A": 228,
+      "CM_V": 3129,
+      "ECTO": 1,
+      "ENDO": 595,
+      "ENDODERM": 6,
+      "EPI": 15,
+      "MESO": 685,
+      "NCC": 234,
+      "SHF": 17
+    },
+    "GSM7226273_E14_5_2": {
+      "BLOOD": 7,
+      "CM_A": 182,
+      "CM_V": 2701,
+      "ECTO": 0,
+      "ENDO": 540,
+      "ENDODERM": 7,
+      "EPI": 21,
+      "MESO": 639,
+      "NCC": 187,
+      "SHF": 24
+    }
+  },
+  "eligibility": [
+    {
+      "group": "CM_V",
+      "recipient_rows": 958,
+      "min_cells_per_external_library": 59,
+      "carrier_zero_genes": 9847,
+      "carrier_zero_and_external_measured": 6867,
+      "replicate_supported_onset_gene_count": 0,
+      "globally_zero_onsets": 0,
+      "genes": [],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "CM_A",
+      "recipient_rows": 623,
+      "min_cells_per_external_library": 30,
+      "carrier_zero_genes": 10397,
+      "carrier_zero_and_external_measured": 7224,
+      "replicate_supported_onset_gene_count": 0,
+      "globally_zero_onsets": 0,
+      "genes": [],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "ENDO",
+      "recipient_rows": 637,
+      "min_cells_per_external_library": 110,
+      "carrier_zero_genes": 13852,
+      "carrier_zero_and_external_measured": 9682,
+      "replicate_supported_onset_gene_count": 2,
+      "globally_zero_onsets": 0,
+      "genes": [
+        "Nppa",
+        "Sult1a1"
+      ],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "EPI",
+      "recipient_rows": 543,
+      "min_cells_per_external_library": 10,
+      "carrier_zero_genes": 11669,
+      "carrier_zero_and_external_measured": 8121,
+      "replicate_supported_onset_gene_count": 0,
+      "globally_zero_onsets": 0,
+      "genes": [],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "MESO",
+      "recipient_rows": 819,
+      "min_cells_per_external_library": 381,
+      "carrier_zero_genes": 13552,
+      "carrier_zero_and_external_measured": 9485,
+      "replicate_supported_onset_gene_count": 4,
+      "globally_zero_onsets": 0,
+      "genes": [
+        "Clca3a1",
+        "Lgals7",
+        "Col6a6",
+        "Anxa1"
+      ],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "NCC",
+      "recipient_rows": 233,
+      "min_cells_per_external_library": 187,
+      "carrier_zero_genes": 16281,
+      "carrier_zero_and_external_measured": 11552,
+      "replicate_supported_onset_gene_count": 13,
+      "globally_zero_onsets": 0,
+      "genes": [
+        "Fmod",
+        "Hmgcs2",
+        "Clca3a1",
+        "Nppa",
+        "Ckm",
+        "P4ha3",
+        "Hbb-bt",
+        "Nfix",
+        "Egr2",
+        "Ifi27",
+        "Inhba",
+        "Cd200",
+        "Thbs2"
+      ],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    },
+    {
+      "group": "SHF",
+      "recipient_rows": 492,
+      "min_cells_per_external_library": 17,
+      "carrier_zero_genes": 10184,
+      "carrier_zero_and_external_measured": 7076,
+      "replicate_supported_onset_gene_count": 0,
+      "globally_zero_onsets": 0,
+      "genes": [],
+      "reason_if_empty": "frozen eligibility: >=20 group cells in each library, >=8 late detections in each library, late detection>=0.10, early detection<=0.01, observed official E9.5 in >=20 cells; all four external panels measured"
+    }
+  ],
+  "frozen_criteria_not_retuned": true,
+  "important_limitation": "Only two libraries per stage, source E8.5_1 truncated at public source, coarse labels inherited from official-source trained mapping; no genuine future-stage validation"
+}

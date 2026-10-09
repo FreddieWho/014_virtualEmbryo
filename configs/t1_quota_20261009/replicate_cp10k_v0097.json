@@ -1,0 +1,11 @@
+{
+  "candidate_id": "T1_val/v0097_rephurdle_cp10k",
+  "numerical_input_recipe": "replicate_hurdle_v0097.json (unchanged frozen source-reliability formula)",
+  "numerical_base": "exact v0094 joint carrier, plus paired v0051 and four raw external libraries",
+  "selection_reference": "exact v0096 CP10k r2, SHA114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "postprocessing": "fixed parameter-free CP10k closure",
+  "reason": "v0096 observed server improvement supports retaining the measured official representation while testing reliability, without tuning learned weights to the score",
+  "required_identity_control": "weights1 -> exactv0094 -> fixedCP10k -> exactv0096 expression",
+  "unnormalized_output": "local preclosure ablation only, never submitted or indexed as a candidate",
+  "formula_retuned_after_server": false
+}

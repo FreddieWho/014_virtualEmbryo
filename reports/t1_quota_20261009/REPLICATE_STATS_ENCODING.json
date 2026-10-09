@@ -1,0 +1,6 @@
+{
+  "change": "object-string genes array encoded as fixed Unicode; all values identical",
+  "old_sha256": "870f7370be42fd2acbb34c5705ccc88d5b701e7a440e5240db259ba8c6b34459",
+  "new_sha256": "f96e417c6b93a47780498d406822752ee1da5d6c020c1adf411857c6cd6c3c2d",
+  "all_arrays_equal": true
+}

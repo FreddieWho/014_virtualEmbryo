@@ -1,0 +1,41 @@
+{
+  "decision": "APPROVE_ONE_BOUNDED_TEST",
+  "candidate_id": "T1_val/v0099_detonly_cp10k",
+  "artifact": "/workspace/shared/virtualembryo-20261009/t1/submissions/candidates/T1_val/v0099_detonly_cp10k/submission.h5ad",
+  "sha256": "20bbeb64260aa233406852004fee48f816f2f231fb52c71fafaafaefc4a39409",
+  "expression_sha256": "d4c9ebdc1eee8ece9c553fa47401b62634bb58f0c2213e088da0c6e733bc1d6e",
+  "component": "detection",
+  "weights": "Exact frozen v97 SHA384cffdc; no refit",
+  "independent_margin_mismatches": 0,
+  "active_entries_recomputed": 33381667,
+  "independent_full_closure_mismatches": 0,
+  "activated": 72944,
+  "deactivated": 354893,
+  "full_panel": [
+    5118,
+    32285
+  ],
+  "row_mass_max_error": 0.0006752728677383857,
+  "source_disclosure": "Complete7accessions and current E8.5/E9.5 assay diagnostic history",
+  "endpoint_evidence": "Builder full enabled/disabled replay; independent v97 formula review plus same parent and exact fixed weights",
+  "scientific_scope": "Candidate selection only; gene-specific reliability not source-validated, previous scrambled weights outperform",
+  "limits": "Detection-only resamples the parent positive quantile shape at altered counts; closure couples all nonzero genes. Level-only keeps exact detection support.",
+  "contract": "PASS independent actual v96-bound repository validator",
+  "peak_rss_kib": 1780024,
+  "tests": "19 unit tests independently pass",
+  "source_controls": {
+    "sha256": "cee6cc2de578b0ae648806389108e217b76cac2f31c59f6d26980f403a591902",
+    "all_3_metrics_3_seeds": "Improved released-source proximity versus v96; not a future forecast",
+    "direction_sha256": "00be604adbcdd51308a2a50187b44916afe52f20712e08d66d825b264708e9d5",
+    "source_reference_direction_flips": 75,
+    "substantial_source_reference_genes": 9305,
+    "prior_specificity_limit": "Frozen v97 shuffled weights outperformed real weights; unchanged gene-specific reliability is not validated"
+  },
+  "persistence": {
+    "shared_packet_sha256": "5c75c05077402cf4b65a8f3e42941cf3af1ce173a06e2891a84db8e23f78ca69",
+    "bytes": 217374154,
+    "local_crc_direct_artifacts_and_reports": "PASS",
+    "library_success": "reported by builder"
+  },
+  "publication_note": "Private Library IDs omitted from public review; exact artifact identity, full checks and verdict retained"
+}

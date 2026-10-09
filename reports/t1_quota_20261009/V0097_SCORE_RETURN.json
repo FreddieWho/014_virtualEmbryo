@@ -1,0 +1,59 @@
+{
+  "task": "T1",
+  "board": "T1:val",
+  "candidate_id": "v0097",
+  "method": "rephurdle_cp10k",
+  "artifact_path": "submissions/candidates/T1_val/v0097_rephurdle_cp10k/submission.h5ad",
+  "sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+  "bytes": 109115208,
+  "submission_id": "142c2f3e3ce34f57bd55c93650db8056",
+  "submission_url": "https://virtualembryo.ai/challenge/account/submissions/142c2f3e3ce34f57bd55c93650db8056",
+  "portal_model": "T1-rephurdle-v0097",
+  "submitted_at_utc": "2026-10-09T16:31:37Z",
+  "portal_submitted_display": "2026-10-09 16:31",
+  "scored_at_utc": "2026-10-09T16:33:11+00:00",
+  "terminal_observed_at_utc": "2026-10-09T16:33:55Z",
+  "official_api_score": 60.8015,
+  "official_api_skills": {
+    "de_score": 50.447,
+    "de_direction": 66.1781,
+    "mmd_u": 67.2388,
+    "variogram": 57.3679
+  },
+  "official_ui_score": 60.8,
+  "official_ui_skills": {
+    "de_score": 50.4,
+    "de_direction": 66.2,
+    "mmd_u": 67.2,
+    "variogram": 57.4
+  },
+  "precision": "Official API values copied as returned; UI total 2 decimals and skills 1 decimal. No unobserved precision or scoring timestamp inferred.",
+  "identity_binding": "Exact uploaded hash and browser submission ID/model/time match the authenticated receipt. Historical API team-best snapshot matched this model when available.",
+  "evidence": {
+    "submission": "https://virtualembryo.ai/challenge/account/submissions/142c2f3e3ce34f57bd55c93650db8056",
+    "public_leaderboard": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T1&board=T1:val&track=human",
+    "api_snapshot_filename": "T1_v0097_score_binding.json"
+  },
+  "decision": {
+    "status": "TIE_NOT_PROMOTED",
+    "incumbent_before": "v0096",
+    "incumbent_reference_score": 60.7928,
+    "new_incumbent": "v0096",
+    "delta_vs_stored_incumbent_reference": 0.0087,
+    "delta_precision": "exact displayed API values",
+    "numeric_team_best_at_observation": true,
+    "tie_band": 0.1,
+    "policy": "Retain incumbent within +/-0.1; numeric team best and operational selection are separate."
+  },
+  "quota_at_submission": {
+    "before": "3/8",
+    "after": "4/8",
+    "campaign_attempt": 2,
+    "campaign_limit": 6,
+    "upload_count": 1
+  },
+  "limitations": [
+    "Source-local diagnostics do not establish hidden-stage accuracy or causal mechanism.",
+    "Complete new-artifact disclosure does not retroactively amend older scored metadata."
+  ]
+}

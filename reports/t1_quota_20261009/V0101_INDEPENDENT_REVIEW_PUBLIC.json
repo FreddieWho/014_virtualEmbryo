@@ -1,0 +1,52 @@
+{
+  "decision": "APPROVE_ONE_FINAL_T1_BOUNDED_TEST",
+  "candidate_id": "T1_val/v0101_detassay_cp10k",
+  "artifact": "/workspace/shared/virtualembryo-20261009/t1/submissions/candidates/T1_val/v0101_detassay_cp10k/submission.h5ad",
+  "sha256": "610669212e62ab1f57f3a058e6f5f512c7c26550531bb109f6311a8789290828",
+  "expression_sha256": "07bf73d4b307e792cf53c1763f533e34c8a242717e8bab4836b77c6e4bff3aee",
+  "numerical_parent": "Exact independently reviewed v99 preclosure",
+  "selection_reference": "Exact v98",
+  "fixed_slopes_sha256": "db2d5a1c43e571f7a5155ca7afecb08d7f590313dfcbdf01e01d42a73629f97d",
+  "independent_positive_displacement_mismatches": 0,
+  "active_entries_checked": 27281830,
+  "independent_full_closure_mismatches": 0,
+  "detection_support": "Exact v99 preclosure and final",
+  "floor_fraction": 0.0012080874837760757,
+  "repair_audit": {
+    "positive_values": 10831997,
+    "floored": 13086,
+    "adjacent_steps": 10733132,
+    "negative_steps": 1488909,
+    "reordered": 2921439,
+    "repair_changed_values": 2819936,
+    "rank_distance_sum": 4395682,
+    "repair_abs_sum": 6100.11602170496,
+    "changed_entries": 10810796,
+    "rank_distance_max": 30,
+    "repair_abs_max": 0.6887986537769479,
+    "floor_fraction": 0.0012080874837760757,
+    "negative_step_fraction": 0.13872083190628792,
+    "reordered_fraction": 0.2697045614026666,
+    "mean_rank_distance": 0.40580531918537277,
+    "mean_abs_repair": 0.0005631571003670847
+  },
+  "actual_repository_contract": "PASS independent v98-bound validator",
+  "source_disclosure": "PASS complete7accessions including inherited16.5diagnostics and current E8.5/E9.5 assay history",
+  "disabled_endpoints": "Builder full-matrix checks pass; prior independent v98 andv99 replays plus exact unchanged input identity reused",
+  "limits": "Composition order prespecified before component outcomes; component selection adaptive after outcomes. No new fit or hidden-target inference. Sorting and closure couple positive values. Prior gene-weight specificity negative.",
+  "peak_rss_kib": 1844760,
+  "source_controls": {
+    "sha256": "5c7e131b2fad793f5af462ab29507c545bbac472fa4c9914f040a7b2c0f4c0d4",
+    "all_three_metrics_three_seeds": "Better than v98, worse than v99 on released E9.5 reference; not future accuracy validation",
+    "source_direction_flips": 80,
+    "source_direction_denominator": 9276,
+    "direction_report_sha256": "690c4b0d4d41ae835d0ff2901a3682d0d059c3422c9a3a69d13a37291da6e8b0"
+  },
+  "persistence": {
+    "packet_sha256": "f6275384d9ff2dd90cfd0eaf78789fa64b07bcf991e6341948704e4abf0520d3",
+    "bytes": 108079705,
+    "local_crc_direct_artifact_final_reports": "PASS",
+    "library_success": "reported by builder"
+  },
+  "publication_note": "Private Library IDs omitted; exact identities, full checks and final review verdict retained"
+}

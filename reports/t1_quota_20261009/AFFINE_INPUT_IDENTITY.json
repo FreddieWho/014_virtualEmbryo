@@ -1,0 +1,41 @@
+{
+  "source_inputs": [
+    {
+      "path": "/workspace/shared/virtual_embryo_inputs/T1/E8.5_RNA.h5ad",
+      "bytes": 570917395,
+      "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504"
+    },
+    {
+      "path": "/workspace/shared/virtual_embryo_inputs/T1/E9.5_RNA.h5ad",
+      "bytes": 589907081,
+      "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361"
+    },
+    {
+      "path": "artifacts/t1_quota_20261009/inputs/external_processed/GSM7226268_E8_5_1.h5ad",
+      "bytes": 25363278,
+      "sha256": "76e4bdc276756c968e1ca28b4688fb62fdf5b31b777db9cea95fa5f6098cf730"
+    },
+    {
+      "path": "artifacts/t1_quota_20261009/inputs/external_processed/GSM7226269_E8_5_2.h5ad",
+      "bytes": 49676184,
+      "sha256": "adc2945fc241e435cb9e26ccc76bfa03b674690c4ea9195782512e9317b50641"
+    },
+    {
+      "path": "artifacts/t1_quota_20261009/inputs/external_processed/GSM7226272_E14_5_1.h5ad",
+      "bytes": 36394687,
+      "sha256": "c71e05973cfb37ca659f2188ae457ae1d9e5e0caefb3bf7b25274d30ddc41ee1"
+    },
+    {
+      "path": "artifacts/t1_quota_20261009/inputs/external_processed/GSM7226273_E14_5_2.h5ad",
+      "bytes": 28543952,
+      "sha256": "fc54199a44f13f050823ad7c79fbc35fe58cb7402313479692eb820890c29ef8"
+    },
+    {
+      "path": "artifacts/t1_quota_20261009/inputs/e95_assay/audit/GSM5820434_panel_log1p.h5ad",
+      "bytes": 25662569,
+      "sha256": "1a9a89b2a170b21ffa6f2073f0b98542f7b79203e6cebef2c36e0e9b85113c09"
+    }
+  ],
+  "training_scope": "Official and external E8.5 expression, labels and moments only. E9.5 measured-gene availability metadata enters shared-panel selection, while E9.5 expression and labels are held out of fitting.",
+  "model_sha256": "ad34e0e2a99b98de818f82129ed406abdaff0aaa96773acaa92e8f561cc64881"
+}

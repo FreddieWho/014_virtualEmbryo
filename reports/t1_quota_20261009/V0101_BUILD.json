@@ -1,0 +1,185 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0101_detassay_cp10k",
+  "file": "submissions/candidates/T1_val/v0101_detassay_cp10k/submission.h5ad",
+  "sha256": "610669212e62ab1f57f3a058e6f5f512c7c26550531bb109f6311a8789290828",
+  "expression_sha256": "07bf73d4b307e792cf53c1763f533e34c8a242717e8bab4836b77c6e4bff3aee",
+  "bytes": 109267460,
+  "shape": [
+    5118,
+    32285
+  ],
+  "exact_disabled_endpoints": true,
+  "detection_support_exact_selected_component": true,
+  "row_mass_max_error": 0.0006752728677383857,
+  "pseudobulk_l2_shift_vs_v98": 0.9965592740899804,
+  "gene_variance_sum_ratio_vs_v98": 0.9971884746157725,
+  "repair_audit": {
+    "positive_values": 10831997,
+    "floored": 13086,
+    "adjacent_steps": 10733132,
+    "negative_steps": 1488909,
+    "reordered": 2921439,
+    "repair_changed_values": 2819936,
+    "rank_distance_sum": 4395682,
+    "repair_abs_sum": 6100.11602170496,
+    "changed_entries": 10810796,
+    "rank_distance_max": 30,
+    "repair_abs_max": 0.6887986537769479,
+    "floor_fraction": 0.0012080874837760757,
+    "negative_step_fraction": 0.13872083190628792,
+    "reordered_fraction": 0.2697045614026666,
+    "mean_rank_distance": 0.40580531918537277,
+    "mean_abs_repair": 0.0005631571003670847
+  },
+  "preclosure_sha256": "263c6dd689050587e5a274d7259170d3b1922eb6d0524cd08a66457f3357b9fc",
+  "provenance": {
+    "candidate_id": "T1_val/v0101_detassay_cp10k",
+    "numerical_parent_candidate": "T1_val/v0099_detonly_cp10k preclosure",
+    "numerical_parent_preclosure_sha256": "4b73d3c362682c981faee7e514e416b4ef7367efe5c4c0eaf82bf3bf4b974159",
+    "selection_reference_candidate": "T1_val/v0098_assayscale_cp10k",
+    "selection_reference_sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+    "configuration": {
+      "candidate_id_reserved": "T1_val/v0101_component_assay_cp10k",
+      "status": "PARENT_SELECTED_COMPONENT_FOR_BUILD",
+      "selection_gate": "Parent selects a component only if it yields useful advance or defensible complementarity; no highest-loser automatic fill",
+      "first_operator": "Selected single frozen v0097 hurdle component applied to exact v0094 with paired v0051; complementary reliability is exactly one",
+      "second_operator": "Exact frozen v0098 assay positive-displacement slope relative to paired v0051 empirical positive curve, using selected component output as the new parent curve; identical observed-positive floor and stable monotonic repair",
+      "third_operator": "Exact parameter-free float64 CP10k closure",
+      "disabled_component_endpoint": "Exact v0098 before and after closure",
+      "disabled_assay_endpoint": "Exact selected v0099 or v0100 before and after closure",
+      "new_fitted_parameters": false,
+      "retune_weights_or_thresholds": false,
+      "floor_gate": "Same v0098 maximum1% touched positives floored, plus full crossing/repair audit",
+      "v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "v98_sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+      "carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+      "raw_v98_sha256": "34a8f40a5390fcd6eb4db0fd0c227b61e160d65d04706b5833391a13a0138d1c",
+      "slopes_sha256": "db2d5a1c43e571f7a5155ca7afecb08d7f590313dfcbdf01e01d42a73629f97d",
+      "candidate_id": "T1_val/v0101_detassay_cp10k",
+      "selected_component": "v0099 detection-only",
+      "component_sha256": "20bbeb64260aa233406852004fee48f816f2f231fb52c71fafaafaefc4a39409",
+      "raw_component_sha256": "4b73d3c362682c981faee7e514e416b4ef7367efe5c4c0eaf82bf3bf4b974159",
+      "prespecified_order_configuration_sha256": "62e9fec6593bb6dc637286277698c88f4d37a906b0e5e2d8014ebfc99c3df439",
+      "parent_selection_rationale": "Neither isolated component is a standalone replacement. Distinct hurdle interventions and complementary displayed metric tradeoffs justify one bounded interaction test; no predicted improvement or hidden-target-property inference.",
+      "selection_authorized_utc": "2026-10-09T16:59:44Z",
+      "numerical_parent_candidate": "T1_val/v0099_detonly_cp10k preclosure",
+      "numerical_parent_preclosure_sha256": "4b73d3c362682c981faee7e514e416b4ef7367efe5c4c0eaf82bf3bf4b974159",
+      "selection_reference_candidate": "T1_val/v0098_assayscale_cp10k",
+      "selection_reference_sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+      "operator_order_prespecified_before_component_server_results": true,
+      "component_selection_timing": "Detection-only was selected by the parent AFTER v0099/v0100 server results; only the operator order and disabled endpoints were prespecified beforehand",
+      "entire_final_candidate_prespecified_before_component_results": false
+    },
+    "configuration_sha256": "9edfe41a0f6620777dd582884594186dbbd20a54ebc9802d0451a1a19cb317e8",
+    "component_disabled_exact_v98_before_and_after_closure": true,
+    "assay_disabled_exact_selected_component_before_and_after_closure": true,
+    "no_new_fitted_parameter": true,
+    "normalization": "same fixed CP10k closure",
+    "operator_order": "selected single component then frozen assay displacement then CP10k",
+    "code_sha256": {
+      "compose_component_assay.py": "e104be4eac071e07695acbad1b7d9fabfbd339b96778202b8d2342fd55706740",
+      "assay_displacement.py": "29a53f3b0488de32555e914c626f6fb4b83a6d4abad50d124611f5fbd8f3cc30",
+      "normalization.py": "abf66d97e462d8405691e84361607ef22a8def1da0efc14e3f03b9644f66ff87"
+    },
+    "repair_audit": {
+      "positive_values": 10831997,
+      "floored": 13086,
+      "adjacent_steps": 10733132,
+      "negative_steps": 1488909,
+      "reordered": 2921439,
+      "repair_changed_values": 2819936,
+      "rank_distance_sum": 4395682,
+      "repair_abs_sum": 6100.11602170496,
+      "changed_entries": 10810796,
+      "rank_distance_max": 30,
+      "repair_abs_max": 0.6887986537769479,
+      "floor_fraction": 0.0012080874837760757,
+      "negative_step_fraction": 0.13872083190628792,
+      "reordered_fraction": 0.2697045614026666,
+      "mean_rank_distance": 0.40580531918537277,
+      "mean_abs_repair": 0.0005631571003670847
+    },
+    "full_source_disclosure": {
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "external_sources": [
+        {
+          "accession": "GSM7226268",
+          "role": "Direct E8.5-only assay scale fit and direct frozen raw-library reliability weights; inherited temporal field",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268"
+        },
+        {
+          "accession": "GSM7226269",
+          "role": "Direct E8.5-only assay scale fit and direct frozen raw-library reliability weights; inherited temporal field",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269"
+        },
+        {
+          "accession": "GSM7226272",
+          "role": "Direct frozen raw-library reliability weights and inherited temporal field/support masks; no assay slope fit",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272"
+        },
+        {
+          "accession": "GSM7226273",
+          "role": "Direct frozen raw-library reliability weights and inherited temporal field/support masks; no assay slope fit",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273"
+        },
+        {
+          "accession": "GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274"
+        },
+        {
+          "accession": "GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276"
+        },
+        {
+          "accession": "GSM5820434",
+          "role": "Held-out-stage cross-study E9.5 assay, using a fresh E8.5-only classifier; measured-gene availability metadata restricts common fitting panel, no E9.5 expression/labels/moments fit new parameters; historical rejected v0095 joint-donor route",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "study": "GSE193746",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434"
+        }
+      ],
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "role": "Inherited carrier input; direct source-only classifier and positive-SD scale fit; source classifier held-out check",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "stage": "E8.5"
+        },
+        {
+          "name": "E9.5_RNA",
+          "role": "Inherited carrier input; held-out E9.5 source assay labels/moments and full-panel diagnostics only; not new classifier or slope fit",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "stage": "E9.5"
+        }
+      ],
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only",
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "protected_targets_used": false
+    },
+    "scientific_scope": "Candidate-selection composition, not hidden-target-property inference or causal source calibration"
+  },
+  "wall_seconds": 43.499228954315186,
+  "peak_rss_kib": 3662008
+}

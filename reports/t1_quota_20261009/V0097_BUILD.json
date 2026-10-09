@@ -1,0 +1,251 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0097_rephurdle_cp10k",
+  "file": "submissions/candidates/T1_val/v0097_rephurdle_cp10k/submission.h5ad",
+  "sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+  "expression_sha256": "3457529c6d4f3ca34f0b4eb49315bfcecb98cba23c67e47478f96242b54c25c8",
+  "bytes": 109115208,
+  "actual_numerical_inputs": "exactv94 + pairedv51 + raw-library stats, followed by fixed CP10k closure",
+  "selection_reference": "exactv96r2",
+  "full_gene_panel": 32285,
+  "unshrunken_composite_endpoint_exact_v96": true,
+  "raw_hurdle_health_pass": true,
+  "finite_nonnegative": true,
+  "row_mass_max_error": 0.0006752728677383857,
+  "median_detection_ratio_vs_v96": 0.9885268471776044,
+  "pseudobulk_l2_shift_vs_v96": 1.0113961286216777,
+  "preclosure_report_sha256": "4598df51dd9ddde6f3702f2ac8a28f37b0f1de7014ff7a4adaa9dfc174dd7e1b",
+  "provenance": {
+    "candidate_id": "T1_val/v0097_rephurdle_cp10k",
+    "control": "none",
+    "selection_reference_candidate": "T1_val/v0096_cp10k/r2",
+    "selection_reference_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+    "numerical_base_v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+    "preclosure_sha256": "e7ca8bd948c6378d60edbc44a8e91427b4f0a905e5910432fa9990a3a523ebed",
+    "preclosure_expression_sha256": "783187e3962c6223d7c98e43a2b3f78b5cc11722a5c35823fe2ee6edeb7572aa",
+    "preclosure_recipe": {
+      "candidate_id": "T1_val/v0097_rephurdle",
+      "code_sha256": {
+        "build_replicate_hurdle.py": "ed5cbfb53f80ee8807b24d0979a8525bc850e0bee94552759404abe458c19214",
+        "hurdle_margins.py": "4741df3558923b4435ff789397116d6f69f49c59b67de8bc3479f40b576805ff",
+        "replicate_weights.py": "9e384067d17168824f119b030a8f2f97bbe62f60f22fb66ec0c88f1c263c26bf"
+      },
+      "configuration": {
+        "ambient_and_stress_masks": "inherit frozen GSE230531 global and non-CM ambient mask; masked genes stay exact parent",
+        "candidate_id": "T1_val/v0097_rephurdle",
+        "control_seed": 20261009,
+        "controls": [
+          "weights all one gives exact v0094",
+          "weights all zero reproduce v0051 state-gene margins",
+          "pooled-uncertainty ignores library dispersion/sign gate",
+          "fixed gene-permuted reliability control"
+        ],
+        "detection_transform": "Jeffreys logit((k+0.5)/(n+1))",
+        "frozen_before_weight_estimation": true,
+        "groups": [
+          "CM_V",
+          "CM_A",
+          "ENDO",
+          "EPI",
+          "MESO",
+          "NCC",
+          "SHF"
+        ],
+        "independent_replication_units": "2 early and 2 late libraries; four cross-pair differences are correlated",
+        "level_transform": "observed conditional mean of log1p-normalized positives",
+        "mean_definition": "equal-library late mean minus equal-library early mean",
+        "method": "replicate_supported_hurdle_marginal_residual",
+        "minimum_cells_each_library": 20,
+        "minimum_mean_either_stage": 0.02,
+        "minimum_positive_cells_each_library_for_level": 5,
+        "one_side_empty_positive_values": "use the nonempty side's observed positive distribution; both empty stays zero",
+        "paired_carrier_npz_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+        "parent_candidate": "T1_val/v0094_joint_carrier",
+        "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+        "positive_count": "floor(n_carrier + w_det*(n_parent-n_carrier) + 0.5)",
+        "positive_quantiles": "full empirical positive order statistics at midpoint ranks; linear interpolation at target midpoint ranks then (1-w_level)*carrier+w_level*parent",
+        "recipient_ranking": "parent expression primary, paired carrier expression breaks parent ties, immutable original within-state row order breaks remaining ties",
+        "reliability": "cross-library sign consistency * mu^2/(mu^2+max(var_early/2+var_late/2, sum_four_within_library_variances/4))",
+        "row_mass_restoration": false,
+        "scientific_claim": "descriptive source-uncertainty regularization, not calibrated biological confidence",
+        "source_local_metrics": "full32,285-gene diagnostic against released E9.5; not future accuracy",
+        "unsupported_behavior": "exact parent values; never force carrier fallback for an unmeasured gene or unsupported group"
+      },
+      "configuration_sha256": "15ab0d5b89603d9ebad1e2d08e62d8862187ad288706347dae874ee73f02f39a",
+      "control": "none",
+      "fine_states": "paired recovered v0051 donor states, unchanged",
+      "full_source_disclosure": {
+        "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+        "external_sources": [
+          {
+            "accession": "GSM7226268",
+            "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+            "stage": "E8.5",
+            "stage_numeric": 8.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268"
+          },
+          {
+            "accession": "GSM7226269",
+            "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+            "stage": "E8.5",
+            "stage_numeric": 8.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269"
+          },
+          {
+            "accession": "GSM7226272",
+            "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+            "stage": "E14.5",
+            "stage_numeric": 14.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272"
+          },
+          {
+            "accession": "GSM7226273",
+            "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+            "stage": "E14.5",
+            "stage_numeric": 14.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273"
+          },
+          {
+            "accession": "GSM7226274",
+            "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+            "stage": "E16.5",
+            "stage_numeric": 16.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274"
+          },
+          {
+            "accession": "GSM7226276",
+            "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+            "stage": "E16.5",
+            "stage_numeric": 16.5,
+            "study": "GSE230531",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276"
+          },
+          {
+            "accession": "GSM5820434",
+            "role": "Historical v0095 independent joint-donor experiment and source diagnostics; rejected and not an expression or fitted-parameter input to this candidate",
+            "stage": "E9.5",
+            "stage_numeric": 9.5,
+            "study": "GSE193746",
+            "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434"
+          }
+        ],
+        "official_sources": [
+          {
+            "name": "E8.5_RNA",
+            "role": "Inherited carrier training; full-row normalization audit",
+            "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+            "stage": "E8.5"
+          },
+          {
+            "name": "E9.5_RNA",
+            "role": "Inherited carrier training; full-row normalization audit and released-source-only diagnostics",
+            "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+            "stage": "E9.5"
+          }
+        ],
+        "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only",
+        "prohibited_external_interval": "(E9.5,E13.5]",
+        "protected_targets_used": false
+      },
+      "joint_order": "v0094 order within each fine-state gene, with paired-carrier zero-tie context; detection and intensity jointly changed by explicit hurdle construction",
+      "new_group_assignment_model": false,
+      "normalization": "log1p normalized source expression scale; row masses are unconstrained; CP10k intervention is not applied",
+      "paired_carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+      "parent_expression_sha256": "a0a82f77078eef6bc08e671ced6bd570ce0180467a326aefd2589825e1217c4a",
+      "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "replicate_stats_sha256": "f96e417c6b93a47780498d406822752ee1da5d6c020c1adf411857c6cd6c3c2d",
+      "source_uncertainty": "two early and two late raw libraries; no independent-pair overcounting or calibrated-confidence claim",
+      "weights_sha256": "384cffdcd90e32d2f7749c1e734a963ac33fb8553c23a346ea0aefea417e713a"
+    },
+    "postprocessor": "exact per-row float64 expm1 / sum * 10000 then log1p ->float32; no fit/clip/pseudocount",
+    "closure_code_sha256": "ce2e35f1f8c16c8dc187b7e30e581d49ef05b2542b7ec4004ad1f4855be79b80",
+    "normalizer_code_sha256": "abf66d97e462d8405691e84361607ef22a8def1da0efc14e3f03b9644f66ff87",
+    "unshrunken_composite_endpoint_expression_exact_v96": true,
+    "complete_source_disclosure": {
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "external_sources": [
+        {
+          "accession": "GSM7226268",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268"
+        },
+        {
+          "accession": "GSM7226269",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269"
+        },
+        {
+          "accession": "GSM7226272",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272"
+        },
+        {
+          "accession": "GSM7226273",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273"
+        },
+        {
+          "accession": "GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274"
+        },
+        {
+          "accession": "GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276"
+        },
+        {
+          "accession": "GSM5820434",
+          "role": "Historical v0095 joint-donor experiment and current source-only assay-calibration feasibility diagnostics; not an expression or fitted-reliability input to this candidate",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "study": "GSE193746",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434"
+        }
+      ],
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "role": "Inherited carrier training; full-row normalization audit",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "stage": "E8.5"
+        },
+        {
+          "name": "E9.5_RNA",
+          "role": "Inherited carrier training; full-row normalization audit and released-source-only diagnostics",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "stage": "E9.5"
+        }
+      ],
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only",
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "protected_targets_used": false
+    },
+    "scientific_claim": "replicate-reliability hurdle marginal regularization at fixed observed CP10k convention; no hidden-stage data or calibrated-confidence claim"
+  },
+  "wall_seconds": 10.731537580490112,
+  "peak_rss_kib": 1478980
+}

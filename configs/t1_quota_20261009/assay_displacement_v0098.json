@@ -1,0 +1,19 @@
+{
+  "candidate_id": "T1_val/v0098_assayscale_cp10k",
+  "selection_reference_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "numerical_parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "paired_carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+  "groups": ["CM_V", "CM_A", "ENDO", "EPI", "MESO", "NCC", "SHF"],
+  "support": "E8.5-only fitted slope eligibility intersect inherited external field's measured panel, global/non-CM masks and minimum pooled mean 0.02 at either endpoint; never filter by E9.5 test outcome",
+  "operator": "Keep exact v0094 detection support and positive count; Qnew(q)=Qcarrier(q)+b*(Qparent(q)-Qcarrier(q)) at each parent empirical positive midpoint rank",
+  "empty_side": "Parent empty remains zero; carrier empty uses parent quantiles and hence no displacement modification",
+  "floor": "Smallest actually observed positive value of the two parents for that fine-state gene; no synthetic pseudocount",
+  "monotone_repair": "Stable sort the floor-corrected full positive vector; report negative steps, reordered fraction and rank distances, and max/mean value changes due to sorting",
+  "floor_gate": "If more than 1% of touched positive values require the observed-positive floor, stop without a target artifact; no threshold retuning",
+  "normalization": "float64 expm1, row-scale to 10000, log1p, float32",
+  "endpoint": "b=1 must reproduce exact v0094 before closure and exact v0096 after closure",
+  "slope_model": "Frozen FITTED_E85_ONLY.npz; slope bounds/shrinkage fixed in affine_assay.json before held-out E9.5 assay",
+  "intercept_used": false,
+  "scientific_scope": "Source-fitted positive-displacement scale test. Cross-study differences are not identified as pure assay effects, and E9.5 evidence does not establish E14.5 or future transportability",
+  "frozen_before_target_build": true
+}

@@ -1,0 +1,5 @@
+{
+ "incumbent_v98":"submissions/candidates/T1_val/v0098_assayscale_cp10k/submission.h5ad",
+ "detection_component_v99":"submissions/candidates/T1_val/v0099_detonly_cp10k/submission.h5ad",
+ "composed_v101":"submissions/candidates/T1_val/v0101_detassay_cp10k/submission.h5ad"
+}

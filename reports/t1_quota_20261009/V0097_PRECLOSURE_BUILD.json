@@ -1,0 +1,472 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0097_rephurdle",
+  "file": "submissions/candidates/T1_val/v0097_rephurdle/submission.h5ad",
+  "sha256": "e7ca8bd948c6378d60edbc44a8e91427b4f0a905e5910432fa9990a3a523ebed",
+  "expression_sha256": "783187e3962c6223d7c98e43a2b3f78b5cc11722a5c35823fe2ee6edeb7572aa",
+  "bytes": 108845703,
+  "checks": {
+    "exact_unshrunken_full_matrix_endpoint": true,
+    "zero_weight_empirical_margin_checks": 5376,
+    "finite_nonnegative": true,
+    "zero_rows": 0,
+    "full_gene_panel": 32285,
+    "shape": [
+      5118,
+      32285
+    ],
+    "row_identity_exact": true,
+    "parent_bound": true
+  },
+  "health_pass": true,
+  "metrics": {
+    "weight_summary": {
+      "CM_V": {
+        "status": "FIT",
+        "minimum_library_cells": 59,
+        "detection_eligible_genes": 10226,
+        "level_eligible_genes": 8584,
+        "detection_weight_quantiles": [
+          0.0,
+          0.0,
+          0.48491952724923193,
+          0.8558406875920683,
+          0.9458877060878053,
+          0.9743547020867429,
+          0.9982458513286706
+        ],
+        "level_weight_quantiles": [
+          0.0,
+          0.0,
+          0.776939795521149,
+          0.8950609195891708,
+          0.9447066426914381,
+          0.9715469464986691,
+          0.9995532101898903
+        ],
+        "detection_disagreement_genes": 2354,
+        "level_disagreement_genes": 1175,
+        "detection_between_exceeds_within": 4722,
+        "level_between_exceeds_within": 7050
+      },
+      "CM_A": {
+        "status": "FIT",
+        "minimum_library_cells": 30,
+        "detection_eligible_genes": 9993,
+        "level_eligible_genes": 5379,
+        "detection_weight_quantiles": [
+          0.0,
+          0.0,
+          0.0,
+          0.7055018049347948,
+          0.8772253623570698,
+          0.9404300196391578,
+          0.9922540348146692
+        ],
+        "level_weight_quantiles": [
+          0.0,
+          0.0,
+          0.0,
+          0.7683905016720062,
+          0.9095400398781919,
+          0.9613214736381127,
+          0.9978459144378296
+        ],
+        "detection_disagreement_genes": 3138,
+        "level_disagreement_genes": 1603,
+        "detection_between_exceeds_within": 4081,
+        "level_between_exceeds_within": 2504
+      },
+      "ENDO": {
+        "status": "FIT",
+        "minimum_library_cells": 110,
+        "detection_eligible_genes": 10143,
+        "level_eligible_genes": 9202,
+        "detection_weight_quantiles": [
+          0.0,
+          0.0,
+          0.6741736592703815,
+          0.8943264267805638,
+          0.9612580719822486,
+          0.9818755550969691,
+          0.9969760500074326
+        ],
+        "level_weight_quantiles": [
+          0.0,
+          0.7776738673804906,
+          0.9074573690179241,
+          0.9555056017081831,
+          0.976928069138978,
+          0.9871793594339144,
+          0.9995099087010895
+        ],
+        "detection_disagreement_genes": 1978,
+        "level_disagreement_genes": 532,
+        "detection_between_exceeds_within": 6213,
+        "level_between_exceeds_within": 6460
+      },
+      "EPI": {
+        "status": "UNSUPPORTED_GROUP_EXACT_PARENT",
+        "minimum_library_cells": 10
+      },
+      "MESO": {
+        "status": "FIT",
+        "minimum_library_cells": 381,
+        "detection_eligible_genes": 10410,
+        "level_eligible_genes": 9799,
+        "detection_weight_quantiles": [
+          0.0,
+          0.0,
+          0.8611395164531863,
+          0.9619597609355384,
+          0.9876824344400406,
+          0.9948057949974526,
+          0.9988399006075673
+        ],
+        "level_weight_quantiles": [
+          0.0,
+          0.9187476668463406,
+          0.965532161484401,
+          0.9833239581498011,
+          0.9910232820647265,
+          0.9948150225021324,
+          0.9998112789310251
+        ],
+        "detection_disagreement_genes": 1175,
+        "level_disagreement_genes": 269,
+        "detection_between_exceeds_within": 5108,
+        "level_between_exceeds_within": 6538
+      },
+      "NCC": {
+        "status": "FIT",
+        "minimum_library_cells": 187,
+        "detection_eligible_genes": 10183,
+        "level_eligible_genes": 8908,
+        "detection_weight_quantiles": [
+          0.0,
+          0.0,
+          0.75642481573064,
+          0.9232224544192679,
+          0.9714974578220221,
+          0.9877324836173503,
+          0.9973576664834789
+        ],
+        "level_weight_quantiles": [
+          0.0,
+          0.789636730134782,
+          0.902064165463196,
+          0.9534785258184326,
+          0.9762348089138669,
+          0.9874483600386392,
+          0.9994520955756286
+        ],
+        "detection_disagreement_genes": 1563,
+        "level_disagreement_genes": 424,
+        "detection_between_exceeds_within": 4894,
+        "level_between_exceeds_within": 6200
+      },
+      "SHF": {
+        "status": "UNSUPPORTED_GROUP_EXACT_PARENT",
+        "minimum_library_cells": 17
+      }
+    },
+    "state_changes": {
+      "AVC-CM": {
+        "group": "CM_V",
+        "rows": 75,
+        "reliability_active_genes": 10226,
+        "changed_entries": 319674,
+        "on": 1082,
+        "off": 6943
+      },
+      "BEC": {
+        "group": "ENDO",
+        "rows": 94,
+        "reliability_active_genes": 10143,
+        "changed_entries": 341578,
+        "on": 2372,
+        "off": 10904
+      },
+      "Endocardium": {
+        "group": "ENDO",
+        "rows": 543,
+        "reliability_active_genes": 10143,
+        "changed_entries": 1989951,
+        "on": 13592,
+        "off": 70927
+      },
+      "IFT-CM": {
+        "group": "CM_A",
+        "rows": 138,
+        "reliability_active_genes": 9993,
+        "changed_entries": 575014,
+        "on": 4862,
+        "off": 18752
+      },
+      "NCC": {
+        "group": "NCC",
+        "rows": 9,
+        "reliability_active_genes": 10183,
+        "changed_entries": 29367,
+        "on": 143,
+        "off": 1057
+      },
+      "NCC-derived": {
+        "group": "NCC",
+        "rows": 224,
+        "reliability_active_genes": 10183,
+        "changed_entries": 733427,
+        "on": 4686,
+        "off": 27622
+      },
+      "OFT/RV-CM": {
+        "group": "CM_V",
+        "rows": 477,
+        "reliability_active_genes": 10226,
+        "changed_entries": 1979161,
+        "on": 9004,
+        "off": 46789
+      },
+      "Pericardium": {
+        "group": "EPI",
+        "rows": 216,
+        "reliability_active_genes": 0,
+        "changed_entries": 0,
+        "on": 0,
+        "off": 0
+      },
+      "Proepicardium": {
+        "group": "EPI",
+        "rows": 327,
+        "reliability_active_genes": 0,
+        "changed_entries": 0,
+        "on": 0,
+        "off": 0
+      },
+      "ST": {
+        "group": "MESO",
+        "rows": 301,
+        "reliability_active_genes": 10410,
+        "changed_entries": 944285,
+        "on": 2120,
+        "off": 27546
+      },
+      "SV-CM": {
+        "group": "CM_A",
+        "rows": 485,
+        "reliability_active_genes": 9993,
+        "changed_entries": 1506372,
+        "on": 25086,
+        "off": 56216
+      },
+      "V-CM": {
+        "group": "CM_V",
+        "rows": 406,
+        "reliability_active_genes": 10226,
+        "changed_entries": 2011092,
+        "on": 5728,
+        "off": 41159
+      },
+      "aPHM": {
+        "group": "MESO",
+        "rows": 85,
+        "reliability_active_genes": 10410,
+        "changed_entries": 261856,
+        "on": 687,
+        "off": 7393
+      },
+      "aSHF": {
+        "group": "SHF",
+        "rows": 276,
+        "reliability_active_genes": 0,
+        "changed_entries": 0,
+        "on": 0,
+        "off": 0
+      },
+      "pPHM": {
+        "group": "MESO",
+        "rows": 433,
+        "reliability_active_genes": 10410,
+        "changed_entries": 1315906,
+        "on": 3582,
+        "off": 39585
+      },
+      "pSHF": {
+        "group": "SHF",
+        "rows": 216,
+        "reliability_active_genes": 0,
+        "changed_entries": 0,
+        "on": 0,
+        "off": 0
+      }
+    },
+    "changed_entries": 12007683,
+    "changed_entry_fraction": 0.0726704989141804,
+    "activated_entries": 72944,
+    "deactivated_entries": 354893,
+    "library_before_quantiles": [
+      8040.252359550382,
+      9719.441416550306,
+      10000.000044810324,
+      10442.979679703669,
+      11558.830402368952,
+      13647.731441622027,
+      23490.207746168675
+    ],
+    "library_after_quantiles": [
+      7994.015773646302,
+      9647.684145923362,
+      9999.999954489005,
+      10344.196225321026,
+      11511.31854605846,
+      13531.309871189049,
+      23241.075623602297
+    ],
+    "median_library_ratio": 0.990540683079693,
+    "median_detection_ratio": 0.9885268471776044,
+    "gene_variance_sum_ratio": 0.9879706652591116,
+    "pseudobulk_shift_l2": 1.0818023494614672,
+    "pseudobulk_shift_max_abs": 0.08027857361765967
+  },
+  "provenance": {
+    "candidate_id": "T1_val/v0097_rephurdle",
+    "control": "none",
+    "configuration": {
+      "candidate_id": "T1_val/v0097_rephurdle",
+      "parent_candidate": "T1_val/v0094_joint_carrier",
+      "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "paired_carrier_npz_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+      "method": "replicate_supported_hurdle_marginal_residual",
+      "independent_replication_units": "2 early and 2 late libraries; four cross-pair differences are correlated",
+      "groups": [
+        "CM_V",
+        "CM_A",
+        "ENDO",
+        "EPI",
+        "MESO",
+        "NCC",
+        "SHF"
+      ],
+      "minimum_cells_each_library": 20,
+      "minimum_positive_cells_each_library_for_level": 5,
+      "minimum_mean_either_stage": 0.02,
+      "detection_transform": "Jeffreys logit((k+0.5)/(n+1))",
+      "level_transform": "observed conditional mean of log1p-normalized positives",
+      "reliability": "cross-library sign consistency * mu^2/(mu^2+max(var_early/2+var_late/2, sum_four_within_library_variances/4))",
+      "mean_definition": "equal-library late mean minus equal-library early mean",
+      "unsupported_behavior": "exact parent values; never force carrier fallback for an unmeasured gene or unsupported group",
+      "positive_count": "floor(n_carrier + w_det*(n_parent-n_carrier) + 0.5)",
+      "positive_quantiles": "full empirical positive order statistics at midpoint ranks; linear interpolation at target midpoint ranks then (1-w_level)*carrier+w_level*parent",
+      "one_side_empty_positive_values": "use the nonempty side's observed positive distribution; both empty stays zero",
+      "recipient_ranking": "parent expression primary, paired carrier expression breaks parent ties, immutable original within-state row order breaks remaining ties",
+      "row_mass_restoration": false,
+      "ambient_and_stress_masks": "inherit frozen GSE230531 global and non-CM ambient mask; masked genes stay exact parent",
+      "controls": [
+        "weights all one gives exact v0094",
+        "weights all zero reproduce v0051 state-gene margins",
+        "pooled-uncertainty ignores library dispersion/sign gate",
+        "fixed gene-permuted reliability control"
+      ],
+      "control_seed": 20261009,
+      "source_local_metrics": "full32,285-gene diagnostic against released E9.5; not future accuracy",
+      "scientific_claim": "descriptive source-uncertainty regularization, not calibrated biological confidence",
+      "frozen_before_weight_estimation": true
+    },
+    "configuration_sha256": "15ab0d5b89603d9ebad1e2d08e62d8862187ad288706347dae874ee73f02f39a",
+    "code_sha256": {
+      "build_replicate_hurdle.py": "ed5cbfb53f80ee8807b24d0979a8525bc850e0bee94552759404abe458c19214",
+      "replicate_weights.py": "9e384067d17168824f119b030a8f2f97bbe62f60f22fb66ec0c88f1c263c26bf",
+      "hurdle_margins.py": "4741df3558923b4435ff789397116d6f69f49c59b67de8bc3479f40b576805ff"
+    },
+    "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+    "parent_expression_sha256": "a0a82f77078eef6bc08e671ced6bd570ce0180467a326aefd2589825e1217c4a",
+    "paired_carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+    "replicate_stats_sha256": "f96e417c6b93a47780498d406822752ee1da5d6c020c1adf411857c6cd6c3c2d",
+    "weights_sha256": "384cffdcd90e32d2f7749c1e734a963ac33fb8553c23a346ea0aefea417e713a",
+    "new_group_assignment_model": false,
+    "fine_states": "paired recovered v0051 donor states, unchanged",
+    "source_uncertainty": "two early and two late raw libraries; no independent-pair overcounting or calibrated-confidence claim",
+    "joint_order": "v0094 order within each fine-state gene, with paired-carrier zero-tie context; detection and intensity jointly changed by explicit hurdle construction",
+    "normalization": "log1p normalized source expression scale; row masses are unconstrained; CP10k intervention is not applied",
+    "full_source_disclosure": {
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "stage": "E8.5",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "role": "Inherited carrier training; full-row normalization audit"
+        },
+        {
+          "name": "E9.5_RNA",
+          "stage": "E9.5",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "role": "Inherited carrier training; full-row normalization audit and released-source-only diagnostics"
+        }
+      ],
+      "external_sources": [
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226268",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226269",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226272",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226273",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226274",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226276",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE193746",
+          "accession": "GSM5820434",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434",
+          "role": "Historical v0095 independent joint-donor experiment and source diagnostics; rejected and not an expression or fitted-parameter input to this candidate"
+        }
+      ],
+      "protected_targets_used": false,
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only"
+    }
+  },
+  "wall_seconds": 21.985928058624268,
+  "peak_rss_kib": 3723812
+}

@@ -1,0 +1,102 @@
+{
+  "interpretation": "Same released E9.5 source reference and32,285 genes for every arm; no hidden E10.5 target and no reliable future-score prediction",
+  "reference95_sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+  "reference_cells": 2000,
+  "full_panel": 32285,
+  "arms": {
+    "exact_v96": {
+      "artifact_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.025535754054346514,
+          "variogram": 0.002436102833598852,
+          "energy_distance": 1.0646233658267832
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.026640282052823882,
+          "variogram": 0.0023912405595183372,
+          "energy_distance": 1.0572423192338718
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.023688945619024702,
+          "variogram": 0.0022766580805182457,
+          "energy_distance": 1.0150262061643573
+        }
+      ]
+    },
+    "both_components_v97": {
+      "artifact_sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.02319938512423926,
+          "variogram": 0.0021019410341978073,
+          "energy_distance": 0.9459315061223563
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.02421322535153565,
+          "variogram": 0.002064038533717394,
+          "energy_distance": 0.9421185935208953
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.021527113680144185,
+          "variogram": 0.001926383818499744,
+          "energy_distance": 0.897976561305633
+        }
+      ]
+    },
+    "detection_only_v99": {
+      "artifact_sha256": "20bbeb64260aa233406852004fee48f816f2f231fb52c71fafaafaefc4a39409",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.02320540650571332,
+          "variogram": 0.002103204606100917,
+          "energy_distance": 0.9496120494446316
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.024219571776238617,
+          "variogram": 0.0020645323675125837,
+          "energy_distance": 0.9455584459463822
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.021529532361024624,
+          "variogram": 0.0019273620564490557,
+          "energy_distance": 0.901667527510746
+        }
+      ]
+    },
+    "positive_level_only_v100": {
+      "artifact_sha256": "d08373b47b0b42abf9cc6c28c1f51cb386c0394bb77749262e20a28e2e507a85",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.02551682002935608,
+          "variogram": 0.002433887217193842,
+          "energy_distance": 1.0605931185297592
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.02662061451745068,
+          "variogram": 0.0023898722138255835,
+          "energy_distance": 1.053367225177034
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.02367223550392547,
+          "variogram": 0.0022745076566934586,
+          "energy_distance": 1.0109162841959787
+        }
+      ]
+    }
+  },
+  "wall_seconds": 109.74944496154785,
+  "peak_rss_kib": 1904936
+}

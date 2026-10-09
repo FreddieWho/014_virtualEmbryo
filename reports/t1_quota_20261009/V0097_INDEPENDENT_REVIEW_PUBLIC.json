@@ -1,0 +1,75 @@
+{
+  "decision": "APPROVE_FOR_ONE_BOUNDED_PARENT_RELEASE",
+  "candidate_id": "T1_val/v0097_rephurdle_cp10k",
+  "artifact": "/workspace/shared/virtualembryo-20261009/t1/submissions/candidates/T1_val/v0097_rephurdle_cp10k/submission.h5ad",
+  "sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+  "expression_sha256": "3457529c6d4f3ca34f0b4eb49315bfcecb98cba23c67e47478f96242b54c25c8",
+  "weights_reestimated_exact": true,
+  "independent_margin_formula_mismatches": 0,
+  "active_margin_entries_recomputed": 33381667,
+  "full_states_checked": [
+    "AVC-CM",
+    "BEC",
+    "Blood",
+    "Endocardium",
+    "Epithelium",
+    "Foregut",
+    "Hepatocyte",
+    "IFT-CM",
+    "NCC",
+    "NCC-derived",
+    "OFT/RV-CM",
+    "Pericardium",
+    "Proepicardium",
+    "ST",
+    "SV-CM",
+    "Surface Ectoderm",
+    "V-CM",
+    "aPHM",
+    "aSHF",
+    "pPHM",
+    "pSHF"
+  ],
+  "all_remaining_entries_exact_parent": true,
+  "independent_full_CP10k_closure_mismatches": 0,
+  "full_panel": [
+    5118,
+    32285
+  ],
+  "max_row_mass_error": 0.0006752728677383857,
+  "actual_repository_contract": "PASS independent against exactv96r2",
+  "source_disclosure": "PASS complete direct/inherited7accessions;2early+2late libraries; exactv94+recoveredv51 numeric ancestry versusv96selection reference",
+  "peak_rss_kib": 1751924,
+  "limits": "Engineering checks pass, but shuffled-control superiority invalidates a positive source-specificity claim. Parent expressly accepts one bounded server hypothesis test.",
+  "persistence": {
+    "packets": {
+      "T1_v0097_rephurdle_model_20261009.zip": {
+        "sha256": "b8129efc70c82bdfe1dee82f032a3029e4294bd15edb6c2807c20ee4db794e99",
+        "bytes": 13964978,
+        "CRC": "PASS",
+        "h5ad_members": {}
+      },
+      "T1_v0097_raw_controls_20261009.zip": {
+        "sha256": "24c9fb97606f378b5d8afbf4d96122f07c001a3cc7784da11a605e3ed8e8ee9d",
+        "bytes": 328320651,
+        "CRC": "PASS",
+        "h5ad_members": {
+          "unclosed/submission.h5ad": "e7ca8bd948c6378d60edbc44a8e91427b4f0a905e5910432fa9990a3a523ebed",
+          "pooled/submission.h5ad": "0ab88a419be1bd43272eec8570cb1ff8c9d5acb71cb1e2e9b15379d642ca304b",
+          "permuted/submission.h5ad": "ca26e52a1715f49385a1d4e5d0c84a281e0aa3d378509feed335c5e95de65d98"
+        }
+      }
+    },
+    "direct_upload_path": "/workspace/scratch/7ec7e25db3f4/t1_quota_delivery_20261009/t1_val__rephurdle_cp10k__v0097.h5ad",
+    "proof": "Builder/parent report successful Library persistence; local bytes, ZIP CRC and contents independently checked"
+  },
+  "source_controls": {
+    "report_sha256": "74c07432b64485804e46d51452d5417011a654fa8fdbb297fdaca3097118d911",
+    "all_five_artifact_hashes_match": true,
+    "all_five_arms_all_three_seeds_finite": true,
+    "specificity_result": "NEGATIVE: gene-permuted weights outperform actual reliability weights on every source metric and seed. Source closeness does not validate gene-specific reliability.",
+    "comparison_scope": "Same releasedE9.5 reference, full32285genes; no futuretruth",
+    "source_biological_validation": "NOT_ESTABLISHED"
+  },
+  "publication_note": "Private Library IDs omitted from this public copy; immutable artifact hashes, checks, source control caveats and release decision retained."
+}

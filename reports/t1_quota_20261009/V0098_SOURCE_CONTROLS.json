@@ -1,0 +1,56 @@
+{
+  "interpretation": "Same released E9.5 source reference and32,285 genes for every arm; no hidden E10.5 target and no reliable future-score prediction",
+  "reference95_sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+  "reference_cells": 2000,
+  "full_panel": 32285,
+  "arms": {
+    "exact_v96": {
+      "artifact_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.025535754054346514,
+          "variogram": 0.002436102833598852,
+          "energy_distance": 1.0646233658267832
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.026640282052823882,
+          "variogram": 0.0023912405595183372,
+          "energy_distance": 1.0572423192338718
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.023688945619024702,
+          "variogram": 0.0022766580805182457,
+          "energy_distance": 1.0150262061643573
+        }
+      ]
+    },
+    "assay_displacement_cp10k": {
+      "artifact_sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+      "metrics": [
+        {
+          "seed": 20261009,
+          "mmd_u": 0.026595805755921055,
+          "variogram": 0.0024680409114807844,
+          "energy_distance": 1.0974550581464015
+        },
+        {
+          "seed": 20261010,
+          "mmd_u": 0.02777703793556941,
+          "variogram": 0.0024208847898989916,
+          "energy_distance": 1.089429480982112
+        },
+        {
+          "seed": 20261011,
+          "mmd_u": 0.02467992151204553,
+          "variogram": 0.0023099444806575775,
+          "energy_distance": 1.0468791391255152
+        }
+      ]
+    }
+  },
+  "wall_seconds": 55.945862770080566,
+  "peak_rss_kib": 1901692
+}
