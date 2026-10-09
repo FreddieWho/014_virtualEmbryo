@@ -1,0 +1,42 @@
+{
+  "base_directory": "--previous-root; released data can instead use --data-root",
+  "excluded_from_archive": true,
+  "reason": "No duplicate prior binary artifacts or raw training data; retain existing downloaded files",
+  "inputs": [
+    {
+      "relative_path": "data/official/E8.25_late.h5ad",
+      "size_bytes": 225091568,
+      "sha256": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593"
+    },
+    {
+      "relative_path": "data/official/E8.75.h5ad",
+      "size_bytes": 83750668,
+      "sha256": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c"
+    },
+    {
+      "relative_path": "data/official/E9.5.h5ad",
+      "size_bytes": 163640212,
+      "sha256": "371ca6530e084de2b6cd6703b49d95f4bb59546c9291659809575382a630ee9a"
+    },
+    {
+      "relative_path": "heart_interp/exact_parent_replay/T2_heart_val_interp__H1_bridgeC2_aniso.h5ad",
+      "size_bytes": 12247032,
+      "sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37"
+    },
+    {
+      "relative_path": "heart_interp/final/t2_hrt_int__heart_copula__v0025.h5ad",
+      "size_bytes": 12247312,
+      "sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2"
+    },
+    {
+      "relative_path": "heart_interp/holdout/heart_copula.h5ad",
+      "size_bytes": 12247312,
+      "sha256": "0984b8be7874aaa7380ab1ea7308daf835e4ca5bdc86211800c401bc026d0c03"
+    },
+    {
+      "relative_path": "heart_interp/final/heart_B.npy",
+      "size_bytes": 2000128,
+      "sha256": "7dd9361e72f8d115993847274a034b1ba51b142d46bb6fba65b7681152f550eb"
+    }
+  ]
+}

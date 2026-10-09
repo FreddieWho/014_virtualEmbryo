@@ -1,0 +1,155 @@
+{
+  "shape": [
+    5118,
+    32285
+  ],
+  "file_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "expression_sha256": "a0a82f77078eef6bc08e671ced6bd570ce0180467a326aefd2589825e1217c4a",
+  "baseline_kind": "RECONSTRUCTED_v0092_NOT_EXACT_HISTORICAL_SCORED_FILE",
+  "parent_sha256": "65270f9782e4fa7111a56cc35658aa67db5300b3de55fd54f77eafbe425577dd",
+  "parent_expression_sha256": "9974267e6e8ecf114ef1668ab16f297b266bebfb331042ae89771d9de8ee3074",
+  "template_expression_sha256": "541d0aa6b74c3d36c973264da5c224cd89119eccf99d151eb294ef7b873cf22c",
+  "state_labels_sha256": "9c63848dbbee65f4302902a2ddc8ac0bc6f80ab78f6044a8c5f038c417bcaa47",
+  "official_panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+  "operator": {
+    "blend": 0.5,
+    "shuffle_template": false,
+    "seed": 20261009,
+    "shape": [
+      5118,
+      32285
+    ],
+    "changed_entries": 9432424,
+    "changed_fraction": 0.057085031146316,
+    "changed_genes": 12277,
+    "uniform_gene_pair_at_least_one_changed_fraction": 0.6159413761024846,
+    "uniform_gene_pair_both_changed_fraction": 0.1445975738742848,
+    "on_transitions": 305026,
+    "off_transitions": 305026,
+    "mean_absolute_rank_change": 0.005089353191598791,
+    "state_gene_multisets_exact": true,
+    "state_diagnostics": {
+      "AVC-CM": {
+        "rows": 75,
+        "changed_entries": 117855
+      },
+      "BEC": {
+        "rows": 94,
+        "changed_entries": 159150
+      },
+      "Blood": {
+        "rows": 54,
+        "changed_entries": 0
+      },
+      "Endocardium": {
+        "rows": 543,
+        "changed_entries": 1519451
+      },
+      "Epithelium": {
+        "rows": 83,
+        "changed_entries": 0
+      },
+      "Foregut": {
+        "rows": 153,
+        "changed_entries": 0
+      },
+      "Hepatocyte": {
+        "rows": 413,
+        "changed_entries": 0
+      },
+      "IFT-CM": {
+        "rows": 138,
+        "changed_entries": 280054
+      },
+      "NCC": {
+        "rows": 9,
+        "changed_entries": 4668
+      },
+      "NCC-derived": {
+        "rows": 224,
+        "changed_entries": 481072
+      },
+      "OFT/RV-CM": {
+        "rows": 477,
+        "changed_entries": 1356671
+      },
+      "Pericardium": {
+        "rows": 216,
+        "changed_entries": 207454
+      },
+      "Proepicardium": {
+        "rows": 327,
+        "changed_entries": 601026
+      },
+      "ST": {
+        "rows": 301,
+        "changed_entries": 633037
+      },
+      "SV-CM": {
+        "rows": 485,
+        "changed_entries": 921332
+      },
+      "Surface Ectoderm": {
+        "rows": 110,
+        "changed_entries": 0
+      },
+      "V-CM": {
+        "rows": 406,
+        "changed_entries": 1226549
+      },
+      "aPHM": {
+        "rows": 85,
+        "changed_entries": 119344
+      },
+      "aSHF": {
+        "rows": 276,
+        "changed_entries": 453747
+      },
+      "pPHM": {
+        "rows": 433,
+        "changed_entries": 924614
+      },
+      "pSHF": {
+        "rows": 216,
+        "changed_entries": 426400
+      }
+    },
+    "row_libraries_are_not_invariant": true,
+    "server_de_scores_are_not_guaranteed_invariant": true
+  },
+  "health": {
+    "pass": true,
+    "parent": {
+      "library_quantiles": [
+        9714.553124586553,
+        10454.848144207179,
+        13650.279588392674
+      ],
+      "zero_library_rows": 0,
+      "median_detected_genes": 4372.5
+    },
+    "candidate": {
+      "library_quantiles": [
+        9719.441416550306,
+        10442.979679703669,
+        13647.731441622025
+      ],
+      "zero_library_rows": 0,
+      "median_detected_genes": 4358.0
+    },
+    "library_quantile_ratios": [
+      1.0005031926740284,
+      0.9988647884369237,
+      0.9998133264044778
+    ],
+    "median_detected_ratio": 0.9966838193253288
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "anndata": "0.11.4",
+    "threads": 1
+  },
+  "historical_comparison_replay_confounded": true
+}

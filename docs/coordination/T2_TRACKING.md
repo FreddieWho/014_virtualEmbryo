@@ -185,3 +185,7 @@ J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 bo
 Heart interp v0025在exact H1父上迁移心脏重拟合copula，服务器晋级；embryo v0023在exact E3父上恢复均值桥输入XB自身library，数值略升但落±0.1带，保v21；extra v0037在exact X2父上迁移zero-preserve drift，不晋级。三份单线程重放、独立审查、精确panel通过；开发折限制和probe未收敛均披露。今日7/8，仅新授权3/3已耗尽；不再提交。构建worker未推送；用户随后授权专属publisher同步GitHub。详见reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09及reports/t2_operator_transfers_20261009/REPORT.md。
 - 2026-10-09｜门户合计确认与 per-task 对账关闭｜用户确认 Total **172.9**、per-task T1 58.9 / T2 60.3 / T3 53.7（Human rank 71/187 @ 09:23:59Z）。选集相加 58.89+60.2770+53.69 = **172.857**，显示精度内一致。门户 T2 用各榜数值最高 (63.0185+66.7064+51.1388)/3 = 60.2879，与选集差 0.011 全部来自 ±0.1 带内保留（胚胎 v0021 vs v0023、外推 v0030 vs v0032）。**此前标记 UNRESOLVED 的 per-task 对账问题关闭**，根因是选集滞后。
 - 2026-10-09｜导航刷新至 operator-transfer 之后｜心插现役由 v0023=62.48 换为 **v0025 h_heart_copula=66.7064**（+4.23，本轮最大单榜跃升；官方 API 精度，较字节精确 H1 65.0260 +1.6804）。胚胎现役仍 v0021=63.0047（数值最高 v0023=63.0185，+0.0138 带内不换人）。外推现役仍 v0030=51.12（v0037 零保位移 48.86 REJECT）。T2 任务均分由 58.87 改为 **60.277**。心插 v0025 与胚胎 v0021 同属 scRNA copula 族，列为优先方向；外推停在 51.12 平台期需新机制。blocks_submission:false。
+
+- 2026-10-09｜最后一发T2 v0026回分｜heart copula强度0.5→0.75，预设3候选局部对照后选中，最终API66.7846，较v25+0.0782属±0.1带内TIE，保v25现役；门户数值最高更新v26。8子分完整、exact父载体/B、单线程重放、独审通过。今日8/8耗尽停止。代码和报告纳入后续仓库同步。证据reports/SERVER_SCORE_REGISTRY.md#t2-final-slot-v0026-2026-10-09。
+
+- 2026-10-09 11:37UTC｜用户暂停T2转向T1｜8次预算已全部终态，停止所有T2实验/提交；明日handoff已保存，最多2条待新授权路线，不自动执行实验或提交。见reports/t2_final_slot_20261009/TOMORROW_HANDOFF.md。

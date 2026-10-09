@@ -1,0 +1,204 @@
+{
+  "disclosure_status": "DISCLOSURE_CORRECTION_PENDING",
+  "disclosure_gap": "Submitted metadata omits GSE230531 E16.5 prior diagnostic use; local publication does not correct submitted metadata or establish organizer acceptance. Scored bytes remain immutable.",
+  "sources": [
+    {
+      "accession": "GSM7226268",
+      "stage": "E8.5",
+      "role": "Direct early external OT-field input",
+      "sha256": {
+        "GSM7226268_E8_5_1_features.tsv.gz": "a4f442bfb849411262f48ff94f658776bc99bfee51377c033e44730f95d85e9e"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226268",
+      "stage": "E8.5",
+      "role": "Direct early external OT-field input",
+      "sha256": {
+        "GSM7226268_E8_5_1_matrix.mtx.gz": "4f9d143215e4a28efdefecee0789590dd2936602fdc25f0b79444bfd33ca6409"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226269",
+      "stage": "E8.5",
+      "role": "Direct early external OT-field input",
+      "sha256": {
+        "GSM7226269_E8_5_2_features.tsv.gz": "ba033d7f7533b932dd527199f038dbf459a37656383dd7cc6c1da6e683729bc2"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226269",
+      "stage": "E8.5",
+      "role": "Direct early external OT-field input",
+      "sha256": {
+        "GSM7226269_E8_5_2_matrix.mtx.gz": "015e69aed316373405fb639f6792bc58c13c1a4be2ce7b1afb9607121d823b64"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226272",
+      "stage": "E14.5",
+      "role": "Direct late external OT-field input",
+      "sha256": {
+        "GSM7226272_E14_5_1_features.tsv.gz": "fa07e2d91d8668f577268ea86b0104c4e723301490f9849aa1946b9be0ddd624"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226272",
+      "stage": "E14.5",
+      "role": "Direct late external OT-field input",
+      "sha256": {
+        "GSM7226272_E14_5_1_matrix.mtx.gz": "3ed0536b676b37223f7d16617e0c68051927adc4a108a15aa5b12d0a45f2705f"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226273",
+      "stage": "E14.5",
+      "role": "Direct late external OT-field input",
+      "sha256": {
+        "GSM7226273_E14_5_2_features.tsv.gz": "64a3e6ada7ef6a9a8e2ccd92fe5b5040bad7590b31fd6604f65f698d428e8739"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226273",
+      "stage": "E14.5",
+      "role": "Direct late external OT-field input",
+      "sha256": {
+        "GSM7226273_E14_5_2_matrix.mtx.gz": "01ec7051167dbe35f1367140228fbe5bcb0ef4c683ac77a539406b00dcc2beda"
+      },
+      "disclosure_gap": "Direct source embedded in submitted metadata"
+    },
+    {
+      "accession": "GSM7226274",
+      "stage": "E16.5",
+      "role": "Prior temporal-warp and alternative-anchor diagnostics; no final OT field or emitted expression",
+      "sha256": {
+        "GSM7226274_E16_5_1_features.tsv.gz": "fd61ed800e05c1781bac334734c331c03693e7606d5f9cad53d28630a82430e0"
+      },
+      "disclosure_gap": "Diagnostic accession absent from submitted metadata"
+    },
+    {
+      "accession": "GSM7226274",
+      "stage": "E16.5",
+      "role": "Prior temporal-warp and alternative-anchor diagnostics; no final OT field or emitted expression",
+      "sha256": {
+        "GSM7226274_E16_5_1_matrix.mtx.gz": "b431e5c28a543be73d02f2030f20957d2b2bfdbb12be01c38266c005bfb81783"
+      },
+      "disclosure_gap": "Diagnostic accession absent from submitted metadata"
+    },
+    {
+      "accession": "GSM7226276",
+      "stage": "E16.5",
+      "role": "Prior temporal-warp and alternative-anchor diagnostics; no final OT field or emitted expression",
+      "sha256": {
+        "GSM7226276_E16_5_2_features.tsv.gz": "db3008cb9ec80c9a756d9c1f9e02bd0b6786824766556ab7ff5187882842fb5f"
+      },
+      "disclosure_gap": "Diagnostic accession absent from submitted metadata"
+    },
+    {
+      "accession": "GSM7226276",
+      "stage": "E16.5",
+      "role": "Prior temporal-warp and alternative-anchor diagnostics; no final OT field or emitted expression",
+      "sha256": {
+        "GSM7226276_E16_5_2_matrix.mtx.gz": "164d37087936f6028fb6b99e3301aa8c45625b3d2b3130a4cbdcebd2490e2df7"
+      },
+      "disclosure_gap": "Diagnostic accession absent from submitted metadata"
+    },
+    {
+      "accession": "GEO reuse policy",
+      "stage": "policy",
+      "role": "Public reuse-policy evidence",
+      "sha256": {
+        "GEO_disclaimer_20261009.html": "6f5dc149edf1102ced21d3bb3cef09dd2f1bcbbba1576c4dbb9b2276d120b142"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Independent joint-rank donor source",
+      "sha256": {
+        "GSM5820434.soft.txt": "319b18c96778463efba6c83b4d5211da4462680b626c5a73eddbadbd345f2757"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Independent joint-rank donor source",
+      "sha256": {
+        "GSM5820434_mat_conE9_5_filtered_feature_bc_matrix.tar.gz": "79e75a95bddffc8764e6749169200f9d69d3f434f584d06e7827a5b65e5bc4e8"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Independent joint-rank donor source",
+      "sha256": {
+        "barcodes.tsv.gz": "d9531b1c8f3e94f959bfacee97beb4b0b3507d776d625b64f5ac4a577ee4397a"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Independent joint-rank donor source",
+      "sha256": {
+        "features.tsv.gz": "7f1db76f00a99f7d74d63b13577a94315a64ffcc0c97bcf27d9726020680e456"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Independent joint-rank donor source",
+      "sha256": {
+        "matrix.mtx.gz": "9ad5583c83aa16f2360616084a59ee5b5e05d41996bb796559bcf4b364a298a2"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "VirtualEmbryo rules",
+      "stage": "policy",
+      "role": "Public T1 stage-boundary evidence",
+      "sha256": {
+        "official_rules_20261009.html": "29c0ce02064c94aee628365ae1b76bf45d509678922d22c6f8491fe02fff36ba"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Derived joint-donor panel or fixed mapping parameters; hash only, no per-cell content",
+      "sha256": {
+        "GSM5820434_panel_log1p.h5ad": "1a9a89b2a170b21ffa6f2073f0b98542f7b79203e6cebef2c36e0e9b85113c09"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Derived joint-donor panel or fixed mapping parameters; hash only, no per-cell content",
+      "sha256": {
+        "mapping_arrays.npz": "ad44601d15500ff4569ef5077eba3300bf620d400689af1f2378123848a125a6"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    },
+    {
+      "accession": "GSM5820434",
+      "stage": "E9.5",
+      "role": "Derived joint-donor panel or fixed mapping parameters; hash only, no per-cell content",
+      "sha256": {
+        "donor_matching_standardization.npz": "c01b57edf178fe288a3ce3dae9e014dac526ecad3a8935f85916ef37b1fb5071"
+      },
+      "disclosure_gap": "Direct source embedded in v0095; inherited E16.5 gap remains"
+    }
+  ]
+}

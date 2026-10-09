@@ -1,0 +1,111 @@
+{
+  "mode": "final",
+  "source_commit": "7dfe148f5c55d2a066e6adf1e4e46b08c631d08b",
+  "fit_sources": {
+    "E8.25_late": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593",
+    "E8.75": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c"
+  },
+  "parent_v25_sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+  "h1_sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37",
+  "exact_v25_arrays_reproduced": true,
+  "fit_global": {
+    "n_fit_cells": 83542,
+    "n_genes": 500,
+    "ledoit_wolf_shrinkage": 0.0013137380209128804,
+    "rank_gaussian": true,
+    "blend": 0.5,
+    "parameter_search": false
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "artifact:libscipy_openblas-5f890258.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    }
+  ],
+  "protected_target_read": false,
+  "arms": {
+    "global_b075": {
+      "path": "artifact:t2_hrt_int__copula_refine__v0026.h5ad",
+      "sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+      "checks": {
+        "exact_state_gene_marginals": true,
+        "same_geometry_rows_metadata": true,
+        "mean_abs_change": 0.16991011798381805,
+        "changed_entry_fraction": 0.1501532697547684,
+        "library_ratio_quantiles": [
+          0.693519379327521,
+          0.8127172127235801,
+          0.9913668701029545,
+          1.146777265765061,
+          1.2782350205657975
+        ],
+        "library_absolute_quantiles": [
+          1073.7486042750472,
+          2870.2978041317087,
+          7469.142175304387,
+          16343.567409386162,
+          27861.15398076744
+        ],
+        "weighted_abs_within_state_gene_correlation": 0.09027965316178942
+      },
+      "contract": {
+        "board": "T2:heart:val_interp",
+        "file": "artifact:t2_hrt_int__copula_refine__v0026.h5ad",
+        "n_obs": 5872,
+        "n_vars": 500,
+        "size_mb": 12.2,
+        "errors": [],
+        "pass": true
+      },
+      "blend": 0.75
+    },
+    "v25": {
+      "checks": {
+        "exact_state_gene_marginals": true,
+        "same_geometry_rows_metadata": true,
+        "mean_abs_change": 0.0,
+        "changed_entry_fraction": 0.0,
+        "library_ratio_quantiles": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "library_absolute_quantiles": [
+          1075.4535828731332,
+          3212.5059854988917,
+          7588.092658711374,
+          15153.659258902762,
+          26994.02103384695
+        ],
+        "weighted_abs_within_state_gene_correlation": 0.07566675226559745
+      }
+    }
+  },
+  "status": "COMPLETE"
+}

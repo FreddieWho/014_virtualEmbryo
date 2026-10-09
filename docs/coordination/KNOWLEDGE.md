@@ -331,3 +331,10 @@ boundary         适用范围或不可推断边界
 ### 2026-10-03 T3 v0070：来源均值收益不构成目标矩阵收益
 
 成熟度：单候选观测/实现审计已确认，机制归因未识别。证据：`reports/t3_autoresearch_score_review_20261003/REPORT.md`及`OUTPUT_AUDIT.json`、服务器权威登记。来源开发MSE下降与目标回分退步共存；全细胞统一残差令非零比例10.46%→62.20%，截负改变期望均值响应。限制：没有合法目标truth或配对消融，不能把低分单独归因为稀疏性，也不是Gata4生物机制证据。此来源目标不可作为目标晋级门槛；blocks_submission:false。
+
+### 2026-10-09 T1：固定边缘的联合结构收益与局限
+
+- 成熟度：实现审计及服务器描述性结果；单次跨版本、机制因果未识别。证据 reports/t1_joint_round_20261009/ 及权威SERVER_SCORE_REGISTRY T1 joint structure节。
+- 分状态/逐基因数值集合精确保留不保证官方抽样DE分不变，也不保留每细胞library。v0094经验carrier联合秩恢复主要改善服务器MMD，未修复variogram；重建父本无独立服务器分，不能将历史总分差严格归因该算子。
+- 同一基因对的variogram包含边缘项与共同检出项。19,998个固定全基因对中7,264对含全零基因，固定边缘下这些对不能变；实际2,935对两列都变。不能把全部variogram缺口当协方差缺口；分解项也非独立可达提升。
+- v0095外部E9.5联合供体来源域三折MMD均优于打乱null，却未迁移至服务器优势；one-pool whole-cell→nucleus与供体重复集中是限制。随机null扰动幅度大于coherent，因此优于null本身不能证明机制。blocks_submission:false。

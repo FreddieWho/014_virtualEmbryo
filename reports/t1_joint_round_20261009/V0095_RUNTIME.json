@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0",
+    "anndata": "0.13.4",
+    "pandas": "3.0.6",
+    "h5py": "3.16.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "fit_and_build_threads": 1,
+  "executed_scripts": {
+    "audit_source_executed.py": "cafff0d8952a7a0fc2d8b84c1724d524872d1f78e444c6f8eb9e3d81934b8918",
+    "test_joint_transfer.py": "7b2d57b7947372f94a298a9fe2268c515059d5fba2b80996fa7e20d3bb1abddd",
+    "build_external_candidate.py": "23052ec3a92c20bac88ca17e972cd6c8600d59a267f5c981d7a5028af5bb397b"
+  }
+}

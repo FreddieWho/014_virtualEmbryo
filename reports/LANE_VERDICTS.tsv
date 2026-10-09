@@ -203,3 +203,7 @@ T2-OPTRANSFER-20261009-v0023-embryo	T2:embryo:val_interp	SHIPPED	within incumben
 T2-OPTRANSFER-20261009-v0025-heart	T2:heart:val_interp	PASS	promoted	v0025	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
 T2-OPTRANSFER-20261009-v0037-heart	T2:heart:val_extrap	SHIPPED	rejected vs exact X2 parent	v0037	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
 T3-RESPLAM15-20261009-v1	T3:gata4	SHIPPED	SCORED 53.74; TIE band (+0.05 vs v0088 53.69), incumbent retained NOT promoted; de +0.4 but dir/mmd/vario declined	v0089	scored	reports/SERVER_SCORE_REGISTRY.md#t3-resplam15-v0089-score-return-20261009	D-20261009-T3RESPLAMSCORE-001
+T2-FINAL-SLOT-20261009-v0026	T2:heart:val_interp	SHIPPED	TIE +0.0782; keep v0025 incumbent	v0026	scored	reports/SERVER_SCORE_REGISTRY.md#t2-final-slot-v0026-2026-10-09	D-20261009-T2FINAL-001
+
+T1-JOINT-20261009-v0094	T1:val	PASS	PROMOTE +0.1022 over historical v0092 58.8865; source-disclosure gap unresolved	v0094	scored	reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09	D-20261009-T1JOINT-001
+T1-JOINT-20261009-v0095	T1:val	SHIPPED	REJECT versus v0094 and historical v0092; source-disclosure gap unresolved	v0095	scored	reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09	D-20261009-T1JOINT-001

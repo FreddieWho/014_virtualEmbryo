@@ -1,0 +1,91 @@
+{
+  "path_configurable_exports": [
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/copula_restore.py",
+      "frozen_source_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c",
+      "published_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/pair_diagnostics.py",
+      "frozen_source_sha256": "c59732b76f6bcf2e59083114d6042b878b6780b15a19e12773d82db3754e703d",
+      "published_sha256": "c59732b76f6bcf2e59083114d6042b878b6780b15a19e12773d82db3754e703d",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/build_route1.py",
+      "frozen_source_sha256": "dc5651eb8ce0b58220e19b4b4254a07bbb6e127f6548a39980e15516ae1c4326",
+      "published_sha256": "dc5651eb8ce0b58220e19b4b4254a07bbb6e127f6548a39980e15516ae1c4326",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/source_sanity.py",
+      "frozen_source_sha256": "058eb6e2249f1f23e24930c489995dc015d6d51d75636c300f6a50d4c163b9d5",
+      "published_sha256": "063509e5607ac75bee6fa3e4095425d49506e3518a6bad7e449633d6afb65724",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/audit_final_distribution.py",
+      "frozen_source_sha256": "0dfcaeaf4069fba22a314491a6315456242f098c606dcdaa816b98c2af4d595e",
+      "published_sha256": "0dfcaeaf4069fba22a314491a6315456242f098c606dcdaa816b98c2af4d595e",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0094/test_copula_restore.py",
+      "frozen_source_sha256": "1026b826d286042b16375c5c694a482de912c6e82665842adf1385da9ee32cca",
+      "published_sha256": "1026b826d286042b16375c5c694a482de912c6e82665842adf1385da9ee32cca",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0095/audit_source.py",
+      "frozen_source_sha256": "fb5943117351c8ebddba65591101b9ccf9537b9e9c7e9025ffefd3afde4d0a60",
+      "published_sha256": "06cff05ab293980f696cb2d9e201b17d3273ab8aa0637861d0220811d67c0cf4",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0095/build_external_candidate.py",
+      "frozen_source_sha256": "23052ec3a92c20bac88ca17e972cd6c8600d59a267f5c981d7a5028af5bb397b",
+      "published_sha256": "790e28b0befc0c4d4a58c6f973c9ca756dcb2f302ef8c2a2f2d20fea6eefdd04",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0095/copula_restore.py",
+      "frozen_source_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c",
+      "published_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0095/test_joint_transfer.py",
+      "frozen_source_sha256": "7b2d57b7947372f94a298a9fe2268c515059d5fba2b80996fa7e20d3bb1abddd",
+      "published_sha256": "388f09e9b9aff325d6d3bef9d5e634ee60a72b9d7da2ec328276e0e395f56106",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_joint_round_20261009/v0095/replay_persisted_v95.py",
+      "frozen_source_sha256": "c2c4eace8a6942b0fe2a891c24a68310dbf39bf17f8a2491f5e7b111deb069b2",
+      "published_sha256": "c2c4eace8a6942b0fe2a891c24a68310dbf39bf17f8a2491f5e7b111deb069b2",
+      "path_configuration_only": false
+    },
+    {
+      "file": "scripts/t1_recovery_20261009/recover_carrier.py",
+      "frozen_source_sha256": "6487cf565ffb6973390d72c03bf4179a3406ce4ab11a2994274354ae4eea6899",
+      "published_sha256": "4e6cac0789b0d07d4fbf6cde8a20d62f86b8723aa2a412cf77cea2bdd54f1797",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_recovery_20261009/build_fields.py",
+      "frozen_source_sha256": "4fd762028a87163692c94e76adb3f4b95728a27b9d3283dfc86e8562ec5ae5b9",
+      "published_sha256": "d59fcc72b4dfc8c70f717707af75f8f5babf0bb0738f015bb5c36ea3f35bec91",
+      "path_configuration_only": true
+    },
+    {
+      "file": "scripts/t1_recovery_20261009/audit_reconstructed_v92.py",
+      "frozen_source_sha256": "02e0dae8af8f2704bdd0b9910cf6ec5fbc02bf2a340b63e50ed80e35dc8e66e3",
+      "published_sha256": "426fb6e6dc28beeb96a56f59cc85e64861cd33ca718ed162d1f7b3a5397fa5a5",
+      "path_configuration_only": true
+    }
+  ],
+  "rerun_after_workspace_reset": false,
+  "scientific_outputs_recovered_from_frozen_packages": true,
+  "original_scored_artifacts_unchanged": true
+}

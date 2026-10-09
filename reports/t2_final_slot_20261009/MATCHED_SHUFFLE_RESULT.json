@@ -1,0 +1,147 @@
+{
+  "purpose": "Fixed winner-matched negative control AFTER choice frozen, not used to change selection",
+  "selection_sha256": "d8576bac6ee0cf18c3e40bdaf74ee61a4e153043c0ad48b19fe3662e8c671c17",
+  "blend": 0.75,
+  "shuffle_seed": 20261009,
+  "candidate_sha256": "dde1f501c09ee9ecdbf313ddbf37b246e5e7b71a9a7e19a10ba9ec7f6566ffbd",
+  "checks": {
+    "exact_state_gene_marginals": true,
+    "same_geometry_rows_metadata": true,
+    "mean_abs_change": 0.4840245246887207,
+    "changed_entry_fraction": 0.19789066757493187,
+    "library_ratio_quantiles": [
+      0.05201638213485225,
+      0.4073514498980962,
+      0.9514890718280873,
+      2.1050015324345583,
+      3.542852821227129
+    ],
+    "library_absolute_quantiles": [
+      520.1638352262405,
+      3063.117641874402,
+      8995.740033314072,
+      20424.710942430745,
+      28139.34466055002
+    ],
+    "weighted_abs_within_state_gene_correlation": 0.08099353329318719
+  },
+  "evaluations": [
+    {
+      "seed": 0,
+      "raw": {
+        "de_score": 0.0909,
+        "de_direction": 0.2818,
+        "energy_distance": 1.8573,
+        "mmd_u": 0.05492,
+        "variogram": 0.050348,
+        "d2_shape": 0.04469,
+        "sliced_wasserstein": 0.05704,
+        "occupancy_dice": 0.7431,
+        "scale_log_ratio": 0.4791,
+        "count_log_ratio": 1.5543,
+        "neighborhood_mmd": 0.11225,
+        "pb_rel_err": 0.4502,
+        "library_size_ratio": 0.9,
+        "variance_ratio": 1.022,
+        "composition_JSD": 0.1397,
+        "pseudobulk_pearson": 0.8848,
+        "morans_I_agreement": 0.7464,
+        "_de_raw": 0.4872,
+        "_de_chance": 0.4359,
+        "_n_up": 44,
+        "_n_dn": 112,
+        "_sw_flip_spread": 0.00543,
+        "_dice_voxel_over_nn": 4.0
+      },
+      "skills": {
+        "de_score": 52.63127424303826,
+        "de_direction": 58.58518157445772,
+        "mmd_u": 50.572711445065515,
+        "variogram": 52.06329113924051,
+        "d2_shape": 47.310467029489935,
+        "occupancy_dice": 46.90873405299315,
+        "scale_log_ratio": 50.861798809150734,
+        "neighborhood_mmd": 50.796821793416576,
+        "TOTAL": 51.48358158052784
+      }
+    },
+    {
+      "seed": 1,
+      "raw": {
+        "de_score": 0.1613,
+        "de_direction": 0.3607,
+        "energy_distance": 1.99511,
+        "mmd_u": 0.05535,
+        "variogram": 0.054586,
+        "d2_shape": 0.04962,
+        "sliced_wasserstein": 0.06677,
+        "occupancy_dice": 0.7373,
+        "scale_log_ratio": 0.4724,
+        "count_log_ratio": 1.5543,
+        "neighborhood_mmd": 0.11212,
+        "pb_rel_err": 0.4601,
+        "library_size_ratio": 0.9,
+        "variance_ratio": 1.023,
+        "composition_JSD": 0.1706,
+        "pseudobulk_pearson": 0.8787,
+        "morans_I_agreement": 0.7487,
+        "_de_raw": 0.5301,
+        "_de_chance": 0.4398,
+        "_n_up": 49,
+        "_n_dn": 117,
+        "_sw_flip_spread": 0.00945,
+        "_dice_voxel_over_nn": 4.1
+      },
+      "skills": {
+        "de_score": 54.77756057105622,
+        "de_direction": 61.56460403975633,
+        "mmd_u": 49.746660525103636,
+        "variogram": 51.76431334710036,
+        "d2_shape": 46.95425724637682,
+        "occupancy_dice": 53.01818181818181,
+        "scale_log_ratio": 51.321721311475414,
+        "neighborhood_mmd": 51.1440291704649,
+        "TOTAL": 52.57505498044621
+      }
+    },
+    {
+      "seed": 2,
+      "raw": {
+        "de_score": 0.1758,
+        "de_direction": 0.3628,
+        "energy_distance": 1.98443,
+        "mmd_u": 0.05402,
+        "variogram": 0.054319,
+        "d2_shape": 0.05051,
+        "sliced_wasserstein": 0.06531,
+        "occupancy_dice": 0.7506,
+        "scale_log_ratio": 0.469,
+        "count_log_ratio": 1.5543,
+        "neighborhood_mmd": 0.11321,
+        "pb_rel_err": 0.4573,
+        "library_size_ratio": 0.9,
+        "variance_ratio": 1.027,
+        "composition_JSD": 0.1529,
+        "pseudobulk_pearson": 0.8825,
+        "morans_I_agreement": 0.7571,
+        "_de_raw": 0.5399,
+        "_de_chance": 0.4417,
+        "_n_up": 48,
+        "_n_dn": 115,
+        "_sw_flip_spread": 0.00555,
+        "_dice_voxel_over_nn": 4.0
+      },
+      "skills": {
+        "de_score": 55.33244358165494,
+        "de_direction": 61.583652618135375,
+        "mmd_u": 50.490286771507854,
+        "variogram": 50.620493813501504,
+        "d2_shape": 47.382888558011686,
+        "occupancy_dice": 59.12727272727273,
+        "scale_log_ratio": 51.227410425154076,
+        "neighborhood_mmd": 50.149064956183935,
+        "TOTAL": 52.93216830363264
+      }
+    }
+  ]
+}

@@ -1589,3 +1589,21 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-resplam15-v0089-score-return-20261009；reports/SERVER_SUBMETRIC_REGISTRY.tsv 新增 5 行；候选身份绑定 INDEX SHA256 ddac99703587e2c35…，交付包成员 t3_gata4__resplam15__v0089.h5ad 已对该哈希核验一致。证据类别 SERVER_SCORED_USER_REPORTED：分数由用户从门户转录，未做独立门户查询，用户未提供 submission ID 与提交时间，未伪造。"
 - boundary: "**本地源侧复合分高估净效应约四倍。** 本地预测 +0.1985 且主要由 de +0.354 驱动；服务器 de 确实涨 +0.4（方向成立），但 direction −0.7、mmd −0.8、variogram −0.4、severity +1.0 相互抵消后净剩 +0.05。这是本地源侧增益未能按预测转化的第三例（v0086 源侧改善而服务器低于 v0084；T1 v0058、T2 v0035 同类）。响应结构诊断（发射器只重分配已激活细胞故 DE 在响应里）与本次结果方向一致，但单次带内结果不足以确立机制。本地分不得作为总分预测使用。blocks_submission:false。"
 - review_trigger: "T3 提交额度：本次已消耗一次授权提交，实际可用额度需用户确认（registry 记 2026-10-08 用尽当日 8/8）。后续 T3 迭代应以服务器分裁决，本地复合分仅作候选筛选。"
+
+## D-20261009-T2FINAL-001 — T2 v0026带内保留现役并暂停
+
+- date: 2026-10-09
+- scope: T2
+- decision: "v0026 official API66.7846, +0.0782 vs v0025; keep incumbent v0025 under +/-0.1. Portal numeric best v0026; today8/8 used. T2 experiments and submissions paused; tomorrow plans require renewed authorization."
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-final-slot-v0026-2026-10-09; reports/t2_final_slot_20261009/TOMORROW_HANDOFF.md"
+- boundary: "No new experiment or submission is authorized. Development-stage reuse and selection optimism remain limitations; blocks_submission:false."
+
+## D-20261009-T1JOINT-001 — T1 两次联合结构探针收口
+
+- date: 2026-10-09
+- scope: T1:val
+- type: server_score_return
+- decision: "v0094 joint_carrier 晋级，官方API58.9887，较历史best v0092 58.8865 +0.1022，略超过±0.1；v0095 joint_external_e95 UI58.64，REJECT。两次授权2/2用尽；门户2/8不等于剩余获授权。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09; reports/t1_joint_round_20261009/；完整32,285基因、独立表达重放、分状态逐基因数值集合检查通过。"
+- boundary: "两件共用RECONSTRUCTED_v0092，历史已评分父本字节一致性未证实，无继承分数；历史差值不是严格单算子因果效应。v0094 MMD改善但variogram降低。v0095单库及协议/供体重复限制，不能否定所有近阶段来源。DISCLOSURE_CORRECTION_PENDING：已上传metadata漏列E16.5历史时间warp/替代anchor诊断来源；最终OT场/发射不用其表达。公开完整ledger不追溯修补上传metadata，已评分文件不改。blocks_submission:false（科学限制）；本轮无额外提交权限。"
+- review_trigger: "后续若获新授权，优先独立阶段/胚胎验证的边缘检测率与正值分布时间外推，不继续同一rank-blend微调。"

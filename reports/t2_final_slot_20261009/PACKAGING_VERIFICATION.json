@@ -1,0 +1,12 @@
+{
+  "candidate_sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+  "portable_replay_sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+  "exact_bytes_equal": true,
+  "candidate_size_bytes": 12247312,
+  "frozen_source_unchanged": true,
+  "scorer_import_ok": true,
+  "panel_genes": 500,
+  "full_scientific_recipe_replayed": true,
+  "relocation_only": "OLD and DATA paths replaced in memory; bundled run.py unchanged",
+  "command": "python portable.py --previous-root /path/to/previous_campaign --mode replay --choice global_b075 --out /path/to/new_replay"
+}

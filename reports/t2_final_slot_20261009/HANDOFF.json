@@ -1,0 +1,81 @@
+{
+  "candidate_id": "candidate/T2_heart_val_interp/v0026_copula_refine075",
+  "board": "T2:heart:val_interp",
+  "artifact_path": "artifact:t2_hrt_int__copula_refine__v0026.h5ad",
+  "sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+  "n_obs": 5872,
+  "n_vars": 500,
+  "parent_candidate": "v0025_h_heart_copula",
+  "parent_sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+  "parent_official_score": 66.7064,
+  "parent_recipe_exact_array_reproduction": true,
+  "carrier_h1_sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37",
+  "axis": "Global rank-conditional blend increases0.5\u21920.75 on same exact H1 carrier; no repeated operator on v25",
+  "same_final_B_exact": true,
+  "contract": {
+    "board": "T2:heart:val_interp",
+    "file": "artifact:t2_hrt_int__copula_refine__v0026.h5ad",
+    "n_obs": 5872,
+    "n_vars": 500,
+    "size_mb": 12.2,
+    "errors": [],
+    "pass": true
+  },
+  "independent_process_file_replay_exact": true,
+  "invariants": [
+    "per-state gene value multiset",
+    "global gene value multiset",
+    "row order",
+    "stored labels/counts",
+    "coordinates",
+    "genes"
+  ],
+  "not_invariants": [
+    "per-cell libraries",
+    "gene-pair dependence",
+    "expression-coordinate relation",
+    "classifier-derived type mass"
+  ],
+  "local_mean_total_gain": 0.31444464232253466,
+  "local_paired_gains": [
+    0.28520708009004636,
+    0.3077002052231066,
+    0.35042664165445103
+  ],
+  "local_neighborhood_mmd_ratio": 0.9821447475210838,
+  "local_variogram_ratio": 1.002522910251178,
+  "matched_shuffle075_mean_total": 52.330268288202234,
+  "local_candidate_mean_total": 54.771683546600855,
+  "final_library_ratio_min_p01_median_p99_max": [
+    0.693519379327521,
+    0.8127172127235801,
+    0.9913668701029545,
+    1.146777265765061,
+    1.2782350205657975
+  ],
+  "sources": {
+    "E8.25_late": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593",
+    "E8.75": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c"
+  },
+  "protected_target_read": false,
+  "source_commit": "7dfe148f5c55d2a066e6adf1e4e46b08c631d08b",
+  "code_sha256": {
+    "run.py": "a896523e7d35e35ff42c4875a361d2672bf39b974e4db7c4d98819f75223933a",
+    "matched_control.py": "0aa6d19ff432a738f77f60163fabff613345c1b658a4bf124c38a15f9bdf9521",
+    "DESIGN.json": "6675814ad33b926b6f3aa9bb17673567e8f5151be658b4138e37020087c343ab",
+    "SELECTION.json": "d8576bac6ee0cf18c3e40bdaf74ee61a4e153043c0ad48b19fe3662e8c671c17"
+  },
+  "budget": {
+    "authorized_remaining": 1,
+    "builder_uploaded": false,
+    "only_root_portal_worker_may_submit": true
+  },
+  "limitations": [
+    "E8.75 development fold was reused from prior campaign; local selected gain is optimistic, three seeds are not three biological folds",
+    "Initial3-arm design/primary guard frozen before run; practical gain/tie addendum appended after run started but before any score inspection; winner also ranks first without addendum",
+    "Matched winner shuffle was run after selection freeze only as a diagnostic; selection unchanged",
+    "Target classifier mass is not measured or invariant; no hidden target probe used"
+  ],
+  "status": "INDEPENDENT_REVIEW_APPROVED",
+  "metadata_clarification": "Inherited fit_global.blend0.5/parameter_searchfalse from B helper is not current operator/search;3 preset challengers compared; selected global_b075 actual blend0.75"
+}

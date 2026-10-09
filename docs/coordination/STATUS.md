@@ -1,3 +1,9 @@
+> 2026-10-09 11:37 UTC user direction: PAUSE all T2 experiments and submissions; focus now moves to T1. Today8/8 is complete. Tomorrow proposals require renewed authorization; no automatic run, submission or GitHub push. Handoff: reports/t2_final_slot_20261009/TOMORROW_HANDOFF.md.
+
+> 2026-10-09 final-slot update: v0026 API66.7846 is numeric high, +0.0782 inside±0.1 vs incumbentv25 66.7064, so v25 stays selected. Portal T2 best mean60.3139666667, Human71/187. Today8/8 used; stop. See SERVER_SCORE_REGISTRY final-slot entry. Code and reports are included in the subsequent repository synchronization.
+
+> 2026-10-09 T1 joint round: v0094 promoted; v0095 rejected; authorized 2/2 complete. DISCLOSURE_CORRECTION_PENDING. Scores and precision: ../../reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09.
+
 > 2026-10-09 operator-transfer update: three authorized submissions are complete. Heart interpolation v0025 is promoted (official API66.7064); embryo numeric-high v0023 is63.0185 but project incumbent stays v0021 under±0.1; extra v0037 is48.86 UI, not promoted. Official T2 best-per-board mean60.2879, Human71/187. Today7/8 used; remaining1 unauthorized. Full precision/source distinctions: reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09.
 
 # 当前并行状态
@@ -83,12 +89,12 @@ leaderboard:
   total: 172.9
   total_status: portal_confirmed_2026-10-09_user_transcribed
   per_task_basis: "T1 58.9 / T2 60.3 / T3 53.7, user-confirmed 2026-10-09; sum 172.9. registry records Human rank 71/187 at 2026-10-09T09:23:59Z."
-  derived_total: 172.857
-  derived_total_status: agrees_with_portal_at_display_precision
-  T1: 58.89
+  derived_total: 172.9557
+  derived_total_status: selection_arithmetic_after_T1_v0094_not_new_all_task_portal_observation
+  T1: 58.9887
   T2: 60.277
   T3: 53.69
-  aggregate_basis: "172.9 is the portal-confirmed Total (user transcription 2026-10-09), per-task T1 58.9 / T2 60.3 / T3 53.7. Current board selections: T1 v0092 58.89 (backups v0093 58.22, v0091 57.99), T2 boards 63.0047 / 66.7064 / 51.12 (selection mean 60.2770), T3 v0088 53.69 (v0087 53.42 fallback). Selection sum 172.857 agrees with the portal Total at display precision."
+  aggregate_basis: "Last all-task portal observation172.9 predates this T1 round. Current T1 selection is v0094; selection arithmetic172.9557 is not a new all-task portal total. T2 v0026 pending local registration remains separate."
   per_task_reconciliation: "RESOLVED 2026-10-09. Earlier UNRESOLVED flag (portal T1 58.0 / T2 59.7 vs selection sums) was caused by stale selections, not by an unknown portal basis. With T1 at v0092 58.89 and heart_interp promoted to v0025 66.7064, portal per-task matches selection at display precision. Portal T2 uses per-board NUMERIC HIGH: (embryo v0023 63.0185 + heart_interp v0025 66.7064 + extrap 51.1388)/3 = 60.2879 vs selection 60.2770; the 0.011 gap is entirely the two retained-in-band incumbents (embryo v0021 vs v0023, extrap v0030 vs v0032), both inside the ±0.1 rule."
   known_data_gap: "AUDIT.md Server bests under-reports because scripts/generate_audit.py:42 filters score_status=='scored' while 60+ INDEX rows use 'registered' (including v0092/v0093/v0021/v0025, all with real server scores). Field inconsistency, not missing scores. INDEX not rewritten pending coordinator ruling; SERVER_SCORE_REGISTRY.md remains authoritative for scores."
   evidence: reports/SERVER_SCORE_REGISTRY.md
@@ -100,9 +106,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0092_ot_gen_v51 (server 58.89, promoted 2026-10-09; v0093 v51_anchor_pergroup 58.22 and v0091 v51_anchor_auto 57.99 backups)"
-    current_best_score: 58.89
-    next_action: "late-anchor/OT 五 lane 回分完成（v0092=58.89 晋级 +0.90 vs v0091；v0093 58.22 / v0091 57.99 / v0090 53.43 / v0089 53.14；D-20261009-T1LATEANCHOR-001）；现役切到 v0092。混合族（~53.7）与 late-anchor 直用轴均已过平台，下一手需新机制；确认门户选集与 Total。"
+    current_best: "candidate/T1_val/v0094_joint_carrier; see score registry; reconstructed parent confound; DISCLOSURE_CORRECTION_PENDING"
+    current_best_score: 58.9887
+    next_action: "Authorized T1 round2/2 complete; no more submission. Source-disclosure gap recorded and unresolved; keep scored bytes immutable."
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"

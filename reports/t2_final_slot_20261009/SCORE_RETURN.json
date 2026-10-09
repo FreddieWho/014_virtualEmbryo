@@ -1,0 +1,47 @@
+{
+  "board": "T2:heart:val_interp",
+  "version": "v0026",
+  "filename": "t2_hrt_int__copula_refine__v0026.h5ad",
+  "model": "heart-copula075-v0026",
+  "sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+  "submission_id": "178b3ff4be5440e286f53cf6e96805af",
+  "submitted": "2026-10-09 10:48 UTC",
+  "headline_ui": 66.78,
+  "exact_score": 66.7846,
+  "parent_score": 66.7064,
+  "metrics_ui": {
+    "de_score": 60.6,
+    "de_direction": 69.1,
+    "mmd_u": 69.0,
+    "variogram": 46.1,
+    "d2_shape": 94.5,
+    "occupancy_dice": 47.3,
+    "scale_log_ratio": 82.5,
+    "neighborhood_mmd": 67.7
+  },
+  "verdict": "TIE inside \u00b10.1; keep internal incumbent v25, portal numeric best v26",
+  "source": "API supplies exact score/model/time/submetrics; sole portal worker supplies submission ID/filename/hash association; these sources are distinct",
+  "budget": "8/8 used; no remaining submission authorized",
+  "exact_delta_vs_v25": 0.0782,
+  "metrics_api": {
+    "de_score": 60.576,
+    "de_direction": 69.0695,
+    "mmd_u": 69.046,
+    "variogram": 46.1475,
+    "d2_shape": 94.5074,
+    "occupancy_dice": 47.3088,
+    "scale_log_ratio": 82.5078,
+    "neighborhood_mmd": 67.6546
+  },
+  "official_T2_best_mean": 60.3139666667,
+  "human_board_rank": 38,
+  "human_board_teams": 174,
+  "human_task_rank": 71,
+  "human_task_teams": 187,
+  "api_observed_utc": "2026-10-09T10:49:34Z",
+  "api_scored_at": "2026-10-09T10:48:52Z",
+  "api_sources": [
+    "https://kg.virtualembryo.ai/challenge/leaderboard?task=T2&board=T2:heart:val_interp&track=human",
+    "https://kg.virtualembryo.ai/challenge/overall?task=T2&track=human"
+  ]
+}

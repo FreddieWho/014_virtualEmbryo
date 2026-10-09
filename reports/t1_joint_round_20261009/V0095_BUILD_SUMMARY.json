@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "candidate_id": "v0095",
+    "method": "paired independent E9.5 empirical joint rank restoration",
+    "source": "GSE193746/GSM5820434 only",
+    "parent_kind": "RECONSTRUCTED_v0092_NOT_ORIGINAL_SCORED_ARTIFACT",
+    "parent_sha256": "65270f9782e4fa7111a56cc35658aa67db5300b3de55fd54f77eafbe425577dd",
+    "operator_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c",
+    "rank_blend": 0.5,
+    "seed": 20261009,
+    "matching_context": "paired v0051 carrier; not OT-shifted parent",
+    "matching_standardization_sha256": "c01b57edf178fe288a3ce3dae9e014dac526ecad3a8935f85916ef37b1fb5071",
+    "source_eligibility_standardization": "float64 source mapping audit",
+    "donor_matching_standardization": "separately frozen float32",
+    "source_confidence_min": 0.8,
+    "source_ood_distance_max": 20.951346729303403,
+    "min_source_cells_per_group": 50,
+    "k_donors": 5,
+    "source_absolute_expression_and_proportions_not_transferred": true,
+    "fine_state_gene_marginals_exact": true,
+    "row_libraries_and_frozen_probe_mass_not_invariants": true,
+    "historical_parent_server_score_not_assigned": true
+  },
+  "source_donor_reuse": {
+    "CM_V": {
+      "n_source_pool": 596,
+      "n_recipient": 958,
+      "n_unique": 140,
+      "max_reuse": 55,
+      "donor_entropy": 4.283700453950791,
+      "effective_donors": 72.50825764676816,
+      "fallback": false
+    },
+    "CM_A": {
+      "n_source_pool": 133,
+      "n_recipient": 623,
+      "n_unique": 59,
+      "max_reuse": 84,
+      "donor_entropy": 3.014904300211901,
+      "effective_donors": 20.387139802229925,
+      "fallback": false
+    },
+    "ENDO": {
+      "n_source_pool": 312,
+      "n_recipient": 637,
+      "n_unique": 84,
+      "max_reuse": 72,
+      "donor_entropy": 3.7098939075063915,
+      "effective_donors": 40.849472474691694,
+      "fallback": false
+    },
+    "EPI": {
+      "n_source_pool": 193,
+      "n_recipient": 543,
+      "n_unique": 77,
+      "max_reuse": 62,
+      "donor_entropy": 3.750148685599087,
+      "effective_donors": 42.52740474265253,
+      "fallback": false
+    },
+    "MESO": {
+      "n_source_pool": 217,
+      "n_recipient": 819,
+      "n_unique": 114,
+      "max_reuse": 45,
+      "donor_entropy": 4.275740939276553,
+      "effective_donors": 71.93341786372689,
+      "fallback": false
+    },
+    "NCC": {
+      "n_source_pool": 216,
+      "n_recipient": 233,
+      "n_unique": 79,
+      "max_reuse": 12,
+      "donor_entropy": 4.0941961644816445,
+      "effective_donors": 59.99109679619663,
+      "fallback": false
+    },
+    "SHF": {
+      "n_source_pool": 110,
+      "n_recipient": 492,
+      "n_unique": 57,
+      "max_reuse": 35,
+      "donor_entropy": 3.6014303646599024,
+      "effective_donors": 36.65062072164977,
+      "fallback": false
+    }
+  },
+  "operator_diagnostics": {
+    "blend": 0.5,
+    "shuffle_template": false,
+    "seed": 20261009,
+    "shape": [
+      5118,
+      32285
+    ],
+    "changed_entries": 19935463,
+    "changed_fraction": 0.12064942439729492,
+    "changed_genes": 15696,
+    "uniform_gene_pair_at_least_one_changed_fraction": 0.7359865182873379,
+    "uniform_gene_pair_both_changed_fraction": 0.23635357773248558,
+    "on_transitions": 3753982,
+    "off_transitions": 3753982,
+    "mean_absolute_rank_change": 0.09154033664795752,
+    "state_gene_multisets_exact": true,
+    "state_diagnostics": {
+      "AVC-CM": {
+        "rows": 75,
+        "changed_entries": 395682
+      },
+      "BEC": {
+        "rows": 94,
+        "changed_entries": 420931
+      },
+      "Blood": {
+        "rows": 54,
+        "changed_entries": 0
+      },
+      "Endocardium": {
+        "rows": 543,
+        "changed_entries": 2582274
+      },
+      "Epithelium": {
+        "rows": 83,
+        "changed_entries": 0
+      },
+      "Foregut": {
+        "rows": 153,
+        "changed_entries": 0
+      },
+      "Hepatocyte": {
+        "rows": 413,
+        "changed_entries": 0
+      },
+      "IFT-CM": {
+        "rows": 138,
+        "changed_entries": 741149
+      },
+      "NCC": {
+        "rows": 9,
+        "changed_entries": 24459
+      },
+      "NCC-derived": {
+        "rows": 224,
+        "changed_entries": 960076
+      },
+      "OFT/RV-CM": {
+        "rows": 477,
+        "changed_entries": 2550235
+      },
+      "Pericardium": {
+        "rows": 216,
+        "changed_entries": 799555
+      },
+      "Proepicardium": {
+        "rows": 327,
+        "changed_entries": 1677277
+      },
+      "ST": {
+        "rows": 301,
+        "changed_entries": 1238430
+      },
+      "SV-CM": {
+        "rows": 485,
+        "changed_entries": 1910290
+      },
+      "Surface Ectoderm": {
+        "rows": 110,
+        "changed_entries": 0
+      },
+      "V-CM": {
+        "rows": 406,
+        "changed_entries": 2477583
+      },
+      "aPHM": {
+        "rows": 85,
+        "changed_entries": 315871
+      },
+      "aSHF": {
+        "rows": 276,
+        "changed_entries": 1086744
+      },
+      "pPHM": {
+        "rows": 433,
+        "changed_entries": 1749723
+      },
+      "pSHF": {
+        "rows": 216,
+        "changed_entries": 1005184
+      }
+    },
+    "row_libraries_are_not_invariant": true,
+    "server_de_scores_are_not_guaranteed_invariant": true
+  },
+  "full_population_pseudobulk_max_abs_difference": 0.0,
+  "unsupported_rows_unchanged": true,
+  "protected_and_missing_genes_unchanged": true,
+  "numerical_health_gate": {
+    "median_library": true,
+    "median_detection": true,
+    "q01_library": true,
+    "q99_library": true,
+    "no_new_zero_rows": true
+  },
+  "health_ratios": {
+    "median_library": 1.0074318213739721,
+    "median_detection": 0.9717552887364208,
+    "q01_library": 0.9703317679594277,
+    "q99_library": 0.9712422861354897
+  },
+  "parent_health": {
+    "quantile_levels": [
+      0,
+      0.01,
+      0.1,
+      0.5,
+      0.9,
+      0.99,
+      1
+    ],
+    "library_quantiles": [
+      7603.6930037663515,
+      9714.553124586553,
+      10000.000040186995,
+      10454.848144207179,
+      11564.640650870962,
+      13650.279588392674,
+      23211.308849012203
+    ],
+    "detected_genes_quantiles": [
+      591.0,
+      1836.3600000000001,
+      2863.0,
+      4372.5,
+      5878.0,
+      8969.339999999978,
+      17450.0
+    ],
+    "zero_rows": 0
+  },
+  "candidate_health": {
+    "quantile_levels": [
+      0,
+      0.01,
+      0.1,
+      0.5,
+      0.9,
+      0.99,
+      1
+    ],
+    "library_quantiles": [
+      6227.1689425591885,
+      9426.339508315852,
+      9999.999787583729,
+      10532.546708106931,
+      11555.797889670446,
+      13257.728753819112,
+      20614.26172281242
+    ],
+    "detected_genes_quantiles": [
+      732.0,
+      2005.0,
+      3129.4,
+      4249.0,
+      5739.0,
+      8039.119999999981,
+      14223.0
+    ],
+    "zero_rows": 0
+  },
+  "shape": [
+    5118,
+    32285
+  ],
+  "candidate": {
+    "sha256": "8d8ec5173f797ad4efc2c97510dafe012fb660f61b36a96f11f23fc8503a6cc5",
+    "expression_sha256": "a80b4a53178610d8e0b5e2bf9f6162693ddf2050fc972a78da6b06f8c6df4653",
+    "bytes": 111421983
+  },
+  "parent": {
+    "sha256": "65270f9782e4fa7111a56cc35658aa67db5300b3de55fd54f77eafbe425577dd",
+    "expression_sha256": "9974267e6e8ecf114ef1668ab16f297b266bebfb331042ae89771d9de8ee3074"
+  }
+}

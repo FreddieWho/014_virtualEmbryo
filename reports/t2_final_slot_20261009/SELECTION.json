@@ -1,0 +1,108 @@
+{
+  "chosen": "global_b075",
+  "selection_rule": "DESIGN preinspection frozen rules",
+  "rows": {
+    "global_b075": {
+      "mean_total": 54.771683546600855,
+      "paired_gains": [
+        0.28520708009004636,
+        0.3077002052231066,
+        0.35042664165445103
+      ],
+      "mean_gain": 0.31444464232253466,
+      "nmmd_ratio": 0.9821447475210838,
+      "vario_ratio": 1.002522910251178,
+      "eligible": true,
+      "library_ratio_quantiles": [
+        0.6741497409726578,
+        0.8218407301030859,
+        0.9913888777107465,
+        1.139081651701633,
+        1.2514833639816236
+      ],
+      "absolute_gene_correlation": 0.09394617296508076
+    },
+    "global_b100": {
+      "mean_total": 54.679613857524565,
+      "paired_gains": [
+        0.20392790970869612,
+        0.21595506864900216,
+        0.2472418813810151
+      ],
+      "mean_gain": 0.2223749532462378,
+      "nmmd_ratio": 0.9863439076890503,
+      "vario_ratio": 1.0009955601726461,
+      "eligible": true,
+      "library_ratio_quantiles": [
+        0.4634556447841181,
+        0.7455047866406042,
+        0.9851908609456931,
+        1.2524352664748097,
+        1.8836946816058067
+      ],
+      "absolute_gene_correlation": 0.0980522931690241
+    },
+    "within_state_b050": {
+      "mean_total": 54.42243359136435,
+      "paired_gains": [
+        -0.0020241588641738417,
+        -0.047628945957704616,
+        -0.054762833920037224
+      ],
+      "mean_gain": -0.034805312913971896,
+      "nmmd_ratio": 1.0048696143124316,
+      "vario_ratio": 0.9903721292620487,
+      "eligible": false,
+      "library_ratio_quantiles": [
+        0.6136934319442598,
+        0.8371495076084912,
+        0.9995100498944296,
+        1.1858474047231427,
+        1.455978023382434
+      ],
+      "absolute_gene_correlation": 0.07920074915068975
+    },
+    "gene_shuffle_b050": {
+      "mean_total": 52.782680537303776,
+      "paired_gains": [
+        -1.721418780668877,
+        -1.6293960329685078,
+        -1.6728602872862481
+      ],
+      "mean_gain": -1.6745583669745443,
+      "nmmd_ratio": 1.1331733653269345,
+      "vario_ratio": 0.9860188723580554,
+      "eligible": false,
+      "library_ratio_quantiles": [
+        0.021448092958986528,
+        0.5776925500636505,
+        0.9965949925854565,
+        1.5279753411695485,
+        2.0463852813712564
+      ],
+      "absolute_gene_correlation": 0.07267030343396805
+    },
+    "v25": {
+      "mean_total": 54.45723890427832,
+      "paired_gains": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_gain": 0.0,
+      "nmmd_ratio": 1.0,
+      "vario_ratio": 1.0,
+      "eligible": false,
+      "library_ratio_quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absolute_gene_correlation": 0.07711059295234936
+    }
+  },
+  "no_more_search": true,
+  "negative_control_limit": "Existing global .5 shuffle baseline matched only. Winner .75 matched shuffle to be added as fixed diagnostic, not to change choice."
+}

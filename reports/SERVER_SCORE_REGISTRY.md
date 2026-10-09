@@ -1961,3 +1961,24 @@ in the uploaded artifact. Cohort, chemistry, sex and developmental-context
 confounding is not resolved by this result.
 
 blocks_submission:false. Five rows appended to SERVER_SUBMETRIC_REGISTRY.tsv.
+
+## T2 final slot v0026 2026-10-09
+
+Final authorized slot consumed; today8/8, no further submission. Exact candidate SHA10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4, portal ID178b3ff4be5440e286f53cf6e96805af, model heart-copula075-v0026, submitted2026-10-09 10:48UTC. UI66.78; official API66.7846 at10:49:34UTC, scored_at10:48:52Z. Relative to v25 66.7064, +0.0782 remains within±0.1; keep project incumbent v25 while portal numeric best isv26. Full eight API submetrics are in SERVER_SUBMETRIC_REGISTRY.tsv. MMD +1.2511, variogram +0.0811, neighborhood −0.4699, other five unchanged. T2 portal best-per-board mean60.3139666667, Human71/187; heart Human38/174. API supplies numeric/model/time evidence; ID and file identity come from terminal portal detail, not API.
+
+Single axis: conditional rank blend0.5→0.75 on same exact H1 carrier, exactly same heart B asv25. Not repeated application tov25. Full single-thread independent B/X and byte replay, 5872×500 panel, state-gene marginals/metadata/geometry pass. Development3seed +0.285/+0.308/+0.350; nmmd improved1.79% but variogram raw worsened0.25%. Other2 predetermined challengers fully disclosed. Matched0.75 shuffled null added only after choice freeze; no retuning. Reused development stage and local selection optimism are limitations. Inherited fit-helper metadata blend0.5/searchfalse does not describe this3-challenger campaign or applied0.75. Per-cell libraries/classifier mass are not invariants. No new protected data or seed/row gaming. Report: reports/t2_final_slot_20261009/REPORT.md.
+
+## T1 joint structure 2026-10-09
+
+Two authorized submissions are terminal scored. Round budget2/2 consumed; portal daily T1 counter2/8 does not authorize more submissions. Frozen uploaded files remain unchanged. Both candidates share one RECONSTRUCTED_v0092 with no inherited server score; it is not the exact historical scored v0092.
+
+| Candidate | Submission ID | Submitted UTC | Model | Score | DE | Direction | MMD | Variogram | Precision / decision |
+|---|---|---|---|---:|---:|---:|---:|---:|---|
+| v0094 joint_carrier | 162d3f61a0de4d16953448e0e7eaff33 | 2026-10-09 12:07 | T1-joint-carrier-v0094 | 58.9887 | 49.5608 | 65.9021 | 65.6622 | 52.1215 | Official API; PROMOTE |
+| v0095 joint_external_e95 | 38e29beee3de4662ae40ea9663bbc905 | 2026-10-09 12:11 | T1-joint-E95-v0095 | 58.64 | 49.6 | 65.9 | 64.8 | 51.8 | UI two/one decimals only; REJECT |
+
+v0094 exceeds historical v0092 official58.8865 by+0.1022, just outside the±0.1 incumbent band. Historical metric differences are−0.1106/+0.0330/+0.4950/−0.1346: primarily MMD gain, with variogram lower. This descriptive comparison includes baseline replay differences and does not identify a single-operator causal effect. v0095 shares the reconstructed parent and operator, but donor matching, coverage and gene mask differ; this is a candidate-level negative result, not a rejection of all independent E9.5 data. No four-decimal v0095 score is inferred. Post-v0095 API confirms v0094, scored_at2026-10-09T12:09:20Z.
+
+Source status: **DISCLOSURE_CORRECTION_PENDING**. Submitted metadata contains direct GSE230531 E8.5/E14.5 accessions; v0095 also contains GSE193746/GSM5820434. It omits GSE230531 E16.5 GSM7226274/6276 historical temporal-warp/alternative-anchor diagnostics, and inherited “no other data” wording is overbroad. E16.5 expression is not final OT-field training or direct emitted expression. Publishing the complete source ledger does not retroactively amend submitted metadata, and no complete organizer-approved disclosure is asserted. Scored bytes are unchanged.
+
+Evidence: reports/t1_joint_round_20261009/TERMINAL_RESULTS.json and aggregate build/diagnostic summaries; all eight metric rows are in SERVER_SUBMETRIC_REGISTRY.tsv. Independent full-panel replay and exact fine-state/gene multisets pass for both. No hidden target data were used in local diagnostics.

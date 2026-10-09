@@ -1,0 +1,62 @@
+{
+  "frozen_before_run": "2026-10-09T10:43:00Z",
+  "board": "T2:heart:val_interp",
+  "candidate_version_reserved": "v0026",
+  "budget": 1,
+  "basis": "Refine successful v25 heart-only conditional-copula on same H1 carrier; do not iteratively reapply to v25",
+  "challengers": [
+    {
+      "name": "global_b075",
+      "blend": 0.75,
+      "B": "same global rank-Gaussian B"
+    },
+    {
+      "name": "global_b100",
+      "blend": 1.0,
+      "B": "same global rank-Gaussian B"
+    },
+    {
+      "name": "within_state_b050",
+      "blend": 0.5,
+      "B": "Gaussian ranks computed within each stored training state before one pooled LedoitWolf precision fit"
+    }
+  ],
+  "matched_baseline": "v25 operator global B blend0.5",
+  "negative_control": "gene-index shuffled B, same eigenvalues and coefficients, blend0.5 fixed seed20261009",
+  "fit_stages_dev": [
+    "E8.25_late",
+    "E9.5"
+  ],
+  "truth_dev": "E8.75 after outputs freeze",
+  "fit_stages_final": [
+    "E8.25_late",
+    "E8.75"
+  ],
+  "target_protected": "E8.5 never accessed",
+  "score_seeds": [
+    0,
+    1,
+    2
+  ],
+  "selection": "Highest mean full local total among challengers with mean raw neighborhood MMD at most1.05x v25 and mean raw variogram at most1.10x v25, full format/marginal guards. Inspect library tails and correlation concentration as diagnostics. If none eligible, report conflict to parent without expanding search or selecting after another new test.",
+  "limitations": "Previously used development stage reused; three-seed variation is sampling repeatability not independent stages; hyperparameter selection optimistic. No promise of official gain.",
+  "fixed_invariants": [
+    "state-gene value multisets",
+    "stored state counts",
+    "row order",
+    "gene order",
+    "coordinates"
+  ],
+  "not_invariants": [
+    "row libraries",
+    "classifier-derived state mass",
+    "gene pair dependence",
+    "expression-coordinate relation"
+  ],
+  "threads": 1,
+  "source_commit": "7dfe148f5c55d2a066e6adf1e4e46b08c631d08b",
+  "no_search_expansion_after_results": true,
+  "pre_score_addendum_utc": "2026-10-09T10:44:20Z",
+  "practical_gain_guard": "Before examining any scores, require mean total gain >0.1 local points and paired gain >0 for each of the3 fixed seeds; deterministic ties within0.05 choose lower blend, then global over newly fitted model. If none eligible, report to parent without additional sweep.",
+  "small_state_rule": "Within-state Gaussian ranks pooled across endpoints by state (not stage\u00d7state). Singletons produce zero rank residual; every state contributes to same pooled covariance. Application skips carrier states n<4 as inherited regularize."
+}

@@ -1,0 +1,1855 @@
+{
+  "design": {
+    "n_cells_per_half": 512,
+    "seeds": [
+      20261009,
+      20261010,
+      20261011
+    ],
+    "blend": 0.5,
+    "k_donors": 5,
+    "source_confidence_min": 0.8,
+    "source_distance_max": 20.951346729303403,
+    "min_source_cells_per_group": 50,
+    "groups": [
+      "CM_V",
+      "CM_A",
+      "ENDO",
+      "EPI",
+      "MESO",
+      "NCC",
+      "SHF"
+    ],
+    "restore_states": "fine official donor celltype",
+    "blocked_genes": "current late-anchor Hb/mt/Malat1/IEG blacklist",
+    "context": "unshuffled heldout A cells; emissions are within-fine-state gene-shuffled A; target is independent heldout B",
+    "controls": [
+      "original_A",
+      "shuffled_A",
+      "official_train_donor",
+      "external_donor",
+      "gene_shuffled_external_donor"
+    ],
+    "interpretation": "Conditional source joint-transfer assay with supplied state marginals; not a future prediction or leaderboard selector",
+    "operator_sha256": "57293de8027a347b345471922001e0b2a847528cae0ca1416183d3c6c5efa55c"
+  },
+  "results": [
+    {
+      "seed": 20261009,
+      "source_donor_reuse": {
+        "CM_V": {
+          "n_pool": 596,
+          "n_recipient": 99,
+          "n_unique": 46,
+          "max_reuse": 11,
+          "donor_entropy": 3.5037533992071723,
+          "effective_donors": 33.23998102727572,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 133,
+          "n_recipient": 59,
+          "n_unique": 31,
+          "max_reuse": 8,
+          "donor_entropy": 3.225444272030065,
+          "effective_donors": 25.16475166801613,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 312,
+          "n_recipient": 55,
+          "n_unique": 26,
+          "max_reuse": 7,
+          "donor_entropy": 3.0604257303993765,
+          "effective_donors": 21.336638884500715,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 193,
+          "n_recipient": 54,
+          "n_unique": 32,
+          "max_reuse": 6,
+          "donor_entropy": 3.2730600816024245,
+          "effective_donors": 26.391977505478383,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 217,
+          "n_recipient": 68,
+          "n_unique": 38,
+          "max_reuse": 5,
+          "donor_entropy": 3.479173607974554,
+          "effective_donors": 32.43290870109761,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 216,
+          "n_recipient": 20,
+          "n_unique": 16,
+          "max_reuse": 2,
+          "donor_entropy": 2.718473401330013,
+          "effective_donors": 15.157165665103985,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 110,
+          "n_recipient": 65,
+          "n_unique": 27,
+          "max_reuse": 9,
+          "donor_entropy": 3.0275072776857908,
+          "effective_donors": 20.645704385305198,
+          "fallback": false
+        }
+      },
+      "official_donor_reuse": {
+        "CM_V": {
+          "n_pool": 2310,
+          "n_recipient": 99,
+          "n_unique": 78,
+          "max_reuse": 4,
+          "donor_entropy": 4.26591309741039,
+          "effective_donors": 71.22993015332995,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 1374,
+          "n_recipient": 59,
+          "n_unique": 52,
+          "max_reuse": 3,
+          "donor_entropy": 3.9041932291327734,
+          "effective_donors": 49.61003982790705,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 1278,
+          "n_recipient": 55,
+          "n_unique": 51,
+          "max_reuse": 2,
+          "donor_entropy": 3.9065117771510245,
+          "effective_donors": 49.725196534024796,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 1246,
+          "n_recipient": 54,
+          "n_unique": 46,
+          "max_reuse": 2,
+          "donor_entropy": 3.7836071041761423,
+          "effective_donors": 43.97437615539717,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 1609,
+          "n_recipient": 68,
+          "n_unique": 58,
+          "max_reuse": 4,
+          "donor_entropy": 3.9875593799395874,
+          "effective_donors": 53.92312277747645,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 467,
+          "n_recipient": 20,
+          "n_unique": 19,
+          "max_reuse": 2,
+          "donor_entropy": 2.9264175554979968,
+          "effective_donors": 18.660659830736154,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 1512,
+          "n_recipient": 65,
+          "n_unique": 58,
+          "max_reuse": 3,
+          "donor_entropy": 4.017044059563271,
+          "effective_donors": 55.536699782657905,
+          "fallback": false
+        }
+      },
+      "operator_reports": {
+        "external_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261009,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1784502,
+          "changed_fraction": 0.10795587637447732,
+          "changed_genes": 12946,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6411958645555618,
+          "uniform_gene_pair_both_changed_fraction": 0.1607864801865786,
+          "on_transitions": 340031,
+          "off_transitions": 340031,
+          "mean_absolute_rank_change": 0.10532830357887318,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 34635
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 23999
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 204332
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 93393
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 70840
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 285798
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 102355
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 122060
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 95879
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 147765
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 190630
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 16146
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 125852
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 133734
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 137084
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "gene_shuffled_external_donor": {
+          "blend": 0.5,
+          "shuffle_template": true,
+          "seed": 20261009,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1782817,
+          "changed_fraction": 0.10785394000696918,
+          "changed_genes": 12946,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6411958645555618,
+          "uniform_gene_pair_both_changed_fraction": 0.1607864801865786,
+          "on_transitions": 339794,
+          "off_transitions": 339794,
+          "mean_absolute_rank_change": 0.10523082460151933,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 34707
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 24027
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 204321
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 93118
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 70575
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 285465
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 101969
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 121820
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 95736
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 147555
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 190630
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 16002
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 125983
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 133589
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 137320
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "official_train_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261009,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1862536,
+          "changed_fraction": 0.11267664937277373,
+          "changed_genes": 14003,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6793468402341485,
+          "uniform_gene_pair_both_changed_fraction": 0.18811482927181403,
+          "on_transitions": 372603,
+          "off_transitions": 372603,
+          "mean_absolute_rank_change": 0.10494575328682809,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 34520
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 25712
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 210865
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 98171
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 74582
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 294647
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 107547
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 129008
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 99297
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 159060
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 195608
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 17662
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 129491
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 140045
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 146321
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        }
+      },
+      "metrics": {
+        "original_A": {
+          "mmd_u": 0.012437653727829456,
+          "energy_distance": -0.017406463623046875,
+          "variogram": 0.0003146754755460931,
+          "pair_decomposition": {
+            "n_pairs": 19998,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0026032383415375776,
+            "pair_moment_mean_abs_change": 0.002603238341537582,
+            "pair_moment_rms_change": 0.00847127576704615,
+            "decomposition_max_abs_error": 2.220446049250313e-16,
+            "parent_joint_term_mean": 0.01898478973276682,
+            "alternative_joint_term_mean": 0.02106833163861742,
+            "parent_codetection_mean": 0.015612205751825182,
+            "alternative_codetection_mean": 0.016307783122062207,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003646632714847526,
+            "released_reference_raw_variogram_alternative": 0.0003146754755460931,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003689500002143065,
+              "joint_square": 0.00011141599093822837,
+              "cross_term": -0.0001157027196677823
+            },
+            "actual_variogram_change": -4.998779593865947e-05,
+            "fixed_marginal_predicted_variogram_change": -4.9987795938659444e-05
+          },
+          "mean_library": 10000.0,
+          "median_library": 10000.0,
+          "mean_detected_genes": 3949.25390625
+        },
+        "shuffled_A": {
+          "mmd_u": 0.05507633835077286,
+          "energy_distance": -0.005641937255859375,
+          "variogram": 0.0003646632714847526,
+          "pair_decomposition": {
+            "n_pairs": 19998,
+            "marginal_term_max_abs_change": 0.0,
+            "joint_term_mean_abs_change": 0.0,
+            "pair_moment_mean_abs_change": 0.0,
+            "pair_moment_rms_change": 0.0,
+            "decomposition_max_abs_error": 0.0,
+            "parent_joint_term_mean": 0.01898478973276682,
+            "alternative_joint_term_mean": 0.01898478973276682,
+            "parent_codetection_mean": 0.015612205751825182,
+            "alternative_codetection_mean": 0.015612205751825182,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003646632714847526,
+            "released_reference_raw_variogram_alternative": 0.0003646632714847526,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003689500002143065,
+              "joint_square": 0.00011141599093822837,
+              "cross_term": -0.0001157027196677823
+            },
+            "actual_variogram_change": 0.0,
+            "fixed_marginal_predicted_variogram_change": 0.0
+          },
+          "mean_library": 9999.9990234375,
+          "median_library": 9998.458984375,
+          "mean_detected_genes": 3949.25390625
+        },
+        "official_train_donor": {
+          "mmd_u": 0.03284339979290962,
+          "energy_distance": -0.011440277099609375,
+          "variogram": 0.00036372582716424743,
+          "pair_decomposition": {
+            "n_pairs": 19998,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0011151960616897021,
+            "pair_moment_mean_abs_change": 0.001115196061689706,
+            "pair_moment_rms_change": 0.0035674232725517304,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.01898478973276682,
+            "alternative_joint_term_mean": 0.019034345940291096,
+            "parent_codetection_mean": 0.015612205751825182,
+            "alternative_codetection_mean": 0.015641212558755876,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003646632714847526,
+            "released_reference_raw_variogram_alternative": 0.00036372582716424743,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003689500002143065,
+              "joint_square": 0.00011141599093822837,
+              "cross_term": -0.0001157027196677823
+            },
+            "actual_variogram_change": -9.374443205051471e-07,
+            "fixed_marginal_predicted_variogram_change": -9.374443205051319e-07
+          },
+          "mean_library": 10000.0,
+          "median_library": 10001.224609375,
+          "mean_detected_genes": 3949.25390625
+        },
+        "external_donor": {
+          "mmd_u": 0.044259391725063324,
+          "energy_distance": -0.004009246826171875,
+          "variogram": 0.00036510868606543103,
+          "pair_decomposition": {
+            "n_pairs": 19998,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0011050423044045002,
+            "pair_moment_mean_abs_change": 0.0011050423044045043,
+            "pair_moment_rms_change": 0.0035283341615846685,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.01898478973276682,
+            "alternative_joint_term_mean": 0.019027853588041953,
+            "parent_codetection_mean": 0.015612205751825182,
+            "alternative_codetection_mean": 0.015637012920042003,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003646632714847526,
+            "released_reference_raw_variogram_alternative": 0.00036510868606543103,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003689500002143065,
+              "joint_square": 0.00011141599093822837,
+              "cross_term": -0.0001157027196677823
+            },
+            "actual_variogram_change": 4.454145806784488e-07,
+            "fixed_marginal_predicted_variogram_change": 4.4541458067851824e-07
+          },
+          "mean_library": 10000.0,
+          "median_library": 9986.9716796875,
+          "mean_detected_genes": 3949.25390625
+        },
+        "gene_shuffled_external_donor": {
+          "mmd_u": 0.05498224496841431,
+          "energy_distance": -0.005641937255859375,
+          "variogram": 0.0003638939311834398,
+          "pair_decomposition": {
+            "n_pairs": 19998,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0010421341908213335,
+            "pair_moment_mean_abs_change": 0.0010421341908213376,
+            "pair_moment_rms_change": 0.003306346752920751,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.01898478973276682,
+            "alternative_joint_term_mean": 0.01903817994368631,
+            "parent_codetection_mean": 0.015612205751825182,
+            "alternative_codetection_mean": 0.015647560849834985,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003646632714847526,
+            "released_reference_raw_variogram_alternative": 0.0003638939311834398,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003689500002143065,
+              "joint_square": 0.00011141599093822837,
+              "cross_term": -0.0001157027196677823
+            },
+            "actual_variogram_change": -7.693403013127559e-07,
+            "fixed_marginal_predicted_variogram_change": -7.693403013127305e-07
+          },
+          "mean_library": 10000.0,
+          "median_library": 9998.458984375,
+          "mean_detected_genes": 3949.25390625
+        }
+      }
+    },
+    {
+      "seed": 20261010,
+      "source_donor_reuse": {
+        "CM_V": {
+          "n_pool": 596,
+          "n_recipient": 99,
+          "n_unique": 47,
+          "max_reuse": 9,
+          "donor_entropy": 3.553228618773002,
+          "effective_donors": 34.925898060073074,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 133,
+          "n_recipient": 59,
+          "n_unique": 33,
+          "max_reuse": 6,
+          "donor_entropy": 3.3093884725668974,
+          "effective_donors": 27.36838383592476,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 312,
+          "n_recipient": 55,
+          "n_unique": 33,
+          "max_reuse": 5,
+          "donor_entropy": 3.334550946282086,
+          "effective_donors": 28.06577735199003,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 193,
+          "n_recipient": 54,
+          "n_unique": 30,
+          "max_reuse": 5,
+          "donor_entropy": 3.230123747389143,
+          "effective_donors": 25.282785456078418,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 217,
+          "n_recipient": 68,
+          "n_unique": 39,
+          "max_reuse": 6,
+          "donor_entropy": 3.4550711682637374,
+          "effective_donors": 31.66054182788854,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 216,
+          "n_recipient": 20,
+          "n_unique": 18,
+          "max_reuse": 2,
+          "donor_entropy": 2.857102837442002,
+          "effective_donors": 17.411011265922486,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 110,
+          "n_recipient": 65,
+          "n_unique": 25,
+          "max_reuse": 12,
+          "donor_entropy": 2.843884261670693,
+          "effective_donors": 17.182376933483326,
+          "fallback": false
+        }
+      },
+      "official_donor_reuse": {
+        "CM_V": {
+          "n_pool": 2310,
+          "n_recipient": 99,
+          "n_unique": 75,
+          "max_reuse": 4,
+          "donor_entropy": 4.204615869246308,
+          "effective_donors": 66.99485793763746,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 1374,
+          "n_recipient": 59,
+          "n_unique": 52,
+          "max_reuse": 2,
+          "donor_entropy": 3.913061841738952,
+          "effective_donors": 50.05196880440719,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 1278,
+          "n_recipient": 55,
+          "n_unique": 42,
+          "max_reuse": 4,
+          "donor_entropy": 3.635431051719606,
+          "effective_donors": 37.918194077703674,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 1246,
+          "n_recipient": 54,
+          "n_unique": 47,
+          "max_reuse": 3,
+          "donor_entropy": 3.7898996610944913,
+          "effective_donors": 44.251959859994884,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 1609,
+          "n_recipient": 68,
+          "n_unique": 59,
+          "max_reuse": 5,
+          "donor_entropy": 3.999233273297137,
+          "effective_donors": 54.55630421778893,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 467,
+          "n_recipient": 20,
+          "n_unique": 18,
+          "max_reuse": 2,
+          "donor_entropy": 2.857102837442002,
+          "effective_donors": 17.411011265922486,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 1512,
+          "n_recipient": 65,
+          "n_unique": 56,
+          "max_reuse": 3,
+          "donor_entropy": 3.966338877009359,
+          "effective_donors": 52.790902620313254,
+          "fallback": false
+        }
+      },
+      "operator_reports": {
+        "external_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261010,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1779668,
+          "changed_fraction": 0.10766343696763203,
+          "changed_genes": 12966,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6419376358344548,
+          "uniform_gene_pair_both_changed_fraction": 0.16128367437152313,
+          "on_transitions": 340819,
+          "off_transitions": 340819,
+          "mean_absolute_rank_change": 0.10545049337479562,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 34938
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 27340
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 214141
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 89306
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 74901
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 279123
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 108099
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 118906
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 94071
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 152463
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 187316
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 16165
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 110376
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 137223
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 135300
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "gene_shuffled_external_donor": {
+          "blend": 0.5,
+          "shuffle_template": true,
+          "seed": 20261010,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1779372,
+          "changed_fraction": 0.1076455300449125,
+          "changed_genes": 12936,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6408246910880586,
+          "uniform_gene_pair_both_changed_fraction": 0.1605381709221629,
+          "on_transitions": 339770,
+          "off_transitions": 339770,
+          "mean_absolute_rank_change": 0.10529323525085608,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 34972
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 27441
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 213719
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 89145
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 75105
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 278741
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 108245
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 119090
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 94052
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 152699
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 187113
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 16097
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 110388
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 137032
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 135533
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "official_train_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261010,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1859292,
+          "changed_fraction": 0.11248039917918538,
+          "changed_genes": 13885,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6751940973296714,
+          "uniform_gene_pair_both_changed_fraction": 0.18495767593964876,
+          "on_transitions": 371623,
+          "off_transitions": 371623,
+          "mean_absolute_rank_change": 0.10524243656182874,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 35795
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 28260
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 219063
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 94300
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 76662
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 287939
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 113795
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 124061
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 98320
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 162322
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 191521
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 21035
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 114414
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 142106
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 149699
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        }
+      },
+      "metrics": {
+        "original_A": {
+          "mmd_u": 0.013186132535338402,
+          "energy_distance": -0.012523651123046875,
+          "variogram": 0.00033573951419053254,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.002596231662256035,
+            "pair_moment_mean_abs_change": 0.002596231662256039,
+            "pair_moment_rms_change": 0.00849188810630912,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.018670979939718294,
+            "alternative_joint_term_mean": 0.02074226289686001,
+            "parent_codetection_mean": 0.015169996781089054,
+            "alternative_codetection_mean": 0.01582784217335867,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003716957358021981,
+            "released_reference_raw_variogram_alternative": 0.00033573951419053254,
+            "reference_error_decomposition": {
+              "marginal_square": 0.00038138878898981643,
+              "joint_square": 0.00011913953735070668,
+              "cross_term": -0.000128832590538325
+            },
+            "actual_variogram_change": -3.595622161166556e-05,
+            "fixed_marginal_predicted_variogram_change": -3.595622161166559e-05
+          },
+          "mean_library": 10000.0,
+          "median_library": 10000.0,
+          "mean_detected_genes": 3898.34375
+        },
+        "shuffled_A": {
+          "mmd_u": 0.0525822639465332,
+          "energy_distance": -0.00412750244140625,
+          "variogram": 0.0003716957358021981,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 0.0,
+            "joint_term_mean_abs_change": 0.0,
+            "pair_moment_mean_abs_change": 0.0,
+            "pair_moment_rms_change": 0.0,
+            "decomposition_max_abs_error": 0.0,
+            "parent_joint_term_mean": 0.018670979939718294,
+            "alternative_joint_term_mean": 0.018670979939718294,
+            "parent_codetection_mean": 0.015169996781089054,
+            "alternative_codetection_mean": 0.015169996781089054,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003716957358021981,
+            "released_reference_raw_variogram_alternative": 0.0003716957358021981,
+            "reference_error_decomposition": {
+              "marginal_square": 0.00038138878898981643,
+              "joint_square": 0.00011913953735070668,
+              "cross_term": -0.000128832590538325
+            },
+            "actual_variogram_change": 0.0,
+            "fixed_marginal_predicted_variogram_change": 0.0
+          },
+          "mean_library": 10000.0,
+          "median_library": 10004.7109375,
+          "mean_detected_genes": 3898.34375
+        },
+        "official_train_donor": {
+          "mmd_u": 0.03303433209657669,
+          "energy_distance": -0.00789642333984375,
+          "variogram": 0.00036994845548902496,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.00114778440847496,
+            "pair_moment_mean_abs_change": 0.0011477844084749646,
+            "pair_moment_rms_change": 0.003609515592438166,
+            "decomposition_max_abs_error": 2.220446049250313e-16,
+            "parent_joint_term_mean": 0.018670979939718294,
+            "alternative_joint_term_mean": 0.018698125186231918,
+            "parent_codetection_mean": 0.015169996781089054,
+            "alternative_codetection_mean": 0.0151978302040102,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003716957358021981,
+            "released_reference_raw_variogram_alternative": 0.00036994845548902496,
+            "reference_error_decomposition": {
+              "marginal_square": 0.00038138878898981643,
+              "joint_square": 0.00011913953735070668,
+              "cross_term": -0.000128832590538325
+            },
+            "actual_variogram_change": -1.7472803131731406e-06,
+            "fixed_marginal_predicted_variogram_change": -1.7472803131731456e-06
+          },
+          "mean_library": 10000.0,
+          "median_library": 10005.94140625,
+          "mean_detected_genes": 3898.34375
+        },
+        "external_donor": {
+          "mmd_u": 0.04299769923090935,
+          "energy_distance": -0.0022430419921875,
+          "variogram": 0.00036969743064679903,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0011184175629419893,
+            "pair_moment_mean_abs_change": 0.0011184175629419943,
+            "pair_moment_rms_change": 0.003609834037984485,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.018670979939718294,
+            "alternative_joint_term_mean": 0.018735395551171617,
+            "parent_codetection_mean": 0.015169996781089054,
+            "alternative_codetection_mean": 0.01521999928121406,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003716957358021981,
+            "released_reference_raw_variogram_alternative": 0.00036969743064679903,
+            "reference_error_decomposition": {
+              "marginal_square": 0.00038138878898981643,
+              "joint_square": 0.00011913953735070668,
+              "cross_term": -0.000128832590538325
+            },
+            "actual_variogram_change": -1.998305155399068e-06,
+            "fixed_marginal_predicted_variogram_change": -1.998305155399122e-06
+          },
+          "mean_library": 10000.0,
+          "median_library": 10017.900390625,
+          "mean_detected_genes": 3898.34375
+        },
+        "gene_shuffled_external_donor": {
+          "mmd_u": 0.05259423702955246,
+          "energy_distance": -0.004146575927734375,
+          "variogram": 0.0003716316868240639,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0010662230269046255,
+            "pair_moment_mean_abs_change": 0.0010662230269046298,
+            "pair_moment_rms_change": 0.003371505369332213,
+            "decomposition_max_abs_error": 2.220446049250313e-16,
+            "parent_joint_term_mean": 0.018670979939718294,
+            "alternative_joint_term_mean": 0.018680846083766103,
+            "parent_codetection_mean": 0.015169996781089054,
+            "alternative_codetection_mean": 0.015192458841692085,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003716957358021981,
+            "released_reference_raw_variogram_alternative": 0.0003716316868240639,
+            "reference_error_decomposition": {
+              "marginal_square": 0.00038138878898981643,
+              "joint_square": 0.00011913953735070668,
+              "cross_term": -0.000128832590538325
+            },
+            "actual_variogram_change": -6.40489781341888e-08,
+            "fixed_marginal_predicted_variogram_change": -6.404897813417525e-08
+          },
+          "mean_library": 10000.0009765625,
+          "median_library": 10004.01171875,
+          "mean_detected_genes": 3898.34375
+        }
+      }
+    },
+    {
+      "seed": 20261011,
+      "source_donor_reuse": {
+        "CM_V": {
+          "n_pool": 596,
+          "n_recipient": 99,
+          "n_unique": 46,
+          "max_reuse": 10,
+          "donor_entropy": 3.4642679505932237,
+          "effective_donors": 31.953059990666233,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 133,
+          "n_recipient": 59,
+          "n_unique": 27,
+          "max_reuse": 6,
+          "donor_entropy": 3.089354704287059,
+          "effective_donors": 21.962900836278312,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 312,
+          "n_recipient": 55,
+          "n_unique": 31,
+          "max_reuse": 6,
+          "donor_entropy": 3.23372953820064,
+          "effective_donors": 25.374114449234302,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 193,
+          "n_recipient": 54,
+          "n_unique": 27,
+          "max_reuse": 5,
+          "donor_entropy": 3.0970840558184927,
+          "effective_donors": 22.133317574498886,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 217,
+          "n_recipient": 68,
+          "n_unique": 46,
+          "max_reuse": 4,
+          "donor_entropy": 3.7148376911407173,
+          "effective_donors": 41.051923452757165,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 216,
+          "n_recipient": 20,
+          "n_unique": 16,
+          "max_reuse": 3,
+          "donor_entropy": 2.6923109941417858,
+          "effective_donors": 14.765760106200775,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 110,
+          "n_recipient": 65,
+          "n_unique": 26,
+          "max_reuse": 16,
+          "donor_entropy": 2.779872183927,
+          "effective_donors": 16.116960809731562,
+          "fallback": false
+        }
+      },
+      "official_donor_reuse": {
+        "CM_V": {
+          "n_pool": 2310,
+          "n_recipient": 99,
+          "n_unique": 83,
+          "max_reuse": 3,
+          "donor_entropy": 4.349930937478263,
+          "effective_donors": 77.47311225199853,
+          "fallback": false
+        },
+        "CM_A": {
+          "n_pool": 1374,
+          "n_recipient": 59,
+          "n_unique": 51,
+          "max_reuse": 3,
+          "donor_entropy": 3.8718281019313423,
+          "effective_donors": 48.03010980893441,
+          "fallback": false
+        },
+        "ENDO": {
+          "n_pool": 1278,
+          "n_recipient": 55,
+          "n_unique": 47,
+          "max_reuse": 3,
+          "donor_entropy": 3.7961767664556767,
+          "effective_donors": 44.530607710492326,
+          "fallback": false
+        },
+        "EPI": {
+          "n_pool": 1246,
+          "n_recipient": 54,
+          "n_unique": 48,
+          "max_reuse": 3,
+          "donor_entropy": 3.8252615593330903,
+          "effective_donors": 45.84478993095385,
+          "fallback": false
+        },
+        "MESO": {
+          "n_pool": 1609,
+          "n_recipient": 68,
+          "n_unique": 59,
+          "max_reuse": 3,
+          "donor_entropy": 4.020637917858341,
+          "effective_donors": 55.736649892823756,
+          "fallback": false
+        },
+        "NCC": {
+          "n_pool": 467,
+          "n_recipient": 20,
+          "n_unique": 20,
+          "max_reuse": 1,
+          "donor_entropy": 2.995732273553991,
+          "effective_donors": 19.999999999999996,
+          "fallback": false
+        },
+        "SHF": {
+          "n_pool": 1512,
+          "n_recipient": 65,
+          "n_unique": 52,
+          "max_reuse": 4,
+          "donor_entropy": 3.867750820673437,
+          "effective_donors": 47.83467623196976,
+          "fallback": false
+        }
+      },
+      "operator_reports": {
+        "external_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261011,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1763079,
+          "changed_fraction": 0.10665986284265139,
+          "changed_genes": 12955,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6415297566143223,
+          "uniform_gene_pair_both_changed_fraction": 0.16101012258654496,
+          "on_transitions": 337001,
+          "off_transitions": 337001,
+          "mean_absolute_rank_change": 0.10471150126327185,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 35186
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 27509
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 202281
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 84788
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 70993
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 287467
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 99686
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 109681
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 94744
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 153688
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 193356
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 15804
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 113760
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 134376
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 139760
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "gene_shuffled_external_donor": {
+          "blend": 0.5,
+          "shuffle_template": true,
+          "seed": 20261011,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1764303,
+          "changed_fraction": 0.10673391038795106,
+          "changed_genes": 12946,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.6411958645555618,
+          "uniform_gene_pair_both_changed_fraction": 0.1607864801865786,
+          "on_transitions": 337863,
+          "off_transitions": 337863,
+          "mean_absolute_rank_change": 0.10485906978672724,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 35306
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 27557
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 202478
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 84927
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 71214
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 287439
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 99643
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 109808
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 94730
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 153742
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 193289
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 15905
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 113773
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 134534
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 139958
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        },
+        "official_train_donor": {
+          "blend": 0.5,
+          "shuffle_template": false,
+          "seed": 20261011,
+          "shape": [
+            512,
+            32285
+          ],
+          "changed_entries": 1848425,
+          "changed_fraction": 0.11182298522920861,
+          "changed_genes": 13967,
+          "uniform_gene_pair_at_least_one_changed_fraction": 0.678082733948995,
+          "uniform_gene_pair_both_changed_fraction": 0.18714879772205967,
+          "on_transitions": 371055,
+          "off_transitions": 371055,
+          "mean_absolute_rank_change": 0.1047223911540907,
+          "state_gene_multisets_exact": true,
+          "state_diagnostics": {
+            "AVC-CM": {
+              "rows": 9,
+              "changed_entries": 36696
+            },
+            "BEC": {
+              "rows": 8,
+              "changed_entries": 27852
+            },
+            "Blood": {
+              "rows": 6,
+              "changed_entries": 0
+            },
+            "Endocardium": {
+              "rows": 47,
+              "changed_entries": 207855
+            },
+            "Epithelium": {
+              "rows": 7,
+              "changed_entries": 0
+            },
+            "Foregut": {
+              "rows": 27,
+              "changed_entries": 0
+            },
+            "Hepatocyte": {
+              "rows": 35,
+              "changed_entries": 0
+            },
+            "IFT-CM": {
+              "rows": 20,
+              "changed_entries": 88076
+            },
+            "NCC": {
+              "rows": 2,
+              "changed_entries": 0
+            },
+            "NCC-derived": {
+              "rows": 18,
+              "changed_entries": 74697
+            },
+            "OFT/RV-CM": {
+              "rows": 56,
+              "changed_entries": 296947
+            },
+            "Pericardium": {
+              "rows": 29,
+              "changed_entries": 107933
+            },
+            "Proepicardium": {
+              "rows": 25,
+              "changed_entries": 116194
+            },
+            "ST": {
+              "rows": 26,
+              "changed_entries": 100203
+            },
+            "SV-CM": {
+              "rows": 39,
+              "changed_entries": 166434
+            },
+            "Surface Ectoderm": {
+              "rows": 17,
+              "changed_entries": 0
+            },
+            "V-CM": {
+              "rows": 34,
+              "changed_entries": 197848
+            },
+            "aPHM": {
+              "rows": 7,
+              "changed_entries": 17205
+            },
+            "aSHF": {
+              "rows": 30,
+              "changed_entries": 121272
+            },
+            "pPHM": {
+              "rows": 35,
+              "changed_entries": 137504
+            },
+            "pSHF": {
+              "rows": 35,
+              "changed_entries": 151709
+            }
+          },
+          "row_libraries_are_not_invariant": true,
+          "server_de_scores_are_not_guaranteed_invariant": true
+        }
+      },
+      "metrics": {
+        "original_A": {
+          "mmd_u": 0.01173930149525404,
+          "energy_distance": -0.014179229736328125,
+          "variogram": 0.0003307330191323137,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0024505085427621452,
+            "pair_moment_mean_abs_change": 0.002450508542762149,
+            "pair_moment_rms_change": 0.008048009679890665,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.017741235066517907,
+            "alternative_joint_term_mean": 0.019640114024560156,
+            "parent_codetection_mean": 0.01440335688659433,
+            "alternative_codetection_mean": 0.014950356892844642,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003596970277165158,
+            "released_reference_raw_variogram_alternative": 0.0003307330191323137,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003788940490027315,
+              "joint_square": 0.00013544022756808633,
+              "cross_term": -0.00015463724885430202
+            },
+            "actual_variogram_change": -2.8964008584202118e-05,
+            "fixed_marginal_predicted_variogram_change": -2.896400858420209e-05
+          },
+          "mean_library": 10000.0,
+          "median_library": 10000.0,
+          "mean_detected_genes": 3894.14453125
+        },
+        "shuffled_A": {
+          "mmd_u": 0.05172709375619888,
+          "energy_distance": 0.005290985107421875,
+          "variogram": 0.0003596970277165158,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 0.0,
+            "joint_term_mean_abs_change": 0.0,
+            "pair_moment_mean_abs_change": 0.0,
+            "pair_moment_rms_change": 0.0,
+            "decomposition_max_abs_error": 0.0,
+            "parent_joint_term_mean": 0.017741235066517907,
+            "alternative_joint_term_mean": 0.017741235066517907,
+            "parent_codetection_mean": 0.01440335688659433,
+            "alternative_codetection_mean": 0.01440335688659433,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003596970277165158,
+            "released_reference_raw_variogram_alternative": 0.0003596970277165158,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003788940490027315,
+              "joint_square": 0.00013544022756808633,
+              "cross_term": -0.00015463724885430202
+            },
+            "actual_variogram_change": 0.0,
+            "fixed_marginal_predicted_variogram_change": 0.0
+          },
+          "mean_library": 10000.0,
+          "median_library": 9995.6796875,
+          "mean_detected_genes": 3894.14453125
+        },
+        "official_train_donor": {
+          "mmd_u": 0.030892934650182724,
+          "energy_distance": -0.000751495361328125,
+          "variogram": 0.0003568737329987726,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0011192390321856397,
+            "pair_moment_mean_abs_change": 0.0011192390321856439,
+            "pair_moment_rms_change": 0.0035988426447416022,
+            "decomposition_max_abs_error": 2.220446049250313e-16,
+            "parent_joint_term_mean": 0.017741235066517907,
+            "alternative_joint_term_mean": 0.0178140270295605,
+            "parent_codetection_mean": 0.01440335688659433,
+            "alternative_codetection_mean": 0.014469082829141456,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003596970277165158,
+            "released_reference_raw_variogram_alternative": 0.0003568737329987726,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003788940490027315,
+              "joint_square": 0.00013544022756808633,
+              "cross_term": -0.00015463724885430202
+            },
+            "actual_variogram_change": -2.823294717743208e-06,
+            "fixed_marginal_predicted_variogram_change": -2.8232947177432044e-06
+          },
+          "mean_library": 10000.0,
+          "median_library": 10002.2958984375,
+          "mean_detected_genes": 3894.14453125
+        },
+        "external_donor": {
+          "mmd_u": 0.04219698905944824,
+          "energy_distance": 0.00659942626953125,
+          "variogram": 0.00036276325470882087,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0011001089985785413,
+            "pair_moment_mean_abs_change": 0.0011001089985785456,
+            "pair_moment_rms_change": 0.003530335189075108,
+            "decomposition_max_abs_error": 2.220446049250313e-16,
+            "parent_joint_term_mean": 0.017741235066517907,
+            "alternative_joint_term_mean": 0.01777580298499473,
+            "parent_codetection_mean": 0.01440335688659433,
+            "alternative_codetection_mean": 0.014435096754837742,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003596970277165158,
+            "released_reference_raw_variogram_alternative": 0.00036276325470882087,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003788940490027315,
+              "joint_square": 0.00013544022756808633,
+              "cross_term": -0.00015463724885430202
+            },
+            "actual_variogram_change": 3.06622699230508e-06,
+            "fixed_marginal_predicted_variogram_change": 3.066226992305048e-06
+          },
+          "mean_library": 10000.0,
+          "median_library": 10009.904296875,
+          "mean_detected_genes": 3894.14453125
+        },
+        "gene_shuffled_external_donor": {
+          "mmd_u": 0.051775045692920685,
+          "energy_distance": 0.005290985107421875,
+          "variogram": 0.0003642266490316007,
+          "pair_decomposition": {
+            "n_pairs": 19999,
+            "marginal_term_max_abs_change": 4.440892098500626e-16,
+            "joint_term_mean_abs_change": 0.0010484362248327505,
+            "pair_moment_mean_abs_change": 0.0010484362248327549,
+            "pair_moment_rms_change": 0.0033998578750656593,
+            "decomposition_max_abs_error": 1.1102230246251565e-16,
+            "parent_joint_term_mean": 0.017741235066517907,
+            "alternative_joint_term_mean": 0.017735784252237263,
+            "parent_codetection_mean": 0.01440335688659433,
+            "alternative_codetection_mean": 0.01440189196959848,
+            "loose_bound_is_not_jointly_attainable_claim": true,
+            "released_reference_raw_variogram_parent": 0.0003596970277165158,
+            "released_reference_raw_variogram_alternative": 0.0003642266490316007,
+            "reference_error_decomposition": {
+              "marginal_square": 0.0003788940490027315,
+              "joint_square": 0.00013544022756808633,
+              "cross_term": -0.00015463724885430202
+            },
+            "actual_variogram_change": 4.529621315084908e-06,
+            "fixed_marginal_predicted_variogram_change": 4.529621315084896e-06
+          },
+          "mean_library": 10000.0,
+          "median_library": 9991.26171875,
+          "mean_detected_genes": 3894.14453125
+        }
+      }
+    }
+  ],
+  "script_sha256": "7b2d57b7947372f94a298a9fe2268c515059d5fba2b80996fa7e20d3bb1abddd",
+  "source_audit_manifest_sha256": "0aa2b13081f9fe9f76d64cdb80aa4c537c3d660df634faaab8f4e9d2e8eb060b"
+}

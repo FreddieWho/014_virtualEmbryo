@@ -1,0 +1,1 @@
+Frozen T2 v0026 source snapshots. The original compact reproduction package preserves repo/ helpers and the runtime layout required by portable.py. Use that package and the published input hashes; this relocated directory is not a standalone clone-and-run entry. Numerical libraries use one thread. No fitted arrays or raw training inputs are included in Git.

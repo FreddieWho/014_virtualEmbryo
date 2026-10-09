@@ -1,0 +1,160 @@
+{
+  "status": "SOURCE_REFERENCE_DIAGNOSTIC_ONLY",
+  "reference_stage": "released official E9.5, not hidden E10.5",
+  "baseline_server_score": null,
+  "historical_comparison_replay_confounded": true,
+  "full_gene_panel": 32285,
+  "n_parent_cells": 5118,
+  "metrics": {
+    "reconstructed_parent": [
+      {
+        "seed": 20261009,
+        "mmd_u": 0.023634661007010983,
+        "energy_distance": 1.1235482873690046,
+        "variogram": 0.0024722691866903485
+      },
+      {
+        "seed": 20261010,
+        "mmd_u": 0.024719365757587514,
+        "energy_distance": 1.182922942500312,
+        "variogram": 0.0025967610702757027
+      },
+      {
+        "seed": 20261011,
+        "mmd_u": 0.021832973087484005,
+        "energy_distance": 1.0119839266705455,
+        "variogram": 0.00228003315173667
+      }
+    ],
+    "coherent_carrier": [
+      {
+        "seed": 20261009,
+        "mmd_u": 0.02315651459717761,
+        "energy_distance": 1.1247145958981406,
+        "variogram": 0.002462395060843276
+      },
+      {
+        "seed": 20261010,
+        "mmd_u": 0.024154906319689303,
+        "energy_distance": 1.181050783733241,
+        "variogram": 0.0025762823633096368
+      },
+      {
+        "seed": 20261011,
+        "mmd_u": 0.021458965236512115,
+        "energy_distance": 1.0197159402430813,
+        "variogram": 0.002291577761273325
+      }
+    ],
+    "shuffled_carrier_control": [
+      {
+        "seed": 20261009,
+        "mmd_u": 0.03210237619756401,
+        "energy_distance": 1.1534589345795183,
+        "variogram": 0.0025231264174830218
+      },
+      {
+        "seed": 20261010,
+        "mmd_u": 0.032684674405169034,
+        "energy_distance": 1.2092864701852477,
+        "variogram": 0.0026476491006996285
+      },
+      {
+        "seed": 20261011,
+        "mmd_u": 0.029201759578228736,
+        "energy_distance": 1.0599925249906406,
+        "variogram": 0.002345308856091013
+      }
+    ]
+  },
+  "full_row_pair_moments": {
+    "coherent": {
+      "n_pairs": 19998,
+      "marginal_term_max_abs_change": 8.881784197001252e-16,
+      "joint_term_mean_abs_change": 0.00023561493203777247,
+      "pair_moment_mean_abs_change": 0.00023561493203777336,
+      "pair_moment_rms_change": 0.00083427570040523,
+      "decomposition_max_abs_error": 2.220446049250313e-16,
+      "parent_joint_term_mean": 0.021019607235270014,
+      "alternative_joint_term_mean": 0.02085795424072164,
+      "parent_codetection_mean": 0.0206987580352408,
+      "alternative_codetection_mean": 0.020622509691375544,
+      "loose_bound_is_not_jointly_attainable_claim": true,
+      "released_reference_raw_variogram_parent": 0.0023445364999174754,
+      "released_reference_raw_variogram_alternative": 0.0023463114336156315,
+      "reference_error_decomposition": {
+        "marginal_square": 0.0028996269147513044,
+        "joint_square": 0.0003412263816496787,
+        "cross_term": -0.0008963167964835076
+      },
+      "actual_variogram_change": 1.7749336981560775e-06,
+      "fixed_marginal_predicted_variogram_change": 1.7749336981559345e-06
+    },
+    "shuffled": {
+      "n_pairs": 19998,
+      "marginal_term_max_abs_change": 4.440892098500626e-16,
+      "joint_term_mean_abs_change": 0.001305302925496343,
+      "pair_moment_mean_abs_change": 0.0013053029254963453,
+      "pair_moment_rms_change": 0.0034942790600186982,
+      "decomposition_max_abs_error": 2.220446049250313e-16,
+      "parent_joint_term_mean": 0.021019607235270014,
+      "alternative_joint_term_mean": 0.019895683779608497,
+      "parent_codetection_mean": 0.0206987580352408,
+      "alternative_codetection_mean": 0.019882253954195735,
+      "loose_bound_is_not_jointly_attainable_claim": true,
+      "released_reference_raw_variogram_parent": 0.0023445364999174754,
+      "released_reference_raw_variogram_alternative": 0.0024072591513554387,
+      "reference_error_decomposition": {
+        "marginal_square": 0.0028996269147513044,
+        "joint_square": 0.0003412263816496787,
+        "cross_term": -0.0008963167964835076
+      },
+      "actual_variogram_change": 6.272265143796333e-05,
+      "fixed_marginal_predicted_variogram_change": 6.272265143796306e-05
+    }
+  },
+  "actual_sampled_pair_support": {
+    "coherent": {
+      "sampled_pairs": 19998,
+      "both_changed_columns": 2935,
+      "at_least_one_changed_column": 12169,
+      "both_globally_nonzero_genes": 12734,
+      "parent_pairs_with_actual_codetection": 11670,
+      "alternative_pairs_with_actual_codetection": 11668,
+      "pairs_with_a_globally_zero_gene": 7264,
+      "zero_gene_pair_max_moment_change": 4.440892098500626e-16,
+      "all_pair_abs_moment_change_quantiles": [
+        0.0,
+        0.0,
+        0.000548956007873802,
+        0.0043482049804711995,
+        0.011334936886424063
+      ],
+      "unchanged_marginals_required_for_zero_gene_invariance": true
+    },
+    "shuffled": {
+      "sampled_pairs": 19998,
+      "both_changed_columns": 10960,
+      "at_least_one_changed_column": 18608,
+      "both_globally_nonzero_genes": 12734,
+      "parent_pairs_with_actual_codetection": 11670,
+      "alternative_pairs_with_actual_codetection": 11589,
+      "pairs_with_a_globally_zero_gene": 7264,
+      "zero_gene_pair_max_moment_change": 4.440892098500626e-16,
+      "all_pair_abs_moment_change_quantiles": [
+        0.0,
+        6.264528182925444e-05,
+        0.0033600350667221885,
+        0.016930213390996547,
+        0.04491082480708053
+      ],
+      "unchanged_marginals_required_for_zero_gene_invariance": true
+    }
+  },
+  "reference_selection": {
+    "count": 2000,
+    "indices_sha256": "9e01b26e9676dc78eb04f08bef5be44f5be047817c982ec310704bed3b315a63",
+    "hash_encoding": "UTF-8 JSON array with compact separators",
+    "indices_published": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "reviewer": "independent scientific and engineering reviewer",
+  "status": "APPROVE_FOR_PARENT_RELEASE_DECISION",
+  "candidate_sha256": "10db96db40d9ffbfd22a5d54a76c70a27ceab1284535e0170391dfcb3086d5e4",
+  "v25_comparator_sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+  "carrier_h1_sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37",
+  "independent_execution": {
+    "numerical_threads": 1,
+    "fresh_B_refit_without_builder_fit_function": "array exact",
+    "fresh_rank_operator_without_builder_reg_function": "array exact for both v25 alpha0.5 and v26 alpha0.75",
+    "file_hashes_verified": true,
+    "shape": [
+      5872,
+      500
+    ],
+    "panel_order_exact": true,
+    "per_state_gene_value_multisets_exact": true,
+    "obs_var_coordinates_exact": true,
+    "finite_nonnegative": true
+  },
+  "source_boundary_review": {
+    "dev_fit": [
+      "E8.25_late",
+      "E9.5"
+    ],
+    "dev_evaluation": [
+      "E8.75"
+    ],
+    "final_fit": [
+      "E8.25_late",
+      "E8.75"
+    ],
+    "protected_E8_5_read": false,
+    "embryo_B_read": false,
+    "scope": "Read source code and manifests; no external execution tracing claim"
+  },
+  "selection_review": {
+    "three_preset_challengers": true,
+    "chosen": "global_b075",
+    "dev_results_and_selection_reconciled": true,
+    "mean_gain": 0.31444464232253466,
+    "paired_gains_positive_all_three_seeds": true,
+    "secondary_guard_added_after_run_start_before_score_inspection_reported": true,
+    "winner_unchanged_by_secondary_guard": true
+  },
+  "matched_negative_control": {
+    "blend": 0.75,
+    "after_selection_diagnostic_only": true,
+    "selection_hash_unchanged": true,
+    "mean_total": 52.330268288202234,
+    "winner_mean_total": 54.771683546600855
+  },
+  "limitations": [
+    "Reused one released development stage for hyperparameter selection; sampling seeds are not independent biological validation.",
+    "Row libraries and classifier-derived state mass are not invariant; increased within-state correlation may overconcentrate dependence.",
+    "Inherited fit_global blend0.5/parameter_search=false metadata does not describe this three-challenger campaign; report explicitly clarifies actual alpha0.75.",
+    "Local gains and negative-control contrast are exploratory, not guarantees of server gains or biological causality."
+  ],
+  "reviewed_source_hashes": {
+    "run.py": "a896523e7d35e35ff42c4875a361d2672bf39b974e4db7c4d98819f75223933a",
+    "DESIGN.json": "6675814ad33b926b6f3aa9bb17673567e8f5151be658b4138e37020087c343ab",
+    "SELECTION.json": "d8576bac6ee0cf18c3e40bdaf74ee61a4e153043c0ad48b19fe3662e8c671c17",
+    "matched_control.py": "0aa6d19ff432a738f77f60163fabff613345c1b658a4bf124c38a15f9bdf9521",
+    "REPORT.md": "45497f19a76c42dbbf248b88a72aa7838bbc63fb50fc009499d9210cdd214155"
+  },
+  "submission_authority": "Parent only; reviewer performed no submission or push."
+}

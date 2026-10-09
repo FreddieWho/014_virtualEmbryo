@@ -1,3 +1,9 @@
+> 2026-10-09 11:37 UTC user direction: PAUSE all T2 experiments and submissions; focus now moves to T1. Today8/8 is complete. Tomorrow proposals require renewed authorization; no automatic run, submission or GitHub push. Handoff: reports/t2_final_slot_20261009/TOMORROW_HANDOFF.md.
+
+> 2026-10-09 final-slot update: v0026 API66.7846 is numeric high, +0.0782 inside±0.1 vs incumbentv25 66.7064, so v25 stays selected. Portal T2 best mean60.3139666667, Human71/187. Today8/8 used; stop. See SERVER_SCORE_REGISTRY final-slot entry. Code and reports are included in the subsequent repository synchronization.
+
+最新 T1 两发收口（2026-10-09）：v0094 joint_carrier 晋级为现役；v0095 joint_external_e95 未晋级。两件共享重建父本，历史差值存在重建混杂；MMD改善、variogram仍弱。预算2/2用尽。DISCLOSURE_CORRECTION_PENDING，已记录E16.5历史诊断来源遗漏，未补正已提交metadata。详细分数与精度见 [registry](reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09)。
+
 最新 T3 回分（2026-10-09）：v0089 `resplam15unmask`（响应结构路线）服务器 **53.74**，较现役 v0088 53.69 为 **+0.05，落在 ±0.1 平局带内，不换人**，v0088 保持现役。子项 de 41.7→**42.1**（+0.4）、severity 75.2→76.2（+1.0），但 direction 51.2→50.5、mmd 51.1→50.3、variogram 43.1→42.7。**本地源侧复合分预测的 de 上涨方向成立，但净效应被其余三项回落吸收，本地分高估约四倍**——本地复合分只能当候选筛选器，不能当服务器总分预测。这是本地增益未能按预测转化的第三例。[registry](reports/SERVER_SCORE_REGISTRY.md#t3-resplam15-v0089-score-return-20261009)。
 最新 T3 候选 v0089（2026-10-09）：响应结构路线——收缩 lam nk/(nk+50)→nk/(nk+15) 且去掉 global_valid 掩码，发射器/atlas/几何全部冻结。本地源侧复合 **74.936110** vs v0088 74.737588（**+0.1985**，赢 4/7，冻结门 PASS），分项 de **+0.354**——这是首次真正移动 DE（发射器层做不到，发射器只重分配已激活细胞）。contract 全 PASS。交付包 `deliveries/t3lam15__t3__upload__20261009.zip`（成员名即 portal Model 名，SHA 对 INDEX 核验通过）。`score_pending`、**未提交**：T3 提交额度未解决，上传需重新授权。增益不均匀（Ehmt2 +1.0 对 Dnmt1 −0.855）。同批全新架构「联合秩传输」本地 −12.07 且对照组不变，为干净负结果。[台账](autoresearch/loop-261009-1845/)、[报告](reports/t3_rebuild_20261009/REPORT.md)。
 最新门户确认（2026-10-09）：**Total 172.9**，per-task T1 58.9 / T2 60.3 / T3 53.7，Human rank 71/187。按现役相加 58.89+60.2770+53.69 = **172.857**，与门户合计在显示精度内一致。**此前记录的 per-task 对不上问题关闭**——根因是选集滞后，不是门户口径未知。
@@ -85,9 +91,9 @@ ROADMAP  [##############-] 14/15 节点（N8 仍未正式裁决）
 ## 总体状态
 
 - 比赛优先；starter_pack 已关闭为 `CLOSED_FOR_COMPETITION_BASELINE`。
-- 门户确认合计 **172.9**（2026-10-09，per-task T1 58.9 / T2 60.3 / T3 53.7，Human rank 71/187）。按现役相加为 **172.857**（58.89+60.2770+53.69），与门户合计在显示精度内一致。
-- 任务分数：T1 **58.89**（v0092，2026-10-09），T2 **60.277**（63.0047 / 心脏插值 v0025 66.7064 / 外推 v0030 51.12），T3 **53.69**（v0088，2026-10-08）。
-- **已闭合**：门户合计与 per-task 均已确认并与选集对账一致（172.9 / 172.857）。门户 T2 用各榜数值最高（60.2879），与选集 60.2770 的 0.011 差额全部来自 ±0.1 带内保留。
+- 上次三任务门户观测合计 **172.9**（本轮T1之前，per-task 58.9 / 60.3 / 53.7）。本轮后按现役算术和 **172.9557**（58.9887+60.2770+53.69），不是新的三任务门户观测。
+- 任务分数：T1 **58.9887**（v0094，2026-10-09），T2 **60.277**（63.0047 / 心脏插值 v0025 66.7064 / 外推 v0030 51.12），T3 **53.69**（v0088，2026-10-08）。
+- **历史对账已闭合**：T1本轮前172.9 / 172.857一致；本轮后需另查三任务总榜才能更新门户Total。T2最终门户各榜数值最高均值为60.3139666667；v0026带内不换现役。
 - **已知数据缺口**：`AUDIT.md` 的 Server bests 只统计 `score_status=scored`，而 60+ 行用 `registered`（含 v0092/v0093/v0021/v0025），故 AUDIT 印出的数值最高低于现役。待 coordinator 裁决是否统一字段。
 - 待分队列为 0：INDEX 中 6 行 `score_pending` 全是早期未上传对照，不是当前队列。
 - 科学 promotion 仍开放，但 `blocks_submission: false`。
@@ -113,9 +119,9 @@ ROADMAP  [##############-] 14/15 节点（N8 仍未正式裁决）
 
 ### T1 — single-cell temporal
 
-1. `v0092_ot_gen_v51`：**58.89**，现役（2026-10-09）；OT 生成式位移，父 v0091。
-2. `v0093_v51_anchor_pergroup`：**58.22**，高备份（落后现役 0.67）。
-3. `v0091_v51_anchor_auto`：**57.99**，曾晋级后被 v0092 取代（+0.90）。
+1. `v0094_joint_carrier`：**58.9887**，现役；固定边缘的配对carrier联合秩恢复。
+2. `v0092_ot_gen_v51`：**58.8865**（官方API补精度），前现役；非重建父本的已评分原件。
+3. `v0095_joint_external_e95`：**58.64**（UI），已评分但未晋级；独立E9.5来源联合秩。
 
 混合族（v0049–v0058，~53.7）与 late-anchor 直用轴（v0089 53.14 / v0090 53.43）均已过平台。历史见[T1_TRACKING.md](docs/coordination/T1_TRACKING.md)。
 
@@ -153,7 +159,7 @@ T3-S1A v7 已完成 exact E8.75 input/state join、显式 target applicability�
 
 | 任务 | 下一步 | 提交前硬要求 |
 |---|---|---|
-| T1 | v0092=58.89 现役，v0093 58.22 / v0091 57.99 备份；late-anchor 已成波，混合族饱和 ~53.7 | 混合族内调参无服务器意义；门户 58.9 已对账 |
+| T1 | v0094 现役；v0092 / v0095 为数值Top3，分数见权威registry | 两发结束，披露缺口已记录且未解决；重建混杂；优先边缘校准而非rank-blend微调 |
 | T2 | 胚胎 v0021=63.0047、心插 v0025=66.7064、外推 v0030=51.12；心插 copula 族优先 | 门户 60.3 已对账；外推 existing-route 预算 2/2 用尽、平台期 ~51.1，需新机制；仲裁沿官方 API 高精度口径 |
 | T3 | best v0088=53.69；v0089=53.74 带内不晋级；发射器轴饱和、响应结构路线已验证到服务器 | 后续 T3 用服务器分裁决，本地复合分仅作筛选；剩余提交额度待用户确认；blocks_submission: false |
 

@@ -1,0 +1,48 @@
+{
+  "board": "T1:val",
+  "results": [
+    {
+      "version": "v0094",
+      "submission_id": "162d3f61a0de4d16953448e0e7eaff33",
+      "submitted_utc_minute": "2026-10-09 12:07 UTC",
+      "model": "T1-joint-carrier-v0094",
+      "filename": "t1_val__joint_carrier__v0094.h5ad",
+      "sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "score": 58.9887,
+      "metrics": {
+        "de_score": 49.5608,
+        "de_direction": 65.9021,
+        "mmd_u": 65.6622,
+        "variogram": 52.1215
+      },
+      "precision": "official API four-decimal precision",
+      "decision": "PROMOTE +0.1022 over historical v0092 58.8865"
+    },
+    {
+      "version": "v0095",
+      "submission_id": "38e29beee3de4662ae40ea9663bbc905",
+      "submitted_utc_minute": "2026-10-09 12:11 UTC",
+      "model": "T1-joint-E95-v0095",
+      "filename": "t1_val__joint_external_e95__v0095.h5ad",
+      "sha256": "8d8ec5173f797ad4efc2c97510dafe012fb660f61b36a96f11f23fc8503a6cc5",
+      "score": 58.64,
+      "metrics": {
+        "de_score": 49.6,
+        "de_direction": 65.9,
+        "mmd_u": 64.8,
+        "variogram": 51.8
+      },
+      "precision": "UI total two decimals and metrics one decimal; API returns team best only",
+      "decision": "REJECT versus v0094 and historical v0092"
+    }
+  ],
+  "v94_scored_at": "2026-10-09T12:09:20Z",
+  "best_confirmed_after_v95": "v0094",
+  "source": "Official leaderboard API for v0094 and authenticated portal terminal detail for both",
+  "authorized_round_budget": 2,
+  "consumed_round_budget": 2,
+  "site_daily_used": 2,
+  "site_daily_limit": 8,
+  "additional_attempt_authorized": false,
+  "disclosure_gap": "DISCLOSURE_CORRECTION_PENDING"
+}

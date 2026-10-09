@@ -91,3 +91,7 @@ ExtendedMouseAtlas 合规子集新用途已执行并关闭（T1-EXTPRE-20261003-
 v0022 frozen (not yet submitted): GSE65924 relative AP/PD prior is now an actual candidate input, while the independently learned GSM8559288 dependence is inherited through immutable v0021. Only coordinate pairing changes; no external idealized coordinates or FPKM values are introduced. Both sources must be disclosed.
 
 Campaign close: v0021 and v0022 are both terminal scored. v0021 uses the independent scRNA source and is selected; v0022 adds Geo-seq prior and is not selected. These server outcomes do not change source legality. All four slots used; no new data collection or submission continues.
+
+## T1 joint-structure sources, 2026-10-09
+
+GSE230531 E8.5/E14.5 direct external OT-field inputs and E16.5 prior temporal-warp/alternative-anchor diagnostics are recorded with exact file hashes. v0095 adds only GSE193746/GSM5820434 E9.5 WT whole-heart raw filtered counts as an independent joint-rank donor. No protected external stage or jointly integrated annotation is used. Full roles, checksums and unresolved submitted-metadata gap: [source ledger](t1_joint_20261009/SOURCE_LEDGER.tsv) and [disclosure](t1_joint_20261009/SOURCE_DISCLOSURE.md). DISCLOSURE_CORRECTION_PENDING; this ledger does not alter uploaded bytes.

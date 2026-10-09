@@ -3,7 +3,7 @@
 Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDICTS.tsv + TODO.md.
 
 ## Server bests (numeric; selection follows ±0.1 TIE band, incumbent stays)
-- T1:val: **57.99** (v0091 v51_anchor_auto)
+- T1:val: **58.9887** (v0094 joint_carrier)
 - T2:embryo:val_interp: **62.89** (v0014 e_o1_shrinkmerge)
 - T2:heart:val_extrap: **51.14** (v0032 x_r5_tshrink09)
 - T2:heart:val_interp: **62.48** (v0023 h_aniso50)
@@ -12,9 +12,9 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (198 rows in LANE_VERDICTS.tsv)
-- PASS: 6
-- SHIPPED: 155
+## Lane verdicts (201 rows in LANE_VERDICTS.tsv)
+- PASS: 7
+- SHIPPED: 157
 - FAIL: 18
 - VOID: 3
 - PARKED: 4

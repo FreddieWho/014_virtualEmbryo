@@ -335,3 +335,6 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 - 2026-10-09｜T1 late-anchor/OT 五 lane 回分完成｜v0089 late_anchor_x1=53.14、v0090 late_anchor_x2_comphalf=53.43、v0091 v51_anchor_auto=57.99（先晋级，后被取代）、v0092 ot_gen_v51=58.89（晋级为新 board best，+0.90 vs v0091）、v0093 v51_anchor_pergroup=58.22。现役切到 v0092，v0093/v0091 为备份。T1 待分清零。证据 reports/SERVER_SCORE_REGISTRY.md；D-20261009-T1LATEANCHOR-001。
 - 2026-10-09｜导航刷新｜T1 现役由 v0051=53.92 改为 v0092=58.89，derived 三任务和由 160.68 改为 171.45；门户观测仍为 171.4（2026-10-08T11:58Z，rank 61），早于本次易主，必须重读。blocks_submission:false。
 - 2026-10-09｜已知缺口｜AUDIT.md 印 T1 数值最高 57.99 而非 58.89，原因是 generate_audit.py:42 只统计 score_status=scored，而 v0092/v0093 用 registered。字段不一致，未擅自改 INDEX，待 coordinator 裁决。
+
+- 2026-10-09｜T1 v0094 新候选及回分｜重建 v0092 的逐状态逐基因数值完全保留，固定0.5向配对v0051经验秩恢复；完整32,285基因、独立全量重放PASS。官方API回分晋级，详见 SERVER_SCORE_REGISTRY 的 T1 joint structure 节。无小参数搜索。
+- 2026-10-09｜T1 v0095 新来源及回分｜只用GSE193746/GSM5820434 E9.5 WT whole-heart原始过滤计数，新训练映射，作为经验联合秩供体；同一重建父本，固定0.5，不迁移均值/检测率/组成。UI回分REJECT。两次授权结束；DISCLOSURE_CORRECTION_PENDING；D-20261009-T1JOINT-001。

@@ -1061,3 +1061,20 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	severity_slope	76.2
 2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	mmd_u	50.3
 2026-10-09	T3:gata4	v0089	resplam15unmask	t3_gata4__resplam15__v0089.h5ad	2026-10-09 (user-transcribed; submission ID and exact time not supplied)	53.74	variogram	42.7
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	de_score	60.576
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	de_direction	69.0695
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	mmd_u	69.046
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	variogram	46.1475
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	d2_shape	94.5074
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	occupancy_dice	47.3088
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	scale_log_ratio	82.5078
+2026-10-09	T2:heart:val_interp	v0026	copula_refine075	t2_hrt_int__copula_refine__v0026.h5ad	2026-10-09 10:48 UTC	66.7846	neighborhood_mmd	67.6546
+
+2026-10-09	T1:val	v0094	joint_carrier	t1_val__joint_carrier__v0094.h5ad	2026-10-09 12:07 UTC	58.9887	de_score	49.5608
+2026-10-09	T1:val	v0094	joint_carrier	t1_val__joint_carrier__v0094.h5ad	2026-10-09 12:07 UTC	58.9887	de_direction	65.9021
+2026-10-09	T1:val	v0094	joint_carrier	t1_val__joint_carrier__v0094.h5ad	2026-10-09 12:07 UTC	58.9887	mmd_u	65.6622
+2026-10-09	T1:val	v0094	joint_carrier	t1_val__joint_carrier__v0094.h5ad	2026-10-09 12:07 UTC	58.9887	variogram	52.1215
+2026-10-09	T1:val	v0095	joint_external_e95	t1_val__joint_external_e95__v0095.h5ad	2026-10-09 12:11 UTC	58.64	de_score	49.6
+2026-10-09	T1:val	v0095	joint_external_e95	t1_val__joint_external_e95__v0095.h5ad	2026-10-09 12:11 UTC	58.64	de_direction	65.9
+2026-10-09	T1:val	v0095	joint_external_e95	t1_val__joint_external_e95__v0095.h5ad	2026-10-09 12:11 UTC	58.64	mmd_u	64.8
+2026-10-09	T1:val	v0095	joint_external_e95	t1_val__joint_external_e95__v0095.h5ad	2026-10-09 12:11 UTC	58.64	variogram	51.8

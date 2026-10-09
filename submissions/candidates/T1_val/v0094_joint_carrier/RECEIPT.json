@@ -1,0 +1,17 @@
+{
+  "canonical_path": "submissions/candidates/T1_val/v0094_joint_carrier/submission.h5ad",
+  "sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "shape": [
+    5118,
+    32285
+  ],
+  "contract": "PASS full panel, finite/nonnegative, protected row order, exact fine-state/gene multisets",
+  "independent_expression_replay": "PASS",
+  "parent_identity": "RECONSTRUCTED_v0092",
+  "parent_sha256": "65270f9782e4fa7111a56cc35658aa67db5300b3de55fd54f77eafbe425577dd",
+  "parent_server_score": null,
+  "historical_comparison_replay_confounded": true,
+  "scored_bytes_unchanged": true,
+  "source_disclosure": "DISCLOSURE_CORRECTION_PENDING",
+  "score_evidence": "reports/SERVER_SCORE_REGISTRY.md#t1-joint-structure-2026-10-09"
+}
