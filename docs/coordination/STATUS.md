@@ -1,3 +1,5 @@
+> 2026-10-09 operator-transfer update: three authorized submissions are complete. Heart interpolation v0025 is promoted (official API66.7064); embryo numeric-high v0023 is63.0185 but project incumbent stays v0021 under±0.1; extra v0037 is48.86 UI, not promoted. Official T2 best-per-board mean60.2879, Human71/187. Today7/8 used; remaining1 unauthorized. Full precision/source distinctions: reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09.
+
 # 当前并行状态
 
 接手先看 [`../ATOM_MAP.md`](../ATOM_MAP.md) 和 [`../../reports/README.md`](../../reports/README.md)。本文件是并行状态摘要，不是入门读物。2026-10-05 只加了这句导航，没有改下面的选集。

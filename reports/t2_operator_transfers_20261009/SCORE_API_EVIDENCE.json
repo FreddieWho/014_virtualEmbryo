@@ -1,0 +1,115 @@
+{
+  "heart_interp_v25_check": {
+    "url": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T2&board=T2:heart:val_interp&track=human",
+    "observed_utc": "2026-10-09T09:23:59.773564+00:00",
+    "updated_at": "2026-10-09T09:23:59+00:00",
+    "counts": {
+      "teams": 174
+    },
+    "pf": [
+      {
+        "rank": 39,
+        "team": "Physical Fossil",
+        "affiliation": "Shanghai Medical College of Fudan University",
+        "model": "heart-copula-v0025",
+        "track": "human",
+        "headline": 66.7064,
+        "metrics": {
+          "de_score": 60.576,
+          "de_direction": 69.0695,
+          "mmd_u": 67.7949,
+          "variogram": 46.0664,
+          "d2_shape": 94.5074,
+          "occupancy_dice": 47.3088,
+          "scale_log_ratio": 82.5078,
+          "neighborhood_mmd": 68.1245
+        },
+        "scored_at": "2026-10-09T09:21:26+00:00"
+      }
+    ],
+    "snapshot_sha256": "5567e332922308ddbdbc09d2fd38464371540ee48ea25fff56a9aac9e163c116"
+  },
+  "heart_extra_v37_check": {
+    "url": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T2&board=T2:heart:val_extrap&track=human",
+    "observed_utc": "2026-10-09T09:23:59.658612+00:00",
+    "updated_at": "2026-10-09T09:23:59+00:00",
+    "counts": {
+      "teams": 175
+    },
+    "pf": [
+      {
+        "rank": 110,
+        "team": "Physical Fossil",
+        "affiliation": "Shanghai Medical College of Fudan University",
+        "model": null,
+        "track": "human",
+        "headline": 51.1388,
+        "metrics": {
+          "de_score": 52.0011,
+          "de_direction": 51.19,
+          "mmd_u": 49.7861,
+          "variogram": 49.7969,
+          "d2_shape": 46.208,
+          "occupancy_dice": 53.2218,
+          "scale_log_ratio": 49.7423,
+          "neighborhood_mmd": 53.4451
+        },
+        "scored_at": "2026-10-03T09:42:08+00:00"
+      }
+    ],
+    "snapshot_sha256": "f0accae06fb7c5d1aeed5482cb10061b19f94f446427a79cbf306b07dd17a378"
+  },
+  "overall_transfer_check": {
+    "url": "https://kg.virtualembryo.ai/challenge/overall?task=T2&track=human",
+    "observed_utc": "2026-10-09T09:23:59.543404+00:00",
+    "updated_at": "2026-10-09T09:23:59+00:00",
+    "counts": {
+      "teams": 187
+    },
+    "pf": [
+      {
+        "team": "Physical Fossil",
+        "track": "human",
+        "affiliation": "Shanghai Medical College of Fudan University",
+        "boards": {
+          "T2:embryo:val_interp": 63.0185,
+          "T2:heart:val_extrap": 51.1388,
+          "T2:heart:val_interp": 66.7064
+        },
+        "tasks": {
+          "T2": 60.2879
+        },
+        "total": 60.2879,
+        "rank": 71
+      }
+    ],
+    "snapshot_sha256": "6e6896d14662835d6fca53edb0eda037abbf331b7d7046f448f2df89b31f63ae"
+  },
+  "embryo_v23": {
+    "url": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T2&board=T2:embryo:val_interp&track=human",
+    "observation_window_utc": "2026-10-09 09:17:43–46 UTC",
+    "updated_at": "2026-10-09T09:17:43+00:00",
+    "snapshot_sha256": "075853f18858f125abb26364f746d0df3e08ec4a002e6b977a17f9225abb001e",
+    "pf": [
+      {
+        "rank": 96,
+        "team": "Physical Fossil",
+        "affiliation": "Shanghai Medical College of Fudan University",
+        "model": "embryo-e3-libself-v0023",
+        "track": "human",
+        "headline": 63.0185,
+        "metrics": {
+          "de_score": 54.6405,
+          "de_direction": 68.5345,
+          "mmd_u": 68.4219,
+          "variogram": 36.1828,
+          "d2_shape": 54.648,
+          "occupancy_dice": 51.1667,
+          "scale_log_ratio": 90.8268,
+          "neighborhood_mmd": 69.4128
+        },
+        "scored_at": "2026-10-09T09:16:27+00:00"
+      }
+    ]
+  }
+}

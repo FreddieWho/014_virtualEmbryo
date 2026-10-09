@@ -1886,3 +1886,19 @@ Precision resolution (official public API 2026-10-09 07:51:48–51 UTC): v0021 t
 ### v0022 Geo coupling return and campaign close
 
 2026-10-09 08:00, portal efe73e77283d4b9486c72b7c919e76c8, terminal UI total 62.65. Skills: 54.1 / 68.0 / 61.9 / 53.5 / 54.6 / 48.2 / 90.8 / 66.5. REJECT vs v0021; keep v0021 selection. The exact full coordinate multiset is unchanged, so the occupancy score drop cannot be called a loss of complete geometric support; finite-index sampling differs under row permutation. Neighborhood also decreases at displayed precision, so the spatial prior increment is not supported by this server test. All four authorized budget slots are terminal scored: two internal and two external. No fifth submission. Final best v0021 official 63.0047.
+
+## T2 operator transfers 2026-10-09
+
+### Embryo v0023 source-library return
+
+Portal submission 866a8e68fecd4c89baacbef1e73dcd35, 2026-10-09 09:16 UTC, terminal UI 63.02; official API 63.0185. The frozen candidate SHA is 8c34d6592337df9fa5ccd9d84678831f98bdba9a0aacd654bb2f38cf2a912ce3. Eight official API full-precision metrics are recorded in SERVER_SUBMETRIC_REGISTRY.tsv. Compared to incumbent v0021 63.0047, exact delta is +0.0138 and stays inside ±0.1; retain v21. Exact E3 parent UI 62.89 is a different comparator from original v14. Source-library restoration shifts tradeoffs: target MMD/neighborhood improve while gene-pair variogram worsens; mechanism interpretation remains limited. Local plain-carrier holdout decreases, underscoring that local composite is not a cross-mechanism veto.
+
+### Heart extra v0037 zero-preserving shift return
+
+Submission 01f2cb4b59794d63ac27dd0d84962cff, 2026-10-09 09:22 UTC, model extra-x2-zero-preserve-v0037; final UI 48.86 and eight UI-rounded skills recorded in the submetric registry. SHA6b3970ccb8b8c03b66f80f926c3b9c911073f14a5ad37bb88145a69ade19087f. Exact X2 parent is byte restored (b884e3b6…), with UI50.35. It is not original v0030 or numeric-best v0032 (51.1388). REJECT; keep incumbent. No exact API score is claimed for this nonbest submission. The unchanged clip/library rule fails source-library restoration for two development-only all-clipped rows but zero final rows. Local gene-permuted drift also improves variogram; it cannot support a temporal-mechanism claim. Three new budget slots are spent, total today7/8, remaining1 unauthorized.
+
+### Heart interp v0025 copula return
+
+Submission 84e1cb88cbdd4dd8861488783a1002b9, 2026-10-09 09:20 UTC, model heart-copula-v0025. UI66.71, official API66.7064; PROMOTE +1.6804 vs byte-exact H1 65.0260. Candidate SHAefb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2; parent SHA7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37. The apparent first replay mismatch was the later-added carrier provenance field; removing that field reproduced the entire historical H1 file, not merely arrays. The heart-specific B is trained only on released heart E8.25_late/E8.75. Exact marginal preservation and independent refit/rank-transfer replay passed. Full eight official API skills are in the submetric registry; MMD +10.7466, variogram +0.0938, neighborhood +0.2358, other five unchanged. Final diagnostic classifier did not converge by max_iter300; it is independent of candidate construction, so diagnostic soft-mass is not an exact mechanistic result.
+
+Final official best-per-board mean is60.2879, Human71/187, at2026-10-09 09:23:59UTC. This API mean uses embryo numeric-high v23 63.0185 even though the project retains v21 under its ±0.1 incumbent rule, plus heart interp66.7064 and extra51.1388. Extra v37 did not replace extra best. All3 requested slots finished, today7/8, the remaining1 is unauthorized. Full raw API/portal evidence is archived in this run receipts. The builder performed no remote push; subsequent synchronization is separately authorized.

@@ -12,9 +12,9 @@ Regenerate: `python scripts/generate_audit.py`. Sources: INDEX.tsv + LANE_VERDIC
 Score-pending rows: 6 (v0001/expression_midpoint_unscaled, v0007/t2_s3_l2_spateo, v0008/t2_s3_l2_spateo, v0006/t2_s3_l1_pycpd, v0007/t2_s3_l2_spateo, v0008/j1_fgw_assignment)
 Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.
 
-## Lane verdicts (181 rows in LANE_VERDICTS.tsv)
-- PASS: 3
-- SHIPPED: 141
+## Lane verdicts (184 rows in LANE_VERDICTS.tsv)
+- PASS: 4
+- SHIPPED: 143
 - FAIL: 18
 - VOID: 3
 - PARKED: 4

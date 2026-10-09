@@ -1,3 +1,5 @@
+> 2026-10-09 operator-transfer update: three authorized submissions are complete. Heart interpolation v0025 is promoted (official API66.7064); embryo numeric-high v0023 is63.0185 but project incumbent stays v0021 under±0.1; extra v0037 is48.86 UI, not promoted. Official T2 best-per-board mean60.2879, Human71/187. Today7/8 used; remaining1 unauthorized. Full precision/source distinctions: reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09.
+
 最新 T1 回分（2026-10-07）：T1-SIX 六路线 v0057–v0062 全部登记，v0058＝53.85 带内 TIE 不晋级（−0.07 vs v0051 53.92；本地 de 冠军未转化），其余 5 件 REJECT；现役 v0051 不变，T1 待分清零。[registry](reports/SERVER_SCORE_REGISTRY.md#t1-six-score-return-20261007)。
 
 最新 T2 回分（2026-10-07）：心脏插值 v0023＝62.48 晋级（+0.12，超出平局带）；v0024＝60.61、外推 v0035＝49.06、胚胎 v0018＝62.50 均淘汰。占位项变差，不能写成占位修好了。门户合计仍是 156.06。[复盘](reports/t2_geom4_20261007/SCORE_REVIEW.md)。

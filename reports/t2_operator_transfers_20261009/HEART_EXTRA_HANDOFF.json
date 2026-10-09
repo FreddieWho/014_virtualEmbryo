@@ -1,0 +1,109 @@
+{
+  "task": "T2:heart:val_extrap",
+  "candidate_id": "candidate/T2_heart_val_extrap/v0037_x2_zero_preserve",
+  "parent_candidate": "Historical X2 exact-byte reconstruction; not historical v0030",
+  "artifact_path": "/workspace/shared/t2_operator_transfers_20261009/heart_extra/artifacts/final/submission.h5ad",
+  "sha256": "6b3970ccb8b8c03b66f80f926c3b9c911073f14a5ad37bb88145a69ade19087f",
+  "parent_artifact_path": "/workspace/shared/t2_operator_transfers_20261009/heart_extra/artifacts/final/parent_x2_recipe.h5ad",
+  "parent_sha256": "b884e3b6d2abda1aa4a01e64a198080f30cbdac7e3310d80c2a4f3da3ac7917b",
+  "parent_historical_hash_match": true,
+  "parent_server_score": 50.35,
+  "historical_v30_parity": false,
+  "shape": [
+    25179,
+    500
+  ],
+  "contract_result": "PASS",
+  "independent_replay": "EXACT_ARRAY_AND_HDF5_BYTE",
+  "local_metrics": {
+    "parent": {
+      "raw_mean": {
+        "de_score": 0.0772,
+        "de_direction": 0.1099,
+        "mmd_u": 0.06156,
+        "variogram": 0.04944200000000001,
+        "neighborhood_mmd": 0.10653333333333333,
+        "variance_ratio": 0.8283333333333333
+      },
+      "local_total_mean": 52.92550366503689,
+      "local_total_per_seed": [
+        51.82557024667147,
+        52.337205810307736,
+        54.61373493813147
+      ]
+    },
+    "zp": {
+      "raw_mean": {
+        "de_score": 0.11836666666666666,
+        "de_direction": 0.14786666666666667,
+        "mmd_u": 0.09991,
+        "variogram": 0.042345,
+        "neighborhood_mmd": 0.15657000000000001,
+        "variance_ratio": 0.593
+      },
+      "local_total_mean": 49.410190525842175,
+      "local_total_per_seed": [
+        47.90889321812402,
+        49.17936346983554,
+        51.14231488956695
+      ]
+    },
+    "copy_last": {
+      "raw_mean": {
+        "de_score": -0.08583333333333333,
+        "de_direction": 0.15373333333333336,
+        "mmd_u": 0.05925666666666666,
+        "variogram": 0.059424000000000005,
+        "neighborhood_mmd": 0.12264333333333333,
+        "variance_ratio": 1.1050000000000002
+      },
+      "local_total_mean": 51.35214966609735,
+      "local_total_per_seed": [
+        50.73273741452728,
+        50.974651591420375,
+        52.34905999234439
+      ]
+    },
+    "geneperm": {
+      "raw_mean": {
+        "de_score": 0.0772,
+        "de_direction": 0.08966666666666666,
+        "mmd_u": 0.05936333333333333,
+        "variogram": 0.04141233333333333,
+        "neighborhood_mmd": 0.12349333333333334,
+        "variance_ratio": 0.8776666666666667
+      },
+      "local_total_mean": 52.5117812868098,
+      "local_total_per_seed": [
+        51.13596415927569,
+        52.420615804992394,
+        53.978763896161325
+      ]
+    }
+  },
+  "library_final_max_relative_error": 4.717751136418258e-07,
+  "status": "READY_UNSUBMITTED_WITH_CAUTION",
+  "recommendation": "Keep available for server arbitration; low confidence, no scalar-only rejection or promotion",
+  "blocks_submission": false,
+  "known_risks": [
+    "Actual X2 parent is weaker than incumbent v0030",
+    "Dev marginal and neighborhood MMD worsen",
+    "Two dev cells all-clip and lose library",
+    "Gene-permuted control also improves variogram",
+    "Released-stage proxy differs in state coverage and timing from final target"
+  ],
+  "report": "/workspace/shared/t2_operator_transfers_20261009/heart_extra/reports/REPORT.md",
+  "source_commit": "9d30857b5e25610e40872e6f2cfce18941678eaa",
+  "changed_paths": [
+    "/workspace/shared/t2_operator_transfers_20261009/heart_extra"
+  ],
+  "portal_or_upload_performed": false,
+  "canonical_coordinator_artifact": "/workspace/shared/t2_operator_transfers_20261009/repo/submissions/candidates/T2_heart_val_extrap/v0037_x2_zero_preserve/submission.h5ad",
+  "canonical_sha_verified": true,
+  "dev_library_failure_summary": {
+    "count": 2,
+    "state": "Unknown",
+    "failure": "all expression entries clipped; output library zero",
+    "row_identifiers_omitted": true
+  }
+}

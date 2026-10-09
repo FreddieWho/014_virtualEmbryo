@@ -1,0 +1,46 @@
+{
+  "artifact_path": "/workspace/shared/t2_operator_transfers_20261009/embryo/target/t2_emb_int__e3_libself__v0023.h5ad",
+  "sha256": "8c34d6592337df9fa5ccd9d84678831f98bdba9a0aacd654bb2f38cf2a912ce3",
+  "contract": {
+    "board": "T2:embryo:val_interp",
+    "file": "/workspace/shared/t2_operator_transfers_20261009/embryo/target/t2_emb_int__e3_libself__v0023.h5ad",
+    "n_obs": 5000,
+    "n_vars": 498,
+    "size_mb": 10.4,
+    "errors": [],
+    "pass": true
+  },
+  "provenance": {
+    "candidate_id": "v0023_e3_source_library",
+    "axis": "Restore each bridge-input carrier row own expm1 library after mean shift on shared states only",
+    "source_library": "baseline-carrier XB immediately before E3 mean bridge, not raw E7.25 and not endpoint quantiles",
+    "parent_sha256": "e93d56f2130297f7c5b256e3e26fc072b8913766772b3ffcb2634f7a3fdbfdae",
+    "parent_identity": "byte-exact scored E3 (not original v0014)",
+    "released_inputs": {
+      "E6.75": "ab58b9217d1b9a18b0181f498475a9eb821ac2c92ab2b7e45a623da0e4fffe70",
+      "E7.25": "c34192a31036b783b97ce1877ac50fc920b39faa3e00dc3c637b3e7e04255ee6",
+      "E8.0": "17530e23fbfa6a139ff68d0353a489d83790f5b60f036b7d2f58303a1ff8a810"
+    },
+    "source_commit": "9d30857b5e25610e40872e6f2cfce18941678eaa",
+    "recipe_sha256": "fcd6617dfee6d0e09d1c5d16d102bea02e9f6b4d74f2817f5c07ed869dc66fdf",
+    "runtime": {
+      "source": "scripts/vework/vecommon.py",
+      "sha256": "40ccdc40665a2c324d5a9dd5f7a60d33ee129c5802d3f775b98723791cc10e66",
+      "override": {
+        "DATA": "/workspace/shared/t2_campaign_data"
+      }
+    },
+    "threads": 1,
+    "protected_targets_read": false,
+    "external_data": false,
+    "touched_rows": 3349,
+    "max_source_library_relative_error_float32": 4.467096971009351e-07,
+    "max_source_library_relative_error_float64": 1.0645049046886316e-15,
+    "unchanged_geometry_rows_labels": true,
+    "unchanged_orphans_and_zero_mask": true,
+    "per_gene_marginals_preserved": false,
+    "classifier_type_mass_preserved": false,
+    "operator_off_exact_X": true,
+    "mean_abs_change": 0.13565008342266083
+  }
+}

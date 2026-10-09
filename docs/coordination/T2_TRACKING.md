@@ -176,3 +176,6 @@ J1 assignment 已获服务器仲裁：heart_interp v0009=57.3（+0.6）晋级 bo
 - 2026-10-07｜四件几何包，未交卷｜用户再给 3 个新预算。心脏插值交了主轴中点和分位数搬运，胚胎交了同一分位数搬运，心脏外推交了训练曲线外推的形状和大小（倍数 0.890，靠近旧尺度旋钮，已写明）。四件契约通过，现役不动。`D-20261007-T2GEOM4-001`；deliveries/t2geom__t2__upload__20261007.zip。
 
 - 2026-10-07｜四件回分，心脏插值换人｜主轴中点 v0023 得到 62.48，比旧现役高 0.12，超出平局带，换上。形状分升了，占位分降了，所以不是占位修好了。分位数搬运两件和把心脏外推缩小到 0.89 的那件都输了，这两条关掉。`D-20261007-T2GEOM4SCORE-001`。
+
+### 2026-10-09 T2 三板算子迁移收口
+Heart interp v0025在exact H1父上迁移心脏重拟合copula，服务器晋级；embryo v0023在exact E3父上恢复均值桥输入XB自身library，数值略升但落±0.1带，保v21；extra v0037在exact X2父上迁移zero-preserve drift，不晋级。三份单线程重放、独立审查、精确panel通过；开发折限制和probe未收敛均披露。今日7/8，仅新授权3/3已耗尽；不再提交。构建worker未推送；用户随后授权专属publisher同步GitHub。详见reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09及reports/t2_operator_transfers_20261009/REPORT.md。

@@ -186,3 +186,6 @@ T2-EMBRYO-20261009-v0020	T2:embryo:val_interp	SHIPPED	no promotion	v0020	scored	
 T2-EMBRYO-20261009-v0021	T2:embryo:val_interp	PASS	precision-gate-passed	v0021	scored	reports/SERVER_SCORE_REGISTRY.md#v0021-scrna-copula-return	D-20261009-T2EMBRYO-SUPPORT-001
 
 T2-EMBRYO-20261009-v0022	T2:embryo:val_interp	SHIPPED	no incremental gain	v0022	scored	reports/SERVER_SCORE_REGISTRY.md#v0022-geo-coupling-return-and-campaign-close	D-20261009-T2EMBRYO-CLOSE-003
+T2-OPTRANSFER-20261009-v0023-embryo	T2:embryo:val_interp	SHIPPED	within incumbent tie band	v0023	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
+T2-OPTRANSFER-20261009-v0025-heart	T2:heart:val_interp	PASS	promoted	v0025	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
+T2-OPTRANSFER-20261009-v0037-heart	T2:heart:val_extrap	SHIPPED	rejected vs exact X2 parent	v0037	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
