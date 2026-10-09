@@ -1,0 +1,13 @@
+{"outdir": "/workspace/ve/work/pipeline_val",
+ "note": "Validation-shaped dry run on the real validation boards: proves the pipeline reproduces today's candidates.",
+ "entries": {
+  "T2E_S1_v0014faithful": {"board": "T2:embryo:val_interp", "slot": "S1", "recipe": "interp_baseline", "prev": "E6.75:6.75", "left": "E7.25:7.25", "right": "E8.0:8.0", "target": 7.5, "n": 5000, "geometry": "logrms"},
+  "T2E_S2_E1": {"board": "T2:embryo:val_interp", "slot": "S2", "recipe": "interp", "left": "E7.25:7.25", "right": "E8.0:8.0", "target": 7.5, "n": 5000, "geometry": "logrms"},
+  "T2HI_S1_H1": {"board": "T2:heart:val_interp", "slot": "S1", "recipe": "interp", "left": "E8.25_late:8.25", "right": "E8.75:8.75", "target": 8.5, "n": 5872, "geometry": "aniso"},
+  "T2X_S1_v0030rows": {"board": "T2:heart:val_extrap", "slot": "S1", "recipe": "extrap", "prev": "E8.75:8.75", "last": "E9.5:9.5", "target": 10.5, "n": 25179, "rows": "repo"},
+  "T1_partA_shift_zp": {"board": "T1:val", "slot": "part", "recipe": "t1_shift", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "target": 10.5, "n": 5118, "zero_preserve": true},
+  "T1_partB_shift": {"board": "T1:val", "slot": "part", "recipe": "t1_shift", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "target": 10.5, "n": 5118},
+  "T1_S1_mix": {"board": "T1:val", "slot": "S1", "recipe": "t1_mix", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "parts": ["T1_partA_shift_zp", "T1_partB_shift"], "frac_a": 0.7, "n": 5118},
+  "T3_S1_uniform": {"board": "T3:gata4", "slot": "S1", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "zero": ["Gata4"]},
+  "T3_S2_program": {"board": "T3:gata4", "slot": "S2", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "zero": ["Gata4"], "program": ["Gata4"], "strength": 0.25}
+ }}

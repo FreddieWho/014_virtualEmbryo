@@ -1,0 +1,13 @@
+{"outdir": "/workspace/ve/work/pipeline_testshape",
+ "note": "Test-SHAPED stand-in run using only stages released today (real test inputs arrive 2026-10-20). Boards are PROVISIONAL (panel = stage intersection, val cell limits).",
+ "entries": {
+  "T2E_test_S1": {"board": "T2:embryo:test", "slot": "S1", "recipe": "interp_baseline", "prev": "E6.75:6.75", "left": "E7.25:7.25", "right": "E8.0:8.0", "target": 7.75, "n": 5000, "geometry": "logrms", "limits": [583, 5000]},
+  "T2E_test_S2": {"board": "T2:embryo:test", "slot": "S2", "recipe": "interp", "left": "E7.25:7.25", "right": "E8.0:8.0", "target": 7.75, "n": 5000, "geometry": "logrms", "limits": [583, 5000]},
+  "T2X_test_S1": {"board": "T2:heart:test_extrap", "slot": "S1", "recipe": "extrap", "prev": "E8.75:8.75", "last": "E9.5:9.5", "target": 12.5, "n": 25000, "timescale": "none", "limits": [1000, 25179]},
+  "T2X_test_S2": {"board": "T2:heart:test_extrap", "slot": "S2", "recipe": "extrap", "prev": "E8.75:8.75", "last": "E9.5:9.5", "target": 12.5, "n": 25000, "timescale": "linear", "damp": 0.5, "limits": [1000, 25179]},
+  "T1_test_partA": {"board": "T1:test", "slot": "part", "recipe": "t1_shift", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "target": 12.5, "n": 5000, "zero_preserve": true, "limits": [1000, 5118]},
+  "T1_test_partB": {"board": "T1:test", "slot": "part", "recipe": "t1_shift", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "target": 12.5, "n": 5000, "limits": [1000, 5118]},
+  "T1_test_S1": {"board": "T1:test", "slot": "S1", "recipe": "t1_mix", "train": ["E8.5_RNA:8.5", "E9.5_RNA:9.5"], "parts": ["T1_test_partA", "T1_test_partB"], "frac_a": 0.7, "n": 5000, "limits": [1000, 5118]},
+  "T3_test_S1": {"board": "T3:ctnnb1", "slot": "S1", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "limits": [1000, 7449]},
+  "T3_test_S2": {"board": "T3:ctnnb1", "slot": "S2", "recipe": "t3", "wt": "E8.75", "n": 7449, "carrier": "uniform", "program": "WNT", "strength": 0.25, "limits": [1000, 7449], "external_sources": "generic canonical Wnt-target gene prior (pathway knowledge); Mesp1 lineage map (Saga 1999; Devine 2014; Lescroart 2014); no external data"}
+ }}
