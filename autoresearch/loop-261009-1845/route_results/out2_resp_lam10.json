@@ -1,0 +1,22 @@
+{
+  "arm": "conditional",
+  "total": 74.8463716015601,
+  "all_arms": {
+    "baseline": 74.44691354464292,
+    "both": 74.31026280675066,
+    "conditional": 74.8463716015601,
+    "residual": 73.92885319185133
+  },
+  "components": {
+    "de_skill": 69.57463579713087,
+    "direction_skill": 72.9938623646404,
+    "severity_abs_skill": 92.99253253955816,
+    "mmd_skill": 61.62842179433432,
+    "variogram_skill": 63.52464401313845
+  },
+  "name": "resp_lam10",
+  "emitter": "frozen",
+  "response": "lam10",
+  "guard": "PASS",
+  "guard_note": "shape=7449x500 finite closed max_mass_err=0.002928"
+}

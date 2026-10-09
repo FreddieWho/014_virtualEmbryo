@@ -1,0 +1,27 @@
+{
+  "version": "2.1.0",
+  "source": "loop",
+  "timestamp": "2026-10-09T20:40:00+08:00",
+  "status": "BOUNDED",
+  "results_tsv": "/home/huyudi/014_virtualEmbryo/autoresearch/loop-261009-1845/loop/results.tsv",
+  "findings": [
+    "T3 v0088 local composite reproduced bit-exact (74.737588) from the fully reconstructed model; response reimplementation fidelity PASS (delta/composition/support all maxabs 0).",
+    "Root cause of the 2026-09 emitter plateau identified: de_skill is structurally immovable at the emitter because the emitter only redistributes already-activated cells; DE lives in the response structure.",
+    "Moving the response structure works and moves de: shrinkage lam=nk/(nk+50) -> nk/(nk+10..15) plus dropping the global_valid mask gives +0.19 composite with de +0.354, direction +0.527.",
+    "Best route lam15+unmasked+min_cells20 = 74.936110 (+0.1985), passes the frozen v0088 decision gate (mean_gain>0, wins 4/7>=4, de/direction/severity all >=-2).",
+    "Combination is super-additive: unmasked alone +0.074, lam15 alone +0.079, together +0.193.",
+    "NEW ARCHITECTURE joint rank transport (whole-profile transport instead of marginal quantile fill) measured -12.07; its control arm stayed at 74.412 so the comparison is clean. The local composite rewards marginal distributional calibration and punishes joint transport.",
+    "State-granularity (S=4/12/16/32) and quantile-resolution (nq=11/31/41) families fail closed as response swaps because response shape must match the refitted model S and positive_q; they need a full model refit, not runnable here.",
+    "lam axis has a plateau: lam12/15/18 span 0.006 (noise). min_cells is noise (mc3/mc10/mc20 within 0.009). The signal is unmasked + reduced shrinkage, saturated at about +0.198.",
+    "Gain is 4/7 per-genotype wins carried by 3 large wins (+1.0 Ehmt2, +0.87 Kmt2b, +0.59 Kmt2a) against Dnmt1 -0.855. Not uniform.",
+    "CAVEAT carried forward: local source-side score has repeatedly failed to transfer (v0086 source-proxy gain -> server 49.34 below v0084). A +0.198 local gain is not a server prediction."
+  ],
+  "config": {
+    "goal": "maximize T3 local composite via existing-route optimization, route combination, and new-architecture routes",
+    "scope": "research/t3_20261008/snapshots/v0088 emitter + crossko_hurdle_v2 response structure (copied per variant; archive never modified)",
+    "metric": "skill-weighted composite total, conditional arm, 7 held-out genotypes x 3 seeds",
+    "direction": "higher_is_better",
+    "verify": "/home/huyudi/vework/ve-t3/bin/python /home/huyudi/vework/eval/route.py --name <n> --response <r> (or --emitter joint)",
+    "guard": "emitted artifact contract: shape 7449x500, finite, non-negative, closed panel total 10000 within 0.02"
+  }
+}

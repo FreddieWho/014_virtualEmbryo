@@ -1,0 +1,22 @@
+{
+  "arm": "conditional",
+  "total": 74.77484610668039,
+  "all_arms": {
+    "baseline": 74.44565417384175,
+    "both": 74.23256589588794,
+    "conditional": 74.77484610668039,
+    "residual": 73.87106840885744
+  },
+  "components": {
+    "de_skill": 69.2458966039761,
+    "direction_skill": 72.94234253735897,
+    "severity_abs_skill": 93.4384210775848,
+    "mmd_skill": 61.33526084838232,
+    "variogram_skill": 63.0706864993216
+  },
+  "name": "resp_mincells3",
+  "emitter": "frozen",
+  "response": "mincells3",
+  "guard": "PASS",
+  "guard_note": "shape=7449x500 finite closed max_mass_err=0.003118"
+}

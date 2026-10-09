@@ -1,0 +1,22 @@
+{
+  "arm": "conditional",
+  "total": 74.71277083796298,
+  "all_arms": {
+    "baseline": 74.33852264295828,
+    "both": 74.21629618653796,
+    "conditional": 74.71277083796298,
+    "residual": 73.85422146368488
+  },
+  "components": {
+    "de_skill": 69.08911747441383,
+    "direction_skill": 72.9106006246529,
+    "severity_abs_skill": 93.49196597015666,
+    "mmd_skill": 61.218422132144006,
+    "variogram_skill": 62.98979113848951
+  },
+  "name": "resp_broadcast",
+  "emitter": "frozen",
+  "response": "broadcast",
+  "guard": "PASS",
+  "guard_note": "shape=7449x500 finite closed max_mass_err=0.003118"
+}

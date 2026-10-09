@@ -1,0 +1,22 @@
+{
+  "arm": "conditional",
+  "total": 62.69874530441019,
+  "all_arms": {
+    "baseline": 74.44691354464292,
+    "both": 62.69874530441019,
+    "conditional": 62.69874530441019,
+    "residual": 62.69874530441019
+  },
+  "components": {
+    "de_skill": 57.80914626833133,
+    "direction_skill": 59.14303126100598,
+    "severity_abs_skill": 77.21033395582181,
+    "mmd_skill": 57.33932570324272,
+    "variogram_skill": 54.83676294143388
+  },
+  "name": "joint_lam10",
+  "emitter": "joint",
+  "response": "lam10",
+  "guard": "PASS",
+  "guard_note": "shape=7449x500 finite closed max_mass_err=0.002558"
+}

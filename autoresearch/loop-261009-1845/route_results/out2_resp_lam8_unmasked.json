@@ -1,0 +1,22 @@
+{
+  "arm": "conditional",
+  "total": 74.88683626445145,
+  "all_arms": {
+    "baseline": 74.49854093141106,
+    "both": 74.37795831137008,
+    "conditional": 74.88683626445145,
+    "residual": 74.00904324637347
+  },
+  "components": {
+    "de_skill": 69.35566871769868,
+    "direction_skill": 73.47449752445726,
+    "severity_abs_skill": 92.96017738757254,
+    "mmd_skill": 61.55459091506141,
+    "variogram_skill": 63.56145014158773
+  },
+  "name": "resp_lam8_unmasked",
+  "emitter": "frozen",
+  "response": "lam8_unmasked",
+  "guard": "PASS",
+  "guard_note": "shape=7449x500 finite closed max_mass_err=0.002948"
+}
