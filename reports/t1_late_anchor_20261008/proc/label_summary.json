@@ -1,0 +1,45 @@
+{
+ "holdout_acc": 0.92,
+ "n_features": 400,
+ "ext": {
+  "8.5": {
+   "ECTO": 4012,
+   "MESO": 1146,
+   "SHF": 1117,
+   "NCC": 685,
+   "LOWCONF": 613,
+   "ENDODERM": 399,
+   "ENDO": 332,
+   "CM_V": 163,
+   "BLOOD": 106,
+   "CM_A": 86,
+   "EPI": 41
+  },
+  "14.5": {
+   "CM_V": 5836,
+   "MESO": 1326,
+   "ENDO": 1120,
+   "NCC": 433,
+   "CM_A": 407,
+   "LOWCONF": 99,
+   "SHF": 40,
+   "EPI": 34,
+   "BLOOD": 15,
+   "ENDODERM": 13,
+   "ECTO": 1
+  },
+  "16.5": {
+   "CM_V": 6824,
+   "MESO": 1157,
+   "ENDO": 946,
+   "NCC": 439,
+   "CM_A": 286,
+   "LOWCONF": 65,
+   "EPI": 34,
+   "SHF": 11,
+   "ENDODERM": 10,
+   "BLOOD": 5,
+   "ECTO": 1
+  }
+ }
+}
