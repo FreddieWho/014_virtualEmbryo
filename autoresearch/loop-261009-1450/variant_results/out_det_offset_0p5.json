@@ -1,0 +1,20 @@
+{
+  "arm": "conditional",
+  "total": 73.03168076378181,
+  "all_arms": {
+    "baseline": 74.41229839082057,
+    "both": 72.95465732233157,
+    "conditional": 73.03168076378181,
+    "residual": 72.76696684343312
+  },
+  "components": {
+    "de_skill": 68.17421317908824,
+    "direction_skill": 71.0658440222479,
+    "severity_abs_skill": 89.06615153008971,
+    "mmd_skill": 62.38407912255151,
+    "variogram_skill": 63.25410534080945
+  },
+  "variant": "det_offset_0p5",
+  "axis": "detection_offset",
+  "value": "0.5"
+}

@@ -186,3 +186,16 @@ T2-EMBRYO-20261009-v0020	T2:embryo:val_interp	SHIPPED	no promotion	v0020	scored	
 T2-EMBRYO-20261009-v0021	T2:embryo:val_interp	PASS	precision-gate-passed	v0021	scored	reports/SERVER_SCORE_REGISTRY.md#v0021-scrna-copula-return	D-20261009-T2EMBRYO-SUPPORT-001
 
 T2-EMBRYO-20261009-v0022	T2:embryo:val_interp	SHIPPED	no incremental gain	v0022	scored	reports/SERVER_SCORE_REGISTRY.md#v0022-geo-coupling-return-and-campaign-close	D-20261009-T2EMBRYO-CLOSE-003
+T1-LATEANCHOR-20261009-v0089	T1:val	SHIPPED	SCORED 53.14; late_anchor_x1 below selection	v0089	scored	reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009	D-20261009-T1LATEANCHOR-001
+T1-LATEANCHOR-20261009-v0090	T1:val	SHIPPED	SCORED 53.43; late_anchor_x2_comphalf below selection	v0090	scored	reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009	D-20261009-T1LATEANCHOR-001
+T1-LATEANCHOR-20261009-v0091	T1:val	SHIPPED	SCORED 57.99; promoted then superseded by v0092 (+0.90)	v0091	scored	reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009	D-20261009-T1LATEANCHOR-001
+T1-LATEANCHOR-20261009-v0092	T1:val	PASS	PROMOTED current T1 best 58.89 (+0.90 vs v0091)	v0092	registered	reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009	D-20261009-T1LATEANCHOR-001
+T1-LATEANCHOR-20261009-v0093	T1:val	SHIPPED	SCORED 58.22; high backup, below selection by 0.67	v0093	registered	reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009	D-20261009-T1LATEANCHOR-001
+T3-SIX2-20261008-o1_hnmf	T3:gata4	SHIPPED	SCORED 47.92; within prior v0048 tie band, not promoted	v0081	scored	reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008	D-20261008-T3BACKLOG-001
+T3-SIX2-20261008-o2_pnmf	T3:gata4	SHIPPED	SCORED 47.94; within prior v0048 tie band, not promoted	v0082	scored	reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008	D-20261008-T3BACKLOG-001
+T3-SIX2-20261008-o3_psb	T3:gata4	SHIPPED	SCORED 47.51; same-ID reconstructed revision, REJECT	v0083	scored	reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008	D-20261008-T3BACKLOG-001
+T3-SIX2-20261008-n1_qtl	T3:gata4	SHIPPED	SCORED 49.55; promoted then superseded by v0087 (+3.87)	v0084	scored	reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008	D-20261008-T3BACKLOG-001
+T3-SIX2-20261008-n2_dsign	T3:gata4	SHIPPED	SCORED 47.45; same-ID reconstructed revision, REJECT	v0085	scored	reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008	D-20261008-T3BACKLOG-001
+T3-ARANK-20261008-r2	T3:gata4	SHIPPED	SCORED 49.34; REJECT -0.21 vs v0084; source-proxy gain did not transfer	v0086	registered	reports/SERVER_SCORE_REGISTRY.md#t3-arank-v0086-score-return-20261008	D-20261008-T3ARANK-001
+T3-EMBHURDLE-20261008	T3:gata4	SHIPPED	SCORED 53.42; promoted then superseded by v0088 (+0.27)	v0087	scored	reports/SERVER_SCORE_REGISTRY.md#t3-embhurdle-v0087-score-return-20261008	D-20261008-T3EMBHURDLE-001
+T3-CONDHURDLE-20261008	T3:gata4	PASS	PROMOTED current T3 best 53.69 (+0.27 vs v0087)	v0088	registered	reports/SERVER_SCORE_REGISTRY.md#t3-condhurdle-v0088-score-return-20261008	D-20261008-T3CONDHURDLE-001

@@ -329,3 +329,9 @@ G1-T1-D2R2-DZ20，审计分离），脚本加 --dz 开关。若再败则关 D2 �
 
 - 2026-10-07 T1-SIX 设计冻结：3 条既有路线优化/结合（ocovstab n2covot 升级、osoftcov f1soft×n2covot、ostabmix f2stable×s2mix per-type 自适应混合）＋3 条全新（nwasser 精确 OT 计划位移场、nconf split-conformal donor 校准、nbidir 前向/后向计划一致性权重）；用户两项裁决：混合只作载体带新组件、检索优先（2026-09-21 草案核实为已执行并关闭，未采用）；参数冻结 configs/t1_six/design_20261007.json；设计 reports/T1_SIX_DESIGN_20261007.md。运行前修订：环境修复（h5py 3.16+xarray 2026.9 用户级）、POT ot.emd 替代发散 Sinkhorn、ocovstab per-scope 可靠性、ostabmix 非 common 骨架回退。
 - 2026-10-07 T1-SIX 六路线完成：全部全量执行（report+final 双 scope）、完整 32285 列官方本地 scorer ×6、独立进程重放 PASS×6、13 单元测试、contract PASS×6；v0057–v0062 score_pending，未提交/未评分；zip deliveries/t1six__t1__upload__20261007.zip READY_NOT_SUBMITTED（6 成员+4 manifest）。本地信号：ostabmix v0058 de 0.6111（+0.0185 改善，其余持平）、nbidir v0060 dir/Energy/Vario 改善 de 取舍；ocovstab/osoftcov/nwasser/nconf 本地全劣。best v0051=53.92 保持；服务器对照 pending 用户回填。D-20261007-T1SIX-001；reports/t1_six_20261007/REPORT.md。
+
+## 2026-10-09 追加
+
+- 2026-10-09｜T1 late-anchor/OT 五 lane 回分完成｜v0089 late_anchor_x1=53.14、v0090 late_anchor_x2_comphalf=53.43、v0091 v51_anchor_auto=57.99（先晋级，后被取代）、v0092 ot_gen_v51=58.89（晋级为新 board best，+0.90 vs v0091）、v0093 v51_anchor_pergroup=58.22。现役切到 v0092，v0093/v0091 为备份。T1 待分清零。证据 reports/SERVER_SCORE_REGISTRY.md；D-20261009-T1LATEANCHOR-001。
+- 2026-10-09｜导航刷新｜T1 现役由 v0051=53.92 改为 v0092=58.89，derived 三任务和由 160.68 改为 171.45；门户观测仍为 171.4（2026-10-08T11:58Z，rank 61），早于本次易主，必须重读。blocks_submission:false。
+- 2026-10-09｜已知缺口｜AUDIT.md 印 T1 数值最高 57.99 而非 58.89，原因是 generate_audit.py:42 只统计 score_status=scored，而 v0092/v0093 用 registered。字段不一致，未擅自改 INDEX，待 coordinator 裁决。

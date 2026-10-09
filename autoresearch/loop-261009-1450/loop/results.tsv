@@ -1,0 +1,20 @@
+# metric_direction: higher_is_better
+# metric: skill-weighted composite total (conditional arm), 7 held-out genotypes x 3 seeds
+# weights: de .30 / direction .25 / severity_abs .25 / mmd .12 / variogram .08
+# guard: emitter contract (mass closure, zero mask, determinism, own-gene subtraction)
+iteration	timestamp	commit	metric	delta	guard	guard-metric	status	description
+0	2026-10-09T15:09:30+08:00	5c1bcfb	74.737588	0.0	PASS	contract	baseline	frozen v0088 conditional arm; local score reproduced bit-exact from archived summary
+1	2026-10-09T15:15:48+08:00	a68e19a	74.737588	0.000000	PASS	contract	no-op	harness fidelity check on isolated variant tree; reproduced frozen conditional total exactly
+2	2026-10-09T15:22:41+08:00	29a8e19	74.734510	-0.003078	PASS	contract	discard	propensity_penalty 0.1->0.05; mmd 61.417->61.392, direction 72.970->72.969; regularization too weak
+3	2026-10-09T15:32:56+08:00	29a8e19	74.740974	+0.003386	PASS	contract	keep	propensity_penalty 0.1->0.2; only positive delta so far, still inside noise
+4	2026-10-09T15:32:56+08:00	29a8e19	74.735910	-0.001678	PASS	contract	discard	propensity_penalty 0.1->0.5; over-regularized, worse than frozen
+5	2026-10-09T15:32:56+08:00	29a8e19	74.737588	+0.000000	PASS	contract	no-op	composition_clip +-2->+-1; axis does not bind at this operating point
+6	2026-10-09T15:32:56+08:00	29a8e19	74.737588	+0.000000	PASS	contract	no-op	composition_clip +-2->+-3; axis does not bind
+7	2026-10-09T15:32:56+08:00	29a8e19	74.737588	+0.000000	PASS	contract	no-op	propensity_min_cells 20->10; all states already above threshold
+8	2026-10-09T15:32:56+08:00	29a8e19	74.737588	+0.000000	PASS	contract	no-op	propensity_min_cells 20->40; axis does not bind
+9	2026-10-09T15:43:48+08:00	29a8e19	74.739233	+0.001645	PASS	contract	keep	propensity_penalty 0.1->0.15; monotone with 0.2, still noise-level
+10	2026-10-09T15:43:48+08:00	29a8e19	74.737902	+0.000314	PASS	contract	discard	propensity_penalty 0.1->0.3; benefit decays past 0.2
+11	2026-10-09T15:43:48+08:00	29a8e19	74.673126	-0.064462	PASS	contract	discard	detection_offset x1.5; over-activates, hurts
+12	2026-10-09T15:43:48+08:00	29a8e19	73.031681	-1.705907	PASS	contract	discard	detection_offset x0.5; under-activates badly
+13	2026-10-09T15:43:48+08:00	29a8e19	72.653997	-2.083590	PASS	contract	discard	zero_frac_scale x0.9; breaks detection fraction, large loss
+14	2026-10-09T15:43:48+08:00	29a8e19	72.651035	-2.086553	PASS	contract	discard	zero_frac_scale x1.1; same, detection fraction is tightly pinned

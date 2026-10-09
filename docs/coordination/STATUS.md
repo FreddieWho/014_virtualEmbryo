@@ -2,6 +2,14 @@
 
 接手先看 [`../ATOM_MAP.md`](../ATOM_MAP.md) 和 [`../../reports/README.md`](../../reports/README.md)。本文件是并行状态摘要，不是入门读物。2026-10-05 只加了这句导航，没有改下面的选集。
 
+### 2026-10-09 导航刷新（coordinator 授权）
+
+按 2026-10-08/09 已回填的服务器分刷新三份导航：T1 现役 v0092=58.89、T2 胚胎 v0021=63.0047、T3 v0088=53.69。门户确认合计最后一次读数仍是 171.4（2026-10-08T11:58Z，rank 61），早于 T1 与 T2 胚胎两次易主；现役相加推导 171.45，不是门户值。发现两处需裁决的账目缺口：(1) 门户 per-task 显示值 T1 58.0 / T2 59.7 与现役和 58.89 / 58.87 对不上，仅 T3 53.7 与 53.69 吻合，重读时须核对门户口径；(2) `AUDIT.md` 的数值最高只统计 `score_status=scored`，而 66 行用 `registered`（含 v0092/v0093/v0021），故 AUDIT 印出的 T1 57.99、T2 胚胎 62.89 低于现役——字段不一致而非分数缺失，未擅自改写 INDEX，待裁决。T3 提交额度：registry 记 2026-10-08 用尽当日 8/8 并声明无剩余授权；2026-10-09 T3 无提交记录，当日额度是否已重置未观测，标 OPEN 不宣称可用。blocks_submission:false。
+
+### 2026-10-09 T3 本地重训与成分轴饱和判定
+
+v0088 从公开代码完整重建：v0087/v0088 表达式哈希与 `state_emitter.joblib`/`generic_response.npz`/`expected_donor_rows.npy` 逐位复现，GO embedding 重建为逐字节相同，基线复合分与归档 summary 最大绝对差 0.0。据此 `PUBLIC_REBUILD_FOLLOWUP.md` 的"完整拟合未验证"限制可撤销，公开 clone 不再需要私有 cache。发射器成分轴 14 次迭代：最好变体 `propensity_penalty=0.2` 仅 +0.0034（噪声级），`de_skill` 在全部变体中变化恰为 0，三个轴（composition_clip / propensity_min_cells）为精确 no-op，检测比例轴曲率极陡。判定该轴饱和，**不建议提交任何变体**；T3 本地源侧指标不再是有效目标。服务器现役 v0088 不变。详见 reports/t3_rebuild_20261009/REPORT.md 与 autoresearch/loop-261009-1450/；blocks_submission:false。
+
 ### 2026-10-03 T2 新留阶段评价准备
 
 两基础对照×三固定评分种子已完成；仅用E8.25/E8.75构建预测，E9.5留作评价。归一表达误差复制末阶段1.0优于时间均值位移1.16833。新前台循环目标10%或5%待用户确认，未初始化、未新增候选；详见 `reports/t2_holdout_setup_20261003/REPORT.md`；blocks_submission:false。
@@ -16,7 +24,7 @@
 <!-- ve-status:start -->
 ```yaml
 schema: ve.parallel-status.v1
-updated_at: "2026-10-03"
+updated_at: "2026-10-09"
 updated_by: coordinator
 
 policy:
@@ -62,14 +70,16 @@ data:
   auxiliary_model_input: false
 
 leaderboard:
-  total: 156.06
-  total_status: portal_confirmed_2026-09-26
-  derived_total: 160.68
+  total: 171.4
+  total_status: portal_observed_2026-10-08T11:58Z_rank61
+  derived_total: 171.45
   derived_total_status: not_portal_confirmed
-  T1: 53.92
-  T2: 58.83
-  T3: 47.93
-  aggregate_basis: "156.06 remains the last user-transcribed portal Total (2026-09-26). Current board selections are T1 v0051 53.92 (v0054 53.98 TIE numeric-high backup, v0049 53.72 high backup), T2 boards 62.89/62.48/51.12 (task mean 58.83), T3 v0048 47.93. Their sum 160.68 is a derived figure only (D-20261007-T2GEOM4SCORE-001) and must not be cited as a portal Total. OPEN: portal Total re-read."
+  T1: 58.89
+  T2: 58.87
+  T3: 53.69
+  aggregate_basis: "171.4 is the last portal-observed Total (2026-10-08T11:58Z, Human rank 61) and PREDATES the T1 v0092 and T2 embryo v0021 promotions. Current board selections are T1 v0092 58.89 (v0093 58.22 and v0091 57.99 backups), T2 boards 63.0047/62.48/51.12 (task mean 58.87), T3 v0088 53.69 (v0087 53.42 fallback). Their sum 171.45 is derived only and must not be cited as a portal Total. OPEN: portal Total re-read AND per-task reconciliation."
+  per_task_reconciliation: "UNRESOLVED. Portal list displays T1 58.0 / T2 59.7 / T3 53.7. T3 agrees with selection 53.69; T1 (58.0 vs 58.89) and T2 (59.7 vs 58.87) do not. Portal per-task aggregation basis is not established; do not assume it equals the mean of board selections. Re-read and reconcile before citing any per-task figure."
+  known_data_gap: "AUDIT.md Server bests under-reports because scripts/generate_audit.py:42 filters score_status=='scored' while 66 INDEX rows use 'registered' (including v0092/v0093/v0021, all with real server scores). Field inconsistency, not missing scores. INDEX not rewritten pending coordinator ruling; SERVER_SCORE_REGISTRY.md remains authoritative for scores."
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -79,9 +89,9 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T1_val/v0051_mix36x38a (scored 53.92; v0054 53.98 TIE numeric-high backup; v0049 53.72 high backup)"
-    current_best_score: 53.92
-    next_action: "T1-SIX 六路线回分完成（v0058=53.85 带内 TIE 不晋级，其余 5 件 REJECT；D-20261007-T1SIXSCORE-001）；v0051现役，v0054 TIE 备份；混合族饱和再确认（~53.8），本波关闭，新机制才值得烧名额；确认门户选集与Total。"
+    current_best: "candidate/T1_val/v0092_ot_gen_v51 (server 58.89, promoted 2026-10-09; v0093 v51_anchor_pergroup 58.22 and v0091 v51_anchor_auto 57.99 backups)"
+    current_best_score: 58.89
+    next_action: "late-anchor/OT 五 lane 回分完成（v0092=58.89 晋级 +0.90 vs v0091；v0093 58.22 / v0091 57.99 / v0090 53.43 / v0089 53.14；D-20261009-T1LATEANCHOR-001）；现役切到 v0092。混合族（~53.7）与 late-anchor 直用轴均已过平台，下一手需新机制；确认门户选集与 Total。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T1_*"
@@ -98,10 +108,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: embryo v0014 e_o1_shrinkmerge 62.89 + interp v0023 h_aniso50 62.48 + heart_extrap v0030 x_r3_medlib09 51.12"
-    current_best_score: 58.83
-    current_best_score_basis: "board-mean (62.89+62.48+51.12)/3=58.83. Heart interp promoted 2026-10-07 (D-20261007-T2GEOM4SCORE-001; v0023 +0.12 vs v0019, outside ±0.1). Occupancy worsened. Portal-confirmed Total remains 156.06; 160.68 derived only."
-    next_action: "GEOM4 四件已回分。心脏插值现役 v0023=62.48；v0024/v0018 分位数搬运关闭；v0035 外推生长关闭。不再调同一形变的比例。OPEN: portal Total 重读（推导 160.68，确认仍 156.06）。"
+    current_best: "per-board selection: embryo v0021 e3_scrna_copula 63.0047 + interp v0023 h_aniso50 62.48 + heart_extrap v0030 x_r3_medlib09 51.12"
+    current_best_score: 58.87
+    current_best_score_basis: "board-mean (63.0047+62.48+51.12)/3=58.868233. Embryo promoted 2026-10-09 (D-20261009-T2EMBRYO-SUPPORT-001; +0.1117 vs v0014 62.8930, resolved at official public-API precision 63.0047, outside ±0.1). Portal-observed Total 171.4 predates this promotion; 171.45 derived only."
+    next_action: "EMBRYO 四件已回分，v0021=63.0047 晋级（唯一服务器高精度晋级）；v0019/v0020/v0022 REJECT，E3 supportmix/state-Bures/geo-coupling 三轴关闭。心脏插值现役 v0023=62.48，外推 v0030=51.12。外推 existing-route 预算 2/2 已用尽。OPEN: portal Total 重读（推导 171.45）与 per-task 口径核对。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"
@@ -114,10 +124,11 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T3_gata4/v0048_next_n2hurdle; server 47.93, promoted D-20260927-T3SCORE-001"
-    current_best_score: 47.93
+    current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback"
+    current_best_score: 53.69
     active_atom: null
-    next_action: "v0072已登记REJECT，半步试验关闭，现役v0048保持；不继续倍率扫描，后续需新响应依据或结构证据。reports/t3_halfstep_20261003/SCORE_REVIEW.md；D-20261003-T3HALFSCORE-001。"
+    next_action: "v0088 现役保持。2026-10-09 本地重训完整复现 v0087/v0088 表达式与三个推理产物（逐位），GO embedding 亦逐字节相同，PUBLIC_REBUILD_FOLLOWUP 的未验证拟合限制可撤销；基线复合分与归档 summary 差 0.0。发射器成分轴 14 次迭代判定饱和：最好 +0.0034，de_skill 全变体零变化，三个轴精确 no-op，检测比例轴曲率极陡；不建议提交任何变体。本地源侧指标不再是有效目标，下一手需服务器分仲裁（须重新授权）或改响应结构开新路线。reports/t3_rebuild_20261009/REPORT.md。"
+    submission_budget: "OPEN/UNVERIFIED. Registry records 2026-10-08 v0088 consumed the separately authorized final one-attempt budget with portal daily T3 usage 8/8. 2026-10-09 has NO T3 submission; whether the daily counter reset was not observed. Do not claim budget availability without user confirmation."
     blocker: "T3-S1A-GATE-001; blocks_submission: false"
     owned_paths:
       - "submissions/candidates/T3_*"

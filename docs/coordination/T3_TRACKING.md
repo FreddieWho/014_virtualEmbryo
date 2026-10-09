@@ -429,3 +429,10 @@ Batch 1 收尾报告：`reports/PHASE_REPORT_BATCH1_20260829.md`；Batch 3 收�
 - 2026-10-07｜T3 六新路线交付包｜deliveries/t3six__t3__upload__20261006.zip（6 成员，v0075–v0080，SHA 对 INDEX 核验通过）；READY_NOT_SUBMITTED；receipt 同目录；v0073/v0074 副本不打包。
 - 2026-10-07｜T3 六新路线回分｜v0075=46.73、v0076=47.31、v0077=47.43、v0078=47.93、v0079=47.40、v0080=46.82；对照现役v0048=47.93：v0078 同分平局带内现役留下，其余5个 NOT_PROMOTED，六路线无一晋级；INDEX/registry 已回填 score_pending 清零；D-20261007-T3SIXSCORE-001；reports/SERVER_SCORE_REGISTRY.md#t3-six-score-return-20261007。
 - 2026-10-07｜T3 第二波六新路线实现完成｜v0081(o1_hnmf 现役⊕v0078等权)、v0082(o2_pnmf hurdle门×NMF)、v0083(o3_psb 门×收缩×乘法)、v0084(n1_qtl q0.25 分位数形状迁移)、v0085(n2_dsign g0.5 供体符号门)；n3_pswap 源侧关闭（identity 秩最优，无正信号，不交付）；父v0048、contract PASS、score_pending、未提交/未评分；设计 reports/t3_six_routes_20261007/DESIGN.md；交付包 deliveries/t3six2__t3__upload__20261007.zip（5 成员，READY_NOT_SUBMITTED）。
+
+## 2026-10-09 追加
+
+- 2026-10-08｜T3 v0083–v0088 回分与晋级｜v0084 重建 q0.25=49.55 晋级、v0086 arank r2=49.34 REJECT、v0087 embhurdle_v2=53.42 晋级、**v0088 condhurdle=53.69 晋级为现役**（+0.27 vs v0087）。五项子项 de 41.7 / dir 51.2 / sev 75.2 / mmd 51.1 / vario 43.1。registry 已登记，T3 待分清零。
+- 2026-10-09｜T3 本地重训完整复现｜从 research/t3_20261008 公开代码重建：GEO 12/12 源哈希通过、8/8 注释 TSV 逐字节、GO embedding 重建逐字节（a81ff9a5）、8 个归一化面板 frozen_merge_matches（含已知 690 个缺失 WT barcode）、模型拟合 REBUILT_EXPRESSION_EXACT，v0087/v0088 表达式哈希与 state_emitter.joblib / generic_response.npz / expected_donor_rows.npy 全部逐位复现。据此 PUBLIC_REBUILD_FOLLOWUP.md 的"完整拟合未验证"限制可撤销，公开 clone 不再需要私有 cache。基线复合分与归档 summary 最大绝对差 0.0。
+- 2026-10-09｜T3 发射器成分轴判定饱和｜14 次单轴迭代（propensity_penalty / propensity_min_cells / composition_clip / detection_offset / zero_frac_scale），最好 propensity_penalty=0.2 仅 +0.0034（噪声级）且不单调（0.15/0.2/0.3 = +0.0016/+0.0034/+0.0003）；de_skill 在全部变体中变化恰为 0，说明发射器只重分配已激活细胞、不能改变 DE 集合；三个轴为精确 no-op；检测比例轴 ±10% 损失约 2.08、−50% 损失 1.71，冻结值在窄峰。**结论：不建议提交任何变体；T3 本地源侧指标不再是有效目标。** 服务器现役 v0088 不变。证据 reports/t3_rebuild_20261009/REPORT.md、autoresearch/loop-261009-1450/。
+- 2026-10-09｜T3 提交额度 OPEN｜registry 记 2026-10-08 v0088 用尽当日 T3 用量 8/8 并声明无剩余授权；本日 T3 无提交记录，当日额度是否已重置未观测。标 OPEN，不宣称可用，需用户确认。blocks_submission:false。

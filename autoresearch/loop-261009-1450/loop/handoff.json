@@ -1,0 +1,22 @@
+{
+  "version": "2.1.0",
+  "source": "loop",
+  "timestamp": "2026-10-09T15:45:27+08:00",
+  "status": "BOUNDED",
+  "results_tsv": "/home/huyudi/014_virtualEmbryo/autoresearch/loop-261009-1450/loop/results.tsv",
+  "findings": [
+    "v0088 fully reconstructed: v0087/v0088 expression hashes and all three inference assets byte-identical to archived MANIFEST",
+    "GO_EXPANDED_EMBEDDING.npz rebuilt byte-exact (a81ff9a5), retracting PUBLIC_REBUILD_FOLLOWUP.md:53 unverified-fit limit",
+    "Baseline composite reproduced bit-exact from archived summary (max abs diff 0.0)",
+    "de_skill is structurally immovable across all emitter penalty variants (+0.00000); DE shortfall lives in response structure, not the emitter",
+    "Detection fraction axes are narrow peaks: zero_frac +-10% costs ~2.08, det_offset -50% costs 1.71",
+    "Best variant propensity_penalty=0.2 gains +0.003386 (noise level), mmd-only, non-monotone; not recommended for submission"
+  ],
+  "config": {
+    "goal": "component iteration on the two best T3 routes to maximize local composite score",
+    "scope": "research/t3_20261008/snapshots/v0088/emitter_v88.py (copied per variant, archive never modified)",
+    "metric": "skill-weighted composite total, conditional arm, 7 held-out genotypes x 3 seeds",
+    "direction": "higher_is_better",
+    "verify": "/home/huyudi/vework/eval/variant.py --name <n> --axis <a> --value <v>"
+  }
+}

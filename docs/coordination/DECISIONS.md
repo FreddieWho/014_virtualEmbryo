@@ -1459,3 +1459,93 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "reports/SERVER_SCORE_REGISTRY.md#t1-six-score-return-20261007；24 行 submetrics；reports/t1_six_20261007/REPORT.md。用户回填 portal 分数，submission ID/时间未提供，不伪造。候选 SHA 以 submissions/INDEX.tsv 为准。"
 - boundary: "v0058 本地 de 冠军（0.6111，+0.0185）服务器 TIE——本地 de 信号再次未转化为服务器收益，与 T1 phase 预承诺 proxy 警告一致。v0058 的 dir 60.4（与 v0054 并列已知最高）/vario 51.2（已知最高）为板面强项，被 de −0.5/mmd −0.6 抵消；不得据此宣称 ostabmix 优于现役或重启混合族调参。blocks_submission:false。"
 - review_trigger: "门户 Total 重读。不得用本波数字扫混合权重或方向权重。"
+
+## D-20261009-NAV-001 — 导航按 2026-10-08/09 回分刷新；两处账目缺口显式记录，未擅自改写 INDEX
+
+- date: 2026-10-09
+- scope: coordination
+- type: navigation_refresh
+- decision: "按已登记的服务器分刷新 docs/ATOM_MAP.md、根 STATUS.md、docs/coordination/STATUS.md 与三份 TRACKING。现役改为 T1 v0092=58.89、T2 胚胎 v0021=63.0047 / 心插 v0023=62.48 / 外推 v0030=51.12（任务均分 58.87）、T3 v0088=53.69。三任务现役相加推导 171.45；门户观测仍为 171.4（2026-10-08T11:58Z，rank 61），早于 T1 与 T2 胚胎两次易主。T3 提交额度标 OPEN/UNVERIFIED。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md（#t1-late-anchor-20261009、#t2-embryo-20261009、#t3-condhurdle-v0088-score-return-20261008）；submissions/INDEX.tsv；scripts/generate_audit.py:42。"
+- boundary: "两处缺口显式记录但不代为裁决：(1) 门户榜单 per-task 显示 T1 58.0 / T2 59.7 与现役和 58.89 / 58.87 不符，仅 T3 53.7 与 53.69 吻合，门户 per-task 聚合口径未确立，不得假设等于 board 均值；(2) AUDIT.md 数值最高因只统计 score_status=scored 而低于现役，66 行使用 registered（含 v0092/v0093/v0021，均有真实服务器分），属字段不一致而非分数缺失——未改写 INDEX，服务器分数一律以 SERVER_SCORE_REGISTRY.md 为准。T3 2026-10-09 无提交记录，不等于额度可用。"
+- review_trigger: "门户 Total 重读并完成 per-task 对账；coordinator 裁决 score_status 字段是否统一；T3 提交前需用户重新授权。"
+
+## D-20261008-T3BACKLOG-001 — T3 v0081–v0085 回分：v0084=49.55 晋级，同 ID 重建件不追认历史字节
+
+- date: 2026-10-08
+- scope: T3
+- type: server_score_return
+- decision: "v0081=47.92、v0082=47.94 落在旧现役 v0048 的平局带内，不晋级；v0083=47.51、v0085=47.45 REJECT；v0084 q0.25 重建修订=49.55 晋级（+1.62 vs v0048 47.93，超出 +0.03 阈值）。v0083–v0085 明确标注为同 ID 重建修订，不是原始字节恢复；重建件的表达式数组哈希精确，序列化 H5AD 字节不同，不追认历史原始件得分。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-backlog-score-return-20261008；reports/t3_backlog_20261008/RECONSTRUCTION_RECEIPT.json。门户未暴露 artifact 哈希，v0081/v0082 的历史 INDEX SHA 未获独立二进制核验。"
+- boundary: "同 ID 重建不追认不可得的原始字节；重建数组哈希精确但容器字节不同，不得声称与原始件字节一致。blocks_submission:false。"
+- review_trigger: "无。后续 v0087/v0088 已超越该水位。"
+
+## D-20261008-T3ARANK-001 — T3 v0086 arank r2 = 49.34 REJECT，源侧改善未转化
+
+- date: 2026-10-08
+- scope: T3
+- type: server_score_return
+- decision: "v0086 arank 修订 2 = 49.34，低于现役 v0084 49.55（−0.21），不跨 ±0.1 平局带，不晋级，现役不变。仅提交修订 2；更早的预提交草稿与未使用的临时版本号未登记为候选，也不计入提交次数。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-arank-v0086-score-return-20261008。方法：域锚定响应秩搬运，池化对照源域范围校正，按胚胎正秩索引的等权样本匹配正分位数变化，父版本 v0084。"
+- boundary: "源侧代理改善未转化为该配置的胚胎榜收益。此负结果不建立因果机制，也不否定所有域迁移方法。源侧证据是历史且自适应复用的，不是独立验证集。blocks_submission:false。"
+- review_trigger: "无。配置级负结果已登记关闭。"
+
+## D-20261008-T3EMBHURDLE-001 — T3 v0087 七 KO 通用胚胎状态响应 hurdle v2 = 53.42 晋级
+
+- date: 2026-10-08
+- scope: T3
+- type: server_score_return
+- decision: "v0087 embhurdle_v2 = 53.42，较 v0084 49.55 高 3.87，超出平局带，晋级。现役切到 v0087，v0084 保留为历史回退。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-embhurdle-v0087-score-return-20261008。方法：七 KO 通用胚胎状态响应 + 组成重采样 + 分离检测比例/正分位数 hurdle v2 发射。源条件为 GSE137337 的 E8.5 Dnmt1/Dnmt3a/Dnmt3b/Ehmt2(G9a)/Kdm2b/Kmt2a/Kmt2b，GSE122187 E8.5 WT 与本体信息，替换此前成体成纤维细胞响应源。"
+- boundary: "相对 v0084 方向 48.4→51.2、severity 50.0→75.0 上升，但 DE 47.1→41.7、MMD 54.8→49.7、variogram 53.4→42.3 下降——这是带分布/DE 权衡的总分提升，不是各指标一致改善。这是通用发育扰动先验，不是 Gata4 特异因果机制的证据。WT-only 状态、性别匹配对照与等胚胎加权不能消除队列、化药、性别与发育背景混杂；发育过程是自适应的，不是独立确认。"
+- review_trigger: "无。已被 v0088 超越。"
+
+## D-20261008-T3CONDHURDLE-001 — T3 v0088 conditional hurdle = 53.69 晋级为现役
+
+- date: 2026-10-08
+- scope: T3
+- type: server_score_return
+- decision: "v0088 condhurdle = 53.69，较 v0087 高 0.27，超出 ±0.1 现役带，晋级为 T3 现役。v0087 保留为历史回退。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t3-condhurdle-v0088-score-return-20261008。方法边界：与 v0087 同一七 KO 通用胚胎状态响应 hurdle，把随机零激活 tie 换成 WT-only 状态条件化激活倾向。该臂由冻结四族源侧对比选出，本记录不含门户后调参。源仍为已准入的 GSE137337 胚胎 KO 条件与 GSE122187 WT 及本体信息，无新增源范围或隐藏目标结果。"
+- boundary: "五项子项为门户显示的 SKILL 值，非原始指标；原始值未暴露也不推断。相对 v0087，DE/方向在显示精度上未变，severity +0.2、MMD +1.4、variogram +0.8——改善集中在分布/发射行为，不建立新的目标特异因果响应，也不意味着未变的舍入子项在数值上相同。该次提交消耗了用户单独授权的最后一次尝试预算，门户显示当日 T3 用量 8/8。blocks_submission:false。"
+- review_trigger: "门户 2026-10-08T11:58Z 观测 Total 171.4、rank 61、T1 58.0/T2 59.7/T3 53.7。2026-10-09 T3 无提交，当日额度是否重置未观测，需用户确认。"
+
+## D-20261009-T1LATEANCHOR-001 — T1 late-anchor/OT 五 lane 回分：v0092=58.89 晋级为新 board best
+
+- date: 2026-10-09
+- scope: T1
+- type: server_score_return
+- decision: "v0089 late_anchor_x1=53.14、v0090 late_anchor_x2_comphalf=53.43、v0093 v51_anchor_pergroup=58.22 均低于现役；v0091 v51_anchor_auto=57.99 先晋级后被取代；v0092 ot_gen_v51=58.89 晋级为 T1 现役（+0.90 vs v0091）。T1 现役由 v0051=53.92 改为 v0092=58.89，备份为 v0093 与 v0091。T1 待分清零。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t1-late-anchor-20261009；reports/t1_late_anchor_20261008/。证据类别为门户已读回分。"
+- boundary: "v0089–v0093 为晚外部锚（GSE230531 E8.5/E14.5/E16.5 按样本文件）与 OT 生成式位移路线。混合族（~53.7）与 late-anchor 直用轴均已过平台。误用草稿号 v0063–v0067 已退役（与 T3:gata4 冲突），正式编号 v0089–v0093，SHA-256 未变。本条为导航刷新时依据 registry 事实补写的决策条目。"
+- review_trigger: "门户 Total 与 per-task 口径需按现役重读。"
+
+## D-20261009-T2EMBRYO-SUPPORT-001 — T2 胚胎 v0021 scRNA copula = 63.0047 晋级（服务器高精度）
+
+- date: 2026-10-09
+- scope: T2
+- type: server_score_return
+- decision: "v0019 e3_state_bures=62.33、v0020 e3_supportmix=61.39、v0022 copula_geocouple=62.65 全部 REJECT；v0021 e3_scrna_copula=63.0047 晋级，胚胎现役由 v0014=62.8930 改为 v0021。T2 任务均分由 58.83 改为 58.87=(63.0047+62.48+51.12)/3。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-embryo-20261009 与 #v0021-scrna-copula-return。官方公开 API 于 2026-10-09 07:51:48–51 UTC 解析出 v0021 总分 63.0047、前任 v0014 62.8930，Δ+0.1117，超出 0.1 晋级阈值。这是本项目目前唯一以服务器高精度做出平局带外裁决的晋级。"
+- boundary: "E3 supportmix、state-Bures 配对、geo-coupling 三轴关闭。心插现役 v0023=62.48、外推 v0030=51.12 不变。外推 existing-route 预算 2/2 已用尽。blocks_submission:false。"
+- review_trigger: "门户 per-task 显示 59.7 与 58.87 不符，口径待核对。"
+
+## D-20261009-T2EMBRYO-CLOSE-003 — T2 胚胎 campaign 收口
+
+- date: 2026-10-09
+- scope: T2
+- type: lane_close
+- decision: "T2-EMBRYO-20261009 四实验 campaign 以 v0021 晋级、v0022 REJECT 收口；external slots 与既有路线预算分离记录，不因本次收口而扩大。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#v0022-geo-coupling-return-and-campaign-close；reports/t2_embryo_campaign_20261009/V0022_HANDOFF.json。"
+- boundary: "本条为导航刷新时依据 registry 事实补写的决策条目，不改写任何已有分数或候选身份。"
+- review_trigger: "无。"
+
+## D-20261009-T3REBUILD-001 — T3 v0088 本地完整复现；发射器成分轴判定饱和，不建议提交变体
+
+- date: 2026-10-09
+- scope: T3
+- type: local_reconstruction_and_route_gate
+- decision: "从 research/t3_20261008 公开代码完整重建 v0088：GEO 源 12/12 哈希通过、8/8 注释 TSV 逐字节、GO embedding 重建逐字节、8 个归一化面板 frozen_merge_matches、模型拟合 REBUILT_EXPRESSION_EXACT，v0087/v0088 表达式哈希与三个推理产物全部逐位复现；基线复合分与归档 summary 最大绝对差 0.0。据此 PUBLIC_REBUILD_FOLLOWUP.md 的『完整拟合未验证』限制可撤销。发射器成分轴 14 次单轴迭代判定饱和：最好 propensity_penalty=0.2 仅 +0.0034 且不单调，de_skill 全变体变化恰为 0，三个轴精确 no-op，检测比例轴曲率极陡。不建议提交任何变体；服务器现役 v0088 不变。"
+- evidence: "reports/t3_rebuild_20261009/REPORT.md；autoresearch/loop-261009-1450/loop/results.tsv 与 handoff.json；rebuilt_model/REBUILD_MANIFEST.json 状态 REBUILT_EXPRESSION_EXACT。"
+- boundary: "本地源侧指标不是服务器预测：v0086 源侧改善而服务器 49.34 低于 v0084，T1 v0058、T2 v0035 同样本地好而服务器不涨。发射器只重分配已激活细胞给谁，不能改变 DE 集合，故 DE 端在发射器层面结构不可动；DE 短板若要动须改响应结构，那等于开新路线而非成分迭代。T3 提交额度 OPEN：registry 记 2026-10-08 用尽当日 8/8 并声明无剩余授权，2026-10-09 T3 无提交记录，当日额度是否重置未观测，不宣称可用。blocks_submission:false。"
+- review_trigger: "下一手需服务器分仲裁（须用户重新授权）或改响应结构开新路线；GO 重建复现结论可据此更新 PUBLIC_REBUILD_FOLLOWUP.md 的限制条目。"

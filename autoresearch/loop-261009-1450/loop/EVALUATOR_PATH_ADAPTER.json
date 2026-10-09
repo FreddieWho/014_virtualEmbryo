@@ -1,0 +1,17 @@
+{
+  "scope": "Only model root and scorer import paths rebound; frozen evaluator file otherwise unchanged",
+  "original_code_sha256": "20c3b5334a341a3f7013e0de671d8fd0d8a5d6a26d669226cc7ea1517ccd6c72",
+  "executed_code_sha256": "a9311d36ab4ea8470876f2e300413fd7ab232c372ff2d31c81af493e7e388fe3",
+  "path_only_substitutions": [
+    {
+      "from": "R=Path('/workspace/shared/t3_v87_restored')",
+      "to": "R=Path('/home/huyudi/vework/rebuilt_model')",
+      "occurrences": 1
+    },
+    {
+      "from": "'/workspace/shared/t3repo/third_party/veckit'",
+      "to": "'/home/huyudi/014_virtualEmbryo/third_party/veckit'",
+      "occurrences": 1
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "arm": "conditional",
+  "total": 74.73790165355419,
+  "all_arms": {
+    "baseline": 74.41229839082057,
+    "both": 74.32439674786553,
+    "conditional": 74.73790165355419,
+    "residual": 73.96648519603309
+  },
+  "components": {
+    "de_skill": 69.08911747441383,
+    "direction_skill": 72.97257598094419,
+    "severity_abs_skill": 93.39306562543506,
+    "mmd_skill": 61.42396941104801,
+    "variogram_skill": 63.11099600386844
+  },
+  "variant": "prop_penalty_0p3",
+  "axis": "propensity_penalty",
+  "value": "0.3"
+}
