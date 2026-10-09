@@ -1,0 +1,13 @@
+{
+  "status": "PASS_NO_CATASTROPHE",
+  "full_panel_genes": 32285,
+  "official8_first512_rows_noop_max_abs": 0.0,
+  "known_row_scale_repair_max_abs": 0.0,
+  "full_population_gene_variance_sum_ratio": 0.9303856206944966,
+  "full_population_pseudobulk_l2_change": 1.6853216456282814,
+  "genes_with_reference_delta_abs_ge_0_01": 10333,
+  "direction_flips_vs_released95": 389,
+  "source95_pseudobulk_reference": "All17057 official E9.5 cells via exact frozen coarse-group aggregate summaries; float32 aggregate rounding",
+  "future_truth_used": false,
+  "interpretation": "Full-panel structural controls and released-source directional diagnostic, not future accuracy"
+}

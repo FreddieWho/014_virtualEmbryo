@@ -1,0 +1,30 @@
+{
+  "candidate_id": "T1_val/v0096_cp10k",
+  "parent_candidate": "T1_val/v0094_joint_carrier",
+  "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "method": "per_row_inverse_log_mass_conservation",
+  "formula": "float32(log1p(expm1(float64(X_ij)) * 10000 / sum_j expm1(float64(X_ij)))))",
+  "target_mass": 10000,
+  "learned_parameters": 0,
+  "seed": null,
+  "clipping": false,
+  "pseudocount": false,
+  "row_or_column_resampling": false,
+  "zero_support_unchanged": true,
+  "within_row_gene_order_unchanged": true,
+  "cross_cell_gene_ranks_unchanged": false,
+  "full_gene_marginals_unchanged": false,
+  "motivation": "Restore observed official measurement normalization; no biological mechanism claim",
+  "local_references": [
+    "all released E8.5/E9.5 rows for representation audit",
+    "released E9.5 distribution only; not future validation"
+  ],
+  "controls": [
+    "unchanged exact v0094",
+    "official E8.5 normalization near-identity",
+    "known row-scale corruption then repair"
+  ],
+  "selection_policy": "No fitted factor or scale search; frozen before candidate construction; server result used only to select candidate",
+  "artifact_revision": "r2",
+  "metadata_repair": "Adds required project-local uns.ve_contract.normalization; no expression change from immutable unsubmitted r1"
+}
