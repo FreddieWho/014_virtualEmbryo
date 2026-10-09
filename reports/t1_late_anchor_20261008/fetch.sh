@@ -1,11 +1,9 @@
-#!/usr/bin/env bash
-# Fetch allowed GSE230531 per-sample files only (never the RAW tar with banned stages).
-set -euo pipefail
-OUT=/workspace/ve/ext/GSE230531
-mkdir -p "$OUT"
-BASE=https://ftp.ncbi.nlm.nih.gov/geo/samples
-for gsm in GSM7226268 GSM7226269 GSM7226272 GSM7226273 GSM7226274 GSM7226276; do
-  echo "# $gsm" >&2
-  # Prefer already-mirrored local copies; otherwise wget from GEO FTP (caller supplies exact filenames).
+set -e
+for s in GSM7226268_E8_5_1 GSM7226269_E8_5_2 GSM7226272_E14_5_1 GSM7226273_E14_5_2 GSM7226274_E16_5_1 GSM7226276_E16_5_2; do
+  g=${s%%_*}
+  for f in barcodes.tsv.gz features.tsv.gz matrix.mtx.gz; do
+    [ -s ${s}_$f ] || curl -sS --retry 3 -o ${s}_$f https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7226nnn/$g/suppl/${s}_$f
+  done
+  echo done $s
 done
-echo "Use reports/t1_late_anchor_20261008/EXTERNAL_SOURCES_T1.md for GSM→file map." >&2
+ls -la; du -sh .
