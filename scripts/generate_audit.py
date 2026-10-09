@@ -8,6 +8,7 @@ Usage: python scripts/generate_audit.py  (run from repo root, commit output with
 from __future__ import annotations
 
 import csv
+import math
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -37,18 +38,29 @@ def current_branch() -> str:
     return "?"
 
 
-def main() -> None:
-    idx = load_index()
-    scored = [r for r in idx if r.get("score_status") == "scored"]
+def numeric_server_bests(rows):
+    """Read numeric maxima only; this does not change incumbent selection."""
     best: dict = {}
-    for r in scored:
+    for r in rows:
+        if r.get("status") not in {"candidate", "scored"}:
+            continue
+        if r.get("score_status") not in {"scored", "registered"}:
+            continue
         t = r["board"]
         try:
             s = float(r["server_score"])
-        except ValueError:
+        except (TypeError, ValueError):
+            continue
+        if not math.isfinite(s):
             continue
         if t not in best or s > best[t][0]:
             best[t] = (s, r["version"], r["method"])
+    return best
+
+
+def main() -> None:
+    idx = load_index()
+    best = numeric_server_bests(idx)
     pending = [r for r in idx if r.get("score_status") == "score_pending"]
     v = load_verdicts()
     from collections import Counter
@@ -65,7 +77,7 @@ def main() -> None:
         L.append(f"- {t}: **{s}** ({ver} {lane})")
     L.append("")
     L.append(f"Score-pending rows: {len(pending)}" + (f" ({', '.join(r['version']+'/'+r['method'] for r in pending)})" if pending else ""))
-    L.append("Boards without scored INDEX rows are omitted above; see reports/SERVER_SCORE_REGISTRY.md.")
+    L.append("Eligible INDEX rows have score_status=scored or registered, candidate/scored status, and a finite server score. Other boards are omitted; see reports/SERVER_SCORE_REGISTRY.md.")
     L.append("")
     L.append(f"## Lane verdicts ({len(v)} rows in LANE_VERDICTS.tsv)")
     for k in ("PASS", "SHIPPED", "FAIL", "VOID", "PARKED", "PENDING_SERVER", "GATE_ONLY"):
