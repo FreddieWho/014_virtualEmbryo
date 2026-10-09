@@ -1,0 +1,62 @@
+{
+  "task": "T1",
+  "board": "T1:val",
+  "candidate_id": "v0096",
+  "method": "cp10k",
+  "artifact_revision": "r2",
+  "artifact_path": "submissions/candidates/T1_val/v0096_cp10k/r2/submission.h5ad",
+  "sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "bytes": 110684655,
+  "submission_id": "24e762950f3a42a89499b59ec02b5f73",
+  "submission_url": "https://virtualembryo.ai/challenge/account/submissions/24e762950f3a42a89499b59ec02b5f73",
+  "portal_model": "T1-cp10k-v0096",
+  "submitted_at_utc": "2026-10-09T16:02:33Z",
+  "portal_submitted_display": "2026-10-09 16:02",
+  "scored_at_utc": "2026-10-09T16:04:36+00:00",
+  "official_api_score": 60.7928,
+  "official_api_skills": {
+    "de_score": 51.0156,
+    "de_direction": 66.434,
+    "mmd_u": 67.5357,
+    "variogram": 55.8486
+  },
+  "official_api_task_rank": 48,
+  "official_ui_score": 60.79,
+  "official_ui_skills": {
+    "de_score": 51.0,
+    "de_direction": 66.4,
+    "mmd_u": 67.5,
+    "variogram": 55.8
+  },
+  "precision": "API values copied as returned; UI total has 2 decimal places and UI skills 1. No additional precision inferred.",
+  "identity_binding": "Exact model, task, board and matching displayed headline; submission ID only from authenticated browser receipt, never claimed to be in public API.",
+  "evidence": {
+    "authenticated_receipt": "Exact uploaded hash verified before one submission; ID and submission time come from the authenticated receipt.",
+    "leaderboard_source": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T1&board=T1:val&track=human",
+    "overall_source": "https://kg.virtualembryo.ai/challenge/overall?task=T1&track=human",
+    "retrieved_at_utc": "2026-10-09T16:07:08.983280+00:00"
+  },
+  "decision": {
+    "status": "PROMOTED",
+    "incumbent_before": "v0094",
+    "incumbent_reference_score": 58.9887,
+    "incumbent_reference_precision": "official API",
+    "new_incumbent": "v0096",
+    "numeric_team_best_at_observation": true,
+    "delta_vs_stored_incumbent_reference": 1.8041,
+    "tie_band": 0.1,
+    "policy": "Improvement exceeds +0.1, so candidate replaces incumbent; this is leaderboard selection, not causal validation."
+  },
+  "quota_at_submission": {
+    "before": "2/8",
+    "after": "3/8",
+    "campaign_attempt": 1,
+    "campaign_limit": 6,
+    "upload_count": 1
+  },
+  "limitations": [
+    "Source-side diagnostics are not forecasts of server score.",
+    "Public leaderboard exposes team best only; submission ID is bound through the authenticated receipt, not inferred from that API.",
+    "Complete disclosure is carried by this new artifact. Earlier scored artifacts and the unresolved historical E16.5 disclosure gap are unchanged."
+  ]
+}
