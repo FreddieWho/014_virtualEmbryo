@@ -988,3 +988,16 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	occupancy_dice	53.2
 2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	scale_log_ratio	49.7
 2026-10-08	T2:heart:val_extrap	v0036	x_endpoint_rank	t2_hrt_ext__x_endrank__v0036.h5ad	2026-10-08 12:44 (timezone NOT_LABELLED)	50.47	neighborhood_mmd	51.8
+2026-10-09	T1:val	v0091	v51_anchor_auto	T1_val__LA3_v51_anchor_auto.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	57.99	de_score	51.6
+2026-10-09	T1:val	v0091	v51_anchor_auto	T1_val__LA3_v51_anchor_auto.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	57.99	de_direction	64.0
+2026-10-09	T1:val	v0091	v51_anchor_auto	T1_val__LA3_v51_anchor_auto.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	57.99	mmd_u	61.7
+2026-10-09	T1:val	v0091	v51_anchor_auto	T1_val__LA3_v51_anchor_auto.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	57.99	variogram	52.8
+2026-10-09	T1:val	v0092	ot_gen_v51	T1_val__A_ot_gen_v51.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.89	de_score	49.7
+2026-10-09	T1:val	v0092	ot_gen_v51	T1_val__A_ot_gen_v51.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.89	de_direction	65.9
+2026-10-09	T1:val	v0092	ot_gen_v51	T1_val__A_ot_gen_v51.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.89	mmd_u	65.2
+2026-10-09	T1:val	v0092	ot_gen_v51	T1_val__A_ot_gen_v51.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.89	variogram	52.3
+2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	de_score	51.4
+2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	de_direction	64.2
+2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	mmd_u	62.4
+2026-10-09	T1:val	v0093	v51_anchor_pergroup	T1_val__B_v51_anchor_pergroup.h5ad	2026-10-08/09 (timezone NOT_LABELLED)	58.22	variogram	53.0
+
