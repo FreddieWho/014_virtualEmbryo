@@ -1,0 +1,36 @@
+{
+  "board": "T2:embryo:val_interp",
+  "version": "v0023",
+  "file": "t2_emb_int__e3_libself__v0023.h5ad",
+  "sha256": "8c34d6592337df9fa5ccd9d84678831f98bdba9a0aacd654bb2f38cf2a912ce3",
+  "submission_id": "866a8e68fecd4c89baacbef1e73dcd35",
+  "submitted": "2026-10-09 09:16 UTC",
+  "headline_ui": 63.02,
+  "exact_score": 63.0185,
+  "metrics_ui": {
+    "de_score": 54.6,
+    "de_direction": 68.5,
+    "mmd_u": 68.4,
+    "variogram": 36.2,
+    "d2_shape": 54.6,
+    "occupancy_dice": 51.2,
+    "scale_log_ratio": 90.8,
+    "neighborhood_mmd": 69.4
+  },
+  "source": "Portal worker terminal detail and public official leaderboard API at 2026-10-09 09:17:43–46 UTC",
+  "incumbent_change": false,
+  "verdict": "TIE under ±0.1 selection rule; retain v21 incumbent",
+  "scientific_limit": "One-operator exact-E3-parent test, no claim of cross-task biological mechanism",
+  "incumbent_delta": 0.0138,
+  "metrics_api": {
+    "de_score": 54.6405,
+    "de_direction": 68.5345,
+    "mmd_u": 68.4219,
+    "variogram": 36.1828,
+    "d2_shape": 54.648,
+    "occupancy_dice": 51.1667,
+    "scale_log_ratio": 90.8268,
+    "neighborhood_mmd": 69.4128
+  },
+  "api_evidence": "SCORE_API_EVIDENCE.json"
+}

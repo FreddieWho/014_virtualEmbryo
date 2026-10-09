@@ -1,6 +1,12 @@
+> 2026-10-09 operator-transfer update: three authorized submissions are complete. Heart interpolation v0025 is promoted (official API66.7064); embryo numeric-high v0023 is63.0185 but project incumbent stays v0021 under±0.1; extra v0037 is48.86 UI, not promoted. Official T2 best-per-board mean60.2879, Human71/187. Today7/8 used; remaining1 unauthorized. Full precision/source distinctions: reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09.
+
 # 当前并行状态
 
 接手先看 [`../ATOM_MAP.md`](../ATOM_MAP.md) 和 [`../../reports/README.md`](../../reports/README.md)。本文件是并行状态摘要，不是入门读物。2026-10-05 只加了这句导航，没有改下面的选集。
+
+### 2026-10-09 门户合计确认与 per-task 对账关闭
+
+用户确认门户 **Total 172.9**、per-task T1 58.9 / T2 60.3 / T3 53.7；registry 记 Human rank 71/187 @ 09:23:59Z。按现役相加 T1 v0092 58.89 + T2 选集均值 60.2770 + T3 v0088 53.69 = **172.857**，与门户合计在显示精度内一致。**此前记录的 per-task 对不上问题关闭**：根因是选集滞后而非门户口径未知——T1 门户 58.0 对应的是旧现役、T2 59.7 对应的是心插未换人时的选集。门户 T2 用各榜数值最高（embryo v0023 63.0185 + 心插 v0025 66.7064 + 外推 51.1388）/3 = 60.2879，与选集差 0.011 全部来自 ±0.1 带内的两处保留。T2 心插现役由 v0023 62.48 换为 **v0025 h_heart_copula 66.7064**（+4.23，最大单榜跃升）；外推 v0037 零保位移 48.86 REJECT；胚胎 v0023 63.0185 带内不换人。blocks_submission:false。
 
 ### 2026-10-09 导航刷新（coordinator 授权）
 
@@ -70,16 +76,17 @@ data:
   auxiliary_model_input: false
 
 leaderboard:
-  total: 171.4
-  total_status: portal_observed_2026-10-08T11:58Z_rank61
-  derived_total: 171.45
-  derived_total_status: not_portal_confirmed
+  total: 172.9
+  total_status: portal_confirmed_2026-10-09_user_transcribed
+  per_task_basis: "T1 58.9 / T2 60.3 / T3 53.7, user-confirmed 2026-10-09; sum 172.9. registry records Human rank 71/187 at 2026-10-09T09:23:59Z."
+  derived_total: 172.857
+  derived_total_status: agrees_with_portal_at_display_precision
   T1: 58.89
-  T2: 58.87
+  T2: 60.277
   T3: 53.69
-  aggregate_basis: "171.4 is the last portal-observed Total (2026-10-08T11:58Z, Human rank 61) and PREDATES the T1 v0092 and T2 embryo v0021 promotions. Current board selections are T1 v0092 58.89 (v0093 58.22 and v0091 57.99 backups), T2 boards 63.0047/62.48/51.12 (task mean 58.87), T3 v0088 53.69 (v0087 53.42 fallback). Their sum 171.45 is derived only and must not be cited as a portal Total. OPEN: portal Total re-read AND per-task reconciliation."
-  per_task_reconciliation: "UNRESOLVED. Portal list displays T1 58.0 / T2 59.7 / T3 53.7. T3 agrees with selection 53.69; T1 (58.0 vs 58.89) and T2 (59.7 vs 58.87) do not. Portal per-task aggregation basis is not established; do not assume it equals the mean of board selections. Re-read and reconcile before citing any per-task figure."
-  known_data_gap: "AUDIT.md Server bests under-reports because scripts/generate_audit.py:42 filters score_status=='scored' while 66 INDEX rows use 'registered' (including v0092/v0093/v0021, all with real server scores). Field inconsistency, not missing scores. INDEX not rewritten pending coordinator ruling; SERVER_SCORE_REGISTRY.md remains authoritative for scores."
+  aggregate_basis: "172.9 is the portal-confirmed Total (user transcription 2026-10-09), per-task T1 58.9 / T2 60.3 / T3 53.7. Current board selections: T1 v0092 58.89 (backups v0093 58.22, v0091 57.99), T2 boards 63.0047 / 66.7064 / 51.12 (selection mean 60.2770), T3 v0088 53.69 (v0087 53.42 fallback). Selection sum 172.857 agrees with the portal Total at display precision."
+  per_task_reconciliation: "RESOLVED 2026-10-09. Earlier UNRESOLVED flag (portal T1 58.0 / T2 59.7 vs selection sums) was caused by stale selections, not by an unknown portal basis. With T1 at v0092 58.89 and heart_interp promoted to v0025 66.7064, portal per-task matches selection at display precision. Portal T2 uses per-board NUMERIC HIGH: (embryo v0023 63.0185 + heart_interp v0025 66.7064 + extrap 51.1388)/3 = 60.2879 vs selection 60.2770; the 0.011 gap is entirely the two retained-in-band incumbents (embryo v0021 vs v0023, extrap v0030 vs v0032), both inside the ±0.1 rule."
+  known_data_gap: "AUDIT.md Server bests under-reports because scripts/generate_audit.py:42 filters score_status=='scored' while 60+ INDEX rows use 'registered' (including v0092/v0093/v0021/v0025, all with real server scores). Field inconsistency, not missing scores. INDEX not rewritten pending coordinator ruling; SERVER_SCORE_REGISTRY.md remains authoritative for scores."
   evidence: reports/SERVER_SCORE_REGISTRY.md
 
 tasks:
@@ -108,10 +115,10 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "per-board selection: embryo v0021 e3_scrna_copula 63.0047 + interp v0023 h_aniso50 62.48 + heart_extrap v0030 x_r3_medlib09 51.12"
-    current_best_score: 58.87
-    current_best_score_basis: "board-mean (63.0047+62.48+51.12)/3=58.868233. Embryo promoted 2026-10-09 (D-20261009-T2EMBRYO-SUPPORT-001; +0.1117 vs v0014 62.8930, resolved at official public-API precision 63.0047, outside ±0.1). Portal-observed Total 171.4 predates this promotion; 171.45 derived only."
-    next_action: "EMBRYO 四件已回分，v0021=63.0047 晋级（唯一服务器高精度晋级）；v0019/v0020/v0022 REJECT，E3 supportmix/state-Bures/geo-coupling 三轴关闭。心脏插值现役 v0023=62.48，外推 v0030=51.12。外推 existing-route 预算 2/2 已用尽。OPEN: portal Total 重读（推导 171.45）与 per-task 口径核对。"
+    current_best: "per-board selection: embryo v0021 e3_scrna_copula 63.0047 + heart_interp v0025 h_heart_copula 66.7064 + heart_extrap v0030 x_r3_medlib09 51.12"
+    current_best_score: 60.277
+    current_best_score_basis: "board-mean (63.0047+66.7064+51.12)/3=60.2770. Heart interp promoted 2026-10-09 (v0025 copula, +1.6804 vs byte-exact H1 65.0260 and +4.23 vs prior selection v0023 62.48). Embryo retains v0021 under the ±0.1 rule (numeric-high v0023=63.0185, +0.0138). Portal per-task T2 = 60.3."
+    next_action: "OPER-TRANSFER 三件已回分：心插 v0025=66.7064 晋级（最大单榜跃升）；胚胎 v0023=63.0185 带内不换人；外推 v0037 零保位移 48.86 REJECT。现役 = v0021 / v0025 / v0030。心插 v0025 与胚胎 v0021 同属 scRNA copula 族，作为优先方向；胚胎侧同族微调的边际收益应按 0.0138 差距估计。外推 existing-route 预算 2/2 已用尽。"
     blocker: null
     owned_paths:
       - "submissions/candidates/T2_*"

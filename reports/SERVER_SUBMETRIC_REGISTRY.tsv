@@ -1032,3 +1032,27 @@ record_date	board	version	method	portal_file	submitted	board_score	metric	skill
 2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	occupancy_dice	48.2
 2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	scale_log_ratio	90.8
 2026-10-09	T2:embryo:val_interp	v0022	copula_geocouple	t2_emb_int__copula_geo__v0022.h5ad	2026-10-09 08:00	62.65	neighborhood_mmd	66.5
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	de_score	54.6405
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	de_direction	68.5345
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	mmd_u	68.4219
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	variogram	36.1828
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	d2_shape	54.648
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	occupancy_dice	51.1667
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	scale_log_ratio	90.8268
+2026-10-09	T2:embryo:val_interp	v0023	e3_source_library	t2_emb_int__e3_libself__v0023.h5ad	2026-10-09 09:16 UTC	63.0185	neighborhood_mmd	69.4128
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	de_score	52.0
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	de_direction	52.4
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	mmd_u	40.6
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	variogram	54.0
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	d2_shape	46.2
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	occupancy_dice	53.2
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	scale_log_ratio	49.7
+2026-10-09	T2:heart:val_extrap	v0037	x2_zero_preserve	t2_hrt_ext__x2_zero_preserve__v0037.h5ad	2026-10-09 09:22 UTC	48.86	neighborhood_mmd	48.8
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	de_score	60.576
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	de_direction	69.0695
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	mmd_u	67.7949
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	variogram	46.0664
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	d2_shape	94.5074
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	occupancy_dice	47.3088
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	scale_log_ratio	82.5078
+2026-10-09	T2:heart:val_interp	v0025	h_heart_copula	t2_hrt_int__heart_copula__v0025.h5ad	2026-10-09 09:20 UTC	66.7064	neighborhood_mmd	68.1245

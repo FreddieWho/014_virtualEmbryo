@@ -1,0 +1,176 @@
+{
+  "task": "T2:heart:val_interp",
+  "candidate_id": "T2_heart_val_interp/v0025_h_heart_copula",
+  "parent_candidate": "Historic H1 / portal model bridgeC2-r2 / submission d0fd25a74fed4aeabaa4e9fe128bfa74",
+  "parent_artifact": "/workspace/shared/t2_operator_transfers_20261009/heart_interp/exact_parent_replay/T2_heart_val_interp__H1_bridgeC2_aniso.h5ad",
+  "parent_sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37",
+  "parent_identity": "Full-file SHA256 matches historic recorded H1 exactly; only removal of later-added provenance carrier key needed during reconstruction",
+  "method": "Exact embryo-v21 copula operator, refitted on official released heart E8.25_late+E8.75; fixed0.5 blend; no embryo data or B reuse",
+  "artifact_path": "/workspace/shared/t2_operator_transfers_20261009/heart_interp/final/t2_hrt_int__heart_copula__v0025.h5ad",
+  "sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+  "n_obs": 5872,
+  "n_vars": 500,
+  "contract_result": {
+    "board": "T2:heart:val_interp",
+    "file": "/workspace/shared/t2_operator_transfers_20261009/heart_interp/final/t2_hrt_int__heart_copula__v0025.h5ad",
+    "n_obs": 5872,
+    "n_vars": 500,
+    "size_mb": 12.2,
+    "errors": [],
+    "pass": true
+  },
+  "fit": {
+    "n_fit_cells": 83542,
+    "n_genes": 500,
+    "ledoit_wolf_shrinkage": 0.0013137380209128804,
+    "rank_gaussian": true,
+    "blend": 0.5,
+    "parameter_search": false
+  },
+  "source_provenance": "SOURCE_INTAKE.json; final/RESULT.json fit_sources; source_snapshot/; ENVIRONMENT.json",
+  "checks": {
+    "state_gene_marginals_exact": true,
+    "global_gene_marginals_exact": true,
+    "obs_exact": true,
+    "var_exact": true,
+    "coordinates_exact": true,
+    "obs_names_order_exact": true,
+    "var_names_order_exact": true,
+    "finite_nonnegative": true,
+    "changed_entries_fraction": 0.15896151226158037,
+    "coordinate_row_order_retained": true,
+    "cell_library_not_invariant": true,
+    "classifier_derived_mass_not_invariant": true,
+    "library_size_change": {
+      "changed_cell_fraction": 1.0,
+      "mean_abs_relative": 0.16681241069626757,
+      "median_abs_relative": 0.1333928505099209,
+      "p95_abs_relative": 0.43965904046051696,
+      "max_abs_relative": 1.2321821535585906
+    },
+    "same_process_array_replay_exact": true
+  },
+  "independent_replay": {
+    "status": "PASS",
+    "checks": {
+      "fresh_fit_B_array_exact": true,
+      "fresh_candidate_X_array_exact": true,
+      "obs_exact": true,
+      "var_exact": true,
+      "coords_exact": true,
+      "global_gene_marginals_exact": true,
+      "state_gene_marginals_exact": true
+    },
+    "parent_sha256": "7cc2e31445613a7e9e13525ea3b3ce8bf386855f8df0b70d6ba47f1ae2a23a37",
+    "candidate_sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+    "fresh_fit": {
+      "n_fit_cells": 83542,
+      "n_genes": 500,
+      "ledoit_wolf_shrinkage": 0.0013137380209128804,
+      "rank_gaussian": true,
+      "blend": 0.5,
+      "parameter_search": false
+    },
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/shared/t2venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "note": "Fresh independent process refits heart coefficients and reconstructs expression; compares arrays and immutable file hashes. No cross-environment or cross-thread identity claim."
+  },
+  "local_proxy": {
+    "heart_copula": {
+      "mean_skills": {
+        "de_score": 54.24709279858314,
+        "de_direction": 60.57781274411648,
+        "mmd_u": 57.16179115124012,
+        "variogram": 51.09874578276706,
+        "d2_shape": 47.21587094462615,
+        "occupancy_dice": 53.01806286614923,
+        "scale_log_ratio": 51.136976848593406,
+        "neighborhood_mmd": 55.22295962212299,
+        "TOTAL": 54.45723890427832
+      },
+      "median_total": 54.636226157281506
+    },
+    "gene_shuffle_control": {
+      "mean_skills": {
+        "de_score": 54.24709279858314,
+        "de_direction": 60.57781274411648,
+        "mmd_u": 51.15039872626514,
+        "variogram": 51.45171912653414,
+        "d2_shape": 47.21587094462615,
+        "occupancy_dice": 53.01806286614923,
+        "scale_log_ratio": 51.136976848593406,
+        "neighborhood_mmd": 51.990372271702974,
+        "TOTAL": 52.782680537303776
+      },
+      "median_total": 53.006830124313
+    },
+    "parent": {
+      "mean_skills": {
+        "de_score": 54.24709279858314,
+        "de_direction": 60.57781274411648,
+        "mmd_u": 51.67245198110919,
+        "variogram": 51.50715598137422,
+        "d2_shape": 47.21587094462615,
+        "occupancy_dice": 53.01806286614923,
+        "scale_log_ratio": 51.136976848593406,
+        "neighborhood_mmd": 53.342315795949666,
+        "TOTAL": 53.204518092076064
+      },
+      "median_total": 53.395289882175334
+    }
+  },
+  "local_delta_mean": 1.2527208122022557,
+  "status": "READY_FOR_PARENT_REVIEW_NOT_SUBMITTED_NOT_SCORED",
+  "known_risks": [
+    "One released-stage fold with different time bracket cannot establish hidden E8.5 improvement",
+    "Pooled heart rank dependence is observational and stage/type mixture dependent, not a causal regulatory network",
+    "Per-cell libraries and classifier-derived state mass are not invariant",
+    "Final diagnostic-only logistic probe reached its300iteration limit; its mass-change numbers are approximate and never enter the candidate",
+    "Rank tie resolution is sensitive to numerical reduction environment; only recorded one-thread environment has independent exact replay",
+    "No new server score exists"
+  ],
+  "proposed_decision": "Recommend the single authorized heart-interpolation mechanism test, after parent review; no further parameter sweep",
+  "blocks_submission": false,
+  "blocker": null,
+  "index_row_proposed": {
+    "version": "v0025",
+    "method": "h_heart_copula",
+    "path": "submissions/candidates/T2_heart_val_interp/v0025_h_heart_copula/submission.h5ad",
+    "format_status": "pass",
+    "score_status": "not_submitted",
+    "external_data": "false"
+  },
+  "tracking_summary": "v0025: fit heart-only rank-Gaussian partial correlations, apply fixed half-rank reassignment to exact H1 parent; all state/gene marginals and coordinates exact; strict released-stage 3-seed fold +1.2527 local mean with matched parent/shuffle controls; no server claim",
+  "changed_paths": [
+    "/workspace/shared/t2_operator_transfers_20261009/heart_interp only"
+  ],
+  "no_shared_edits_uploads_or_push": true
+}

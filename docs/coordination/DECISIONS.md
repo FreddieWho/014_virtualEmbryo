@@ -1549,3 +1549,23 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "reports/t3_rebuild_20261009/REPORT.md；autoresearch/loop-261009-1450/loop/results.tsv 与 handoff.json；rebuilt_model/REBUILD_MANIFEST.json 状态 REBUILT_EXPRESSION_EXACT。"
 - boundary: "本地源侧指标不是服务器预测：v0086 源侧改善而服务器 49.34 低于 v0084，T1 v0058、T2 v0035 同样本地好而服务器不涨。发射器只重分配已激活细胞给谁，不能改变 DE 集合，故 DE 端在发射器层面结构不可动；DE 短板若要动须改响应结构，那等于开新路线而非成分迭代。T3 提交额度 OPEN：registry 记 2026-10-08 用尽当日 8/8 并声明无剩余授权，2026-10-09 T3 无提交记录，当日额度是否重置未观测，不宣称可用。blocks_submission:false。"
 - review_trigger: "下一手需服务器分仲裁（须用户重新授权）或改响应结构开新路线；GO 重建复现结论可据此更新 PUBLIC_REBUILD_FOLLOWUP.md 的限制条目。"
+
+## D-20261009-PORTALTOTAL-001 — 门户合计 172.9 确认，per-task 对账关闭
+
+- date: 2026-10-09
+- scope: coordination
+- type: leaderboard_reconciliation
+- decision: "采纳用户确认的门户读数：Total **172.9**，per-task T1 58.9 / T2 60.3 / T3 53.7；registry 记 Human rank 71/187 @ 2026-10-09T09:23:59Z。现役相加 58.89 + 60.2770 + 53.69 = **172.857**，与门户合计在显示精度内一致，全部导航改用该基准。D-20261009-NAV-001 中标记为 UNRESOLVED 的 per-task 对账在此关闭。"
+- evidence: "用户 2026-10-09 转录；reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09（official best-per-board mean 60.2879）；submissions/INDEX.tsv。"
+- boundary: "门户 T2 的 per-task 值用的是各榜**数值最高**（embryo v0023 63.0185 + heart_interp v0025 66.7064 + extrap 51.1388）/3 = 60.2879，而项目选集按 ±0.1 带内保留现任（embryo v0021、外推 v0030），选集均值 60.2770；两者 0.011 的差额完全来自这两处带内保留，显示精度下同为 60.3。据此不得把门户 per-task 直接当作现役和，也不得据此宣称项目选集更优。另：`AUDIT.md` 因 score_status 字段不一致低估数值最高的问题仍未裁决，不属本决策范围。"
+- review_trigger: "任一现役变动后须重新确认门户 Total 与 per-task；协调 score_status 字段。"
+
+## D-20261009-T2OPTRANSFER-001 — T2 算子迁移三件：心插 v0025 晋级并易主，胚胎 v0023 带内不换人，外推 v0037 REJECT
+
+- date: 2026-10-09
+- scope: T2
+- type: server_score_return
+- decision: "心插 v0025 h_heart_copula = 66.7064（官方 API 精度；UI 66.71）晋级，心插现役由 v0023 = 62.48 换为 v0025，跃升 +4.23，为本轮最大单榜变化。胚胎 v0023 = 63.0185 为数值最高但与现任 v0021 = 63.0047 仅差 0.0138，按 ±0.1 带内不换人规则保留 v0021。外推 v0037 零保位移 = 48.86（UI），低于现役 v0030 = 51.12，REJECT。现役 = 胚胎 v0021 / 心插 v0025 / 外推 v0030，T2 任务均分 60.277。"
+- evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09（embryo v0023 submission 866a8e68fecd4c89baacbef1e73dcd35 09:16 UTC；heart_interp v0025 submission 84e1cb88cbdd4dd8861488783a1002b9 09:20 UTC；extra v0037 submission 01f2cb4b59794d63ac27dd0d84962cff 09:22 UTC）；reports/t2_operator_transfers_20261009/ 各 SCORE_RETURN 与 HANDOFF。"
+- boundary: "心插 v0025 的 +1.6804 是相对字节精确 H1 父件 65.0260，不是相对旧现役 v0023 62.48；引用增益时必须写清比较基线。外推 v0037 是配置级负结果，不否定零结构保持这一思路在其他形变下的适用性。三件分数精度不同（心插与胚胎有官方 API 高精度，外推仅 UI 两位），跨板比较时不得混用精度。当日 T2 用量记为 7/8，剩余 1 次未授权。blocks_submission:false。"
+- review_trigger: "T2 优先沿 scRNA copula 族继续（心插已验证 +4.23）；外推停在 51.12 平台期需新机制而非再调同一形变的比例；任何新提交前须取得用户授权。"

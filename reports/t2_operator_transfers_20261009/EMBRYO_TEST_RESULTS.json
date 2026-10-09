@@ -1,0 +1,21 @@
+{
+  "target_source_map_verified": true,
+  "raw_E7_25_library_quantiles": [
+    9999.99602975813,
+    9999.999964034028,
+    10000.004037951561
+  ],
+  "bridge_input_XB_library_quantiles": [
+    3542.8309329780964,
+    24470.833710947794,
+    585028.3128870893
+  ],
+  "raw_to_XB_median_library_fold": 2.4470836700624576,
+  "candidate_vs_source_max_relative_error": 4.467096971009351e-07,
+  "shuffled_negative_control_vs_source_median_relative_error": 0.21752230674978873,
+  "shuffled_negative_control_changed_X_fraction": 0.6184032128514056,
+  "parent_child_changed_X_fraction": 0.6213791164658634,
+  "replay_candidate_hash_match": true,
+  "replay_parent_hash_match": true,
+  "holdout_library_shuffle_control_note": "Released E6.75 source rows have ~10000 normalized library, so library shuffle degenerates numerically there; not evidence that row association is irrelevant. Target E3 XB source libraries vary and actual shuffle is nondegenerate."
+}

@@ -199,3 +199,6 @@ T3-SIX2-20261008-n2_dsign	T3:gata4	SHIPPED	SCORED 47.45; same-ID reconstructed r
 T3-ARANK-20261008-r2	T3:gata4	SHIPPED	SCORED 49.34; REJECT -0.21 vs v0084; source-proxy gain did not transfer	v0086	registered	reports/SERVER_SCORE_REGISTRY.md#t3-arank-v0086-score-return-20261008	D-20261008-T3ARANK-001
 T3-EMBHURDLE-20261008	T3:gata4	SHIPPED	SCORED 53.42; promoted then superseded by v0088 (+0.27)	v0087	scored	reports/SERVER_SCORE_REGISTRY.md#t3-embhurdle-v0087-score-return-20261008	D-20261008-T3EMBHURDLE-001
 T3-CONDHURDLE-20261008	T3:gata4	PASS	PROMOTED current T3 best 53.69 (+0.27 vs v0087)	v0088	registered	reports/SERVER_SCORE_REGISTRY.md#t3-condhurdle-v0088-score-return-20261008	D-20261008-T3CONDHURDLE-001
+T2-OPTRANSFER-20261009-v0023-embryo	T2:embryo:val_interp	SHIPPED	within incumbent tie band	v0023	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
+T2-OPTRANSFER-20261009-v0025-heart	T2:heart:val_interp	PASS	promoted	v0025	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
+T2-OPTRANSFER-20261009-v0037-heart	T2:heart:val_extrap	SHIPPED	rejected vs exact X2 parent	v0037	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001

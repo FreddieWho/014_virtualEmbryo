@@ -1,0 +1,36 @@
+{
+  "board": "T2:heart:val_interp",
+  "version": "v0025",
+  "file": "t2_hrt_int__heart_copula__v0025.h5ad",
+  "sha256": "efb0c7298be54493d3d540257daf1f9c9664d8e64fe14bba8dd349669ea977c2",
+  "submission_id": "84e1cb88cbdd4dd8861488783a1002b9",
+  "submitted": "2026-10-09 09:20 UTC",
+  "headline_ui": 66.71,
+  "exact_score": 66.7064,
+  "metrics_ui": {
+    "de_score": 60.6,
+    "de_direction": 69.1,
+    "mmd_u": 67.8,
+    "variogram": 46.1,
+    "d2_shape": 94.5,
+    "occupancy_dice": 47.3,
+    "scale_log_ratio": 82.5,
+    "neighborhood_mmd": 68.1
+  },
+  "source": "Verified portal worker terminal detail",
+  "incumbent_change": true,
+  "verdict": "PROMOTE: exact +1.6804 vs exact H1 65.0260",
+  "scientific_limit": "Conditional-copula operation on exact H1, no guarantee other tissues/tasks benefit",
+  "incumbent_delta": 1.6804,
+  "metrics_api": {
+    "de_score": 60.576,
+    "de_direction": 69.0695,
+    "mmd_u": 67.7949,
+    "variogram": 46.0664,
+    "d2_shape": 94.5074,
+    "occupancy_dice": 47.3088,
+    "scale_log_ratio": 82.5078,
+    "neighborhood_mmd": 68.1245
+  },
+  "api_evidence": "SCORE_API_EVIDENCE.json"
+}

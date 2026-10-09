@@ -1,0 +1,20 @@
+{
+  "source_commit": "9d30857b5e25610e40872e6f2cfce18941678eaa",
+  "heart_source": "Current authenticated official Data page download controls, 2026-10-09",
+  "heart_data_sha256": {
+    "T2__heart__val_interp.genes.txt": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa",
+    "E8.25_late.h5ad": "d56f94d3e2d719ed3074d86c03eae457ccf90b24145d33300f9958f0e8078593",
+    "E9.5.h5ad": "371ca6530e084de2b6cd6703b49d95f4bb59546c9291659809575382a630ee9a",
+    "E8.75.h5ad": "149ab6df7c99ad85046c8aebebcf0c43689b3720c59ffb7cc550edcf2f13a83c",
+    "index.json": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78",
+    "T2__heart__val_extrap.genes.txt": "bf40079bfb50c78d9360905156bd7fd8b39e711ad0cc44866e6dac3f7e9999fa"
+  },
+  "embryo_sources": {
+    "E6.75": "ab58b9217d1b9a18b0181f498475a9eb821ac2c92ab2b7e45a623da0e4fffe70",
+    "E7.25": "c34192a31036b783b97ce1877ac50fc920b39faa3e00dc3c637b3e7e04255ee6",
+    "E8.0": "17530e23fbfa6a139ff68d0353a489d83790f5b60f036b7d2f58303a1ff8a810"
+  },
+  "model_inputs": "Released consumer-specific stages only; no protected targets; no embryo B reused by heart",
+  "artifacts": "Large candidate files remain in Library deliverables; canonical hashes in submissions/INDEX.tsv",
+  "publication_status": "User authorized GitHub synchronization after terminal experiment closeout; separate publisher handles sync. This build worker performed no remote write."
+}

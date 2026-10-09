@@ -1,0 +1,24 @@
+{
+  "board": "T2:heart:val_extrap",
+  "version": "v0037",
+  "file": "t2_hrt_ext__x2_zero_preserve__v0037.h5ad",
+  "sha256": "6b3970ccb8b8c03b66f80f926c3b9c911073f14a5ad37bb88145a69ade19087f",
+  "submission_id": "01f2cb4b59794d63ac27dd0d84962cff",
+  "submitted": "2026-10-09 09:22 UTC",
+  "headline_ui": 48.86,
+  "exact_score": null,
+  "metrics_ui": {
+    "de_score": 52.0,
+    "de_direction": 52.4,
+    "mmd_u": 40.6,
+    "variogram": 54.0,
+    "d2_shape": 46.2,
+    "occupancy_dice": 53.2,
+    "scale_log_ratio": 49.7,
+    "neighborhood_mmd": 48.8
+  },
+  "source": "Verified portal worker terminal detail; leaderboard only shows best, so new nonbest precise API is unavailable",
+  "incumbent_change": false,
+  "verdict": "REJECT vs exact X2 parent UI50.35 and current numeric best51.1388; no retry authorized",
+  "scientific_limit": "X2 recipe exact, not original v30/v32; dev2 all-clipped rows; final no such rows; gene-permuted drift also improves variogram"
+}
