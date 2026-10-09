@@ -1,0 +1,16 @@
+{
+  "route": "odds",
+  "code_sha256": "d0889fcee5e04fafbf0bf009dcee855fa8975b39f6b8249c91caa67c6303be17",
+  "design_sha256": "c1b11b44603bedb0a71d10b809897464ef4232398764518296a6e53ae1cad832",
+  "source_genes": [
+    "Dnmt3a",
+    "Kmt2a",
+    "Kdm2b",
+    "Dnmt1",
+    "Dnmt3b",
+    "Ehmt2",
+    "Kmt2b"
+  ],
+  "heldout_rule": "query excluded before response aggregation; no query KO data used in atlas or fit",
+  "WT_role": "full source WT atlas and embryo-balanced sex-matched controls; all genotypes KO-only"
+}

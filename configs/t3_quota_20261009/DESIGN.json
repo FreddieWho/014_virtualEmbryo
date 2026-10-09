@@ -1,0 +1,12 @@
+{
+  "frozen_before_execution": "2026-10-09T15:46:00Z",
+  "initial_routes": ["embryo_detection_odds", "detection_aware_atlas"],
+  "parent": "T3:gata4 v0088 condhurdle",
+  "source_allowlist": ["Dnmt3a", "Kmt2a", "Kdm2b", "Dnmt1", "Dnmt3b", "Ehmt2", "Kmt2b"],
+  "source_stage": "E8.5",
+  "route_1": {"name": "embryo_detection_odds", "positive_response": "unchanged v88", "source_smoothing": "Jeffreys half-count (positive+0.5)/(n+1)", "detection_response": "local KO-control log-odds shrunk by nKO/(nKO+50) toward global log-odds", "target_detection": "transport log-odds with half-cell boundary smoothing; remove smoothing offset to preserve no-effect identity", "global_valid_mask": "unchanged v88"},
+  "evaluation": {"genotypes": 7, "seeds": [0,1,2], "prediction_cells": 7449, "genes": 500, "fixed_source_sampling": "exact v88 protocol, embryo-balanced sex-matched WT controls", "arms": ["wt_identity", "v88", "candidate", "scrambled_response"], "selection": "screening only; server determines promotion"},
+  "prohibited": ["held-out Gata4 KO", "held-out Ctnnb1 KO", "other target alleles/comparable-stage phenocopies", "forced target RNA zero", "server-score inversion"],
+  "new_external_data": false,
+  "reserved_server_slots": 2
+}

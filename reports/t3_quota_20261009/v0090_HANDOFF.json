@@ -1,0 +1,55 @@
+{
+  "task": "T3:gata4",
+  "candidate_id": "v0090",
+  "parent": "v0088",
+  "route": "detection",
+  "lane": "detatlas",
+  "artifact_path": "/workspace/shared/virtualembryo-20261009/t3/submissions/candidates/T3_gata4/v0090_detatlas/submission.h5ad",
+  "sha256": "a6d87c972fb55edc8fac16e28231c807019c9508e74b5e6a8a610328eba9f2e1",
+  "expression_sha256": "c6223f80373548a7929a04598e1af94642271335a49c5e8e2385809a82ffd637",
+  "zip_path": "/workspace/shared/virtualembryo-20261009/t3/deliveries/t30090__t3__upload__20261009.zip",
+  "zip_sha256": "22beb9ae409dd0bf8502f7756a7e4bbd5f110df7424432e90a0bc3fddd20633b",
+  "upload_member": "t3_gata4__detatlas__v0090.h5ad",
+  "contract": "PASS",
+  "shape": [
+    7449,
+    500
+  ],
+  "source_result": {
+    "status": "COMPLETE",
+    "route": "detection",
+    "mean_delta": -0.2260868867939629,
+    "wins": 3,
+    "per_genotype_delta": {
+      "Dnmt1": 0.6765321641920536,
+      "Dnmt3a": -0.0016273898582426227,
+      "Dnmt3b": -0.5356176953855538,
+      "Ehmt2": -1.7337859727538358,
+      "Kdm2b": 0.15749783913810234,
+      "Kmt2a": -0.34863530402533627,
+      "Kmt2b": 0.20302815113507222
+    },
+    "component_delta": {
+      "de": -0.45540659288886537,
+      "direction": -0.2722139113078096,
+      "severity_abs": 0.11139717902919496,
+      "mmd": -0.29101195550778564,
+      "variogram": -0.17924113995893773
+    },
+    "not_server_forecast": true
+  },
+  "model_path": "/workspace/shared/virtualembryo-20261009/t3-runs/detection/state_emitter.joblib",
+  "response_path": "/workspace/shared/virtualembryo-20261009/t3-runs/detection/deployment_response.npz",
+  "donor_unique": 4555,
+  "donor_max_repeats": 8,
+  "detection": 0.10838877701704927,
+  "zero_to_positive": 289920,
+  "positive_to_zero": 277274,
+  "fallback_exact_parent_cells": 0,
+  "max_mass_error": 0.0034579003313410794,
+  "source_ledger_sha256": "318ef2d3dfbc8f117e4c9c411f5e45179a2c76375a018618530dcce4a47b9336",
+  "submitted": false,
+  "score_status": "not_submitted",
+  "blocks_submission": false,
+  "direct_upload_path": "/workspace/shared/virtualembryo-20261009/t3/deliveries/t3_gata4__detatlas__v0090.h5ad"
+}

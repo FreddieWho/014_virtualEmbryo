@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "v88_metrics_maxabs_difference": 0.0,
+  "floor_ceiling_orientation_all_pass": true,
+  "execution_source_sha256": "d0889fcee5e04fafbf0bf009dcee855fa8975b39f6b8249c91caa67c6303be17",
+  "recorded_source_sha256": "d0889fcee5e04fafbf0bf009dcee855fa8975b39f6b8249c91caa67c6303be17",
+  "cache_reuse": false
+}

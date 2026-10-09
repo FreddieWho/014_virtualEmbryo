@@ -1,0 +1,13 @@
+{
+  "schema": "fresh-public-contract-lock",
+  "date": "2026-10-08",
+  "contract_snapshot": {
+    "board_index": {
+      "path": "data/gene_panel/index.json",
+      "sha256": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78"
+    }
+  },
+  "core_metrics_sha256": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31",
+  "panel_source": "https://virtualembryo.ai/challenge/panels/T3__gata4.genes.txt",
+  "board_source": "https://virtualembryo.ai/challenge/panels/index.json"
+}

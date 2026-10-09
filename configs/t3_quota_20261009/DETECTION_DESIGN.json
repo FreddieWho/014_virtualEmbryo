@@ -1,0 +1,12 @@
+{
+ "frozen_before_execution":"2026-10-09T15:49:00Z",
+ "hypothesis":"Observed detection and positive expression have different assay shifts; a dual-view WT-only atlas can preserve coarse state identity more reliably than log-expression-only PCA",
+ "atlas_fit":"All approved E8.5 WT cells only; PCA12 on log-expression and PCA12 on binary observed-detection; scale each view by sqrt(mean PC variance), concatenate, kmeans8",
+ "conditional_activation":"Original WT-only log-expression association with own-gene linear contribution excluded; detection PCA never enters the propensity regression",
+ "response":"v88 additive detection fractions and positive quantile shift with original nKO/(nKO+50) shrinkage",
+ "emitter":"Original conditional v88; positive counts and geometry unchanged except required response and row closure",
+ "intervention_exclusion":"Each evaluation query KO excluded from every aggregate response fit; WT atlas uses no KO cells",
+ "comparison":"Same fixed seven genotype, embryo-balanced controls, three seeds, four arms as initial route",
+ "not_a_parameter_sweep":true,
+ "target_outcomes_loaded":false
+}
