@@ -1569,3 +1569,13 @@ D-20261001-T3SIX-002 包装补充：最终交付包为 deliveries/t3six__t3__upl
 - evidence: "reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09（embryo v0023 submission 866a8e68fecd4c89baacbef1e73dcd35 09:16 UTC；heart_interp v0025 submission 84e1cb88cbdd4dd8861488783a1002b9 09:20 UTC；extra v0037 submission 01f2cb4b59794d63ac27dd0d84962cff 09:22 UTC）；reports/t2_operator_transfers_20261009/ 各 SCORE_RETURN 与 HANDOFF。"
 - boundary: "心插 v0025 的 +1.6804 是相对字节精确 H1 父件 65.0260，不是相对旧现役 v0023 62.48；引用增益时必须写清比较基线。外推 v0037 是配置级负结果，不否定零结构保持这一思路在其他形变下的适用性。三件分数精度不同（心插与胚胎有官方 API 高精度，外推仅 UI 两位），跨板比较时不得混用精度。当日 T2 用量记为 7/8，剩余 1 次未授权。blocks_submission:false。"
 - review_trigger: "T2 优先沿 scRNA copula 族继续（心插已验证 +4.23）；外推停在 51.12 平台期需新机制而非再调同一形变的比例；任何新提交前须取得用户授权。"
+
+## D-20261009-T3RESPLAM-001 — T3 v0089 响应结构路线：本地 +0.1985，交付但未提交
+
+- date: 2026-10-09
+- scope: T3
+- type: candidate_generation
+- decision: "新建候选 T3:gata4 v0089 `resplam15unmask`，父 v0088。method/mode 沿用冻结源侧选择 mean_combined，seed 20260904、atlas、状态划分、发射器与几何全部冻结；**唯一结构改动是响应**——收缩 lam 由 nk/(nk+50) 改为 nk/(nk+15)，并去掉 global_valid 基因掩码。E8.75 WT 载体 7449×500，contract 全 PASS。交付包 deliveries/t3lam15__t3__upload__20261009.zip，成员名即 portal Model 名，SHA 对 INDEX 核验通过。score_pending，未提交/未评分。服务器现役 v0088=53.69 不变。"
+- evidence: "autoresearch/loop-261009-1845（30 次迭代台账、handoff.json、8 个脚本、33 份路线结果）；reports/t3_rebuild_20261009/REPORT.md；submissions/candidates/T3_gata4/v0089_resplam15unmask/RECEIPT.json；本地复合 74.936110 vs 74.737588（+0.1985，赢 4/7，冻结门 PASS）。响应重实现保真度 PASS：delta/composition/support 相对原缓存 maxabs 0.0。"
+- boundary: "本地源侧复合分**不是服务器预测**：v0086 源侧改善而服务器 49.34 低于 v0084，T1 v0058、T2 v0035 同类。本候选增益不均匀（Ehmt2 +1.0、Kmt2b +0.87、Kmt2a +0.59 对 Dnmt1 −0.855）。**T3 提交额度未解决**：registry 记 2026-10-08 用尽当日 8/8 并声明无剩余授权，2026-10-09 T3 无提交记录，当日计数器是否重置未观测；上传需用户明确重新授权。联合秩传输新架构为干净负结果（−12.07，对照组不变）。blocks_submission:false。"
+- review_trigger: "用户授权 T3 提交额度后方可上传；服务器回分后按 ±0.1 带内保留规则裁决是否晋级 v0089。"

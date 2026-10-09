@@ -1,0 +1,33 @@
+{
+  "status": "READY_NOT_SUBMITTED",
+  "zip_path": "deliveries/t3lam15__t3__upload__20261009.zip",
+  "zip_sha256": "68df3c3961672ffbc871ed0a3490afe2eb41e4ea0d5b8cd4a45bc92d54a8d768",
+  "zip_bytes": 2380636,
+  "members": 1,
+  "portal_upload": "NOT_RUN",
+  "server_scores": "NOT_RUN",
+  "member_identity": {
+    "portal_model_name": "t3_gata4__resplam15__v0089.h5ad",
+    "candidate_id": "T3:gata4 v0089 resplam15unmask",
+    "index_sha256": "ddac99703587e2c35713dcf0e3eb09bb6a0dfff88298bb94548a08d1fa115f3a",
+    "zip_member_sha256_verified_against_index": true,
+    "bytes": 2667638,
+    "shape": [7449, 500]
+  },
+  "parent": "T3:gata4 v0088 condhurdle (server 53.69)",
+  "route": "response structure lam15 + global_valid mask removed; emitter, atlas, seed, mode and geometry frozen",
+  "local_evidence": {
+    "composite_vs_v0088": 74.936110,
+    "incumbent_composite": 74.737588,
+    "delta": 0.1985,
+    "per_genotype_wins": "4/7",
+    "worst_genotype_delta": "Dnmt1 -0.8551",
+    "frozen_gate": "PASS (mean_gain>0, wins>=4, de/direction/severity_abs >= -2)"
+  },
+  "contract_checks": "roundtrip X exact; gene order exact; protected (unmasked) rows unchanged; finite and non-negative; spatial_3D finite; panel closure max mass error 0.00346 < 0.02",
+  "run_dirs": [
+    "reports/t3_rebuild_20261009",
+    "autoresearch/loop-261009-1845"
+  ],
+  "caveats": "Local source-side composite is not a server forecast; v0086 improved source-side and scored below v0084 on the server. T3 submission budget is unresolved (registry records 2026-10-08 usage 8/8 and no further attempt authorized; 2026-10-09 had no T3 submission and the daily counter reset was not observed). Upload requires explicit user authorization. blocks_submission:false."
+}

@@ -1,0 +1,24 @@
+{
+  "variant": "gata4_all_supported",
+  "stage": "E8.75",
+  "source_method": "mean_combined",
+  "response_route": "lam15 + global_valid mask removed",
+  "local_composite_delta_vs_v0088": 0.1985,
+  "mask_cells": 7449,
+  "changed_cells": 7449,
+  "detection": 0.11046234393878374,
+  "base_detection": 0.10499342193583032,
+  "zero_to_positive": 296271,
+  "positive_to_zero": 275902,
+  "delta_L2": 4.224668267478022,
+  "max_log_change": 9.210440635681152,
+  "max_mass_error": 0.0034560932326712646,
+  "shape": [
+    7449,
+    500
+  ],
+  "sha256": "ddac99703587e2c35713dcf0e3eb09bb6a0dfff88298bb94548a08d1fa115f3a",
+  "parent": "T3:gata4 v0088 condhurdle (server 53.69)",
+  "submission_status": "NOT_SUBMITTED",
+  "blocks_submission": false
+}

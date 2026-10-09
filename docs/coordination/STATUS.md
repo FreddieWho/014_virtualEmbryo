@@ -131,7 +131,7 @@ tasks:
     owner: coordinator
     branch: master
     worktree: current
-    current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback"
+    current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback. v0089 resplam15unmask built and packaged, NOT scored, not submitted."
     current_best_score: 53.69
     active_atom: null
     next_action: "v0088 现役保持。2026-10-09 本地重训完整复现 v0087/v0088 表达式与三个推理产物（逐位），GO embedding 亦逐字节相同，PUBLIC_REBUILD_FOLLOWUP 的未验证拟合限制可撤销；基线复合分与归档 summary 差 0.0。发射器成分轴 14 次迭代判定饱和：最好 +0.0034，de_skill 全变体零变化，三个轴精确 no-op，检测比例轴曲率极陡；不建议提交任何变体。本地源侧指标不再是有效目标，下一手需服务器分仲裁（须重新授权）或改响应结构开新路线。reports/t3_rebuild_20261009/REPORT.md。"

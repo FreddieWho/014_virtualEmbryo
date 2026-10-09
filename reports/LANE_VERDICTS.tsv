@@ -202,3 +202,4 @@ T3-CONDHURDLE-20261008	T3:gata4	PASS	PROMOTED current T3 best 53.69 (+0.27 vs v0
 T2-OPTRANSFER-20261009-v0023-embryo	T2:embryo:val_interp	SHIPPED	within incumbent tie band	v0023	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
 T2-OPTRANSFER-20261009-v0025-heart	T2:heart:val_interp	PASS	promoted	v0025	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
 T2-OPTRANSFER-20261009-v0037-heart	T2:heart:val_extrap	SHIPPED	rejected vs exact X2 parent	v0037	scored	reports/SERVER_SCORE_REGISTRY.md#t2-operator-transfers-2026-10-09	D-20261009-T2OPTRANSFER-001
+T3-RESPLAM15-20261009-v1	T3:gata4	v0089	resplam15unmask	NOT_SUBMITTED	reports/SERVER_SCORE_REGISTRY.md	D-20261009-T3RESPLAM-001
