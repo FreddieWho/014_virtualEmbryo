@@ -1,0 +1,269 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0099_detonly_cp10k",
+  "file": "submissions/candidates/T1_val/v0099_detonly_cp10k/submission.h5ad",
+  "sha256": "20bbeb64260aa233406852004fee48f816f2f231fb52c71fafaafaefc4a39409",
+  "expression_sha256": "d4c9ebdc1eee8ece9c553fa47401b62634bb58f0c2213e088da0c6e733bc1d6e",
+  "bytes": 109230521,
+  "shape": [
+    5118,
+    32285
+  ],
+  "both_enabled_exact_v97_preclosure_and_final": true,
+  "both_disabled_exact_v94_then_v96": true,
+  "finite_nonnegative": true,
+  "component": "detection",
+  "state_changes": {
+    "AVC-CM": {
+      "group": "CM_V",
+      "rows": 75,
+      "reliability_active_genes": 10226,
+      "changed_entries": 98170,
+      "on": 1082,
+      "off": 6943
+    },
+    "BEC": {
+      "group": "ENDO",
+      "rows": 94,
+      "reliability_active_genes": 10143,
+      "changed_entries": 126221,
+      "on": 2372,
+      "off": 10904
+    },
+    "Endocardium": {
+      "group": "ENDO",
+      "rows": 543,
+      "reliability_active_genes": 10143,
+      "changed_entries": 1374499,
+      "on": 13592,
+      "off": 70927
+    },
+    "IFT-CM": {
+      "group": "CM_A",
+      "rows": 138,
+      "reliability_active_genes": 9993,
+      "changed_entries": 342959,
+      "on": 4862,
+      "off": 18752
+    },
+    "NCC": {
+      "group": "NCC",
+      "rows": 9,
+      "reliability_active_genes": 10183,
+      "changed_entries": 3549,
+      "on": 143,
+      "off": 1057
+    },
+    "NCC-derived": {
+      "group": "NCC",
+      "rows": 224,
+      "reliability_active_genes": 10183,
+      "changed_entries": 380201,
+      "on": 4686,
+      "off": 27622
+    },
+    "OFT/RV-CM": {
+      "group": "CM_V",
+      "rows": 477,
+      "reliability_active_genes": 10226,
+      "changed_entries": 1367835,
+      "on": 9004,
+      "off": 46789
+    },
+    "Pericardium": {
+      "group": "EPI",
+      "rows": 216,
+      "reliability_active_genes": 0,
+      "changed_entries": 0,
+      "on": 0,
+      "off": 0
+    },
+    "Proepicardium": {
+      "group": "EPI",
+      "rows": 327,
+      "reliability_active_genes": 0,
+      "changed_entries": 0,
+      "on": 0,
+      "off": 0
+    },
+    "ST": {
+      "group": "MESO",
+      "rows": 301,
+      "reliability_active_genes": 10410,
+      "changed_entries": 413391,
+      "on": 2120,
+      "off": 27546
+    },
+    "SV-CM": {
+      "group": "CM_A",
+      "rows": 485,
+      "reliability_active_genes": 9993,
+      "changed_entries": 1219766,
+      "on": 25086,
+      "off": 56216
+    },
+    "V-CM": {
+      "group": "CM_V",
+      "rows": 406,
+      "reliability_active_genes": 10226,
+      "changed_entries": 1038750,
+      "on": 5728,
+      "off": 41159
+    },
+    "aPHM": {
+      "group": "MESO",
+      "rows": 85,
+      "reliability_active_genes": 10410,
+      "changed_entries": 67015,
+      "on": 687,
+      "off": 7393
+    },
+    "aSHF": {
+      "group": "SHF",
+      "rows": 276,
+      "reliability_active_genes": 0,
+      "changed_entries": 0,
+      "on": 0,
+      "off": 0
+    },
+    "pPHM": {
+      "group": "MESO",
+      "rows": 433,
+      "reliability_active_genes": 10410,
+      "changed_entries": 635927,
+      "on": 3582,
+      "off": 39585
+    },
+    "pSHF": {
+      "group": "SHF",
+      "rows": 216,
+      "reliability_active_genes": 0,
+      "changed_entries": 0,
+      "on": 0,
+      "off": 0
+    }
+  },
+  "raw_changed_entries": 7068283,
+  "activated_entries": 72944,
+  "deactivated_entries": 354893,
+  "detection_support_exact": false,
+  "row_mass_max_error": 0.0006752728677383857,
+  "pseudobulk_l2_shift_vs_v96": 0.997363077749011,
+  "gene_variance_sum_ratio_vs_v96": 0.9970945881648949,
+  "median_detection_ratio_vs_v96": 0.9885268471776044,
+  "preclosure_sha256": "4b73d3c362682c981faee7e514e416b4ef7367efe5c4c0eaf82bf3bf4b974159",
+  "provenance": {
+    "candidate_id": "T1_val/v0099_detonly_cp10k",
+    "configuration": {
+      "v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "v96_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+      "v97_sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+      "raw_v97_sha256": "e7ca8bd948c6378d60edbc44a8e91427b4f0a905e5910432fa9990a3a523ebed",
+      "carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+      "weights_sha256": "384cffdcd90e32d2f7749c1e734a963ac33fb8553c23a346ea0aefea417e713a",
+      "fit_new_parameters": false,
+      "opposite_weight": 1,
+      "selection_reference": "exact v0096 r2",
+      "all_controls": "both-enabled reproduces exact frozen v0097; both-disabled reproduces exact v0096 after CP10k; actual v0096-bound validator",
+      "interpretation": "Candidate-selection decomposition; no hidden-property inference and no post-hoc source gate",
+      "frozen_before_build": true,
+      "candidate_id": "T1_val/v0099_detonly_cp10k",
+      "component": "detection"
+    },
+    "configuration_sha256": "2dc171658df7ac7d8a4609d7f9d3f152b0eb788a40a58b5baf15049399e0262d",
+    "selection_reference": "exact v0096 r2",
+    "numerical_ancestry": "exact v0094, paired v0051 and exact frozen v0097 raw-library reliability weights",
+    "component": "detection",
+    "weights_sha256": "384cffdcd90e32d2f7749c1e734a963ac33fb8553c23a346ea0aefea417e713a",
+    "opposite_component_weight": 1,
+    "both_enabled_exact_v97_preclosure_and_final": true,
+    "both_disabled_exact_v94_then_v96": true,
+    "detection_only_intensity_caveat": "Fixed parent conditional empirical positive shape, re-evaluated at changed positive count; values are not literally held pointwise",
+    "scientific_scope": "Bounded candidate selection, not inference of hidden target properties; previous gene-permuted source control was negative for specificity",
+    "code_sha256": {
+      "build_hurdle_components.py": "06dcd9c1efd54006ecf69422823f120c879273da081c057b8faed36c2a9eae45",
+      "hurdle_margins.py": "4741df3558923b4435ff789397116d6f69f49c59b67de8bc3479f40b576805ff",
+      "normalization.py": "abf66d97e462d8405691e84361607ef22a8def1da0efc14e3f03b9644f66ff87"
+    },
+    "complete_source_disclosure": {
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "external_sources": [
+        {
+          "accession": "GSM7226268",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268"
+        },
+        {
+          "accession": "GSM7226269",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269"
+        },
+        {
+          "accession": "GSM7226272",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272"
+        },
+        {
+          "accession": "GSM7226273",
+          "role": "Direct raw-library detection and conditional-positive-level uncertainty calibration in this candidate; also inherited v0094 OT-field source",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273"
+        },
+        {
+          "accession": "GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274"
+        },
+        {
+          "accession": "GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "study": "GSE230531",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276"
+        },
+        {
+          "accession": "GSM5820434",
+          "role": "Historical rejected joint-donor trial and current E8.5-fitted/E9.5-held-out assay-scale diagnostic and candidate-selection route; not an expression or weight input to this isolated-component candidate",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "study": "GSE193746",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434"
+        }
+      ],
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "role": "Inherited carrier training; full-row normalization audit",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "stage": "E8.5"
+        },
+        {
+          "name": "E9.5_RNA",
+          "role": "Inherited carrier training; full-row normalization audit and released-source-only diagnostics",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "stage": "E9.5"
+        }
+      ],
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only",
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "protected_targets_used": false
+    }
+  },
+  "wall_seconds": 39.06056571006775,
+  "peak_rss_kib": 3486316
+}

@@ -1,0 +1,13 @@
+{
+  "full_panel": 32285,
+  "reference_cells": 17057,
+  "reference_scope": "all released official E9.5 cells; source-reference directions, not future truth",
+  "parent_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "candidate_sha256": "d08373b47b0b42abf9cc6c28c1f51cb386c0394bb77749262e20a28e2e507a85",
+  "reference_sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+  "substantial_source_reference_genes": 9203,
+  "source_reference_direction_flips_abs_threshold_0_01": 0,
+  "pseudobulk_l2_change": 0.11327152419753463,
+  "max_pseudobulk_change": 0.01924239319096377,
+  "detection_support_exact": true
+}

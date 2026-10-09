@@ -1,0 +1,273 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0098_assayscale_cp10k",
+  "file": "submissions/candidates/T1_val/v0098_assayscale_cp10k/submission.h5ad",
+  "sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+  "expression_sha256": "e93f9feb4b9e4c9e32f8cc56b9a2f583cf308938b2fe08076375a64f98a3e83f",
+  "bytes": 110715913,
+  "shape": [
+    5118,
+    32285
+  ],
+  "finite_nonnegative": true,
+  "detection_support_preserved": true,
+  "row_mass_max_error": 0.0006752728677383857,
+  "pseudobulk_l2_shift_vs_v96": 0.3644458366547723,
+  "gene_variance_sum_ratio_vs_v96": 1.0006190404043298,
+  "operator_audit": {
+    "positive_values": 10911742,
+    "floored": 13246,
+    "adjacent_steps": 10812884,
+    "negative_steps": 2235751,
+    "reordered": 4190626,
+    "repair_changed_values": 4024724,
+    "rank_distance_sum": 6231582,
+    "repair_abs_sum": 7729.930751067407,
+    "changed_entries": 10890010,
+    "rank_distance_max": 30,
+    "repair_abs_max": 0.6887986537769479,
+    "floor_fraction": 0.0012139216634704157,
+    "negative_step_fraction": 0.2067673157318621,
+    "reordered_fraction": 0.38404738675089645,
+    "repair_changed_value_fraction": 0.368843398240171,
+    "mean_rank_distance": 0.5710895657173712,
+    "mean_abs_repair": 0.000708404831333751,
+    "changed_full_matrix_fraction": 0.06590634178803802
+  },
+  "slope_audit": {
+    "CM_V": {
+      "source_fitted_genes": 7015,
+      "target_eligible_genes": 7015,
+      "slope_quantiles": [
+        0.6723807970121677,
+        0.8950704514659568,
+        1.0271650583166714,
+        1.1621746708881882,
+        1.4331908810125555
+      ],
+      "above_one": 4242,
+      "below_one": 2773
+    },
+    "CM_A": {
+      "source_fitted_genes": 3550,
+      "target_eligible_genes": 3549,
+      "slope_quantiles": [
+        0.7711054127039704,
+        0.912017010531915,
+        1.0052458484837803,
+        1.109342680268939,
+        1.2968395546510096
+      ],
+      "above_one": 1864,
+      "below_one": 1685
+    },
+    "ENDO": {
+      "source_fitted_genes": 8312,
+      "target_eligible_genes": 8180,
+      "slope_quantiles": [
+        0.6184584017799534,
+        0.8959694591693041,
+        1.0449567280335845,
+        1.2262355698131326,
+        1.528557989248424
+      ],
+      "above_one": 5276,
+      "below_one": 2904
+    },
+    "EPI": {
+      "source_fitted_genes": 0,
+      "target_eligible_genes": 0,
+      "slope_quantiles": [],
+      "above_one": 0,
+      "below_one": 0
+    },
+    "MESO": {
+      "source_fitted_genes": 9244,
+      "target_eligible_genes": 8955,
+      "slope_quantiles": [
+        0.5801879649770224,
+        0.9885811839593688,
+        1.1637248587775775,
+        1.3879839162431693,
+        1.7430177987876816
+      ],
+      "above_one": 7925,
+      "below_one": 1030
+    },
+    "NCC": {
+      "source_fitted_genes": 4919,
+      "target_eligible_genes": 4880,
+      "slope_quantiles": [
+        0.7647057490249498,
+        1.0018280849717909,
+        1.106520460878599,
+        1.191296572093159,
+        1.3106149580720179
+      ],
+      "above_one": 4420,
+      "below_one": 460
+    },
+    "SHF": {
+      "source_fitted_genes": 10459,
+      "target_eligible_genes": 9489,
+      "slope_quantiles": [
+        0.5325205447199813,
+        0.8333090956817915,
+        1.0508494049203554,
+        1.3861090988150278,
+        1.8159496899532968
+      ],
+      "above_one": 5652,
+      "below_one": 3837
+    }
+  },
+  "provenance": {
+    "candidate_id": "T1_val/v0098_assayscale_cp10k",
+    "configuration": {
+      "candidate_id": "T1_val/v0098_assayscale_cp10k",
+      "selection_reference_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+      "numerical_parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "paired_carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+      "groups": [
+        "CM_V",
+        "CM_A",
+        "ENDO",
+        "EPI",
+        "MESO",
+        "NCC",
+        "SHF"
+      ],
+      "support": "E8.5-only fitted slope eligibility intersect inherited external field's measured panel, global/non-CM masks and minimum pooled mean 0.02 at either endpoint; never filter by E9.5 test outcome",
+      "operator": "Keep exact v0094 detection support and positive count; Qnew(q)=Qcarrier(q)+b*(Qparent(q)-Qcarrier(q)) at each parent empirical positive midpoint rank",
+      "empty_side": "Parent empty remains zero; carrier empty uses parent quantiles and hence no displacement modification",
+      "floor": "Smallest actually observed positive value of the two parents for that fine-state gene; no synthetic pseudocount",
+      "monotone_repair": "Stable sort the floor-corrected full positive vector; report negative steps, reordered fraction and rank distances, and max/mean value changes due to sorting",
+      "floor_gate": "If more than 1% of touched positive values require the observed-positive floor, stop without a target artifact; no threshold retuning",
+      "normalization": "float64 expm1, row-scale to 10000, log1p, float32",
+      "endpoint": "b=1 must reproduce exact v0094 before closure and exact v0096 after closure",
+      "slope_model": "Frozen FITTED_E85_ONLY.npz; slope bounds/shrinkage fixed in affine_assay.json before held-out E9.5 assay",
+      "intercept_used": false,
+      "scientific_scope": "Source-fitted positive-displacement scale test. Cross-study differences are not identified as pure assay effects, and E9.5 evidence does not establish E14.5 or future transportability",
+      "frozen_before_target_build": true
+    },
+    "configuration_sha256": "918c70fe8a8ce224b4e52c939e84ae9702ee128d8505c40f131b99cbf92f102e",
+    "selection_reference_v96_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+    "numerical_v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+    "carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+    "model_sha256": "ad34e0e2a99b98de818f82129ed406abdaff0aaa96773acaa92e8f561cc64881",
+    "replicate_stats_sha256": "f96e417c6b93a47780498d406822752ee1da5d6c020c1adf411857c6cd6c3c2d",
+    "assay_result_sha256": "39479273cb4108c7c7b14da3b278ced6d589449fa65c01806243f9548b1e8a62",
+    "target_slopes_sha256": "db2d5a1c43e571f7a5155ca7afecb08d7f590313dfcbdf01e01d42a73629f97d",
+    "preclosure_sha256": "34a8f40a5390fcd6eb4db0fd0c227b61e160d65d04706b5833391a13a0138d1c",
+    "code_sha256": {
+      "build_assay_displacement.py": "de02d223cd4ac4b73b8d6417d95851e23cafbc9ebf4297b5a72df77f81e77474",
+      "assay_displacement.py": "29a53f3b0488de32555e914c626f6fb4b83a6d4abad50d124611f5fbd8f3cc30",
+      "hurdle_margins.py": "4741df3558923b4435ff789397116d6f69f49c59b67de8bc3479f40b576805ff",
+      "normalization.py": "abf66d97e462d8405691e84361607ef22a8def1da0efc14e3f03b9644f66ff87"
+    },
+    "slope1_endpoint_exact_v94": true,
+    "slope1_endpoint_then_closure_exact_v96": true,
+    "detection_support_exact_v94_v96": true,
+    "coarse_mapping_scope": "Fresh E8.5-only classifier determines E8.5 slope-fit populations and external E9.5 assay labels. Target rows retain inherited paired v0051 fine labels; broad-group names match, fitted cell populations differ. No E9.5 outcome-based state or gene selection. E9.5 measured-panel availability metadata is used.",
+    "operator_audit": {
+      "positive_values": 10911742,
+      "floored": 13246,
+      "adjacent_steps": 10812884,
+      "negative_steps": 2235751,
+      "reordered": 4190626,
+      "repair_changed_values": 4024724,
+      "rank_distance_sum": 6231582,
+      "repair_abs_sum": 7729.930751067407,
+      "changed_entries": 10890010,
+      "rank_distance_max": 30,
+      "repair_abs_max": 0.6887986537769479,
+      "floor_fraction": 0.0012139216634704157,
+      "negative_step_fraction": 0.2067673157318621,
+      "reordered_fraction": 0.38404738675089645,
+      "repair_changed_value_fraction": 0.368843398240171,
+      "mean_rank_distance": 0.5710895657173712,
+      "mean_abs_repair": 0.000708404831333751,
+      "changed_full_matrix_fraction": 0.06590634178803802
+    },
+    "full_source_disclosure": {
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "stage": "E8.5",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "role": "Inherited carrier input; direct source-only classifier and positive-SD scale fit; source classifier held-out check"
+        },
+        {
+          "name": "E9.5_RNA",
+          "stage": "E9.5",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "role": "Inherited carrier input; held-out E9.5 source assay labels/moments and full-panel diagnostics only; not new classifier or slope fit"
+        }
+      ],
+      "external_sources": [
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226268",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268",
+          "role": "Direct E8.5-only expression/moment calibration with separate libraries; inherited v0094 temporal field input"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226269",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269",
+          "role": "Direct E8.5-only expression/moment calibration with separate libraries; inherited v0094 temporal field input"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226272",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272",
+          "role": "Inherited v0094 late temporal field; pooled means reproduce inherited target support masks; no new slope fit"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226273",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273",
+          "role": "Inherited v0094 late temporal field; pooled means reproduce inherited target support masks; no new slope fit"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226274",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226276",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE193746",
+          "accession": "GSM5820434",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434",
+          "role": "Held-out-stage cross-study E9.5 assay, using a fresh E8.5-only classifier; measured-gene availability metadata restricts common fitting panel, no E9.5 expression/labels/moments fit new parameters; historical rejected v0095 joint-donor route"
+        }
+      ],
+      "protected_targets_used": false,
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only"
+    }
+  },
+  "wall_seconds": 27.076915502548218,
+  "peak_rss_kib": 3048732
+}

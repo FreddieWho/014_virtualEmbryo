@@ -1,0 +1,100 @@
+{
+  "schema_version": "ve.batch3.contract-report.v1",
+  "status": "PASS",
+  "valid": true,
+  "path": "submissions/candidates/T1_val/v0099_detonly_cp10k/submission.h5ad",
+  "task": "T1",
+  "board": "val",
+  "checks": {
+    "scorer_lock": {
+      "status": "PASS",
+      "path": "artifacts/t1_quota_20261009/contract/SCORER_LOCK.json",
+      "sha256": "d2a88996314745ee1cb9f47fdc4aef677ec86627de4b14d4fc04404028651485"
+    },
+    "board_definition": {
+      "status": "PASS",
+      "key": "T1:val",
+      "genes_path": "artifacts/t1_quota_20261009/contract/data/gene_panel/T1__val.genes.txt",
+      "genes_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+      "canonical_genes_sha256": "807549e15be019899fa83cbab864bec87ad278f60c272e39819c7302cc2285b8",
+      "index_declared_genes_sha256": "807549e15be01989"
+    },
+    "parent_binding": {
+      "status": "PASS",
+      "path": "submissions/candidates/T1_val/v0096_cp10k/r2/submission.h5ad",
+      "sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0"
+    },
+    "shape": {
+      "status": "PASS",
+      "n_obs": 5118,
+      "n_vars": 32285
+    },
+    "cell_limits": {
+      "status": "PASS",
+      "min_cells": 1000,
+      "max_cells": 5118
+    },
+    "gene_order": {
+      "status": "PASS",
+      "expected_count": 32285,
+      "observed_count": 32285,
+      "exact_order": true,
+      "missing_head": [],
+      "extra_head": []
+    },
+    "cell_identity": {
+      "status": "PASS",
+      "unique": true,
+      "nonempty": true,
+      "n_obs": 5118
+    },
+    "normalisation": {
+      "status": "PASS",
+      "expected": "log1p_normalized",
+      "evidence": "uns.ve_contract.normalization"
+    },
+    "expression": {
+      "status": "PASS",
+      "finite": true,
+      "nonnegative": true,
+      "dtype": "float32",
+      "normalisation_assumption": "log-normalized nonnegative expression; no mutation performed"
+    },
+    "obs": {
+      "status": "PASS",
+      "required": [],
+      "missing": []
+    },
+    "uns": {
+      "status": "PASS",
+      "required": [],
+      "missing": []
+    },
+    "obsm": {
+      "status": "PASS",
+      "required": [],
+      "missing": []
+    },
+    "spatial_absence": {
+      "status": "PASS",
+      "present": false
+    },
+    "protected_parent": {
+      "status": "PASS",
+      "obs_names_exact": true,
+      "obs_exact": true,
+      "var_exact": true,
+      "layers_keys_exact": true,
+      "raw_exact": true,
+      "layers_exact": true
+    },
+    "serialisation_round_trip": {
+      "status": "PASS",
+      "exact_matrix_content": true,
+      "exact_var_names": true,
+      "spatial_content_preserved": true
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

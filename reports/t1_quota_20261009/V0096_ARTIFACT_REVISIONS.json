@@ -1,0 +1,19 @@
+{
+  "candidate_id": "T1_val/v0096_cp10k",
+  "selected_artifact_revision": "r2",
+  "selected_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "expression_sha256": "be0ad025143cbfb51a40c49cad1292199f0627076e17039c46f84a5f7213bcf7",
+  "r1": {
+    "sha256": "5f11c91842f6ec6c714d9907c70aa533b4152a4a821afb344a8de5a22e68a297",
+    "status": "superseded-unsubmitted",
+    "reason": "Missing project-local normalization marker; numerical expression checks passed"
+  },
+  "r2": {
+    "status": "READY_FOR_PARENT_RELEASE",
+    "metadata_only_repair": true,
+    "actual_board_validator": "PASS",
+    "expression_identical_to_r1": true
+  },
+  "local_proxy_status": "3-seed released-source distribution diagnostics pending shared compute; fullpanel controls passed",
+  "quota_used_by_build": 0
+}

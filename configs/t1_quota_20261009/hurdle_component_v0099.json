@@ -1,0 +1,16 @@
+{
+  "v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "v96_sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "v97_sha256": "e61bf5c918a825b57efdc131b95263f02ca3dc317158ab091ac47b9f6561ccca",
+  "raw_v97_sha256": "e7ca8bd948c6378d60edbc44a8e91427b4f0a905e5910432fa9990a3a523ebed",
+  "carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+  "weights_sha256": "384cffdcd90e32d2f7749c1e734a963ac33fb8553c23a346ea0aefea417e713a",
+  "fit_new_parameters": false,
+  "opposite_weight": 1,
+  "selection_reference": "exact v0096 r2",
+  "all_controls": "both-enabled reproduces exact frozen v0097; both-disabled reproduces exact v0096 after CP10k; actual v0096-bound validator",
+  "interpretation": "Candidate-selection decomposition; no hidden-property inference and no post-hoc source gate",
+  "frozen_before_build": true,
+  "candidate_id": "T1_val/v0099_detonly_cp10k",
+  "component": "detection"
+}

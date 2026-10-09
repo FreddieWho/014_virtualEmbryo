@@ -1,0 +1,301 @@
+{
+  "status": "CANDIDATE_BUILT_NOT_SUBMITTED",
+  "candidate_id": "T1_val/v0096_cp10k",
+  "parent_candidate": "T1_val/v0094_joint_carrier",
+  "file": "submissions/candidates/T1_val/v0096_cp10k/r2/submission.h5ad",
+  "sha256": "114a5e8b8cc397f8d6866fd221c5b4b312c791cdb487badf7aaa6e7bc9f714e0",
+  "expression_sha256": "be0ad025143cbfb51a40c49cad1292199f0627076e17039c46f84a5f7213bcf7",
+  "bytes": 110684655,
+  "contract_pass": true,
+  "metrics": {
+    "rows": 5118,
+    "genes": 32285,
+    "nnz_before": 22535804,
+    "nnz_after": 22535804,
+    "changed_nnz": 20761701,
+    "zero_support_preserved": true,
+    "within_row_order_violations": 0,
+    "cross_cell_gene_rank_preservation_claim": false,
+    "library_before_quantiles": [
+      8040.252359550382,
+      9719.441416550306,
+      10000.000044810324,
+      10442.979679703669,
+      11558.830402368952,
+      13647.731441622027,
+      23490.207746168675
+    ],
+    "library_after_quantiles": [
+      9999.999324727132,
+      9999.999852045594,
+      9999.999939664729,
+      10000.000000365799,
+      10000.000061919354,
+      10000.000197411107,
+      10000.00038393463
+    ],
+    "maximum_library_mass_error": 0.0006752728677383857,
+    "pseudobulk_shift_l2": 1.6853244304656982,
+    "pseudobulk_shift_max_abs": 0.06058216094970703,
+    "per_state": {
+      "AVC-CM": {
+        "rows": 75,
+        "mean_delta_l2": 2.1821670532226562,
+        "mean_delta_max_abs": 0.07204961776733398,
+        "median_library_before": 10485.946837049762
+      },
+      "BEC": {
+        "rows": 94,
+        "mean_delta_l2": 0.4218235909938812,
+        "mean_delta_max_abs": 0.013521671295166016,
+        "median_library_before": 10129.481984949509
+      },
+      "Blood": {
+        "rows": 54,
+        "mean_delta_l2": 2.6566107273101807,
+        "mean_delta_max_abs": 0.11784029006958008,
+        "median_library_before": 11457.02295729813
+      },
+      "Endocardium": {
+        "rows": 543,
+        "mean_delta_l2": 1.292734146118164,
+        "mean_delta_max_abs": 0.0429682731628418,
+        "median_library_before": 10447.688278527172
+      },
+      "Epithelium": {
+        "rows": 83,
+        "mean_delta_l2": 0.0,
+        "mean_delta_max_abs": 0.0,
+        "median_library_before": 10000.000031220192
+      },
+      "Foregut": {
+        "rows": 153,
+        "mean_delta_l2": 1.6049944162368774,
+        "mean_delta_max_abs": 0.058302879333496094,
+        "median_library_before": 10537.619213842234
+      },
+      "Hepatocyte": {
+        "rows": 413,
+        "mean_delta_l2": 0.0,
+        "mean_delta_max_abs": 0.0,
+        "median_library_before": 10000.000022926273
+      },
+      "IFT-CM": {
+        "rows": 138,
+        "mean_delta_l2": 2.8419582843780518,
+        "mean_delta_max_abs": 0.0896148681640625,
+        "median_library_before": 10766.810306078147
+      },
+      "NCC": {
+        "rows": 9,
+        "mean_delta_l2": 4.9992899894714355,
+        "mean_delta_max_abs": 0.15494441986083984,
+        "median_library_before": 11523.550550589775
+      },
+      "NCC-derived": {
+        "rows": 224,
+        "mean_delta_l2": 0.8856339454650879,
+        "mean_delta_max_abs": 0.030654191970825195,
+        "median_library_before": 10376.959191935679
+      },
+      "OFT/RV-CM": {
+        "rows": 477,
+        "mean_delta_l2": 2.196817636489868,
+        "mean_delta_max_abs": 0.07218170166015625,
+        "median_library_before": 10628.39803611707
+      },
+      "Pericardium": {
+        "rows": 216,
+        "mean_delta_l2": 2.9874560832977295,
+        "mean_delta_max_abs": 0.10919857025146484,
+        "median_library_before": 10978.470530459152
+      },
+      "Proepicardium": {
+        "rows": 327,
+        "mean_delta_l2": 1.0165355205535889,
+        "mean_delta_max_abs": 0.03217649459838867,
+        "median_library_before": 10332.087836755087
+      },
+      "ST": {
+        "rows": 301,
+        "mean_delta_l2": 1.442198634147644,
+        "mean_delta_max_abs": 0.04884958267211914,
+        "median_library_before": 10515.34321334851
+      },
+      "SV-CM": {
+        "rows": 485,
+        "mean_delta_l2": 4.583922386169434,
+        "mean_delta_max_abs": 0.16152715682983398,
+        "median_library_before": 11646.209963308718
+      },
+      "Surface Ectoderm": {
+        "rows": 110,
+        "mean_delta_l2": 1.6047782897949219,
+        "mean_delta_max_abs": 0.06035423278808594,
+        "median_library_before": 10539.108625578327
+      },
+      "V-CM": {
+        "rows": 406,
+        "mean_delta_l2": 0.7014337182044983,
+        "mean_delta_max_abs": 0.02146148681640625,
+        "median_library_before": 10219.3968208523
+      },
+      "aPHM": {
+        "rows": 85,
+        "mean_delta_l2": 0.9487907290458679,
+        "mean_delta_max_abs": 0.03164529800415039,
+        "median_library_before": 10392.346604658245
+      },
+      "aSHF": {
+        "rows": 276,
+        "mean_delta_l2": 2.9814722537994385,
+        "mean_delta_max_abs": 0.11046981811523438,
+        "median_library_before": 11067.599979212198
+      },
+      "pPHM": {
+        "rows": 433,
+        "mean_delta_l2": 1.0181537866592407,
+        "mean_delta_max_abs": 0.035344600677490234,
+        "median_library_before": 10353.071295418036
+      },
+      "pSHF": {
+        "rows": 216,
+        "mean_delta_l2": 3.2678794860839844,
+        "mean_delta_max_abs": 0.10071015357971191,
+        "median_library_before": 10871.326732835676
+      }
+    }
+  },
+  "provenance": {
+    "candidate_id": "T1_val/v0096_cp10k",
+    "parent_candidate": "T1_val/v0094_joint_carrier",
+    "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+    "parent_expression_sha256": "a0a82f77078eef6bc08e671ced6bd570ce0180467a326aefd2589825e1217c4a",
+    "configuration": {
+      "candidate_id": "T1_val/v0096_cp10k",
+      "parent_candidate": "T1_val/v0094_joint_carrier",
+      "parent_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+      "method": "per_row_inverse_log_mass_conservation",
+      "formula": "float32(log1p(expm1(float64(X_ij)) * 10000 / sum_j expm1(float64(X_ij)))))",
+      "target_mass": 10000,
+      "learned_parameters": 0,
+      "seed": null,
+      "clipping": false,
+      "pseudocount": false,
+      "row_or_column_resampling": false,
+      "zero_support_unchanged": true,
+      "within_row_gene_order_unchanged": true,
+      "cross_cell_gene_ranks_unchanged": false,
+      "full_gene_marginals_unchanged": false,
+      "motivation": "Restore observed official measurement normalization; no biological mechanism claim",
+      "local_references": [
+        "all released E8.5/E9.5 rows for representation audit",
+        "released E9.5 distribution only; not future validation"
+      ],
+      "controls": [
+        "unchanged exact v0094",
+        "official E8.5 normalization near-identity",
+        "known row-scale corruption then repair"
+      ],
+      "selection_policy": "No fitted factor or scale search; frozen before candidate construction; server result used only to select candidate",
+      "artifact_revision": "r2",
+      "metadata_repair": "Adds required project-local uns.ve_contract.normalization; no expression change from immutable unsubmitted r1"
+    },
+    "code_sha256": {
+      "build_cp10k.py": "d424e4219de8248ad4daad7a24c12056aefa669c4ba2acd1fd890e8f247d4287",
+      "normalization.py": "abf66d97e462d8405691e84361607ef22a8def1da0efc14e3f03b9644f66ff87"
+    },
+    "configuration_sha256": "c336602e3b40a035c04569e38815e147de136e25f9ca0571e959552ae5ca0374",
+    "official_panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "paired_states_sha256": "9c63848dbbee65f4302902a2ddc8ac0bc6f80ab78f6044a8c5f038c417bcaa47",
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "anndata": "0.11.4",
+      "blas_threads": 1
+    },
+    "representation": "full-panel log1p(CP10k), float32",
+    "biological_claim": "none; measurement-consistency candidate",
+    "full_source_disclosure": {
+      "official_sources": [
+        {
+          "name": "E8.5_RNA",
+          "stage": "E8.5",
+          "sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+          "role": "Inherited carrier training; full-row normalization audit"
+        },
+        {
+          "name": "E9.5_RNA",
+          "stage": "E9.5",
+          "sha256": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+          "role": "Inherited carrier training; full-row normalization audit and released-source-only diagnostics"
+        }
+      ],
+      "external_sources": [
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226268",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226268",
+          "role": "Inherited v0094 early external OT-field input and historical diagnostics; new restoration does not refit the field"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226269",
+          "stage": "E8.5",
+          "stage_numeric": 8.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226269",
+          "role": "Inherited v0094 early external OT-field input and historical diagnostics; new restoration does not refit the field"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226272",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226272",
+          "role": "Inherited v0094 late external OT-field input and historical diagnostics; new restoration does not refit the field"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226273",
+          "stage": "E14.5",
+          "stage_numeric": 14.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226273",
+          "role": "Inherited v0094 late external OT-field input and historical diagnostics; new restoration does not refit the field"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226274",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226274",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE230531",
+          "accession": "GSM7226276",
+          "stage": "E16.5",
+          "stage_numeric": 16.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7226276",
+          "role": "Historical temporal-warp and alternative-anchor diagnostics, including unselected anchor arms; no direct final OT-field or emitted-expression contribution"
+        },
+        {
+          "study": "GSE193746",
+          "accession": "GSM5820434",
+          "stage": "E9.5",
+          "stage_numeric": 9.5,
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5820434",
+          "role": "Historical v0095 independent joint-donor experiment and source diagnostics; v0095 rejected. Not an expression or fitted-parameter input to v0096"
+        }
+      ],
+      "protected_targets_used": false,
+      "prohibited_external_interval": "(E9.5,E13.5]",
+      "disclosure_scope": "All direct and inherited external inputs plus prior diagnostic/model-selection sources known in this campaign",
+      "prior_artifact_disclosure_gap": "Earlier scored artifacts were not modified; this complete ledger applies to this newly created candidate only"
+    }
+  },
+  "wall_seconds": 10.43749713897705,
+  "peak_rss_kib": 935276
+}

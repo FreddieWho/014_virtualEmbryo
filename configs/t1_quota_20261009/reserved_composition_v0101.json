@@ -1,0 +1,19 @@
+{
+  "candidate_id_reserved": "T1_val/v0101_component_assay_cp10k",
+  "status": "PRESPECIFIED_ORDER_ONLY_NO_BUILD_AUTHORIZATION_YET",
+  "selection_gate": "Parent selects a component only if it yields useful advance or defensible complementarity; no highest-loser automatic fill",
+  "first_operator": "Selected single frozen v0097 hurdle component applied to exact v0094 with paired v0051; complementary reliability is exactly one",
+  "second_operator": "Exact frozen v0098 assay positive-displacement slope relative to paired v0051 empirical positive curve, using selected component output as the new parent curve; identical observed-positive floor and stable monotonic repair",
+  "third_operator": "Exact parameter-free float64 CP10k closure",
+  "disabled_component_endpoint": "Exact v0098 before and after closure",
+  "disabled_assay_endpoint": "Exact selected v0099 or v0100 before and after closure",
+  "new_fitted_parameters": false,
+  "retune_weights_or_thresholds": false,
+  "floor_gate": "Same v0098 maximum1% touched positives floored, plus full crossing/repair audit",
+  "frozen_before_component_server_results": true,
+  "v94_sha256": "4795a48fb6fa8ca0a6106f3e38f1f4bca1ed2ed9b40c53465cb5662f31f7d95e",
+  "v98_sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+  "carrier_sha256": "739fddab07117f02d1fb4310c6f70a30c63e1e84e205a2c92015e42dbebb8691",
+  "raw_v98_sha256": "34a8f40a5390fcd6eb4db0fd0c227b61e160d65d04706b5833391a13a0138d1c",
+  "slopes_sha256": "db2d5a1c43e571f7a5155ca7afecb08d7f590313dfcbdf01e01d42a73629f97d"
+}

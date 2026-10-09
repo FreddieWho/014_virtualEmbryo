@@ -1,0 +1,7 @@
+{
+ "exact_v96":"submissions/candidates/T1_val/v0096_cp10k/r2/submission.h5ad",
+ "robust_hurdle_cp10k":"submissions/candidates/T1_val/v0097_rephurdle_cp10k/submission.h5ad",
+ "pooled_uncertainty_cp10k":"artifacts/t1_quota_20261009/replicate_controls/pooled_cp10k/submission.h5ad",
+ "gene_permuted_uncertainty_cp10k":"artifacts/t1_quota_20261009/replicate_controls/permuted_cp10k/submission.h5ad",
+ "unclosed_robust_ablation":"artifacts/t1_quota_20261009/replicate_controls/unclosed/submission.h5ad"
+}

@@ -1,0 +1,6 @@
+{
+ "exact_v96":"submissions/candidates/T1_val/v0096_cp10k/r2/submission.h5ad",
+ "both_components_v97":"submissions/candidates/T1_val/v0097_rephurdle_cp10k/submission.h5ad",
+ "detection_only_v99":"submissions/candidates/T1_val/v0099_detonly_cp10k/submission.h5ad",
+ "positive_level_only_v100":"submissions/candidates/T1_val/v0100_levelonly_cp10k/submission.h5ad"
+}

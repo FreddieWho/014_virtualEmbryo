@@ -1,0 +1,55 @@
+{
+  "decision": "APPROVE_ONE_BOUNDED_TEST",
+  "candidate_id": "T1_val/v0098_assayscale_cp10k",
+  "artifact": "/workspace/shared/virtualembryo-20261009/t1/submissions/candidates/T1_val/v0098_assayscale_cp10k/submission.h5ad",
+  "sha256": "7e7669328ecf951ddf2ed8a0f6a85979c1b7e2bf926eff352cfe6f9074e53567",
+  "expression_sha256": "e93f9feb4b9e4c9e32f8cc56b9a2f583cf308938b2fe08076375a64f98a3e83f",
+  "frozen_slope_support_reproduced": true,
+  "independent_positive_displacement_mismatches": 0,
+  "active_entries_checked": 27281830,
+  "independent_full_CP10k_closure_mismatches": 0,
+  "zero_support_exact_v94_v96": true,
+  "floor_fraction_independent": 0.0012139216634704157,
+  "operator_repair_audit": {
+    "adjacent_steps": 10812884,
+    "changed_entries": 10890010,
+    "changed_full_matrix_fraction": 0.06590634178803802,
+    "floor_fraction": 0.0012139216634704157,
+    "floored": 13246,
+    "mean_abs_repair": 0.000708404831333751,
+    "mean_rank_distance": 0.5710895657173712,
+    "negative_step_fraction": 0.2067673157318621,
+    "negative_steps": 2235751,
+    "positive_values": 10911742,
+    "rank_distance_max": 30,
+    "rank_distance_sum": 6231582,
+    "reordered": 4190626,
+    "reordered_fraction": 0.38404738675089645,
+    "repair_abs_max": 0.6887986537769479,
+    "repair_abs_sum": 7729.930751067407,
+    "repair_changed_value_fraction": 0.368843398240171,
+    "repair_changed_values": 4024724
+  },
+  "actual_repository_contract": "PASS independent against exactv96r2",
+  "source_disclosure": "PASS E8.5-only expression/labels/moments fit; E9.5 measured-gene availability metadata used; E9.5 expression is conditional held-out assay only; E16.5 history retained",
+  "limits": "Sorting is a material part of operator, not pure affine scaling. Source SD calibration does not establish future-stage displacement calibration.",
+  "peak_rss_kib": 1858472,
+  "persistence": {
+    "packet_sha256": "b039d6bf067b7a814debb6109c1b73d8222bcabacf582e58f3b4a8416dc19e30",
+    "bytes": 122689658,
+    "local_crc_and_report_binding": "PASS",
+    "library_tool_success": "reported by builder"
+  },
+  "source_controls": {
+    "path": "/workspace/shared/virtualembryo-20261009/t1/reports/t1_quota_20261009/V0098_SOURCE_CONTROLS.json",
+    "sha256": "409dd0ac0fee5edddc02f9268b8694add451b91fd7a34ee8a75174069857bd1f",
+    "scope": "Same released E9.5 reference, full 32,285 genes, three seeds; all three discrepancies worsen in every seed",
+    "mean_relative_increase": {
+      "mmd_u": 0.04200528509098126,
+      "energy_distance": 0.03088820888907377,
+      "variogram": 0.013376017840193008
+    },
+    "interpretation": "Negative direct-source discrepancy; assay SD transport diagnostic does not establish future displacement accuracy"
+  },
+  "publication_note": "Private Library IDs omitted; hashes, audit and verdict unchanged"
+}

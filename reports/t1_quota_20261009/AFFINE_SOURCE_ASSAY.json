@@ -1,0 +1,311 @@
+{
+  "status": "PASS_SOURCE_TRANSPORTABILITY_GATE",
+  "fit_config": {
+    "status": "SOURCE_ONLY_PROTOTYPE_BEFORE_ANY_TARGET_ARTIFACT",
+    "fit_stage": "official E8.5 and GSE230531 two E8.5 libraries only",
+    "evaluation_stage": "GSM5820434 independent E9.5 study versus official E9.5; no E9.5 fit",
+    "mapping": "fresh official E8.5-only 400-marker coarse classifier, C0.5,max_iter1000, sourceconfidence>=0.8; 70/30 E8.5 classifier check only",
+    "minimum_external_group_cells_per_early_library": 20,
+    "minimum_positive_cells_per_early_library_and_official": 10,
+    "minimum_positive_sd": 0.05,
+    "slope": "b=exp(alpha*log(clip(sd_official85 / max(sd_external85,0.05),0.5,2.0)))",
+    "shrinkage": "alpha=min(npos_official85,npos_external85_rep1,npos_external85_rep2)/(min_count+50)",
+    "external_early_moments": "equal-library mixture of conditional-positive means and variances",
+    "intercept": "a=alpha*(mu_official85-b*mu_external85); evaluated diagnostically only, not used for a temporal displacement",
+    "evaluation_selection": "positive count>=10 in both E9.5 sources, >=100 evaluated genes per state; label-confidence conditioning reported",
+    "gate": "at least3 evaluable states; equal-state mean of median absolute log positive-SD error improves>=5% versus slope1, improves in>=two-thirds states, and beats fixed gene-permuted-slope control",
+    "error": "abs(log((b*sd_external95+0.05)/(sd_official95+0.05)))",
+    "failure_policy": "close without target candidate; no threshold or shrinkage retuning",
+    "seed": 20261009,
+    "scope_limit": "E9.5 cross-study diagnostic does not establish E14.5 or future transfer; differences are not attributed purely to platform"
+  },
+  "classifier_e85_heldout_accuracy": 0.9481834425253127,
+  "classifier_fit_e95_used": false,
+  "mapping_coverage": {
+    "early1": {
+      "total": 2924,
+      "accepted": 2153,
+      "by_state": {
+        "BLOOD": 26,
+        "CM_A": 30,
+        "CM_V": 70,
+        "ECTO": 1046,
+        "ENDO": 113,
+        "ENDODERM": 133,
+        "EPI": 1,
+        "MESO": 202,
+        "NCC": 32,
+        "SHF": 500
+      },
+      "probability_quantiles": [
+        0.27274300525476813,
+        0.5861993058727553,
+        0.9536918977460647,
+        0.9993130614561245,
+        0.9999999939191482
+      ]
+    },
+    "early2": {
+      "total": 5776,
+      "accepted": 4246,
+      "by_state": {
+        "BLOOD": 77,
+        "CM_A": 75,
+        "CM_V": 112,
+        "ECTO": 1980,
+        "ENDO": 231,
+        "ENDODERM": 285,
+        "EPI": 12,
+        "MESO": 426,
+        "NCC": 78,
+        "SHF": 970
+      },
+      "probability_quantiles": [
+        0.23025707302567672,
+        0.5842303252258676,
+        0.9518346720995058,
+        0.9995344562694363,
+        0.9999999983895893
+      ]
+    },
+    "late95": {
+      "total": 2744,
+      "accepted": 2249,
+      "by_state": {
+        "BLOOD": 302,
+        "CM_A": 45,
+        "CM_V": 672,
+        "ECTO": 49,
+        "ENDO": 296,
+        "ENDODERM": 169,
+        "EPI": 52,
+        "MESO": 238,
+        "NCC": 12,
+        "SHF": 414
+      },
+      "probability_quantiles": [
+        0.27449117007456175,
+        0.6488970697356874,
+        0.9962867954294476,
+        0.9999999337029194,
+        0.9999999999991447
+      ]
+    }
+  },
+  "state_results": [
+    {
+      "group": "BLOOD",
+      "fit_genes": 2956,
+      "evaluated_genes": 2934,
+      "external95_cells": 302,
+      "official95_cells": 213,
+      "slope_quantiles": [
+        0.8410246404832125,
+        0.9860165916138752,
+        1.0916055337821167,
+        1.1734604600046263,
+        1.2676050067484605
+      ],
+      "sd_error_unadjusted": 0.3602278317473918,
+      "sd_error_adjusted": 0.29534071194609984,
+      "sd_error_gene_permuted": 0.30141559461970013,
+      "positive_mean_mse_unadjusted": 0.5583198691364707,
+      "positive_mean_mse_affine": 0.3734747004917812,
+      "external95_detection_median": 0.7019867549668874,
+      "official95_detection_median": 0.323943661971831
+    },
+    {
+      "group": "CM_A",
+      "fit_genes": 3550,
+      "evaluated_genes": 3186,
+      "external95_cells": 45,
+      "official95_cells": 1963,
+      "slope_quantiles": [
+        0.7711054127039704,
+        0.912021804406895,
+        1.0052853404731024,
+        1.109341848044974,
+        1.2968395546510096
+      ],
+      "sd_error_unadjusted": 0.1837890454792222,
+      "sd_error_adjusted": 0.16873398083472074,
+      "sd_error_gene_permuted": 0.18930233018536016,
+      "positive_mean_mse_unadjusted": 0.07261112514625008,
+      "positive_mean_mse_affine": 0.039488380320130634,
+      "external95_detection_median": 0.5333333333333333,
+      "official95_detection_median": 0.5690269994905757
+    },
+    {
+      "group": "CM_V",
+      "fit_genes": 7015,
+      "evaluated_genes": 7006,
+      "external95_cells": 672,
+      "official95_cells": 3300,
+      "slope_quantiles": [
+        0.6723807970121677,
+        0.8950704514659568,
+        1.0271650583166714,
+        1.1621746708881882,
+        1.4331908810125555
+      ],
+      "sd_error_unadjusted": 0.11865512993497716,
+      "sd_error_adjusted": 0.08751865557604416,
+      "sd_error_gene_permuted": 0.13360605480198604,
+      "positive_mean_mse_unadjusted": 0.0479805449802527,
+      "positive_mean_mse_affine": 0.015026426395361024,
+      "external95_detection_median": 0.45089285714285715,
+      "official95_detection_median": 0.5233333333333333
+    },
+    {
+      "group": "ECTO",
+      "fit_genes": 11859,
+      "evaluated_genes": 5797,
+      "external95_cells": 49,
+      "official95_cells": 554,
+      "slope_quantiles": [
+        0.5183221958493592,
+        0.9691784205892088,
+        1.212508363359954,
+        1.616234871527479,
+        1.937746117596215
+      ],
+      "sd_error_unadjusted": 0.1632915805357742,
+      "sd_error_adjusted": 0.2163822684034461,
+      "sd_error_gene_permuted": 0.2557164624287879,
+      "positive_mean_mse_unadjusted": 0.055174631056121685,
+      "positive_mean_mse_affine": 0.1553197897455074,
+      "external95_detection_median": 0.40816326530612246,
+      "official95_detection_median": 0.36823104693140796
+    },
+    {
+      "group": "ENDO",
+      "fit_genes": 8312,
+      "evaluated_genes": 8238,
+      "external95_cells": 296,
+      "official95_cells": 1826,
+      "slope_quantiles": [
+        0.6184584017799534,
+        0.8961015548849682,
+        1.0445500334891553,
+        1.22512588079746,
+        1.528557989248424
+      ],
+      "sd_error_unadjusted": 0.14276743691114918,
+      "sd_error_adjusted": 0.1093454039335611,
+      "sd_error_gene_permuted": 0.15834093912092737,
+      "positive_mean_mse_unadjusted": 0.07487617955650992,
+      "positive_mean_mse_affine": 0.019274595523483845,
+      "external95_detection_median": 0.38513513513513514,
+      "official95_detection_median": 0.3778751369112815
+    },
+    {
+      "group": "ENDODERM",
+      "fit_genes": 8921,
+      "evaluated_genes": 8587,
+      "external95_cells": 169,
+      "official95_cells": 2294,
+      "slope_quantiles": [
+        0.6048818489858303,
+        0.8479298818010239,
+        0.9908310685193457,
+        1.1644032826613047,
+        1.573145150223749
+      ],
+      "sd_error_unadjusted": 0.1409509991526388,
+      "sd_error_adjusted": 0.11241839034142802,
+      "sd_error_gene_permuted": 0.1587695311951577,
+      "positive_mean_mse_unadjusted": 0.06921301361971888,
+      "positive_mean_mse_affine": 0.02467299171803418,
+      "external95_detection_median": 0.33136094674556216,
+      "official95_detection_median": 0.2920662598081953
+    },
+    {
+      "group": "EPI",
+      "fit_genes": 0,
+      "evaluated_genes": 0,
+      "external95_cells": 52,
+      "official95_cells": 1780,
+      "slope_quantiles": []
+    },
+    {
+      "group": "MESO",
+      "fit_genes": 9244,
+      "evaluated_genes": 8983,
+      "external95_cells": 238,
+      "official95_cells": 2299,
+      "slope_quantiles": [
+        0.5801879649770224,
+        0.9877885921481171,
+        1.1614288173183043,
+        1.3834081795224886,
+        1.7430177987876816
+      ],
+      "sd_error_unadjusted": 0.18155171864396777,
+      "sd_error_adjusted": 0.1148192018429108,
+      "sd_error_gene_permuted": 0.16336758492438072,
+      "positive_mean_mse_unadjusted": 0.11083331707402025,
+      "positive_mean_mse_affine": 0.032443078983553086,
+      "external95_detection_median": 0.35294117647058826,
+      "official95_detection_median": 0.2753371030882993
+    },
+    {
+      "group": "NCC",
+      "fit_genes": 4919,
+      "evaluated_genes": 1390,
+      "external95_cells": 12,
+      "official95_cells": 668,
+      "slope_quantiles": [
+        0.7647057490249498,
+        1.0015953544742748,
+        1.1065063288518857,
+        1.1913022167275946,
+        1.3106149580720179
+      ],
+      "sd_error_unadjusted": 0.18598725320493842,
+      "sd_error_adjusted": 0.16158174677447093,
+      "sd_error_gene_permuted": 0.17625934383332253,
+      "positive_mean_mse_unadjusted": 0.11089356781556058,
+      "positive_mean_mse_affine": 0.09362720601047408,
+      "external95_detection_median": 0.9166666666666666,
+      "official95_detection_median": 0.7050898203592815
+    },
+    {
+      "group": "SHF",
+      "fit_genes": 10459,
+      "evaluated_genes": 10026,
+      "external95_cells": 414,
+      "official95_cells": 2160,
+      "slope_quantiles": [
+        0.5325205447199813,
+        0.8376352516217588,
+        1.0491802123231633,
+        1.3722294546823361,
+        1.8159496899532968
+      ],
+      "sd_error_unadjusted": 0.1420688510332122,
+      "sd_error_adjusted": 0.10743347747681942,
+      "sd_error_gene_permuted": 0.18795261701625138,
+      "positive_mean_mse_unadjusted": 0.06460872012583296,
+      "positive_mean_mse_affine": 0.028307791285973025,
+      "external95_detection_median": 0.24154589371980675,
+      "official95_detection_median": 0.26990740740740743
+    }
+  ],
+  "aggregate": {
+    "evaluable_states": 9,
+    "winning_states": 8,
+    "mean_median_log_sd_error_unadjusted": 0.17992109407147466,
+    "mean_median_log_sd_error_adjusted": 0.15261931523661124,
+    "mean_median_log_sd_error_gene_permuted": 0.19163671756954156,
+    "relative_improvement": 0.15174306812528404
+  },
+  "target_candidate_created": false,
+  "limits": [
+    "Single pooled E9.5 whole-cell library versus official nuclei",
+    "Source label-confidence conditioning changes selected populations",
+    "Cross-study E9.5 performance does not establish E14.5 or future transfer",
+    "Affine intercept performance cannot alone justify slope-only temporal transfer"
+  ],
+  "wall_seconds": 10.267361164093018,
+  "peak_rss_kib": 1853844
+}

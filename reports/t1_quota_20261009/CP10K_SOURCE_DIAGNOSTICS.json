@@ -1,0 +1,60 @@
+{
+  "interpretation": "Released E9.5 source-reference diagnostic; not hidden E10.5 truth, not forecast accuracy or server-score prediction",
+  "full_panel": 32285,
+  "source_reference_cells": 2000,
+  "source_reference_indices_sha256": "3d483646518f888786fbdc444fe548026cb7ced5006becd25e1935004ff77b07",
+  "full_source_pseudobulk_changes": {
+    "substantial_reference_change_genes": 10333,
+    "direction_flips_abs_threshold_0_01": 389,
+    "max_delta_change": 0.06058816270392331,
+    "pseudobulk_l2_shift": 1.6853216456282814
+  },
+  "metrics": {
+    "exact_v94": [
+      {
+        "seed": 20261009,
+        "mmd_u": 0.02315651459717761,
+        "variogram": 0.0024576461873948574,
+        "energy_distance": 1.1121032002020357
+      },
+      {
+        "seed": 20261010,
+        "mmd_u": 0.024154906319689303,
+        "variogram": 0.0023882410023361444,
+        "energy_distance": 1.1022997759682696
+      },
+      {
+        "seed": 20261011,
+        "mmd_u": 0.021458965236512115,
+        "variogram": 0.00229512806981802,
+        "energy_distance": 1.0551319913416748
+      }
+    ],
+    "cp10k_v96": [
+      {
+        "seed": 20261009,
+        "mmd_u": 0.025535754054346514,
+        "variogram": 0.002436102833598852,
+        "energy_distance": 1.0646233658267832
+      },
+      {
+        "seed": 20261010,
+        "mmd_u": 0.026640282052823882,
+        "variogram": 0.0023912405595183372,
+        "energy_distance": 1.0572423192338718
+      },
+      {
+        "seed": 20261011,
+        "mmd_u": 0.023688945619024702,
+        "variogram": 0.0022766580805182457,
+        "energy_distance": 1.0150262061643573
+      }
+    ]
+  },
+  "controls": {
+    "official85_normalization_max_abs_delta": 0.0,
+    "synthetic_known_row_scale_repair_max_abs_delta": 0.0
+  },
+  "wall_seconds": 82.22289609909058,
+  "peak_rss_kib": 2171704
+}

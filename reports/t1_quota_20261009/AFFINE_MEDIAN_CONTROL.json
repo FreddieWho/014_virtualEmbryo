@@ -1,0 +1,82 @@
+{
+  "status": "POST_FREEZE_SPECIFICITY_DIAGNOSTIC_ONLY",
+  "model_or_gate_changed": false,
+  "rows": [
+    {
+      "state": "BLOOD",
+      "evaluated_genes": 2934,
+      "constant_source_fitted_median_slope": 1.0916055337821167,
+      "original_gene_specific_error": 0.29534071194609984,
+      "state_median_slope_error": 0.29582645389012885,
+      "identity_error": 0.3602278317473918
+    },
+    {
+      "state": "CM_A",
+      "evaluated_genes": 3186,
+      "constant_source_fitted_median_slope": 1.0052853404731024,
+      "original_gene_specific_error": 0.16873398083472074,
+      "state_median_slope_error": 0.18472450213158165,
+      "identity_error": 0.1837890454792222
+    },
+    {
+      "state": "CM_V",
+      "evaluated_genes": 7006,
+      "constant_source_fitted_median_slope": 1.0271650583166714,
+      "original_gene_specific_error": 0.08751865557604416,
+      "state_median_slope_error": 0.11950182013399868,
+      "identity_error": 0.11865512993497716
+    },
+    {
+      "state": "ECTO",
+      "evaluated_genes": 5797,
+      "constant_source_fitted_median_slope": 1.212508363359954,
+      "original_gene_specific_error": 0.2163822684034461,
+      "state_median_slope_error": 0.23312477609107282,
+      "identity_error": 0.1632915805357742
+    },
+    {
+      "state": "ENDO",
+      "evaluated_genes": 8238,
+      "constant_source_fitted_median_slope": 1.0445500334891553,
+      "original_gene_specific_error": 0.1093454039335611,
+      "state_median_slope_error": 0.13944475391545424,
+      "identity_error": 0.14276743691114918
+    },
+    {
+      "state": "ENDODERM",
+      "evaluated_genes": 8587,
+      "constant_source_fitted_median_slope": 0.9908310685193457,
+      "original_gene_specific_error": 0.11241839034142802,
+      "state_median_slope_error": 0.13990083972651987,
+      "identity_error": 0.1409509991526388
+    },
+    {
+      "state": "MESO",
+      "evaluated_genes": 8983,
+      "constant_source_fitted_median_slope": 1.1614288173183043,
+      "original_gene_specific_error": 0.1148192018429108,
+      "state_median_slope_error": 0.14182377963533327,
+      "identity_error": 0.18155171864396777
+    },
+    {
+      "state": "NCC",
+      "evaluated_genes": 1390,
+      "constant_source_fitted_median_slope": 1.1065063288518857,
+      "original_gene_specific_error": 0.16158174677447093,
+      "state_median_slope_error": 0.16410169148544343,
+      "identity_error": 0.18598725320493842
+    },
+    {
+      "state": "SHF",
+      "evaluated_genes": 10026,
+      "constant_source_fitted_median_slope": 1.0491802123231633,
+      "original_gene_specific_error": 0.10743347747681942,
+      "state_median_slope_error": 0.15098251080600295,
+      "identity_error": 0.1420688510332122
+    }
+  ],
+  "equal_state_mean_gene_specific": 0.15261931523661124,
+  "equal_state_mean_state_median": 0.17438123642394843,
+  "gene_specific_beats_state_median_states": 9,
+  "total_states": 9
+}

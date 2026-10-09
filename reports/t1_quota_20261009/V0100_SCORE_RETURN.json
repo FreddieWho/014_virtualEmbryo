@@ -1,0 +1,54 @@
+{
+  "task": "T1",
+  "board": "T1:val",
+  "candidate_id": "v0100",
+  "method": "levelonly_cp10k",
+  "artifact_path": "submissions/candidates/T1_val/v0100_levelonly_cp10k/submission.h5ad",
+  "sha256": "d08373b47b0b42abf9cc6c28c1f51cb386c0394bb77749262e20a28e2e507a85",
+  "bytes": 110571493,
+  "submission_id": "59f09b301dda4323a4146396a8cd3512",
+  "submission_url": "https://virtualembryo.ai/challenge/account/submissions/59f09b301dda4323a4146396a8cd3512",
+  "portal_model": "T1-levelonly-v0100",
+  "submitted_at_utc": "2026-10-09T16:57:05Z",
+  "portal_submitted_display": "2026-10-09 16:57",
+  "scored_at_utc": null,
+  "terminal_observed_at_utc": "2026-10-09T16:59:27Z",
+  "official_api_score": null,
+  "official_api_skills": null,
+  "official_ui_score": 60.84,
+  "official_ui_skills": {
+    "de_score": 51.0,
+    "de_direction": 66.5,
+    "mmd_u": 67.6,
+    "variogram": 55.9
+  },
+  "precision": "Official API values copied as returned; UI total 2 decimals and skills 1 decimal. No unobserved precision or scoring timestamp inferred.",
+  "identity_binding": "Exact uploaded hash and browser submission ID/model/time match the authenticated receipt. Historical API team-best snapshot matched this model when available.",
+  "evidence": {
+    "submission": "https://virtualembryo.ai/challenge/account/submissions/59f09b301dda4323a4146396a8cd3512",
+    "public_leaderboard": "https://kg.virtualembryo.ai/challenge/leaderboard?task=T1&board=T1:val&track=human",
+    "api_snapshot_filename": null
+  },
+  "decision": {
+    "status": "TIE_NOT_PROMOTED",
+    "incumbent_before": "v0098",
+    "incumbent_reference_score": 60.9019,
+    "new_incumbent": "v0098",
+    "delta_vs_stored_incumbent_reference": -0.0619,
+    "delta_precision": "approximate because candidate total is UI-rounded",
+    "numeric_team_best_at_observation": false,
+    "tie_band": 0.1,
+    "policy": "Retain incumbent within +/-0.1; numeric team best and operational selection are separate."
+  },
+  "quota_at_submission": {
+    "before": "6/8",
+    "after": "7/8",
+    "campaign_attempt": 5,
+    "campaign_limit": 6,
+    "upload_count": 1
+  },
+  "limitations": [
+    "Source-local diagnostics do not establish hidden-stage accuracy or causal mechanism.",
+    "Complete new-artifact disclosure does not retroactively amend older scored metadata."
+  ]
+}
