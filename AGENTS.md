@@ -30,6 +30,17 @@
 - 关 lane 或服务器评分入库时，必须在 `reports/LANE_VERDICTS.tsv` 追加/更新一行（lane、verdict、证据指针、决策号）；审计入口变更时重跑 `python scripts/generate_audit.py` 并提交 `AUDIT.md`。
 - `STATUS.md` 只做人的快速入口；候选哈希以 `submissions/INDEX.tsv` 为准，服务器分数以 `reports/SERVER_SCORE_REGISTRY.md` 为准。未评分路线必须写 `未评分/未提交`，不得排成已验证高分。
 
+## Branch-first workflow (added 2026-10-09)
+
+并行工作必须走分支，不要在 `main` 上反复合并。
+
+- 每个任务线用独立分支：`agent/t1`、`agent/t2`、`agent/t3`（需要并行子线时 `agent/t3/<lane>`）。
+- 分支从最新 `origin/main` 切出，开工前先 `git fetch origin --prune` 并确认工作区干净。
+- 一次工作内只在自己的分支提交；不要为了"同步"把别人的分支并进 `main`。
+- 共享账本（`submissions/INDEX.tsv`、`reports/SERVER_SCORE_REGISTRY.md`、`docs/coordination/`）在合并窗口由 coordinator 串行处理；agent 在自己分支上只写自己任务线的行。
+- 合并到 `main` 只在明确授权或合并窗口进行，合并前必须 rebase 到最新 `origin/main` 并解决冲突后再合。
+- 理由：2026-10-09 之前多路工作直接提交 `main`，连续出现分叉与冲突合并（`f32d18e`/`7dfe148` 的四文件冲突、`MULTI-MERGE`）。分支把冲突隔离在各自分支内解决，账本仍由 coordinator 串行合并。
+
 ## Ownership defaults
 
 - T1/T2/T3 专属代码、输出和候选由对应 agent 负责。

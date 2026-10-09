@@ -51,8 +51,11 @@ policy:
   update_mode: event_driven
 
 workspace:
-  integration_branch: master
-  worktrees: pending_initial_commit
+  integration_branch: main
+  branch_workflow: branch_first
+  task_branches: "agent/t1, agent/t2, agent/t3 (sub-lines agent/t3/<lane>)"
+  merge_policy: "Merge into main only in an authorized window; rebase to latest origin/main and resolve conflicts on the task branch first. Rationale: direct-to-main multi-lane work produced repeated divergence and four-file conflicts on 2026-10-09 (f32d18e/7dfe148, MULTI-MERGE)."
+  worktrees: not_used
 
 starter_pack:
   status: CLOSED_FOR_COMPETITION_BASELINE
@@ -139,7 +142,7 @@ tasks:
     status: scored
     dependencies: []
     owner: coordinator
-    branch: master
+    branch: agent/t3
     worktree: current
     current_best: "candidate/T3_gata4/v0088_condhurdle; server 53.69, promoted 2026-10-08 (D-20261008-T3CONDHURDLE-001); v0087 53.42 fallback. v0089 resplam15unmask scored 53.74 but +0.05 is inside the +/-0.1 band so the incumbent is retained (D-20261009-T3RESPLAMSCORE-001)."
     current_best_score: 53.69
